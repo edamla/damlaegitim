@@ -4,7 +4,7 @@ title:  "Ponpon İle Pinpin"
 
 
 publisher: damlapublishing
-authors: "Nur Dombaycı"
+authors: "Komisyon"
 illustrators: [""]
 translators: #["naci-turan","burak-dogru"]
 image: assets/images/ean/9786059656702.jpg
@@ -19,7 +19,7 @@ type: sinif0
 # Book attributes
 ean: 9786059656702
 languages: []
-page: 136
+page: 256
 size: "13,5x21cm"
 
 cover: "Coated Paper"
@@ -45,12 +45,6 @@ sold: [] # 'AZ', 'TR'
 
 # For adding excerpt add <!--more--> and break the line
 ---
-There are thirty-three rosebuds in this beautiful piece you’ve
-got your hands. It’s like a pearl, each shining brightly. We thought
-that if we shared them with you, our light would multiply. Well,
-that’s exactly why every sparkle hides in a fleeting story. Let’s
-open the pages and see this shiny world.
-Every time you read a story, your heart stirs and fills with a
-new sparkle. May the radiance of the advice and 
+“PonPon ile PinPin Eğitim Seti’mizin içinde STEM-A Eğitimi’ni; Montessori, Scamper, Orff ve Değerler Eğitimi ile destekledik. ORFF Tekniği’ne uygun olarak şekiller, sayılar, kavramlar ve temalarla ilgili şarkıları sözlü ve enstrumental olarak dinleyebilecekleri karekodları sayfalara yerleştirdik. DEĞERLER EĞİTİMİ ile saygılı ve pozitif bir birey olmalarını sağlamak, özgüveni olan başarılı çocuklar yetiştirmeyi amaçladık. +36 Ay çocuklar için hazırlanan Pon Pon ile Pin Pin Eğitim Seti’nin içeriği ile çocukların keyifli zaman geçirirken şarkılarla eğlenerek öğreneceklerine, severek ve rahatça kullanacaklarına inanıyoruz. Çıkartma Etkinlikleri: Pon Pon ile Pin Pin Eğitim Seti’nde her kitabın içinde bol bol çıkartmalar var. Böylece bu yaş grubunundaki çocuklarımız, en sevdiği çıkartmalı etkinlikleri doya doya yapabilecekler. PonPon ile PinPin Eğitim Seti içerisindeki kitaplar; Eğitim Kitapları 5 Kitap 32 Sayfa Aile Katılım Kitabı 1 Kitap 32 Sayfa Sanat Etkinliği Kitabı (Belirli Gün ve Haftalar) 1 Kitap 24 Sayfa Boyama Kitabı 1 Kitap 16 Sayfa Portfolyo Dosyası 1 Adet 32 Sayfa Karne 1 Adet Başarı Belgesi 1 Adet Boy-Kilo Grafiği 1 Adet Pon Pon ile Pin Pin Eğitim Seti’nin içinde; • Çocukların yaş seviyelerine uygun günlük yaşamı anlatan etkinlik sayfaları, • Basit kavramlar, • Çizgi çalışmaları, • Sayı alıştırmaları, • Renk ve şekil kavramları, • Örüntü ve grafik çalışmaları, • Dikkat ve algı çalışmaları, • Özgün düşünce / Beyin fırtınası etkinlikleri, • Deneyler, • Mandala ve sınırlı boyama çalışmaları, • Değerler eğitimi, • Dil etkinlikleri çalışmaları • Çocukların güzel davranışlar kazanmalarını destekleyici grafik çalışmaları yer almaktadır. Sınıf Promosyonları toplu alımlarda öğretmenlere hediye verilmektedir. Detaylı bilgi için bizimle iletişime geçebilirsiniz. Pon Pon ile Pin Pin Sınıf Promosyonları e-kitap (Serinin Tüm Dijital İçeriği) (38 Şarkı Sözlü-Entrümental) Aylık Planlar/Günlük Akış ve Etkinlik Planı Kitabı Aylık Planlar/Günlük Akış ve Etkinlik Planı Word Dosyası (e-kitap) Mevsim Tablosu (4 adet) Konulara Uygun Posterler (8 adet) Sınıf Mevcut Panosu Boy Cetveli Masallarla Değerlerimiz Çizgi Film (20 Film 20 Değer) Şarkılarla Değerlerimiz 30 MP3’leri (e-kitap) Kavram ve Kazanım Gösterge Çizelgesi Öğrenme Merkezi Levhaları Atatürk Köşesi Sınıf Defteri
 <!--more--> 
 

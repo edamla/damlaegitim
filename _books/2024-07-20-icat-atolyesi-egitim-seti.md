@@ -4,7 +4,7 @@ title:  "İcat Atölyesi Eğitim Seti"
 
 
 publisher: damlapublishing
-authors: "Nur Dombaycı"
+authors: "Komisyon"
 illustrators: [""]
 translators: #["naci-turan","burak-dogru"]
 image: assets/images/ean/9786059656795.jpg
@@ -19,7 +19,7 @@ type: sinif01
 # Book attributes
 ean: 9786059656795
 languages: []
-page: 136
+page: 608
 size: "13,5x21cm"
 
 cover: "Coated Paper"
@@ -45,12 +45,6 @@ sold: [] # 'AZ', 'TR'
 
 # For adding excerpt add <!--more--> and break the line
 ---
-There are thirty-three rosebuds in this beautiful piece you’ve
-got your hands. It’s like a pearl, each shining brightly. We thought
-that if we shared them with you, our light would multiply. Well,
-that’s exactly why every sparkle hides in a fleeting story. Let’s
-open the pages and see this shiny world.
-Every time you read a story, your heart stirs and fills with a
-new sparkle. May the radiance of the advice and 
++48 Ay çocuklar için hazırlanan "Ege ile Ece'nin İcat Atölyesi Eğitim Seti"mizin içinde STEM-A Eğitimi'ni; Montessori, Scamper, İnovasyon, Kodlama ve Algoritma, Orff ve Değerler Eğitimi ile destekledik. "Ege ile Ece'nin İcat Atölyesi Eğitim Seti" hazırlanırken MEB Müfredatına uygun kazanım ve göstergelerin gerçekleştirmelerine yönelik etkinliklerin yanı sıra; çocukların ilgilerini çekmek, merak uyandırmak ve farklı düşünmelerini desteklemek, etkinlikleri eğlenceli bir hâle getirmek, tahmin yeteneklerini geliştirmek amacıyla farklı materyallerden yapılmış sayfalar ekledik. Bunlar; asetat sayfaları, karton çizim sayfaları, yap-boz sayfalarıdır. "İcat Atölyesi Eğitim Seti"mizde; kitaplarımızın içerisindeki konularla ve Stem-A etkinlikleri ve projeleri ile ilgili videolar hazırladık. Böylece çocukların meraklarını uyandırmak, farklı bilgiler sunarak ilgilerini çekmek, hayal güçlerini geliştirmek, özgün ve farklı düşünmelerine katkı sağlamak ve bu şekilde öğrendiklerini kalıcı hâle getirmek istedik. ORFF Tekniği’ne uygun olarak şekiller, sayılar, kavramlar ve temalarla ilgili şarkıları sözlü ve enstrumental olarak dinleyebilecekleri karekodları sayfalara yerleştirdik. DEĞERLER EĞİTİMİ ile saygılı ve pozitif bir birey olmalarını sağlamak, özgüveni olan başarılı çocuklar yetiştirmeyi amaçladık. Ege ile Ece'nin İcat Atölyesi Eğitim Seti içerisindeki kitaplar; Eğitim Kitapları (Spiralli) 8 Kitap 48 sayfa Aile Katılım Kitabı 1 Kitap 96 sayfa Matematik 1 Kitap 16 sayfa Dikkat - Zekâ - Kodlama 1 Kitap 32 sayfa Sanat Atölyesi - (Belirli Gün ve Haftalar) 1 Kitap 32 sayfa Fen ve Doğa 1 Kitap 32 sayfa Gözlem ve Gelişim Dosyası 1 Kitap 16 sayfa Başarı Belgesi 1 Adet Gelişim ve Davranış Değerlendirmesi (Karne) 1 Adet Boy-Kilo Grafiği 1 Adet Sınıf Promosyonları toplu alımlarda öğretmenlere hediye verilmektedir. Detaylı bilgi için bizimle iletişime geçebilirsiniz. İcat Atölyesi Sınıf Promosyonları; e-kitap (Serinin Tüm Dijital İçeriği) 38 Şarkı (Sözlü - Enstrümantal) Montessori Materyalleri (Şekiller, Fermuar, Düğme, Çıt Çıt, Cırt Cırt) Aylık Planlar/Günlük Akış ve Etkinlik Planı (Basılı) Aylık Planlar/Günlük Akış ve Etkinlik Planı Word Dosyası (e-kitap) Mevsim Tabloları (4 adet) Konulara Uygun Posterler (8 adet) Sınıf Mevcut Panosu Boy Cetveli Masallarla Değerlerimiz Çizgi Film (20 Film 20 Değer) Şarkılarla Değerlerimiz 30 Şarkı MP3 (e-kitap) İngilizce Posterler (4 adet)
 <!--more--> 
 
