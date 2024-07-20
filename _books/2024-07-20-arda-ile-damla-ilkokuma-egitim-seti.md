@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Arda ile Damla İlk Okuma Eğitim Seti"
+title:  "Arda ile Damla İlk Okuma Eğitim Seti 2024-2025"
 
 
 publisher: damlapublishing
@@ -28,8 +28,6 @@ youtube: #https://www.youtube.com/watch?v=QRUbpgJeM0c
 
 # For adding excerpt add <!--more--> and break the line
 ---
-Arda ile Damla İlk Okuma Eğitim Seti
-
 Arda ile Damla İlk Okuma Eğitim Seti, çocuklarınızın okuma becerilerini geliştirirken eğlenceli bir öğrenme deneyimi sunar. Milli Eğitim Bakanlığı'nın güncel müfredatına uygun olarak hazırlanan bu set, <!--more--> canlı görseller ve eğitici aktivitelerle doludur. Harf tanıtımından cümle kurmaya kadar adım adım ilerleyen içerikleriyle çocuklarınızın okuma sürecini destekler. Aile rehberleri sayesinde ebeveyn katılımını teşvik eder ve okuma sevgisi aşılar. Arda ile Damla İlk Okuma Eğitim Seti ile çocuklarınızı geleceğe güvenle hazırlayın!
 
 
