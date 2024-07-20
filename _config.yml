@@ -19,7 +19,7 @@ youtube: 'https://www.youtube.com/c/damlayayinevi'
 
 pagepreview:
   enabled: false
-  prefix: 'https://cdn.e-damla.com.tr/PUBLIC/rights_books/'
+  prefix: 'https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/'
   postfix: '/index.html'
 
 include: ["_pages"]
@@ -75,12 +75,6 @@ defaults:
     values:
       layout: book
 
-  # all companys
-  - scope:
-      type: "companys"
-      path: "_companys"
-    values:
-      layout: company
 
   # all catalogs
   - scope:
@@ -89,26 +83,6 @@ defaults:
     values:
       layout: catalog
 
-  # all persons
-  - scope:
-      type: "persons"
-      path: "_persons"
-    values:
-      layout: person
-
-  # all illustrators
-  - scope:
-      type: "illustrators"
-      path: "_illustrators"
-    values:
-      layout: illustrator
-
-  # all translators
-  - scope:
-      type: "translators"
-      path: "_translators"
-    values:
-      layout: translator
   # all slides
   - scope:
       type: "slides"
@@ -125,20 +99,12 @@ feed:
   collections:
     books:
       path: "/titles/feed.xml"
-    companys:
-      path: "/represented/feed.xml"
     catalogs:
       path: "/catalogs/feed.xml"
-    illustrators:
-      path: "/illustrators/feed.xml"
 
 # excerpt
 excerpt_separator: <!--more-->
 
-# Paginate
-paginate: 10
-#paginate_path: /page:num/
-paginate_path: "/blog/page:num/"
 
 # Adsense (change to "enabled" to activate, also your client id and ad slot. Create a new ad unit from your Adsense account to get the slot.)
 adsense: "disabled"
@@ -158,21 +124,9 @@ collections:
     output: true
     permalink: /titles/:title
     # sort_by: 
-  companys:
-    output: true
-    permalink: /companies/:title
   catalogs:
     output: true
     permalink: /catalogs/:title
-  illustrators:
-    output: true
-    permalink: /ilustrators/:title
-  translators:
-    output: true
-    permalink: /translators/:title
-  persons:
-    output: true
-    permalink: /persons/:title
   slides: 
     output: false
     sort_by: order

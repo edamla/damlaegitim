@@ -22,18 +22,14 @@ languages: []
 page: 136
 size: "13,5x21cm"
 
-youtube:
+youtube: #https://www.youtube.com/watch?v=QRUbpgJeM0c
 
 
 
 # For adding excerpt add <!--more--> and break the line
 ---
-There are thirty-three rosebuds in this beautiful piece you’ve
-got your hands. It’s like a pearl, each shining brightly. We thought
-that if we shared them with you, our light would multiply. Well,
-that’s exactly why every sparkle hides in a fleeting story. Let’s
-open the pages and see this shiny world.
-Every time you read a story, your heart stirs and fills with a
-new sparkle. May the radiance of the advice and 
-<!--more--> 
+Arda ile Damla İlk Okuma Eğitim Seti
+
+Arda ile Damla İlk Okuma Eğitim Seti, çocuklarınızın okuma becerilerini geliştirirken eğlenceli bir öğrenme deneyimi sunar. Milli Eğitim Bakanlığı'nın güncel müfredatına uygun olarak hazırlanan bu set, <!--more--> canlı görseller ve eğitici aktivitelerle doludur. Harf tanıtımından cümle kurmaya kadar adım adım ilerleyen içerikleriyle çocuklarınızın okuma sürecini destekler. Aile rehberleri sayesinde ebeveyn katılımını teşvik eder ve okuma sevgisi aşılar. Arda ile Damla İlk Okuma Eğitim Seti ile çocuklarınızı geleceğe güvenle hazırlayın!
+
 
