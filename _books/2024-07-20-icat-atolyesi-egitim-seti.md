@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "İcat Atölyesi Eğitim Seti"
+title:  "İcat Atölyesi Eğitim Seti 2024-2025"
 
 
 publisher: damlapublishing
@@ -22,9 +22,6 @@ languages: []
 page: 608
 size: "13,5x21cm"
 
-cover: "Coated Paper"
-original-name:  "Hikayelerle 33 Hadis Işıltısı"
-original-language: "Turkish"
 youtube:
 
 # Foreign Rights attributes
@@ -45,6 +42,6 @@ sold: [] # 'AZ', 'TR'
 
 # For adding excerpt add <!--more--> and break the line
 ---
-+48 Ay çocuklar için hazırlanan "Ege ile Ece'nin İcat Atölyesi Eğitim Seti"mizin içinde STEM-A Eğitimi'ni; Montessori, Scamper, İnovasyon, Kodlama ve Algoritma, Orff ve Değerler Eğitimi ile destekledik. "Ege ile Ece'nin İcat Atölyesi Eğitim Seti" hazırlanırken MEB Müfredatına uygun kazanım ve göstergelerin gerçekleştirmelerine yönelik etkinliklerin yanı sıra; çocukların ilgilerini çekmek, merak uyandırmak ve farklı düşünmelerini desteklemek, etkinlikleri eğlenceli bir hâle getirmek, tahmin yeteneklerini geliştirmek amacıyla farklı materyallerden yapılmış sayfalar ekledik.
+Yeni Müfredata göre hazırlanan "Ege ile Ece'nin İcat Atölyesi Eğitim Seti"mizin içinde STEM-A Eğitimi'ni; Montessori, Scamper, İnovasyon, Kodlama ve Algoritma, Orff ve Değerler Eğitimi ile destekledik. "Ege ile Ece'nin İcat Atölyesi Eğitim Seti" hazırlanırken MEB Müfredatına uygun kazanım ve göstergelerin gerçekleştirmelerine yönelik etkinliklerin yanı sıra; çocukların ilgilerini çekmek, merak uyandırmak ve farklı düşünmelerini desteklemek, etkinlikleri eğlenceli bir hâle getirmek, tahmin yeteneklerini geliştirmek amacıyla farklı materyallerden yapılmış sayfalar ekledik.
 <!--more--> 
 
