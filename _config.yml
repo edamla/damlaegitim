@@ -98,9 +98,9 @@ highlighter: rouge
 feed:
   collections:
     books:
-      path: "/titles/feed.xml"
+      path: "/urunler/feed.xml"
     catalogs:
-      path: "/catalogs/feed.xml"
+      path: "/kataloglar/feed.xml"
 
 # excerpt
 excerpt_separator: <!--more-->
@@ -122,11 +122,11 @@ sass:
 collections:
   books:
     output: true
-    permalink: /titles/:title
+    permalink: /urunler/:title
     # sort_by: 
   catalogs:
     output: true
-    permalink: /catalogs/:title
+    permalink: /kataloglar/:title
   slides: 
     output: false
     sort_by: order
