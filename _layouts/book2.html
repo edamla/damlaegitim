@@ -1,0 +1,184 @@
+---
+layout: default
+---
+<style>
+	 iframe {
+    border: 0px;
+  }
+  /*Basic Grid Styles*/
+  .Grid {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+  }
+  
+  .Grid-cell {
+    flex: 3;
+    height: 100%;
+  }
+  .Demo {
+    background: #212121;
+    transition: background-color 0.3s ease;
+    height: 100vh;
+  }
+  .Demo:after {
+    content: "";
+    display: block;
+  }
+</style>
+
+
+<!-- Buyout Modified -->
+<link rel="stylesheet" href="{{site.baseurl}}/assets/css/buyout.css">
+
+{% assign book = page %}
+<div class="container">
+<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+		<div class="h-100 tofront">
+			<div class="row {% if book.image %} justify-content-between {% else %} justify-content-center {% endif %}">
+				{% if book.image %}
+				<div class="col-md-3 pr-2 align-self-center book">
+					<img class="rounded" src="{% if book.image contains "://" %}{{ book.image }}{% else %}{{ site.baseurl }}/{{ book.image }}{% endif %}" alt="{{ page.title }}">
+				</div>
+                {% endif %}
+
+				<div class="{% if book.image %} col-md-9 {% else %} col-md-8 {% endif %} pr-0 pr-md-4 pt-3 pb-3">
+
+
+					<div class="align-items-center">
+						<!-- Author list -->
+						<h1 class="display-4 mb-4 article-headline">{{ book.title }}</h1>
+
+
+						<p class="font-weight-bold">
+							<span class="catlist">
+							{% for cat in book.categories %}
+							  <a class="sscroll text-danger" href="#">{{ cat }}</a><span class="sep">, </span>
+							{% endfor %}
+							</span>
+						</p>
+
+						<!-- read time and date -->
+						<!-- <h6 class="text-muted d-block mt-1">{{ book.date | date: '%d.%m.%Y' }} · {% include meta-read-time.html %}</h6> -->
+						<!-- <h6 class="text-muted d-block mt-1">{{ book.date | date: '%d.%m.%Y' }}</h6> -->
+
+
+						<div class="icon-block mt-3 d-inline-grid">  
+
+							<a class="sscroll btn btn-light btn-sm font-weight-bold d-block float-left" target="_blank" href="#iframe"><i class="fas fa-book-reader fa-2x text-primary" aria-hidden="true"></i><span class="font-weight-bold btn-sm">Kitapları İncele</span></a>  &nbsp;
+
+							{% if book.youtube %}
+							<a class="sscroll btn btn-light btn-sm font-weight-bold d-block float-left" target="_blank" href="{{ book.youtube }}"><i class="fab fa-youtube fa-2x text-danger" aria-hidden="true"></i><span class="font-weight-bold btn-sm">Tanıtm Videosu</span></a>  &nbsp;
+							{% endif %}
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+<div class="container-lg pt-4 pb-4">
+	<div class="row justify-content-center">
+        
+		<div class="col-md-9 order-md-2">
+            
+            <!-- Article -->
+			<article class="article-post text-justify">                
+			{{ content }}                
+			</article>
+
+            
+		</div>
+
+		<!-- Attribute list: -->
+		<div class="col-md-3 order-md-1">
+						<ul class="list-group mb-4">
+							
+
+							{% if book.authors.size > 0 %}
+							<li class="list-group-item">
+								<div class="md-v-line"></div><i class="fas fa-user-edit mr-1 fa-lg text-primary"></i><span class="mr-1">Yazar:</span>{{book.authors }}
+							</li>
+							{% endif %}
+
+
+							{% if book.page %}
+							<li class="list-group-item">
+								<div class="md-v-line"></div><i class="fas fa-book-open mr-1 fa-lg text-primary"></i><span class="mr-1">Sayfa:</span> {{book.page}}
+							</li>
+							{% endif %}
+
+							{% if book.size %}
+							<li class="list-group-item">
+								<div class="md-v-line"></div><i class="fas fa-ruler mr-1 fa-lg text-danger"></i><span class="mr-1">Ebat:</span>{{book.size}}
+							</li>
+							{% endif %}
+							
+
+							{% if book.ean %}
+							<li class="list-group-item">
+							  <div class="md-v-line"></div><i class="fas fa-barcode mr-1 fa-lg text-dark"></i><span class="mr-1">Barkod :</span> {{book.ean}}
+							</li>
+							{% endif %}
+
+
+
+						  </ul>
+		</div>
+        
+        
+	</div>
+
+	<!-- Fbook içerik bölümü -->
+	<div class="Grid-cell">
+		<div class="Demo content">
+		  <iframe id="iframe" src="{{ site.pagepreview.prefix }}{{ book.ean }}{{site.pagepreview.postfix}} " name="fbook" width="100%" height="100%"></iframe>
+  
+		  <noframes>
+			<body id="htmlsource">
+			  <p>Üzgünüz, tarayıcınız bu sayfayı görüntüleyemiyor.</p>
+			</body>
+		  </noframes>
+		</div>
+	  </div>
+
+
+	
+	<!-- Mailchimp Subscribe Form -->
+	<div class="row">
+		<div class="col-12">
+			<!-- Mailchimp Subscribe Form -->
+			{% if site.mailchimp-list %}
+			<div class="border p-5 bg-lightblue">
+				<div class="row justify-content-between">
+					<div class="col-md-6 mb-2 mb-md-0">
+						<h5 class="font-weight-bold">Join Newsletter</h5>
+						Get the latest news right in your inbox. We never spam!
+					</div>
+					<div class="col-md-6">
+						<div class="row">
+							<form action="{{site.mailchimp-list}}" method="post" name="mc-embedded-subscribe-form" class="wj-contact-form validate w-100" target="_blank" novalidate>
+							<div class="mc-field-group">
+							
+								<input type="email" placeholder="Enter e-mail address" name="EMAIL" class="required email form-control w-100" id="mce-EMAIL" autocomplete="on" required>
+							
+							
+								<button type="submit" value="Subscribe" name="subscribe" class="heart btn btn-success btn-block w-100 mt-2">Subscribe</button>
+							
+							</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			{% endif %}
+		</div>
+		
+	</div>
+</div>
