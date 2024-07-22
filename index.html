@@ -8,20 +8,48 @@ description: "Yeni Müfredata uygun tüm eğitim setlerimizi inceleyebilirsiniz"
 
 <style>
     footer {
-       position: fixed !important;
-       bottom: 0px !important;
-       width: 100vw !important;
-   }
-   </style>
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999; /* Footer'ın içeriklerin üzerine gelmesini sağlar */
+        background-color: #25272a;
+        color: white;
+        padding: 10px 20px; /* İçeriği daha rahat göstermek için padding ekleyebilirsiniz */
+        display: none; /* Başlangıçta footer'ı gizleyin */
+    }
+
+    body {
+        padding-bottom: 60px; /* Footer'ın içeriği kaplamaması için body'nin altına padding ekleyin */
+    }
+</style>
+
+<script>
+    document.addEventListener("scroll", function() {
+        var footer = document.querySelector("footer");
+        var windowHeight = window.innerHeight;
+        var documentHeight = document.body.scrollHeight;
+        var scrollTop = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+
+        // Sayfanın altına geldiğinde footer'ı göster veya gizle
+        if (scrollTop + windowHeight >= documentHeight) {
+            footer.style.display = "block";
+        } else {
+            footer.style.display = "none";
+        }
+    });
+</script>
+
+
 
 <div class="container">
     
 {% if page.url == "/" %}
     
 <!-- slider -->
-{% comment %}
+
 {% include slider.html %}
-{% endcomment %}
+
 <hr>
 
 <h4 class="font-weight-bold spanborder"><span>Eğitim Setleri</span></h4>
