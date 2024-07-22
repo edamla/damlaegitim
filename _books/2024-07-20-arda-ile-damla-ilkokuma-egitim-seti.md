@@ -14,7 +14,7 @@ previewpage: false
 featured: false
 
 genre: tumdersler
-type: sinif01
+type: sinif0
 
 # Book attributes
 ean: 869791122263
