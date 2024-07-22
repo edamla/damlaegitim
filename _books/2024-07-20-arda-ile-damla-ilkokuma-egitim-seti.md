@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Arda ile Damla İlk Okuma Eğitim Seti 2024-2025"
+title:  "Arda ile Damla"
 
 
 publisher: damlapublishing
