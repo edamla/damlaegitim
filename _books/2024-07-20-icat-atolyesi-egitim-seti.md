@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "İcat Atölyesi Eğitim Seti 2024-2025"
+title:  "İcat Atölyesi"
 
 
 publisher: damlapublishing
