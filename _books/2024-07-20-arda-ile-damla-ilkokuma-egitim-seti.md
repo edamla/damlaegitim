@@ -28,6 +28,14 @@ youtube: #https://www.youtube.com/watch?v=QRUbpgJeM0c
 
 # For adding excerpt add <!--more--> and break the line
 ---
-Arda ile Damla İlk Okuma Eğitim Seti, çocuklarınızın okuma becerilerini geliştirirken eğlenceli bir öğrenme deneyimi sunar. Milli Eğitim Bakanlığı'nın güncel müfredatına uygun olarak hazırlanan bu set, <!--more--> canlı görseller ve eğitici aktivitelerle doludur. Harf tanıtımından cümle kurmaya kadar adım adım ilerleyen içerikleriyle çocuklarınızın okuma sürecini destekler. Aile rehberleri sayesinde ebeveyn katılımını teşvik eder ve okuma sevgisi aşılar. Arda ile Damla İlk Okuma Eğitim Seti ile çocuklarınızı geleceğe güvenle hazırlayın!
 
-
+<div style="display: block; width: max-content; margin: 0 auto;">
+    <a class="sscroll btn btn-light btn-sm font-weight-bold d-block float-left" 
+       target="_blank"  
+       href="https://edam.la/ardailedamla">
+        <i class="fab fa fa-3x text-danger" aria-hidden="true"></i>
+        <span class="font-weight-bold btn-sm">Akıllı Tahta İncele</span>
+    </a>
+</div>
+<hr>
+<hr>
