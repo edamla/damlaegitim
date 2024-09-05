@@ -33,7 +33,7 @@ youtube: #https://www.youtube.com/watch?v=QRUbpgJeM0c
     <a class="sscroll btn btn-light font-weight-bold d-block float-left" 
        target="_blank" 
        href="https://edam.la/ardailedamla"
-       style="padding: 10px 20px; font-size: 1.5rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: transform 0.3s, box-shadow 0.3s;">
+       style="padding: 10px 20px; font-size: 0.9rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); transition: transform 0.3s, box-shadow 0.3s;">
         <i class="fab fa fa-3x text-danger" aria-hidden="true"></i>
         <span class="font-weight-bold">Akıllı Tahta Uygulamamızı İnceleyebilirsiniz</span>
     </a>
