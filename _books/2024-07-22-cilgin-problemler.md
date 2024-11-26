@@ -42,5 +42,4 @@ sold: [] # 'AZ', 'TR'
 
 # For adding excerpt add <!--more--> and break the line
 ---
-Yeni Müfredata göre hazırlanmıştır
 <!--more--> 
