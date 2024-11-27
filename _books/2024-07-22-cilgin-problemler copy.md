@@ -7,7 +7,7 @@ publisher: damlapublishing
 authors: "Komisyon"
 illustrators: [""]
 translators: #["naci-turan","burak-dogru"]
-image: assets/images/ean/tum-dersler-234.jpg.jpg
+image: assets/images/ean/tum-dersler-234.jpg
 categories: [ "Religion" ]
 tags: [ "Literature"]
 previewpage: false
