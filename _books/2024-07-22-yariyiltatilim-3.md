@@ -7,7 +7,7 @@ publisher: damlapublishing
 authors: "Komisyon"
 illustrators: [""]
 translators: #["naci-turan","burak-dogru"]
-image: assets/images/ean/yariyiltatiilim-3.jpg
+image: assets/images/ean/yariyiltatilim-3.jpg
 categories: [ "Religion" ]
 tags: [ "Literature"]
 previewpage: false
@@ -17,7 +17,7 @@ genre: tumdersler
 type: sinif0
 
 # Book attributes
-ean: yariyiltatiilim-3
+ean: yariyiltatilim-3
 languages: []
 page: 608
 size: "13,5x21cm"
