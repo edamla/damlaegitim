@@ -1,13 +1,13 @@
 ---
 layout: book
-title:  "Haftalık Yarı Yıl Tatilim | 3.Sınıf"
+title:  "Haftalık Yarı Yıl Tatilim | 1-2-3-4.Sınıf"
 
 
 publisher: damlapublishing
 authors: "Komisyon"
 illustrators: [""]
 translators: #["naci-turan","burak-dogru"]
-image: assets/images/ean/yariyiltatilim-3.jpg
+image: assets/images/ean/yariyiltatilim-1234.jpg
 categories: [ "Religion" ]
 tags: [ "Literature"]
 previewpage: false
@@ -17,7 +17,7 @@ genre: tumdersler
 type: sinif0
 
 # Book attributes
-ean: yariyiltatilim-3
+ean: yariyiltatilim-1234
 languages: []
 page: 608
 size: "13,5x21cm"
