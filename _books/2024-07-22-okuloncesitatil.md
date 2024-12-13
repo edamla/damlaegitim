@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Haftalık Yarı Yıl Tatilim | 1-2-3-4.Sınıf"
+title:  "Yarı Yıl Tatilim | Okul Öncesi"
 
 
 publisher: damlapublishing
