@@ -196,7 +196,7 @@ permalink: "/titles"
                 {% for category in book.categories %}
                     {% assign cat = cat | append: "cat-" | append: category | append: " " %}
                 {% endfor %}
-                <div class="col-12 col-sm-3 p-4 border rounded kitap-kutu type-{{book.type}} genre-{{book.genre}} publisher-{{book.publisher}} {{cat | downcase}}" onclick="window.open('https://cdn.e-damla.com.tr/PUBLIC/icatatolyesi/{{ book.ean }}/index.html', '_blank')">
+                <div class="col-12 col-sm-3 p-4 border rounded kitap-kutu type-{{book.type}} genre-{{book.genre}} publisher-{{book.publisher}} {{cat | downcase}}" onclick="window.open('https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/{{ book.ean }}/index.html', '_blank')">
                     <img class="cover-images" src="{{site.baseurl}}/{{ book.image }}" alt="">
                     <h4 class="text-dark mb-0">{{ book.title }}</h4>
                     {% for bookauthor in book.authors %}
