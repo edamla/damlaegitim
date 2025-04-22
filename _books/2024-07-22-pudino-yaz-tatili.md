@@ -7,7 +7,7 @@ publisher: damlapublishing
 authors: "Komisyon"
 illustrators: [""]
 translators: #["naci-turan","burak-dogru"]
-image: assets/images/ean/pudino-yaz-tatili
+image: assets/images/ean/pudino-yaz-tatili.jpg
 categories: [ "Religion" ]
 tags: [ "Literature"]
 previewpage: false
