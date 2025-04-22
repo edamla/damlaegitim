@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Pudino ile Yaz Tatili
+title:  "Pudino ile Yaz Tatili"
 
 
 publisher: damlapublishing
