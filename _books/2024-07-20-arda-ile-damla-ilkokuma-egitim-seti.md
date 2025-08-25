@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Arda ile Damla"
+title:  "Arda ile Damla Eğitim Seti 2025-2026"
 
 
 publisher: damlapublishing
