@@ -7,7 +7,7 @@ publisher: damlapublishing
 authors: "Komisyon"
 illustrators: [""]
 translators: #["naci-turan","buvgfrak-dogru"]
-image: assets/images/ean/okul-oncesi-202aaaa5.jpg
+image: assets/images/ean/okul-oncesi-2025.jpg
 categories: [ "İlkokul" ]
 tags: [ "Okuma yazma, ilkokuma, yeni müfredat"]
 previewpage: false
