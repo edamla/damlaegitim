@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Okul Öncesi Katalog 2025"
+title:  "Çocuk Edebiyatı 2025 Kataloğu"
 
 
 publisher: damlapublishing
