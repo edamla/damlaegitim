@@ -6,7 +6,7 @@ title:  "Okul Öncesi Katalog 2025"
 publisher: damlapublishing
 authors: "Komisyon"
 illustrators: [""]
-translators: #["naci-turan","burak-dogru"]
+translators: #["naci-turan","buvgfrak-dogru"]
 image: assets/images/ean/okul-oncesi-2025.jpg
 categories: [ "İlkokul" ]
 tags: [ "Okuma yazma, ilkokuma, yeni müfredat"]
