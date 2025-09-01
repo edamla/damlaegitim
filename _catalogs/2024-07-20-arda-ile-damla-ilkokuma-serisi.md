@@ -1,20 +1,19 @@
 ---
-layout: book
+layout: catalog
 title:  "Arda ile Damla ilkokuma serisi"
 
 
 publisher: damlapublishing
-authors: "Komisyon"
-illustrators: [""]
-translators: #["naci-turan","buvgfrak-dogru"]
+
+
 image: assets/images/ean/Arda-ile-damla-ilkokuma-serisi.jpg
-categories: [ "İlkokul" ]
-tags: [ "Okuma yazma, ilkokuma, yeni müfredat"]
-previewpage: false
-featured: false
+
+
 
 genre: tumdersler
 type: sinif0
+link: 'https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/arda-ile-damla-ilkokuma-serisi/index.html'
+
 
 # Book attributes
 ean: Arda-ile-damla-ilkokuma-serisi
