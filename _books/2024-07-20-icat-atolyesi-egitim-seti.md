@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "İcat Atölyesi"
+title:  "İcat Atölyesi Eğitim Seti"
 
 
 publisher: damlapublishing

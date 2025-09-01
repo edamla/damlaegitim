@@ -14,7 +14,7 @@ previewpage: false
 featured: false
 
 genre: tumdersler
-type: sinif0
+type: sinif02
 
 # Book attributes
 ean: akillidamla-2

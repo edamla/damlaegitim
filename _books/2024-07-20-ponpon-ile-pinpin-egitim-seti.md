@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Ponpon İle Pinpin"
+title:  "Ponpon İle Pinpin Eğitim Seti"
 
 
 publisher: damlapublishing
