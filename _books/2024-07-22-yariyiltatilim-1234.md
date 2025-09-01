@@ -14,7 +14,7 @@ previewpage: false
 featured: false
 
 genre: tumdersler
-type: sinif0
+type: sinif04
 
 # Book attributes
 ean: yariyiltatilim-1234

@@ -14,7 +14,7 @@ previewpage: false
 featured: false
 
 genre: tumdersler
-type: sinif0
+type: sinif03
 
 # Book attributes
 ean: 9786254115943

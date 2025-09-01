@@ -1,23 +1,23 @@
 ---
 layout: book
-title:  "Akıllı Damla | 1.Sınıf 2.Dönem"
+title:  "Nisan Ara Tatilim | 1-2-3-4.Sınıf"
 
 
 publisher: damlapublishing
 authors: "Komisyon"
 illustrators: [""]
 translators: #["naci-turan","burak-dogru"]
-image: assets/images/ean/akıllıdamla-1-2.jpg
+image: assets/images/ean/nisan-tatilim.jpg
 categories: [ "Religion" ]
 tags: [ "Literature"]
 previewpage: false
 featured: false
 
 genre: tumdersler
-type: sinif0
+type: sinif04
 
 # Book attributes
-ean: akıllıdamla-1-2
+ean: nisan-tatilim
 languages: []
 page: 608
 size: "13,5x21cm"
