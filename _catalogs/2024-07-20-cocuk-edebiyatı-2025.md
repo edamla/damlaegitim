@@ -1,21 +1,15 @@
 ---
-layout: book
+layout: catalog
 title:  "Çocuk Edebiyatı 2025 Kataloğu"
 
-
 publisher: damlapublishing
-authors: "Komisyon"
-illustrators: [""]
-translators: #["naci-turan","buvgfrak-dogru"]
+
+
 image: assets/images/ean/cocuk-edebiyatı-2025.jpg
-categories: [ "İlkokul" ]
-tags: [ "Okuma yazma, ilkokuma, yeni müfredat"]
-previewpage: false
-featured: false
 
 genre: tumdersler
 type: sinif0
-
+link: 'https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/cocuk-edebiyatı-2025/index.html'
 # Book attributes
 ean: cocuk-edebiyatı-2025
 languages: []
