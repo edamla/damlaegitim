@@ -1,23 +1,23 @@
 ---
 layout: book
-title:  "Akıllı Damla Tüm Dersler | 3.Sınıf"
+title:  "Çılgın Problemler | 2.Sınıf"
 
 
 publisher: damlapublishing
 authors: "Komisyon"
 illustrators: [""]
 translators: #["naci-turan","burak-dogru"]
-image: assets/images/ean/9786254115943.jpg
+image: assets/images/ean/cilgin-problemler2.jpg
 categories: [ "İlkokul" ]
 tags: [ "Okuma yazma, ilkokuma, yeni müfredat"]
 previewpage: false
 featured: false
 
 genre: tumdersler
-type: sinif03 
+type: sinif02 
 
 # Book attributes
-ean: 9786254115943
+ean: cilgin-problemler2
 languages: []
 page: 136
 size: "13,5x21cm"
