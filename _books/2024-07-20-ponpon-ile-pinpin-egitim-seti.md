@@ -45,6 +45,5 @@ sold: [] # 'AZ', 'TR'
 
 # For adding excerpt add <!--more--> and break the line
 ---
-“PonPon ile PinPin Eğitim Seti’mizin içinde STEM-A Eğitimi’ni; Montessori, Scamper, Orff ve Değerler Eğitimi ile destekledik. ORFF Tekniği’ne uygun olarak şekiller, sayılar, kavramlar ve temalarla ilgili şarkıları sözlü ve enstrumental olarak dinleyebilecekleri karekodları sayfalara yerleştirdik. DEĞERLER EĞİTİMİ ile saygılı ve pozitif bir birey olmalarını sağlamak, özgüveni olan başarılı çocuklar yetiştirmeyi amaçladık.
 <!--more--> 
 
