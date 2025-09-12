@@ -1,15 +1,20 @@
 ---
 layout: catalog
-title:  "İlkokul Çocuk Edebiyatı 2025 Kataloğu"
+title:  "İlkokul Çocuk Edebiyatı Kataloğu"
+
 
 publisher: damlapublishing
 
 
 image: assets/images/ean/ilkokul-katalogu-2025.jpg
 
+
+
 genre: tumdersler
 type: sinif0
 link: 'https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/ilkokulkatalogu-2025/index.html'
+
+
 # Book attributes
 ean: ilkokulkatalogu-2025
 languages: []
