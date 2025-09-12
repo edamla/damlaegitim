@@ -5,13 +5,13 @@ title:  "İlkokul Çocuk Edebiyatı 2025 Kataloğu"
 publisher: damlapublishing
 
 
-image: assets/images/ean/cocuk-edebiyatı-2025.jpg
+image: assets/images/ean/ilkokul-katalogu-2025.jpg
 
 genre: tumdersler
 type: sinif0
-link: 'https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/ilkokul-katalogu/index.html'
+link: 'https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/ilkokul-katalogu-2025/index.html'
 # Book attributes
-ean: cocuk-edebiyatı-2025
+ean: ilkokul-katalogu-2025
 languages: []
 page: 136
 size: "13,5x21cm"
