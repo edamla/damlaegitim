@@ -1,13 +1,13 @@
 ---
 layout: book
-title:  "Akıllı Damla Paragraf Soru Bankası 2.Sınıf"
+title:  "Akıllı Damla Paragraf-Dilbilgisi 2-3-4.Sınıf Soru Bankası"
 
 
 publisher: damlapublishing
 authors: "Komisyon"
 illustrators: [""]
 translators: #["naci-turan","burak-dogru"]
-image: assets/images/ean/9786254116100.jpg
+image: assets/images/ean/parag-dilbil.jpg
 categories: [ "Religion" ]
 tags: [ "Literature"]
 previewpage: false
@@ -17,7 +17,7 @@ genre: tumdersler
 type: sinif04
 
 # Book attributes
-ean: 9786254116100
+ean: parag-dilbil
 languages: []
 page: 128
 size: "13,5x21cm"
