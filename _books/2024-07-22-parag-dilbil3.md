@@ -7,7 +7,7 @@ publisher: damlapublishing
 authors: "Komisyon"
 illustrators: [""]
 translators: #["naci-turan","burak-dogru"]
-image: assets/images/ean/parag-dilbi3.jpg
+image: assets/images/ean/parag-dilbil3.jpg
 categories: [ "Religion" ]
 tags: [ "Literature"]
 previewpage: false
