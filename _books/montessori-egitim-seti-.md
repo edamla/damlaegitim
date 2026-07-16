@@ -17,7 +17,7 @@ genre: tumdersler
 type: sinif0
 
 # Book attributes
-ean: 8697911222755
+ean: 8697911222755-1
 languages: []
 page: 881
 size: "13,5x21cm"
