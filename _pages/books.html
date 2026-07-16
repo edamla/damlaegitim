@@ -193,6 +193,14 @@ permalink: "/urunler"
                         </div>
                     </a>
                 </li>
+                <li>
+                    <a class="dropdown-item" href="#" onclick="filterBooks()">
+                        <div class="form-check">
+                            <input class="form-check-input check-genre" type="checkbox" value="oykumatik" id="oykumatik"  checked/>
+                            <label class="form-check-label" for="sosyalbilgiler">Öykümatik</label>
+                        </div>
+                    </a>
+                </li>
                 <li><hr class="dropdown-divider" /></li>
                 <li>
                     <a class="dropdown-item" href="#" onclick="genreselectall()">
@@ -205,77 +213,6 @@ permalink: "/urunler"
             </ul>
         </div>
     
-        <!-- category -->
-        <!-- <div class="btn-group">
-            <button type="button" class="btn btn-light dropdown-toggle font-weight-bold" style="font-size: 1.2rem;" data-toggle="dropdown">
-                Category
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 200px; overflow-y: auto;">
-                {% assign usedCategory = "" %}
-                {% for book in site.books %}
-                    {% for category in book.categories %}
-                        {% unless usedCategory contains category %}
-                            {% assign usedCategory = usedCategory | append: category | append: ";" %}
-                            <li>
-                                <a class="dropdown-item" href="#" onchange="filterBooks()">
-                                    <div class="form-check">
-                                        <input class="form-check-input check-category" type="checkbox" value="{{ category | downcase }}" id="{{ category | downcase }}" name="categories[]" checked/>
-                                        <label class="form-check-label" for="{{ category | downcase }}">{{ category }}</label>
-                                    </div>
-                                </a>
-                            </li>
-                        {% endunless %}
-                    {% endfor %}
-                {% endfor %}
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="categoryselectall()">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="categoryselectall" id="categoryselectall" checked />
-                            <label class="form-check-label" for="categoryselectall">Select All</label>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div> -->
-
-        <!-- publisher -->
-        <!-- <div class="btn-group">
-            <button type="button" class="btn btn-light dropdown-toggle font-weight-bold" style="font-size: 1.2rem;" data-toggle="dropdown">
-                Publisher
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 200px; overflow-y: auto;">
-                {% assign usedPublishers = "" %}
-                {% for book in site.books %}
-                    {% unless usedPublishers contains book.publisher %}
-                        {% assign usedPublishers = usedPublishers | append: book.publisher | append: ";" %}
-                        {% assign company = site.companys | where: "key", book.publisher | first %}
-                        {% if company %}
-                        <li>
-                            <a class="dropdown-item" href="#" onchange="filterBooks()">
-                                <div class="form-check">
-                                    <input class="form-check-input check-publisher" type="checkbox" value="{{book.publisher}}" id="{{book.publisher}}" name="publishers[]" checked/>
-                                    <label class="form-check-label" for="{{book.publisher}}">{{ company.title }}</label>
-                                </div>
-                            </a>
-                        </li>
-                        {% endif %}
-                    {% endunless %}
-                {% endfor %}
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="publisherselectall()">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="publisherselectall" id="publisherselectall" checked />
-                            <label class="form-check-label" for="publisherselectall">Select All</label>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div> -->
-        
-
-
     </div>
             
     <div class="row gap-y listbooks">
