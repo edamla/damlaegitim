@@ -17,7 +17,7 @@ genre: tumdersler
 type: sinif0
 
 # Book attributes
-ean: 9786059656702
+ean: 9786059656702-1
 languages: []
 page: 256
 size: "13,5x21cm"
