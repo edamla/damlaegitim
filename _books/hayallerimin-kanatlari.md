@@ -17,10 +17,11 @@ previewpage: true
 # Book attributes
 ean: 9786051745374
 examean: 8697911200906
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051745374/index.html"
 languages: ["Türkçe"]
 page: Her Biri 80
 size: "14x20cm"
-publish-number: 3
+publish-number: 2480
 cover: "Karton Kapak"
 
 # Buyout Ecommerce
