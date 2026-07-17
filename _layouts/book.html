@@ -63,8 +63,8 @@ layout: default
                             <a class="sscroll btn btn-light btn-sm font-weight-bold d-block float-left" target="_blank" href="{{ book.youtube }}"><i class="fab fa-youtube fa-2x text-danger" aria-hidden="true"></i><span class="font-weight-bold btn-sm">Tanıtım</span></a>  &nbsp;
                             {% endif %}
                             
-                            <!-- Pop-up Tetikleyici E-Satış Butonu -->
-                            <a class="sscroll btn btn-light btn-sm font-weight-bold d-block float-left" href="#" data-toggle="modal" data-target="#esatisModal"><i class="fas fa-shopping-cart fa-2x text-success" aria-hidden="true"></i><span class="font-weight-bold btn-sm">E-Satış</span></a>  &nbsp;
+                            <!-- Pop-up Tetikleyici Bilgi Butonu -->
+                            <a class="sscroll btn btn-light btn-sm font-weight-bold d-block float-left" href="#" data-toggle="modal" data-target="#esatisModal"><i class="fas fa-info-circle fa-2x text-info" aria-hidden="true"></i><span class="font-weight-bold btn-sm">Bilgi</span></a>  &nbsp;
                             
                             <!-- İncele Butonu -->
                             {% if book.review_link %}
@@ -330,25 +330,25 @@ layout: default
     </div>
 </div>
 
-<!-- E-Satış Bilgilendirme Pop-up (Modal) -->
+<!-- Tedarik Bilgilendirme Pop-up (Modal) -->
 <div class="modal fade" id="esatisModal" tabindex="-1" role="dialog" aria-labelledby="esatisModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header border-0 pb-0">
-                <h5 class="modal-title font-weight-bold text-dark" id="esatisModalLabel">E-Satış Bilgilendirme</h5>
+                <h5 class="modal-title font-weight-bold text-dark" id="esatisModalLabel">Ürün Tedarik Bilgisi</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Kapat">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body text-center py-4">
-                <!-- Uyarı İkonu -->
+                <!-- Bilgi İkonu (Mavi) -->
                 <div class="mb-3">
-                    <i class="fas fa-info-circle fa-3x text-warning"></i>
+                    <i class="fas fa-info-circle fa-3x text-info"></i>
                 </div>
-                <p class="lead font-weight-bold text-danger mb-2">Bu ürünümüzün e-satışı mevcut değildir.</p>
-                <p class="text-muted">Ürünümüzü bayilerimiz aracılığıyla temin edebilirsiniz. Size en yakın bayimizi öğrenmek için aşağıdaki numaradan bizimle iletişime geçebilirsiniz:</p>
+                <p class="lead font-weight-bold text-dark mb-2">Bu ürünümüz, bayilerimiz aracılığıyla satılmaktadır.</p>
+                <p class="text-muted">Size en yakın satış noktasını veya bayimizi öğrenerek hızlıca temin etmek için bizimle iletişime geçebilirsiniz:</p>
                 <!-- Telefon Numarası Buton Olarak (Mobil cihazlarda doğrudan arama yapar) -->
-                <a href="tel:05334840626" class="btn btn-outline-success font-weight-bold px-4 py-2 mt-2">
+                <a href="tel:05334840626" class="btn btn-success font-weight-bold px-4 py-2 mt-2">
                     <i class="fas fa-phone-alt mr-2"></i>0533 484 06 26
                 </a>
             </div>
