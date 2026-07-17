@@ -22,10 +22,11 @@ previewpage: true
 # Book attributes
 ean: 9786053831952
 examean: 8697911217003
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053831952/index.html"
 languages: ["Türkçe"]
 page: Her Biri 64
 size: "14x20cm"
-publish-number: 4
+publish-number: 1405
 cover: "Karton Kapak"
 
 # Buyout Ecommerce

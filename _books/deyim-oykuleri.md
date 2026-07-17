@@ -17,10 +17,11 @@ previewpage: true
 # Book attributes
 ean: 9786053832874
 examean: 8697911217621
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832874/mobile/index.html"
 languages: ["Türkçe"]
-page: Her Bİri 60
+page: Her Bİri 64
 size: "14x20cm"
-publish-number: 2
+publish-number: 1443
 cover: "Karton Kapak"
 
 # Buyout Ecommerce
