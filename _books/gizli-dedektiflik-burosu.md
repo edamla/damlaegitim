@@ -3,6 +3,7 @@ layout: book
 title:  "Gizli Dedektiflik Bürosu 10 Kitap"
 authors: ["Esra Avgoren"]
 grades: [4]
+genre: story
 concepts: [""]
 subjects: ["Sosyal Kontrol", "Toplumsal Duyarlılık", "Kişisel Gelişim" , "Birey ve Toplum" , "Takım Ruhu"]
 illustrators: #["nur-dombayci","umit-ozturk"]
@@ -82,4 +83,3 @@ Her bir okuyucu kitap okumanın keyfini alırken aynı zamanda zekâsını geli�
 
 <img style="height: 50vh" src="/assets/images/ean/8697911217638.jpg" alt="">
 <!--more--> 
-

@@ -3,6 +3,7 @@ layout: book
 title:  "Matematik Öyküleri (10 KİTAP)"
 authors: ["Necati Akbaba"]
 grades: [3, 4]
+genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["İcatlar ve Keşifler", "Zaman Mekan" , "Bilim Teknoloji" , "Doğa ve Evren" , "Tarih" , "Birey ve Toplum" , "Çevre"]
 illustrators: #["nur-dombayci","umit-ozturk"]
@@ -88,4 +89,3 @@ yaklaşımla sunulmuştur. Serimiz, matematiği sevdirmek ve daha iyi anlamak i�
 kaynaktır.
  <img style="height: 50vh" src="/assets/images/ean/8697911223066-1.jpg" alt="">
 <!--more--> 
-

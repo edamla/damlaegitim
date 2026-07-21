@@ -13,9 +13,8 @@ tags: [ "Literature"]
 previewpage: false
 featured: false
 
-genre: tumdersler
-type: sinif04
-
+grades: [3]
+genre: education
 # Book attributes
 ean: yaz-tatil-3sınıf
 languages: []

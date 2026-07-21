@@ -3,6 +3,7 @@ layout: book
 title:  "MESLEK ÖYKÜLERİ (10 KİTAP)"
 authors: ["Seda Bilgin"]
 grades: [3, 4]
+genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["İcatlar ve Keşifler", "Zaman Mekan" , "Bilim Teknoloji" , "Doğa ve Evren" , "Tarih" , "Birey ve Toplum" , "Çevre"]
 illustrators: #["nur-dombayci","umit-ozturk"]
@@ -48,4 +49,3 @@ Bu kitap, genç zihinlerinizin bilime olan merakını artıracak ve belki de ile
 Haydi, bilimin heyecan verici yolculuğuna başlayalım!
 <!-- <img style="height: 50vh" src="/assets/images/ean/8697911222991-1.jpg" alt="">
 <!--more--> 
-

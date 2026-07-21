@@ -3,7 +3,7 @@ layout: book
 title:  "ETİK DEĞERLER EĞİTİM SETİ-2. SINIF (10 KİTAP)"
 authors: ["Tuba Bozcan"]
 
-grades: [3, 4]
+grades: [2]
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["İcatlar ve Keşifler", "Zaman Mekan" , "Bilim Teknoloji" , "Doğa ve Evren" , "Tarih" , "Birey ve Toplum" , "Çevre"]
 
@@ -13,8 +13,7 @@ examlink: etik-degerler2-y.pdf
 
 categories: [ "Öykümatik" ]
 tags: [ "hikaye"]
-genre: oykumatik
-type: sinif04 
+genre: story
 previewpage: true
 
 # Book attributes
@@ -75,4 +74,3 @@ KİTAPLAR;
 10- Temiz Çevre Savaşçıları
 <!-- <img style="height: 50vh" src="/assets/images/ean/8697911223974-1.jpg" alt=""> 
 <!--more--> 
-

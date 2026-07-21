@@ -13,9 +13,8 @@ tags: [ "Literature"]
 previewpage: false
 featured: false
 
-genre: tumdersler
-type: sinif02
-
+grades: [2]
+genre: education
 # Book attributes
 ean: parag-dilbil2
 languages: []

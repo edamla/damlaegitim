@@ -3,7 +3,7 @@ layout: book
 title:  "ETİK DEĞERLER EĞİTİM SETİ-1. SINIF (10 KİTAP)"
 authors: ["Tuba Bozcan"]
 
-grades: [3, 4]
+grades: [1]
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["İcatlar ve Keşifler", "Zaman Mekan" , "Bilim Teknoloji" , "Doğa ve Evren" , "Tarih" , "Birey ve Toplum" , "Çevre"]
 
@@ -13,8 +13,7 @@ examlink: etik-degerler1-y.pdf
 
 categories: [ "Öykümatik" ]
 tags: [ "hikaye"]
-genre: oykumatik
-type: sinif04 
+genre: story
 previewpage: true
 
 # Book attributes
@@ -74,4 +73,3 @@ Etik Değerler Eğitim Seti-1. Sınıf Setin İçerdiği Kitaplar;
 
 <!-- <img style="height: 50vh" src="/assets/images/ean/8697911223851-1.jpg" alt="">
 <!--more--> 
-

@@ -2,7 +2,8 @@
 layout: book
 title:  "İstiklal Marşı Yazdıran Kahramanlar 10 Kitap"
 authors: ["Sara Gürbüz Özeren"]
-grades: [3,4]
+grades: [3, 4]
+genre: story
 concepts: [""]
 subjects: []
 illustrators: #["nur-dombayci","umit-ozturk"]
@@ -68,4 +69,3 @@ Mehmet Âkif Ersoy
 
 <img style="height: 50vh" src="/assets/images/ean/8697911219137.jpg" alt="">
 <!--more--> 
-

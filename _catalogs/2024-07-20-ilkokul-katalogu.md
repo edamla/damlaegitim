@@ -10,8 +10,8 @@ image: assets/images/ean/ilkokul-katalogu-2025.jpg
 
 
 
-genre: tumdersler
-type: sinif0
+genre: education
+grades: [1, 2, 3, 4]
 link: 'https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/ilkokulkatalogu-2025/index.html'
 
 

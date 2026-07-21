@@ -14,8 +14,7 @@ examlink: icatlar-kesifler-y.pdf
 
 categories: [ "Öykümatik" ]
 tags: [ "hikaye"]
-genre: oykumatik
-type: sinif04 
+genre: story
 previewpage: true
 
 
@@ -65,4 +64,3 @@ Geçmişin Derinliklerinden Geleceğin Gizemine Soluk Soluğa Okuyacağınız Ma
 
 <img style="height: 50vh" src="/assets/images/ean/8697911217003.jpg" alt="">
 <!--more--> 
-

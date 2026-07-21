@@ -3,7 +3,7 @@ layout: book
 title:  "Alican'ın Günlüğü 10 Kitap"
 authors: ["Nehir Aydın Gökduman"]
 
-grades: [2 ,3]
+grades: [2, 3]
 concepts: ["gorsel-uzamsal","sosyal","doga"]
 subjects: ["Değerler / Erdemler"]
 
@@ -13,8 +13,7 @@ examlink: alican-y.pdf
 
 categories: [ "Öykümatik" ]
 tags: [ "hikaye"]
-genre: oykumatik
-type: sinif04 
+genre: story
 previewpage: true
 
 # Book attributes
@@ -58,4 +57,3 @@ Macera dolu kitaplarda; yardımlaşma, hayvan sevgisi, dayanışma, araştırma,
 <img style="height: 50vh" src="/assets/images/ean/8697911223028-1.jpg" alt="">
 
 <!--more--> 
-

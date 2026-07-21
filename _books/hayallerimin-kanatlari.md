@@ -3,6 +3,7 @@ layout: book
 title:  "Hayallerimin Kanatları 10 Kitap"
 authors: ["Sara Gürbüz Özeren"]
 grades: [4, 5]
+genre: story
 concepts: ["gorsel-uzamsal","bedensel-kinestetik","mantiksal-matematiksel","icsel","doga"]
 subjects: ["İcatlar ve Keşifler", "Başarı" , "Engelliler" , "Motivasyon"]
 illustrators: #["nur-dombayci","umit-ozturk"]
@@ -60,4 +61,3 @@ En büyük destekçisi biricik annesidir.
 
 <img style="height: 50vh" src="/assets/images/ean/8697911200906.jpg" alt="">
 <!--more--> 
-

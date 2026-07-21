@@ -13,8 +13,7 @@ examlink: o-bir-dahi-y.pdf
 
 categories: [ "Öykümatik" ]
 tags: [ "hikaye"]
-genre: oykumatik
-type: sinif04 
+genre: story
 previewpage: true
 
 # Book attributes
@@ -50,4 +49,3 @@ Bu kitap, genç zihinlerinizin bilime olan merakını artıracak ve belki de ile
 Haydi, bilimin heyecan verici yolculuğuna başlayalım!
 <!-- <img style="height: 50vh" src="/assets/images/ean/8697911223851-1.jpg" alt="">
 <!--more--> 
-

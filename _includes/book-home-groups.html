@@ -1,0 +1,36 @@
+{% assign genre_order = "education,story" | split: "," %}
+{% assign genre_labels = "Eğitim,Hikaye" | split: "," %}
+{% assign groupbooks = site.books | group_by: "authors" | sort: "name" %}
+
+{% for genre_key in genre_order %}
+    {% assign genre_index = forloop.index0 %}
+    <section class="book-genre-group" data-genre="{{ genre_key }}">
+        <h3 class="book-genre-heading">{{ genre_labels[genre_index] }}</h3>
+        <div class="row gap-y listbooks-home">
+            {% for author in groupbooks %}
+                {% assign books = author.items | sort: "url" %}
+                {% for book in books %}
+                    {% if book.genre == genre_key %}
+                        {% assign cat = "" %}
+                        {% for category in book.categories %}
+                            {% assign cat = cat | append: "cat-" | append: category | append: " " %}
+                        {% endfor %}
+                        <div class="col-12 col-sm-3 p-4 border rounded kitap-kutu-home genre-{{ book.genre }} publisher-{{ book.publisher }} {{ cat | downcase }}"
+                             data-grades="{{ book.grades | join: ',' }}"
+                             data-genre="{{ book.genre }}">
+                            <a class="baslik-link" href="{{ book.url }}">
+                                <img class="cover-images" src="{{ site.baseurl }}/{{ book.image }}" alt="">
+                                <h4 class="text-dark mb-0">{{ book.title }}</h4>
+                                {% for bookauthor in book.authors %}
+                                    {% assign siteauthor = site.authors | where: "key", bookauthor | first %}
+                                    <h5 class="d-inline-block mt-2 mb-1 font-weight-normal">{{ siteauthor.title }}</h5>
+                                    {% if forloop.last == false %} - {% endif %}
+                                {% endfor %}
+                            </a>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </section>
+{% endfor %}

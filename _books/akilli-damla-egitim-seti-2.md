@@ -13,9 +13,8 @@ tags: [ "Okuma yazma, ilkokuma, yeni müfredat"]
 previewpage: false
 featured: false
 
-genre: tumdersler
-type: sinif02
-
+grades: [2]
+genre: education
 # Book attributes
 ean: akillidamla-2
 languages: []
