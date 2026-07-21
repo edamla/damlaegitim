@@ -13,9 +13,8 @@ tags: [ "Okuma yazma, ilkokuma, yeni müfredat"]
 previewpage: false
 featured: false
 
-genre: tumdersler
-type: sinif01
-
+grades: [1]
+genre: education
 # Book attributes
 ean: 869791122263
 languages: []

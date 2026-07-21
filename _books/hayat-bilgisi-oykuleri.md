@@ -2,7 +2,8 @@
 layout: book
 title:  "Hayat Bilgisi Öyküleri 10 Kitap"
 authors: ["Seda Bilgin"]
-grades: [2,3]
+grades: [2, 3]
+genre: story
 concepts: [""]
 subjects: []
 illustrators: #["nur-dombayci","umit-ozturk"]
@@ -46,4 +47,3 @@ Haydi ne duruyorsun, okumaya başlasana...
 
 <img style="height: 50vh" src="/assets/images/ean/8697911219199.jpg" alt="">
 <!--more--> 
-

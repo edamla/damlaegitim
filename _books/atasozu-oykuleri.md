@@ -14,8 +14,7 @@ examlink: atasozu-oykuleri-y.pdf
 
 categories: [ "Öykümatik" ]
 tags: [ "hikaye"]
-genre: oykumatik
-type: sinif04 
+genre: story
 previewpage: true
 
 # Book attributes

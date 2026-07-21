@@ -3,9 +3,9 @@ title: "Anasayfa"
 layout: default
 pagination:
     enabled: true
-description: "Yeni Müfredata uygun tüm eğitim setlerimizi inceleyebilirsiniz"
----
+description: "Yeni Maarif Modele uygun eğitim kitapları ve okuma kültürünü pekiştiren söz varlığını geliştiren hikayeler"
 
+---
 
 <div class="container">
     
@@ -17,910 +17,268 @@ description: "Yeni Müfredata uygun tüm eğitim setlerimizi inceleyebilirsiniz"
 
 <hr>
 
-<div class="tab-buttons mb-3">
-    <button class="tab-btn active" onclick="showTab('egitim')" id="tab-egitim">Eğitim</button>
-    <button class="tab-btn" onclick="showTab('hikaye')" id="tab-hikaye">Hikaye</button>
-    <button class="tab-btn" onclick="showTab('tumu')" id="tab-tumu">Tümü</button>
-</div>
-
-<style>
-    .tab-buttons {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-    }
-    .tab-btn {
-        padding: 0.6rem 1.2rem;
-        border: 1px solid #e0e0e0;
-        background-color: #ffffff;
-        border-radius: 8px;
-        font-size: 0.95rem;
-        font-weight: 500;
-        color: #495057;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.08);
-    }
-    .tab-btn:hover {
-        background-color: #f8f9fa;
-        border-color: #ced4da;
-        transform: translateY(-1px);
-        box-shadow: 0 2px 5px rgba(0,0,0,0.12);
-    }
-    .tab-btn.active {
-        background-color: #ffffff;
-        color: #495057;
-        border: 2px solid #6c757d;
-        box-shadow: 0 2px 8px rgba(108, 117, 125, 0.3);
-    }
-</style>
-
-<!-- <div class="row gap-y listbooks">
-    {% assign groupbooks = site.books | group_by: "authors" | sort: "name" %}
-    {% for author in groupbooks %}
-        {% assign books = author.items | sort: "url" %}
-        {% for book in books %}
-            {% assign cat = "" %}
-            {% for category in book.categories %}
-                {% assign cat = cat | append: "cat-" | append: category | append: " " %}
-            {% endfor %}
-            <div class="col-12 col-sm-3 p-4 border rounded kitap-kutu type-{{book.type}} genre-{{book.genre}} publisher-{{book.publisher}} {{cat | downcase}}">
-                <a class="baslik-link" href="{{ book.url }}">    
-                    <img class="cover-images" src="{{site.baseurl}}/{{ book.image }}" alt="">
-                    <h4 class="text-dark mb-0">{{ book.title }}</h4>
-                    {% for bookauthor in book.authors %}
-                        {% assign siteauthor = site.authors | where:"key", bookauthor | first %}
-                        <h5 class="d-inline-block mt-2 mb-1 font-weight-normal">{{ siteauthor.title }}</h5>
-                        {% if forloop.last == false %} - {% endif %}
-                    {% endfor %}
-                </a>    
-            </div>
-        {% endfor %}
-    {% endfor %}
-</div> -->
-
-<!-- Tümü Section -->
-<div class="container tab-content" id="tumu-section" style="display: none;">
+<div id="books-section">
     <style>
-        .btn-group {
-            margin-top: 10px;
-            margin-bottom: 10px;
+        .grade-nav {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #dee2e6;
+            overflow: visible;
         }
-        .btn-group .btn {
-            padding: 0.55rem 0.5rem;
+        .grade-nav-list {
+            display: grid;
+            grid-template-columns: repeat(9, minmax(0, 1fr));
+            gap: 0;
+            list-style: none;
+            margin: 0;
+            padding: 0 0 2px;
+            width: 100%;
+            overflow: visible;
         }
-        .btn-group .btn:not(:last-child) {
-            margin-right: 10px;
+        .grade-nav-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+            min-height: 3rem;
         }
-        .dropdown-menu .form-check-label {
+        .grade-nav-label,
+        .grade-nav-caret {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: clamp(0.9rem, 1.35vw, 1.1rem);
+            color: #6c757d;
+            font-weight: 500;
+            padding: 0.85rem 0.2rem 0.85rem 0.5rem;
+            white-space: nowrap;
+            transition: color 0.15s ease;
+            line-height: 1.25;
+        }
+        .grade-nav-caret {
+            padding: 0.85rem 0.4rem 0.85rem 0.1rem;
+            font-size: 0.7rem;
+            color: #adb5bd;
+            flex-shrink: 0;
+            font-weight: 400;
+        }
+        .grade-nav-label:hover,
+        .grade-nav-caret:hover {
+            color: #495057;
+        }
+        .grade-nav-item.active .grade-nav-label {
+            color: #495057;
+            font-weight: 700;
+            box-shadow: inset 0 -2px 0 #6c757d;
+        }
+        .grade-nav-item.has-genre .grade-nav-label::after {
+            content: attr(data-genre-label);
+            font-weight: 500;
+            font-size: 0.8rem;
+            color: #868e96;
+        }
+        .grade-submenu {
+            display: none;
+            position: absolute;
+            top: calc(100% - 2px);
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 200;
+            min-width: 140px;
+            margin: 0;
+            padding: 10px 0 0.35rem;
+            list-style: none;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+        }
+        .grade-submenu::before {
+            content: '';
+            display: block;
+            height: 10px;
+        }
+        .grade-submenu li {
+            background: #fff;
+            border: 1px solid #dee2e6;
+        }
+        .grade-submenu li:first-child {
+            border-radius: 8px 8px 0 0;
+            border-bottom: none;
+        }
+        .grade-submenu li:last-child {
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+        .grade-submenu button {
+            display: block;
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            padding: 0.6rem 1rem;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #495057;
+            cursor: pointer;
+        }
+        .grade-submenu button:hover {
+            background: #f8f9fa;
+        }
+        .grade-submenu button.active {
+            font-weight: 700;
+            color: #212529;
+            background: #f8f9fa;
+        }
+        .grade-nav-item.open .grade-submenu {
+            display: block;
+        }
+        @media (hover: hover) and (pointer: fine) {
+            .grade-nav-item:hover .grade-submenu {
+                display: block;
+            }
+        }
+        @media (max-width: 767px) {
+            .grade-nav-list {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+            .grade-nav-item {
+                min-height: 2.75rem;
+            }
+            .grade-nav-label,
+            .grade-nav-caret {
+                font-size: clamp(0.88rem, 3.5vw, 1rem);
+                padding-top: 0.7rem;
+                padding-bottom: 0.7rem;
+            }
+        }
+        @media (max-width: 380px) {
+            .grade-nav-list {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+            .grade-nav-label {
+                white-space: normal;
+                text-align: center;
+                padding-left: 0.2rem;
+                padding-right: 0;
+            }
+        }
+        .book-genre-group {
+            margin-bottom: 2rem;
+        }
+        .book-genre-heading {
             font-size: 1.1rem;
-        }
-        .form-check-input {
-            margin-right: 15px; 
+            font-weight: 700;
+            color: #343a40;
+            margin: 0 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e9ecef;
         }
     </style>
-     
-     <div class="btn-group">
-        <div class="btn-group">
-            <button type="button" class="btn btn-light dropdown-toggle font-weight-bold" style="font-size: 1.2rem;" data-toggle="dropdown">Sınıf</button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterTumuBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-tumu" type="checkbox" value="sinif0" id="sinif0-tumu" checked/>
-                            <label class="form-check-label" for="sinif0-tumu">Okul Öncesi</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterTumuBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-tumu" type="checkbox" value="sinif01" id="sinif01-tumu" checked/>
-                            <label class="form-check-label" for="sinif01-tumu">1-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterTumuBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-tumu" type="checkbox" value="sinif02" id="sinif02-tumu" checked/>
-                            <label class="form-check-label" for="sinif02-tumu">2-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterTumuBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-tumu" type="checkbox" value="sinif03" id="sinif03-tumu" checked/>
-                            <label class="form-check-label" for="sinif03-tumu">3-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterTumuBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-tumu" type="checkbox" value="sinif04" id="sinif04-tumu" checked/>
-                            <label class="form-check-label" for="sinif04-tumu">4-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterTumuBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-tumu" type="checkbox" value="sinif05" id="sinif05-tumu" checked/>
-                            <label class="form-check-label" for="sinif05-tumu">5-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterTumuBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-tumu" type="checkbox" value="sinif06" id="sinif06-tumu" checked/>
-                            <label class="form-check-label" for="sinif06-tumu">6-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterTumuBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-tumu" type="checkbox" value="sinif07" id="sinif07-tumu" checked/>
-                            <label class="form-check-label" for="sinif07-tumu">7-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterTumuBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-tumu" type="checkbox" value="sinif08" id="sinif08-tumu" checked/>
-                            <label class="form-check-label" for="sinif08-tumu">8-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="typeselectallTumu()">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="typeselectall" id="typeselectall-tumu" checked/>
-                            <label class="form-check-label" for="typeselectall-tumu">Hepsini Seç</label>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="btn-group">
-            <button type="button" class="btn btn-light dropdown-toggle font-weight-bold" style="font-size: 1.2rem;" data-toggle="dropdown">Tür</button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterTumuBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre-tumu" type="checkbox" value="tumdersler" id="tumdersler-tumu" checked/>
-                            <label class="form-check-label" for="tumdersler-tumu">Tüm Dersler</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterTumuBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre-tumu" type="checkbox" value="oykumatik" id="oykumatik-tumu" checked/>
-                            <label class="form-check-label" for="oykumatik-tumu">Öykümatik</label>
-                        </div>
-                    </a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="genreselectallTumu()">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="genreselectall" id="genreselectall-tumu" checked/>
-                            <label class="form-check-label" for="genreselectall-tumu">Hepsini Seç</label>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-            
-    <div class="row gap-y listbooks-tumu">
-        {% assign groupbooks = site.books | group_by: "authors" | sort: "name" %}
-        {% for author in groupbooks %}
-            {% assign books = author.items | sort: "url" %}
-            {% for book in books %}
-            {% assign cat = "" %}
-            {% for category in book.categories %}
-                {% assign cat = cat | append: "cat-" | append: category | append: " " %}
-            {% endfor %}
-            <div class="col-12 col-sm-3 p-4 border rounded kitap-kutu-tumu type-{{book.type}} genre-{{book.genre}} publisher-{{book.publisher}} {{cat | downcase}}">
-                <a class="baslik-link" href="{{ book.url }}">    
-                    <img class="cover-images" src="{{site.baseurl}}/{{ book.image }}" alt="">
-                    <h4 class="text-dark mb-0">{{ book.title }}</h4>
-                    {% for bookauthor in book.authors %}
-                        {% assign siteauthor = site.authors | where:"key", bookauthor | first %}
-                        <h5 class="d-inline-block mt-2 mb-1 font-weight-normal">{{ siteauthor.title }}</h5>
-                        {% if forloop.last == false %} - {% endif %}
-                    {% endfor %}
-                </a>    
-            </div>
-            {% endfor %}
-        {% endfor %}
-    </div>
+
+    {% include book-grade-nav.html %}
+
+    {% include book-home-groups.html %}
 </div>
 
-<!-- Eğitim Setleri Section -->
-<div class="container tab-content" id="egitim-section">
-    <style>
-        .btn-group {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-        .btn-group .btn {
-            padding: 0.55rem 0.5rem;
-        }
-        .btn-group .btn:not(:last-child) {
-            margin-right: 10px;
-        }
-        /* Yazı tipi boyutu */
-    .dropdown-menu .form-check-label {
-        font-size: 1.1rem;
-    }
-    /* İşaretleme kutusu konumu */
-    .form-check-input {
-        margin-right: 15px; 
-    }
-
-        
-   
-    </style>
-     
-     <div class="btn-group">
-        <div class="btn-group">
-            <button type="button" class="btn btn-light dropdown-toggle font-weight-bold" style="font-size: 1.2rem;" data-toggle="dropdown">Sınıf</button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterEgitimBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-egitim" type="checkbox" value="sinif0" id="sinif0-egitim" checked/>
-                            <label class="form-check-label" for="sinif0-egitim">Okul Öncesi</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterEgitimBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-egitim" type="checkbox" value="sinif01" id="sinif01-egitim" checked/>
-                            <label class="form-check-label" for="sinif01-egitim">1-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterEgitimBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-egitim" type="checkbox" value="sinif02" id="sinif02-egitim" checked/>
-                            <label class="form-check-label" for="sinif02-egitim">2-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterEgitimBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-egitim" type="checkbox" value="sinif03" id="sinif03-egitim" checked/>
-                            <label class="form-check-label" for="sinif03-egitim">3-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterEgitimBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-egitim" type="checkbox" value="sinif04" id="sinif04-egitim" checked/>
-                            <label class="form-check-label" for="sinif04-egitim">4-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterEgitimBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-egitim" type="checkbox" value="sinif05" id="sinif05-egitim" checked/>
-                            <label class="form-check-label" for="sinif05-egitim">5-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterEgitimBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-egitim" type="checkbox" value="sinif06" id="sinif06-egitim" checked/>
-                            <label class="form-check-label" for="sinif06-egitim">6-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterEgitimBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-egitim" type="checkbox" value="sinif07" id="sinif07-egitim" checked/>
-                            <label class="form-check-label" for="sinif07-egitim">7-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterEgitimBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-egitim" type="checkbox" value="sinif08" id="sinif08-egitim" checked/>
-                            <label class="form-check-label" for="sinif08-egitim">8-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="typeselectallEgitim()">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="typeselectall" id="typeselectall-egitim" checked/>
-                            <label class="form-check-label" for="typeselectall-egitim">Hepsini Seç</label>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="btn-group">
-            <button type="button" class="btn btn-light dropdown-toggle font-weight-bold" style="font-size: 1.2rem;" data-toggle="dropdown">Branş</button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterEgitimBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre-egitim" type="checkbox" value="tumdersler" id="tumdersler-egitim" checked/>
-                            <label class="form-check-label" for="tumdersler-egitim">Tüm Dersler</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterEgitimBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre-egitim" type="checkbox" value="turkce" id="turkce-egitim"  checked/>
-                            <label class="form-check-label" for="turkce-egitim">Türkçe</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterEgitimBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre-egitim" type="checkbox" value="matematik" id="matematik-egitim"  checked/>
-                            <label class="form-check-label" for="matematik-egitim">Matematik</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterEgitimBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre-egitim" type="checkbox" value="hayatbilgisi" id="hayatbilgisi-egitim"  checked/>
-                            <label class="form-check-label" for="hayatbilgisi-egitim">Hayat Bilgisi</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterEgitimBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre-egitim" type="checkbox" value="fenbilimleri" id="fenbilimleri-egitim"  checked/>
-                            <label class="form-check-label" for="fenbilimleri-egitim">Fen Bilimleri</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterEgitimBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre-egitim" type="checkbox" value="sosyalbilgiler" id="sosyalbilgiler-egitim"  checked/>
-                            <label class="form-check-label" for="sosyalbilgiler-egitim">Sosyal Bilgiler</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterEgitimBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre-egitim" type="checkbox" value="ingilizce" id="ingilizce-egitim"  checked/>
-                            <label class="form-check-label" for="ingilizce-egitim">İngilizce</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterEgitimBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre-egitim" type="checkbox" value="dinkulturu" id="dinkulturu-egitim"  checked/>
-                            <label class="form-check-label" for="dinkulturu-egitim">Din Kültürü ve Ahlak Bilgisi</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterEgitimBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre-egitim" type="checkbox" value="sosyalbilgiler" id="sosyalbilgiler-egitim2"  checked/>
-                            <label class="form-check-label" for="sosyalbilgiler-egitim2">T.C. İnkılap Tarihi ve Atatürkçülük</label>
-                        </div>
-                    </a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="genreselectallEgitim()">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="genreselectall" id="genreselectall-egitim" checked/>
-                            <label class="form-check-label" for="genreselectall-egitim">Hepsini Seç</label>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-            
-    <div class="row gap-y listbooks-egitim">
-        {% assign groupbooks = site.books | where: "layout", "previewbook" | group_by: "authors" | sort: "name" %}
-        {% for author in groupbooks %}
-            {% assign books = author.items | sort: "url" %}
-            {% for book in books %}
-                {% assign cat = "" %}
-                {% for category in book.categories %}
-                    {% assign cat = cat | append: "cat-" | append: category | append: " " %}
-                {% endfor %}
-                <div class="col-12 col-sm-3 p-4 border rounded kitap-kutu-egitim type-{{book.type}} genre-{{book.genre}} publisher-{{book.publisher}} {{cat | downcase}}">
-                    <a class="baslik-link" href="{{ book.url }}">    
-                        <img class="cover-images" src="{{site.baseurl}}/{{ book.image }}" alt="">
-                        <h4 class="text-dark mb-0">{{ book.title }}</h4>
-                        {% for bookauthor in book.authors %}
-                            {% assign siteauthor = site.authors | where:"key", bookauthor | first %}
-                            <h5 class="d-inline-block mt-2 mb-1 font-weight-normal">{{ siteauthor.title }}</h5>
-                            {% if forloop.last == false %} - {% endif %}
-                        {% endfor %}
-                    </a>    
-                </div>
-            {% endfor %}
-        {% endfor %}
-    </div>
-</div>
-
-<hr>
-
-<!-- Hikaye Section -->
-<div class="container tab-content" id="hikaye-section" style="display: none;">
-    <style>
-        .btn-group {
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
-        .btn-group .btn {
-            padding: 0.55rem 0.5rem;
-        }
-        .btn-group .btn:not(:last-child) {
-            margin-right: 10px;
-        }
-        /* Yazı tipi boyutu */
-    .dropdown-menu .form-check-label {
-        font-size: 1.1rem;
-    }
-    /* İşaretleme kutusu konumu */
-    .form-check-input {
-        margin-right: 15px; 
-    }
-    </style>
-     
-     <div class="btn-group">
-        <div class="btn-group">
-            <button type="button" class="btn btn-light dropdown-toggle font-weight-bold" style="font-size: 1.2rem;" data-toggle="dropdown">Sınıf</button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterHikayeBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-hikaye" type="checkbox" value="sinif0" id="sinif0-hikaye" checked/>
-                            <label class="form-check-label" for="sinif0-hikaye">Okul Öncesi</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterHikayeBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-hikaye" type="checkbox" value="sinif01" id="sinif01-hikaye" checked/>
-                            <label class="form-check-label" for="sinif01-hikaye">1-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterHikayeBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-hikaye" type="checkbox" value="sinif02" id="sinif02-hikaye" checked/>
-                            <label class="form-check-label" for="sinif02-hikaye">2-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterHikayeBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-hikaye" type="checkbox" value="sinif03" id="sinif03-hikaye" checked/>
-                            <label class="form-check-label" for="sinif03-hikaye">3-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterHikayeBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-hikaye" type="checkbox" value="sinif04" id="sinif04-hikaye" checked/>
-                            <label class="form-check-label" for="sinif04-hikaye">4-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterHikayeBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-hikaye" type="checkbox" value="sinif05" id="sinif05-hikaye" checked/>
-                            <label class="form-check-label" for="sinif05-hikaye">5-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterHikayeBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-hikaye" type="checkbox" value="sinif06" id="sinif06-hikaye" checked/>
-                            <label class="form-check-label" for="sinif06-hikaye">6-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterHikayeBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-hikaye" type="checkbox" value="sinif07" id="sinif07-hikaye" checked/>
-                            <label class="form-check-label" for="sinif07-hikaye">7-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterHikayeBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type-hikaye" type="checkbox" value="sinif08" id="sinif08-hikaye" checked/>
-                            <label class="form-check-label" for="sinif08-hikaye">8-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="typeselectallHikaye()">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="typeselectall" id="typeselectall-hikaye" checked/>
-                            <label class="form-check-label" for="typeselectall-hikaye">Hepsini Seç</label>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        
-        <div class="btn-group">
-            <button type="button" class="btn btn-light dropdown-toggle font-weight-bold" style="font-size: 1.2rem;" data-toggle="dropdown">Tür</button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterHikayeBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre-hikaye" type="checkbox" value="oykumatik" id="oykumatik-hikaye" checked/>
-                            <label class="form-check-label" for="oykumatik-hikaye">Öykümatik</label>
-                        </div>
-                    </a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="genreselectallHikaye()">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="genreselectall" id="genreselectall-hikaye" checked/>
-                            <label class="form-check-label" for="genreselectall-hikaye">Hepsini Seç</label>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-            
-    <div class="row gap-y listbooks-hikaye">
-        {% assign groupbooks = site.books | where: "layout", "book" | group_by: "authors" | sort: "name" %}
-        {% for author in groupbooks %}
-            {% assign books = author.items | sort: "url" %}
-            {% for book in books %}
-                {% assign cat = "" %}
-                {% for category in book.categories %}
-                    {% assign cat = cat | append: "cat-" | append: category | append: " " %}
-                {% endfor %}
-                <div class="col-12 col-sm-3 p-4 border rounded kitap-kutu-hikaye type-{{book.type}} genre-{{book.genre}} publisher-{{book.publisher}} {{cat | downcase}}">
-                    <a class="baslik-link" href="{{ book.url }}">    
-                        <img class="cover-images" src="{{site.baseurl}}/{{ book.image }}" alt="">
-                        <h4 class="text-dark mb-0">{{ book.title }}</h4>
-                        {% for bookauthor in book.authors %}
-                            {% assign siteauthor = site.authors | where:"key", bookauthor | first %}
-                            <h5 class="d-inline-block mt-2 mb-1 font-weight-normal">{{ siteauthor.title }}</h5>
-                            {% if forloop.last == false %} - {% endif %}
-                        {% endfor %}
-                    </a>    
-                </div>
-            {% endfor %}
-        {% endfor %}
-    </div>
-</div>
+<script src="{{site.baseurl}}/assets/js/book-filter.js"></script>
 <script>
+var homeFilterState = { grade: null, genre: null };
 
-// Tab switching function
-function showTab(tabName) {
-    // Hide all tab content
-    document.querySelectorAll('.tab-content').forEach(function(content) {
-        content.style.display = 'none';
+function closeAllGradeMenus() {
+    document.querySelectorAll('.grade-nav-item').forEach(function(item) {
+        item.classList.remove('open');
+        var caret = item.querySelector('.grade-nav-caret');
+        if (caret) caret.setAttribute('aria-expanded', 'false');
     });
-    
-    // Remove active class from all tab buttons
-    document.querySelectorAll('.tab-btn').forEach(function(btn) {
-        btn.classList.remove('active');
-    });
-    
-    // Show selected tab content
-    document.getElementById(tabName + '-section').style.display = 'block';
-    
-    // Add active class to selected tab button
-    document.getElementById('tab-' + tabName).classList.add('active');
 }
 
-//Select All seçildiğinde tümünü seç (Type) - Tümü
-function typeselectallTumu() {
-    var checkboxes = document.querySelectorAll('input.check-type-tumu');
-    var selectAllCheckbox = document.getElementById('typeselectall-tumu');
-    checkboxes.forEach(function(checkbox) {
-        checkbox.checked = selectAllCheckbox.checked;
-    });
-    filterTumuBooks();
-}
-
-//Select All seçildiğinde tümünü seç (Genre) - Tümü
-function genreselectallTumu() {
-    var checkboxes = document.querySelectorAll('input.check-genre-tumu');
-    var selectAllCheckbox = document.getElementById('genreselectall-tumu');
-    checkboxes.forEach(function(checkbox) {
-        checkbox.checked = selectAllCheckbox.checked;
-    });
-    filterTumuBooks();
-}
-
-//FİLTRELEME - Tümü
-function filterTumuBooks() {
-    var typeCheckboxes = document.querySelectorAll('.check-type-tumu');
-    var types = [];
-    typeCheckboxes.forEach(function(checkbox) {
-        if (checkbox.checked) {
-            types.push("type-" +checkbox.value);
+function updateGradeLabels() {
+    document.querySelectorAll('.grade-nav-item').forEach(function(item) {
+        var label = item.querySelector('.grade-nav-label');
+        item.classList.remove('has-genre');
+        label.removeAttribute('data-genre-label');
+        if (item.classList.contains('active') && homeFilterState.genre) {
+            item.classList.add('has-genre');
+            label.setAttribute('data-genre-label', ' · ' + (homeFilterState.genre === 'education' ? 'Eğitim' : 'Hikaye'));
+        }
+        item.querySelectorAll('.grade-submenu button').forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+        if (item.classList.contains('active') && homeFilterState.genre) {
+            var activeBtn = item.querySelector('.grade-submenu button[onclick*="' + homeFilterState.genre + '"]');
+            if (activeBtn) activeBtn.classList.add('active');
         }
     });
+}
 
-    var genreCheckboxes = document.querySelectorAll('.check-genre-tumu');
-    var genres = [];
-    genreCheckboxes.forEach(function(checkbox) {
-        if (checkbox.checked) {
-            genres.push("genre-" + checkbox.value);
+function filterHomeBooks() {
+    filterHomeBooksNav('.kitap-kutu-home', '.book-genre-group', homeFilterState.grade, homeFilterState.genre);
+    updateGradeLabels();
+}
+
+function selectGrade(btn, grade) {
+    var item = btn.closest('.grade-nav-item');
+    if (item.classList.contains('active') && homeFilterState.grade === grade) {
+        homeFilterState.grade = null;
+        homeFilterState.genre = null;
+        item.classList.remove('active');
+    } else {
+        document.querySelectorAll('.grade-nav-item').forEach(function(el) {
+            el.classList.remove('active');
+        });
+        item.classList.add('active');
+        homeFilterState.grade = grade;
+        if (homeFilterState.genre) {
+            homeFilterState.genre = null;
         }
+    }
+    closeAllGradeMenus();
+    filterHomeBooks();
+}
+
+function selectGenre(btn, genre) {
+    var item = btn.closest('.grade-nav-item');
+    var grade = item.dataset.grade;
+    document.querySelectorAll('.grade-nav-item').forEach(function(el) {
+        el.classList.remove('active');
     });
+    item.classList.add('active');
+    homeFilterState.grade = grade;
+    homeFilterState.genre = genre;
+    closeAllGradeMenus();
+    filterHomeBooks();
+}
 
-    var books = document.querySelectorAll('.kitap-kutu-tumu');
-    books.forEach(function(book) {
-        var show = true;
-        var typeFound = false;
-        var genreFound = false;
+function toggleGradeMenu(caret, event) {
+    event.stopPropagation();
+    var item = caret.closest('.grade-nav-item');
+    var isOpen = item.classList.contains('open');
+    closeAllGradeMenus();
+    if (!isOpen) {
+        item.classList.add('open');
+        caret.setAttribute('aria-expanded', 'true');
+    }
+}
 
-        types.forEach(function(type) {
-            if (book.classList.contains(type)) {
-            typeFound = true;
-            }
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.grade-nav-item')) {
+        closeAllGradeMenus();
+    }
+});
+
+if (window.matchMedia('(hover: hover)').matches) {
+    document.querySelectorAll('.grade-nav-item').forEach(function(item) {
+        item.addEventListener('mouseenter', function() {
+            closeAllGradeMenus();
+            item.classList.add('open');
         });
-
-        genres.forEach(function(genre) {
-            if (book.classList.contains(genre)) {
-            genreFound = true;
-            }
+        item.addEventListener('mouseleave', function() {
+            item.classList.remove('open');
         });
-
-        show = typeFound && genreFound; 
-        book.style.display = (show) ? 'block' : 'none';
     });
 }
-
-//Select All seçildiğinde tümünü seç (Type) - Eğitim Setleri
-function typeselectallEgitim() {
-    var checkboxes = document.querySelectorAll('input.check-type-egitim');
-    var selectAllCheckbox = document.getElementById('typeselectall-egitim');
-    checkboxes.forEach(function(checkbox) {
-        checkbox.checked = selectAllCheckbox.checked;
-    });
-    filterEgitimBooks();
-}
-
-//Select All seçildiğinde tümünü seç (Genre) - Eğitim Setleri
-function genreselectallEgitim() {
-    var checkboxes = document.querySelectorAll('input.check-genre-egitim');
-    var selectAllCheckbox = document.getElementById('genreselectall-egitim');
-    checkboxes.forEach(function(checkbox) {
-        checkbox.checked = selectAllCheckbox.checked;
-    });
-    filterEgitimBooks();
-}
-
-//Select All seçildiğinde tümünü seç (Type) - Hikaye
-function typeselectallHikaye() {
-    var checkboxes = document.querySelectorAll('input.check-type-hikaye');
-    var selectAllCheckbox = document.getElementById('typeselectall-hikaye');
-    checkboxes.forEach(function(checkbox) {
-        checkbox.checked = selectAllCheckbox.checked;
-    });
-    filterHikayeBooks();
-}
-
-//Select All seçildiğinde tümünü seç (Genre) - Hikaye
-function genreselectallHikaye() {
-    var checkboxes = document.querySelectorAll('input.check-genre-hikaye');
-    var selectAllCheckbox = document.getElementById('genreselectall-hikaye');
-    checkboxes.forEach(function(checkbox) {
-        checkbox.checked = selectAllCheckbox.checked;
-    });
-    filterHikayeBooks();
-}
-
-//FİLTRELEME - Eğitim Setleri
-function filterEgitimBooks() {
-    var typeCheckboxes = document.querySelectorAll('.check-type-egitim');
-    var types = [];
-    typeCheckboxes.forEach(function(checkbox) {
-        if (checkbox.checked) {
-            types.push("type-" +checkbox.value);
-        }
-    });
-
-    var genreCheckboxes = document.querySelectorAll('.check-genre-egitim');
-    var genres = [];
-    genreCheckboxes.forEach(function(checkbox) {
-        if (checkbox.checked) {
-            genres.push("genre-" + checkbox.value);
-        }
-    });
-
-    var books = document.querySelectorAll('.kitap-kutu-egitim');
-    books.forEach(function(book) {
-        var show = true;
-        var typeFound = false;
-        var genreFound = false;
-
-        types.forEach(function(type) {
-            if (book.classList.contains(type)) {
-            typeFound = true;
-            }
-        });
-
-        genres.forEach(function(genre) {
-            if (book.classList.contains(genre)) {
-            genreFound = true;
-            }
-        });
-
-        show = typeFound && genreFound; 
-        book.style.display = (show) ? 'block' : 'none';
-    });
-}
-
-//FİLTRELEME - Hikaye
-function filterHikayeBooks() {
-    var typeCheckboxes = document.querySelectorAll('.check-type-hikaye');
-    var types = [];
-    typeCheckboxes.forEach(function(checkbox) {
-        if (checkbox.checked) {
-            types.push("type-" +checkbox.value);
-        }
-    });
-
-    var genreCheckboxes = document.querySelectorAll('.check-genre-hikaye');
-    var genres = [];
-    genreCheckboxes.forEach(function(checkbox) {
-        if (checkbox.checked) {
-            genres.push("genre-" + checkbox.value);
-        }
-    });
-
-    var books = document.querySelectorAll('.kitap-kutu-hikaye');
-    books.forEach(function(book) {
-        var show = true;
-        var typeFound = false;
-        var genreFound = false;
-
-        types.forEach(function(type) {
-            if (book.classList.contains(type)) {
-            typeFound = true;
-            }
-        });
-
-        genres.forEach(function(genre) {
-            if (book.classList.contains(genre)) {
-            genreFound = true;
-            }
-        });
-
-        show = typeFound && genreFound; 
-        book.style.display = (show) ? 'block' : 'none';
-    });
-}
-
-// Sayfa yüklendiğinde URL'deki parametreleri kontrol et
-// window.onload = function() {
-//     var urlParams = new URLSearchParams(window.location.search);
-
-//     // Type filtresi
-//     var types = urlParams.getAll('type');
-//     if (types.length > 0) {
-//         types.forEach(function(type) {
-//             document.getElementById(type).checked = true;
-//         });
-//     }
-
-//     // Genre filtresi
-//     var genres = urlParams.getAll('genre');
-//     if (genres.length > 0) {
-//         genres.forEach(function(genre) {
-//             document.getElementById(genre).checked = true;
-//         });
-//     }
-
-//     // Category filtresi
-//     var categories = urlParams.getAll('category');
-//     if (categories.length > 0) {
-//         categories.forEach(function(category) {
-//             document.getElementById(category).checked = true;
-//         });
-//     }
-
-//     // Publisher filtresi
-//     var publishers = urlParams.getAll('publisher');
-//     if (publishers.length > 0) {
-//         publishers.forEach(function(publisher) {
-//             document.getElementById(publisher).checked = true;
-//         });
-//     }
-
-//     filterBooks();
-// }  
-
-
-// --------------------------- filtreleri url ile manupule etme: -----------------------
-
-// function updateUrlParams() {
-//     var urlParams = new URLSearchParams(window.location.search);
-
-//     // Adult filtresi
-//     var adult = document.getElementById("adult").checked;
-//     urlParams.set('adult', adult);
-
-//     // Children filtresi
-//     var children = document.getElementById("Children").checked;
-//     urlParams.set('children', children);
-
-//     // Nonfiction filtresi
-//     var nonfiction = document.getElementById("nonfiction").checked;
-//     urlParams.set('nonfiction', nonfiction);
-
-//     // Fiction filtresi
-//     var fiction = document.getElementById("fiction").checked;
-//     urlParams.set('fiction', fiction);
-
-//     // Publisher filtresi
-//     var checkboxes = document.querySelectorAll('.check-publisher');
-//     checkboxes.forEach(function(checkbox) {
-//         var publisher = checkbox.value;
-//         var isChecked = checkbox.checked;
-//         urlParams.set('publisher_' + publisher, isChecked);
-//     });
-
-//     // Yeni URL'yi ayarla
-//     var newUrl = window.location.origin + window.location.pathname + '?' + urlParams.toString();
-//     window.history.replaceState({}, '', newUrl);
-// }
-
-
 </script>
 
-
-   
-
-
-
-{% endif %} <!--endif page url is / -->
-
-
+{% endif %}
 
 </div>

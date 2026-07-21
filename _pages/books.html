@@ -34,170 +34,26 @@ permalink: "/urunler"
         <div class="btn-group">
             <button type="button" class="btn btn-light dropdown-toggle font-weight-bold" style="font-size: 1.2rem;" data-toggle="dropdown">Sınıf</button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type" type="checkbox" value="sinif0" id="sinif0" checked/>
-                            <label class="form-check-label" for="sinif0">Okul Öncesi</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type" type="checkbox" value="sinif01" id="sinif01" checked/>
-                            <label class="form-check-label" for="sinif01">1-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type" type="checkbox" value="sinif02" id="sinif02" checked/>
-                            <label class="form-check-label" for="sinif02">2-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type" type="checkbox" value="sinif03" id="sinif03" checked/>
-                            <label class="form-check-label" for="sinif03">3-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type" type="checkbox" value="sinif04" id="sinif04" checked/>
-                            <label class="form-check-label" for="sinif04">4-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type" type="checkbox" value="sinif05" id="sinif05" checked/>
-                            <label class="form-check-label" for="sinif05">5-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type" type="checkbox" value="sinif06" id="sinif06" checked/>
-                            <label class="form-check-label" for="sinif06">6-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type" type="checkbox" value="sinif07" id="sinif07" checked/>
-                            <label class="form-check-label" for="sinif07">7-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-type" type="checkbox" value="sinif08" id="sinif08" checked/>
-                            <label class="form-check-label" for="sinif08">8-Sınıf</label>
-                        </div>
-                    </a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="typeselectall()">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="typeselectall" id="typeselectall" checked/>
-                            <label class="form-check-label" for="typeselectall">Hepsini Seç</label>
-                        </div>
-                    </a>
-                </li>
+                {% include book-grade-filter.html suffix="" filter_fn="filterBooks" select_all_fn="gradeselectall" select_all_id="gradeselectall" %}
             </ul>
         </div>
         
         <div class="btn-group">
-            <button type="button" class="btn btn-light dropdown-toggle font-weight-bold" style="font-size: 1.2rem;" data-toggle="dropdown">Branş</button>
+            <button type="button" class="btn btn-light dropdown-toggle font-weight-bold" style="font-size: 1.2rem;" data-toggle="dropdown">Tür</button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <li>
                     <a class="dropdown-item" href="#" onclick="filterBooks()">
                         <div class="form-check">
-                            <input class="form-check-input check-genre" type="checkbox" value="tumdersler" id="tumdersler" checked/>
-                            <label class="form-check-label" for="tumdersler">Tüm Dersler</label>
+                            <input class="form-check-input check-genre" type="checkbox" value="education" id="education" checked/>
+                            <label class="form-check-label" for="education">Eğitim</label>
                         </div>
                     </a>
                 </li>
                 <li>
                     <a class="dropdown-item" href="#" onclick="filterBooks()">
                         <div class="form-check">
-                            <input class="form-check-input check-genre" type="checkbox" value="turkce" id="turkce"  checked/>
-                            <label class="form-check-label" for="turkce">Türkçe</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre" type="checkbox" value="matematik" id="matematik"  checked/>
-                            <label class="form-check-label" for="matematik">Matematik</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre" type="checkbox" value="hayatbilgisi" id="hayatbilgisi"  checked/>
-                            <label class="form-check-label" for="hayatbilgisi">Hayat Bilgisi</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre" type="checkbox" value="fenbilimleri" id="fenbilimleri"  checked/>
-                            <label class="form-check-label" for="fenbilimleri">Fen Bilimleri</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre" type="checkbox" value="sosyalbilgiler" id="sosyalbilgiler"  checked/>
-                            <label class="form-check-label" for="sosyalbilgiler">Sosyal Bilgiler</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre" type="checkbox" value="ingilizce" id="ingilizce"  checked/>
-                            <label class="form-check-label" for="ingilizce">İngilizce</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre" type="checkbox" value="dinkulturu" id="dinkulturu"  checked/>
-                            <label class="form-check-label" for="dinkulturu">Din Kültürü ve Ahlak Bilgisi</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre" type="checkbox" value="sosyalbilgiler" id="sosyalbilgiler"  checked/>
-                            <label class="form-check-label" for="sosyalbilgiler">T.C. İnkılap Tarihi ve Atatürkçülük</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre" type="checkbox" value="oykumatik" id="oykumatik"  checked/>
-                            <label class="form-check-label" for="sosyalbilgiler">Öykümatik</label>
+                            <input class="form-check-input check-genre" type="checkbox" value="story" id="story" checked/>
+                            <label class="form-check-label" for="story">Hikaye</label>
                         </div>
                     </a>
                 </li>
@@ -224,7 +80,7 @@ permalink: "/urunler"
                 {% for category in book.categories %}
                     {% assign cat = cat | append: "cat-" | append: category | append: " " %}
                 {% endfor %}
-                <div class="col-12 col-sm-3 p-4 border rounded kitap-kutu type-{{book.type}} genre-{{book.genre}} publisher-{{book.publisher}} {{cat | downcase}}">
+                <div class="col-12 col-sm-3 p-4 border rounded kitap-kutu genre-{{book.genre}} publisher-{{book.publisher}} {{cat | downcase}}" data-grades="{{ book.grades | join: ',' }}">
                     <a class="baslik-link" href="{{ book.url }}">    
                         <img class="cover-images" src="{{site.baseurl}}/{{ book.image }}" alt="">
                         <h4 class="text-dark mb-0">{{ book.title }}</h4>
@@ -240,12 +96,12 @@ permalink: "/urunler"
     </div>
 
 </div>
+<script src="{{site.baseurl}}/assets/js/book-filter.js"></script>
 <script>
 
-//Select All seçildiğinde tümünü seç (Type)
-function typeselectall() {
-    var checkboxes = document.querySelectorAll('input.check-type');
-    var selectAllCheckbox = document.getElementById('typeselectall');
+function gradeselectall() {
+    var checkboxes = document.querySelectorAll('input.check-grade');
+    var selectAllCheckbox = document.getElementById('gradeselectall');
     checkboxes.forEach(function(checkbox) {
         checkbox.checked = selectAllCheckbox.checked;
     });
@@ -258,6 +114,7 @@ function genreselectall() {
     checkboxes.forEach(function(checkbox) {
         checkbox.checked = selectAllCheckbox.checked;
     });
+    filterBooks();
 }
 
 // select all seçildiğinde tümünü seç (Category)
@@ -280,84 +137,7 @@ function publisherselectall() {
                    
 //FİLTRELEME
 function filterBooks() {
-    var typeCheckboxes = document.querySelectorAll('.check-type');
-    var types = [];
-    typeCheckboxes.forEach(function(checkbox) {
-        if (checkbox.checked) {
-            types.push("type-" +checkbox.value); // type-sinif01
-        }
-    });
-    // console.log(types);
-
-    var genreCheckboxes = document.querySelectorAll('.check-genre');
-    var genres = [];
-    genreCheckboxes.forEach(function(checkbox) {
-        if (checkbox.checked) {
-            genres.push("genre-" + checkbox.value);
-        }
-    });
-    // console.log(genres);
-
-    categoryCheckboxes = document.querySelectorAll('.check-category');
-    var categories = [];
-    categoryCheckboxes.forEach(function(checkbox) {
-        if (checkbox.checked) {
-            categories.push("cat-" +checkbox.value);
-        }
-    });
-    // console.log(categories);
-
-    publisherCheckboxes = document.querySelectorAll('.check-publisher');
-    var publishers = [];
-    publisherCheckboxes.forEach(function(checkbox) {
-        if (checkbox.checked) {
-            publishers.push("publisher-" + checkbox.value);
-        }
-    });
-    // console.log(publishers);
-
-    var books = document.querySelectorAll('.kitap-kutu');
-    debugger;
-    books.forEach(function(book) {
-        var show = true;
-        var typeFound = false;
-        var genreFound = false;
-        var categoryFound = false;
-        var publisherFound = false;
-
-        types.forEach(function(type) {
-            if (book.classList.contains(type)) {
-            typeFound = true;
-            }
-        });
-
-        genres.forEach(function(genre) {
-            if (book.classList.contains(genre)) {
-            genreFound = true;
-            }
-        });
-
-        categories.forEach(function(category) {
-            if (book.classList.contains(category)) {
-            categoryFound = true;
-            }
-        });
-
-        publishers.forEach(function(publisher) {
-            if (book.classList.contains(publisher)) {
-            publisherFound = true;
-            }
-        });
-
-        // typeFound ve genreFound ve categoryFound ve publisherFound değerlerinden birisi bile false ise show false olacak değilse true olacak.
-        show = typeFound && genreFound; 
-
-        // buradaki if kurgusu değişcek.
-        book.style.display = (show) ? 'block' : 'none';
-
-    });
-
-    // updateUrlParams();
+    filterBooksByGradesAndGenres('.kitap-kutu', '.check-grade', '.check-genre');
 }
 
 // Sayfa yüklendiğinde URL'deki parametreleri kontrol et

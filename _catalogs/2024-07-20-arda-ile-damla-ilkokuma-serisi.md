@@ -10,8 +10,8 @@ image: assets/images/ean/Arda-ile-damla-ilkokuma-serisi.jpg
 
 
 
-genre: tumdersler
-type: sinif0
+genre: education
+grades: [1]
 link: 'https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/arda-ile-damla-ilkokuma-serisi/index.html'
 
 

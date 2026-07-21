@@ -13,9 +13,8 @@ tags: [ "Literature"]
 previewpage: false
 featured: false
 
-genre: tumdersler
-type: sinif0
-
+grades: [0]
+genre: education
 # Book attributes
 ean: 9786059656702-1
 languages: []
@@ -46,4 +45,3 @@ sold: [] # 'AZ', 'TR'
 # For adding excerpt add <!--more--> and break the line
 ---
 <!--more--> 
-

@@ -13,9 +13,8 @@ tags: [ "Literature"]
 previewpage: false
 featured: false
 
-genre: tumdersler
-type: sinif01
-
+grades: [1]
+genre: education
 # Book attributes
 ean: duygularimi-kesfediyorum
 languages: []

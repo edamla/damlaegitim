@@ -3,6 +3,7 @@ layout: book
 title:  "Çılgın Dedemin Türkiye Turu 10 Kitap"
 authors: ["Sara Gürbüz Özeren"]
 grades: [3, 4]
+genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["İcatlar ve Keşifler", "Zaman Mekan" , "Bilim Teknoloji" , "Doğa ve Evren" , "Tarih" , "Birey ve Toplum" , "Çevre"]
 illustrators: #["nur-dombayci","umit-ozturk"]
@@ -55,4 +56,3 @@ kapağını bin Ertuğrul’a seni istediğin yere
 
 <img style="height: 50vh" src="/assets/images/ean/8697911223943-1.jpg" alt="">
 <!--more--> 
-

@@ -3,6 +3,7 @@ layout: book
 title:  "Deyim Öyküleri 5 Kitap"
 authors: ["Fatma Çağdaş"]
 grades: [3]
+genre: story
 concepts: [""]
 subjects: ["Anadolu Kültürü" , "Birey ve Toplum" , "Dil Bilim" , "Milli Kültür"]
 illustrators: #["nur-dombayci","umit-ozturk"]

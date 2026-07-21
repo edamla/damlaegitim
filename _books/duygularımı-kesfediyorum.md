@@ -2,6 +2,7 @@
 layout: book
 title:  "DUYGULARIMI KEŞFEDİYORUM (10 KİTAP)"
 grades: [3, 4]
+genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["İcatlar ve Keşifler", "Zaman Mekan" , "Bilim Teknoloji" , "Doğa ve Evren" , "Tarih" , "Birey ve Toplum" , "Çevre"]
 illustrators: #["nur-dombayci","umit-ozturk"]
@@ -57,4 +58,3 @@ Bu seride her bir hikâye, çocukların iç dünyasında yeni bir pencere açıy
 Duygularla tanışmak, büyümenin en güzel adımı!
 <!-- <img style="height: 50vh" src="/assets/images/ean/8697911223851-1.jpg" alt="">
 <!--more--> 
-

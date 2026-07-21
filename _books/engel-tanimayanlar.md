@@ -3,6 +3,7 @@ layout: book
 title:  "Engel Tanımayanlar 10 Kitap"
 authors: ["Sara Gürbüz Özeren"]
 grades: [3, 4]
+genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["İcatlar ve Keşifler", "Zaman Mekan" , "Bilim Teknoloji" , "Doğa ve Evren" , "Tarih" , "Birey ve Toplum" , "Çevre"]
 illustrators: #["nur-dombayci","umit-ozturk"]
@@ -38,4 +39,3 @@ En büyük destekçisi biricikannesidir. “Engel Tanımayanlar” serisi ile Vo
 
 <img style="height: 50vh" src="/assets/images/ean/8697911223974-1.jpg" alt="">
 <!--more--> 
-

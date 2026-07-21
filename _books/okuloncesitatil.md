@@ -13,9 +13,8 @@ tags: [ "Literature"]
 previewpage: false
 featured: false
 
-genre: tumdersler
-type: sinif0
-
+grades: [0]
+genre: education
 # Book attributes
 ean: 9786256859166
 languages: []

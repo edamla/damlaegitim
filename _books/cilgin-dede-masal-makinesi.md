@@ -13,8 +13,7 @@ examlink: masal-makinesi-y.pdf
 
 categories: [ "Öykümatik" ]
 tags: [ "hikaye"]
-genre: oykumatik
-type: sinif04 
+genre: story
 previewpage: true
 
 # Book attributes
@@ -38,4 +37,3 @@ TEMALAR: • Masallarla Değerler Eğitimi, Zaman Makinası, Macera, Gizem, Keş
 
 <img style="height: 50vh" src="/assets/images/ean/8697911223950-1.jpg" alt="">
 <!--more--> 
-

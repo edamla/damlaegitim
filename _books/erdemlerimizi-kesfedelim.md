@@ -3,6 +3,7 @@ layout: book
 title:  "Erdemlerimizi Keşfedelim 10 Kitap"
 authors: ["Sara Gürbüz Özeren"]
 grades: [2]
+genre: story
 concepts: [""]
 subjects: ["Değerler / Erdemler" ,  "Karakter Gelişimi"]
 illustrators: #["nur-dombayci","umit-ozturk"]
@@ -67,4 +68,3 @@ Haksızlık Yapmamak - Dürüstlük - İyi yürekli olmak - Fedakârlık - Doğa
 
 <img style="height: 50vh" src="/assets/images/ean/8697911210790.jpg" alt="">
 <!--more--> 
-
