@@ -1,13 +1,10 @@
 ---
 layout: book
 title:  "Çılgın Dedemin Türkiye Turu 10 Kitap"
-authors: ["Sara Gürbüz Özeren"]
 grades: [3, 4]
 genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["İcatlar ve Keşifler", "Zaman Mekan" , "Bilim Teknoloji" , "Doğa ve Evren" , "Tarih" , "Birey ve Toplum" , "Çevre"]
-illustrators: #["nur-dombayci","umit-ozturk"]
-translators: #["naci-turan","burak-dogru"]
 image: assets/images/ean/8697911223943.jpg
 examimage: assets/images/ean/8697911223943-1.jpg
 examlink: c%C4%B1lg%C4%B1n-dede-turkiye-turu.pdf
@@ -24,10 +21,6 @@ page: Her Biri 64
 size: "14x20cm"
 publish-number: 3136
 cover: "Karton Kapak"
-
-# Buyout Ecommerce
-
-damlayayinevi: "https://www.damlayayinevi.com.tr/cilgin-dedemin-isin-makinesi-turkiye-turunda-10-kitap"
 
 # For adding excerpt add <!--more--> and break the line
 ---

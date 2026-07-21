@@ -5,8 +5,6 @@ grades: [3, 4]
 genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["İcatlar ve Keşifler", "Zaman Mekan" , "Bilim Teknoloji" , "Doğa ve Evren" , "Tarih" , "Birey ve Toplum" , "Çevre"]
-illustrators: #["nur-dombayci","umit-ozturk"]
-translators: #["naci-turan","burak-dogru"]
 image: assets/images/ean/8697911223752.jpg
 examimage: assets/images/ean/8697911223752-1.jpg
 examlink: duygularimi-kesfediyorum-y.pdf
@@ -22,10 +20,6 @@ page: Her Biri 64
 size: "14x20cm"
 publish-number: 4
 cover: "Karton Kapak"
-
-# Buyout Ecommerce
-
-damlayayinevi: "https://www.damlayayinevi.com.tr/duygularimi-kesfediyorum-10-kitap"
 
 # For adding excerpt add <!--more--> and break the line
 ---

@@ -1,7 +1,6 @@
 ---
 layout: book
 title:  "Çılgın Dedemin Zaman Makinesi-1 10 Kitap"
-authors: ["Sara Gürbüz Özeren"]
 
 grades: [3, 4]
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
@@ -11,12 +10,10 @@ image: assets/images/ean/9786053831952.jpg
 examimage: assets/images/ean/8697911217003.jpg
 examlink: icatlar-kesifler-y.pdf
 
-
 categories: [ "Öykümatik" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-
 
 # Book attributes
 ean: 9786053831952
@@ -28,9 +25,6 @@ size: "14x20cm"
 publish-number: 1405
 cover: "Karton Kapak"
 
-# Buyout Ecommerce
-damlayayinevi: "https://www.damlayayinevi.com.tr/cilgin-dedemin-zaman-makinesi-1-gecmisten-gelecege-icatlar-ve-kesifler-10-kitap-43637"
-
 # For adding excerpt add <!--more--> and break the line
 ---
 **GEÇMİŞTEN GELECEĞE İCATLAR VE KEŞİFLER**
@@ -41,13 +35,11 @@ damlayayinevi: "https://www.damlayayinevi.com.tr/cilgin-dedemin-zaman-makinesi-1
 Telgrafın İcadından Elektriğin Keşfine,
 Geçmişin Derinliklerinden Geleceğin Gizemine Soluk Soluğa Okuyacağınız Macera Dolu BİLİM-KURGU KİTAPLARI
 
-
 **TEMALAR:** İcat ve Keşifler, Macera, Doğa ve Evren, Zaman ve Mekân, Dördüncü Boyut, Bilim Kurgu
 
 **KAZANIMLAR:** Yeni Kelimeler Öğrenme, Bilimsel Düşünce, Bilim Tarihi, Üstün Zekâ, Yetenek
 
 **ETİKETLER:** Tarih, Macera, İcat, Keşif, Bilim, Zaman, Mekân, Gelecek, Geçmiş, Mucitler, Kâşifler, Biyoğrafi
-
 
 **Setin İçerdiği Hikayeler**
 

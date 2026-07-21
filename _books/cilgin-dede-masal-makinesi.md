@@ -1,7 +1,6 @@
 ---
 layout: book
 title:  "Çılgın Dedemin Masal Makinesi 10 Kitap"
-authors: ["Sara Gürbüz Özeren"]
 
 grades: [3, 4]
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
@@ -25,9 +24,6 @@ page: Her Biri 48
 size: "14x20cm"
 publish-number: 1892
 cover: "Karton Kapak"
-
-# Buyout Ecommerce
-damlayayinevi: "https://www.damlayayinevi.com.tr/cilgin-dedemin-masal-makinesi-10-kitap-43638"
 
 # For adding excerpt add <!--more--> and break the line
 ---

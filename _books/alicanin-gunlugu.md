@@ -1,7 +1,6 @@
 ---
 layout: book
 title:  "Alican'ın Günlüğü 10 Kitap"
-authors: ["Nehir Aydın Gökduman"]
 
 grades: [2, 3]
 concepts: ["gorsel-uzamsal","sosyal","doga"]
@@ -25,9 +24,6 @@ page: Her Biri 48
 size: "14x20cm"
 publish-number: 1355
 cover: "Karton Kapak"
-
-# Buyout Ecommerce
-damlayayinevi: "https://www.damlayayinevi.com.tr/alicanin-gunlugu-10-kitap-43600"
 
 # For adding excerpt add <!--more--> and break the line
 ---
