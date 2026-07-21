@@ -1,6 +1,6 @@
 # Damla Okul
 
-[damlaegitim.com](https://damlaegitim.com) — Damla Yayınevi’nin okul yayınları ve eğitim materyallerini tanıtan statik web sitesi.
+[damlaokul.com](https://damlaokul.com) — Damla Yayınevi’nin okul yayınları ve eğitim materyallerini tanıtan statik web sitesi.
 
 Yeni Maarif Modeline uygun eğitim setleri, hikaye kitapları ve kataloglar tek bir katalogda sunulur.
 
@@ -126,7 +126,7 @@ Bootstrap’ın kendi dosyası (`bootstrap.min.css`) düzenlenmez.
 
 ## Lisans ve İletişim
 
-© Damla Yayınevi — [damlaegitim.com](https://damlaegitim.com)
+© Damla Yayınevi — [damlaokul.com](https://damlaokul.com)
 
 - [Facebook](https://www.facebook.com/damlayayinevi)
 - [Instagram](https://instagram.com/damlayayinevi)

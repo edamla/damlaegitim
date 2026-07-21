@@ -232,6 +232,15 @@ comments: false
                             </div>
                         </div>
                     </div>
+                    <div class="history wow fadeInUp">
+                        <div class="thumb"><img width="150" height="150" src="assets/images/logo.png" class="attachment-thumbnail" alt="Damla Okul"></div>
+                        <div class="featured-box" style="height: auto;">
+                            <div class="box-content">
+                                <h4><strong>2026</strong></h4>
+                                <p><strong>Damla Okul</strong> markası ile Damla Yayınevi’nin okul yayınlarını ve eğitim materyallerini tek çatı altında sunmaya başladık. Yeni Maarif Modeline uygun eğitim setleri, hikaye kitapları ve kataloglar <a href="https://damlaokul.com"><span class="alternative-font">damlaokul.com</span></a> üzerinden tanıtılmaktadır.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

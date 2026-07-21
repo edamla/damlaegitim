@@ -94,25 +94,3 @@ body {
 .cover-images {
   background: transparent;
 }
-
-/* Filtre sayfası */
-.page-books .filter-bar .btn-group {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.page-books .filter-bar .btn-group .btn:not(:last-child) {
-  margin-right: 10px;
-}
-
-.page-books .dropdown-menu .form-check-label {
-  font-size: 1.1rem;
-}
-
-.page-books .form-check-input {
-  margin-right: 15px;
-}
-
-.page-books .filter-bar .dropdown-toggle {
-  font-size: 1.2rem;
-}

@@ -236,9 +236,6 @@ function bootBookFilters() {
     if (document.getElementById('books-section')) {
         initHomeBookFilters();
     }
-    if (document.querySelector('.listbooks-item')) {
-        initBooksPageFilters();
-    }
 }
 
 if (document.readyState === 'loading') {
