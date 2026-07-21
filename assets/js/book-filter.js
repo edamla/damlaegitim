@@ -114,7 +114,7 @@ function updateGradeLabels() {
 }
 
 function filterHomeBooks() {
-    filterHomeBooksNav('.kitap-kutu-home', '.book-genre-group', homeFilterState.grade, homeFilterState.genre);
+    filterHomeBooksNav('.listbooks-home-item', '.book-genre-group', homeFilterState.grade, homeFilterState.genre);
     updateGradeLabels();
 }
 
@@ -223,7 +223,7 @@ function publisherselectall() {
 }
 
 function filterBooks() {
-    filterBooksByGradesAndGenres('.kitap-kutu', '.check-grade', '.check-genre');
+    filterBooksByGradesAndGenres('.listbooks-item', '.check-grade', '.check-genre');
 }
 
 function initBooksPageFilters() {
@@ -236,7 +236,7 @@ function bootBookFilters() {
     if (document.getElementById('books-section')) {
         initHomeBookFilters();
     }
-    if (document.querySelector('.kitap-kutu')) {
+    if (document.querySelector('.listbooks-item')) {
         initBooksPageFilters();
     }
 }

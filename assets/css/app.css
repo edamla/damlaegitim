@@ -1,0 +1,118 @@
+/**
+ * app.css — Bootstrap override katmanı
+ * Framework'ü markaya uyduran kurallar; yeni bileşen tanımı theme.css'te.
+ */
+
+:root {
+  --bs-primary: #03a87c;
+  --bs-primary-rgb: 3, 168, 124;
+  --bs-link-color: #03a87c;
+  --bs-link-hover-color: #028a66;
+  --bs-body-bg: #fafafa;
+  --bs-border-color: #dee2e6;
+}
+
+/* Primary renk tutarlılığı */
+.btn-primary {
+  --bs-btn-bg: var(--color-primary, #03a87c);
+  --bs-btn-border-color: var(--color-primary, #03a87c);
+  --bs-btn-hover-bg: var(--color-primary-dark, #028a66);
+  --bs-btn-hover-border-color: var(--color-primary-dark, #028a66);
+  --bs-btn-active-bg: var(--color-primary-dark, #028a66);
+  --bs-btn-active-border-color: var(--color-primary-dark, #028a66);
+}
+
+.text-primary {
+  color: var(--color-primary, #03a87c) !important;
+}
+
+.badge.bg-primary,
+.badge-primary {
+  background-color: var(--color-primary, #03a87c) !important;
+}
+
+.btn-link.btn-primary,
+.btn-link.btn-success {
+  color: var(--color-primary, #03a87c);
+}
+
+a.text-dark:hover {
+  color: var(--color-primary, #03a87c) !important;
+}
+
+/* Body & arka plan */
+body {
+  padding-top: var(--nav-height, 4rem);
+  background-color: var(--color-surface, #fafafa);
+  background-image: none;
+}
+
+/* Navbar ince ayar */
+#MagicMenu.navbar {
+  border-bottom: 1px solid var(--color-border, #dee2e6);
+  box-shadow: none;
+  filter: none;
+}
+
+.navbar .highlight .nav-link {
+  color: var(--color-primary, #03a87c) !important;
+  border: 1px solid var(--color-primary, #03a87c);
+}
+
+.navbar .highlight .nav-link:hover {
+  background: var(--color-primary, #03a87c);
+  color: #fff !important;
+}
+
+/* Bootstrap display override */
+@media (max-width: 991.98px) {
+  .display-3 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .display-3 {
+    font-size: 2rem;
+  }
+}
+
+/* Geçiş: eski kitap kutusu class'ları */
+.kitap-kutu,
+.kitap-kutu-home {
+  background: #fff;
+  border-color: var(--color-border, #dee2e6);
+  margin-bottom: var(--space-6, 1.5rem);
+  transition: box-shadow 0.2s ease;
+}
+
+.kitap-kutu:hover,
+.kitap-kutu-home:hover {
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.08));
+}
+
+.cover-images {
+  background: transparent;
+}
+
+/* Filtre sayfası */
+.page-books .filter-bar .btn-group {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.page-books .filter-bar .btn-group .btn:not(:last-child) {
+  margin-right: 10px;
+}
+
+.page-books .dropdown-menu .form-check-label {
+  font-size: 1.1rem;
+}
+
+.page-books .form-check-input {
+  margin-right: 15px;
+}
+
+.page-books .filter-bar .dropdown-toggle {
+  font-size: 1.2rem;
+}
