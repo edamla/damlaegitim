@@ -1,66 +1,14 @@
 ---
-title: "Eğitim Setleri"
+title: "Kitaplar"
 layout: default
 permalink: "/urunler"
 ---
 
-<div class="container page-books">
+<div class="container">
 
-    <div class="filter-bar btn-group" role="group" aria-label="Ürün filtreleri">
-        <div class="btn-group">
-            <button type="button" class="btn btn-light dropdown-toggle fw-bold" data-bs-toggle="dropdown" aria-expanded="false">Sınıf</button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                {% include book-grade-filter.html suffix="" filter_fn="filterBooks" select_all_fn="gradeselectall" select_all_id="gradeselectall" %}
-            </ul>
-        </div>
-
-        <div class="btn-group">
-            <button type="button" class="btn btn-light dropdown-toggle fw-bold" data-bs-toggle="dropdown" aria-expanded="false">Tür</button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre" type="checkbox" value="education" id="education" checked/>
-                            <label class="form-check-label" for="education">Eğitim</label>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="filterBooks()">
-                        <div class="form-check">
-                            <input class="form-check-input check-genre" type="checkbox" value="story" id="story" checked/>
-                            <label class="form-check-label" for="story">Hikaye</label>
-                        </div>
-                    </a>
-                </li>
-                <li><hr class="dropdown-divider" /></li>
-                <li>
-                    <a class="dropdown-item" href="#" onclick="genreselectall()">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="genreselectall" id="genreselectall" checked/>
-                            <label class="form-check-label" for="genreselectall">Hepsini Seç</label>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-
-    <div class="row gap-y listbooks">
-        {% assign groupbooks = site.books | group_by: "authors" | sort: "name" %}
-        {% for author in groupbooks %}
-            {% assign books = author.items | sort: "url" %}
-            {% for book in books %}
-                {% assign cat = "" %}
-                {% for category in book.categories %}
-                    {% assign cat = cat | append: "cat-" | append: category | append: " " %}
-                {% endfor %}
-                {% capture extra_classes %}genre-{{ book.genre }} publisher-{{ book.publisher }} {{ cat | downcase }}{% endcapture %}
-                <div class="col-12 col-sm-6 col-lg-3 listbooks-item {{ extra_classes }}" data-grades="{{ book.grades | join: ',' }}">
-                    {% include book-card.html %}
-                </div>
-            {% endfor %}
-        {% endfor %}
-    </div>
+<div id="books-section">
+    {% include book-grade-nav.html %}
+    {% include book-home-groups.html %}
+</div>
 
 </div>

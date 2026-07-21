@@ -1,6 +1,6 @@
 # Damla Okul — Proje Mimarisi
 
-Bu belge, [damlaegitim.com](https://damlaegitim.com) (Damla Okul) statik sitesinin teknik yapısını, dosya organizasyonunu ve geliştirme kurallarını açıklar.
+Bu belge, [damlaokul.com](https://damlaokul.com) (Damla Okul) statik sitesinin teknik yapısını, dosya organizasyonunu ve geliştirme kurallarını açıklar.
 
 ## Genel Bakış
 
@@ -9,7 +9,7 @@ Bu belge, [damlaegitim.com](https://damlaegitim.com) (Damla Okul) statik sitesin
 | Tür | Statik site (Jamstack) |
 | Motor | [Jekyll](https://jekyllrb.com/) 4.x |
 | Dil | Türkçe (`language: tr`) |
-| Yayın | GitHub Pages (`CNAME` → `damlaegitim.com`) |
+| Yayın | GitHub Pages (`CNAME` → `damlaokul.com`) |
 | Build çıktısı | `_site/` (gitignore) |
 | Node/npm | **Yok** — CSS doğrudan düzenlenir, build adımı gerekmez |
 
@@ -39,7 +39,7 @@ Site, **Damla Okul** markası altında Damla Yayınevi’nin okul yayınlarını
 └──────────────────────────┬──────────────────────────────────┘
                            │ git push
                            ▼
-                    GitHub Pages (damlaegitim.com)
+                    GitHub Pages (damlaokul.com)
 ```
 
 ---
@@ -108,7 +108,7 @@ damlaegitim/
 │       └── favicon/
 ├── index.html            # Anasayfa
 ├── Gemfile               # Ruby bağımlılıkları
-├── CNAME                 # damlaegitim.com
+├── CNAME                 # damlaokul.com
 ├── install.sh            # bundle install
 ├── start.sh              # jekyll serve
 └── _site/                # Build çıktısı (gitignore)

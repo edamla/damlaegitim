@@ -2,6 +2,7 @@
 name: 'Damla Okul'
 language: "tr"
 description: 'Damla Okul — Damla Yayınevi okul yayınları ve eğitim materyalleri'
+url: 'https://damlaokul.com'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon/favicon.ico'
 baseurl: ''
