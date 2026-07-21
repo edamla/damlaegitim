@@ -1,7 +1,6 @@
 ---
 layout: book
 title:  "Atasözü Öyküleri 5 Kitap"
-authors: ["Fatma Çağdaş"]
 
 grades: [3]
 concepts: [""]
@@ -10,7 +9,6 @@ subjects: ["Anadolu Kültürü" , "Birey ve Toplum" , "Dil Bilim" , "Milli Kült
 image: assets/images/ean/9786053832768.jpg
 examimage: assets/images/ean/9786053832768-1.jpg
 examlink: atasozu-oykuleri-y.pdf
-
 
 categories: [ "Öykümatik" ]
 tags: [ "hikaye"]
@@ -26,9 +24,6 @@ page: Her Bİri 64
 size: "14x20cm"
 publish-number: 1448
 cover: "Karton Kapak"
-
-# Buyout Ecommerce
-damlayayinevi: "https://www.damlayayinevi.com.tr/atasozu-oykuleri-5-kitap"
 
 # For adding excerpt add <!--more--> and break the line
 ---

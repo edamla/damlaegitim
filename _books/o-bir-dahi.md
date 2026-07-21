@@ -1,7 +1,6 @@
 ---
 layout: book
 title:  "O BİR DAHİ (10 KİTAP)"
-authors: ["Seda Bilgin"]
 
 grades: [3, 4]
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
@@ -26,9 +25,6 @@ size: "14x20cm"
 publish-number: 3269
 cover: "Karton Kapak"
 
-# Buyout Ecommerce
-damlayayinevi: "https://www.damlayayinevi.com.tr/o-bir-dahi-10-kitap"
-
 # For adding excerpt add <!--more--> and break the line
 ---
 Merhaba çocuklar! Sizi, bilimin büyülü dünyasına davet ediyoruz! Bu kitapta, dünyanın dört bir yanından gelmiş ve insanlığın bilgi hazinesine değerli katkılarda bulunmuş 10 büyük bilim insanını tanıyacaksınız.
@@ -43,7 +39,6 @@ El Cezeri’nin matematikteki büyük başarıları,
 Wilhelm Rontgen’in X ışınlarını keşfi,
 
 İbn-i Sina’nın tıp alanındaki derin bilgisi sizi büyüleyecek!
-
 
 Bu kitap, genç zihinlerinizin bilime olan merakını artıracak ve belki de ileride siz de dünyaya değerli katkılarda bulunacaksınız.
 Haydi, bilimin heyecan verici yolculuğuna başlayalım!

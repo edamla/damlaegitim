@@ -1,13 +1,10 @@
 ---
 layout: book
 title:  "Deyim Öyküleri 5 Kitap"
-authors: ["Fatma Çağdaş"]
 grades: [3]
 genre: story
 concepts: [""]
 subjects: ["Anadolu Kültürü" , "Birey ve Toplum" , "Dil Bilim" , "Milli Kültür"]
-illustrators: #["nur-dombayci","umit-ozturk"]
-translators: #["naci-turan","burak-dogru"]
 image: assets/images/ean/9786053832874.jpg
 examimage: assets/images/ean/8697911217621.jpg
 examlink: deyim-oykuleri-y.pdf
@@ -24,19 +21,6 @@ page: Her Bİri 64
 size: "14x20cm"
 publish-number: 1443
 cover: "Karton Kapak"
-
-# Buyout Ecommerce
-dnr: #"https://www.dr.com.tr/kitap/asik-suratli-cocuk/nur-dombayci/cocuk-ve-genclik/genclik-10-yas/roman-oyku/urunno=0000000723980"
-kitapyurdu: #"https://www.kitapyurdu.com/kitap/asik-suratli-cocuk--ugultulu-orman/495662.html&filter_name=As%C4%B1k+Suratl%C4%B1+%C3%87ocuk"
-idefix: #"https://www.idefix.com/kitap/asik-suratli-cocuk/nur-dombayci/cocuk-ve-genclik/genclik-10-yas/roman-oyku/urunno=0000000723980"
-hepsiburada: #"https://www.hepsiburada.com/asik-suratli-cocuk-nur-dombayci-p-HBV000002J0RS"
-trendyol: #"https://www.trendyol.com/damla-yayinevi-cocuk/asik-suratli-cocuk-ugultulu-orman-p-3320525"
-gittigidiyor: #"https://www.gittigidiyor.com/kitap-dergi/ezan-sehidi-adnan-menderes_pdp_732728793"
-odatvkitap: #"https://www.odatvkitap.com.tr"
-bkmkitap: #"https://www.bkmkitap.com/abdulhamidin-kurtlarla-dansi-578226"
-amazontr: #"https://www.amazon.com.tr"
-dkitap: #"https://www.dkitap.com/asik-suratli-cocuk-1-ugultulu-orman"
-damlayayinevi: "https://www.damlayayinevi.com.tr/deyim-oykuleri-5-kitap"
 
 # For adding excerpt add <!--more--> and break the line
 ---

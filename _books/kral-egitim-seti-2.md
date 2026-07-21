@@ -2,11 +2,6 @@
 layout: previewbook
 title:  "Kral Eğitim Seti 2.Sınıf"
 
-
-publisher: damlapublishing
-authors: "Komisyon"
-illustrators: [""]
-translators: #["naci-turan","burak-dogru"]
 image: assets/images/ean/8697911221352.jpg
 categories: [ "İlkokul" ]
 tags: [ "Okuma yazma, ilkokuma, yeni müfredat"]
@@ -22,8 +17,6 @@ page: 881
 size: "13,5x21cm"
 
 youtube: #https://www.youtube.com/watch?v=QRUbpgJeM0c
-
-
 
 # For adding excerpt add <!--more--> and break the line
 ---

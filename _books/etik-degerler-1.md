@@ -1,7 +1,6 @@
 ---
 layout: book
 title:  "ETİK DEĞERLER EĞİTİM SETİ-1. SINIF (10 KİTAP)"
-authors: ["Tuba Bozcan"]
 
 grades: [1]
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
@@ -25,9 +24,6 @@ page: Her Biri 16
 size: "23,5x16,5cm"
 publish-number: 1746
 cover: "Karton Kapak"
-
-# Buyout Ecommerce
-damlayayinevi: "https://www.damlayayinevi.com.tr/etik-degerler-egitim-seti-1-sinif-10-kitap-43631"
 
 # For adding excerpt add <!--more--> and break the line
 ---

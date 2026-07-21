@@ -2,11 +2,6 @@
 layout: previewbook
 title:  "Yaz Tatili 3.Sınıf"
 
-
-publisher: damlapublishing
-authors: "Komisyon"
-illustrators: [""]
-translators: #["naci-turan","burak-dogru"]
 image: assets/images/ean/yaz-tatil-3sınıf.jpg
 categories: [ "Religion" ]
 tags: [ "Literature"]
@@ -26,7 +21,6 @@ youtube:
 # Foreign Rights attributes
 sold: [] # 'AZ', 'TR'
 
-# Buyout Ecommerce
 # dnr: "https://www.dr.com.tr/kitap/sacakli-kizin-pasakli-gunlugu-2/cocuk-ve-genclik/genclik-10-yas/roman-oyku/urunno=0001893059001"
 # kitapyurdu: "https://www.kitapyurdu.com/kitap/sacakli-kizin-pasakli-gunlugu-2-/560122.html&filter_name=Sa%C3%A7akl%C4%B1+K%C4%B1z%27%C4%B1n+Pasakl%C4%B1+G%C3%BCnl%C3%BC%C4%9F%C3%BC+2"
 # idefix: "https://www.idefix.com/kitap/sacakli-kizin-pasakli-gunlugu-2/cocuk-ve-genclik/genclik-10-yas/roman-oyku/urunno=0001893059001"
