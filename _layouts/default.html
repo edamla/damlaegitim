@@ -34,53 +34,46 @@
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
-    
 
     <!-- Google Fonts-->
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700" rel="stylesheet">
 
-    <!-- Bootstrap Modified -->
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/main.css">
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/bootstrap.min.css">
 
-    <!-- Theme Stylesheet -->
+    <!-- Theme & overrides -->
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/theme.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/app.css">
 
     <!-- Tiny Slider -->
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/tiny-slider.css">
 
-    <!-- Jquery on header to make sure everything works, the rest  of the scripts in footer for fast loading -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
     {% include tracking-header.html %}
-
 
 </head>
 
-
-
-<body class="{% if page.url == "/" %} homefirstpage {% endif %}">
+<body class="{% if page.url == "/" %} homefirstpage {% endif %}{% if page.url == '/urunler' %} page-books {% endif %}">
 
     <!-- Navbar -->
-    <nav id="MagicMenu" class="topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <nav id="MagicMenu" class="site-nav topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <div class="container">
-        <a class="navbar-brand" href="{{ site.baseurl }}/"><strong><img src="{{site.baseurl}}/assets/images/logo.png" alt="{{site.name}}" style="max-height: 6vh;"></strong></a>
+        <a class="navbar-brand" href="{{ site.baseurl }}/">
+            <img class="site-nav__logo" src="{{site.baseurl}}/assets/images/logo.png" alt="{{site.name}}">
+        </a>
 
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Menüyü aç/kapat">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="navbar-collapse collapse" id="navbarColor02">
-            <ul class="navbar-nav mr-auto d-flex align-items-center">
+            <ul class="navbar-nav me-auto d-flex align-items-center">
                {% include menu-header.html %}
             </ul>
-            <ul class="navbar-nav d-md-flex d-none flex-row" style="justify-content: center;">
+            <ul class="navbar-nav d-md-flex d-none flex-row site-nav__social">
                 {% include menu-socialmedia.html %}
             </ul>
-            <ul class="navbar-nav justify-content-center d-md-none d-flex flex-row mobil">
+            <ul class="navbar-nav justify-content-center d-md-none d-flex flex-row mobil site-nav__social">
                 {% include menu-socialmedia.html %}
             </ul>
-            <!-- <ul class="navbar-nav ml-auto d-flex align-items-center">
-                {% include search-lunr.html %}
-            </ul> -->
         </div>
     </div>
     </nav>
@@ -95,26 +88,20 @@
         {{ content }}
     </main>
 
-
-    <!-- Scripts: popper, bootstrap, theme, lunr -->
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-
-    <script src="{{site.baseurl}}/assets/js/theme.js"></script>
-
+    <script src="{{site.baseurl}}/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="{{site.baseurl}}/assets/js/nav.js"></script>
 
     <!-- Footer -->
-    <footer class="border-top p-1 text-white small" style="background-color: #25272a">
+    <footer class="site-footer border-top text-white small">
         <div class="container">
         <div class="row justify-content-center">
-            <span class="navbar-brand mr-2 mb-0 text-center"><img style="max-height: 60px;" src="{{site.baseurl}}/assets/images/logo-bw.png"></span>
+            <span class="navbar-brand me-2 mb-0 text-center">
+                <img class="site-footer__logo" src="{{site.baseurl}}/assets/images/logo-bw.png" alt="{{site.name}}">
+            </span>
         </div>
         <div class="row align-items-center justify-content-center">
-            <div>
-                <span class="navbar-brand mr-2 mb-0"></span>
-                <span class="text-center">Copyright © <script>document.write(new Date().getFullYear())</script> Damla Yayınevi</span>
-
+            <div class="text-center">
+                <span>Copyright © <script>document.write(new Date().getFullYear())</script> Damla Yayınevi</span>
             </div>
         </div>
         </div>

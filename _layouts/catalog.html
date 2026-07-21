@@ -33,16 +33,16 @@ layout: default
 
 {% assign book = page %}
 <div class="container">
-<div class="jumbotron jumbotron-fluid mb-3 pl-0 pt-0 pb-0 bg-white position-relative">
+<div class="book-detail mb-3 ps-0 pt-0 pb-0 bg-white position-relative">
 		<div class="h-100 tofront d-none">
 			<div class="row {% if book.image %} justify-content-between {% else %} justify-content-center {% endif %}">
 				{% if book.image %}
-				<div class="col-md-3 pr-2 align-self-center book">
+				<div class="col-md-3 pe-2 align-self-center book">
 					<img class="rounded" src="{% if book.image contains "://" %}{{ book.image }}{% else %}{{ site.baseurl }}/{{ book.image }}{% endif %}" alt="{{ page.title }}">
 				</div>
                 {% endif %}
 
-				<div class="{% if book.image %} col-md-9 {% else %} col-md-8 {% endif %} pr-0 pr-md-4 pt-3 pb-3">
+				<div class="{% if book.image %} col-md-9 {% else %} col-md-8 {% endif %} pe-0 pe-md-4 pt-3 pb-3">
 
 
 					<div class="align-items-center">
@@ -50,7 +50,7 @@ layout: default
 						<h1 class="display-4 mb-4 article-headline">{{ book.title }}</h1>
 
 
-						<p class="font-weight-bold">
+						<p class="fw-bold">
 							<span class="catlist">
 							{% for cat in book.categories %}
 							  <a class="sscroll text-danger" href="#">{{ cat }}</a><span class="sep">, </span>
@@ -65,10 +65,10 @@ layout: default
 
 						<div class="icon-block mt-3 d-inline-grid">  
 
-							<a class="sscroll btn btn-light btn-sm font-weight-bold d-block float-left" target="_blank" href="#iframe"><i class="fas fa-book-reader fa-2x text-primary" aria-hidden="true"></i><span class="font-weight-bold btn-sm">Kitapları İncele</span></a>  &nbsp;
+							<a class="sscroll btn btn-light btn-sm fw-bold d-block float-left" target="_blank" href="#iframe"><i class="fas fa-book-reader fa-2x text-primary" aria-hidden="true"></i><span class="fw-bold btn-sm">Kitapları İncele</span></a>  &nbsp;
 
 							{% if book.youtube %}
-							<a class="sscroll btn btn-light btn-sm font-weight-bold d-block float-left" target="_blank" href="{{ book.youtube }}"><i class="fab fa-youtube fa-2x text-danger" aria-hidden="true"></i><span class="font-weight-bold btn-sm">Tanıtm Videosu</span></a>  &nbsp;
+							<a class="sscroll btn btn-light btn-sm fw-bold d-block float-left" target="_blank" href="{{ book.youtube }}"><i class="fab fa-youtube fa-2x text-danger" aria-hidden="true"></i><span class="fw-bold btn-sm">Tanıtm Videosu</span></a>  &nbsp;
 							{% endif %}
 						</div>
 
@@ -103,27 +103,27 @@ layout: default
 
 							{% if book.authors.size > 0 %}
 							<li class="list-group-item">
-								<div class="md-v-line"></div><i class="fas fa-user-edit mr-1 fa-lg text-primary"></i><span class="mr-1">Yazar:</span>{{book.authors }}
+								<div class="md-v-line"></div><i class="fas fa-user-edit me-1 fa-lg text-primary"></i><span class="me-1">Yazar:</span>{{book.authors }}
 							</li>
 							{% endif %}
 
 
 							{% if book.page %}
 							<li class="list-group-item">
-								<div class="md-v-line"></div><i class="fas fa-book-open mr-1 fa-lg text-primary"></i><span class="mr-1">Sayfa:</span> {{book.page}}
+								<div class="md-v-line"></div><i class="fas fa-book-open me-1 fa-lg text-primary"></i><span class="me-1">Sayfa:</span> {{book.page}}
 							</li>
 							{% endif %}
 
 							{% if book.size %}
 							<li class="list-group-item">
-								<div class="md-v-line"></div><i class="fas fa-ruler mr-1 fa-lg text-danger"></i><span class="mr-1">Ebat:</span>{{book.size}}
+								<div class="md-v-line"></div><i class="fas fa-ruler me-1 fa-lg text-danger"></i><span class="me-1">Ebat:</span>{{book.size}}
 							</li>
 							{% endif %}
 							
 
 							{% if book.ean %}
 							<li class="list-group-item">
-							  <div class="md-v-line"></div><i class="fas fa-barcode mr-1 fa-lg text-dark"></i><span class="mr-1">Barkod :</span> {{book.ean}}
+							  <div class="md-v-line"></div><i class="fas fa-barcode me-1 fa-lg text-dark"></i><span class="me-1">Barkod :</span> {{book.ean}}
 							</li>
 							{% endif %}
 

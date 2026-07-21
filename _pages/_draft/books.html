@@ -6,7 +6,7 @@ permalink: "/titles"
 
 
 <div class="container">
-    <h4 class="font-weight-bold spanborder"><span>Yeni Ürünler</span></h4>
+    <h4 class="fw-bold spanborder"><span>Yeni Ürünler</span></h4>
     {% assign bookarray = "" | split: ',' %}
     {% assign sortedarray = "" | split: ',' %}
     {% assign sortedarray = site.books | sort: "publisher" | reverse %}
@@ -38,7 +38,7 @@ permalink: "/titles"
     </style>
      <div class="btn-group">
         <div class="btn-group">
-            <button type="button" class="btn btn-light dropdown-toggle font-weight-bold" style="font-size: 1.2rem;" data-toggle="dropdown">
+            <button type="button" class="btn btn-light dropdown-toggle fw-bold" style="font-size: 1.2rem;" data-bs-toggle="dropdown">
                 Sınıf
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -95,7 +95,7 @@ permalink: "/titles"
         </div>
         
         <div class="btn-group">
-            <button type="button" class="btn btn-light dropdown-toggle font-weight-bold" style="font-size: 1.2rem;" data-toggle="dropdown">
+            <button type="button" class="btn btn-light dropdown-toggle fw-bold" style="font-size: 1.2rem;" data-bs-toggle="dropdown">
                 Branş
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -152,7 +152,7 @@ permalink: "/titles"
         </div>
     
         <div class="btn-group">
-            <button type="button" class="btn btn-light dropdown-toggle font-weight-bold" style="font-size: 1.2rem;" data-toggle="dropdown">
+            <button type="button" class="btn btn-light dropdown-toggle fw-bold" style="font-size: 1.2rem;" data-bs-toggle="dropdown">
                 Publisher
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="max-height: 200px; overflow-y: auto;">
@@ -201,7 +201,7 @@ permalink: "/titles"
                     <h4 class="text-dark mb-0">{{ book.title }}</h4>
                     {% for bookauthor in book.authors %}
                         {% assign siteauthor = site.authors | where:"key", bookauthor | first %}
-                        <h5 class="d-inline-block mt-2 mb-1 font-weight-normal">{{ siteauthor.title }}</h5>
+                        <h5 class="d-inline-block mt-2 mb-1 fw-normal">{{ siteauthor.title }}</h5>
                         {% if forloop.last == false %} - {% endif %}
                     {% endfor %}
                 </div>

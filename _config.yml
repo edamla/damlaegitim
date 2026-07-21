@@ -1,7 +1,7 @@
 # Site
-name: 'Damla Eğitim Kulübü'
+name: 'Damla Okul'
 language: "tr"
-description: 'Damla Yayınevi Eğitim Kulübü'
+description: 'Damla Okul — Damla Yayınevi okul yayınları ve eğitim materyalleri'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon/favicon.ico'
 baseurl: ''
