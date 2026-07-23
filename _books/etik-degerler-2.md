@@ -4,7 +4,7 @@ title:  "ETİK DEĞERLER EĞİTİM SETİ-2. SINIF (10 KİTAP)"
 
 grades: [2]
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
-subjects: ["İcatlar ve Keşifler", "Zaman Mekan" , "Bilim Teknoloji" , "Doğa ve Evren" , "Tarih" , "Birey ve Toplum" , "Çevre"]
+subjects: ["Hoşgörü", "Adalet", "Dostluk", "Özdenetim", "Toplumsal Sorumluluk"]
 
 image: assets/images/ean/8697911223875.jpg
 examimage: assets/images/ean/8697911223875-1.jpg
@@ -14,6 +14,7 @@ categories: [ "Öykümatik" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
+paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223875

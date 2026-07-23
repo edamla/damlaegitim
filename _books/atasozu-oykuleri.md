@@ -14,6 +14,7 @@ categories: [ "Öykümatik" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
+paper: "1. Hamur"
 
 # Book attributes
 ean: 9786053832768
@@ -27,7 +28,12 @@ cover: "Karton Kapak"
 
 # For adding excerpt add <!--more--> and break the line
 ---
-Atasözleri, milletimizin uzun gözlem ve tecrübeleri sonucu oluşan hikmetli sözleridir. Bu sözler, hayatın binlerce yıllık imbiğinden süzülüp dilden dile günümüze değin ulaşarak hayatımızın her alanını aydınlatır. İnanıyoruz ki kültür öğelerimizi yaşatmak bakımından, konuşma dilinde atasözlerimizi kullanabilen çocuklar yetiştirmek çok önemlidir. Bu inançla kaleme alınmış “Atasözü Öyküleri” adlı eserde atasözlerimizin birbirinden ilginç hikâyelerinden güzel bir demet sunuyoruz. Bu seride toplam 5 adet eser bulunmaktadır. 1-Balık Baştan Kokar 2-Kel Başa Şimşir Tarak 3-Aç Ayı Oynamaz 4-Çam Sakızı Çoban Armağanı 5-Ürümesini Bilmeyen Köpek Sürüye Kurt Getirir
+Atasözleri, milletimizin uzun gözlem ve tecrübeleri sonucu oluşan hikmetli sözleridir. Bu sözler, hayatın binlerce yıllık imbiğinden süzülüp dilden dile günümüze değin ulaşarak hayatımızın her alanını aydınlatır. İnanıyoruz ki kültür öğelerimizi yaşatmak bakımından, konuşma dilinde atasözlerimizi kullanabilen çocuklar yetiştirmek çok önemlidir. Bu inançla kaleme alınmış “Atasözü Öyküleri” adlı eserde atasözlerimizin birbirinden ilginç hikâyelerinden güzel bir demet sunuyoruz. <br>
+Bu seride toplam 5 adet eser bulunmaktadır.<br>
+1-Balık Baştan Kokar <br>
+2-Kel Başa Şimşir Tarak <br>
+3-Aç Ayı Oynamaz <br>
+4-Çam Sakızı Çoban Armağanı <br>
+5-Ürümesini Bilmeyen Köpek Sürüye Kurt Getirir
 
-<img style="height: 50vh" src="/assets/images/ean/9786053832768-1.jpg" alt="">
 <!--more--> 

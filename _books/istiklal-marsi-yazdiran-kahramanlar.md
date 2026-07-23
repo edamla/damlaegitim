@@ -4,13 +4,14 @@ title:  "İstiklal Marşı Yazdıran Kahramanlar 10 Kitap"
 grades: [3, 4]
 genre: story
 concepts: [""]
-subjects: []
+subjects: ["Milli Mücadele", "Vatan Sevgisi", "Bağımsızlık", "Tarih Bilinci", "Kahramanlık"]
 image: assets/images/ean/9786254112560.jpg
 examimage: assets/images/ean/8697911219137.jpg
 examlink: istiklal-marsi-yazdiran-y.pdf
 categories: [ "Çocuk", "Hikaye" ]
 tags: [ "hikaye"]
 previewpage: true
+paper: "1. Hamur"
 
 # Book attributes
 ean: 9786254112560
@@ -51,5 +52,4 @@ Mehmet Âkif Ersoy
 9- Köprülülü Hamdi Bey<br>
 10- Erzurumlu Gül Hanım
 
-<img style="height: 50vh" src="/assets/images/ean/8697911219137.jpg" alt="">
 <!--more--> 

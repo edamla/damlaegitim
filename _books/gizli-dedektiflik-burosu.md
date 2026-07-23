@@ -4,13 +4,14 @@ title:  "Gizli Dedektiflik Bürosu 10 Kitap"
 grades: [4]
 genre: story
 concepts: [""]
-subjects: ["Sosyal Kontrol", "Toplumsal Duyarlılık", "Kişisel Gelişim" , "Birey ve Toplum" , "Takım Ruhu"]
+subjects: ["Akıl Yürütme", "Problem Çözme", "Takım Ruhu", "Gizem ve Macera", "Analitik Düşünme"]
 image: assets/images/ean/8697911223080.jpg
 examimage: assets/images/ean/8697911223080-1.jpg
 examlink: gizli-dedektiflik-y.pdf
 categories: [ "Çocuk", "Hikaye" ]
 tags: [ "hikaye"]
 previewpage: true
+paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223080
@@ -65,5 +66,4 @@ Her bir okuyucu kitap okumanın keyfini alırken aynı zamanda zekâsını geli�
 
 10- Arabayı kim Çaldı?
 
-<img style="height: 50vh" src="/assets/images/ean/8697911217638.jpg" alt="">
 <!--more--> 

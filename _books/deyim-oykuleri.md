@@ -11,6 +11,7 @@ examlink: deyim-oykuleri-y.pdf
 categories: [ "Çocuk", "Hikaye" ]
 tags: [ "hikaye"]
 previewpage: true
+paper: "1. Hamur"
 
 # Book attributes
 ean: 9786053832874
@@ -43,5 +44,4 @@ Bu öyküleri bilmesek de deyimlerimizi sık sık kullanırız.
 4- Dananın Kuyruğu Koptu<br>
 5- Sarı Çizmeli Mehmet Ağa
 
-<img style="height: 50vh" src="/assets/images/ean/8697911217621.jpg" alt="">
 <!--more--> 

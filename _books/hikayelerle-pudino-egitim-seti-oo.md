@@ -1,17 +1,17 @@
 ---
 layout: previewbook
-title:  "Duygularımı Keşfediyorum | 1.Sınıf"
+title:  "Hikayelerle Pudino Eğitim Seti Okul Öncesi "
 
-image: assets/images/ean/duygularimi-kesfediyorum.jpg
+image: assets/images/ean/9786059656252.jpg
 categories: [ "Religion" ]
 tags: [ "Literature"]
 previewpage: false
 featured: false
 
-grades: [1]
+grades: [0]
 genre: education
 # Book attributes
-ean: duygularimi-kesfediyorum
+ean: 9786059656252
 languages: []
 page: 608
 size: "13,5x21cm"

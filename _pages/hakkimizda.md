@@ -233,7 +233,7 @@ comments: false
                         </div>
                     </div>
                     <div class="history wow fadeInUp">
-                        <div class="thumb"><img width="150" height="150" src="assets/images/logo.png" class="attachment-thumbnail" alt="Damla Okul"></div>
+                        <div class="thumb"><img width="150" height="150" src="assets/images/damla-okul.jpg" class="attachment-thumbnail" alt="Damla Okul"></div>
                         <div class="featured-box" style="height: auto;">
                             <div class="box-content">
                                 <h4><strong>2026</strong></h4>

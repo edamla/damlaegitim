@@ -4,13 +4,14 @@ title:  "Engel Tanımayanlar 10 Kitap"
 grades: [3, 4]
 genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
-subjects: ["İcatlar ve Keşifler", "Zaman Mekan" , "Bilim Teknoloji" , "Doğa ve Evren" , "Tarih" , "Birey ve Toplum" , "Çevre"]
+subjects: ["Engelsiz Yaşam", "Toplumsal Duyarlılık", "Empati", "Azim ve Mücadele", "Farkındalık"]
 image: assets/images/ean/8697911223974.jpg
 examimage: assets/images/ean/8697911223974-1.jpg
 examlink: engel-tanimayanlar.pdf
 categories: [ "Çocuk", "Hikaye" ]
 tags: [ "hikaye"]
 previewpage: true
+paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223974
@@ -30,5 +31,4 @@ başına onu mutlu etmeye yeter, çünkü hayalleri âdeta kanatlanır! Yaptığ
 Geçirdiği kaza sonrasında hayata dört elle sarılır Volkan.
 En büyük destekçisi biricikannesidir. “Engel Tanımayanlar” serisi ile Volkan’ın inatla yeni hayallere kanat çırpmasını, yaptığı her işi bir başarı hikâyesine dönüştürmesini okuyacaksınız.
 
-<img style="height: 50vh" src="/assets/images/ean/8697911223974-1.jpg" alt="">
 <!--more--> 

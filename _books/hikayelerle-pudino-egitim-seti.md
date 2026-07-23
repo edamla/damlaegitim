@@ -1,6 +1,6 @@
 ---
 layout: previewbook
-title:  "Hikayelerle Pudino Eğitim Seti"
+title:  "Hikayelerle Pudino Eğitim Seti 1.Sınıf "
 
 image: assets/images/ean/9786059656344.jpg
 categories: [ "Religion" ]
@@ -8,7 +8,7 @@ tags: [ "Literature"]
 previewpage: false
 featured: false
 
-grades: [0]
+grades: [1]
 genre: education
 # Book attributes
 ean: 9786059656344

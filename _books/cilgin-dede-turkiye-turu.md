@@ -4,13 +4,14 @@ title:  "Çılgın Dedemin Türkiye Turu 10 Kitap"
 grades: [3, 4]
 genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
-subjects: ["İcatlar ve Keşifler", "Zaman Mekan" , "Bilim Teknoloji" , "Doğa ve Evren" , "Tarih" , "Birey ve Toplum" , "Çevre"]
+subjects: ["Türkiye Coğrafyası", "Kültürel Miras", "Zaman Mekan", "Gezi ve Keşif", "Milli Değerler"]
 image: assets/images/ean/8697911223943.jpg
 examimage: assets/images/ean/8697911223943-1.jpg
 examlink: c%C4%B1lg%C4%B1n-dede-turkiye-turu.pdf
 categories: [ "Çocuk", "Hikaye" ]
 tags: [ "hikaye"]
 previewpage: true
+paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223943
@@ -47,5 +48,4 @@ Gölü’ne mi! Tamam o zaman aç kitabın
 kapağını bin Ertuğrul’a seni istediğin yere
 ışınlasın...
 
-<img style="height: 50vh" src="/assets/images/ean/8697911223943-1.jpg" alt="">
 <!--more--> 
