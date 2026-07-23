@@ -48,8 +48,8 @@ layout: default
                             {% if book.review_link %}
                             <a class="sscroll btn btn-light btn-sm fw-bold" href="{{ book.review_link }}" target="_blank"><i class="fas fa-search fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">İncele</span></a>
                             {% endif %}
-                            {% if site.examlink.enabled == true and book.examlink %}
-                            <a class="sscroll btn btn-light btn-sm fw-bold" target="_blank" href="{{ site.examlink.prefix }}{{ book.examlink }}"><i class="fas fa-pen fa-2x text-danger" aria-hidden="true"></i><span class="btn-sm">HDS Sınavı</span></a>
+                            {% if book.layout == "book" and site.examlink.enabled == true and book.examlink %}
+                            <a class="sscroll btn btn-light btn-sm fw-bold" target="_blank" href="{{ site.examlink.prefix }}{{ book.examlink }}"><i class="fas fa-pen fa-2x text-danger" aria-hidden="true"></i><span class="btn-sm">HDS</span></a>
                             {% endif %}
                         </div>
 
@@ -60,21 +60,14 @@ layout: default
     </div>
 </div>
 
-
-
-
-
 <div class="container-lg pt-4 pb-4">
     <div class="row justify-content-center">
         
         <div class="col-md-9 order-md-2">
-            
             <!-- Article -->
             <article class="article-post prose text-justify">                
             {{ content }}                
             </article>
-
-            
         </div>
 
         <!-- Attribute list: -->
@@ -120,9 +113,15 @@ layout: default
                             </li>
                             {% endif %}
 
+                            {% if book.paper %}
+                            <li class="list-group-item">
+                                <div class="md-v-line"></div><i class="fas fa-scroll me-1 fa-lg text-secondary"></i><span class="me-1">Kağıt Türü:</span>{{book.paper}}
+                            </li>
+                            {% endif %}
+
                             {% if book.ean %}
                             <li class="list-group-item">
-                              <div class="md-v-line"></div><i class="fas fa-barcode me-1 fa-lg text-dark"></i><span class="me-1">Barcode :</span> {{book.ean}}
+                              <div class="md-v-line"></div><i class="fas fa-barcode me-1 fa-lg text-dark"></i><span class="me-1">Barkod :</span> {{book.ean}}
                             </li>
                             {% endif %}
 
@@ -152,7 +151,6 @@ layout: default
 
                           </ul>
         </div>
-        
         
     </div>
 
@@ -264,13 +262,11 @@ layout: default
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
             </div>
             <div class="modal-body text-center py-4">
-                <!-- Bilgi İkonu (Mavi) -->
                 <div class="mb-3">
                     <i class="fas fa-info-circle fa-3x text-info"></i>
                 </div>
                 <p class="lead fw-bold text-dark mb-2">Bu ürünümüz, bayilerimiz aracılığıyla satılmaktadır.</p>
                 <p class="text-muted">Size en yakın satış noktasını veya bayimizi öğrenerek hızlıca temin etmek için bizimle iletişime geçebilirsiniz:</p>
-                <!-- Telefon Numarası Buton Olarak (Mobil cihazlarda doğrudan arama yapar) -->
                 <a href="tel:05334840626" class="btn btn-success fw-bold px-4 py-2 mt-2">
                     <i class="fas fa-phone-alt me-2"></i>0533 484 06 26
                 </a>

@@ -4,13 +4,14 @@ title:  "Matematik Öyküleri (10 KİTAP)"
 grades: [3, 4]
 genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
-subjects: ["İcatlar ve Keşifler", "Zaman Mekan" , "Bilim Teknoloji" , "Doğa ve Evren" , "Tarih" , "Birey ve Toplum" , "Çevre"]
+subjects: ["Mantıksal-Matematiksel", "Problem Çözme", "Akıl Oyunları", "Sayılar ve Geometri", "Eğlenceli Öğrenme"]
 image: assets/images/ean/8697911223066.jpg
 examimage: assets/images/ean/8697911223066-1.jpg
 examlink: matematik-oykuleri-oykumatik.pdf
 categories: [ "Çocuk", "Hikaye" ]
 tags: [ "hikaye"]
 previewpage: true
+paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223066
@@ -71,5 +72,4 @@ oluşan testler bulunmaktadır. Bu testler; boşluk doldurma, eşleştirme, doğ
 çoktan seçmeli sorular gibi farklı formatlarda hazırlanmış olup, öğrenmeyi çeşitlendirici bir
 yaklaşımla sunulmuştur. Serimiz, matematiği sevdirmek ve daha iyi anlamak için ideal bir
 kaynaktır.
- <img style="height: 50vh" src="/assets/images/ean/8697911223066-1.jpg" alt="">
 <!--more--> 

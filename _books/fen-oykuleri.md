@@ -4,7 +4,7 @@ title:  "Fen Öyküleri (10 KİTAP)"
 
 grades: [3, 4]
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
-subjects: ["İcatlar ve Keşifler", "Zaman Mekan" , "Bilim Teknoloji" , "Doğa ve Evren" , "Tarih" , "Birey ve Toplum" , "Çevre"]
+subjects: ["Doğa ve Evren", "Bilim-Teknoloji", "Bilimsel Merak", "Keşif ve İcatlar", "Deney ve Gözlem"]
 
 image: assets/images/ean/8697911223042.jpg
 examimage: assets/images/ean/8697911223042-1.jpg
@@ -14,6 +14,7 @@ categories: [ "Öykümatik" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
+paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223042
@@ -24,8 +25,10 @@ page: Her Biri 64
 size: "14x20cm"
 publish-number: 2895
 cover: "Karton Kapak"
+paper: "1. Hamur"
 
-# For adding excerpt add <!--more--> and break the line
+---
+
 ---
 “Bilge Çocuk Kerem ile Fen Öyküleri” Serisi
 
@@ -69,6 +72,5 @@ değerli bir kaynak olmasını sağlar.
 • Çözüm Odaklı Düşünmeyi Teşvik Eder: Kerem, karşılaştığı sorunları fen bilgisini
 kullanarak çözer. Bu, çocuklara her problemin çözümünde mantıklı düşünme,
 gözlem yapma ve eldeki bilgileri kullanma alışkanlığı kazandırır. Kerem’in
-olaylara yaklaşımı, çocuklarda çözüm odaklı düşünme yeteneğini geliştirmeye
- <img style="height: 50vh" src="/assets/images/ean/8697911223042-1.jpg" alt="">
+olaylara yaklaşımı, çocuklarda çözüm odaklı düşünme yeteneğini geliştirir
 <!--more--> 

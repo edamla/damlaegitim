@@ -16,12 +16,18 @@ katalogurl: 'https://cdn.e-damla.com.tr/PUBLIC/Kataloglar/foreign-rights-catalog
 twitter: 'https://twitter.com/damlayayinevi'
 facebook: 'https://www.facebook.com/damlayayinevi'
 instagram: 'https://instagram.com/damlayayinevi'
-youtube: 'https://www.youtube.com/c/damlayayinevi'
+youtube: 'https://www.youtube.com/@DamlaYay%C4%B1nGrubu'
+website: 'https://damlayayinevi.com'
 
 pagepreview:
   enabled: false
-  prefix: 'https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/'
+  prefix: 'https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/'
   postfix: '/index.html'
+
+examlink:
+  enabled: true
+  prefix: 'https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/'
+  postfix: '/.pdf'
 
 include: ["_pages"]
 permalink: /:title/

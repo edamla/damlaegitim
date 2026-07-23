@@ -4,7 +4,7 @@ title:  "Alican'ın Günlüğü 10 Kitap"
 
 grades: [2, 3]
 concepts: ["gorsel-uzamsal","sosyal","doga"]
-subjects: ["Değerler / Erdemler"]
+subjects: ["Kişisel Gelişim", "Okul ve Aile Hayatı", "Mizah", "Arkadaşlık", "Özfarkındalık"]
 
 image: assets/images/ean/8697911223028.jpg
 examimage: assets/images/ean/8697911223028-1.jpg
@@ -14,6 +14,7 @@ categories: [ "Öykümatik" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
+paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223028
@@ -50,6 +51,5 @@ Macera dolu kitaplarda; yardımlaşma, hayvan sevgisi, dayanışma, araştırma,
 9- Kaplanlar Dondurma Yemez<br>
 10- Çiko Nerede?
 
-<img style="height: 50vh" src="/assets/images/ean/8697911223028-1.jpg" alt="">
 
 <!--more--> 

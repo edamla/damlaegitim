@@ -11,6 +11,7 @@ examlink: erdemlerimizi-kesfedelim-y.pdf
 categories: [ "Çocuk", "Hikaye" ]
 tags: [ "hikaye"]
 previewpage: true
+paper: "1. Hamur"
 
 # Book attributes
 ean: 9786053831181
@@ -50,5 +51,4 @@ Haksızlık Yapmamak - Dürüstlük - İyi yürekli olmak - Fedakârlık - Doğa
 
 10- Hayat Ağacı
 
-<img style="height: 50vh" src="/assets/images/ean/8697911210790.jpg" alt="">
 <!--more--> 

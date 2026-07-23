@@ -4,8 +4,7 @@ title:  "Çılgın Dedemin Zaman Makinesi-1 10 Kitap"
 
 grades: [3, 4]
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
-subjects: ["İcatlar ve Keşifler", "Zaman Mekan" , "Bilim Teknoloji" , "Doğa ve Evren" , "Tarih" , "Birey ve Toplum" , "Çevre"]
-
+subjects: ["Zaman Mekan", "İcatlar ve Keşifler", "Tarih Bilinci", "Bilim Tarihi", "Merak ve Öğrenme"]
 image: assets/images/ean/9786053831952.jpg
 examimage: assets/images/ean/8697911217003.jpg
 examlink: icatlar-kesifler-y.pdf
@@ -14,6 +13,7 @@ categories: [ "Öykümatik" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
+paper: "1. Hamur"
 
 # Book attributes
 ean: 9786053831952
@@ -54,5 +54,4 @@ Geçmişin Derinliklerinden Geleceğin Gizemine Soluk Soluğa Okuyacağınız Ma
 9- Elektriğin Keşfi<br>
 10- Geleceğin Doğasına yolculuk
 
-<img style="height: 50vh" src="/assets/images/ean/8697911217003.jpg" alt="">
 <!--more--> 

@@ -4,13 +4,14 @@ title:  "Hayat Bilgisi Öyküleri 10 Kitap"
 grades: [2, 3]
 genre: story
 concepts: [""]
-subjects: []
+subjects: ["Sosyal Yaşam Kuralları", "Çevre Bilinci", "Sağlık ve Güvenlik", "Toplumsal Duyarlılık", "Görgü Kuralları"]
 image: assets/images/ean/9786254112676.jpg
 examimage: assets/images/ean/8697911219199.jpg
 examlink: hayat-bilgisi-oykuleri-y.pdf
 categories: [ "Çocuk", "Hikaye" ]
 tags: [ "hikaye"]
 previewpage: true
+paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223004
@@ -29,5 +30,4 @@ Kerem ve arkadaşlarının her günü birbirinden eğlenceli, birbirinden mace
 Haydi, öyleyse sen de katıl onlara. Eğlenerek öğrenmenin tadını çıkar. Hayat Bilgisi konularının, hayatın akışında eğlenceli ve maceralı bir şekilde işlendiği bu kitabı elinden düşüremeyecek ve bir solukta okuyup bitireceksin.
 Haydi ne duruyorsun, okumaya başlasana...
 
-<img style="height: 50vh" src="/assets/images/ean/8697911219199.jpg" alt="">
 <!--more--> 

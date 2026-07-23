@@ -4,13 +4,14 @@ title:  "MESLEK ÖYKÜLERİ (10 KİTAP)"
 grades: [3, 4]
 genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
-subjects: ["İcatlar ve Keşifler", "Zaman Mekan" , "Bilim Teknoloji" , "Doğa ve Evren" , "Tarih" , "Birey ve Toplum" , "Çevre"]
+subjects: ["Meslekleri Tanıma", "Birey ve Toplum", "Gelecek Planlama", "Toplumsal Farkındalık", "Çalışkanlık"]
 image: assets/images/ean/8697911222991.jpg
 examimage: assets/images/ean/8697911222991-1.jpg
 examlink: meslek-oykuleri-y.pdf
 categories: [ "Çocuk", "Hikaye" ]
 tags: [ "hikaye"]
 previewpage: true
+paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911222991

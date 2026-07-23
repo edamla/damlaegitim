@@ -4,13 +4,14 @@ title:  "ROBOT AVCILARI (10 KİTAP)"
 grades: [3, 4]
 genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
-subjects: ["İcatlar ve Keşifler", "Zaman Mekan" , "Bilim Teknoloji" , "Doğa ve Evren" , "Tarih" , "Birey ve Toplum" , "Çevre"]
+subjects: ["Bilim-Teknoloji", "Yapay Zeka", "Takım Ruhu", "Bilimkurgu", "Gelecek Vizyonu"]
 image: assets/images/ean/8697911223530.jpg
 examimage: assets/images/ean/8697911223530-1.jpg
 examlink: robot-avcilari-y.pdf
 categories: [ "Çocuk", "Hikaye" ]
 tags: [ "hikaye"]
 previewpage: true
+paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223530
