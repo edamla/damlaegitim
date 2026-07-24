@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "MESLEK ÖYKÜLERİ (10 KİTAP)"
-grades: [3, 4]
+grades: [2, 3]
 genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["Meslekleri Tanıma", "Birey ve Toplum", "Gelecek Planlama", "Toplumsal Farkındalık", "Çalışkanlık"]

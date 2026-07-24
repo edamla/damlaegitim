@@ -82,6 +82,13 @@ defaults:
     values:
       layout: book
 
+  # all authors
+  - scope:
+      type: "authors"
+      path: "_authors"
+    values:
+      layout: author
+
 
   # all catalogs
   - scope:
@@ -134,6 +141,9 @@ collections:
   catalogs:
     output: true
     permalink: /kataloglar/:title
+  authors:
+    output: true
+    permalink: /yazarlar/:name
   slides: 
     output: false
     sort_by: order

@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "DUYGULARIMI KEŞFEDİYORUM (10 KİTAP)"
-grades: [3, 4]
+grades: [1, 2]
 genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["Duygusal Farkındalık", "Empati", "Özgüven", "Duygu Yönetimi", "Kişisel Gelişim"]
