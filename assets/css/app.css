@@ -90,7 +90,3 @@ body {
 .kitap-kutu-home:hover {
   box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.08));
 }
-
-.cover-images {
-  background: transparent;
-}
