@@ -76,6 +76,8 @@ buyout.css          →  E-ticaret barı (yalnızca kitap/katalog detay)
 --font-sans: "Raykjavik", system-ui, sans-serif;
 --font-serif: var(--font-sans);
 --nav-height: 4rem;
+--book-card-media-height: 220px;
+--book-card-info-min-height: 4.5rem;
 ```
 
 ### Tipografi
@@ -89,6 +91,17 @@ Font dosyaları `assets/fonts/` altında yerel olarak servis edilir; `@font-face
 | Raykjavik | `assets/fonts/raykjavik/reykjavik-rounded-regular.ttf` | Genel site metni | `body`, `--font-sans` |
 
 HTML partial’larında (`menu-header`, `book-grade-nav`, `book-home-groups`) değişiklik gerekmez; mevcut class yapısı yeterlidir.
+
+### Kitap kartı (`.book-card`)
+
+Kartlar [`book-home-groups.html`](_includes/book-home-groups.html) içinde `col-lg-3` grid’de render edilir. Üstte sabit resim kutusu, altta sabit isim kutusu ile grid düzeni korunur.
+
+| Eleman | Class | Davranış |
+|--------|-------|----------|
+| Resim kutusu | `.book-card__media` | Sabit yükseklik (`--book-card-media-height`), `object-fit: contain` |
+| İsim kutusu | `.book-card__info` | Sabit min-yükseklik (`--book-card-info-min-height`) |
+| Başlık | `.book-card__title` | En fazla 2 satır (`line-clamp`) |
+| Yazar | `.book-card__author` | En fazla 1 satır (`line-clamp`) |
 
 ---
 
@@ -175,7 +188,7 @@ Tüm layout’lar `layout: default` zinciri üzerinden `default.html`’i extend
 | `slider.html` | Anasayfa Tiny Slider |
 | `book-grade-nav.html` | Sınıf sekmesi + tür alt menüsü |
 | `book-home-groups.html` | Anasayfa kitap listesi (Eğitim / Hikaye) |
-| `book-card.html` | Tek kitap kartı partial |
+| `book-card.html` | Tek kitap kartı partial (sabit resim + isim kutusu) |
 | `book-grade-filter.html` | Ürünler sayfası sınıf checkbox’ları |
 | `tracking-header.html` / `tracking-footer.html` | Google Analytics |
 

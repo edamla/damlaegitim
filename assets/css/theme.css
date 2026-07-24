@@ -47,6 +47,8 @@
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
   --nav-height: 4rem;
   --container-max: 1280px;
+  --book-card-media-height: 220px;
+  --book-card-info-min-height: 4.5rem;
 }
 
 .text-humayun {
@@ -889,16 +891,9 @@ div.a2a_full_footer {display:none;}
 	text-align: center;
 }
 
-.cover-images {
-	width: 75%;
-	margin-bottom: var(--space-4, 1rem);
-	opacity: 1;
-	transition: transform 0.2s ease;
-}
-
 .listbooks-home-item,
 .listbooks-item {
-	display: block;
+	display: flex;
 }
 
 /* ══════════════════════════════════════
@@ -1126,7 +1121,9 @@ div.a2a_full_footer {display:none;}
 }
 
 .book-card__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-align: center;
   color: inherit;
 }
@@ -1135,10 +1132,23 @@ div.a2a_full_footer {display:none;}
   text-decoration: none;
 }
 
+.book-card__media {
+  flex: 0 0 var(--book-card-media-height);
+  height: var(--book-card-media-height);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 .book-card__cover {
   display: block;
-  width: 75%;
-  margin: 0 auto var(--space-4);
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: 0;
   transition: transform 0.2s ease;
 }
 
@@ -1146,20 +1156,43 @@ div.a2a_full_footer {display:none;}
   transform: scale(1.02);
 }
 
+.book-card__info {
+  flex: 1 0 var(--book-card-info-min-height);
+  min-height: var(--book-card-info-min-height);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: var(--space-4);
+}
+
 .book-card__title {
   font-family: var(--font-serif);
   font-size: 1rem;
   color: var(--color-text);
   margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .book-card__author {
-  display: inline-block;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   margin-top: 0.5rem;
   margin-bottom: 0.25rem;
   font-size: 0.9rem;
   font-weight: 400;
   color: var(--color-muted);
+}
+
+@media (max-width: 767px) {
+  :root {
+    --book-card-media-height: 180px;
+    --book-card-info-min-height: 4rem;
+  }
 }
 
 /* ══════════════════════════════════════
