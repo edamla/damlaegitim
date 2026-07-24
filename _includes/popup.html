@@ -302,15 +302,38 @@ body.popup-open {
 @media (prefers-color-scheme: dark) {
   .popup-container {
     background: rgba(30, 30, 32, 0.95);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.08);
+  }
+
+  .popup-header,
+  .popup-footer {
+    border-color: rgba(255, 255, 255, 0.1);
   }
 
   .popup-title {
     color: #f5f5f7;
   }
 
+  .popup-body {
+    color: #f5f5f7;
+  }
+
+  .popup-body .text-dark,
+  .popup-body .lead {
+    color: #f5f5f7 !important;
+  }
+
+  .popup-body .text-muted {
+    color: #a1a1a6 !important;
+  }
+
   .popup-close {
     background: rgba(255, 255, 255, 0.08);
     color: #f5f5f7;
+  }
+
+  .popup-close:hover {
+    background: rgba(255, 255, 255, 0.14);
   }
 }
 </style>
