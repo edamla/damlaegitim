@@ -1,0 +1,92 @@
+{% comment %} schema.org Product + Book + BreadcrumbList for book pages {% endcomment %}
+{% assign b = page %}
+{% capture book_seo_description %}{% include book-seo-description.html %}{% endcapture %}
+{% assign book_seo_description = book_seo_description | strip %}
+{% if b.image %}
+  {% if b.image contains "://" %}
+    {% assign book_image_url = b.image %}
+  {% else %}
+    {% assign book_image_url = site.url | append: site.baseurl | append: '/' | append: b.image %}
+  {% endif %}
+{% else %}
+  {% assign book_image_url = site.url | append: site.baseurl | append: '/assets/images/logo.png' %}
+{% endif %}
+{% if b.genre == 'story' %}
+  {% assign genre_label = 'Hikaye' %}
+  {% assign genre_path = 'hikaye' %}
+{% elsif b.genre == 'education' %}
+  {% assign genre_label = 'Eğitim' %}
+  {% assign genre_path = 'egitim' %}
+{% else %}
+  {% assign genre_label = b.genre %}
+  {% assign genre_path = b.genre %}
+{% endif %}
+{% assign book_url = site.url | append: site.baseurl | append: b.url %}
+{% assign products_url = site.url | append: site.baseurl | append: '/urunler' %}
+{% if b.grades and b.grades.size > 0 %}
+  {% assign grade_list = b.grades | join: ', ' %}
+{% endif %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": {{ b.title | jsonify }},
+  "description": {{ book_seo_description | jsonify }},
+  "url": {{ book_url | jsonify }},
+  "image": {{ book_image_url | jsonify }},
+  {% if b.ean %}"sku": {{ b.ean | jsonify }},{% endif %}
+  "brand": {
+    "@type": "Brand",
+    "name": "Damla Okul"
+  },
+  "category": {{ genre_label | jsonify }},
+  {% if grade_list %}"audience": {
+    "@type": "EducationalAudience",
+    "educationalRole": "student",
+    "audienceType": {{ grade_list | append: '. sınıf' | jsonify }}
+  },{% endif %}
+  "offers": {
+    "@type": "Offer",
+    "availability": "https://schema.org/InStock",
+    "url": {{ book_url | jsonify }}
+  },
+  "additionalType": "https://schema.org/Book",
+  "inLanguage": "tr"
+  {% if b.languages and b.languages.size > 0 %},"workExample": {
+    "@type": "Book",
+    "inLanguage": {{ b.languages | first | jsonify }}
+  }{% endif %}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Anasayfa",
+      "item": {{ site.url | append: site.baseurl | append: '/' | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Ürünler",
+      "item": {{ products_url | jsonify }}
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ genre_label | jsonify }}{% if grade_list %},
+      "item": {{ products_url | append: '#' | append: grade_list | append: '-sinif/' | append: genre_path | jsonify }}{% endif %}
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": {{ b.title | jsonify }},
+      "item": {{ book_url | jsonify }}
+    }
+  ]
+}
+</script>

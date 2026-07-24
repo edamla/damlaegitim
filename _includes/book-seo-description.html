@@ -1,0 +1,47 @@
+{% comment %}
+  Kitap sayfaları için otomatik meta description (GitHub Pages uyumlu Liquid).
+  Bu include yalnızca description metnini çıktı olarak üretir.
+{% endcomment %}
+{% assign content_stripped = page.content | strip_html | strip_newlines | strip %}
+{% if page.description and page.description != "" %}
+{{ page.description | strip_newlines | truncate: 155, "…" }}
+{% elsif page.excerpt and page.excerpt != "" %}
+  {% assign excerpt_stripped = page.excerpt | strip_html | strip_newlines | strip %}
+  {% if excerpt_stripped.size > 10 %}
+{{ excerpt_stripped | truncate: 155, "…" }}
+  {% elsif content_stripped.size > 25 %}
+{{ content_stripped | truncate: 155, "…" }}
+  {% else %}
+    {% assign grade_list = page.grades | join: ", " %}
+    {% if page.genre == 'story' %}
+      {% assign genre_label = 'hikaye' %}
+    {% elsif page.genre == 'education' %}
+      {% assign genre_label = 'eğitim' %}
+    {% else %}
+      {% assign genre_label = page.genre %}
+    {% endif %}
+    {% capture template_desc %}{{ page.title }} — {{ grade_list }}. sınıf {{ genre_label }} kitabı. Damla Okul.{% endcapture %}
+    {% if page.subjects and page.subjects.size > 0 %}
+      {% assign subject_preview = page.subjects | slice: 0, 3 | join: ", " %}
+      {% capture template_desc %}{{ template_desc | strip }} Konular: {{ subject_preview }}.{% endcapture %}
+    {% endif %}
+{{ template_desc | truncate: 155, "…" }}
+  {% endif %}
+{% elsif content_stripped.size > 25 %}
+{{ content_stripped | truncate: 155, "…" }}
+{% else %}
+  {% assign grade_list = page.grades | join: ", " %}
+  {% if page.genre == 'story' %}
+    {% assign genre_label = 'hikaye' %}
+  {% elsif page.genre == 'education' %}
+    {% assign genre_label = 'eğitim' %}
+  {% else %}
+    {% assign genre_label = page.genre %}
+  {% endif %}
+  {% capture template_desc %}{{ page.title }} — {{ grade_list }}. sınıf {{ genre_label }} kitabı. Damla Okul.{% endcapture %}
+  {% if page.subjects and page.subjects.size > 0 %}
+    {% assign subject_preview = page.subjects | slice: 0, 3 | join: ", " %}
+    {% capture template_desc %}{{ template_desc | strip }} Konular: {{ subject_preview }}.{% endcapture %}
+  {% endif %}
+{{ template_desc | truncate: 155, "…" }}
+{% endif %}

@@ -89,8 +89,13 @@ layout: default
 		<div class="col-md-9 order-md-2">
             
             <!-- Article -->
-			<article class="article-post text-justify">                
-			{{ content }}                
+			<article class="article-post text-justify">
+			{% assign body_stripped = content | strip_html | strip %}
+			{% if body_stripped.size < 80 %}
+				{% include book-minimal-content.html %}
+			{% else %}
+			{{ content }}
+			{% endif %}
 			</article>
 
             
@@ -151,3 +156,5 @@ layout: default
 	
 
 </div>
+
+{% include structured-data-book.html %}
