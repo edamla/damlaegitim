@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Çılgın Dedemin Zaman Makinesi-1 10 Kitap"
+title:  "Çılgın Dedemin Zaman Makinesi-İcatlar ve Keşifler (10 Kitap)"
 
 grades: [3, 4]
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]

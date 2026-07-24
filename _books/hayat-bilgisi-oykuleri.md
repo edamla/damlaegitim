@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Hayat Bilgisi Öyküleri 10 Kitap"
+title:  "Hayat Bilgisi Öyküleri (10 Kitap)"
 grades: [2, 3]
 genre: story
 concepts: [""]
