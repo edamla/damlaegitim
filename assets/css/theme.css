@@ -242,15 +242,25 @@ a,a:hover {
 	border-radius:0px 30px 30px 0px;
 }
 .navbar {
-	transition:top 0.2s ease-in-out;
+	transition: box-shadow 0.2s ease-in-out;
 	font-weight:400;
 	filter: none;
 }
 
-.site-nav.nav-up {
-	top: calc(-1 * var(--nav-height, 4rem));
+#MagicMenu.site-nav {
+	position: fixed;
+	top: 0 !important;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 1030;
 }
 
+#MagicMenu.site-nav.site-nav--scrolled {
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.site-nav.nav-up,
 .site-nav.nav-down {
 	top: 0;
 }
