@@ -1,4 +1,31 @@
 /* ══════════════════════════════════════
+   0. Fonts
+   ══════════════════════════════════════ */
+@font-face {
+  font-family: "Geometric Sans";
+  src: url("../fonts/geometric-sans/geometric.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Punta";
+  src: url("../fonts/punta/Punta-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Raykjavik";
+  src: url("../fonts/raykjavik/reykjavik-rounded-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ══════════════════════════════════════
    1. Tokens
    ══════════════════════════════════════ */
 :root {
@@ -10,8 +37,10 @@
   --color-border: #dee2e6;
   --color-surface: #fafafa;
   --color-footer-bg: #25272a;
-  --font-serif: Lora, Georgia, serif;
-  --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-nav: "Geometric Sans", system-ui, sans-serif;
+  --font-display: "Punta", sans-serif;
+  --font-sans: "Raykjavik", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: var(--font-sans);
   --space-4: 1rem;
   --space-6: 1.5rem;
   --radius: 0.5rem;
@@ -29,6 +58,7 @@
    ══════════════════════════════════════ */
 body {
 	overflow-x: hidden;
+	font-family: var(--font-sans);
 }
 .site-content {
 	margin-top:50px;
@@ -235,7 +265,7 @@ a,a:hover {
 .navbar-brand {
 	margin-right:2rem;
 	font-size:1.55rem;
-    font-family:"Georgia","Times New Roman",serif;
+    font-family: var(--font-sans);
 }
 .dropdown-item {
 	font-weight:400;
@@ -327,7 +357,7 @@ a,a:hover {
 		right:0;
 	}
     .jumbotron-home h1 {
-        font-family: Georgia,Times,"Times New Roman",serif;
+        font-family: var(--font-sans);
         font-size: 2.4rem;
         font-weight: 700;
         line-height: 1.1;
@@ -681,10 +711,10 @@ footer {
 article {
 	font-size:1.1rem;
 	line-height:1.86;
-    font-family:Lora;
+    font-family: var(--font-sans);
 }
 .article-headline {
-    font-family: Georgia,Times,"Times New Roman",serif;
+    font-family: var(--font-sans);
     font-size: 3.2rem;
     font-weight: 400;
     line-height: 1.15;
@@ -701,7 +731,7 @@ article blockquote {
 }
 article blockquote:before {
 	content:"“";
-	font-family:Georgia;
+	font-family: var(--font-sans);
 	font-size:8rem;
 	margin:-1rem 2rem 0 -3.9rem;
 	position:absolute;
@@ -883,6 +913,10 @@ div.a2a_full_footer {display:none;}
   justify-content: center;
 }
 
+.site-nav .navbar-nav.me-auto .nav-link {
+  font-family: var(--font-nav);
+}
+
 .site-footer {
   background-color: var(--color-footer-bg);
   margin-top: 3rem;
@@ -901,6 +935,7 @@ div.a2a_full_footer {display:none;}
   margin-bottom: 1.5rem;
   border-bottom: 1px solid var(--color-border);
   overflow: visible;
+  font-family: var(--font-display);
 }
 
 .grade-nav-list {
@@ -1065,6 +1100,7 @@ div.a2a_full_footer {display:none;}
 }
 
 .book-genre-heading {
+  font-family: var(--font-display);
   font-size: 1.1rem;
   font-weight: 700;
   color: #343a40;
