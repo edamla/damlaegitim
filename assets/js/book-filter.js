@@ -207,12 +207,14 @@ function closeAllGradeMenus() {
 
 function updateGradeLabels() {
     document.querySelectorAll('.grade-nav-item').forEach(function(item) {
-        var label = item.querySelector('.grade-nav-label');
+        var labelText = item.querySelector('.grade-nav-text');
+        if (!labelText) return;
+
         item.classList.remove('has-genre');
-        label.removeAttribute('data-genre-label');
+        labelText.removeAttribute('data-genre-label');
         if (item.classList.contains('active') && homeFilterState.genre) {
             item.classList.add('has-genre');
-            label.setAttribute('data-genre-label', ' · ' + (homeFilterState.genre === 'education' ? 'Eğitim' : 'Hikaye'));
+            labelText.setAttribute('data-genre-label', ' · ' + (homeFilterState.genre === 'education' ? 'Eğitim' : 'Hikaye'));
         }
         item.querySelectorAll('.grade-submenu button').forEach(function(btn) {
             btn.classList.remove('active');
