@@ -191,14 +191,14 @@ comments: false
                             <div class="box-content">
                                 <h4><strong>2004</strong></h4>
                                 <p>2004 yılında yeni altyapı ve teknolojiler ile donatılmış kendi binamıza taşındık. Bu dönemde ciddi bir sıçrama yaşadık. Ayrıca;
-                                    ,Damlasoft
-                                    ,Mavi Göl Yayınları
-                                    ,D Publishing
-                                    ,Bilgili Yayıncılık
-                                    ,Genç Damla
-                                    ,Minik Damla
-                                    ,Damla Eğitim
-                                    ,alt markaları ile Damla Yayın Grubu’nu oluşturduk. 2005 yılında değişen yeni müfredat programına en hızlı uyum sağlayan yayınevi olarak eğitim yayıncılığında önemli bir başarı elde ettik. Damla, Türkiye’de ve Avrupa’da 300’den fazla bayisi, 2000’i aşkın satış noktası, 2000'in üzerinde yayını, uluslararası alanda telif hakkı alışı-satışı, ithalatı ve ihracatı ile önde gelen yayınevlerinden biri hâline geldi.</p>
+                                    Damlasoft,
+                                    Mavi Göl Yayınları,
+                                    D Publishing,
+                                    Bilgili Yayıncılık,
+                                    Genç Damla,
+                                    Minik Damla,
+                                    Damla Eğitim,
+                                    alt markaları ile Damla Yayın Grubu’nu oluşturduk. 2005 yılında değişen yeni müfredat programına en hızlı uyum sağlayan yayınevi olarak eğitim yayıncılığında önemli bir başarı elde ettik. Damla, Türkiye’de ve Avrupa’da 300’den fazla bayisi, 2000’i aşkın satış noktası, 2000'in üzerinde yayını, uluslararası alanda telif hakkı alışı-satışı, ithalatı ve ihracatı ile önde gelen yayınevlerinden biri hâline geldi.</p>
                             </div>
                         </div>
                     </div>
@@ -217,18 +217,6 @@ comments: false
                             <div class="box-content">
                                 <h4><strong>2016</strong></h4>
                                 <p>2016 Yılında kadromuzu Medeniyetimizi doğru anlatmak, anlamak ve yaşayabilmek için kültür, sanat, medeniyet alanında çalışmalar yapan kıymetli yazarlarla genişlettik. Bu vesile ile Mihrabad Yayınları'nı bünyemizde kurduk. Bu yeni ve önemli alanda kimliğimizi ve ben idrakimizi hatırlamak adına çalışmalarımızın Yeni Güçlü Türkiye'ye güç katacağına inanarak çalışıyoruz.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="history wow fadeInUp">
-                        <div class="thumb"><img width="150" height="150" src="assets/images/humayun-yayinlari.jpg" class="attachment-thumbnail" alt="office-4"></div>
-                        <div class="featured-box" style="height: auto;">
-                            <div class="box-content">
-                                <h4><strong>2021</strong></h4>
-                                <p>Hümayun Yayınları gençliğe hitap etmek için yola çıkıyor. Geçmişin büyüsünü geleceğe taşımak en büyük davası. Bu ülkenin unutulan değerlerini, çarpıtılan, hatta çalınan tarihini geri getirmek ve sahte tarihi “tarihe göndermek” için yola çıkıyoruz.
-                                    Mottomuz şu: <br>
-                                   <b> “Tarihimiz yeniden milletin oluncaya kadar sürecek mücadelemiz.” </b> <br> Hümayun Yayınları, tarihin karanlık yönleri tamamen aydınlanana kadar tarih odaklı yayınlar yapmaya devam edecek, “gerçek tarihe açılan kapı” olacak.
-                                    Hümayun Yayınları tarihimizi aydınlatarak kaybolan medeniyetimizi ortaya çıkarmaya çalışıyor. Bu nedenle sadece tarih değil kültür ve medeniyetimizi ortaya çıkaracak eserleri de yayınlayacak. Bu sahada ülkemizin yetkin kalemleri son derece önemli kitaplarıyla Hümayun Yayınları’nda yer alacak.</p>
                             </div>
                         </div>
                     </div>
