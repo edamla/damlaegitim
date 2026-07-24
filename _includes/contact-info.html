@@ -1,0 +1,43 @@
+{% assign contact_mode = include.mode | default: 'page' %}
+
+{% if contact_mode == 'footer' %}
+<div class="contact-info contact-info--footer">
+  {% if site.contact_phone %}
+  <p class="contact-info__item">
+    <strong>Telefon:</strong>
+    <a href="{{ site.contact_phone_href }}">{{ site.contact_phone }}</a>
+  </p>
+  {% endif %}
+  {% if site.contact_email %}
+  <p class="contact-info__item">
+    <strong>E-posta:</strong>
+    <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>
+  </p>
+  {% endif %}
+  {% if site.contact_address %}
+  <p class="contact-info__item">
+    <strong>Adres:</strong>
+    <span>{{ site.contact_address }}</span>
+  </p>
+  {% endif %}
+</div>
+{% else %}
+<div class="contact-info contact-info--page">
+  {% if site.contact_address %}
+  <h5>Adres</h5>
+  <p class="contact-info__item">{{ site.contact_address }}</p>
+  {% endif %}
+  {% if site.contact_phone %}
+  <h5>Telefon</h5>
+  <p class="contact-info__item">
+    <a href="{{ site.contact_phone_href }}">{{ site.contact_phone }}</a>
+  </p>
+  {% endif %}
+  {% if site.contact_email %}
+  <h5>E-posta</h5>
+  <p class="contact-info__item">
+    <a href="mailto:{{ site.contact_email }}">{{ site.contact_email }}</a>
+  </p>
+  {% endif %}
+</div>
+{% endif %}

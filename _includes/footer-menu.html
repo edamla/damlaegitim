@@ -1,0 +1,49 @@
+{% assign footer_pages = site.pages | where_exp: "item", "item.footer_show == true" | sort: "footer_order" %}
+{% assign catalogs_page = site.pages | where: "permalink", "/kataloglar" | first %}
+
+<footer class="site-footer border-top text-white small">
+  <div class="container">
+    <div class="row site-footer__columns">
+      <div class="col-12 col-md-4 site-footer__col">
+        <h3 class="site-footer__heading">Ürünler</h3>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/urunler">Eğitim Kitapları</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/urunler">Hikaye Kitapları</a></li>
+          {% if catalogs_page %}
+          <li><a class="site-footer__link" href="{{ site.baseurl }}{{ catalogs_page.url }}">{{ catalogs_page.title }}</a></li>
+          {% endif %}
+        </ul>
+      </div>
+
+      <div class="col-12 col-md-4 site-footer__col">
+        <h3 class="site-footer__heading">Önemli Bilgiler</h3>
+        <ul class="site-footer__list">
+          {% for page in footer_pages %}
+          <li><a class="site-footer__link" href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <div class="col-12 col-md-4 site-footer__col">
+        <h3 class="site-footer__heading">Adres &amp; İletişim</h3>
+        {% include contact-info.html mode='footer' %}
+        <ul class="site-footer__social list-inline mb-0">
+          {% include menu-socialmedia.html %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="site-footer__bottom">
+      <div class="row justify-content-center">
+        <span class="navbar-brand me-2 mb-0 text-center">
+          <img class="site-footer__logo" src="{{ site.baseurl }}/assets/images/logo-bw.png" alt="{{ site.name }}">
+        </span>
+      </div>
+      <div class="row align-items-center justify-content-center">
+        <div class="text-center">
+          <span>Copyright © <script>document.write(new Date().getFullYear())</script> Damla Yayınevi</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

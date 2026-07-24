@@ -8,9 +8,6 @@ favicon: 'assets/images/favicon/favicon.ico'
 baseurl: ''
 
 # Social Settings
-#disqus: #'demowebsite'
-#email: 'rights@mediterraneanagency.com'
-#mailchimp-list: #'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 google_analytics: 'G-KFMVQ3WNN3'
 katalogurl: 'https://cdn.e-damla.com.tr/PUBLIC/Kataloglar/foreign-rights-catalogue-2022/index.html'
 twitter: 'https://twitter.com/damlayayinevi'
@@ -19,6 +16,13 @@ instagram: 'https://instagram.com/damlayayinevi'
 youtube: 'https://www.youtube.com/@DamlaYay%C4%B1nGrubu'
 website: 'https://damlayayinevi.com'
 
+# Contact (site-wide)
+contact_phone: "+90 212 514 28 28"
+contact_phone_href: "tel:+902125142828"
+contact_email: "iletisim@damlayayinevi.com.tr"
+contact_address: "Alemdar Mh. Prof. Kazım İsmail Gürkan Cad. No:8 Fatih, 34110 İstanbul"
+
+# behold.so instagram carousel
 instagram_carousel:
   username: okul.damla
   profile_url: https://instagram.com/okul.damla
@@ -39,10 +43,9 @@ include: ["_pages"]
 permalink: /:title/
 
 
-# BuyOut Ecommerce
+# BuyOut Ecommerce websites:
 buyout:
   enabled: false
-  #buyout websites:
   damlayayinevi: true
   hepsiburada: true
   dnr: true
@@ -87,14 +90,6 @@ defaults:
       path: "_books"
     values:
       layout: book
-
-  # all authors
-  - scope:
-      type: "authors"
-      path: "_authors"
-    values:
-      layout: author
-
 
   # all catalogs
   - scope:
@@ -147,9 +142,6 @@ collections:
   catalogs:
     output: true
     permalink: /kataloglar/:title
-  authors:
-    output: true
-    permalink: /yazarlar/:name
   slides: 
     output: false
     sort_by: order

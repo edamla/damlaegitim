@@ -1,81 +1,654 @@
-<script src="{{site.baseurl}}/assets/js/lunr.js"></script>
+{% unless include.mode %}
+<script src="{{ site.baseurl }}/assets/js/lunr.js"></script>
 
 <script>
-$(function() {
-    $("#lunrsearchresults").on('click', '#btnx', function () {
-        $('#lunrsearchresults').hide( 1000 );
-        $( "body" ).removeClass( "modal-open" );
-    });
-});
-    
-{% assign counter = 0 %}
-var documents = [{% for page in site.pages %}{% if page.url contains '.xml' or page.url contains 'assets' %}{% else %}{
-    "id": {{ counter }},
-    "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
-    "title": "{{ page.title }}",
-    "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
-    }, {% endif %}{% endfor %}{% for page in site.without-plugin %}{
-    "id": {{ counter }},
-    "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
-    "title": "{{ page.title }}",
-    "body": "{{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
-    }, {% endfor %}{% for page in site.posts %}{
-    "id": {{ counter }},
-    "url": "{{ site.url }}{{site.baseurl}}{{ page.url }}",
-    "title": "{{ page.title }}",
-    "body": "{{ page.date | date: "%Y/%m/%d" }} - {{ page.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | replace: '"', ' ' }}"{% assign counter = counter | plus: 1 %}
-    }{% if forloop.last %}{% else %}, {% endif %}{% endfor %}];
+(function () {
+  var spotlightTypingInterval = null;
+  var spotlightRoot = document.getElementById('lunrsearchresults');
 
-var idx = lunr(function () {
-    this.ref('id')
-    this.field('title')
-    this.field('body')
+  function escapeHtml(str) {
+    if (!str) return '';
+    var div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function showSpotlightRoot() {
+    if (!spotlightRoot) return;
+    spotlightRoot.style.display = 'block';
+    spotlightRoot.style.opacity = '0';
+    requestAnimationFrame(function () {
+      spotlightRoot.style.transition = 'opacity 0.2s ease';
+      spotlightRoot.style.opacity = '1';
+    });
+  }
+
+  window.closeSpotlight = function () {
+    if (!spotlightRoot) return;
+    if (spotlightTypingInterval) {
+      clearTimeout(spotlightTypingInterval);
+      spotlightTypingInterval = null;
+    }
+    spotlightRoot.style.opacity = '0';
+    setTimeout(function () {
+      spotlightRoot.style.display = 'none';
+      spotlightRoot.innerHTML = '';
+      document.body.classList.remove('spotlight-open');
+    }, 200);
+  };
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      closeSpotlight();
+    }
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      lunr_search('');
+    }
+  });
+
+  if (spotlightRoot) {
+    spotlightRoot.addEventListener('click', function (e) {
+      if (e.target === spotlightRoot || e.target.classList.contains('spotlight-backdrop')) {
+        closeSpotlight();
+      }
+      if (e.target.closest && e.target.closest('.spotlight-close')) {
+        closeSpotlight();
+      }
+    });
+  }
+
+{% assign counter = 0 %}
+  var documents = [{% for book in site.books %}{
+    "id": {{ counter }},
+    "url": "{{ site.url }}{{ site.baseurl }}{{ book.url }}",
+    "title": {{ book.title | jsonify }},
+    "image": "{{ site.url }}{{ site.baseurl }}/{{ book.image }}",
+    "authors": {% capture book_authors %}{% for author_slug in book.authors %}{% assign author = site.authors | where: "key", author_slug | first %}{% if author %}{{ author.title }}{% else %}{{ author_slug }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endcapture %}{{ book_authors | strip | jsonify }},
+    "categories": {{ book.categories | join: ', ' | jsonify }},
+    "grades": {{ book.grades | join: ', ' | jsonify }},
+    "genre": {% if book.genre == 'education' %}"Eğitim"{% elsif book.genre == 'story' %}"Hikaye"{% else %}{{ book.genre | jsonify }}{% endif %},
+    "subjects": {{ book.subjects | join: ', ' | jsonify }},
+    "tags": {{ book.tags | join: ', ' | jsonify }},
+    "body": {{ book.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | jsonify }}{% assign counter = counter | plus: 1 %}
+  }{% unless forloop.last %},{% endunless %}{% endfor %}];
+
+  var idx = lunr(function () {
+    this.ref('id');
+    this.field('title', { boost: 10 });
+    this.field('authors', { boost: 5 });
+    this.field('categories', { boost: 3 });
+    this.field('grades', { boost: 4 });
+    this.field('genre', { boost: 3 });
+    this.field('subjects', { boost: 2 });
+    this.field('tags', { boost: 2 });
+    this.field('body');
 
     documents.forEach(function (doc) {
-        this.add(doc)
-    }, this)
-});
+      this.add(doc);
+    }, this);
+  });
 
+  function createResultItem(doc, index) {
+    var meta = [doc.genre, doc.grades ? doc.grades + '. sınıf' : '', doc.categories]
+      .filter(Boolean)
+      .join(' · ');
 
-    
-function lunr_search(term) {
-    $('#lunrsearchresults').show( 1000 );
-    $( "body" ).addClass( "modal-open" );
-    
-    document.getElementById('lunrsearchresults').innerHTML = '<div id="resultsmodal" class="modal fade show d-block" tabindex="-1" role="dialog" aria-labelledby="resultsmodal"> <div class="modal-dialog shadow-lg" role="document"> <div class="modal-content"> <div class="modal-header" id="modtit"> <button type="button" class="btn-close" id="btnx" data-bs-dismiss="modal" aria-label="Close"></button> </div> <div class="modal-body"> <ul class="mb-0"> </ul>    </div> <div class="modal-footer"><button id="btnx" type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Close</button></div></div> </div></div>';
-    if(term) {
-        document.getElementById('modtit').innerHTML = "<h5 class='modal-title'>Search results for '" + term + "'</h5>" + document.getElementById('modtit').innerHTML;
-        //put results on the screen.
-        var results = idx.search(term);
-        if(results.length>0){
-            //console.log(idx.search(term));
-            //if results
-            for (var i = 0; i < results.length; i++) {
-                // more statements
-                var ref = results[i]['ref'];
-                var url = documents[ref]['url'];
-                var title = documents[ref]['title'];
-                var body = documents[ref]['body'].substring(0,160)+'...';
-                document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML + "<li class='lunrsearchresult'><a href='" + url + "'><span class='title'>" + title + "</span><br /><small><span class='body'>"+ body +"</span><br /><span class='url'>"+ url +"</span></small></a></li>";
-            }
-        } else {
-            document.querySelectorAll('#lunrsearchresults ul')[0].innerHTML = "<li class='lunrsearchresult'>Sorry, no results found. Close & try a different search!</li>";
-        }
+    return '<li class="spotlight-item" style="animation-delay:' + (index * 0.03) + 's">' +
+      '<a href="' + escapeHtml(doc.url) + '">' +
+      '<div class="spotlight-item-icon">' +
+      '<img src="' + escapeHtml(doc.image) + '" alt="' + escapeHtml(doc.title) + '" loading="lazy" onerror="this.parentElement.innerHTML=\'<i class=&quot;fas fa-book&quot;></i>\'">' +
+      '</div>' +
+      '<div class="spotlight-item-content">' +
+      '<div class="spotlight-item-title">' + escapeHtml(doc.title) + '</div>' +
+      '<div class="spotlight-item-subtitle">' + escapeHtml(doc.authors) + '</div>' +
+      '<div class="spotlight-item-meta">' + escapeHtml(meta) + '</div>' +
+      '</div>' +
+      '<div class="spotlight-item-action"><i class="fas fa-chevron-right"></i></div>' +
+      '</a></li>';
+  }
+
+  function updateResultsHeader(count, text) {
+    var header = document.querySelector('.spotlight-category-title');
+    if (header) {
+      header.innerHTML = '<i class="fas fa-book"></i> ' + escapeHtml(text) +
+        ' <span class="spotlight-count">' + count + '</span>';
     }
+  }
+
+  function showAllBooks() {
+    var listEl = document.querySelector('.spotlight-list');
+    if (!listEl) return;
+    var limit = Math.min(documents.length, 8);
+    var html = '';
+    for (var i = 0; i < limit; i++) {
+      html += createResultItem(documents[i], i);
+    }
+    listEl.innerHTML = html;
+    updateResultsHeader(documents.length, 'Tüm Kitaplar');
+  }
+
+  function performSearch(term) {
+    var listEl = document.querySelector('.spotlight-list');
+    if (!listEl) return;
+
+    if (!term || term.length < 1) {
+      showAllBooks();
+      return;
+    }
+
+    var results = idx.search(term + '*');
+
+    if (results.length > 0) {
+      var html = '';
+      for (var i = 0; i < results.length; i++) {
+        var doc = documents[results[i].ref];
+        if (doc) html += createResultItem(doc, i);
+      }
+      listEl.innerHTML = html;
+      updateResultsHeader(results.length, "'" + term + "' için sonuçlar");
+    } else {
+      listEl.innerHTML =
+        '<li class="spotlight-empty">' +
+        '<i class="fas fa-search"></i>' +
+        '<span>Sonuç bulunamadı</span>' +
+        '<small>Farklı anahtar kelimeler deneyin</small>' +
+        '</li>';
+      updateResultsHeader(0, 'Sonuç yok');
+    }
+  }
+
+  var authorNames = [
+    {% for author in site.authors %}{{ author.title | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %}
+  ];
+
+  function startSpotlightTyping(inputEl) {
+    if (spotlightTypingInterval) {
+      clearTimeout(spotlightTypingInterval);
+    }
+    if (!authorNames.length) return;
+
+    var phrases = authorNames.map(function (name) {
+      return '"' + name + '" ara...';
+    });
+    var currentIndex = Math.floor(Math.random() * phrases.length);
+    var isDeleting = false;
+    var charIndex = 0;
+
+    function typeSpotlight() {
+      if (!inputEl || inputEl.value.length > 0) {
+        if (inputEl) inputEl.placeholder = 'Kitap ara...';
+        return;
+      }
+
+      var fullText = phrases[currentIndex];
+      charIndex += isDeleting ? -1 : 1;
+      inputEl.placeholder = fullText.substring(0, charIndex);
+
+      var nextDelay = isDeleting ? 35 : 70;
+      if (!isDeleting && charIndex === fullText.length) {
+        nextDelay = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        currentIndex = Math.floor(Math.random() * phrases.length);
+        nextDelay = 400;
+      }
+
+      spotlightTypingInterval = setTimeout(typeSpotlight, nextDelay);
+    }
+
+    setTimeout(typeSpotlight, 300);
+  }
+
+  window.lunr_search = function (term) {
+    if (!spotlightRoot) return false;
+
+    document.body.classList.add('spotlight-open');
+    showSpotlightRoot();
+
+    spotlightRoot.innerHTML =
+      '<div class="spotlight-backdrop">' +
+      '<div class="spotlight-container">' +
+      '<div class="spotlight-header">' +
+      '<div class="spotlight-search-box">' +
+      '<i class="fas fa-search spotlight-icon"></i>' +
+      '<input type="text" id="spotlight-input" value="' + escapeHtml(term || '') + '" placeholder="Kitap ara..." autofocus>' +
+      '<span class="spotlight-shortcut">ESC</span>' +
+      '</div></div>' +
+      '<div class="spotlight-results">' +
+      '<div class="spotlight-results-header">' +
+      '<span class="spotlight-category-title"><i class="fas fa-book"></i> Kitaplar</span>' +
+      '</div>' +
+      '<ul class="spotlight-list"></ul>' +
+      '</div>' +
+      '<div class="spotlight-footer">' +
+      '<span><i class="fas fa-arrow-up"></i><i class="fas fa-arrow-down"></i> gezin</span>' +
+      '<span><i class="fas fa-level-down fa-rotate-90"></i> aç</span>' +
+      '<span class="spotlight-close"><i class="fas fa-times"></i> kapat</span>' +
+      '</div></div></div>';
+
+    var spotlightInput = document.getElementById('spotlight-input');
+    if (spotlightInput) {
+      spotlightInput.focus();
+      startSpotlightTyping(spotlightInput);
+      spotlightInput.addEventListener('input', function () {
+        performSearch(this.value);
+      });
+      spotlightInput.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          var firstResult = document.querySelector('.spotlight-item a');
+          if (firstResult) window.location.href = firstResult.href;
+        }
+      });
+    }
+
+    if (term) {
+      performSearch(term);
+    } else {
+      showAllBooks();
+    }
+
     return false;
-}
+  };
+
+  function initTriggerTyping() {
+    var inputEl = document.getElementById('lunrsearch');
+    if (!inputEl || !authorNames.length) return;
+
+    var searchPhrases = authorNames.map(function (name) {
+      return '"' + name + '" ara...';
+    });
+    var currentIndex = Math.floor(Math.random() * searchPhrases.length);
+    var isDeleting = false;
+    var charIndex = 0;
+
+    function type() {
+      var fullText = searchPhrases[currentIndex];
+      charIndex += isDeleting ? -1 : 1;
+      inputEl.placeholder = fullText.substring(0, charIndex);
+
+      var nextDelay = isDeleting ? 40 : 80;
+      if (!isDeleting && charIndex === fullText.length) {
+        nextDelay = 2500;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        currentIndex = Math.floor(Math.random() * searchPhrases.length);
+        nextDelay = 500;
+      }
+
+      setTimeout(type, nextDelay);
+    }
+
+    setTimeout(type, 1000);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTriggerTyping);
+  } else {
+    initTriggerTyping();
+  }
+})();
 </script>
+
 <style>
-    .lunrsearchresult .title {color: #d9230f;}
-    .lunrsearchresult .url {color: silver;}
-    .lunrsearchresult a {display: block; color: #777;}
-    .lunrsearchresult a:hover, .lunrsearchresult a:focus {text-decoration: none;}
-    .lunrsearchresult a:hover .title {text-decoration: underline;}
+body.spotlight-open {
+  overflow: hidden;
+}
+
+#lunrsearchresults {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+.spotlight-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  padding-top: 10vh;
+  animation: spotlightFadeIn 0.2s ease;
+}
+
+@keyframes spotlightFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.spotlight-container {
+  width: 680px;
+  max-width: 90vw;
+  max-height: 70vh;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: spotlightSlideIn 0.25s ease;
+}
+
+@keyframes spotlightSlideIn {
+  from { opacity: 0; transform: scale(0.96) translateY(-10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.spotlight-header {
+  padding: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.spotlight-search-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+
+.spotlight-icon {
+  color: #86868b;
+  font-size: 18px;
+}
+
+.spotlight-search-box input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 18px;
+  color: #1d1d1f;
+  outline: none;
+}
+
+.spotlight-search-box input::placeholder {
+  color: #86868b;
+}
+
+.spotlight-shortcut {
+  background: rgba(0, 0, 0, 0.06);
+  color: #86868b;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+.spotlight-results {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+.spotlight-results-header {
+  padding: 8px 20px;
+}
+
+.spotlight-category-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #86868b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.spotlight-category-title i {
+  margin-right: 6px;
+}
+
+.spotlight-count {
+  background: rgba(0, 0, 0, 0.08);
+  padding: 2px 8px;
+  border-radius: 10px;
+  margin-left: 8px;
+  font-size: 11px;
+}
+
+.spotlight-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.spotlight-item {
+  animation: spotlightItemIn 0.2s ease forwards;
+  opacity: 0;
+}
+
+@keyframes spotlightItemIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.spotlight-item a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background 0.15s ease;
+  border-radius: 8px;
+  margin: 0 8px;
+}
+
+.spotlight-item a:hover {
+  background: rgba(3, 168, 124, 0.1);
+}
+
+.spotlight-item-icon {
+  width: 48px;
+  height: 64px;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, var(--color-primary, #03a87c) 0%, var(--color-primary-dark, #028a66) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.spotlight-item-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.spotlight-item-icon i {
+  color: #fff;
+  font-size: 20px;
+}
+
+.spotlight-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.spotlight-item-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1d1d1f;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+}
+
+.spotlight-item-subtitle {
+  font-size: 12px;
+  color: #6e6e73;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spotlight-item-meta {
+  font-size: 11px;
+  color: #86868b;
+  margin-top: 2px;
+}
+
+.spotlight-item-action {
+  color: #c7c7cc;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.spotlight-item a:hover .spotlight-item-action {
+  opacity: 1;
+}
+
+.spotlight-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+  color: #86868b;
+}
+
+.spotlight-empty i {
+  font-size: 32px;
+  margin-bottom: 12px;
+  opacity: 0.5;
+}
+
+.spotlight-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding: 12px 20px;
+  background: rgba(0, 0, 0, 0.03);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.spotlight-footer span {
+  font-size: 11px;
+  color: #86868b;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.spotlight-close {
+  cursor: pointer;
+}
+
+.spotlight-close:hover {
+  color: var(--color-primary, #03a87c);
+}
+
+.search-trigger-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 8px 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 200px;
+}
+
+.search-trigger-wrapper:hover {
+  background: rgba(3, 168, 124, 0.06);
+  border-color: rgba(3, 168, 124, 0.2);
+}
+
+.search-trigger-icon {
+  color: #86868b;
+  font-size: 14px;
+}
+
+.search-trigger-input {
+  flex: 1;
+  border: none !important;
+  background: transparent !important;
+  padding: 0 !important;
+  font-size: 14px;
+  color: #86868b;
+  cursor: pointer;
+  box-shadow: none !important;
+  min-width: 0;
+}
+
+.search-trigger-shortcut {
+  background: rgba(0, 0, 0, 0.06);
+  color: #86868b;
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 7px;
+  border-radius: 5px;
+  white-space: nowrap;
+}
+
+.search-trigger-mobile {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.04);
+  color: var(--color-primary, #03a87c);
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.search-trigger-mobile:hover {
+  background: rgba(3, 168, 124, 0.1);
+  border-color: rgba(3, 168, 124, 0.2);
+}
+
+@media (prefers-color-scheme: dark) {
+  .spotlight-container {
+    background: rgba(30, 30, 32, 0.95);
+  }
+
+  .spotlight-search-box {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .spotlight-search-box input,
+  .spotlight-item-title {
+    color: #f5f5f7;
+  }
+
+  .spotlight-item-subtitle {
+    color: #a1a1a6;
+  }
+
+  .spotlight-footer {
+    background: rgba(255, 255, 255, 0.03);
+    border-top-color: rgba(255, 255, 255, 0.08);
+  }
+}
 </style>
+{% endunless %}
 
-
-
-
-<form class="bd-search hidden-sm-down" onSubmit="return lunr_search(document.getElementById('lunrsearch').value);">
-<input type="text" class="form-control text-small"  id="lunrsearch" name="q" value="" placeholder="Search..."> 
-</form>
+{% if include.mode == 'desktop' %}
+<li class="nav-item d-none d-md-block site-nav__search-desktop">
+  <form class="bd-search mb-0" onsubmit="return lunr_search(document.getElementById('lunrsearch').value);">
+    <div class="search-trigger-wrapper" onclick="lunr_search('')">
+      <i class="fas fa-search search-trigger-icon"></i>
+      <input type="text" class="search-trigger-input" id="lunrsearch" name="q" value="" placeholder="Kitap ara..." readonly>
+      <span class="search-trigger-shortcut">Ctrl+K</span>
+    </div>
+  </form>
+</li>
+{% elsif include.mode == 'mobile' %}
+<li class="nav-item d-md-none site-nav__search-mobile">
+  <button type="button" class="search-trigger-mobile" aria-label="Kitap ara" onclick="lunr_search('')">
+    <i class="fas fa-search"></i>
+  </button>
+</li>
+{% endif %}

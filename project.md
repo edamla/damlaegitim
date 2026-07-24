@@ -29,7 +29,7 @@ Site, **Damla Okul** markası altında Damla Yayınevi’nin okul yayınlarını
 ┌─────────────────────────────────────────────────────────────┐
 │  Şablonlar                                                  │
 │  _layouts/  →  default.html  →  book.html, page.html, …     │
-│  _includes/  →  book-card, slider, instagram-carousel, menu │
+│  _includes/  →  book-card, slider, instagram-carousel, search, footer │
 └──────────────────────────┬──────────────────────────────────┘
                            │
                            ▼
@@ -170,7 +170,7 @@ damlaegitim/
 | `page.html` | Basit içerik sayfası |
 | `page-sidebar.html` | İçerik + yan menü |
 | `book.html` | Ürün detay sayfası |
-| `book2.html` / `previewbook.html` | Tam ekran önizleme varyantları |
+| `previewbook.html` | Tam ekran önizleme |
 | `catalog.html` | Katalog detay + iframe görüntüleyici |
 | `post.html` | Blog yazısı |
 | `person.html` / `illustrator.html` / `translator.html` | Kişi profilleri |
@@ -184,13 +184,16 @@ Tüm layout’lar `layout: default` zinciri üzerinden `default.html`’i extend
 | Dosya | Görev |
 |-------|-------|
 | `menu-header.html` | Ana navigasyon linkleri |
+| `footer-menu.html` | 3 sütunlu site footer (ürünler, önemli bilgiler, iletişim) |
+| `contact-info.html` | Site geneli iletişim bilgileri (`site.contact_*`, footer ve iletişim sayfası) |
 | `menu-socialmedia.html` | Sosyal medya ikonları |
 | `slider.html` | Anasayfa Tiny Slider |
 | `instagram-carousel.html` | Anasayfa Instagram carousel (`okul.damla`, Behold JSON feed) |
 | `book-grade-nav.html` | Sınıf sekmesi + tür alt menüsü |
 | `book-home-groups.html` | Anasayfa kitap listesi (Eğitim / Hikaye) |
 | `book-card.html` | Tek kitap kartı partial (sabit resim + isim kutusu) |
-| `book-grade-filter.html` | Ürünler sayfası sınıf checkbox’ları |
+| `book-grade-filter.html` | Eski sınıf checkbox dropdown’u (artık kullanılmıyor) |
+| `search-lunr.html` | Spotlight arama (Lunr.js indeks + modal UI + navbar tetikleyici) |
 | `tracking-header.html` / `tracking-footer.html` | Google Analytics |
 
 ---
@@ -201,13 +204,42 @@ Tüm layout’lar `layout: default` zinciri üzerinden `default.html`’i extend
 |-------|------------|-------|
 | `bootstrap.bundle.min.js` | — | Collapse, dropdown, modal |
 | `nav.js` | — | Scroll’da navbar gizle/göster |
-| `book-filter.js` | — | Anasayfa ve `/urunler` filtreleme |
+| `book-filter.js` | — | Sınıf/tür filtreleme + hash URL senkronizasyonu |
+| `lunr.js` | — | Spotlight kitap araması (client-side indeks) |
 | `tiny-slider.js` | — | Anasayfa slider |
 | `lazyload.js` | — | Görsel lazy loading (`lazyimages: enabled`) |
 
 jQuery kullanılmaz. Eski `theme.js` dosyası repoda kalabilir ancak `default.html`’de yüklenmez.
 
 `instagram-carousel.html` kendi inline `<script>` bloğunu taşır; harici JS dosyası veya tiny-slider bağımlılığı yoktur.
+
+`search-lunr.html` navbar Spotlight aramasını sağlar; jQuery kullanılmaz. `mode` parametresiyle navbar tetikleyicisi (`desktop` / `mobile`) veya script bloğu (`mode` olmadan) ayrı include edilir.
+
+---
+
+## Spotlight Arama
+
+Navbar üzerinden kitap araması yapılır. macOS Spotlight benzeri tam ekran modal açılır.
+
+### Dosyalar
+
+| Dosya | Görev |
+|-------|-------|
+| `_includes/search-lunr.html` | Lunr indeks (build-time), modal UI, inline CSS/JS, navbar tetikleyici |
+| `assets/js/lunr.js` | Lunr.js 2.1.5 kütüphanesi |
+
+### İndeks kapsamı
+
+`site.books` koleksiyonu; alanlar: `title`, `authors`, `categories`, `grades`, `genre`, `subjects`, `tags`, `body`.
+
+### Kullanım
+
+- Navbar’daki arama kutusuna tıklama
+- Mobil arama ikonu
+- `Ctrl+K` / `⌘K` klavye kısayolu
+- Enter → ilk sonuca git; ESC → kapat
+
+Eski `theme.js` içindeki `loadSearch()` (`content.json` tabanlı) kullanılmaz.
 
 ---
 
@@ -245,6 +277,59 @@ Instagram, statik siteden doğrudan feed çekmeye izin vermez. [Behold.so](https
 
 ---
 
+## Footer
+
+Site alt bilgisi [`_includes/footer-menu.html`](_includes/footer-menu.html) ile 3 sütunlu olarak render edilir. `default.html` layout’u bu partial’ı otomatik include eder.
+
+| Sütun | İçerik | Kaynak |
+|-------|--------|--------|
+| Ürünler | Eğitim Kitapları, Hikaye Kitapları, Kataloglar | Sabit `/urunler` linkleri + `site.pages` (`permalink: /kataloglar`) |
+| Önemli Bilgiler | Hakkımızda, Gizlilik vb. | `_pages` front matter: `footer_show: true`, `footer_order` |
+| Adres & İletişim | Telefon, e-posta, adres, sosyal | `_config.yml` `contact_*` + `menu-socialmedia.html` |
+
+### Site geneli iletişim (`_config.yml`)
+
+İletişim bilgileri kök seviyede tanımlanır (footer bloğu değil; sosyal ayarlar gibi site ayarı):
+
+```yaml
+contact_phone: "+90 212 514 28 28"
+contact_phone_href: "tel:+902125142828"
+contact_email: "iletisim@damlayayinevi.com.tr"
+contact_address: "Alemdar Mh. Prof. Kazım İsmail Gürkan Cad. No:8 Fatih, 34110 İstanbul"
+```
+
+Jekyll’da erişim: `{{ site.contact_phone }}`, `{{ site.contact_email }}` vb.
+
+### `contact-info.html` partial
+
+Tek kaynak; footer ve iletişim sayfası buradan beslenir:
+
+```liquid
+{% include contact-info.html mode='footer' %}  {# footer sütunu #}
+{% include contact-info.html mode='page' %}   {# iletişim sayfası gövdesi #}
+```
+
+[`_pages/iletisim.md`](_pages/iletisim.md) harita iframe’ini sayfa gövdesinde tutar; telefon/e-posta/adres tekrarı partial üzerinden gelir.
+
+### Footer’da gösterilecek sayfalar
+
+`_pages` front matter:
+
+```yaml
+footer_show: true
+footer_order: 10
+```
+
+```liquid
+{% assign footer_pages = site.pages
+  | where_exp: "p", "p.footer_show == true"
+  | sort: "footer_order" %}
+```
+
+Stiller `assets/css/theme.css` içinde `.site-footer__*` ve `.contact-info__*` sınıflarıyla tanımlıdır.
+
+---
+
 ## Ürün (Kitap) Front Matter Örneği
 
 ```yaml
@@ -273,13 +358,30 @@ Markdown gövdesi ürün açıklaması olarak `book.html` içindeki `.prose` ala
 
 ## Filtreleme Mantığı
 
-**Anasayfa:** `book-grade-nav.html` + `book-filter.js`
+Anasayfa ve `/urunler` aynı bileşenleri paylaşır: `book-grade-nav.html` + `book-home-groups.html` + `book-filter.js`
+
 - Sınıf seçimi → `data-grades` attribute’u ile eşleşme
 - Tür (Eğitim/Hikaye) → `data-genre` attribute’u
 - Hedef selector: `.listbooks-home-item`
+- Genre grupları: `.book-genre-group` (boş gruplar gizlenir)
 
-**Ürünler sayfası (`/urunler`):** Dropdown checkbox’lar + `filterBooks()`
-- Hedef selector: `.listbooks-item`
+Filtreleme tamamen client-side çalışır; Jekyll rebuild gerekmez.
+
+### Hash tabanlı paylaşılabilir URL’ler
+
+Filtre değişince URL hash güncellenir; sayfa hash ile yüklendiğinde filtre otomatik uygulanır.
+
+| Hash | Filtre |
+|------|--------|
+| `#okul-oncesi` | Sadece sınıf (tüm türler) |
+| `#okul-oncesi/egitim` | Sınıf + tür |
+| `#1-sinif/hikaye` | Sınıf + tür |
+
+Örnekler: `/urunler#okul-oncesi`, `/urunler#1-sinif/egitim`, `/#2-sinif/hikaye` (anasayfa)
+
+Okul öncesi ürünler `_books/` içinde henüz tam açılmamış olsa da URL yapısı hazırdır; ileride `grades: [0]` + `genre` ile eklenen ürünler ek JS değişikliği olmadan çalışır.
+
+`book-grade-filter.html` eski checkbox dropdown yapısıdır; `/urunler` artık kullanmaz.
 
 ---
 
@@ -354,7 +456,5 @@ GitHub Pages, push sonrası kaynak branch’ten Jekyll build alır. **CI/CD veya
 
 Aşağıdaki dosyalar geçmişten kalma olabilir; aktif kullanılmıyorsa temizlenebilir:
 
-- `_layouts/catalog-old.html`, `book2.html`
-- `assets/js/theme.js` (jQuery tabanlı)
+- `assets/js/theme.js` (jQuery tabanlı; `loadSearch()` kullanılmıyor)
 - `_pages/_draft/books.html`
-- `_includes/search-lunr.html` (navbar’da devre dışı)

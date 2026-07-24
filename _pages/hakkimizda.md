@@ -4,6 +4,8 @@ layout: page
 permalink: "/hakkimizda"
 image: "/assets/images/logo.png"
 comments: false
+footer_show: true
+footer_order: 10
 ---
 
 <style>

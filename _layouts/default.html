@@ -65,11 +65,12 @@
             <ul class="navbar-nav me-auto d-flex align-items-center">
                {% include menu-header.html %}
             </ul>
-            <ul class="navbar-nav d-md-flex d-none flex-row site-nav__social">
-                {% include menu-socialmedia.html %}
+            <ul class="navbar-nav d-md-flex d-none flex-row align-items-center site-nav__search">
+                {% include search-lunr.html mode='desktop' %}
             </ul>
-            <ul class="navbar-nav justify-content-center d-md-none d-flex flex-row mobil site-nav__social">
-                {% include menu-socialmedia.html %}
+            <ul class="navbar-nav justify-content-center d-md-none d-flex flex-row mobil site-nav__social align-items-center">
+                {% include search-lunr.html mode='mobile' %}
+
             </ul>
         </div>
     </div>
@@ -87,25 +88,6 @@
 
     <script src="{{site.baseurl}}/assets/js/bootstrap.bundle.min.js"></script>
     <script src="{{site.baseurl}}/assets/js/nav.js"></script>
-
-    <!-- Footer -->
-    <footer class="site-footer border-top text-white small">
-        <div class="container">
-        <div class="row justify-content-center">
-            <span class="navbar-brand me-2 mb-0 text-center">
-                <img class="site-footer__logo" src="{{site.baseurl}}/assets/images/logo-bw.png" alt="{{site.name}}">
-            </span>
-        </div>
-        <div class="row align-items-center justify-content-center">
-            <div class="text-center">
-                <span>Copyright © <script>document.write(new Date().getFullYear())</script> Damla Yayınevi</span>
-            </div>
-        </div>
-        </div>
-    </footer>
-
-    {% include tracking-footer.html %}
-
     {% if site.lazyimages == "enabled" %}
     <script src="{{ site.baseurl }}/assets/js/lazyload.js"></script>
     {% endif %}
@@ -114,7 +96,15 @@
     <script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>
     {% endif %}
 
+
+    {% include tracking-footer.html %}
+
+
     <script src="{{ site.baseurl }}/assets/js/book-filter.js?v={{ site.time | date: '%s' }}"></script>
+
+    {% include search-lunr.html %}
+
+    {% include footer-menu.html %}
 
 </body>
 
