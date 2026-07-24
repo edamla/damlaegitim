@@ -938,6 +938,17 @@ div.a2a_full_footer {display:none;}
   justify-content: center;
 }
 
+.site-social__link {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.site-social__icon--x {
+  display: block;
+}
+
 .site-nav .navbar-nav.me-auto .nav-link {
   font-family: var(--font-nav);
 }
@@ -1432,15 +1443,32 @@ div.a2a_full_footer {display:none;}
 
 .prose--display {
   font-family: var(--font-sans);
+  font-size: 0.95rem;
   font-weight: 400;
   line-height: 1.15;
+  color: #5c636a;
+  letter-spacing: 0.01em;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .prose--display p,
-.prose--display li,
-.prose--display strong,
-.prose--display b {
+.prose--display li {
+  color: #5c636a;
   font-weight: 400;
+  font-synthesis: none;
+}
+
+.prose--display strong,
+.prose--display b,
+.prose--display h1,
+.prose--display h2,
+.prose--display h3,
+.prose--display h4 {
+  color: #495057;
+  font-weight: 400;
+  font-synthesis: none;
 }
 
 .prose--display p,
