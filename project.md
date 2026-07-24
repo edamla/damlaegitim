@@ -71,9 +71,24 @@ buyout.css          →  E-ticaret barı (yalnızca kitap/katalog detay)
 --color-primary: #03a87c;
 --color-primary-dark: #028a66;
 --color-surface: #fafafa;
---font-serif: Lora, Georgia, serif;
+--font-nav: "Geometric Sans", system-ui, sans-serif;
+--font-display: "Punta", sans-serif;
+--font-sans: "Raykjavik", system-ui, sans-serif;
+--font-serif: var(--font-sans);
 --nav-height: 4rem;
 ```
+
+### Tipografi
+
+Font dosyaları `assets/fonts/` altında yerel olarak servis edilir; `@font-face` tanımları `theme.css` başında.
+
+| Font | Dosya | Kullanım alanı | CSS seçici |
+|------|-------|----------------|------------|
+| Geometric Sans | `assets/fonts/geometric-sans/geometric.otf` | Navbar menü linkleri | `.site-nav .navbar-nav.me-auto .nav-link` |
+| Punta | `assets/fonts/punta/Punta-Light.otf` | Sınıf filtresi, tür başlıkları | `.grade-nav`, `.book-genre-heading` |
+| Raykjavik | `assets/fonts/raykjavik/reykjavik-rounded-regular.ttf` | Genel site metni | `body`, `--font-sans` |
+
+HTML partial’larında (`menu-header`, `book-grade-nav`, `book-home-groups`) değişiklik gerekmez; mevcut class yapısı yeterlidir.
 
 ---
 
@@ -96,6 +111,10 @@ damlaegitim/
 │   │   ├── app.css
 │   │   ├── tiny-slider.css
 │   │   └── buyout.css
+│   ├── fonts/
+│   │   ├── geometric-sans/
+│   │   ├── punta/
+│   │   └── raykjavik/
 │   ├── js/
 │   │   ├── bootstrap.bundle.min.js
 │   │   ├── nav.js              # Navbar scroll (vanilla JS)
@@ -274,7 +293,6 @@ GitHub Pages, push sonrası kaynak branch’ten Jekyll build alır. **CI/CD veya
 
 | Kaynak | Kullanım |
 |--------|----------|
-| Google Fonts (Lora) | Makale/kitap tipografisi |
 | Font Awesome 5 CDN | İkonlar |
 | `cdn.e-damla.com.tr` | Önizleme sayfaları, örnek sayfalar |
 | Google Analytics | `G-KFMVQ3WNN3` (production) |
