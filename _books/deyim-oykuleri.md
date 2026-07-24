@@ -1,7 +1,7 @@
 ---
 layout: book
-title:  "Deyim Öyküleri 5 Kitap"
-grades: [3]
+title:  "Deyim Öyküleri (5 Kitap)"
+grades: [3, 4]
 genre: story
 concepts: [""]
 subjects: ["Anadolu Kültürü" , "Birey ve Toplum" , "Dil Bilim" , "Milli Kültür"]
