@@ -54,23 +54,25 @@
     <!-- Navbar -->
     <nav id="MagicMenu" class="site-nav topnav navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <div class="container">
+        <div class="site-nav__bar">
         <a class="navbar-brand" href="{{ site.baseurl }}/">
             <img class="site-nav__logo" src="{{site.baseurl}}/assets/images/logo.png" alt="{{site.name}}">
         </a>
 
+        <div class="site-nav__search-bar d-md-none">
+            {% include search-lunr.html mode='mobile' %}
+        </div>
+
         <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Menüyü aç/kapat">
         <span class="navbar-toggler-icon"></span>
         </button>
+        </div>
         <div class="navbar-collapse collapse" id="navbarColor02">
             <ul class="navbar-nav me-auto d-flex align-items-center">
                {% include menu-header.html %}
             </ul>
             <ul class="navbar-nav d-md-flex d-none flex-row align-items-center site-nav__search">
                 {% include search-lunr.html mode='desktop' %}
-            </ul>
-            <ul class="navbar-nav justify-content-center d-md-none d-flex flex-row mobil site-nav__social align-items-center">
-                {% include search-lunr.html mode='mobile' %}
-
             </ul>
         </div>
     </div>
