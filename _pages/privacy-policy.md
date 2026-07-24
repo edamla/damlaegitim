@@ -1,6 +1,8 @@
 ---
 title: "Privacy Policy"
 permalink: "/privacy-policy"
+footer_show: true
+footer_order: 20
 ---
 
 "{{site.name}}" takes your privacy seriously. To better protect your privacy we provide this privacy policy notice explaining the way your personal information is collected and used.

@@ -39,17 +39,17 @@ layout: default
 
                         <div class="icon-block mt-3 d-inline-flex flex-wrap gap-2">
                             {% if site.pagepreview.enabled == true and book.previewpage == true and book.ean %}
-                            <a class="sscroll btn btn-light btn-sm fw-bold" target="_blank" href="{{ site.pagepreview.prefix }}{{ book.ean }}{{site.pagepreview.postfix}} "><i class="fas fa-book-reader fa-2x text-primary" aria-hidden="true"></i><span class="btn-sm">Ön Okuma</span></a>
+                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" target="_blank" href="{{ site.pagepreview.prefix }}{{ book.ean }}{{site.pagepreview.postfix}} " data-popup-type="iframe" data-popup-title="Ön Okuma"><i class="fas fa-book-reader fa-2x text-primary" aria-hidden="true"></i><span class="btn-sm">Ön Okuma</span></a>
                             {% endif %}
                             {% if book.youtube %}
-                            <a class="sscroll btn btn-light btn-sm fw-bold" target="_blank" href="{{ book.youtube }}"><i class="fab fa-youtube fa-2x text-danger" aria-hidden="true"></i><span class="btn-sm">Tanıtım</span></a>
+                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" target="_blank" href="{{ book.youtube }}" data-popup-type="youtube" data-popup-title="Tanıtım"><i class="fab fa-youtube fa-2x text-danger" aria-hidden="true"></i><span class="btn-sm">Tanıtım</span></a>
                             {% endif %}
-                            <a class="sscroll btn btn-light btn-sm fw-bold" href="#" data-bs-toggle="modal" data-bs-target="#esatisModal"><i class="fas fa-info-circle fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">Bilgi</span></a>
+                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" href="#" data-popup-type="info" data-popup-title="Ürün Tedarik Bilgisi"><i class="fas fa-info-circle fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">Bilgi</span></a>
                             {% if book.review_link %}
-                            <a class="sscroll btn btn-light btn-sm fw-bold" href="{{ book.review_link }}" target="_blank"><i class="fas fa-search fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">İncele</span></a>
+                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" href="{{ book.review_link }}" target="_blank" data-popup-type="iframe" data-popup-title="İncele"><i class="fas fa-search fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">İncele</span></a>
                             {% endif %}
                             {% if book.layout == "book" and site.examlink.enabled == true and book.examlink %}
-                            <a class="sscroll btn btn-light btn-sm fw-bold" target="_blank" href="{{ site.examlink.prefix }}{{ book.examlink }}"><i class="fas fa-pen fa-2x text-danger" aria-hidden="true"></i><span class="btn-sm">HDS</span></a>
+                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" target="_blank" href="{{ site.examlink.prefix }}{{ book.examlink }}" data-popup-type="iframe" data-popup-title="HDS"><i class="fas fa-pen fa-2x text-danger" aria-hidden="true"></i><span class="btn-sm">HDS</span></a>
                             {% endif %}
                         </div>
 
@@ -65,7 +65,7 @@ layout: default
         
         <div class="col-md-9 order-md-2">
             <!-- Article -->
-            <article class="article-post prose text-justify">                
+            <article class="article-post prose prose--display text-justify">                
             {{ content }}                
             </article>
         </div>
@@ -277,3 +277,5 @@ layout: default
         </div>
     </div>
 </div>
+
+{% include popup.html %}

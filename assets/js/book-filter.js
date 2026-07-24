@@ -85,6 +85,117 @@ function filterBooksByGradesGenresAndMore(bookSelector, gradeCheckboxSelector, g
 
 var homeFilterState = { grade: null, genre: null };
 var homeFiltersInitialized = false;
+var syncingFromHash = false;
+
+var GRADE_TO_SLUG = {
+    '0': 'okul-oncesi',
+    '1': '1-sinif',
+    '2': '2-sinif',
+    '3': '3-sinif',
+    '4': '4-sinif',
+    '5': '5-sinif',
+    '6': '6-sinif',
+    '7': '7-sinif',
+    '8': '8-sinif'
+};
+
+var SLUG_TO_GRADE = {
+    'okul-oncesi': '0',
+    '1-sinif': '1',
+    '2-sinif': '2',
+    '3-sinif': '3',
+    '4-sinif': '4',
+    '5-sinif': '5',
+    '6-sinif': '6',
+    '7-sinif': '7',
+    '8-sinif': '8'
+};
+
+var GENRE_TO_SLUG = {
+    education: 'egitim',
+    story: 'hikaye'
+};
+
+var SLUG_TO_GENRE = {
+    egitim: 'education',
+    hikaye: 'story'
+};
+
+function normalizeSlug(raw) {
+    if (!raw) {
+        return '';
+    }
+    var slug = decodeURIComponent(raw).toLowerCase().replace(/^\/+|\/+$/g, '');
+    slug = slug
+        .replace(/ğ/g, 'g')
+        .replace(/ü/g, 'u')
+        .replace(/ş/g, 's')
+        .replace(/ı/g, 'i')
+        .replace(/ö/g, 'o')
+        .replace(/ç/g, 'c')
+        .replace(/é/g, 'e');
+    return slug;
+}
+
+function parseFilterHash() {
+    var hash = window.location.hash.replace(/^#/, '');
+    if (!hash) {
+        return null;
+    }
+
+    var parts = hash.split('/').map(normalizeSlug).filter(Boolean);
+    if (parts.length === 0 || parts.length > 2) {
+        return null;
+    }
+
+    var grade = SLUG_TO_GRADE[parts[0]];
+    if (grade === undefined) {
+        return null;
+    }
+
+    if (parts.length === 1) {
+        return { grade: grade, genre: null };
+    }
+
+    var genre = SLUG_TO_GENRE[parts[1]];
+    if (genre === undefined) {
+        return null;
+    }
+
+    return { grade: grade, genre: genre };
+}
+
+function buildFilterHash(grade, genre) {
+    if (grade === null || grade === undefined) {
+        return '';
+    }
+
+    var gradeSlug = GRADE_TO_SLUG[grade];
+    if (!gradeSlug) {
+        return '';
+    }
+
+    if (!genre) {
+        return '#' + gradeSlug;
+    }
+
+    var genreSlug = GENRE_TO_SLUG[genre];
+    if (!genreSlug) {
+        return '#' + gradeSlug;
+    }
+
+    return '#' + gradeSlug + '/' + genreSlug;
+}
+
+function updateFilterHash() {
+    if (syncingFromHash) {
+        return;
+    }
+
+    var hash = buildFilterHash(homeFilterState.grade, homeFilterState.genre);
+    var url = window.location.pathname + window.location.search + hash;
+    history.replaceState(null, '', url);
+}
 
 function closeAllGradeMenus() {
     document.querySelectorAll('.grade-nav-item').forEach(function(item) {
@@ -118,37 +229,101 @@ function filterHomeBooks() {
     updateGradeLabels();
 }
 
-function selectGrade(btn, grade) {
-    var item = btn.closest('.grade-nav-item');
-    if (item.classList.contains('active') && homeFilterState.grade === grade) {
-        homeFilterState.grade = null;
-        homeFilterState.genre = null;
-        item.classList.remove('active');
-    } else {
-        document.querySelectorAll('.grade-nav-item').forEach(function(el) {
-            el.classList.remove('active');
-        });
-        item.classList.add('active');
-        homeFilterState.grade = grade;
-        if (homeFilterState.genre) {
-            homeFilterState.genre = null;
+function scrollToBookResults() {
+    if (!document.getElementById('books-section')) {
+        return;
+    }
+
+    var target = null;
+    document.querySelectorAll('.book-genre-group').forEach(function(section) {
+        if (section.style.display === 'none') {
+            return;
+        }
+        if (!target) {
+            target = section.querySelector('.book-genre-heading') || section;
+        }
+    });
+
+    if (!target) {
+        return;
+    }
+
+    var nav = document.getElementById('MagicMenu');
+    var navOffset = nav ? nav.offsetHeight : 64;
+    var extraGap = 12;
+    var rect = target.getBoundingClientRect();
+
+    if (rect.top >= navOffset + extraGap && rect.top <= window.innerHeight * 0.35) {
+        return;
+    }
+
+    var top = rect.top + window.pageYOffset - navOffset - extraGap;
+    window.scrollTo({
+        top: Math.max(0, top),
+        behavior: 'smooth'
+    });
+}
+
+function applyFilterState(grade, genre, options) {
+    options = options || {};
+    homeFilterState.grade = grade;
+    homeFilterState.genre = genre;
+
+    document.querySelectorAll('.grade-nav-item').forEach(function(el) {
+        el.classList.remove('active');
+    });
+
+    if (grade !== null) {
+        var activeItem = document.querySelector('.grade-nav-item[data-grade="' + grade + '"]');
+        if (activeItem) {
+            activeItem.classList.add('active');
         }
     }
+
     closeAllGradeMenus();
     filterHomeBooks();
+
+    if (grade !== null && options.scrollToResults !== false) {
+        requestAnimationFrame(function() {
+            scrollToBookResults();
+        });
+    }
+
+    if (options.updateHash !== false) {
+        updateFilterHash();
+    }
+}
+
+function applyFilterFromHash() {
+    if (!document.getElementById('books-section')) {
+        return;
+    }
+
+    syncingFromHash = true;
+    var parsed = parseFilterHash();
+
+    if (parsed === null) {
+        applyFilterState(null, null, { updateHash: false, scrollToResults: false });
+    } else {
+        applyFilterState(parsed.grade, parsed.genre, { updateHash: false, scrollToResults: true });
+    }
+
+    syncingFromHash = false;
+}
+
+function selectGrade(btn, grade) {
+    var item = btn.closest('.grade-nav-item');
+    if (item.classList.contains('active') && homeFilterState.grade === grade && homeFilterState.genre === null) {
+        applyFilterState(null, null, { scrollToResults: false });
+    } else {
+        applyFilterState(grade, null);
+    }
 }
 
 function selectGenre(btn, genre) {
     var item = btn.closest('.grade-nav-item');
     var grade = item.dataset.grade;
-    document.querySelectorAll('.grade-nav-item').forEach(function(el) {
-        el.classList.remove('active');
-    });
-    item.classList.add('active');
-    homeFilterState.grade = grade;
-    homeFilterState.genre = genre;
-    closeAllGradeMenus();
-    filterHomeBooks();
+    applyFilterState(grade, genre);
 }
 
 function toggleGradeMenu(caret, event) {
@@ -185,6 +360,9 @@ function initHomeBookFilters() {
             });
         });
     }
+
+    window.addEventListener('hashchange', applyFilterFromHash);
+    applyFilterFromHash();
 }
 
 // --- Ürünler sayfası filtreleri ---
@@ -245,7 +423,7 @@ if (document.readyState === 'loading') {
 }
 
 window.addEventListener('pageshow', function(event) {
-    if (event.persisted && document.getElementById('books-section')) {
-        filterHomeBooks();
+    if (document.getElementById('books-section')) {
+        applyFilterFromHash();
     }
 });

@@ -273,11 +273,22 @@
     return div.innerHTML;
   }
 
+  function getSizeUrl(size) {
+    if (!size) return '';
+    if (typeof size === 'string') return size;
+    return size.mediaUrl || size.url || '';
+  }
+
   function getImageUrl(post) {
     if (post.sizes) {
-      return post.sizes.medium || post.sizes.small || post.sizes.large || post.mediaUrl;
+      return getSizeUrl(post.sizes.medium) ||
+        getSizeUrl(post.sizes.small) ||
+        getSizeUrl(post.sizes.large) ||
+        getSizeUrl(post.sizes.full) ||
+        post.thumbnailUrl ||
+        '';
     }
-    return post.mediaUrl || post.thumbnailUrl || '';
+    return post.thumbnailUrl || post.mediaUrl || '';
   }
 
   function getBadgeIcon(mediaType) {

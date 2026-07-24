@@ -1,0 +1,316 @@
+<div id="popup-overlay" hidden></div>
+
+<script>
+(function () {
+  var popupRoot = document.getElementById('popup-overlay');
+  var desktopQuery = window.matchMedia('(min-width: 768px)');
+
+  function escapeHtml(str) {
+    if (!str) return '';
+    var div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  function toYouTubeEmbed(url) {
+    if (!url) return '';
+    try {
+      var parsed = new URL(url.trim());
+      var host = parsed.hostname.replace(/^www\./, '');
+      var videoId = '';
+
+      if (host === 'youtu.be') {
+        videoId = parsed.pathname.replace(/^\//, '').split('/')[0];
+      } else if (host === 'youtube.com' || host === 'm.youtube.com' || host === 'music.youtube.com') {
+        if (parsed.pathname.indexOf('/embed/') === 0) {
+          return url;
+        }
+        videoId = parsed.searchParams.get('v');
+        if (!videoId && parsed.pathname.indexOf('/shorts/') === 0) {
+          videoId = parsed.pathname.split('/')[2];
+        }
+      }
+
+      if (!videoId) return url;
+      return 'https://www.youtube.com/embed/' + encodeURIComponent(videoId);
+    } catch (e) {
+      return url;
+    }
+  }
+
+  function showPopupRoot() {
+    if (!popupRoot) return;
+    popupRoot.hidden = false;
+    popupRoot.style.opacity = '0';
+    requestAnimationFrame(function () {
+      popupRoot.style.transition = 'opacity 0.2s ease';
+      popupRoot.style.opacity = '1';
+    });
+  }
+
+  window.closePopup = function () {
+    if (!popupRoot) return;
+    popupRoot.style.opacity = '0';
+    setTimeout(function () {
+      popupRoot.hidden = true;
+      popupRoot.innerHTML = '';
+      document.body.classList.remove('popup-open');
+    }, 200);
+  };
+
+  window.openPopup = function (options) {
+    if (!popupRoot) return;
+
+    var title = options && options.title ? options.title : '';
+    var bodyHtml = options && options.bodyHtml ? options.bodyHtml : '';
+    var isMedia = options && options.variant === 'media';
+
+    document.body.classList.add('popup-open');
+    showPopupRoot();
+
+    popupRoot.innerHTML =
+      '<div class="popup-backdrop">' +
+      '<div class="popup-container' + (isMedia ? ' popup-container--media' : '') + '" role="dialog" aria-modal="true"' + (title ? ' aria-label="' + escapeHtml(title) + '"' : '') + '>' +
+      '<div class="popup-header">' +
+      '<h2 class="popup-title">' + escapeHtml(title) + '</h2>' +
+      '<button type="button" class="popup-close" aria-label="Kapat"><i class="fas fa-times"></i></button>' +
+      '</div>' +
+      '<div class="popup-body' + (isMedia ? ' popup-body--media' : '') + '">' + bodyHtml + '</div>' +
+      '<div class="popup-footer">' +
+      '<button type="button" class="popup-close popup-close-text"><i class="fas fa-times"></i> kapat</button>' +
+      '</div>' +
+      '</div></div>';
+  };
+
+  function buildInfoBody() {
+    var modalBody = document.querySelector('#esatisModal .modal-body');
+    if (modalBody) {
+      return '<div class="popup-body--info">' + modalBody.innerHTML + '</div>';
+    }
+
+    return '<div class="popup-body--info text-center py-4">' +
+      '<div class="mb-3"><i class="fas fa-info-circle fa-3x text-info"></i></div>' +
+      '<p class="lead fw-bold text-dark mb-2">Bu ürünümüz, bayilerimiz aracılığıyla satılmaktadır.</p>' +
+      '<p class="text-muted">Size en yakın satış noktasını veya bayimizi öğrenerek hızlıca temin etmek için bizimle iletişime geçebilirsiniz:</p>' +
+      '<a href="tel:05334840626" class="btn btn-success fw-bold px-4 py-2 mt-2">' +
+      '<i class="fas fa-phone-alt me-2"></i>0533 484 06 26</a></div>';
+  }
+
+  function openBookActionPopup(link) {
+    var type = link.getAttribute('data-popup-type');
+    var title = link.getAttribute('data-popup-title') || '';
+    var url = (link.getAttribute('href') || '').trim();
+    var bodyHtml = '';
+    var isMedia = false;
+
+    if (type === 'iframe') {
+      isMedia = true;
+      bodyHtml = '<iframe src="' + escapeHtml(url) + '" title="' + escapeHtml(title) + '" loading="lazy" allowfullscreen></iframe>';
+    } else if (type === 'youtube') {
+      isMedia = true;
+      bodyHtml = '<iframe src="' + escapeHtml(toYouTubeEmbed(url)) + '" title="' + escapeHtml(title) + '" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
+    } else if (type === 'info') {
+      bodyHtml = buildInfoBody();
+    } else {
+      return;
+    }
+
+    openPopup({ title: title, bodyHtml: bodyHtml, variant: isMedia ? 'media' : 'default' });
+  }
+
+  function isDesktopPopup() {
+    return desktopQuery.matches;
+  }
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && popupRoot && !popupRoot.hidden) {
+      closePopup();
+    }
+  });
+
+  if (popupRoot) {
+    popupRoot.addEventListener('click', function (e) {
+      if (e.target === popupRoot || e.target.classList.contains('popup-backdrop')) {
+        closePopup();
+      }
+      if (e.target.closest && e.target.closest('.popup-close')) {
+        closePopup();
+      }
+    });
+  }
+
+  function shouldUsePopup(link) {
+    var type = link.getAttribute('data-popup-type');
+    if (!type) return false;
+    if (type === 'info') return true;
+    return isDesktopPopup();
+  }
+
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('.js-book-action');
+    if (!link || !shouldUsePopup(link)) return;
+
+    e.preventDefault();
+    openBookActionPopup(link);
+  });
+
+  function initBookActions() {
+    document.querySelectorAll('.js-book-action[data-popup-type="info"]').forEach(function (link) {
+      link.removeAttribute('data-bs-toggle');
+      link.removeAttribute('data-bs-target');
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBookActions);
+  } else {
+    initBookActions();
+  }
+})();
+</script>
+
+<style>
+body.popup-open {
+  overflow: hidden;
+}
+
+#popup-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+}
+
+#popup-overlay[hidden] {
+  display: none !important;
+}
+
+.popup-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10vh 16px 16px;
+  animation: popupFadeIn 0.2s ease;
+}
+
+@keyframes popupFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.popup-container {
+  width: 520px;
+  max-width: 92vw;
+  max-height: 80vh;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  animation: popupSlideIn 0.25s ease;
+}
+
+.popup-container--media {
+  width: min(960px, 92vw);
+  max-height: 85vh;
+}
+
+@keyframes popupSlideIn {
+  from { opacity: 0; transform: scale(0.96) translateY(-10px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.popup-title {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1d1d1f;
+}
+
+.popup-close {
+  border: none;
+  background: rgba(0, 0, 0, 0.06);
+  color: #1d1d1f;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.popup-close:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.popup-body {
+  overflow: auto;
+  padding: 20px;
+}
+
+.popup-body--media {
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex: 1;
+  min-height: 60vh;
+}
+
+.popup-body--media iframe {
+  width: 100%;
+  flex: 1;
+  min-height: 60vh;
+  border: 0;
+}
+
+.popup-body--info {
+  text-align: center;
+  padding: 24px 20px;
+}
+
+.popup-footer {
+  display: flex;
+  justify-content: center;
+  padding: 12px 20px 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.popup-close-text {
+  width: auto;
+  height: auto;
+  padding: 8px 14px;
+  font-size: 0.875rem;
+  gap: 6px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .popup-container {
+    background: rgba(30, 30, 32, 0.95);
+  }
+
+  .popup-title {
+    color: #f5f5f7;
+  }
+
+  .popup-close {
+    background: rgba(255, 255, 255, 0.08);
+    color: #f5f5f7;
+  }
+}
+</style>

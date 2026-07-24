@@ -20,6 +20,3 @@ youtube: #https://www.youtube.com/watch?v=QRUbpgJeM0c
 
 # For adding excerpt add <!--more--> and break the line
 ---
-
-<hr>
-<hr>

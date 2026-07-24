@@ -4,14 +4,8 @@ permalink: "/iletisim"
 comments: false
 ---
 
-<h5>Adres:</h5>
-<div>Damla Yayınevi,
-Prof. Kazım İsmail Gürkan Cad. No:8
-Cağaloğlu - Fatih, 34110 İstanbul</div>
-<h5>Telefon:</h5>
-<div><a href="tel:+902125142828">+90 212 514 28 28</a></div>
-<h5>e-posta:</h5>
-<div><a href="mailto:iletisim@damlayayinevi.com.tr">iletisim@damlayayinevi.com.tr</a></div>
+{% include contact-info.html mode='page' %}
+
 <hr>
 
 <div class="mapouter">
