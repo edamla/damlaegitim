@@ -1,7 +1,7 @@
 ---
 layout: book
-title:  "Erdemlerimizi Keşfedelim 10 Kitap"
-grades: [2]
+title:  "Erdemlerimizi Keşfedelim (10 Kitap)"
+grades: [2, 3]
 genre: story
 concepts: [""]
 subjects: ["Değerler / Erdemler" ,  "Karakter Gelişimi"]

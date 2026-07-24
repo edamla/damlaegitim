@@ -1,8 +1,8 @@
 ---
 layout: book
-title:  "Atasözü Öyküleri 5 Kitap"
+title:  "Atasözü Öyküleri (5 Kitap)"
 
-grades: [3]
+grades: [3, 4]
 concepts: [""]
 subjects: ["Anadolu Kültürü" , "Birey ve Toplum" , "Dil Bilim" , "Milli Kültür"]
 
