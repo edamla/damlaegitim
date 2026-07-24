@@ -1,76 +1,59 @@
 <nav class="grade-nav" aria-label="Sınıf filtresi">
     <ul class="grade-nav-list">
-        <li class="grade-nav-item" data-grade="0">
-            <button type="button" class="grade-nav-label" onclick="selectGrade(this, '0')">Okul Öncesi</button>
+        {% assign grade_keys = "0,1,2,3,4,5,6,7,8" | split: "," %}
+        {% for grade in grade_keys %}
+            {% case grade %}
+                {% when "0" %}
+                    {% assign grade_label = "Okul Öncesi" %}
+                    {% assign icon_one = "fa-child" %}
+                    {% assign icon_two = "fa-puzzle-piece" %}
+                {% when "1" %}
+                    {% assign grade_label = "1. Sınıf" %}
+                    {% assign icon_one = "fa-font" %}
+                    {% assign icon_two = "fa-book-reader" %}
+                {% when "2" %}
+                    {% assign grade_label = "2. Sınıf" %}
+                    {% assign icon_one = "fa-book-open" %}
+                    {% assign icon_two = "fa-plus" %}
+                {% when "3" %}
+                    {% assign grade_label = "3. Sınıf" %}
+                    {% assign icon_one = "fa-lightbulb" %}
+                    {% assign icon_two = "fa-flask" %}
+                {% when "4" %}
+                    {% assign grade_label = "4. Sınıf" %}
+                    {% assign icon_one = "fa-globe-americas" %}
+                    {% assign icon_two = "fa-ruler-combined" %}
+                {% when "5" %}
+                    {% assign grade_label = "5. Sınıf" %}
+                    {% assign icon_one = "fa-flask" %}
+                    {% assign icon_two = "fa-music" %}
+                {% when "6" %}
+                    {% assign grade_label = "6. Sınıf" %}
+                    {% assign icon_one = "fa-brain" %}
+                    {% assign icon_two = "fa-calculator" %}
+                {% when "7" %}
+                    {% assign grade_label = "7. Sınıf" %}
+                    {% assign icon_one = "fa-atom" %}
+                    {% assign icon_two = "fa-book" %}
+                {% when "8" %}
+                    {% assign grade_label = "8. Sınıf" %}
+                    {% assign icon_one = "fa-percent" %}
+                    {% assign icon_two = "fa-graduation-cap" %}
+            {% endcase %}
+        <li class="grade-nav-item" data-grade="{{ grade }}">
+            <button type="button" class="grade-nav-label" onclick="selectGrade(this, '{{ grade }}')">
+                <span class="grade-nav-icons" aria-hidden="true">
+                    <i class="fas {{ icon_one }}"></i>
+                    <i class="fas {{ icon_two }}"></i>
+                </span>
+                <span class="grade-nav-text">{{ grade_label }}</span>
+            </button>
             <button type="button" class="grade-nav-caret" aria-label="Tür filtresi" aria-expanded="false" onclick="toggleGradeMenu(this, event)"><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
             <ul class="grade-submenu" role="menu">
                 <li><button type="button" role="menuitem" onclick="selectGenre(this, 'education')">Eğitim</button></li>
                 <li><button type="button" role="menuitem" onclick="selectGenre(this, 'story')">Hikaye</button></li>
             </ul>
         </li>
-        <li class="grade-nav-item" data-grade="1">
-            <button type="button" class="grade-nav-label" onclick="selectGrade(this, '1')">1. Sınıf</button>
-            <button type="button" class="grade-nav-caret" aria-label="Tür filtresi" aria-expanded="false" onclick="toggleGradeMenu(this, event)"><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
-            <ul class="grade-submenu" role="menu">
-                <li><button type="button" role="menuitem" onclick="selectGenre(this, 'education')">Eğitim</button></li>
-                <li><button type="button" role="menuitem" onclick="selectGenre(this, 'story')">Hikaye</button></li>
-            </ul>
-        </li>
-        <li class="grade-nav-item" data-grade="2">
-            <button type="button" class="grade-nav-label" onclick="selectGrade(this, '2')">2. Sınıf</button>
-            <button type="button" class="grade-nav-caret" aria-label="Tür filtresi" aria-expanded="false" onclick="toggleGradeMenu(this, event)"><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
-            <ul class="grade-submenu" role="menu">
-                <li><button type="button" role="menuitem" onclick="selectGenre(this, 'education')">Eğitim</button></li>
-                <li><button type="button" role="menuitem" onclick="selectGenre(this, 'story')">Hikaye</button></li>
-            </ul>
-        </li>
-        <li class="grade-nav-item" data-grade="3">
-            <button type="button" class="grade-nav-label" onclick="selectGrade(this, '3')">3. Sınıf</button>
-            <button type="button" class="grade-nav-caret" aria-label="Tür filtresi" aria-expanded="false" onclick="toggleGradeMenu(this, event)"><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
-            <ul class="grade-submenu" role="menu">
-                <li><button type="button" role="menuitem" onclick="selectGenre(this, 'education')">Eğitim</button></li>
-                <li><button type="button" role="menuitem" onclick="selectGenre(this, 'story')">Hikaye</button></li>
-            </ul>
-        </li>
-        <li class="grade-nav-item" data-grade="4">
-            <button type="button" class="grade-nav-label" onclick="selectGrade(this, '4')">4. Sınıf</button>
-            <button type="button" class="grade-nav-caret" aria-label="Tür filtresi" aria-expanded="false" onclick="toggleGradeMenu(this, event)"><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
-            <ul class="grade-submenu" role="menu">
-                <li><button type="button" role="menuitem" onclick="selectGenre(this, 'education')">Eğitim</button></li>
-                <li><button type="button" role="menuitem" onclick="selectGenre(this, 'story')">Hikaye</button></li>
-            </ul>
-        </li>
-        <li class="grade-nav-item" data-grade="5">
-            <button type="button" class="grade-nav-label" onclick="selectGrade(this, '5')">5. Sınıf</button>
-            <button type="button" class="grade-nav-caret" aria-label="Tür filtresi" aria-expanded="false" onclick="toggleGradeMenu(this, event)"><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
-            <ul class="grade-submenu" role="menu">
-                <li><button type="button" role="menuitem" onclick="selectGenre(this, 'education')">Eğitim</button></li>
-                <li><button type="button" role="menuitem" onclick="selectGenre(this, 'story')">Hikaye</button></li>
-            </ul>
-        </li>
-        <li class="grade-nav-item" data-grade="6">
-            <button type="button" class="grade-nav-label" onclick="selectGrade(this, '6')">6. Sınıf</button>
-            <button type="button" class="grade-nav-caret" aria-label="Tür filtresi" aria-expanded="false" onclick="toggleGradeMenu(this, event)"><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
-            <ul class="grade-submenu" role="menu">
-                <li><button type="button" role="menuitem" onclick="selectGenre(this, 'education')">Eğitim</button></li>
-                <li><button type="button" role="menuitem" onclick="selectGenre(this, 'story')">Hikaye</button></li>
-            </ul>
-        </li>
-        <li class="grade-nav-item" data-grade="7">
-            <button type="button" class="grade-nav-label" onclick="selectGrade(this, '7')">7. Sınıf</button>
-            <button type="button" class="grade-nav-caret" aria-label="Tür filtresi" aria-expanded="false" onclick="toggleGradeMenu(this, event)"><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
-            <ul class="grade-submenu" role="menu">
-                <li><button type="button" role="menuitem" onclick="selectGenre(this, 'education')">Eğitim</button></li>
-                <li><button type="button" role="menuitem" onclick="selectGenre(this, 'story')">Hikaye</button></li>
-            </ul>
-        </li>
-        <li class="grade-nav-item" data-grade="8">
-            <button type="button" class="grade-nav-label" onclick="selectGrade(this, '8')">8. Sınıf</button>
-            <button type="button" class="grade-nav-caret" aria-label="Tür filtresi" aria-expanded="false" onclick="toggleGradeMenu(this, event)"><i class="fas fa-chevron-down" aria-hidden="true"></i></button>
-            <ul class="grade-submenu" role="menu">
-                <li><button type="button" role="menuitem" onclick="selectGenre(this, 'education')">Eğitim</button></li>
-                <li><button type="button" role="menuitem" onclick="selectGenre(this, 'story')">Hikaye</button></li>
-            </ul>
-        </li>
+        {% endfor %}
     </ul>
 </nav>
