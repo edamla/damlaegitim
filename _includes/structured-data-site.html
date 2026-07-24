@@ -1,0 +1,54 @@
+{% comment %} Organization + WebSite schema for site-wide SEO {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": {{ site.name | jsonify }},
+  "url": {{ site.url | append: site.baseurl | jsonify }},
+  "logo": {{ site.url | append: site.logo | jsonify }},
+  "description": {{ site.description | jsonify }},
+  "email": {{ site.contact_email | jsonify }},
+  "telephone": {{ site.contact_phone | jsonify }},
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Alemdar Mh. Prof. Kazım İsmail Gürkan Cad. No:8",
+    "addressLocality": "Fatih",
+    "postalCode": "34110",
+    "addressRegion": "İstanbul",
+    "addressCountry": "TR"
+  },
+  "sameAs": [
+    {{ site.facebook | jsonify }},
+    {{ site.instagram | jsonify }},
+    {{ site.youtube | jsonify }},
+    {{ site.x | jsonify }},
+    {{ site.website | jsonify }}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": {{ site.name | jsonify }},
+  "url": {{ site.url | append: site.baseurl | jsonify }},
+  "description": {{ site.description | jsonify }},
+  "inLanguage": "tr-TR",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Damla Okul",
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ site.url | append: site.logo | jsonify }}
+    }
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "{{ site.url }}{{ site.baseurl }}/urunler?q={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>

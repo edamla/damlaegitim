@@ -1,0 +1,65 @@
+{% comment %}
+  İnce gövdeli kitap sayfaları için front matter tabanlı SEO metni.
+  book değişkeni: page veya assign edilmiş kitap nesnesi
+{% endcomment %}
+{% assign b = book | default: page %}
+{% if b.genre == 'story' %}
+  {% assign genre_label = 'hikaye' %}
+  {% assign genre_label_cap = 'Hikaye' %}
+{% elsif b.genre == 'education' %}
+  {% assign genre_label = 'eğitim' %}
+  {% assign genre_label_cap = 'Eğitim' %}
+{% else %}
+  {% assign genre_label = b.genre %}
+  {% assign genre_label_cap = b.genre %}
+{% endif %}
+{% assign grade_list = b.grades | join: ", " %}
+
+<div class="book-minimal-content prose prose--display">
+  <p>
+    <strong>{{ b.title }}</strong>, Damla Okul yayınları arasında
+    {% if grade_list != "" %}{{ grade_list }}. sınıf öğrencileri için hazırlanmış {% endif %}
+    bir {{ genre_label }} kitabıdır. Damla Yayınevi’nin okul yayınları kapsamında sunulan bu ürün,
+    Yeni Maarif Modeli ve güncel müfredat hedefleriyle uyumlu içerik sunmayı amaçlar.
+  </p>
+
+  {% if b.categories and b.categories.size > 0 %}
+  <p>
+    <strong>Kategori:</strong> {{ b.categories | join: ", " }}.
+    {% if b.page %}<strong>Sayfa:</strong> {{ b.page }}.{% endif %}
+    {% if b.size %}<strong>Boyut:</strong> {{ b.size }}.{% endif %}
+    {% if b.cover %}<strong>Kapak:</strong> {{ b.cover }}.{% endif %}
+  </p>
+  {% endif %}
+
+  {% if b.subjects and b.subjects.size > 0 %}
+  <p>
+    <strong>Temalar ve konu başlıkları:</strong>
+    {% for subject in b.subjects %}{{ subject }}{% unless forloop.last %}, {% endunless %}{% endfor %}.
+    Bu {{ genre_label_cap | downcase }} kitabı, öğrencilerin okuma kültürünü güçlendirmeyi ve ders kazanımlarını desteklemeyi hedefler.
+  </p>
+  {% elsif b.tags and b.tags.size > 0 %}
+  <p>
+    <strong>Etiketler:</strong> {{ b.tags | join: ", " }}.
+    Damla Okul kataloğunda {{ genre_label }} türündeki bu ürün, öğretmen ve velilerin ihtiyaçlarına yönelik hazırlanmıştır.
+  </p>
+  {% endif %}
+
+  {% if b.concepts and b.concepts.size > 0 %}
+  <p>
+    <strong>Beceri ve kavram alanları:</strong>
+    {% for concept_key in b.concepts %}
+      {% assign siteconcept = site.concepts | where: "key", concept_key | first %}
+      {% if siteconcept %}{{ siteconcept.title }}{% else %}{{ concept_key }}{% endif %}{% unless forloop.last %}, {% endunless %}
+    {% endfor %}.
+  </p>
+  {% endif %}
+
+  <p>
+  {% if b.previewpage %}
+    Sayfadaki ön okuma bağlantısıyla kitabın örnek sayfalarını inceleyebilir; detaylı bilgi ve tedarik için Damla Okul ile iletişime geçebilirsiniz.
+  {% else %}
+    Ürün hakkında detaylı bilgi ve tedarik seçenekleri için Damla Okul ile iletişime geçebilir veya katalog sayfamızdaki diğer {{ genre_label }} yayınlarımıza göz atabilirsiniz.
+  {% endif %}
+  </p>
+</div>

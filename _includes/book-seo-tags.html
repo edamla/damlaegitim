@@ -1,0 +1,31 @@
+{% comment %}
+  Kitap sayfaları için özel SEO meta etiketleri (description front matter olmadan).
+  Önkoşul: book_seo_description değişkeni atanmış olmalı.
+{% endcomment %}
+{% assign book_canonical = site.url | append: site.baseurl | append: page.url %}
+{% if page.image %}
+  {% if page.image contains "://" %}
+    {% assign book_og_image = page.image %}
+  {% else %}
+    {% assign book_og_image = site.url | append: site.baseurl | append: '/' | append: page.image %}
+  {% endif %}
+{% else %}
+  {% assign book_og_image = site.url | append: site.logo %}
+{% endif %}
+<title>{{ page.title }} | {{ site.name }}</title>
+<meta name="generator" content="Jekyll SEO (Damla Okul)" />
+<meta property="og:title" content="{{ page.title | xml_escape }}" />
+<meta property="og:locale" content="{{ site.locale | default: 'tr_TR' }}" />
+<meta name="description" content="{{ book_seo_description | xml_escape }}" />
+<meta property="og:description" content="{{ book_seo_description | xml_escape }}" />
+<link rel="canonical" href="{{ book_canonical }}" />
+<meta property="og:url" content="{{ book_canonical }}" />
+<meta property="og:site_name" content="{{ site.name | xml_escape }}" />
+<meta property="og:image" content="{{ book_og_image }}" />
+<meta property="og:type" content="product" />
+<meta name="twitter:card" content="{{ site.twitter.card | default: 'summary_large_image' }}" />
+<meta property="twitter:image" content="{{ book_og_image }}" />
+<meta property="twitter:title" content="{{ page.title | xml_escape }}" />
+{% if site.twitter.username %}
+<meta name="twitter:site" content="@{{ site.twitter.username | remove: '@' }}" />
+{% endif %}

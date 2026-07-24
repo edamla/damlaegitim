@@ -77,7 +77,7 @@ buyout.css          →  E-ticaret barı (yalnızca kitap/katalog detay)
 --font-serif: var(--font-sans);
 --nav-height: 4rem;
 --book-card-media-height: 220px;
---book-card-info-min-height: 4.5rem;
+--book-card-info-height: 3rem;
 ```
 
 ### Tipografi
@@ -94,14 +94,14 @@ HTML partial’larında (`menu-header`, `book-grade-nav`, `book-home-groups`) de
 
 ### Kitap kartı (`.book-card`)
 
-Kartlar [`book-home-groups.html`](_includes/book-home-groups.html) içinde `col-lg-3` grid’de render edilir. Üstte sabit resim kutusu, altta sabit isim kutusu ile grid düzeni korunur.
+Kartlar [`book-home-groups.html`](_includes/book-home-groups.html) içinde grid’de render edilir. Tüm kartlar sabit genişlik ve yüksekliğe sahiptir.
 
 | Eleman | Class | Davranış |
 |--------|-------|----------|
+| Kart | `.book-card` | Sabit toplam yükseklik (görsel + başlık alanı + padding) |
 | Resim kutusu | `.book-card__media` | Sabit yükseklik (`--book-card-media-height`), `object-fit: contain` |
-| İsim kutusu | `.book-card__info` | Sabit min-yükseklik (`--book-card-info-min-height`) |
+| İsim kutusu | `.book-card__info` | Sabit yükseklik (`--book-card-info-height`), en fazla 2 satır başlık |
 | Başlık | `.book-card__title` | En fazla 2 satır (`line-clamp`) |
-| Yazar | `.book-card__author` | En fazla 1 satır (`line-clamp`) |
 
 ---
 
@@ -194,6 +194,7 @@ Tüm layout’lar `layout: default` zinciri üzerinden `default.html`’i extend
 | `book-card.html` | Tek kitap kartı partial (sabit resim + isim kutusu) |
 | `book-grade-filter.html` | Eski sınıf checkbox dropdown’u (artık kullanılmıyor) |
 | `search-lunr.html` | Spotlight arama (Lunr.js indeks + modal UI + navbar tetikleyici) |
+| `popup.html` | Kitap detay popup’ları (Bilgi, ön okuma iframe, YouTube; koyu tema desteği) |
 | `tracking-header.html` / `tracking-footer.html` | Google Analytics |
 
 ---
@@ -203,7 +204,7 @@ Tüm layout’lar `layout: default` zinciri üzerinden `default.html`’i extend
 | Dosya | Bağımlılık | Görev |
 |-------|------------|-------|
 | `bootstrap.bundle.min.js` | — | Collapse, dropdown, modal |
-| `nav.js` | — | Scroll’da navbar gizle/göster |
+| `nav.js` | — | Sticky navbar yüksekliği (`--nav-height`), scroll gölgesi |
 | `book-filter.js` | — | Sınıf/tür filtreleme + hash URL senkronizasyonu |
 | `lunr.js` | — | Spotlight kitap araması (client-side indeks) |
 | `tiny-slider.js` | — | Anasayfa slider |
@@ -214,6 +215,76 @@ jQuery kullanılmaz. Eski `theme.js` dosyası repoda kalabilir ancak `default.ht
 `instagram-carousel.html` kendi inline `<script>` bloğunu taşır; harici JS dosyası veya tiny-slider bağımlılığı yoktur.
 
 `search-lunr.html` navbar Spotlight aramasını sağlar; jQuery kullanılmaz. `mode` parametresiyle navbar tetikleyicisi (`desktop` / `mobile`) veya script bloğu (`mode` olmadan) ayrı include edilir.
+
+- **Masaüstü (`mode='desktop'`)** — Navbar collapse içinde tam arama kutusu (`Ctrl+K` kısayolu)
+- **Mobil (`mode='mobile'`)** — Logo ile hamburger arasında minimal arama çubuğu (`Kitap ara...`); collapse dışında, her zaman görünür
+
+---
+
+## Navbar (`#MagicMenu`)
+
+Ana navigasyon `default.html` içinde `id="MagicMenu"` ile tanımlıdır; scroll sırasında **her zaman üstte sabit** kalır (eski gizle/göster davranışı kaldırıldı).
+
+### Yapı
+
+```
+.container
+├── .site-nav__bar          ← mobil: logo + arama + hamburger (tek satır)
+│   ├── .navbar-brand
+│   ├── .site-nav__search-bar (d-md-none)
+│   └── .navbar-toggler
+└── .navbar-collapse        ← menü linkleri (mobilde alt satır, tam genişlik)
+```
+
+Masaüstünde (`≥992px`) `.site-nav__bar` için `display: contents` kullanılır; Bootstrap’ın yatay navbar düzeni korunur.
+
+### `nav.js`
+
+- `--nav-height` CSS değişkenini navbar yüksekliğine göre günceller (`ResizeObserver` ile mobil menü açılınca da)
+- Scroll’da `site-nav--scrolled` sınıfı ile hafif gölge ekler
+- Navbar `position: fixed; top: 0; z-index: 1030`
+
+---
+
+## Kitap Detay Sayfası (`book.html`)
+
+Ürün detay layout’u `book-page` sınıfı ile işaretlenir.
+
+### Üst alan etiketleri
+
+| Alan (front matter) | Görünüm | Stil |
+|---------------------|---------|------|
+| `subjects` | `#etiket` | Yeşil metin (`--color-primary`), silik gri pill arka plan |
+| `concepts` | `@etiket` | Turuncu metin (`#c88400`), silik gri pill arka plan |
+
+`concepts` iki biçimi destekler:
+
+1. **Anahtar** — `_config.yml` → `concepts` listesindeki `key` (ör. `sozel-dilsel` → `@sözel-dilsel`)
+2. **Serbest metin** — Anahtar eşleşmezse yaml’daki metin doğrudan gösterilir (ör. `@dil bilim gelişimi`)
+
+### Metadata listesi
+
+Sol sütundaki özellik listesi (yayın no, sayfa, boyut vb.) `.book-meta` flex düzeniyle ikon ve metin hizasını korur.
+
+### İçerik alanı (`.prose--display`)
+
+Markdown gövdesi `.prose--display` ile render edilir:
+
+- `**kalın**` metin: `font-synthesis: weight` ile aynı font ailesinde sentetik bold
+- Liste ve başlık aralıkları sıkılaştırılmıştır
+- Mobilde (`.book-page`) başlık ortalanır; masaüstünde sola hizalı kalır
+
+### Aksiyon butonları ve popup
+
+Ön Okuma, Tanıtım, Bilgi, İncele, HDS butonları `.js-book-action` ile [`popup.html`](_includes/popup.html) üzerinden açılır:
+
+| `data-popup-type` | Davranış |
+|-------------------|----------|
+| `info` | Tedarik bilgisi modal (mobil + masaüstü) |
+| `iframe` | Tam ekran iframe (ön okuma, incele, HDS) |
+| `youtube` | YouTube embed |
+
+`info` popup’u `prefers-color-scheme: dark` için metin renkleri ayarlanmıştır.
 
 ---
 
@@ -234,8 +305,7 @@ Navbar üzerinden kitap araması yapılır. macOS Spotlight benzeri tam ekran mo
 
 ### Kullanım
 
-- Navbar’daki arama kutusuna tıklama
-- Mobil arama ikonu
+- Navbar’daki arama kutusuna tıklama (masaüstü tam kutu; mobil logo–hamburger arası minimal çubuk)
 - `Ctrl+K` / `⌘K` klavye kısayolu
 - Enter → ilk sonuca git; ESC → kapat
 
@@ -338,7 +408,8 @@ layout: book
 title: "Deyim Öyküleri 5 Kitap"
 grades: [3]
 genre: story          # education | story
-subjects: ["Dil Bilim", "Milli Kültür"]
+subjects: ["Değerler Eğitimi", "Macera", "Gizem"]   # yeşil # etiketler
+concepts: ["sozel-dilsel", "icsel"]                 # turuncu @ etiketler (anahtar veya serbest metin)
 image: assets/images/ean/9786053832874.jpg
 categories: ["Çocuk", "Hikaye"]
 previewpage: true
@@ -352,7 +423,7 @@ cover: "Karton Kapak"
 ---
 ```
 
-Markdown gövdesi ürün açıklaması olarak `book.html` içindeki `.prose` alanında render edilir.
+Markdown gövdesi ürün açıklaması olarak `book.html` içindeki `.prose--display` alanında render edilir. `**TEMALAR:**` gibi kalın başlıklar ve madde listeleri bu alanda stillenir.
 
 ---
 
@@ -389,10 +460,47 @@ Okul öncesi ürünler `_books/` içinde henüz tam açılmamış olsa da URL ya
 
 - `jekyll-feed` — RSS
 - `jekyll-sitemap` — sitemap.xml
-- `jekyll-seo-tag` — `{% seo %}` meta etiketleri
+- `jekyll-seo-tag` — `{% seo %}` meta etiketleri (kitap sayfaları hariç; özel `book-seo-tags.html`)
 - `jekyll-paginate` — sayfalama
 - `jekyll-archives` — arşiv sayfaları
 - `jekyll-figure` / `jekyll-gist` — içerik zenginleştirme
+
+---
+
+## SEO ve AI Crawler Altyapısı
+
+GitHub Pages uyumlu (özel Ruby plugin yok):
+
+| Dosya | Görev |
+|-------|-------|
+| `robots.txt` | Tüm crawler + AI botlara `Allow`; sitemap ve `llms.txt` referansı |
+| `_pages/llms.txt` | Build-time AI içerik haritası (kitaplar, sayfalar, kataloglar) |
+| `_includes/book-seo-description.html` | Kitap meta description metni üretimi |
+| `_includes/book-seo-tags.html` | Kitap sayfaları için özel `<meta>` / Open Graph / Twitter |
+| `_includes/book-minimal-content.html` | İnce gövdeli kitaplara otomatik SEO paragrafı |
+| `_includes/structured-data-book.html` | `Product` + `Book` + `BreadcrumbList` JSON-LD |
+| `_includes/structured-data-site.html` | `Organization` + `WebSite` JSON-LD |
+
+### Meta description otomasyonu
+
+Kitap sayfalarında (`/urunler/*`) `description:` front matter yoksa:
+
+1. Markdown excerpt / gövdeden (max 155 karakter)
+2. Yoksa şablon: `{{ title }} — {{ grades }}. sınıf {{ genre }} kitabı. Damla Okul.`
+
+### Yapılandırma (`_config.yml`)
+
+- `locale: tr_TR`, `lang: tr`, `twitter.username`
+- Kitap koleksiyonu varsayılanları: `lang: tr`, `type: product`, sitemap önceliği
+
+### Build sonrası doğrulama
+
+```bash
+bundle exec jekyll build
+# robots.txt, llms.txt, örnek kitap sayfası meta + JSON-LD kontrol
+curl https://damlaokul.com/robots.txt
+curl https://damlaokul.com/llms.txt
+```
 
 ---
 
@@ -426,9 +534,10 @@ GitHub Pages, push sonrası kaynak branch’ten Jekyll build alır. **CI/CD veya
 
 1. `_books/yeni-urun.md` oluştur
 2. Front matter doldur (`title`, `grades`, `genre`, `image`, `ean`…)
-3. Kapak görselini `assets/images/ean/` altına koy
-4. `bundle exec jekyll serve` ile kontrol et
-5. `git push`
+3. İsteğe bağlı `description:` — yoksa build sırasında otomatik üretilir
+4. Kapak görselini `assets/images/ean/` altına koy
+5. `bundle exec jekyll serve` ile kontrol et
+6. `git push`
 
 ---
 

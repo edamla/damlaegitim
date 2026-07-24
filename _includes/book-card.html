@@ -5,11 +5,6 @@
         </div>
         <div class="book-card__info">
             <h3 class="book-card__title">{{ book.title }}</h3>
-            {% for bookauthor in book.authors %}
-                {% assign siteauthor = site.authors | where: "key", bookauthor | first %}
-                <span class="book-card__author">{{ siteauthor.title }}</span>
-                {% if forloop.last == false %} - {% endif %}
-            {% endfor %}
         </div>
     </a>
 </article>

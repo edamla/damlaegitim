@@ -1,5 +1,6 @@
 ---
 title: "Hakkımızda"
+description: "Damla Okul ve Damla Yayınevi hakkında: okul yayınları, eğitim materyalleri ve Yeni Maarif Modeli uyumlu içerik yaklaşımımız."
 layout: page
 permalink: "/hakkimizda"
 image: "/assets/images/logo.png"

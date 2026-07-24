@@ -1,9 +1,14 @@
 # Site
 name: 'Damla Okul'
 language: "tr"
+lang: tr
+locale: tr_TR
 description: 'Damla Okul — Damla Yayınevi okul yayınları ve eğitim materyalleri'
 url: 'https://damlaokul.com'
-logo: 'assets/images/logo.png'
+logo: '/assets/images/logo.png'
+twitter:
+  username: damlayayinevi
+  card: summary_large_image
 favicon: 'assets/images/favicon/favicon.ico'
 baseurl: ''
 
@@ -90,6 +95,12 @@ defaults:
       path: "_books"
     values:
       layout: book
+      type: product
+      lang: tr
+      image: assets/images/logo.png
+      sitemap:
+        priority: 0.8
+        changefreq: monthly
 
   # all catalogs
   - scope:

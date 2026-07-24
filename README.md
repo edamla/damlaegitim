@@ -7,14 +7,16 @@ Yeni Maarif Modeline uygun eğitim setleri, hikaye kitapları ve kataloglar tek 
 ## Özellikler
 
 - **Ürün kataloğu** — Sınıf ve tür (Eğitim / Hikaye) bazlı filtreleme, paylaşılabilir hash URL’leri
-- **Kitap detay sayfaları** — Kapak, metadata, önizleme linki, tedarik bilgisi
+- **Kitap detay sayfaları** — Kapak, metadata, `#subjects` / `@concepts` etiketleri, önizleme linki, popup ile tedarik bilgisi
 - **Kataloglar** — Html / PDF katalog görüntüleme
 - **Anasayfa slider** — Kampanya ve duyuru görselleri
 - **Instagram carousel** — `@okul.damla` hesabının güncel gönderileri (Behold JSON feed)
-- **Spotlight arama** — Lunr.js ile kitap araması (`Ctrl+K`, navbar tetikleyici)
+- **Spotlight arama** — Lunr.js ile kitap araması (`Ctrl+K`; mobilde header’da minimal arama çubuğu)
+- **Sticky navbar** — Scroll’da kaybolmayan sabit üst menü (mobil + masaüstü)
 - **3 sütunlu footer** — Ürünler, önemli bilgiler, iletişim ve sosyal medya
-- **Mobil uyumlu** — Bootstrap 5 responsive grid
+- **Mobil uyumlu** — Bootstrap 5 responsive grid; hamburger menü alt satırda açılır
 - **Statik & hızlı** — Jekyll ile önceden derlenmiş HTML, GitHub Pages üzerinde yayın
+- **SEO & AI keşfi** — `robots.txt`, `llms.txt`, otomatik kitap meta description, Product JSON-LD
 
 ## Teknoloji
 
@@ -84,6 +86,17 @@ index.html       Anasayfa
 
 Detaylı mimari için [project.md](project.md) dosyasına bakın.
 
+## SEO ve AI Crawler
+
+| Dosya | Açıklama |
+|-------|----------|
+| `robots.txt` | Arama motorları ve AI botlara tam erişim |
+| `/llms.txt` | AI crawler'lar için site haritası |
+| `_includes/book-seo-tags.html` | Kitap sayfaları meta / Open Graph |
+| `_includes/structured-data-*.html` | schema.org JSON-LD |
+
+Kitap `description:` alanı opsiyoneldir; boşsa başlık, sınıf ve türden otomatik üretilir. Doğrulama: `bundle exec jekyll build` sonrası `_site/robots.txt`, `_site/llms.txt` ve örnek kitap HTML'i kontrol edin.
+
 ## Yeni Ürün Ekleme
 
 1. `_books/` altında yeni bir `.md` dosyası oluşturun
@@ -95,11 +108,15 @@ layout: book
 title: "Ürün Adı"
 grades: [1, 2]
 genre: education
+subjects: ["Değerler Eğitimi", "Macera"]     # yeşil # etiketler (detay sayfası üstü)
+concepts: ["sozel-dilsel", "icsel"]           # turuncu @ etiketler (anahtar veya serbest metin)
 image: assets/images/ean/9786053832874.jpg
 ean: 9786053832874
 ---
 Ürün açıklaması buraya...
 ```
+
+`subjects` TEMALAR için, `concepts` çoklu zekâ / kavram etiketleri içindir. `concepts` alanına `_config.yml` anahtarı (`sozel-dilsel`) veya doğrudan metin (`Dil Bilim Gelişimi`) yazılabilir.
 
 3. Kapak görselini `assets/images/ean/` klasörüne ekleyin
 4. `bundle exec jekyll serve` ile önizleyin
@@ -143,9 +160,23 @@ Başka bir sayfaya eklemek için:
 
 Navbar’daki arama kutusu veya `Ctrl+K` / `⌘K` ile kitap araması açılır. Sonuçlar kapak görseli, başlık, yazar ve sınıf/tür bilgisiyle listelenir.
 
+- **Masaüstü** — Navbar’da tam arama kutusu + `Ctrl+K`
+- **Mobil** — Logo ile hamburger menü arasında minimal `Kitap ara...` çubuğu (collapse dışında, her zaman görünür)
+
 - İndeks: `site.books` (başlık, yazar, kategori, sınıf, tür, etiket, içerik)
 - Dosya: [`_includes/search-lunr.html`](_includes/search-lunr.html)
 - Kütüphane: [`assets/js/lunr.js`](assets/js/lunr.js)
+
+## Navbar
+
+Üst menü (`#MagicMenu`) scroll sırasında sabit kalır; aşağı kaydırınca gizlenmez.
+
+- Yapı: mobilde logo + arama + hamburger üst satır; menü linkleri alt satırda tam genişlik
+- Script: [`assets/js/nav.js`](assets/js/nav.js) (`--nav-height` senkronizasyonu, scroll gölgesi)
+
+## Kitap Detay Popup’ları
+
+Ön Okuma, Tanıtım, Bilgi, İncele ve HDS butonları [`_includes/popup.html`](_includes/popup.html) ile açılır. Bilgi popup’u iPhone koyu temada okunabilir metin renklerine sahiptir.
 
 ## Footer
 

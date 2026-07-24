@@ -1,5 +1,6 @@
 ---
 title: "İletişim"
+description: "Damla Okul ve Damla Yayınevi iletişim bilgileri, adres ve harita. Okul yayınları hakkında bilgi almak için bize ulaşın."
 permalink: "/iletisim"
 comments: false
 ---
