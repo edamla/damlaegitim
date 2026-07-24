@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "İstiklal Marşı Yazdıran Kahramanlar 10 Kitap"
+title:  "İstiklal Marşı Yazdıran Kahramanlar (10 Kitap)"
 grades: [3, 4]
 genre: story
 concepts: [""]
