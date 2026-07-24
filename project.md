@@ -29,7 +29,7 @@ Site, **Damla Okul** markası altında Damla Yayınevi’nin okul yayınlarını
 ┌─────────────────────────────────────────────────────────────┐
 │  Şablonlar                                                  │
 │  _layouts/  →  default.html  →  book.html, page.html, …     │
-│  _includes/  →  book-card, slider, menu, filtreler         │
+│  _includes/  →  book-card, slider, instagram-carousel, menu │
 └──────────────────────────┬──────────────────────────────────┘
                            │
                            ▼
@@ -186,6 +186,7 @@ Tüm layout’lar `layout: default` zinciri üzerinden `default.html`’i extend
 | `menu-header.html` | Ana navigasyon linkleri |
 | `menu-socialmedia.html` | Sosyal medya ikonları |
 | `slider.html` | Anasayfa Tiny Slider |
+| `instagram-carousel.html` | Anasayfa Instagram carousel (`okul.damla`, Behold JSON feed) |
 | `book-grade-nav.html` | Sınıf sekmesi + tür alt menüsü |
 | `book-home-groups.html` | Anasayfa kitap listesi (Eğitim / Hikaye) |
 | `book-card.html` | Tek kitap kartı partial (sabit resim + isim kutusu) |
@@ -205,6 +206,42 @@ Tüm layout’lar `layout: default` zinciri üzerinden `default.html`’i extend
 | `lazyload.js` | — | Görsel lazy loading (`lazyimages: enabled`) |
 
 jQuery kullanılmaz. Eski `theme.js` dosyası repoda kalabilir ancak `default.html`’de yüklenmez.
+
+`instagram-carousel.html` kendi inline `<script>` bloğunu taşır; harici JS dosyası veya tiny-slider bağımlılığı yoktur.
+
+---
+
+## Instagram Carousel
+
+Anasayfada `@okul.damla` hesabının güncel gönderilerini yatay carousel olarak gösterir. Modül tek dosyada inline HTML, CSS ve vanilla JS içerir.
+
+### Yapılandırma (`_config.yml`)
+
+```yaml
+instagram_carousel:
+  username: okul.damla
+  profile_url: https://instagram.com/okul.damla
+  feed_url: ''   # Behold JSON feed URL
+  limit: 12
+```
+
+`feed_url` boşsa modül build’i kırmaz; kullanıcıya yapılandırma mesajı ve Instagram profil linki gösterilir.
+
+### Veri kaynağı
+
+Instagram, statik siteden doğrudan feed çekmeye izin vermez. [Behold.so](https://behold.so) JSON feed kullanılır:
+
+1. Behold hesabında `okul.damla` kaynak olarak bağlanır
+2. Çıktı tipi **JSON** olan feed oluşturulur
+3. `https://feeds.behold.so/XXXX` URL’si `feed_url` alanına yazılır
+
+### Kullanım
+
+```liquid
+{% include instagram-carousel.html %}
+```
+
+Şu an [`index.html`](index.html) içinde slider ile kitap listesi arasında include edilir. Stiller site token’larıyla uyumludur (`--color-primary`, `--font-display`, `--radius`).
 
 ---
 
@@ -308,6 +345,7 @@ GitHub Pages, push sonrası kaynak branch’ten Jekyll build alır. **CI/CD veya
 |--------|----------|
 | Font Awesome 5 CDN | İkonlar |
 | `cdn.e-damla.com.tr` | Önizleme sayfaları, örnek sayfalar |
+| `feeds.behold.so` | Instagram carousel JSON feed |
 | Google Analytics | `G-KFMVQ3WNN3` (production) |
 
 ---

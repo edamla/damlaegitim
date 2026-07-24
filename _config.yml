@@ -19,6 +19,12 @@ instagram: 'https://instagram.com/damlayayinevi'
 youtube: 'https://www.youtube.com/@DamlaYay%C4%B1nGrubu'
 website: 'https://damlayayinevi.com'
 
+instagram_carousel:
+  username: okul.damla
+  profile_url: https://instagram.com/okul.damla
+  feed_url: 'https://feeds.behold.so/k4ylFSaGtUBY15ZsyXAt'
+  limit: 12
+
 pagepreview:
   enabled: false
   prefix: 'https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/'
