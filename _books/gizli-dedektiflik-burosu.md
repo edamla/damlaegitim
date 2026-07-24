@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Gizli Dedektiflik Bürosu 10 Kitap"
+title:  "Gizli Dedektiflik Bürosu (10 Kitap)"
 grades: [4]
 genre: story
 concepts: [""]

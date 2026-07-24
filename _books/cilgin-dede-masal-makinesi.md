@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Çılgın Dedemin Masal Makinesi 10 Kitap"
+title:  "Çılgın Dedemin Masal Makinesi (10 Kitap)"
 
 grades: [2, 3]
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
