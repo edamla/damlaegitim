@@ -10,6 +10,7 @@ Yeni Maarif Modeline uygun eğitim setleri, hikaye kitapları ve kataloglar tek 
 - **Kitap detay sayfaları** — Kapak, metadata, önizleme linki, tedarik bilgisi
 - **Kataloglar** — Html / PDF katalog görüntüleme
 - **Anasayfa slider** — Kampanya ve duyuru görselleri
+- **Instagram carousel** — `@okul.damla` hesabının güncel gönderileri (Behold JSON feed)
 - **Mobil uyumlu** — Bootstrap 5 responsive grid
 - **Statik & hızlı** — Jekyll ile önceden derlenmiş HTML, GitHub Pages üzerinde yayın
 
@@ -112,11 +113,35 @@ ean: 9786053832874
 
 Bootstrap’ın kendi dosyası (`bootstrap.min.css`) düzenlenmez.
 
+## Instagram Carousel
+
+Anasayfada `@okul.damla` gönderilerini gösteren carousel modülü [`_includes/instagram-carousel.html`](_includes/instagram-carousel.html) dosyasındadır. Tek dosyada inline HTML, CSS ve JS içerir.
+
+### Kurulum
+
+1. [behold.so](https://behold.so) üzerinde `okul.damla` hesabını bağlayın
+2. Çıktı tipi **JSON** olan bir feed oluşturun
+3. `_config.yml` içindeki `instagram_carousel.feed_url` alanına feed URL’sini yazın:
+
+```yaml
+instagram_carousel:
+  username: okul.damla
+  profile_url: https://instagram.com/okul.damla
+  feed_url: 'https://feeds.behold.so/XXXX'
+  limit: 12
+```
+
+Başka bir sayfaya eklemek için:
+
+```liquid
+{% include instagram-carousel.html %}
+```
+
 ## Sayfalar
 
 | URL | Açıklama |
 |-----|----------|
-| `/` | Anasayfa — slider + sınıf/tür filtreli ürün listesi |
+| `/` | Anasayfa — slider + Instagram carousel + sınıf/tür filtreli ürün listesi |
 | `/urunler` | Tüm ürünler, dropdown filtreler |
 | `/urunler/:title` | Ürün detay |
 | `/kataloglar` | Katalog listesi |
@@ -129,6 +154,7 @@ Bootstrap’ın kendi dosyası (`bootstrap.min.css`) düzenlenmez.
 © Damla Yayınevi — [damlaokul.com](https://damlaokul.com)
 
 - [Facebook](https://www.facebook.com/damlayayinevi)
-- [Instagram](https://instagram.com/damlayayinevi)
+- [Instagram (Damla Yayınevi)](https://instagram.com/damlayayinevi)
+- [Instagram (Damla Okul)](https://instagram.com/okul.damla)
 - [YouTube](https://www.youtube.com/c/damlayayinevi)
 - [Twitter](https://twitter.com/damlayayinevi)
