@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Alican'ın Günlüğü 10 Kitap"
+title:  "Alican'ın Günlüğü (10 Kitap)"
 
 grades: [2, 3]
 concepts: ["gorsel-uzamsal","sosyal","doga"]

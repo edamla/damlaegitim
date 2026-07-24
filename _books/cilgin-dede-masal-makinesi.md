@@ -1,8 +1,8 @@
 ---
 layout: book
-title:  "Çılgın Dedemin Masal Makinesi 10 Kitap"
+title:  "Çılgın Dedemin Masal Makinesi (10 Kitap)"
 
-grades: [3, 4]
+grades: [2, 3]
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["Hayal Gücü", "Yaratıcılık", "Masal Kültürü", "Sözel-Dilsel", "Düşler Alemi"]
 
