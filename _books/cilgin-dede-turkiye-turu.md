@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Çılgın Dedemin Türkiye Turu 10 Kitap"
+title:  "Çılgın Dedemin Türkiye Turu (10 Kitap)"
 grades: [3, 4]
 genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
