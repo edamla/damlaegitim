@@ -25,7 +25,7 @@ publish-number: 1892
 cover: "Karton Kapak"
 paper: "1. Hamur"
 
-youtube:
+youtube: https://www.youtube.com/watch?v=xAUgoaDYLQc
 
 # For adding excerpt add <!--more--> and break the line
 ---
