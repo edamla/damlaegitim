@@ -7,10 +7,13 @@ permalink: /llms.txt
 
 ## Ana Sayfalar
 - [Anasayfa]({{ site.url }}{{ site.baseurl }}/): {{ site.description }}
-- [Ürünler]({{ site.url }}{{ site.baseurl }}/urunler): Sınıf ve tür bazlı kitap kataloğu (Eğitim / Hikaye)
-- [Kataloglar]({{ site.url }}{{ site.baseurl }}/kataloglar): Damla Okul yayın katalogları
-- [Hakkımızda]({{ site.url }}{{ site.baseurl }}/hakkimizda): Damla Okul ve Damla Yayınevi hakkında bilgi
-- [İletişim]({{ site.url }}{{ site.baseurl }}/iletisim): İletişim bilgileri ve adres
+- [Hakkımızda]({{ site.url }}{{ site.baseurl }}/hakkimizda): Damla Okul ve Damla Yayınevi hakkında: okul yayınları, eğitim materyalleri ve Yeni Maarif Modeli uyumlu içerik yaklaşımımız.
+- [Ürünler]({{ site.url }}{{ site.baseurl }}/urunler): Damla Okul ürün kataloğu: sınıf ve tür bazlı eğitim setleri, hikaye kitapları ve okul yayınları. Yeni Maarif Modeli uyumlu materyaller.
+- [Kataloglar]({{ site.url }}{{ site.baseurl }}/kataloglar): Damla Okul ve Damla Yayınevi okul yayınları katalogları. Eğitim setleri ve hikaye kitapları PDF/HTML katalogları.
+- [Kitapla Büyüyen Sınıflar]({{ site.url }}{{ site.baseurl }}/kitapla-buyuyen-siniflar): Damla Yayın Grubu sosyal sorumluluk projesi: öğretmenlerin emeğiyle şekillenen sınıflara kitap ulaştırıyor, öğrencilerin okurla kurduğu bağı güçlendiriyoruz.
+- [Ölçme ve Değerlendirme]({{ site.url }}{{ site.baseurl }}/olcme-degerlendirme): Damla Okul Eğitim Müfredatı ve 4 Boyutlu Ölçme-Değerlendirme Sistemi: PISA destekli yeni nesil sorular, Akıllı Optik Sistemi ve kazanım analizi.
+- [İletişim]({{ site.url }}{{ site.baseurl }}/iletisim): Damla Okul ve Damla Yayınevi iletişim bilgileri, adres ve harita. Okul yayınları hakkında bilgi almak için bize ulaşın.
+- [Gizlilik Politikası]({{ site.url }}{{ site.baseurl }}/gizlilik-ve-kvkk): Damla Okul gizlilik politikası, KVKK aydınlatma metni, çerez politikası ve kişisel verilerin korunması hakkında bilgilendirme.
 
 ## Eğitim Kitapları
 {% assign education_books = site.books | where_exp: "book", "book.genre == 'education'" | sort: "title" %}
