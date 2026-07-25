@@ -148,13 +148,23 @@ function parseFilterHash() {
         return null;
     }
 
-    var grade = SLUG_TO_GRADE[parts[0]];
-    if (grade === undefined) {
+    if (parts.length === 1) {
+        var genreOnly = SLUG_TO_GENRE[parts[0]];
+        if (genreOnly !== undefined) {
+            return { grade: null, genre: genreOnly };
+        }
+
+        var gradeOnly = SLUG_TO_GRADE[parts[0]];
+        if (gradeOnly !== undefined) {
+            return { grade: gradeOnly, genre: null };
+        }
+
         return null;
     }
 
-    if (parts.length === 1) {
-        return { grade: grade, genre: null };
+    var grade = SLUG_TO_GRADE[parts[0]];
+    if (grade === undefined) {
+        return null;
     }
 
     var genre = SLUG_TO_GENRE[parts[1]];
@@ -167,6 +177,12 @@ function parseFilterHash() {
 
 function buildFilterHash(grade, genre) {
     if (grade === null || grade === undefined) {
+        if (genre) {
+            var genreOnlySlug = GENRE_TO_SLUG[genre];
+            if (genreOnlySlug) {
+                return '#' + genreOnlySlug;
+            }
+        }
         return '';
     }
 
@@ -285,7 +301,7 @@ function applyFilterState(grade, genre, options) {
     closeAllGradeMenus();
     filterHomeBooks();
 
-    if (grade !== null && options.scrollToResults !== false) {
+    if ((grade !== null || genre !== null) && options.scrollToResults !== false) {
         requestAnimationFrame(function() {
             scrollToBookResults();
         });
