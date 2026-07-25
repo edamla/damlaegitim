@@ -18,6 +18,7 @@
       prevButton: false,
       nextButton: false,
       autoplayButton: false,
+      autoplayButtonOutput: false,
       lazyload: true,
       lazyloadSelector: '.tns-lazy-img'
     });
