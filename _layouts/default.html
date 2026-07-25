@@ -69,8 +69,17 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/images/favicon/manifest.json">
 
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+    {% if page.url == "/" %}
+    {% assign first_slide = site.slides | first %}
+    <link rel="preload" as="image" href="{{ site.baseurl }}/{{ first_slide.img }}" media="(min-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" href="{{ site.baseurl }}/{{ first_slide.mobile-img }}" media="(max-width: 767px)" fetchpriority="high">
+    {% endif %}
+
+    <link rel="preload" href="{{ site.baseurl }}/assets/fonts/raykjavik/reykjavik-rounded-regular.woff2"
+          as="font" type="font/woff2" crossorigin>
+
+    <!-- Font Awesome Icons (local) -->
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/fontawesome-all.min.css">
 
     <!-- Bootstrap 5 -->
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/bootstrap.min.css">
@@ -78,9 +87,6 @@
     <!-- Theme & overrides -->
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/theme.css">
     <link rel="stylesheet" href="{{site.baseurl}}/assets/css/app.css">
-
-    <!-- Tiny Slider -->
-    <link rel="stylesheet" href="{{site.baseurl}}/assets/css/tiny-slider.css">
 
     {% include tracking-header.html %}
 
@@ -125,11 +131,10 @@
         {{ content }}
     </main>
 
-    <script src="{{site.baseurl}}/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="{{site.baseurl}}/assets/js/nav.js"></script>
-    {% if site.lazyimages == "enabled" %}
-    <script src="{{ site.baseurl }}/assets/js/lazyload.js"></script>
-    {% endif %}
+    {% include ai-seo-crawler.html %}
+
+    <script defer src="{{site.baseurl}}/assets/js/bootstrap.bundle.min.js"></script>
+    <script defer src="{{site.baseurl}}/assets/js/nav.js"></script>
 
     {% if page.layout == 'post' %}
     <script id="dsq-count-scr" src="//{{site.disqus}}.disqus.com/count.js"></script>
@@ -138,8 +143,9 @@
 
     {% include tracking-footer.html %}
 
-
-    <script src="{{ site.baseurl }}/assets/js/book-filter.js?v={{ site.time | date: '%s' }}"></script>
+    {% if page.url == "/" or page.url contains '/urunler' %}
+    <script defer src="{{ site.baseurl }}/assets/js/book-filter.js?v={{ site.time | date: '%s' }}"></script>
+    {% endif %}
 
     {% include search-lunr.html %}
 

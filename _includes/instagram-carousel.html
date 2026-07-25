@@ -385,7 +385,20 @@
   }
 
   function boot() {
-    document.querySelectorAll('.ig-carousel').forEach(initCarousel);
+    document.querySelectorAll('.ig-carousel').forEach(function (section) {
+      if ('IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries, obs) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            initCarousel(entry.target);
+            obs.unobserve(entry.target);
+          });
+        }, { rootMargin: '200px 0px' });
+        observer.observe(section);
+      } else {
+        initCarousel(section);
+      }
+    });
   }
 
   if (document.readyState === 'loading') {

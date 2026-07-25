@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{site.baseurl}}/assets/css/tiny-slider.css">
+
 <style>
     button[data-action="stop"] {
     display: none;
@@ -12,10 +14,45 @@
 
         <div class="base" id="base">
             {% for slide in site.slides %}
+            {% assign img_webp = slide.img | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.png', '.webp' %}
+            {% assign mobile_webp = slide.mobile-img | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.png', '.webp' %}
+            {% assign has_img_webp = false %}
+            {% assign has_mobile_webp = false %}
+            {% if site.data.webp_manifest and site.data.webp_manifest.assets contains img_webp %}
+              {% assign has_img_webp = true %}
+            {% endif %}
+            {% if site.data.webp_manifest and site.data.webp_manifest.assets contains mobile_webp %}
+              {% assign has_mobile_webp = true %}
+            {% endif %}
             <div class="item w-100 img img-{{forloop.index}}">
                     <a href="{{ slide.href }}" target="{{ slide.target }}">
-                        <img class="d-none d-md-block w-100 img-fluid" src="{{ slide.img }}" alt="{{ slide.title }}">
-                        <img class="d-block d-md-none w-100 img-fluid" src="{{ slide.mobile-img }}" alt="{{ slide.title }}">
+                        <picture>
+                            {% if has_mobile_webp %}
+                            <source media="(max-width: 767px)" srcset="{{ site.baseurl }}/{{ mobile_webp }}" type="image/webp">
+                            {% endif %}
+                            <source media="(max-width: 767px)" srcset="{{ site.baseurl }}/{{ slide.mobile-img }}">
+                            {% if has_img_webp %}
+                            <source srcset="{{ site.baseurl }}/{{ img_webp }}" type="image/webp">
+                            {% endif %}
+                            {% if forloop.first %}
+                            <img class="w-100 img-fluid"
+                                 src="{{ site.baseurl }}/{{ slide.img }}"
+                                 alt="{{ slide.title }}"
+                                 width="1250"
+                                 height="504"
+                                 fetchpriority="high"
+                                 decoding="async">
+                            {% else %}
+                            <img class="tns-lazy-img w-100 img-fluid"
+                                 data-src="{{ site.baseurl }}/{{ slide.img }}"
+                                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1250 504'%3E%3C/svg%3E"
+                                 alt="{{ slide.title }}"
+                                 width="1250"
+                                 height="504"
+                                 loading="lazy"
+                                 decoding="async">
+                            {% endif %}
+                        </picture>
                     </a>
             </div>
             {% endfor %}   
@@ -40,6 +77,8 @@
     nav: false,
     prevButton: false,
     nextButton: false,
-    autoplayButton: false
+    autoplayButton: false,
+    lazyload: true,
+    lazyloadSelector: '.tns-lazy-img'
   });
 </script>
