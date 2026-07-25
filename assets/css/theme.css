@@ -1422,6 +1422,16 @@ div.a2a_full_footer {display:none;}
   overflow: hidden;
 }
 
+.book-card__media picture.w-100 {
+  width: 100%;
+  height: 100%;
+}
+
+.book-card__media picture.w-100 img {
+  width: 100%;
+  height: 100%;
+}
+
 .book-card__cover {
   display: block;
   max-width: 100%;
@@ -1484,6 +1494,14 @@ div.a2a_full_footer {display:none;}
 
 .book-detail .book img {
   filter: drop-shadow(2px 2px 7px rgba(0, 0, 0, 0.15));
+}
+
+.book-detail .book picture.w-100,
+.book-detail .book picture.w-100 img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .book-detail__tags .tag {

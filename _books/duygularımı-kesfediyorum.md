@@ -5,8 +5,6 @@ grades: [1, 2]
 genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["Duygusal Farkındalık", "Empati", "Özgüven", "Duygu Yönetimi", "Kişisel Gelişim"]
-image: assets/images/ean/8697911223752.jpg
-examimage: assets/images/ean/8697911223752-1.jpg
 examlink: duygularimi-kesfediyorum-y.pdf
 categories: [ "Çocuk", "Hikaye" ]
 tags: [ "hikaye"]
@@ -15,13 +13,14 @@ paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223752
-examean: 8697911223752
 review_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/duygularimi-kesfediyorum/index.html"
 languages: ["Türkçe"]
 page: Her Biri 64
 size: "14x20cm"
 publish-number: 4
 cover: "Karton Kapak"
+
+youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---

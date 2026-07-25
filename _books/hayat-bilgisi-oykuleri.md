@@ -5,8 +5,6 @@ grades: [2, 3]
 genre: story
 concepts: [""]
 subjects: ["Sosyal Yaşam Kuralları", "Çevre Bilinci", "Sağlık ve Güvenlik", "Toplumsal Duyarlılık", "Görgü Kuralları"]
-image: assets/images/ean/9786254112676.jpg
-examimage: assets/images/ean/8697911219199.jpg
 examlink: hayat-bilgisi-oykuleri-y.pdf
 categories: [ "Çocuk", "Hikaye" ]
 tags: [ "hikaye"]
@@ -15,13 +13,14 @@ paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223004
-examean: 8697911219199
 review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223004/index.html"
 languages: ["Türkçe"]
 page: Her Biri 48
 size: "14x20cm"
 publish-number: 3005
 cover: "Karton Kapak"
+
+youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---

@@ -5,8 +5,6 @@ grades: [3, 4]
 genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["Engelsiz Yaşam", "Toplumsal Duyarlılık", "Empati", "Azim ve Mücadele", "Farkındalık"]
-image: assets/images/ean/8697911223974.jpg
-examimage: assets/images/ean/8697911223974-1.jpg
 examlink: engel-tanimayanlar.pdf
 categories: [ "Çocuk", "Hikaye" ]
 tags: [ "hikaye"]
@@ -15,13 +13,14 @@ paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223974
-examean: 8697911223974
 review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051745374/index.html"
 languages: ["Türkçe"]
 page: Her Biri 80
 size: "14x20cm"
 publish-number: 4
 cover: "Karton Kapak"
+
+youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---

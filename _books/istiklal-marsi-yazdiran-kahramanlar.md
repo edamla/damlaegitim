@@ -5,8 +5,6 @@ grades: [3, 4]
 genre: story
 concepts: [""]
 subjects: ["Milli Mücadele", "Vatan Sevgisi", "Bağımsızlık", "Tarih Bilinci", "Kahramanlık"]
-image: assets/images/ean/9786254112560.jpg
-examimage: assets/images/ean/8697911219137.jpg
 examlink: istiklal-marsi-yazdiran-y.pdf
 categories: [ "Çocuk", "Hikaye" ]
 tags: [ "hikaye"]
@@ -15,13 +13,14 @@ paper: "1. Hamur"
 
 # Book attributes
 ean: 9786254112560
-examean: 8697911219137
 review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254112560/index.html"
 languages: ["Türkçe"]
 page: Her Biri 64
 size: "14x20cm"
 publish-number: 2972
 cover: "Karton Kapak"
+
+youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---

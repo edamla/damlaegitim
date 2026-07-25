@@ -2,17 +2,14 @@
 layout: previewbook
 title:  "Kral Eğitim Seti 2.Sınıf"
 
-image: assets/images/ean/8697911221352.jpg
 categories: [ "İlkokul" ]
 tags: [ "Okuma yazma, ilkokuma, yeni müfredat"]
 previewpage: false
-featured: false
-
 grades: [2]
 genre: education
 # Book attributes
 ean: 8697911221352
-languages: []
+languages: ["Türkçe"]
 page: 881
 size: "13,5x21cm"
 

@@ -2,17 +2,14 @@
 layout: previewbook
 title:  "Akıllı Damla Tüm Dersler | 3.Sınıf"
 
-image: assets/images/ean/9786254115943.jpg
 categories: [ "İlkokul" ]
 tags: [ "Okuma yazma, ilkokuma, yeni müfredat"]
 previewpage: false
-featured: false
-
 grades: [3]
 genre: education
 # Book attributes
 ean: 9786254115943
-languages: []
+languages: ["Türkçe"]
 page: 136
 size: "13,5x21cm"
 

@@ -1,24 +1,8 @@
 <article class="book-card">
     <a class="book-card__link baslik-link" href="{{ book.url }}">
         <div class="book-card__media">
-            {% assign cover_webp = book.image | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.png', '.webp' %}
-            {% assign has_webp = false %}
-            {% if site.data.webp_manifest and site.data.webp_manifest.assets contains cover_webp %}
-              {% assign has_webp = true %}
-            {% endif %}
-            <picture>
-                {% if has_webp %}
-                <source srcset="{{ site.baseurl }}/{{ cover_webp }}" type="image/webp">
-                {% endif %}
-                <img class="book-card__cover cover-images"
-                     src="{{ site.baseurl }}/{{ book.image }}"
-                     alt="{{ book.title }}"
-                     width="400"
-                     height="600"
-                     loading="lazy"
-                     fetchpriority="low"
-                     decoding="async">
-            </picture>
+            {% assign eanimage_class = "book-card__cover cover-images" %}
+            {% include eanimage.html book=book width="400" height="600" loading="lazy" fetchpriority="low" decoding="async" %}
         </div>
         <div class="book-card__info">
             <h3 class="book-card__title">{{ book.title }}</h3>

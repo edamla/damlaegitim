@@ -2,17 +2,14 @@
 layout: previewbook
 title:  "İlk Okuma Dizisi (8 Kitap)"
 
-image: assets/images/ean/8697911222625.jpg
 categories: [ "İlkokul" ]
 tags: [ "Okuma yazma, ilkokuma, yeni müfredat"]
 previewpage: false
-featured: false
-
 grades: [1]
 genre: education
 # Book attributes
 ean: 8697911222625
-languages: []
+languages: ["Türkçe"]
 page: 881
 size: "13,5x21cm"
 

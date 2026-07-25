@@ -525,7 +525,6 @@ grades: [3]
 genre: story          # education | story
 subjects: ["Değerler Eğitimi", "Macera", "Gizem"]   # yeşil # etiketler
 concepts: ["sozel-dilsel", "icsel"]                 # turuncu @ etiketler (anahtar veya serbest metin)
-image: assets/images/ean/9786053832874.jpg
 categories: ["Çocuk", "Hikaye"]
 previewpage: true
 ean: 9786053832874
@@ -680,9 +679,9 @@ GitHub Pages, push sonrası kaynak branch’ten Jekyll build alır. **CI/CD veya
 ## Yeni Ürün Ekleme
 
 1. `_books/yeni-urun.md` oluştur
-2. Front matter doldur (`title`, `grades`, `genre`, `image`, `ean`…)
+2. Front matter doldur (`title`, `grades`, `genre`, `ean`…)
 3. İsteğe bağlı `description:` — yoksa build sırasında otomatik üretilir
-4. Kapak görselini `assets/images/ean/` altına koy (jpg/png optimize et; webp `sh start.sh` ile otomatik)
+4. Kapak görselini `assets/images/ean/{ean}.jpg` olarak ekle (jpg/png optimize et; webp `sh start.sh` ile otomatik)
 5. `sh scripts/check_images.sh` ile boyut kontrolü (veya `sh start.sh`)
 6. `sh start.sh` ile kontrol et
 7. `git push`

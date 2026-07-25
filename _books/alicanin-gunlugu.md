@@ -6,8 +6,6 @@ grades: [2, 3]
 concepts: ["gorsel-uzamsal","sosyal","doga"]
 subjects: ["Kişisel Gelişim", "Okul ve Aile Hayatı", "Mizah", "Arkadaşlık", "Özfarkındalık"]
 
-image: assets/images/ean/8697911223028.jpg
-examimage: assets/images/ean/8697911223028-1.jpg
 examlink: alican-y.pdf
 
 categories: [ "Öykümatik" ]
@@ -18,13 +16,14 @@ paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223028
-examean: 8697911223028
 review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223028/index.html"
 languages: ["Türkçe"]
 page: Her Biri 48
 size: "14x20cm"
 publish-number: 1355
 cover: "Karton Kapak"
+
+youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---

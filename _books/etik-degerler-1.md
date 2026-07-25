@@ -5,8 +5,6 @@ title:  "ETİK DEĞERLER EĞİTİM SETİ-1. SINIF (10 KİTAP)"
 grades: [1]
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["Dürüstlük", "Saygı ve Sevgi", "Yardımseverlik", "Paylaşmak", "Etik ve Ahlak"]
-image: assets/images/ean/8697911223851.jpg
-examimage: assets/images/ean/8697911223851-1.jpg
 examlink: etik-degerler1-y.pdf
 
 categories: [ "Öykümatik" ]
@@ -17,13 +15,14 @@ paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223851
-examean: 8697911223851
 review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223851/index.html"
 languages: ["Türkçe"]
 page: Her Biri 16
 size: "23,5x16,5cm"
 publish-number: 1746
 cover: "Karton Kapak"
+
+youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---

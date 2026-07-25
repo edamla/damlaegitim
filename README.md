@@ -210,7 +210,6 @@ grades: [1, 2]
 genre: education
 subjects: ["Değerler Eğitimi", "Macera"]     # yeşil # etiketler (detay sayfası üstü)
 concepts: ["sozel-dilsel", "icsel"]           # turuncu @ etiketler (anahtar veya serbest metin)
-image: assets/images/ean/9786053832874.jpg
 ean: 9786053832874
 ---
 Ürün açıklaması buraya...
@@ -218,7 +217,7 @@ ean: 9786053832874
 
 `subjects` TEMALAR için, `concepts` çoklu zekâ / kavram etiketleri içindir. `concepts` alanına `_config.yml` anahtarı (`sozel-dilsel`) veya doğrudan metin (`Dil Bilim Gelişimi`) yazılabilir.
 
-3. Kapak görselini `assets/images/ean/` klasörüne ekleyin (jpg/png optimize edin; `.webp` `sh start.sh` ile otomatik üretilir)
+3. Kapak görselini `assets/images/ean/{ean}.jpg` olarak ekleyin (jpg/png optimize edin; `.webp` `sh start.sh` ile otomatik üretilir)
 4. `sh scripts/check_images.sh` ile boyut kontrolü yapın (veya `sh start.sh` — hook olarak çalışır)
 5. `sh start.sh` ile önizleyin
 6. Commit ve push
@@ -275,7 +274,7 @@ sh scripts/check_images.sh ean      # Kitap kapakları
 
 ### WebP otomatik üretim (hibrit)
 
-`assets/images/ean/` ve `assets/images/slides/` altındaki jpg/png dosyalarından eksik `.webp` varyantları üretilir; manifest [`_data/webp_manifest.yml`](_data/webp_manifest.yml) güncellenir. [`book-card.html`](_includes/book-card.html) ve [`slider.html`](_includes/slider.html) yalnızca manifest'te kayıtlı webp'ler için `<source type="image/webp">` ekler — araç veya dosya yoksa jpg/png ile devam eder, 404 oluşmaz.
+`assets/images/ean/` ve `assets/images/slides/` altındaki jpg/png dosyalarından eksik `.webp` varyantları üretilir; manifest [`_data/webp_manifest.yml`](_data/webp_manifest.yml) güncellenir. [`eanimage.html`](_includes/eanimage.html), [`book-card.html`](_includes/book-card.html) ve [`slider.html`](_includes/slider.html) yalnızca manifest'te kayıtlı webp'ler için `<source type="image/webp">` ekler — araç veya dosya yoksa jpg/png ile devam eder, 404 oluşmaz.
 
 | Aşama | Ne yapar |
 |-------|----------|

@@ -6,8 +6,6 @@ grades: [3, 4]
 concepts: [""]
 subjects: ["Anadolu Kültürü" , "Birey ve Toplum" , "Dil Bilim" , "Milli Kültür"]
 
-image: assets/images/ean/9786053832768.jpg
-examimage: assets/images/ean/9786053832768-1.jpg
 examlink: atasozu-oykuleri-y.pdf
 
 categories: [ "Öykümatik" ]
@@ -18,13 +16,14 @@ paper: "1. Hamur"
 
 # Book attributes
 ean: 9786053832768
-examean: 9786053832768
 review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832768/mobile/index.html"
 languages: ["Türkçe"]
 page: Her Bİri 64
 size: "14x20cm"
 publish-number: 1448
 cover: "Karton Kapak"
+
+youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---

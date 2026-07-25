@@ -8,14 +8,15 @@ layout: default
 <div class="container">
 <div class="book-detail book-page mb-3 position-relative">
         <div class="h-100 tofront">
-            <div class="row {% if book.image %} justify-content-between {% else %} justify-content-center {% endif %}">
-                {% if book.image %}
+            <div class="row {% if book.ean %} justify-content-between {% else %} justify-content-center {% endif %}">
+                {% if book.ean %}
                 <div class="col-md-3 pe-2 align-self-center book">
-                    <img class="rounded w-100" src="{% if book.image contains "://" %}{{ book.image }}{% else %}{{ site.baseurl }}/{{ book.image }}{% endif %}" alt="{{ page.title }}">
+                    {% assign eanimage_class = "rounded" %}
+                    {% include eanimage.html book=book alt=page.title %}
                 </div>
                 {% endif %}
 
-                <div class="{% if book.image %} col-md-9 {% else %} col-md-8 {% endif %} pe-0 pe-md-4 pt-3 pb-3">
+                <div class="{% if book.ean %} col-md-9 {% else %} col-md-8 {% endif %} pe-0 pe-md-4 pt-3 pb-3">
 
 
                     <div class="align-items-center">

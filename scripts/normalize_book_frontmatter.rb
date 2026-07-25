@@ -7,10 +7,10 @@ require 'date'
 
 BOOKS_DIR = Pathname.new(__dir__).join('..', '_books').expand_path
 
-HEADER_KEYS = %w[layout title image categories tags genre previewpage].freeze
-STANDARD_KEYS = %w[ean examean review_link languages page size publish-number cover].freeze
+HEADER_KEYS = %w[layout title categories tags genre previewpage].freeze
+STANDARD_KEYS = %w[ean review_link languages page size publish-number cover].freeze
 OPTIONAL_STANDARD_KEYS = %w[original-name original-language].freeze
-FILTERABLE_KEYS = %w[grades concepts subjects examimage examlink].freeze
+FILTERABLE_KEYS = %w[grades concepts subjects examlink].freeze
 
 def parse_frontmatter(content)
   match = content.match(/\A---\r?\n(.*?)\r?\n---\r?\n(.*)\z/m)
@@ -23,16 +23,15 @@ end
 def normalize_data(data)
   data = data.transform_keys(&:to_s)
   data.delete('featured')
+  data.delete('sold')
+  data.delete('examean')
 
-  ean = data['ean']
-  data['examean'] = ean if data['examean'].nil? || data['examean'].to_s.empty?
   data['review_link'] = '' if data['review_link'].nil?
-  data['languages'] = [] if data['languages'].nil?
+  data['languages'] = ['Türkçe'] if data['languages'].nil? || (data['languages'].is_a?(Array) && data['languages'].empty?)
   data['publish-number'] = '' if data['publish-number'].nil?
   data['cover'] = '' if data['cover'].nil?
   data['concepts'] = [] if data['concepts'].nil?
   data['subjects'] = [] if data['subjects'].nil?
-  data['examimage'] = '' if data['examimage'].nil?
   data['examlink'] = '' if data['examlink'].nil?
   data['youtube'] = '' if data['youtube'].nil?
 

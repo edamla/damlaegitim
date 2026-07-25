@@ -5,8 +5,6 @@ grades: [3, 4]
 genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["Türkiye Coğrafyası", "Kültürel Miras", "Zaman Mekan", "Gezi ve Keşif", "Milli Değerler"]
-image: assets/images/ean/8697911223943.jpg
-examimage: assets/images/ean/8697911223943-1.jpg
 examlink: c%C4%B1lg%C4%B1n-dede-turkiye-turu.pdf
 categories: [ "Çocuk", "Hikaye" ]
 tags: [ "hikaye"]
@@ -15,13 +13,14 @@ paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223943
-examean: 8697911223943
 review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223943/index.html"
 languages: ["Türkçe"]
 page: Her Biri 64
 size: "14x20cm"
 publish-number: 3136
 cover: "Karton Kapak"
+
+youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
