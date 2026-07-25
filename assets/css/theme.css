@@ -1650,3 +1650,20 @@ div.a2a_full_footer {display:none;}
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+
+.slider .item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1250 / 504;
+}
+
+@media (max-width: 767.98px) {
+  .slider .item img {
+    aspect-ratio: 1181 / 950;
+  }
+}
+
+.slider .base:not(.tns-slider) > .item ~ .item {
+  display: none;
+}
