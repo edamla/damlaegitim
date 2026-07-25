@@ -15,7 +15,6 @@ paper: "1. Hamur"
 
 # Book attributes
 ean: 9786053831952
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053831952/index.html"
 languages: ["Türkçe"]
 page: Her Biri 64
 size: "14x20cm"

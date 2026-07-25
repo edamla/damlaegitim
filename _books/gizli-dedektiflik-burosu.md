@@ -13,7 +13,6 @@ paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223080
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223080/index.html"
 languages: ["Türkçe"]
 page: Her Biri 80
 size: "14x20cm"

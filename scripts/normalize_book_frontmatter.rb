@@ -8,7 +8,7 @@ require 'date'
 BOOKS_DIR = Pathname.new(__dir__).join('..', '_books').expand_path
 
 HEADER_KEYS = %w[layout title categories tags genre previewpage].freeze
-STANDARD_KEYS = %w[ean review_link languages page size publish-number cover].freeze
+STANDARD_KEYS = %w[ean languages page size publish-number cover].freeze
 OPTIONAL_STANDARD_KEYS = %w[original-name original-language].freeze
 FILTERABLE_KEYS = %w[grades concepts subjects examlink].freeze
 
@@ -25,8 +25,8 @@ def normalize_data(data)
   data.delete('featured')
   data.delete('sold')
   data.delete('examean')
+  data.delete('review_link')
 
-  data['review_link'] = '' if data['review_link'].nil?
   data['languages'] = ['Türkçe'] if data['languages'].nil? || (data['languages'].is_a?(Array) && data['languages'].empty?)
   data['publish-number'] = '' if data['publish-number'].nil?
   data['cover'] = '' if data['cover'].nil?

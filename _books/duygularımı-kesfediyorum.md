@@ -13,7 +13,6 @@ paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223752
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/duygularimi-kesfediyorum/index.html"
 languages: ["Türkçe"]
 page: Her Biri 64
 size: "14x20cm"

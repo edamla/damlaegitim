@@ -144,7 +144,11 @@ layout: default
 	<!-- Fbook içerik bölümü -->
 	<div class="Grid-cell">
 		<div class="Demo content">
-		  <iframe id="iframe"  src="{{ site.pagepreview.prefix }}{{ book.ean }}{{site.pagepreview.postfix}} " name="fbook" width="100%" height="100%"></iframe>
+		  {% if site.pagepreview.enabled == true and book.ean %}
+		  <iframe id="iframe" src="{{ site.pagepreview.prefix }}{{ book.ean }}{{ site.pagepreview.postfix }}" name="fbook" width="100%" height="100%"></iframe>
+		  {% else %}
+		  <p class="p-4 text-muted">Ön izleme şu anda kullanılamıyor.</p>
+		  {% endif %}
 		  <noframes>
 			<body id="htmlsource">
 			  <p>Üzgünüz, tarayıcınız bu sayfayı görüntüleyemiyor.</p>

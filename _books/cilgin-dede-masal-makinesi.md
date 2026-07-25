@@ -18,7 +18,6 @@ previewpage: true
 
 # Book attributes
 ean: 9786053838340
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053838340/index.html"
 languages: ["Türkçe"]
 page: Heri biri 48 Sayfa
 size: 14x20 cm
