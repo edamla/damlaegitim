@@ -1,0 +1,291 @@
+---
+title: "Kitapla Büyüyen Sınıflar"
+description: "Damla Yayın Grubu sosyal sorumluluk projesi: öğretmenlerin emeğiyle şekillenen sınıflara kitap ulaştırıyor, öğrencilerin okurla kurduğu bağı güçlendiriyoruz."
+layout: page
+permalink: "/kitapla-buyuten-siniflar"
+comments: false
+footer_show: true
+footer_order: 15
+---
+
+<style>
+  .kbs-project {
+    --kbs-accent: var(--color-primary, #03a87c);
+    --kbs-accent-dark: var(--color-primary-dark, #028a66);
+    --kbs-surface: #f4faf7;
+    --kbs-border: #e3efe9;
+    font-family: var(--font-sans);
+    margin-bottom: 2rem;
+  }
+
+  .kbs-hero {
+    background: linear-gradient(135deg, var(--kbs-surface) 0%, #e8f7f1 55%, #fff 100%);
+    border: 1px solid var(--kbs-border);
+    border-radius: calc(var(--radius, 0.5rem) * 2);
+    padding: 2.5rem 2rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .kbs-hero::after {
+    content: "";
+    position: absolute;
+    top: -3rem;
+    right: -2rem;
+    width: 10rem;
+    height: 10rem;
+    background: radial-gradient(circle, rgba(3, 168, 124, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .kbs-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #fff;
+    border: 1px solid var(--kbs-border);
+    color: var(--kbs-accent-dark);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.85rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .kbs-hero h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    font-weight: 300;
+    line-height: 1.35;
+    color: var(--color-text, #212529);
+    margin: 0 0 1rem;
+    max-width: 38rem;
+  }
+
+  .kbs-hero .kbs-lead {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--color-muted, #6c757d);
+    margin: 0;
+    max-width: 42rem;
+  }
+
+  .kbs-hero .kbs-lead strong {
+    color: var(--kbs-accent-dark);
+    font-weight: 600;
+  }
+
+  .kbs-intro p {
+    font-size: 1.02rem;
+    line-height: 1.8;
+    color: var(--color-text, #212529);
+    margin-bottom: 1.1rem;
+  }
+
+  .kbs-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin: 2rem 0 2.5rem;
+  }
+
+  .kbs-card {
+    background: #fff;
+    border: 1px solid var(--kbs-border);
+    border-radius: var(--radius, 0.5rem);
+    padding: 1.5rem 1.25rem;
+    box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.08));
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .kbs-card:hover {
+    border-color: rgba(3, 168, 124, 0.35);
+    box-shadow: 0 4px 16px rgba(3, 168, 124, 0.08);
+  }
+
+  .kbs-card-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--kbs-surface);
+    color: var(--kbs-accent);
+    border-radius: 50%;
+    font-size: 1.15rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .kbs-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    color: var(--color-text, #212529);
+  }
+
+  .kbs-card p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--color-muted, #6c757d);
+    margin: 0;
+  }
+
+  .kbs-highlight {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: linear-gradient(90deg, var(--kbs-accent) 4px, var(--kbs-surface) 4px);
+    border: 1px solid var(--kbs-border);
+    border-radius: var(--radius, 0.5rem);
+    padding: 1.35rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .kbs-highlight i {
+    color: var(--kbs-accent);
+    font-size: 1.35rem;
+    margin-top: 0.15rem;
+    flex-shrink: 0;
+  }
+
+  .kbs-highlight p {
+    margin: 0;
+    line-height: 1.75;
+    color: var(--color-text, #212529);
+  }
+
+  .kbs-closing {
+    font-size: 1.02rem;
+    line-height: 1.8;
+    color: var(--color-muted, #6c757d);
+    margin-bottom: 2.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--kbs-border);
+  }
+
+  .kbs-form-section {
+    background: #fff;
+    border: 1px solid var(--kbs-border);
+    border-radius: calc(var(--radius, 0.5rem) * 2);
+    padding: 2rem 1.5rem 1.5rem;
+    box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.08));
+  }
+
+  .kbs-form-section h3 {
+    font-family: var(--font-display);
+    font-size: 1.45rem;
+    font-weight: 300;
+    margin: 0 0 0.5rem;
+    color: var(--color-text, #212529);
+  }
+
+  .kbs-form-section .kbs-form-desc {
+    color: var(--color-muted, #6c757d);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+  }
+
+  .kbs-form-wrap {
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
+    border-radius: var(--radius, 0.5rem);
+    overflow: hidden;
+    background: #fafafa;
+  }
+
+  .kbs-form-wrap iframe {
+    display: block;
+    width: 100%;
+    min-height: 4013px;
+    border: 0;
+  }
+
+  @media (max-width: 767.98px) {
+    .kbs-hero {
+      padding: 1.75rem 1.25rem;
+    }
+
+    .kbs-cards {
+      grid-template-columns: 1fr;
+    }
+
+    .kbs-form-section {
+      padding: 1.5rem 1rem 1rem;
+    }
+  }
+</style>
+
+<div class="kbs-project">
+
+  <section class="kbs-hero" aria-label="Proje tanıtımı">
+    <span class="kbs-badge"><i class="fas fa-seedling" aria-hidden="true"></i> Sosyal Sorumluluk Projesi</span>
+    <h2>Okurla kitap arasındaki bağ, sınıflarda en güçlü hâlini bulur.</h2>
+    <p class="kbs-lead">
+      <strong>Damla Yayın Grubu</strong> olarak, okurla kitap arasındaki bağın her şeyin ötesinde bir bağ olduğunu düşünüyor ve bu bağın en sağlıklı kurulduğu ortamlardan birinin de sınıflar olduğuna inanıyoruz.
+    </p>
+  </section>
+
+  <div class="kbs-intro">
+    <p>
+      Bu noktadan yola çıkarak hayata geçirdiğimiz sosyal sorumluluk projemiz <strong>«Kitapla Büyüyen Sınıflar»</strong> ile öğretmenlerimizin emeğiyle şekillenen sınıflara kitap ulaştırmayı ve böylece öğrencilerin bu özel bağa sahip olmaları konusunda katkı sağlamayı hedefliyoruz.
+    </p>
+    <p>
+      Proje kapsamında, öğretmenlerin sınıf içindeki özverili çalışmalarına katkı sunmayı, öğrenciler için ortak ve sürdürülebilir bir okuma ortamı oluşturmayı ve kitapla kurulan ilişkiyi uzun vadeli hâle getirmeyi amaçlıyoruz.
+    </p>
+  </div>
+
+  <div class="kbs-cards" role="list">
+    <article class="kbs-card" role="listitem">
+      <div class="kbs-card-icon" aria-hidden="true"><i class="fas fa-chalkboard-teacher"></i></div>
+      <h4>Öğretmenlere Destek</h4>
+      <p>Sınıf içindeki özverili çalışmalara katkı sunarak öğretmenlerimizin emeğini görünür kılıyoruz.</p>
+    </article>
+    <article class="kbs-card" role="listitem">
+      <div class="kbs-card-icon" aria-hidden="true"><i class="fas fa-book-reader"></i></div>
+      <h4>Okuma Ortamı</h4>
+      <p>Öğrenciler için ortak, sürdürülebilir ve paylaşımlı bir okuma kültürü oluşturuyoruz.</p>
+    </article>
+    <article class="kbs-card" role="listitem">
+      <div class="kbs-card-icon" aria-hidden="true"><i class="fas fa-heart"></i></div>
+      <h4>Kalıcı Bağ</h4>
+      <p>Kitapla kurulan ilişkiyi geçici bir etkinlik değil, uzun vadeli bir alışkanlığa dönüştürüyoruz.</p>
+    </article>
+  </div>
+
+  <aside class="kbs-highlight">
+    <i class="fas fa-gift" aria-hidden="true"></i>
+    <p>
+      Her hafta çekilişle bir öğretmenimizi seçiyor ve sınıfına kitap hediye ediyoruz. Bizim için bu çalışma geçici bir kampanya değil; kitapların sınıflara damla damla ulaştığı, zamanla büyüyen bir paylaşım ve sorumluluk yolculuğudur.
+    </p>
+  </aside>
+
+  <p class="kbs-closing">
+    Sizleri de bu yolculukta aramızda görmekten mutluluk duyarız. Başvuru formunu doldurarak sınıfınızı projeye dahil edebilirsiniz.
+  </p>
+
+  <section class="kbs-form-section" id="basvuru-formu" aria-labelledby="kbs-form-title">
+    <h3 id="kbs-form-title">Başvuru Formu</h3>
+    <p class="kbs-form-desc">
+      Aşağıdaki formu doldurarak «Kitapla Büyüyen Sınıflar» projesine başvurabilirsiniz. Tüm alanları eksiksiz doldurmanızı rica ederiz.
+    </p>
+    <div class="kbs-form-wrap">
+      <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSfXWfRyUF-I_dUElHJog6fi7SpNQHWBYS_G_rxKSMiA-tMYPg/viewform?embedded=true"
+        title="Kitapla Büyüyen Sınıflar başvuru formu"
+        width="640"
+        height="4013"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        loading="lazy">
+        Yükleniyor…
+      </iframe>
+    </div>
+  </section>
+
+</div>
