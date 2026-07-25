@@ -1,0 +1,587 @@
+---
+title: "Ölçme ve Değerlendirme Sistemi"
+description: "Damla Okul Eğitim Müfredatı ve 4 Boyutlu Ölçme-Değerlendirme Sistemi: PISA destekli yeni nesil sorular, Akıllı Optik Sistemi ve kazanım analizi."
+layout: page
+permalink: "/olcme-degerlendirme"
+comments: false
+footer_show: true
+footer_order: 12
+---
+
+<style>
+  .ods-page {
+    --ods-accent: var(--color-primary, #03a87c);
+    --ods-accent-dark: var(--color-primary-dark, #028a66);
+    --ods-surface: #f4faf7;
+    --ods-surface-story: #f7f5fa;
+    --ods-border: #e3efe9;
+    --ods-border-story: #ebe6f0;
+    font-family: var(--font-sans);
+    margin-bottom: 2rem;
+  }
+
+  .ods-hero {
+    background: linear-gradient(135deg, var(--ods-surface) 0%, #e8f7f1 55%, #fff 100%);
+    border: 1px solid var(--ods-border);
+    border-radius: calc(var(--radius, 0.5rem) * 2);
+    padding: 2.5rem 2rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ods-hero::after {
+    content: "";
+    position: absolute;
+    top: -3rem;
+    right: -2rem;
+    width: 10rem;
+    height: 10rem;
+    background: radial-gradient(circle, rgba(3, 168, 124, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .ods-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: #fff;
+    border: 1px solid var(--ods-border);
+    color: var(--ods-accent-dark);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.85rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .ods-badge--story {
+    border-color: var(--ods-border-story);
+    color: #5a4a7a;
+  }
+
+  .ods-hero h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    font-weight: 300;
+    line-height: 1.35;
+    color: var(--color-text, #212529);
+    margin: 0 0 1rem;
+    max-width: 42rem;
+  }
+
+  .ods-hero .ods-lead {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--color-muted, #6c757d);
+    margin: 0;
+    max-width: 44rem;
+  }
+
+  .ods-hero .ods-lead strong {
+    color: var(--ods-accent-dark);
+    font-weight: 600;
+  }
+
+  .ods-section {
+    border: 1px solid var(--ods-border);
+    border-radius: calc(var(--radius, 0.5rem) * 2);
+    padding: 2rem 1.75rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .ods-section--education {
+    background: var(--ods-surface);
+  }
+
+  .ods-section--story {
+    background: var(--ods-surface-story);
+    border-color: var(--ods-border-story);
+  }
+
+  .ods-section h3 {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 400;
+    margin: 0 0 1rem;
+    color: var(--color-text, #212529);
+  }
+
+  .ods-section h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 1.75rem 0 0.75rem;
+    color: var(--color-text, #212529);
+  }
+
+  .ods-section p {
+    font-size: 1.02rem;
+    line-height: 1.8;
+    color: var(--color-text, #212529);
+    margin: 0 0 1rem;
+  }
+
+  .ods-slogan {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+    color: var(--color-text, #212529);
+  }
+
+  .ods-features {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0 0;
+  }
+
+  .ods-features li {
+    position: relative;
+    padding: 0.65rem 0 0.65rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--color-text, #212529);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .ods-features li:last-child {
+    border-bottom: 0;
+  }
+
+  .ods-features li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1.1rem;
+    width: 0.45rem;
+    height: 0.45rem;
+    border-radius: 50%;
+    background: var(--ods-accent);
+  }
+
+  .ods-section--story .ods-features li::before {
+    background: #7b68a6;
+  }
+
+  .ods-features .ods-dims {
+    display: block;
+    font-size: 0.92rem;
+    color: var(--color-muted, #6c757d);
+    margin-top: 0.15rem;
+  }
+
+  .ods-code-example {
+    background: #fff;
+    border: 1px solid var(--ods-border);
+    border-radius: var(--radius, 0.5rem);
+    padding: 1.25rem 1.5rem;
+    margin: 1.25rem 0 0;
+    font-size: 0.98rem;
+    line-height: 1.8;
+    color: var(--color-text, #212529);
+  }
+
+  .ods-section--story .ods-code-example {
+    border-color: var(--ods-border-story);
+  }
+
+  .ods-code-example ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+  }
+
+  .ods-code-example li {
+    padding: 0.2rem 0;
+  }
+
+  .ods-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    margin: 2rem 0 0;
+  }
+
+  .ods-card {
+    background: #fff;
+    border: 1px solid var(--ods-border);
+    border-radius: var(--radius, 0.5rem);
+    padding: 1.5rem 1.25rem;
+    box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.08));
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .ods-card:hover {
+    border-color: rgba(3, 168, 124, 0.35);
+    box-shadow: 0 4px 16px rgba(3, 168, 124, 0.08);
+  }
+
+  .ods-card-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--ods-surface);
+    color: var(--ods-accent);
+    border-radius: 50%;
+    font-size: 1.15rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .ods-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+    color: var(--color-text, #212529);
+  }
+
+  .ods-card p {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    color: var(--color-muted, #6c757d);
+    margin: 0;
+  }
+
+  .ods-dim-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0 0;
+  }
+
+  .ods-dim-card {
+    background: #fff;
+    border: 1px solid var(--ods-border);
+    border-radius: var(--radius, 0.5rem);
+    padding: 1.15rem 1.1rem;
+  }
+
+  .ods-dim-card strong {
+    display: block;
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+    color: var(--ods-accent-dark);
+  }
+
+  .ods-dim-card p {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--color-muted, #6c757d);
+    margin: 0;
+  }
+
+  .ods-highlight {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    background: linear-gradient(90deg, var(--ods-accent) 4px, #fff 4px);
+    border: 1px solid var(--ods-border);
+    border-radius: var(--radius, 0.5rem);
+    padding: 1.25rem 1.35rem;
+    margin: 1.5rem 0 0;
+  }
+
+  .ods-highlight i {
+    color: var(--ods-accent);
+    font-size: 1.25rem;
+    margin-top: 0.1rem;
+    flex-shrink: 0;
+  }
+
+  .ods-highlight p {
+    margin: 0;
+    font-size: 0.98rem;
+    line-height: 1.75;
+    color: var(--color-text, #212529);
+  }
+
+  .ods-section-divider {
+    text-align: center;
+    margin: 3rem 0 2.5rem;
+    padding: 0 1rem;
+  }
+
+  .ods-section-divider hr {
+    border: 0;
+    border-top: 1px solid var(--ods-border);
+    margin: 0 0 1.5rem;
+  }
+
+  .ods-section-divider h3 {
+    font-family: var(--font-display);
+    font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+    font-weight: 400;
+    margin: 0;
+    color: var(--color-text, #212529);
+  }
+
+  .ods-cta {
+    background: #fff;
+    border: 1px solid var(--ods-border);
+    border-radius: calc(var(--radius, 0.5rem) * 2);
+    padding: 2rem 1.75rem;
+    text-align: center;
+    box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.08));
+  }
+
+  .ods-cta h3 {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 300;
+    margin: 0 0 0.5rem;
+    color: var(--color-text, #212529);
+  }
+
+  .ods-cta p {
+    color: var(--color-muted, #6c757d);
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin: 0 0 1.5rem;
+    max-width: 36rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ods-cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .ods-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.25rem;
+    border-radius: var(--radius, 0.5rem);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .ods-btn--primary {
+    background: var(--ods-accent);
+    color: #fff;
+    border: 1px solid var(--ods-accent);
+  }
+
+  .ods-btn--primary:hover {
+    background: var(--ods-accent-dark);
+    border-color: var(--ods-accent-dark);
+    color: #fff;
+  }
+
+  .ods-btn--secondary {
+    background: #fff;
+    color: var(--ods-accent-dark);
+    border: 1px solid var(--ods-border);
+  }
+
+  .ods-btn--secondary:hover {
+    border-color: var(--ods-accent);
+    color: var(--ods-accent-dark);
+  }
+
+  @media (max-width: 767.98px) {
+    .ods-hero {
+      padding: 1.75rem 1.25rem;
+    }
+
+    .ods-section {
+      padding: 1.5rem 1.25rem;
+    }
+
+    .ods-cards {
+      grid-template-columns: 1fr;
+    }
+
+    .ods-dim-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .ods-cta {
+      padding: 1.5rem 1.25rem;
+    }
+  }
+</style>
+
+<div class="ods-page">
+
+  <section class="ods-hero" aria-label="Ölçme ve değerlendirme tanıtımı">
+    <span class="ods-badge"><i class="fas fa-clipboard-check" aria-hidden="true"></i> Ölçme ve Değerlendirme</span>
+    <h2>Eğitim ve hikâye kitaplarında ölçme, değerlendirme ve kazanım analizi tek çatı altında.</h2>
+    <p class="ods-lead">
+      <strong>Damla Yayın Kurulu</strong>, eğitim ve hikâye kitapları için geliştirdiği ölçme-değerlendirme yaklaşımını müfredat temelli, beceri odaklı ve kazanım analizine dayalı iki paralel sistemle sunar.
+    </p>
+  </section>
+
+  <section class="ods-section ods-section--education" aria-labelledby="ods-education-title">
+    <span class="ods-badge"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Eğitim Müfredatı</span>
+    <p class="ods-slogan">
+      Türkiye'de ilk ve tek Damla Yayın Kurulu tarafından geliştirilen <strong>Eğitim Müfredatı</strong>
+    </p>
+
+    <h3 id="ods-education-title">Damla Okul — Eğitim Ölçme ve Değerlendirme Sistemi Nedir?</h3>
+    <p>
+      Damla Yayın Kurulu tarafından Yeni Maarif Modeli ve MEB müfredatı baz alınarak geliştirilen <strong>4 Katmanlı Beceri Temelli Eğitim Müfredatı,</strong> kavramsal ve bilişsel süreçlere göre hazırlanmış 4 boyutlu sorular ve kazanım analizi sunan bir ölçme ve değerlendirme sistemidir.
+    </p>
+    <p>
+      <strong>Akıllı Damla Sistemi</strong>; kitap, akıllı tahta, bilgisayar, telefon ve tablet gibi bilgi araçlarını kullanılabilir hâle getirir. Öğretmen ve veliyi de sürecin içine dahil ederek öğrencilerin gelişimlerinin ölçülmesini ve yönetilmesini sağlar. Bloom'un eğitim taksonomisinin tüm basamakları uygulanarak <strong>tam öğrenme</strong> hedeflenir.
+    </p>
+
+    <h4>Eğitim Müfredatı</h4>
+    <p>
+      Kavramsal süreçlerin her biri (hatırlama-anlama, uygulama, çözümleme, değerlendirme ve özgün düşünme) ayrı ayrı bilişsel süreçler (1B, 2B, 3B, 4B) ile birlikte kazanımlara ayrılmıştır. Yukarıda verilen kazanım kodunda;
+    </p>
+
+    <div class="ods-code-example" aria-label="Örnek eğitim kazanım kodu">
+      <ul>
+        <li><strong>E:</strong> Eğitim Değerlendirme Müfredatını,</li>
+        <li><strong>1. Kavramsal Süreçler:</strong> Uygulama ve Pekiştirme,</li>
+        <li><strong>2. Bilişsel Süreçler:</strong> 2B Uygulama (Bilgiyi yeni durumda kullanma) Basamağını,</li>
+        <li><strong>3. Kazanım Numarası:</strong> Verilen problemi uygun stratejiyle çözer. Kazanımını ifade etmektedir.</li>
+      </ul>
+    </div>
+
+    <h4>4 Boyutlu Ölçme-Değerlendirme Sistemi</h4>
+    <p>
+      Yayınevimiz, <strong>4 Boyutlu Ölçme-Değerlendirme Sistemi</strong> ile Türkiye'de bir ilki gerçekleştirerek eğitim dünyamıza yeni bir bakış açısı kazandırmaktadır. 4B Ölçme-Değerlendirme Sistemi, Bloom taksonomisinin altı aşamalı yönteminin test tekniğine uyarlamasıdır.
+    </p>
+
+    <div class="ods-dim-grid" role="list">
+      <article class="ods-dim-card" role="listitem">
+        <strong>1. Boyut — Hatırlama-Anlama (1B)</strong>
+        <p>Soruların çözümü için gerekli bilgiler sorunun üzerinde verilir. Önceden öğrenilen bilgilerin hatırlatılması ve soru çözümünde kullanılarak kavranması hedeflenir. Isınma testleri olarak nispeten kolaydır.</p>
+      </article>
+      <article class="ods-dim-card" role="listitem">
+        <strong>2. Boyut — Uygulama (2B)</strong>
+        <p>Öğrenilen bilgilerin uygulanması ve pekiştirilmesi sağlanır. Bilgi düzeyini ölçen testlerdir; bilgiyi yeni durumlarda tekrar tekrar sorar. Zorluk derecesi ortadır.</p>
+      </article>
+      <article class="ods-dim-card" role="listitem">
+        <strong>3. Boyut — Çözümleme (3B)</strong>
+        <p>Üst düzey bilişsel etkinliklerin gerçekleştirilmesi ve bilgiler arasındaki anlam ilişkisinin keşfedilmesi hedeflenir. Bilgiyi yorumlamak, analiz etmek ve doğru sonuca ulaşmak gerekir.</p>
+      </article>
+      <article class="ods-dim-card" role="listitem">
+        <strong>4. Boyut — Değerlendirme ve Özgün Düşünme (4B)</strong>
+        <p>Tam öğrenmenin gerçekleşip gerçekleşmediği denetlenir. Öğrencinin üretkenlik becerisi ve özgün düşüncesi ölçülür; PISA destekli yenilikçi sorular bu boyutta yer alır.</p>
+      </article>
+    </div>
+
+    <aside class="ods-highlight">
+      <i class="fas fa-qrcode" aria-hidden="true"></i>
+      <p>
+        <strong>AKOD Sistemi</strong> (Akıllı Optik Değerlendirme Sistemi): Öğrenciler testleri çözdükten sonra optik formun fotoğrafını çekerek anında dijital karnelerine, doğru-yanlış listelerine ve kazanım analizlerine ulaşır. Yalnızca yanlış sorular üzerinde yeniden çalışarak zaman kaybetmeden ilerleyebilirler.
+      </p>
+    </aside>
+
+    <h4>Damla Okul — Eğitim Ölçme Değerlendirme Sisteminde Neler Var?</h4>
+    <ul class="ods-features">
+      <li>
+        <strong>Bilişsel süreçlere</strong> göre 4 boyutlu olarak sınıflandırılan yeni nesil sorular,
+        <span class="ods-dims">1B - 2B - 3B - 4B</span>
+      </li>
+      <li>
+        <strong>PISA destekli</strong> yeni nesil sorular; bilgi düzeyini ölçen 1B-2B, yorum ve muhakeme yeteneğini ölçen 3B, özgün düşünmeyi ölçen 4B soruları,
+      </li>
+      <li>
+        <strong>Eğitim Müfredatı</strong> esas alınarak kazanım numaralarına göre eşleştirilen beceri temelli sorular; DKS Multi Set ile «Kazanım Ölçme Testleri» ve «Sarmal Testler»,
+      </li>
+      <li>
+        <strong>Dijital içerik</strong> ile konu anlatım videoları, çözüm videoları, interaktif testler ve akıllı tahta uyumlu dijital kitaplar; öğrenme çıktılarının ve kazanım düzeyinin analizi,
+      </li>
+      <li>
+        <strong>Raporlama</strong> ile çözülen testlerin sonuçlarını, net puanını, başarı yüzdesini ve <strong>Eğitim Müfredatı</strong>'na göre kazanım analiz raporlarını detaylı olarak sunma,
+      </li>
+    </ul>
+
+    <div class="ods-cards" role="list">
+      <article class="ods-card" role="listitem">
+        <div class="ods-card-icon" aria-hidden="true"><i class="fas fa-layer-group"></i></div>
+        <h4>4 Boyutlu Sorular</h4>
+        <p>Hatırlama-anlamadan özgün düşünmeye uzanan 1B–4B soru sınıflandırması ile adım adım sınav hazırlığı.</p>
+      </article>
+      <article class="ods-card" role="listitem">
+        <div class="ods-card-icon" aria-hidden="true"><i class="fas fa-globe"></i></div>
+        <h4>PISA Destekli İçerik</h4>
+        <p>Yorum, muhakeme ve özgün düşünme becerilerini ölçen yeni nesil soru formatları.</p>
+      </article>
+      <article class="ods-card" role="listitem">
+        <div class="ods-card-icon" aria-hidden="true"><i class="fas fa-chart-bar"></i></div>
+        <h4>AKOD ve Kazanım Analizi</h4>
+        <p>Anında dijital karne, kazanım listesi ve çalışılması gereken konulara akıllı yönlendirme.</p>
+      </article>
+    </div>
+  </section>
+
+  <div class="ods-section-divider" aria-hidden="true">
+    <hr>
+    <h3>Öykümatik — Hikâye Ölçme ve Değerlendirme Sistemi</h3>
+  </div>
+
+  <section class="ods-section ods-section--story" aria-labelledby="ods-story-title">
+    <span class="ods-badge ods-badge--story"><i class="fas fa-book-open" aria-hidden="true"></i> Hikâye Müfredatı</span>
+    <p class="ods-slogan">
+      Türkiye'de ilk ve tek Damla Yayın Kurulu Tarafından Geliştirilen <strong>Hikâye Müfredatı</strong>
+    </p>
+
+    <h3 id="ods-story-title">Öykümatik — Hikâye Ölçme ve Değerlendirme Sistemi Nedir?</h3>
+    <p>
+      Damla Yayın Kurulu tarafından Türkçe programı baz alınarak geliştirilern <strong>4 Katmanlı Beceri Temelli Hikâye Müfredatı,</strong> kavramsal ve bilişsel süreçlere göre hazırlanmış 4 boyutlu sorular ve kazanım analizi sunan bir ölçme ve değerlendirme sistemidir.
+    </p>
+
+    <h4>Hikâye Müfredatı</h4>
+    <p>
+      Kavramsal süreçlerin her biri (Olay örgüsü, zaman ve mekân, şahıs ve varlık kadrosu, dil ve anlatım) ayrı ayrı bilişsel süreçler (1D, 2D, 3D, 4D) ile birlikte kazanımlara ayrılmıştır. Yukarıda verilen kazanım kodunda;
+    </p>
+
+    <div class="ods-code-example" aria-label="Örnek hikâye kazanım kodu">
+      <ul>
+        <li><strong>H:</strong> Hikâye Değerlendirme Müfredatını,</li>
+        <li><strong>1. Kavramsal Süreçler:</strong> Olay Örgüsünü,</li>
+        <li><strong>2. Bilişsel Süreçler:</strong> 2D Uygulama (Bilgiyi kullanma) Basamağını,</li>
+        <li><strong>3. Kazanım Numarası:</strong> Olayları oluş sırasına göre yazar. Kazanımını ifade etmektedir.</li>
+      </ul>
+    </div>
+
+    <h4>Öykümatik — Hikâye Ölçme Değerlendirme Müfredatında Neler Var?</h4>
+    <ul class="ods-features">
+      <li>
+        <strong>Bilişsel süreçlere</strong> göre 4 boyutlu olarak sınıflandırılan yeni nesil sorular,
+        <span class="ods-dims">1D - 2D - 3D - 4D</span>
+      </li>
+      <li>
+        <strong>Kavramsal süreçlere</strong> uygun olarak 4 katmanda analiz edilen hikâyeler,
+        <span class="ods-dims">1K - 2K - 3K - 4K</span>
+      </li>
+      <li>
+        <strong>Hikâye Müfredatı</strong> esas alınarak kazanım numaralarına göre eşleştirilen beceri temelli sorular,
+      </li>
+      <li>
+        <strong>Sınav sistemi</strong> ile hikâye müfredatına göre hazırlanmış farklı seviyedeki sorularla okuduğunu anlama düzeyinin analizi,
+      </li>
+      <li>
+        <strong>Raporlama</strong> ile online çözülen testlerin sonuçlarını, net puanını, başarı yüzdesini ve <strong>Hikâye Müfredatı</strong>'na göre kazanım analiz raporları detaylı olarak sunulmaktadır.
+      </li>
+    </ul>
+  </section>
+
+  <section class="ods-cta" aria-labelledby="ods-cta-title">
+    <h3 id="ods-cta-title">Ölçme ve Değerlendirme Sistemine Erişin</h3>
+    <p>
+      Eğitim kitaplarımızdaki değerlendirme testlerine ürün sayfalarındaki HDS bağlantısından ulaşabilir; dijital içerik, interaktif testler ve kazanım analizi için E-Damla platformuna giriş yapabilirsiniz.
+    </p>
+    <div class="ods-cta-buttons">
+      <a class="ods-btn ods-btn--primary" href="https://e-damla.com.tr/site/login" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-sign-in-alt" aria-hidden="true"></i> Sisteme Giriş
+      </a>
+      <a class="ods-btn ods-btn--secondary" href="/urunler">
+        <i class="fas fa-book" aria-hidden="true"></i> Eğitim Kitaplarını İncele
+      </a>
+    </div>
+  </section>
+
+</div>
