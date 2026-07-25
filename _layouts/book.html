@@ -34,12 +34,7 @@ layout: default
                             <span class="conceptlist">
                             {% for bookconcept in book.concepts %}
                             {% unless bookconcept == "" %}
-                            {% assign siteconcept = site.concepts | where:"key", bookconcept | first %}
-                              {% if siteconcept %}
-                              <span class="concept">@{{ siteconcept.title | downcase }}</span>
-                              {% else %}
                               <span class="concept">@{{ bookconcept | downcase }}</span>
-                              {% endif %}
                             {% endunless %}
                             {% endfor %}
                             </span>

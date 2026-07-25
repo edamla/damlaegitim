@@ -32,8 +32,7 @@
         Beceri ve kavram alanları:
         {% for concept_key in b.concepts %}
           {% unless concept_key == "" %}
-            {% assign siteconcept = site.concepts | where: "key", concept_key | first %}
-            {% if siteconcept %}{{ siteconcept.title }}{% else %}{{ concept_key }}{% endif %}{% unless forloop.last %}, {% endunless %}
+            {{ concept_key }}{% unless forloop.last %}, {% endunless %}
           {% endunless %}
         {% endfor %}.
       {% endif %}
@@ -84,8 +83,7 @@
       Çoklu zekâ ve beceri alanları açısından bu ürün
       {% for concept_key in b.concepts %}
         {% unless concept_key == "" %}
-          {% assign siteconcept = site.concepts | where: "key", concept_key | first %}
-          {% if siteconcept %}{{ siteconcept.title }}{% else %}{{ concept_key }}{% endif %}{% unless forloop.last %}, {% endunless %}
+          {{ concept_key }}{% unless forloop.last %}, {% endunless %}
         {% endunless %}
       {% endfor %}
       boyutlarında öğrenci gelişimini destekler. Damla Yayınevi’nin pedagojik içerik üretim yaklaşımı,

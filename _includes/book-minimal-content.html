@@ -49,8 +49,9 @@
   <p>
     <strong>Beceri ve kavram alanları:</strong>
     {% for concept_key in b.concepts %}
-      {% assign siteconcept = site.concepts | where: "key", concept_key | first %}
-      {% if siteconcept %}{{ siteconcept.title }}{% else %}{{ concept_key }}{% endif %}{% unless forloop.last %}, {% endunless %}
+      {% unless concept_key == "" %}
+        {{ concept_key }}{% unless forloop.last %}, {% endunless %}
+      {% endunless %}
     {% endfor %}.
   </p>
   {% endif %}
