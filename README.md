@@ -241,12 +241,27 @@ Site hızı için uygulanan önlemler:
 
 | Alan | Uygulama |
 |------|----------|
-| Hero slider | `<picture>` + koşullu WebP, ilk slide preload, lazyload |
-| Kitap kapakları | `<picture>` + koşullu WebP, `loading="lazy"` |
+| Hero slider | Mobil-öncelik `<picture>` + koşullu WebP, mobil LCP preload (webp), `slider-init.js` defer |
+| Kitap kapakları | `<picture>` + koşullu WebP, `loading="lazy"`, `fetchpriority="low"` |
 | Arama | Lunr lazy-load; indeks `/assets/search-index.json` |
-| Scriptler | Bootstrap `defer`; `book-filter.js` yalnızca `/` ve `/urunler` |
+| Scriptler | Bootstrap `defer`; `book-filter.js` idle init (`requestIdleCallback`); tiny-slider defer |
+| CSS | `content-visibility` kitap grupları; `tiny-slider.css` anasayfa head'de |
 | Fontlar | Font Awesome yerel; Raykjavik WOFF2 subset (~26 KB) |
 | Instagram | Feed `IntersectionObserver` ile gecikmeli yüklenir |
+
+### Görsel politikası
+
+| İş | Araç |
+|----|------|
+| Resize / JPEG sıkıştırma | **Photoshop** (manuel) — ImageMagick ile resize yapılmaz |
+| jpg/png → webp | `scripts/generate_webp.sh` (`start.sh` hook) |
+| Boyut uyarısı | `scripts/check_images.sh` — dosyaya dokunmaz |
+
+Mobil slider `*m.jpg` hedefi: ≤ 120 KB (`sh scripts/check_images.sh slides`). Kod tarafında webp preload ve `<picture>` ile LCP iyileşir; kalıcı küçültme Photoshop ile yapılır.
+
+### Cloudflare mobil benchmark (referans)
+
+Mobil skor ~55; LCP ~11.5 s (büyük mobil jpeg preload + yanlış LCP kaynağı). Kod optimizasyonları: mobil webp preload, mobil-öncelik slider, defer JS, content-visibility. Retest: Cloudflare Speed Test mobil.
 
 ### Görsel kontrol scripti
 

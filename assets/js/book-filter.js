@@ -418,10 +418,18 @@ function bootBookFilters() {
     }
 }
 
+function scheduleBookFilters() {
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(bootBookFilters);
+    } else {
+        setTimeout(bootBookFilters, 1);
+    }
+}
+
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', bootBookFilters);
+    document.addEventListener('DOMContentLoaded', scheduleBookFilters);
 } else {
-    bootBookFilters();
+    scheduleBookFilters();
 }
 
 window.addEventListener('pageshow', function(event) {

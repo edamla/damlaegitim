@@ -71,8 +71,28 @@
 
     {% if page.url == "/" %}
     {% assign first_slide = site.slides | first %}
-    <link rel="preload" as="image" href="{{ site.baseurl }}/{{ first_slide.img }}" media="(min-width: 768px)" fetchpriority="high">
+    {% assign first_mobile_webp = first_slide.mobile-img | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.png', '.webp' %}
+    {% assign first_desktop_webp = first_slide.img | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.png', '.webp' %}
+    {% assign preload_mobile_webp = false %}
+    {% assign preload_desktop_webp = false %}
+    {% if site.data.webp_manifest and site.data.webp_manifest.assets contains first_mobile_webp %}
+      {% assign preload_mobile_webp = true %}
+    {% endif %}
+    {% if site.data.webp_manifest and site.data.webp_manifest.assets contains first_desktop_webp %}
+      {% assign preload_desktop_webp = true %}
+    {% endif %}
+    {% if preload_mobile_webp %}
+    <link rel="preload" as="image" href="{{ site.baseurl }}/{{ first_mobile_webp }}" type="image/webp" media="(max-width: 767px)" fetchpriority="high">
+    {% else %}
     <link rel="preload" as="image" href="{{ site.baseurl }}/{{ first_slide.mobile-img }}" media="(max-width: 767px)" fetchpriority="high">
+    {% endif %}
+    {% if preload_desktop_webp %}
+    <link rel="preload" as="image" href="{{ site.baseurl }}/{{ first_desktop_webp }}" type="image/webp" media="(min-width: 768px)" fetchpriority="high">
+    {% else %}
+    <link rel="preload" as="image" href="{{ site.baseurl }}/{{ first_slide.img }}" media="(min-width: 768px)" fetchpriority="high">
+    {% endif %}
+    <link rel="preload" href="{{ site.baseurl }}/assets/css/tiny-slider.css" as="style">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/tiny-slider.css">
     {% endif %}
 
     <link rel="preload" href="{{ site.baseurl }}/assets/fonts/raykjavik/reykjavik-rounded-regular.woff2"
@@ -145,6 +165,11 @@
 
     {% if page.url == "/" or page.url contains '/urunler' %}
     <script defer src="{{ site.baseurl }}/assets/js/book-filter.js?v={{ site.time | date: '%s' }}"></script>
+    {% endif %}
+
+    {% if page.url == "/" %}
+    <script defer src="{{ site.baseurl }}/assets/js/tiny-slider.js"></script>
+    <script defer src="{{ site.baseurl }}/assets/js/slider-init.js?v={{ site.time | date: '%s' }}"></script>
     {% endif %}
 
     {% include search-lunr.html %}
