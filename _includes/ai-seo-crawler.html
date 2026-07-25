@@ -1,0 +1,34 @@
+{% comment %}
+  Dinamik LLM/SEO crawler içeriği — tüm sayfalara default.html üzerinden eklenir.
+  CSS yalnızca bu include içinde; global dosyalara taşınmaz.
+{% endcomment %}
+<style>
+  .ai-seo-crawler {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>
+<aside class="ai-seo-crawler" aria-hidden="true" data-nosnippet>
+  {% if page.url contains '/urunler/' %}
+    {% if page.layout == 'book' or page.layout == 'previewbook' %}
+      {% include ai-seo-crawler-book.html %}
+    {% else %}
+      {% include ai-seo-crawler-generic.html %}
+    {% endif %}
+  {% elsif page.url == '/' %}
+    {% include ai-seo-crawler-home.html %}
+  {% elsif page.url == '/urunler' %}
+    {% include ai-seo-crawler-catalog.html %}
+  {% elsif page.url contains '/kataloglar' or page.layout == 'catalog' %}
+    {% include ai-seo-crawler-katalog.html %}
+  {% else %}
+    {% include ai-seo-crawler-generic.html %}
+  {% endif %}
+</aside>

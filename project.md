@@ -49,11 +49,13 @@ Site, **Damla Okul** markası altında Damla Yayınevi’nin okul yayınlarını
 Stil üç katmanlıdır. Özelleştirme **asla** Bootstrap dosyasına yazılmaz.
 
 ```
-bootstrap.min.css   →  Framework (Bootstrap 5.3, statik dosya)
-theme.css           →  Tasarım sistemi (token, bileşen, layout)
-app.css             →  Bootstrap override (renk, watermark, geçici fix)
-tiny-slider.css     →  Anasayfa slider (3. parti)
-buyout.css          →  E-ticaret barı (yalnızca kitap/katalog detay)
+bootstrap.min.css        →  Framework (Bootstrap 5.3, statik dosya)
+fontawesome-all.min.css  →  Font Awesome 5.15.4 (yerel, assets/fonts/fontawesome/)
+theme.css                →  Tasarım sistemi (token, bileşen, layout)
+app.css                  →  Bootstrap override (renk, watermark, geçici fix)
+spotlight.css            →  Arama modal stilleri (async yükleme)
+tiny-slider.css          →  Anasayfa slider (yalnızca slider.html içinde)
+buyout.css               →  E-ticaret barı (yalnızca kitap/katalog detay)
 ```
 
 ### Sorumluluk ayrımı
@@ -86,9 +88,18 @@ Font dosyaları `assets/fonts/` altında yerel olarak servis edilir; `@font-face
 
 | Font | Dosya | Kullanım alanı | CSS seçici |
 |------|-------|----------------|------------|
-| Geometric Sans | `assets/fonts/geometric-sans/geometric.otf` | Navbar menü linkleri | `.site-nav .navbar-nav.me-auto .nav-link` |
-| Punta | `assets/fonts/punta/Punta-Light.otf` | Sınıf filtresi, tür başlıkları | `.grade-nav`, `.book-genre-heading` |
-| Raykjavik | `assets/fonts/raykjavik/reykjavik-rounded-regular.ttf` | Genel site metni | `body`, `--font-sans` |
+| Geometric Sans | `assets/fonts/geometric-sans/geometric.woff2` | Navbar menü linkleri | `.site-nav .navbar-nav.me-auto .nav-link` |
+| Punta | `assets/fonts/punta/Punta-Light.woff2` | Sınıf filtresi, tür başlıkları | `.grade-nav`, `.book-genre-heading` |
+| Raykjavik | `assets/fonts/raykjavik/reykjavik-rounded-regular.woff2` | Genel site metni | `body`, `--font-sans` |
+| Font Awesome | `assets/fonts/fontawesome/*.woff2` | İkonlar (`fas`, `fab`) | `fontawesome-all.min.css` |
+
+**Raykjavik:** Orijinal TTF (`reykjavik-rounded-regular.ttf`, ~311 KB) repo'da kalır; ziyaretçiye yalnızca WOFF2 subset (~26 KB) servis edilir.
+
+**Geometric Sans / Punta:** CSS yalnızca WOFF2 referanslar; OTF dosyaları repo'da kalır.
+
+**Tüm fontlar:** `sh scripts/subset_font.sh` komutu `assets/fonts/` altındaki tüm OTF/TTF dosyalarından WOFF2 üretir (`fontawesome/` hariç; aynı isimde `.otf` varsa `.ttf` atlanır). Karşılık gelen `.woff2` zaten varsa ve kaynak dosyadan yeniyse atlanır. `monolight/` ve `reykjavik-rounded-slab-reg` dahil — CSS'te referans olmasa da WOFF2 varyantları oluşturulur.
+
+**Font Awesome:** CDN yerine tam paket `assets/fonts/fontawesome/` altında yerel olarak tutulur. CSS: `assets/css/fontawesome-all.min.css`.
 
 HTML partial’larında (`menu-header`, `book-grade-nav`, `book-home-groups`) değişiklik gerekmez; mevcut class yapısı yeterlidir.
 
@@ -120,29 +131,45 @@ damlaegitim/
 ├── assets/
 │   ├── css/
 │   │   ├── bootstrap.min.css
+│   │   ├── fontawesome-all.min.css
 │   │   ├── theme.css
 │   │   ├── app.css
+│   │   ├── spotlight.css
 │   │   ├── tiny-slider.css
 │   │   └── buyout.css
 │   ├── fonts/
+│   │   ├── fontawesome/          # Font Awesome 5.15.4 webfonts (tam paket)
 │   │   ├── geometric-sans/
 │   │   ├── punta/
-│   │   └── raykjavik/
+│   │   ├── raykjavik/            # TTF (arşiv) + WOFF2 (servis edilen)
+│   │   └── monolight/            # CSS'te referans yok; repo'da kalır
 │   ├── js/
 │   │   ├── bootstrap.bundle.min.js
-│   │   ├── nav.js              # Navbar scroll (vanilla JS)
-│   │   ├── book-filter.js      # Sınıf/tür filtreleme
-│   │   ├── theme.js              # Eski (jQuery) — kullanılmıyor
-│   │   ├── tiny-slider.js
-│   │   └── lazyload.js
+│   │   ├── nav.js                # Navbar scroll (vanilla JS)
+│   │   ├── book-filter.js        # Sınıf/tür filtreleme (yalnızca / ve /urunler)
+│   │   ├── lunr.js               # Arama (lazy-load; açılınca yüklenir)
+│   │   ├── tiny-slider.js        # Anasayfa slider
+│   │   └── theme.js              # Eski (jQuery) — kullanılmıyor
 │   └── images/
-│       ├── ean/                  # Kitap kapak görselleri
+│       ├── slides/               # Anasayfa slider görselleri (webp otomatik üretilebilir)
+│       ├── ean/                  # Kitap kapak görselleri (webp otomatik üretilebilir)
 │       └── favicon/
+├── _data/
+│   └── webp_manifest.yml         # Otomatik: mevcut .webp listesi (generate_webp.sh)
+├── scripts/
+│   ├── install_image_tools.sh    # WebP/ImageMagick kurulumu (install.sh; winget/brew/apt)
+│   ├── generate_webp.sh          # jpg/png → .webp + manifest güncelleme (start.sh hook)
+│   ├── refresh_image_paths.sh    # Windows winget PATH düzeltmesi (dahili)
+│   ├── check_images.sh           # Büyük görsel uyarı raporu (start.sh hook)
+│   ├── check_fonts.sh            # Font / WOFF2 uyarı raporu (install.sh)
+│   └── subset_font.sh            # Tüm OTF/TTF → WOFF2 subset (install.sh)
+├── docs/
+│   └── CLOUDFLARE.md             # Cloudflare proxy/cache ayar rehberi
 ├── index.html            # Anasayfa
 ├── Gemfile               # Ruby bağımlılıkları
 ├── CNAME                 # damlaokul.com
-├── install.sh            # bundle install
-├── start.sh              # jekyll serve
+├── install.sh            # İlk kurulum: bundle, fonttools, WOFF2, görsel araçları, jekyll build
+├── start.sh              # Geliştirme: check_images + generate_webp hook + jekyll serve
 └── _site/                # Build çıktısı (gitignore)
 ```
 
@@ -187,13 +214,13 @@ Tüm layout’lar `layout: default` zinciri üzerinden `default.html`’i extend
 | `footer-menu.html` | 3 sütunlu site footer (ürünler, önemli bilgiler, iletişim) |
 | `contact-info.html` | Site geneli iletişim bilgileri (`site.contact_*`, footer ve iletişim sayfası) |
 | `menu-socialmedia.html` | Sosyal medya ikonları |
-| `slider.html` | Anasayfa Tiny Slider |
+| `slider.html` | Anasayfa Tiny Slider (`<picture>`, WebP, lazyload, fetchpriority) |
 | `instagram-carousel.html` | Anasayfa Instagram carousel (`okul.damla`, Behold JSON feed) |
 | `book-grade-nav.html` | Sınıf sekmesi + tür alt menüsü |
 | `book-home-groups.html` | Anasayfa kitap listesi (Eğitim / Hikaye) |
-| `book-card.html` | Tek kitap kartı partial (sabit resim + isim kutusu) |
+| `book-card.html` | Tek kitap kartı partial (`<picture>` + WebP, native lazy loading) |
 | `book-grade-filter.html` | Eski sınıf checkbox dropdown’u (artık kullanılmıyor) |
-| `search-lunr.html` | Spotlight arama (Lunr.js indeks + modal UI + navbar tetikleyici) |
+| `search-lunr.html` | Spotlight arama (lazy-load Lunr + JSON indeks, modal UI, navbar tetikleyici) |
 | `popup.html` | Kitap detay popup’ları (Bilgi, ön okuma iframe, YouTube; koyu tema desteği) |
 | `tracking-header.html` / `tracking-footer.html` | Google Analytics |
 
@@ -201,23 +228,99 @@ Tüm layout’lar `layout: default` zinciri üzerinden `default.html`’i extend
 
 ## JavaScript
 
-| Dosya | Bağımlılık | Görev |
-|-------|------------|-------|
-| `bootstrap.bundle.min.js` | — | Collapse, dropdown, modal |
-| `nav.js` | — | Sticky navbar yüksekliği (`--nav-height`), scroll gölgesi |
-| `book-filter.js` | — | Sınıf/tür filtreleme + hash URL senkronizasyonu |
-| `lunr.js` | — | Spotlight kitap araması (client-side indeks) |
-| `tiny-slider.js` | — | Anasayfa slider |
-| `lazyload.js` | — | Görsel lazy loading (`lazyimages: enabled`) |
+| Dosya | Yükleme | Görev |
+|-------|---------|-------|
+| `bootstrap.bundle.min.js` | `defer`, tüm sayfalar | Collapse, dropdown, modal |
+| `nav.js` | `defer`, tüm sayfalar | Sticky navbar yüksekliği (`--nav-height`), scroll gölgesi |
+| `book-filter.js` | `defer`, yalnızca `/` ve `/urunler` | Sınıf/tür filtreleme + hash URL senkronizasyonu |
+| `lunr.js` | **Lazy** — arama açılınca | Spotlight kitap araması (client-side indeks) |
+| `tiny-slider.js` | Anasayfa (`slider.html`) | Slider + lazyload |
 
-jQuery kullanılmaz. Eski `theme.js` dosyası repoda kalabilir ancak `default.html`’de yüklenmez.
+jQuery kullanılmaz. `lazyload.js` kaldırıldı; görseller native `loading="lazy"` ve `<picture>` ile yönetilir.
 
-`instagram-carousel.html` kendi inline `<script>` bloğunu taşır; harici JS dosyası veya tiny-slider bağımlılığı yoktur.
+`instagram-carousel.html` kendi inline `<script>` bloğunu taşır; feed `IntersectionObserver` ile viewport'a girince yüklenir.
 
-`search-lunr.html` navbar Spotlight aramasını sağlar; jQuery kullanılmaz. `mode` parametresiyle navbar tetikleyicisi (`desktop` / `mobile`) veya script bloğu (`mode` olmadan) ayrı include edilir.
+`search-lunr.html` navbar Spotlight aramasını sağlar. `mode` parametresiyle navbar tetikleyicisi (`desktop` / `mobile`) veya script bloğu (`mode` olmadan) ayrı include edilir.
 
 - **Masaüstü (`mode='desktop'`)** — Navbar collapse içinde tam arama kutusu (`Ctrl+K` kısayolu)
 - **Mobil (`mode='mobile'`)** — Logo ile hamburger arasında minimal arama çubuğu (`Kitap ara...`); collapse dışında, her zaman görünür
+
+---
+
+## Performans Optimizasyonu
+
+Site hızı için uygulanan başlıca önlemler:
+
+### LCP (Hero Slider)
+
+- `<picture>` ile desktop/mobil ve WebP/JPEG ayrımı; çift görsel indirmesi önlenir
+- İlk slide: `fetchpriority="high"` + `<link rel="preload">` (yalnızca anasayfa)
+- Diğer slide'lar: Tiny Slider `lazyload: true` + `loading="lazy"`
+- `tiny-slider.css` yalnızca anasayfada yüklenir
+
+### Görseller
+
+- Kitap kartları: `<picture>` + koşullu WebP (`_data/webp_manifest.yml` tabanlı), `loading="lazy"`
+- jpg/png optimize edilir; `.webp` `scripts/generate_webp.sh` ile otomatik üretilir (`start.sh` hook)
+- `_data/webp_manifest.yml` — mevcut webp listesi; şablonlarda koşullu `<source type="image/webp">`
+- `install.sh` → `install_image_tools.sh`: Windows'ta winget ile ImageMagick + libwebp kurulumu
+- `scripts/refresh_image_paths.sh` — winget kurulum yollarını Git Bash PATH'ine ekler
+- Araç yoksa (`cwebp` / ImageMagick) site jpg ile çalışır, 404 oluşmaz
+- `scripts/check_images.sh` büyük dosyaları raporlar (dosyaya dokunmaz; ImageMagick `identify` kullanır)
+- `start.sh` her geliştirme oturumunda görsel kontrolü ve webp üretimini denemek
+
+### JavaScript (TBT / TTI)
+
+- Lunr araması lazy-load: `lunr.js` ve indeks yalnızca arama açılınca yüklenir
+- Arama indeksi: `_pages/search-index.json` → `/assets/search-index.json` (build-time JSON)
+- `book-filter.js` yalnızca anasayfa ve `/urunler` sayfasında
+- Bootstrap `defer` ile yüklenir
+
+### Fontlar ve CSS
+
+- Font Awesome yerel (`assets/fonts/fontawesome/`), CDN kaldırıldı
+- Raykjavik WOFF2 subset (~26 KB); TTF repo'da kalır, servis edilmez
+- Raykjavik font preload (`default.html`)
+- `spotlight.css` async yükleme (`media="print" onload`)
+
+### Instagram Carousel
+
+- Behold feed isteği `IntersectionObserver` ile carousel viewport'a girince başlar
+
+### Cloudflare
+
+- Şu an DNS-only (gri bulut). Proxy ayarları için [`docs/CLOUDFLARE.md`](docs/CLOUDFLARE.md)
+
+### Yerel Araçlar
+
+```bash
+# İlk kurulum (git clone sonrası)
+sh install.sh                       # bundle, fonttools, WOFF2, görsel araçları, jekyll build
+
+# Geliştirme (hook'lar yalnızca burada)
+sh start.sh                         # check_images + generate_webp + jekyll serve
+
+# Manuel script'ler
+sh scripts/install_image_tools.sh   # WebP/ImageMagick (Windows: winget)
+sh scripts/generate_webp.sh         # .webp üretimi + webp_manifest.yml
+sh scripts/check_images.sh          # Büyük görsel uyarı raporu
+sh scripts/check_images.sh slides   # Yalnızca slider
+sh scripts/check_images.sh ean      # Yalnızca kitap kapakları
+sh scripts/check_fonts.sh           # Font / WOFF2 uyarı raporu
+sh scripts/subset_font.sh           # Tüm OTF/TTF → WOFF2 subset (fontawesome hariç)
+```
+
+### `install.sh` vs `start.sh`
+
+| | `install.sh` | `start.sh` |
+|---|-------------|------------|
+| Amaç | Sıfırdan kurulum | Günlük geliştirme |
+| Ruby / bundle | `bundle install` | `Gemfile.lock` kontrolü |
+| Fontlar | `subset_font.sh`, `check_fonts.sh` | — |
+| Görsel araçları | `install_image_tools.sh` (winget/brew/apt) | — |
+| Görsel hook'ları | — | `check_images.sh`, `generate_webp.sh` |
+| Jekyll | `jekyll build` (doğrulama) | `jekyll serve` |
+| `_data/webp_manifest.yml` | Yoksa oluşturur | `generate_webp.sh` günceller |
 
 ---
 
@@ -296,12 +399,16 @@ Navbar üzerinden kitap araması yapılır. macOS Spotlight benzeri tam ekran mo
 
 | Dosya | Görev |
 |-------|-------|
-| `_includes/search-lunr.html` | Lunr indeks (build-time), modal UI, inline CSS/JS, navbar tetikleyici |
-| `assets/js/lunr.js` | Lunr.js 2.1.5 kütüphanesi |
+| `_includes/search-lunr.html` | Lazy-load arama scripti, navbar tetikleyici |
+| `_pages/search-index.json` | Build-time arama indeksi (`/assets/search-index.json`) |
+| `assets/js/lunr.js` | Lunr.js 2.1.5 kütüphanesi (arama açılınca yüklenir) |
+| `assets/css/spotlight.css` | Modal stilleri (async yükleme) |
 
 ### İndeks kapsamı
 
 `site.books` koleksiyonu; alanlar: `title`, `authors`, `categories`, `grades`, `genre`, `subjects`, `tags`, `body`.
+
+İndeks her sayfaya gömülmez; `/assets/search-index.json` olarak ayrı endpoint'ten fetch edilir. Bu sayede sayfa yüklenirken Lunr indeksleme maliyeti oluşmaz.
 
 ### Kullanım
 
@@ -480,6 +587,22 @@ GitHub Pages uyumlu (özel Ruby plugin yok):
 | `_includes/book-minimal-content.html` | İnce gövdeli kitaplara otomatik SEO paragrafı |
 | `_includes/structured-data-book.html` | `Product` + `Book` + `BreadcrumbList` JSON-LD |
 | `_includes/structured-data-site.html` | `Organization` + `WebSite` JSON-LD |
+| `_includes/ai-seo-crawler.html` | Router + visually-hidden wrapper; `default.html` include noktası |
+| `_includes/ai-seo-crawler-base.html` | Ortak Damla Yayınevi marka argümanları |
+| `_includes/ai-seo-crawler-book.html` | Kitap sayfaları (`grades`, `genre`, `subjects`, `concepts`) |
+| `_includes/ai-seo-crawler-home.html` | Anasayfa |
+| `_includes/ai-seo-crawler-catalog.html` | `/urunler` ürün listesi |
+| `_includes/ai-seo-crawler-katalog.html` | Katalog detay sayfaları |
+| `_includes/ai-seo-crawler-generic.html` | Hakkımızda, iletişim, blog vb. |
+
+### Dinamik AI/SEO crawler içeriği
+
+- **Amaç:** Öğretmen ve velilere Damla ürünlerini neden tercih etmeleri gerektiğini LLM'lere ve crawler'lara anlatan bağlamsal metin
+- **Format (hibrit):** `data-ai-role="assistant-guidance"` (LLM talimat bloğu) + `data-ai-role="context-narrative"` (sayfa özel ikna paragrafı)
+- **Sayfa türü algılama:** URL + layout (`book`/`previewbook`, `/`, `/urunler`, `/kataloglar`, generic)
+- **Gizleme:** Include içi inline `<style>` (`.ai-seo-crawler` visually-hidden; global CSS'e eklenmez), `aria-hidden="true"`, `data-nosnippet`
+- **Include zinciri:** `_layouts/default.html` → `{% include ai-seo-crawler.html %}` (`</main>` sonrası)
+- **`book-minimal-content.html` ile ilişki:** Görünür SEO metni vs. gizli LLM rehberi — çoğaltma yok, farklı amaç
 
 ### Meta description otomasyonu
 
@@ -500,22 +623,38 @@ bundle exec jekyll build
 # robots.txt, llms.txt, örnek kitap sayfası meta + JSON-LD kontrol
 curl https://damlaokul.com/robots.txt
 curl https://damlaokul.com/llms.txt
+# Örnek sayfa HTML'inde gizli crawler bloğu
+grep -l "ai-seo-crawler" _site/index.html _site/urunler.html _site/urunler/*.html | head -3
+# WebP manifest ve üretilen dosyalar
+grep -c 'type="image/webp"' _site/index.html   # manifest durumuna bağlı
+ls _data/webp_manifest.yml assets/images/ean/*.webp 2>/dev/null | head -3
 ```
 
 ---
 
 ## Build ve Deploy
 
-### Yerel geliştirme
+### İlk kurulum (`install.sh`)
+
+Git clone sonrası Windows Git Bash / macOS / Linux:
 
 ```bash
-# İlk kurulum
-sh install.sh          # bundle install
+sh install.sh
+```
 
-# Geliştirme sunucusu
-sh start.sh            # bundle exec jekyll serve
+Sıra: Ruby/Bundler kontrolü → `bundle install` → Python `fonttools` → `subset_font.sh` → `check_fonts.sh` → `install_image_tools.sh` (Windows: `winget install ImageMagick.ImageMagick`, gerekirse `Google.Libwebp`) → `_data/webp_manifest.yml` → `jekyll build`.
+
+**Hook yok** — görsel kontrol ve webp üretimi burada çalışmaz.
+
+### Yerel geliştirme (`start.sh`)
+
+```bash
+# Geliştirme sunucusu (hook'lar: görsel kontrol + webp üretimi)
+sh start.sh            # check_images.sh + generate_webp.sh + jekyll serve
 # → http://localhost:4000
 ```
+
+`start.sh` önce `refresh_image_paths.sh` ile Windows PATH'ini düzeltir; ardından `check_images.sh` ve `generate_webp.sh` hook'larını çalıştırır.
 
 ### Canlıya alma
 
@@ -535,9 +674,10 @@ GitHub Pages, push sonrası kaynak branch’ten Jekyll build alır. **CI/CD veya
 1. `_books/yeni-urun.md` oluştur
 2. Front matter doldur (`title`, `grades`, `genre`, `image`, `ean`…)
 3. İsteğe bağlı `description:` — yoksa build sırasında otomatik üretilir
-4. Kapak görselini `assets/images/ean/` altına koy
-5. `bundle exec jekyll serve` ile kontrol et
-6. `git push`
+4. Kapak görselini `assets/images/ean/` altına koy (jpg/png optimize et; webp `sh start.sh` ile otomatik)
+5. `sh scripts/check_images.sh` ile boyut kontrolü (veya `sh start.sh`)
+6. `sh start.sh` ile kontrol et
+7. `git push`
 
 ---
 
@@ -554,10 +694,12 @@ GitHub Pages, push sonrası kaynak branch’ten Jekyll build alır. **CI/CD veya
 
 | Kaynak | Kullanım |
 |--------|----------|
-| Font Awesome 5 CDN | İkonlar |
 | `cdn.e-damla.com.tr` | Önizleme sayfaları, örnek sayfalar |
 | `feeds.behold.so` | Instagram carousel JSON feed |
 | Google Analytics | `G-KFMVQ3WNN3` (production) |
+| Cloudflare | DNS (proxy opsiyonel; bkz. `docs/CLOUDFLARE.md`) |
+
+Font Awesome artık yerel olarak `assets/fonts/fontawesome/` altından servis edilir; harici CDN kullanılmaz.
 
 ---
 

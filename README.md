@@ -16,7 +16,8 @@ Yeni Maarif Modeline uygun eğitim setleri, hikaye kitapları ve kataloglar tek 
 - **3 sütunlu footer** — Ürünler, önemli bilgiler, iletişim ve sosyal medya
 - **Mobil uyumlu** — Bootstrap 5 responsive grid; hamburger menü alt satırda açılır
 - **Statik & hızlı** — Jekyll ile önceden derlenmiş HTML, GitHub Pages üzerinde yayın
-- **SEO & AI keşfi** — `robots.txt`, `llms.txt`, otomatik kitap meta description, Product JSON-LD
+- **Performans odaklı** — Lazy arama, yerel fontlar, `<picture>` + WebP, slider lazyload, koşullu script yükleme
+- **SEO & AI keşfi** — `robots.txt`, `llms.txt`, otomatik kitap meta description, Product JSON-LD, sayfa bağlamına göre dinamik LLM/SEO crawler içeriği (`ai-seo-crawler`)
 
 ## Teknoloji
 
@@ -24,8 +25,9 @@ Yeni Maarif Modeline uygun eğitim setleri, hikaye kitapları ve kataloglar tek 
 |--------|-----------|
 | Site motoru | Jekyll 4.x (Ruby) |
 | CSS framework | Bootstrap 5.3 |
-| Özel stiller | `theme.css` + `app.css` |
-| JavaScript | Vanilla JS (filtre, navbar, arama) + Bootstrap bundle + Lunr.js |
+| Özel stiller | `theme.css` + `app.css` + `fontawesome-all.min.css` |
+| JavaScript | Vanilla JS (filtre, navbar, arama) + Bootstrap bundle + Lunr.js (lazy) |
+| Fontlar | Yerel: Geometric Sans, Punta, Raykjavik (WOFF2), Font Awesome 5.15.4 |
 | Yayın | GitHub Pages |
 | İçerik | Markdown + YAML front matter |
 
@@ -35,10 +37,12 @@ Node.js veya npm **gerekmez**.
 
 ### Gereksinimler
 
-- Ruby 3.x
-- Bundler (`gem install bundler`)
+- Ruby 3.x ([RubyInstaller](https://rubyinstaller.org) — Windows Git Bash için Ruby + Devkit)
+- Bundler (`gem install bundler` — `install.sh` bunu da deneyebilir)
+- Python 3 (font WOFF2 subset için `fonttools`; `install.sh` kurar)
+- Opsiyonel: `cwebp` veya ImageMagick — Windows’ta `install.sh` winget ile otomatik kurmayı dener
 
-### Kurulum
+### Kurulum (ilk kez)
 
 ```bash
 git clone https://github.com/<org>/damlaegitim.git
@@ -46,15 +50,32 @@ cd damlaegitim
 sh install.sh
 ```
 
-### Yerel geliştirme
+`install.sh` — sıfırdan kurulum (hook yok):
+
+1. Ruby / Bundler kontrolü
+2. `bundle install`
+3. Python `fonttools` + `brotli`
+4. WOFF2 font dönüşümü (`subset_font.sh` — mevcut woff2 güncel ise atlanır)
+5. Font boyut kontrolü (`check_fonts.sh`)
+6. Görsel araçları (`install_image_tools.sh` — Windows: winget ImageMagick + libwebp)
+7. `_data/webp_manifest.yml` yoksa oluşturma
+8. `jekyll build` ile kurulum doğrulama
+
+### Yerel geliştirme (kurulum sonrası)
 
 ```bash
 sh start.sh
 ```
 
+`start.sh` — geliştirme hook'ları + sunucu:
+
+1. Büyük görselleri raporlar (`check_images.sh`)
+2. Eksik WebP üretir (`generate_webp.sh`)
+3. `bundle exec jekyll serve`
+
 Tarayıcıda [http://localhost:4000](http://localhost:4000) adresini açın.
 
-Windows’ta Git Bash veya WSL ile `sh start.sh` çalıştırılabilir. Alternatif:
+Windows’ta Git Bash ile `sh install.sh` ve `sh start.sh` çalıştırılabilir. Alternatif:
 
 ```bash
 bundle exec jekyll serve
@@ -70,17 +91,38 @@ git push
 
 GitHub Pages otomatik olarak siteyi günceller.
 
+## Kurulum ve geliştirme script'leri
+
+| Script | Ne zaman | Görev |
+|--------|----------|-------|
+| [`install.sh`](install.sh) | İlk kez (`git clone` sonrası) | Ruby gems, fonttools, WOFF2 subset, görsel araçları (winget), `jekyll build` doğrulama — **hook yok** |
+| [`start.sh`](start.sh) | Her geliştirme oturumu | `check_images` + `generate_webp` hook'ları + `jekyll serve` |
+| [`scripts/install_image_tools.sh`](scripts/install_image_tools.sh) | `install.sh` içinden | Windows: winget ImageMagick + libwebp; macOS: brew; Linux: apt |
+| [`scripts/generate_webp.sh`](scripts/generate_webp.sh) | `start.sh` içinden | `ean/` ve `slides/` için eksik `.webp` üretir; `_data/webp_manifest.yml` günceller |
+| [`scripts/refresh_image_paths.sh`](scripts/refresh_image_paths.sh) | Dahili | Windows'ta winget kurulum yollarını PATH'e ekler |
+| [`scripts/check_images.sh`](scripts/check_images.sh) | `start.sh` içinden | Büyük görselleri raporlar (dosyaya dokunmaz) |
+| [`scripts/subset_font.sh`](scripts/subset_font.sh) | `install.sh` içinden | OTF/TTF → WOFF2 subset |
+| [`scripts/check_fonts.sh`](scripts/check_fonts.sh) | `install.sh` içinden | Font boyut uyarı raporu |
+
+Windows Git Bash'te sıfırdan kurulum: `sh install.sh` → geliştirme: `sh start.sh`.
+
 ## Proje Yapısı (özet)
 
 ```
 _books/          Ürünler (kitap / eğitim seti)
 _catalogs/       Kataloglar
-_pages/          Statik sayfalar (hakkımızda, iletişim, ürünler listesi)
+_data/           Jekyll data (webp_manifest.yml — otomatik)
+_pages/          Statik sayfalar + search-index.json
 _layouts/        HTML şablonları
-_includes/       Ortak bileşenler (menü, kart, filtre, arama)
-assets/css/      Stiller (bootstrap, theme, app)
-assets/js/       Script’ler
-assets/images/   Görseller ve kapaklar
+_includes/       Ortak bileşenler (menü, kart, filtre, arama, ai-seo-crawler)
+assets/css/      Stiller (bootstrap, fontawesome, theme, app, spotlight)
+assets/fonts/    Yerel fontlar (geometric-sans, punta, raykjavik, fontawesome)
+assets/js/       Script'ler
+assets/images/   Görseller, slider ve kapaklar (jpg/png; .webp otomatik üretilebilir)
+scripts/         Kurulum ve geliştirme araç script'leri (yukarıdaki tablo)
+install.sh       İlk kurulum
+start.sh         Geliştirme sunucusu + hook'lar
+docs/            CLOUDFLARE.md (proxy/cache rehberi)
 index.html       Anasayfa
 ```
 
@@ -94,8 +136,13 @@ Detaylı mimari için [project.md](project.md) dosyasına bakın.
 | `/llms.txt` | AI crawler'lar için site haritası |
 | `_includes/book-seo-tags.html` | Kitap sayfaları meta / Open Graph |
 | `_includes/structured-data-*.html` | schema.org JSON-LD |
+| `_includes/ai-seo-crawler.html` | Tüm sayfalara `default.html` üzerinden eklenen router; sayfa türüne göre partial seçer |
+| `_includes/ai-seo-crawler-*.html` | Kitap, anasayfa, katalog, katalog detay ve genel sayfa için hibrit içerik (LLM talimat + ikna metni) |
+| `_includes/ai-seo-crawler-base.html` | Ortak marka argümanları (1974, profesyonel kadro, Maarif Modeli) |
 
-Kitap `description:` alanı opsiyoneldir; boşsa başlık, sınıf ve türden otomatik üretilir. Doğrulama: `bundle exec jekyll build` sonrası `_site/robots.txt`, `_site/llms.txt` ve örnek kitap HTML'i kontrol edin.
+Dinamik AI/SEO crawler içeriği yalnızca arama motoru ve LLM crawler'ları için üretilir; include içi `<style>` ile visually-hidden + `aria-hidden` + `data-nosnippet` kullanılır (global CSS'e bağımlı değil). `book-minimal-content.html` **görünür** ince kitap metni sunar; `ai-seo-crawler` **gizli** LLM rehber talimatları içerir. `llms.txt` site haritası; `ai-seo-crawler` sayfa bazlı bağlam — ikisi birbirini tamamlar.
+
+Kitap `description:` alanı opsiyoneldir; boşsa başlık, sınıf ve türden otomatik üretilir. Doğrulama: `bundle exec jekyll build` sonrası `_site/robots.txt`, `_site/llms.txt`, örnek kitap HTML'i ve `.ai-seo-crawler` bloğu + `data-ai-role` attribute'ları kontrol edin.
 
 ## Yeni Ürün Ekleme
 
@@ -118,9 +165,10 @@ ean: 9786053832874
 
 `subjects` TEMALAR için, `concepts` çoklu zekâ / kavram etiketleri içindir. `concepts` alanına `_config.yml` anahtarı (`sozel-dilsel`) veya doğrudan metin (`Dil Bilim Gelişimi`) yazılabilir.
 
-3. Kapak görselini `assets/images/ean/` klasörüne ekleyin
-4. `bundle exec jekyll serve` ile önizleyin
-5. Commit ve push
+3. Kapak görselini `assets/images/ean/` klasörüne ekleyin (jpg/png optimize edin; `.webp` `sh start.sh` ile otomatik üretilir)
+4. `sh scripts/check_images.sh` ile boyut kontrolü yapın (veya `sh start.sh` — hook olarak çalışır)
+5. `sh start.sh` ile önizleyin
+6. Commit ve push
 
 ## Stil Düzenleme
 
@@ -129,8 +177,61 @@ ean: 9786053832874
 | Renk, font, spacing token’ları | `assets/css/theme.css` (`:root`) |
 | Yeni bileşen (kart, nav, vb.) | `assets/css/theme.css` |
 | Bootstrap renk / buton override | `assets/css/app.css` |
+| Font Awesome | `assets/css/fontawesome-all.min.css` + `assets/fonts/fontawesome/` |
+| Arama modal stilleri | `assets/css/spotlight.css` |
 
 Bootstrap’ın kendi dosyası (`bootstrap.min.css`) düzenlenmez.
+
+## Performans ve Görsel Optimizasyonu
+
+Site hızı için uygulanan önlemler:
+
+| Alan | Uygulama |
+|------|----------|
+| Hero slider | `<picture>` + koşullu WebP, ilk slide preload, lazyload |
+| Kitap kapakları | `<picture>` + koşullu WebP, `loading="lazy"` |
+| Arama | Lunr lazy-load; indeks `/assets/search-index.json` |
+| Scriptler | Bootstrap `defer`; `book-filter.js` yalnızca `/` ve `/urunler` |
+| Fontlar | Font Awesome yerel; Raykjavik WOFF2 subset (~26 KB) |
+| Instagram | Feed `IntersectionObserver` ile gecikmeli yüklenir |
+
+### Görsel kontrol scripti
+
+Görseller manuel optimize edilir. Script yalnızca büyük dosyaları raporlar:
+
+```bash
+sh scripts/check_images.sh          # Tüm klasörler
+sh scripts/check_images.sh slides   # Slider görselleri
+sh scripts/check_images.sh ean      # Kitap kapakları
+```
+
+### WebP otomatik üretim (hibrit)
+
+`assets/images/ean/` ve `assets/images/slides/` altındaki jpg/png dosyalarından eksik `.webp` varyantları üretilir; manifest [`_data/webp_manifest.yml`](_data/webp_manifest.yml) güncellenir. [`book-card.html`](_includes/book-card.html) ve [`slider.html`](_includes/slider.html) yalnızca manifest'te kayıtlı webp'ler için `<source type="image/webp">` ekler — araç veya dosya yoksa jpg/png ile devam eder, 404 oluşmaz.
+
+| Aşama | Ne yapar |
+|-------|----------|
+| `install.sh` | `install_image_tools.sh` — Windows'ta winget ile ImageMagick (`ImageMagick.ImageMagick`) ve gerekirse libwebp (`Google.Libwebp`) kurar |
+| `start.sh` | `generate_webp.sh` — eksik webp üretir, manifest günceller |
+| `refresh_image_paths.sh` | Winget kurulum yollarını Git Bash PATH'ine ekler |
+
+```bash
+sh scripts/generate_webp.sh         # Manuel çalıştırma
+sh start.sh                         # Geliştirme: check_images + generate_webp + jekyll serve
+```
+
+Araçlar: `cwebp` (libwebp) veya ImageMagick (`magick`). Kurulumda otomatik denenir; yoksa site jpg ile çalışır. Üretilen `.webp` dosyalarını commit etmek prod GitHub Pages için önerilir.
+
+### Font WOFF2 üretimi
+
+```bash
+pip install fonttools brotli   # bir kez
+sh scripts/subset_font.sh      # Tüm fontlar için WOFF2 oluşturur (fontawesome hariç)
+```
+
+### Cloudflare
+
+Site şu an Cloudflare DNS-only modunda. Proxy ve cache ayarları için [`docs/CLOUDFLARE.md`](docs/CLOUDFLARE.md).
 
 ## Instagram Carousel
 
@@ -163,9 +264,9 @@ Navbar’daki arama kutusu veya `Ctrl+K` / `⌘K` ile kitap araması açılır. 
 - **Masaüstü** — Navbar’da tam arama kutusu + `Ctrl+K`
 - **Mobil** — Logo ile hamburger menü arasında minimal `Kitap ara...` çubuğu (collapse dışında, her zaman görünür)
 
-- İndeks: `site.books` (başlık, yazar, kategori, sınıf, tür, etiket, içerik)
-- Dosya: [`_includes/search-lunr.html`](_includes/search-lunr.html)
-- Kütüphane: [`assets/js/lunr.js`](assets/js/lunr.js)
+- İndeks: `site.books` → build-time `/assets/search-index.json`
+- Lunr.js yalnızca arama açılınca yüklenir (sayfa yükü azaltılır)
+- Dosyalar: [`_includes/search-lunr.html`](_includes/search-lunr.html), [`_pages/search-index.json`](_pages/search-index.json), [`assets/js/lunr.js`](assets/js/lunr.js)
 
 ## Navbar
 
