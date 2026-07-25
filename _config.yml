@@ -41,7 +41,7 @@ pagepreview:
 
 examlink:
   enabled: true
-  prefix: 'https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/'
+  prefix: 'https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/'
   postfix: '/.pdf'
 
 include: ["_pages"]
