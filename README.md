@@ -35,12 +35,65 @@ Node.js veya npm **gerekmez**.
 
 ## Hızlı Başlangıç
 
-### Gereksinimler
+### Sistem gereksinimleri
 
-- Ruby 3.x ([RubyInstaller](https://rubyinstaller.org) — Windows Git Bash için Ruby + Devkit)
-- Bundler (`gem install bundler` — `install.sh` bunu da deneyebilir)
-- Python 3 (font WOFF2 subset için `fonttools`; `install.sh` kurar)
-- Opsiyonel: `cwebp` veya ImageMagick — Windows’ta `install.sh` winget ile otomatik kurmayı dener
+Yerel geliştirme için aşağıdaki ortam önerilir. Canlı site GitHub Pages üzerinde derlenir; prod için bu araçların sunucuda kurulu olması gerekmez.
+
+#### Tüm platformlar
+
+| Gereksinim | Zorunlu | Açıklama |
+|------------|---------|----------|
+| **Git** | Evet | Repoyu klonlamak ve sürüm kontrolü |
+| **Ruby 3.x** | Evet | Jekyll ve gem bağımlılıkları |
+| **Bundler** | Evet | `Gemfile` üzerinden gem kurulumu (`install.sh` eksikse kurar) |
+| **Python 3** + **pip** | Evet | Font WOFF2 subset (`fonttools`, `brotli` — `install.sh` kurar) |
+| **Bash** | Evet | `install.sh` / `start.sh` ve `scripts/*.sh` için |
+
+Node.js veya npm **gerekmez**.
+
+#### Windows (önerilen: Windows 10 ve üzeri)
+
+| Gereksinim | Zorunlu | Açıklama |
+|------------|---------|----------|
+| **Windows 10+** | Evet | Geliştirme ortamı hedefi |
+| **Git for Windows** | Evet | [git-scm.com](https://git-scm.com/) — **Git Bash** ile `sh install.sh` / `sh start.sh` |
+| **RubyInstaller** | Evet | [rubyinstaller.org](https://rubyinstaller.org/) — Ruby 3.x + **Devkit** (MSYS2) seçin; kurulumdan sonra Git Bash'i yeniden açın |
+| **winget** | Önerilen | Windows App Installer ile gelir; `install.sh` ImageMagick ve libwebp kurulumunda kullanır |
+| **ImageMagick** / **libwebp** | Opsiyonel | Yoksa `install.sh` winget ile kurmayı dener; başarısızsa site jpg/png ile çalışır |
+
+Windows'ta `winget` yoksa (eski Windows veya kurumsal kısıt): ImageMagick'i [imagemagick.org](https://imagemagick.org) üzerinden manuel kurun veya yalnızca jpg/png ile devam edin.
+
+```powershell
+# winget kurulu mu kontrol
+winget --version
+
+# Manuel kurulum (install.sh başarısızsa)
+winget install ImageMagick.ImageMagick
+winget install Google.Libwebp
+```
+
+#### macOS
+
+| Gereksinim | Zorunlu | Açıklama |
+|------------|---------|----------|
+| **Homebrew** | Önerilen | `install_image_tools.sh` → `brew install imagemagick` / `webp` |
+| **Ruby 3.x** | Evet | `brew install ruby` veya RubyInstaller benzeri |
+
+#### Linux
+
+| Gereksinim | Zorunlu | Açıklama |
+|------------|---------|----------|
+| **imagemagick**, **webp** paketleri | Önerilen | `install_image_tools.sh` → `sudo apt install imagemagick webp` (Debian/Ubuntu) |
+
+#### Özet: ne ne için?
+
+| Araç | Kullanım |
+|------|----------|
+| Ruby + Bundler | Jekyll build / serve |
+| Python + fonttools | `subset_font.sh` — OTF/TTF → WOFF2 |
+| winget (Windows) | `install_image_tools.sh` — ImageMagick + libwebp otomatik kurulum |
+| ImageMagick / cwebp | `generate_webp.sh` — jpg/png → WebP (`start.sh` hook) |
+| Git Bash | Windows'ta shell script'leri çalıştırma |
 
 ### Kurulum (ilk kez)
 
