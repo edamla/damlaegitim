@@ -253,15 +253,18 @@ Site hızı için uygulanan başlıca önlemler:
 
 ### LCP (Hero Slider)
 
-- `<picture>` ile desktop/mobil ve WebP/JPEG ayrımı; çift görsel indirmesi önlenir
-- İlk slide: `fetchpriority="high"` + `<link rel="preload">` (yalnızca anasayfa)
+- Mobil-öncelik `<picture>`: mobil webp/jpeg önce, desktop `min-width: 768px`
+- İlk slide `<img src>` mobil jpeg; `fetchpriority="high"`, `width`/`height` ipucu
+- Preload: mobil **webp** (`max-width: 767px`); desktop webp veya jpeg (`min-width: 768px`) — anasayfa head
+- `tiny-slider.js` + `slider-init.js` defer; inline init kaldırıldı
 - Diğer slide'lar: Tiny Slider `lazyload: true` + `loading="lazy"`
-- `tiny-slider.css` yalnızca anasayfada yüklenir
+- `tiny-slider.css` anasayfa head'de preload + link (body içi link yok)
 
 ### Görseller
 
-- Kitap kartları: `<picture>` + koşullu WebP (`_data/webp_manifest.yml` tabanlı), `loading="lazy"`
-- jpg/png optimize edilir; `.webp` `scripts/generate_webp.sh` ile otomatik üretilir (`start.sh` hook)
+- Kitap kartları: `<picture>` + koşullu WebP, `loading="lazy"`, `fetchpriority="low"`
+- jpg/png **Photoshop** ile optimize edilir (resize/sıkıştırma); ImageMagick resize kullanılmaz
+- `.webp` `scripts/generate_webp.sh` ile otomatik üretilir (`start.sh` hook)
 - `_data/webp_manifest.yml` — mevcut webp listesi; şablonlarda koşullu `<source type="image/webp">`
 - `install.sh` → `install_image_tools.sh`: Windows'ta winget ile ImageMagick + libwebp kurulumu
 - `scripts/refresh_image_paths.sh` — winget kurulum yollarını Git Bash PATH'ine ekler
@@ -273,7 +276,7 @@ Site hızı için uygulanan başlıca önlemler:
 
 - Lunr araması lazy-load: `lunr.js` ve indeks yalnızca arama açılınca yüklenir
 - Arama indeksi: `_pages/search-index.json` → `/assets/search-index.json` (build-time JSON)
-- `book-filter.js` yalnızca anasayfa ve `/urunler` sayfasında
+- `book-filter.js` yalnızca anasayfa ve `/urunler`; anasayfa init `requestIdleCallback` (fallback `setTimeout`)
 - Bootstrap `defer` ile yüklenir
 
 ### Fontlar ve CSS
@@ -282,6 +285,11 @@ Site hızı için uygulanan başlıca önlemler:
 - Raykjavik WOFF2 subset (~26 KB); TTF repo'da kalır, servis edilmez
 - Raykjavik font preload (`default.html`)
 - `spotlight.css` async yükleme (`media="print" onload`)
+- `.book-genre-group`: `content-visibility: auto` (below-fold paint maliyeti)
+
+### Cloudflare mobil benchmark (referans)
+
+Skor ~55; LCP ~11.5 s, TTI ~13.3 s (büyük mobil jpeg, senkron slider JS). Kod düzeltmeleri sonrası Cloudflare Speed Test ile mobil retest önerilir.
 
 ### Instagram Carousel
 

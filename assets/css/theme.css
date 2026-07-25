@@ -1364,6 +1364,8 @@ div.a2a_full_footer {display:none;}
 
 .book-genre-group {
   margin-bottom: 2rem;
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
 }
 
 .book-genre-heading {

@@ -1,17 +1,4 @@
-<link rel="stylesheet" href="{{site.baseurl}}/assets/css/tiny-slider.css">
-
-<style>
-    button[data-action="stop"] {
-    display: none;
-    }
-    button[data-action="start"] {
-    display: none;
-    }
-    
-</style>
-
 <div class="container remove-site-content-margin slider">
-
         <div class="base" id="base">
             {% for slide in site.slides %}
             {% assign img_webp = slide.img | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.png', '.webp' %}
@@ -32,53 +19,30 @@
                             {% endif %}
                             <source media="(max-width: 767px)" srcset="{{ site.baseurl }}/{{ slide.mobile-img }}">
                             {% if has_img_webp %}
-                            <source srcset="{{ site.baseurl }}/{{ img_webp }}" type="image/webp">
+                            <source media="(min-width: 768px)" srcset="{{ site.baseurl }}/{{ img_webp }}" type="image/webp">
                             {% endif %}
+                            <source media="(min-width: 768px)" srcset="{{ site.baseurl }}/{{ slide.img }}">
                             {% if forloop.first %}
                             <img class="w-100 img-fluid"
-                                 src="{{ site.baseurl }}/{{ slide.img }}"
+                                 src="{{ site.baseurl }}/{{ slide.mobile-img }}"
                                  alt="{{ slide.title }}"
-                                 width="1250"
-                                 height="504"
+                                 width="750"
+                                 height="600"
                                  fetchpriority="high"
                                  decoding="async">
                             {% else %}
                             <img class="tns-lazy-img w-100 img-fluid"
                                  data-src="{{ site.baseurl }}/{{ slide.img }}"
-                                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1250 504'%3E%3C/svg%3E"
+                                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 750 600'%3E%3C/svg%3E"
                                  alt="{{ slide.title }}"
-                                 width="1250"
-                                 height="504"
+                                 width="750"
+                                 height="600"
                                  loading="lazy"
                                  decoding="async">
                             {% endif %}
                         </picture>
                     </a>
             </div>
-            {% endfor %}   
+            {% endfor %}
         </div>
 </div>
-
-<!-- tiny slider -->
-<script src="{{site.baseurl}}/assets/js/tiny-slider.js"></script>
-
-<script>
-  var slider = tns({
-    container: '.base',
-    items: 1,
-    autoWidth: true,
-    slideBy: 'page',
-    mouseDrag: true,
-    swipeAngle: false,
-    loop: true,
-    autoplay: true,
-    speed: 400,
-    controls: false,
-    nav: false,
-    prevButton: false,
-    nextButton: false,
-    autoplayButton: false,
-    lazyload: true,
-    lazyloadSelector: '.tns-lazy-img'
-  });
-</script>
