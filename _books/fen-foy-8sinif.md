@@ -2,17 +2,14 @@
 layout: previewbook
 title:  "Yeni Nesil Fen Bilimleri Lgs Föyleri 8.Sınıf"
 
-image: assets/images/ean/9786051749419.jpg
 categories: [ "İlkokul" ]
 tags: [ "Okuma yazma, ilkokuma, yeni müfredat"]
 previewpage: false
-featured: false
-
 grades: [8]
 genre: education
 # Book attributes
 ean: 9786051749419
-languages: []
+languages: ["Türkçe"]
 page: 881
 size: "13,5x21cm"
 

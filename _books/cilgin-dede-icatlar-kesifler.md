@@ -5,8 +5,6 @@ title:  "Çılgın Dedemin Zaman Makinesi-İcatlar ve Keşifler (10 Kitap)"
 grades: [3, 4]
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["Zaman Mekan", "İcatlar ve Keşifler", "Tarih Bilinci", "Bilim Tarihi", "Merak ve Öğrenme"]
-image: assets/images/ean/9786053831952.jpg
-examimage: assets/images/ean/8697911217003.jpg
 examlink: icatlar-kesifler-y.pdf
 
 categories: [ "Öykümatik" ]
@@ -17,13 +15,14 @@ paper: "1. Hamur"
 
 # Book attributes
 ean: 9786053831952
-examean: 8697911217003
 review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053831952/index.html"
 languages: ["Türkçe"]
 page: Her Biri 64
 size: "14x20cm"
 publish-number: 1405
 cover: "Karton Kapak"
+
+youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---

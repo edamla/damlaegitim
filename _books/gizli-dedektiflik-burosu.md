@@ -5,8 +5,6 @@ grades: [4]
 genre: story
 concepts: [""]
 subjects: ["Akıl Yürütme", "Problem Çözme", "Takım Ruhu", "Gizem ve Macera", "Analitik Düşünme"]
-image: assets/images/ean/8697911223080.jpg
-examimage: assets/images/ean/8697911223080-1.jpg
 examlink: gizli-dedektiflik-y.pdf
 categories: [ "Çocuk", "Hikaye" ]
 tags: [ "hikaye"]
@@ -15,13 +13,14 @@ paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223080
-examean: 8697911223080
 review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223080/index.html"
 languages: ["Türkçe"]
 page: Her Biri 80
 size: "14x20cm"
 publish-number: 1463
 cover: "Karton Kapak"
+
+youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---

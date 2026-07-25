@@ -3,12 +3,8 @@
   Önkoşul: book_seo_description değişkeni atanmış olmalı.
 {% endcomment %}
 {% assign book_canonical = site.url | append: site.baseurl | append: page.url %}
-{% if page.image %}
-  {% if page.image contains "://" %}
-    {% assign book_og_image = page.image %}
-  {% else %}
-    {% assign book_og_image = site.url | append: site.baseurl | append: '/' | append: page.image %}
-  {% endif %}
+{% if page.ean and page.ean != '' %}
+  {% assign book_og_image = site.url | append: site.baseurl | append: '/assets/images/ean/' | append: page.ean | append: '.jpg' %}
 {% else %}
   {% assign book_og_image = site.url | append: site.logo %}
 {% endif %}

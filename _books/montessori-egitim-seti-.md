@@ -2,17 +2,14 @@
 layout: previewbook
 title:  "Montessori Eğitim Seti"
 
-image: assets/images/ean/8697911222755.jpg
 categories: [ "İlkokul" ]
 tags: [ "Okuma yazma, ilkokuma, yeni müfredat"]
 previewpage: false
-featured: false
-
 grades: [0]
 genre: education
 # Book attributes
-ean: 8697911222755-1
-languages: []
+ean: 8697911222755
+languages: ["Türkçe"]
 page: 881
 size: "13,5x21cm"
 

@@ -2,17 +2,14 @@
 layout: previewbook
 title:  "Arda ile Damla Eğitim Seti 2025-2026"
 
-image: assets/images/ean/869791122263.jpg
 categories: [ "İlkokul" ]
 tags: [ "Okuma yazma, ilkokuma, yeni müfredat"]
 previewpage: false
-featured: false
-
 grades: [1]
 genre: education
 # Book attributes
 ean: 869791122263
-languages: []
+languages: ["Türkçe"]
 page: 136
 size: "13,5x21cm"
 

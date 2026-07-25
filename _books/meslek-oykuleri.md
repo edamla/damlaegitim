@@ -5,8 +5,6 @@ grades: [2, 3]
 genre: story
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["Meslekleri Tanıma", "Birey ve Toplum", "Gelecek Planlama", "Toplumsal Farkındalık", "Çalışkanlık"]
-image: assets/images/ean/8697911222991.jpg
-examimage: assets/images/ean/8697911222991-1.jpg
 examlink: meslek-oykuleri-y.pdf
 categories: [ "Çocuk", "Hikaye" ]
 tags: [ "hikaye"]
@@ -15,13 +13,14 @@ paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911222991
-examean: 8697911222991
 review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911222991/index.html"
 languages: ["Türkçe"]
 page: Her Biri 48
 size: "14x20cm"
 publish-number: 2906
 cover: "Karton Kapak"
+
+youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---

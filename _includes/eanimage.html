@@ -1,0 +1,89 @@
+{% comment %}
+  EAN tabanlı kitap kapağı: assets/images/ean/{ean}.jpg|webp
+  Parametreler: book, ean, img_class, img_only=yes, width, height, loading, alt, ...
+  Not: Jekyll include'da class parametresi kullanılamaz (rezerve).
+{% endcomment %}
+{% assign ean_value = ean %}
+{% if ean_value == nil or ean_value == '' %}
+  {% if book and book.ean %}
+    {% assign ean_value = book.ean %}
+  {% endif %}
+{% endif %}
+
+{% assign book_cover_available = false %}
+{% assign book_cover_has_jpg = false %}
+{% assign book_cover_has_webp = false %}
+{% assign book_cover_jpg = '' %}
+{% assign book_cover_webp = '' %}
+{% assign book_cover_src = '' %}
+{% assign book_cover_manifest_webp = false %}
+
+{% if ean_value and ean_value != '' %}
+  {% assign book_cover_jpg = 'assets/images/ean/' | append: ean_value | append: '.jpg' %}
+  {% assign book_cover_webp = 'assets/images/ean/' | append: ean_value | append: '.webp' %}
+
+  {% assign book_cover_rel = '/' | append: book_cover_jpg %}
+  {% assign book_cover_webp_rel = '/' | append: book_cover_webp %}
+
+  {% for static_file in site.static_files %}
+    {% if static_file.path == book_cover_rel %}
+      {% assign book_cover_has_jpg = true %}
+    {% endif %}
+    {% if static_file.path == book_cover_webp_rel %}
+      {% assign book_cover_has_webp = true %}
+    {% endif %}
+  {% endfor %}
+
+  {% if book_cover_has_jpg or book_cover_has_webp %}
+    {% assign book_cover_available = true %}
+  {% endif %}
+
+  {% if site.data.webp_manifest and site.data.webp_manifest.assets contains book_cover_webp %}
+    {% assign book_cover_manifest_webp = true %}
+  {% endif %}
+
+  {% if book_cover_has_jpg %}
+    {% assign book_cover_src = book_cover_jpg %}
+  {% elsif book_cover_has_webp %}
+    {% assign book_cover_src = book_cover_webp %}
+  {% endif %}
+{% endif %}
+
+{% unless url_only == true or url_only == 'true' %}
+  {% if book_cover_available %}
+    {% assign eanimage_img_class = img_class | default: eanimage_class %}
+    {% assign eanimage_img_only = img_only | default: eanimage_simple %}
+    {% assign eanimage_alt = alt %}
+    {% if eanimage_alt == nil or eanimage_alt == '' %}
+      {% if book and book.title %}
+        {% assign eanimage_alt = book.title %}
+      {% else %}
+        {% assign eanimage_alt = '' %}
+      {% endif %}
+    {% endif %}
+    {% if eanimage_img_only == 'yes' %}
+    <img{% if eanimage_img_class %} class="{{ eanimage_img_class }}"{% endif %}
+         src="{{ site.baseurl }}/{{ book_cover_src }}"
+         alt="{{ eanimage_alt }}"
+         {% if width %}width="{{ width }}" {% endif %}
+         {% if height %}height="{{ height }}" {% endif %}
+         {% if loading %}loading="{{ loading }}" {% endif %}
+         {% if fetchpriority %}fetchpriority="{{ fetchpriority }}" {% endif %}
+         {% if decoding %}decoding="{{ decoding }}" {% endif %}>
+    {% else %}
+    <picture class="d-block w-100">
+      {% if book_cover_manifest_webp %}
+      <source srcset="{{ site.baseurl }}/{{ book_cover_webp }}" type="image/webp">
+      {% endif %}
+      <img class="{% if eanimage_img_class %}{{ eanimage_img_class }} {% endif %}w-100"
+           src="{{ site.baseurl }}/{{ book_cover_src }}"
+           alt="{{ eanimage_alt }}"
+           {% if width %}width="{{ width }}" {% endif %}
+           {% if height %}height="{{ height }}" {% endif %}
+           {% if loading %}loading="{{ loading }}" {% endif %}
+           {% if fetchpriority %}fetchpriority="{{ fetchpriority }}" {% endif %}
+           {% if decoding %}decoding="{{ decoding }}" {% endif %}>
+    </picture>
+    {% endif %}
+  {% endif %}
+{% endunless %}

@@ -20,7 +20,8 @@
             {% for book in books %}
                 <div class="item">
                     <a class="item img book-{{forloop.index}}" href="{{ book.url }}">
-                        <img class="img-fluid h-25 slider-image cover-shadow" src="/{{ book.image }}" alt="{{ book.title }}">
+                        {% assign eanimage_class = "img-fluid h-25 slider-image cover-shadow" %}
+                        {% include eanimage.html book=book %}
                     </a>
                 </div>
             {% endfor %}   

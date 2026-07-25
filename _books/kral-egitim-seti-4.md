@@ -2,17 +2,14 @@
 layout: previewbook
 title:  "Kral Eğitim Seti 4.Sınıf"
 
-image: assets/images/ean/8697911221079.jpg
 categories: [ "İlkokul" ]
 tags: [ "Okuma yazma, ilkokuma, yeni müfredat"]
 previewpage: false
-featured: false
-
 grades: [4]
 genre: education
 # Book attributes
-ean: 8697911221079-1
-languages: []
+ean: 8697911221079
+languages: ["Türkçe"]
 page: 881
 size: "13,5x21cm"
 

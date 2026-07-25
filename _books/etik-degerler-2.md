@@ -6,8 +6,6 @@ grades: [2]
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["Hoşgörü", "Adalet", "Dostluk", "Özdenetim", "Toplumsal Sorumluluk"]
 
-image: assets/images/ean/8697911223875.jpg
-examimage: assets/images/ean/8697911223875-1.jpg
 examlink: etik-degerler2-y.pdf
 
 categories: [ "Öykümatik" ]
@@ -18,13 +16,14 @@ paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223875
-examean: 8697911223875
 review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223875/index.html"
 languages: ["Türkçe"]
 page: Her Biri 24
 size: "23,5x16,5cm"
 publish-number: 1817
 cover: "Karton Kapak"
+
+youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---

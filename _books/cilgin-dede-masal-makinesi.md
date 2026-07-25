@@ -8,8 +8,6 @@ concepts: ["Dil Bilim","Milli Kültür","Zaman Mekan","Anadolu Kültürü"]
 
 
 
-image: assets/images/ean/8697911223950.jpg
-examimage: assets/images/ean/8697911223950-1.jpg
 examlink: masal-makinesi-y.pdf
 
 categories: [ "Öykümatik" ]
@@ -20,7 +18,6 @@ previewpage: true
 
 # Book attributes
 ean: 9786053838340
-examean: 8697911223950
 review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053838340/index.html"
 languages: ["Türkçe"]
 page: Heri biri 48 Sayfa
@@ -28,6 +25,8 @@ size: 14x20 cm
 publish-number: 1892
 cover: "Karton Kapak"
 paper: "1. Hamur"
+
+youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---

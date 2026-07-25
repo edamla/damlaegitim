@@ -5,8 +5,6 @@ grades: [2, 3]
 genre: story
 concepts: [""]
 subjects: ["Değerler / Erdemler" ,  "Karakter Gelişimi"]
-image: assets/images/ean/9786053831181.jpg
-examimage: assets/images/ean/8697911210790.jpg
 examlink: erdemlerimizi-kesfedelim-y.pdf
 categories: [ "Çocuk", "Hikaye" ]
 tags: [ "hikaye"]
@@ -15,13 +13,14 @@ paper: "1. Hamur"
 
 # Book attributes
 ean: 9786053831181
-examean: 8697911210790
 review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053831181/mobile/index.html"
 languages: ["Türkçe"]
 page: Her Biri 48
 size: "14x20cm"
 publish-number: 1335
 cover: "Karton Kapak"
+
+youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---

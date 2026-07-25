@@ -5,8 +5,6 @@ title:  "O BİR DAHİ (10 KİTAP)"
 grades: [3, 4]
 concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
 subjects: ["Biyografi", "İlham Veren Hayatlar", "Azim ve Kararlılık", "Bilimsel Keşifler", "Başarı Hikayeleri"]
-image: assets/images/ean/8697911223516.jpg
-examimage: assets/images/ean/8697911223516-1.jpg
 examlink: o-bir-dahi-y.pdf
 
 categories: [ "Öykümatik" ]
@@ -17,13 +15,14 @@ paper: "1. Hamur"
 
 # Book attributes
 ean: 8697911223516
-examean: 8697911223516
 review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223516/index.html"
 languages: ["Türkçe"]
 page: Her Biri 80
 size: "14x20cm"
 publish-number: 3269
 cover: "Karton Kapak"
+
+youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
