@@ -163,8 +163,6 @@ damlaegitim/
 │   ├── check_images.sh           # Büyük görsel uyarı raporu (start.sh hook)
 │   ├── check_fonts.sh            # Font / WOFF2 uyarı raporu (install.sh)
 │   └── subset_font.sh            # Tüm OTF/TTF → WOFF2 subset (install.sh)
-├── docs/
-│   └── CLOUDFLARE.md             # Cloudflare proxy/cache ayar rehberi
 ├── index.html            # Anasayfa
 ├── Gemfile               # Ruby bağımlılıkları
 ├── CNAME                 # damlaokul.com
@@ -297,7 +295,7 @@ Skor ~55; LCP ~11.5 s, TTI ~13.3 s (büyük mobil jpeg, senkron slider JS). Kod 
 
 ### Cloudflare
 
-- Şu an DNS-only (gri bulut). Proxy ayarları için [`docs/CLOUDFLARE.md`](docs/CLOUDFLARE.md)
+- Şu an DNS-only (gri bulut); proxy veya cache ayarı bu repoda dokümante edilmez.
 
 ### Yerel Araçlar
 
@@ -368,10 +366,7 @@ Masaüstünde (`≥992px`) `.site-nav__bar` için `display: contents` kullanıl�
 | `subjects` | `#etiket` | Yeşil metin (`--color-primary`), silik gri pill arka plan |
 | `concepts` | `@etiket` | Turuncu metin (`#c88400`), silik gri pill arka plan |
 
-`concepts` iki biçimi destekler:
-
-1. **Anahtar** — `_config.yml` → `concepts` listesindeki `key` (ör. `sozel-dilsel` → `@sözel-dilsel`)
-2. **Serbest metin** — Anahtar eşleşmezse yaml’daki metin doğrudan gösterilir (ör. `@dil bilim gelişimi`)
+`concepts` her kitabın kendi front matter’ında tanımlanır; merkezi bir `_config.yml` eşlemesi yoktur. Yaml’daki metin `@` önekiyle küçük harfe çevrilerek gösterilir (ör. `Dil Bilim` → `@dil bilim`).
 
 ### Metadata listesi
 
@@ -524,7 +519,7 @@ title: "Deyim Öyküleri 5 Kitap"
 grades: [3]
 genre: story          # education | story
 subjects: ["Değerler Eğitimi", "Macera", "Gizem"]   # yeşil # etiketler
-concepts: ["sozel-dilsel", "icsel"]                 # turuncu @ etiketler (anahtar veya serbest metin)
+concepts: ["Dil Bilim", "Milli Kültür", "Zaman Mekan"]   # turuncu @ etiketler (kitap front matter)
 categories: ["Çocuk", "Hikaye"]
 previewpage: true
 ean: 9786053832874
@@ -705,7 +700,7 @@ GitHub Pages, push sonrası kaynak branch’ten Jekyll build alır. **CI/CD veya
 | `cdn.e-damla.com.tr` | Önizleme sayfaları, örnek sayfalar |
 | `feeds.behold.so` | Instagram carousel JSON feed |
 | Google Analytics | `G-KFMVQ3WNN3` (production) |
-| Cloudflare | DNS (proxy opsiyonel; bkz. `docs/CLOUDFLARE.md`) |
+| Cloudflare | DNS (şu an proxy kapalı — gri bulut) |
 
 Font Awesome artık yerel olarak `assets/fonts/fontawesome/` altından servis edilir; harici CDN kullanılmaz.
 

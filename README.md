@@ -175,7 +175,6 @@ assets/images/   Görseller, slider ve kapaklar (jpg/png; .webp otomatik üretil
 scripts/         Kurulum ve geliştirme araç script'leri (yukarıdaki tablo)
 install.sh       İlk kurulum
 start.sh         Geliştirme sunucusu + hook'lar
-docs/            CLOUDFLARE.md (proxy/cache rehberi)
 index.html       Anasayfa
 ```
 
@@ -209,13 +208,13 @@ title: "Ürün Adı"
 grades: [1, 2]
 genre: education
 subjects: ["Değerler Eğitimi", "Macera"]     # yeşil # etiketler (detay sayfası üstü)
-concepts: ["sozel-dilsel", "icsel"]           # turuncu @ etiketler (anahtar veya serbest metin)
+concepts: ["Dil Bilim", "Milli Kültür"]       # turuncu @ etiketler (kitap front matter)
 ean: 9786053832874
 ---
 Ürün açıklaması buraya...
 ```
 
-`subjects` TEMALAR için, `concepts` çoklu zekâ / kavram etiketleri içindir. `concepts` alanına `_config.yml` anahtarı (`sozel-dilsel`) veya doğrudan metin (`Dil Bilim Gelişimi`) yazılabilir.
+`subjects` TEMALAR için, `concepts` çoklu zekâ / kavram etiketleri içindir. Her ikisi de yalnızca kitap front matter’ında tanımlanır; gösterilecek metni doğrudan yazın (ör. `Dil Bilim`, `Milli Kültür`).
 
 3. Kapak görselini `assets/images/ean/{ean}.jpg` olarak ekleyin (jpg/png optimize edin; `.webp` `sh start.sh` ile otomatik üretilir)
 4. `sh scripts/check_images.sh` ile boyut kontrolü yapın (veya `sh start.sh` — hook olarak çalışır)
@@ -298,7 +297,7 @@ sh scripts/subset_font.sh      # Tüm fontlar için WOFF2 oluşturur (fontawesom
 
 ### Cloudflare
 
-Site şu an Cloudflare DNS-only modunda. Proxy ve cache ayarları için [`docs/CLOUDFLARE.md`](docs/CLOUDFLARE.md).
+Site şu an Cloudflare DNS-only modunda (gri bulut).
 
 ## Instagram Carousel
 
