@@ -528,7 +528,6 @@ concepts: ["sozel-dilsel", "icsel"]                 # turuncu @ etiketler (anaht
 categories: ["Çocuk", "Hikaye"]
 previewpage: true
 ean: 9786053832874
-review_link: "https://cdn.e-damla.com.tr/..."
 languages: ["Türkçe"]
 page: Her Biri 64
 size: "14x20cm"
@@ -538,6 +537,8 @@ cover: "Karton Kapak"
 ```
 
 Markdown gövdesi ürün açıklaması olarak `book.html` içindeki `.prose--display` alanında render edilir. `**TEMALAR:**` gibi kalın başlıklar ve madde listeleri bu alanda stillenir.
+
+Ön izleme URL’si frontmatter’da tutulmaz. `previewpage: true` ve `ean` olan kitaplarda `book.html`; `previewbook` layout’unda iframe, `_config.yml` içindeki `pagepreview.prefix` + `ean` + `pagepreview.postfix` ile üretilir.
 
 ---
 

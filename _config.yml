@@ -35,7 +35,7 @@ instagram_carousel:
   limit: 12
 
 pagepreview:
-  enabled: false
+  enabled: true
   prefix: 'https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/'
   postfix: '/index.html'
 
