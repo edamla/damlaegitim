@@ -2,9 +2,33 @@
    0. Fonts
    ══════════════════════════════════════ */
 @font-face {
-  font-family: "Geometric Sans";
-  src: url("../fonts/geometric-sans/geometric.woff2") format("woff2");
+  font-family: "Gelion";
+  src: url("../fonts/gelion/gelion-regular.woff2") format("woff2");
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gelion";
+  src: url("../fonts/gelion/gelion-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gelion";
+  src: url("../fonts/gelion/gelion-thin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gelion";
+  src: url("../fonts/gelion/gelion-medium.woff2") format("woff2");
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
@@ -37,7 +61,7 @@
   --color-border: #dee2e6;
   --color-surface: #fafafa;
   --color-footer-bg: #25272a;
-  --font-nav: "Geometric Sans", system-ui, sans-serif;
+  --font-nav: "Gelion", system-ui, sans-serif;
   --font-display: "Punta", sans-serif;
   --font-sans: "Raykjavik", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-serif: var(--font-sans);
