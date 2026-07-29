@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "FATİH’İN İSTANBUL RÜYASI"
+title:  "Fatih’in İstanbul Rüyası"
 
 grades: [5, 6, 7, 8]
 concepts: [ Dünya kuruldu kurulalı böyle bir şey ne duyulmuş ne de görülmüştü gemiler karadan yürütülüyor Haliçe iniyordu ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Talip Arışahin"]
 ean: 9786053839842
 languages: ["Türkçe"]
 page: 176 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

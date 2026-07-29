@@ -11,7 +11,7 @@ genre: education
 ean: parag-dilbil3
 languages: ["Türkçe"]
 page: 128
-size: "13,5x21cm"
+size: "13,5x21 cm"
 
 youtube:
 

@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "DEMİR PENÇE SUZİKO-1"
+title:  "Demir Pençe Suziko-1"
 
 grades: [5, 6, 7, 8]
 concepts: [ Kaz Dağlarının sisli zirvelerine düşen bir uçağın enkazından Afrikanın uçsuz bucaksız çöllerine uzanan nefes kesici bir serüven ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786051748610
 languages: ["Türkçe"]
 page: 176 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

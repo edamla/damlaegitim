@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "İNSAN NEYLE YAŞAR"
+title:  "İnsan Neyle Yaşar"
 
 grades: [5, 6, 7, 8]
 concepts: [ İnsanı ayakta tutan hayata bağlayan ve var eden o büyük sırrı keşfetmeye hazır mısınız ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["L. N. Tolstoy"]
 ean: 9786057490490
 languages: ["Türkçe"]
 page: 80 sayfa
-size: "12,5x19,5cm"
+size: "12,5x19,5 cm"
 publish-number: 
 cover: 
 

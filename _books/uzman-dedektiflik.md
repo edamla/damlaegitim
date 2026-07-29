@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "UZMAN DEDEKTİFLİK BÜROSU"
+title:  "Uzman Dedektiflik Bürosu"
 
 grades: [5, 6, 7, 8]
 concepts: [ Kış biterken açan mimozaların peşinde akıl dolu bilmecelerle örülmüşheyecan verici bir dedektiflik serüveni ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Esra Avgören"]
 ean: 9786254116414
 languages: ["Türkçe"]
 page: 136 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "SAVAŞ VE BARIŞ"
+title:  "Savaş Ve Barış"
 
 grades: [5, 6, 7, 8]
 concepts: [ Tarihin akışını değiştiren hırslar ve bu büyük fırtınanın ortasında kendi doğrularını arayan küçük hayatlar ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Tolstoy"]
 ean: 9786057490438
 languages: ["Türkçe"]
 page: 320 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

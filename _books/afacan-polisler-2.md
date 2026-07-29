@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "AFACAN POLİSLER-2"
+title:  "Afacan Polisler-2"
 
 grades: [5, 6, 7, 8]
 concepts: [ En güzel temizlik kirletmemektir ilkesiyle yola çıkan Afacanlar bu kez hem çevreyi hem de sanal dünyayı temizlemek için işbaşında ]
@@ -12,14 +12,14 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
+paper: "Kitap Kağıdı" 
 
 # Book attributes
 authors: ["Yavuz Ali Bilge"]
 ean: 9786254115974
 languages: ["Türkçe"]
 page: 160 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

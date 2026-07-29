@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "YUNUS EMRE DİVANI"
+title:  "Yunus Emre Divanı"
 
 grades: [5, 6, 7, 8]
 concepts: [ Yaratılanı Yaradandan ötürü sevmeyi öğreten sevelim sevilelim diyerek insanın terbiyesinde sevgiyi esas alan gönül insanının çağları aydınlatan eseri ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Yunus Emre"]
 ean: 9786057490452
 languages: ["Türkçe"]
 page: 208 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

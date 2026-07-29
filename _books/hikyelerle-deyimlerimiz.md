@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "HİKÂYELERLE DEYİMLERİMİZ"
+title:  "Hikâyelerle Deyimlerimiz"
 
 grades: [5, 6, 7, 8]
 concepts: [ Binlerce yıllık hafızamızın şifrelerini taşıyan sözcüklerin dilden dile dolaşan efsanevi öyküleri ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sevda Dıraga Canbaz"]
 ean: 9786053833789
 languages: ["Türkçe"]
 page: 160 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

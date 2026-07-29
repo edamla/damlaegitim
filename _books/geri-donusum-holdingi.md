@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "GERİ DÖNÜŞÜM HOLDİNGİ"
+title:  "Geri Dönüşüm Holdingi"
 
 grades: [5, 6, 7, 8]
 concepts: [ Çöpe atılan sadece bir kâğıt değil geleceğimizdi ta ki altı cesur yürek dünyayı dönüştürmeye karar verene dek ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786254113826
 languages: ["Türkçe"]
 page: 136 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

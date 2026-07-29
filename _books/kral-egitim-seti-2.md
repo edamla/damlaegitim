@@ -11,7 +11,7 @@ genre: education
 ean: 8697911221352
 languages: ["Türkçe"]
 page: 881
-size: "13,5x21cm"
+size: "13,5x21 cm"
 
 youtube: #https://www.youtube.com/watch?v=QRUbpgJeM0c
 

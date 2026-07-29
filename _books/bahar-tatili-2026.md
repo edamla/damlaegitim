@@ -11,7 +11,7 @@ genre: education
 ean: bahar-ara-tatil-2026
 languages: ["Türkçe"]
 page: 608
-size: "13,5x21cm"
+size: "13,5x21 cm"
 
 youtube:
 

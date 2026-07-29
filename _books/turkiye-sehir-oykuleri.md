@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "TÜRKİYE ŞEHİR ÖYKÜLERİ"
+title:  "Türkiye Şehir Öyküleri"
 
 grades: [5, 6, 7, 8]
 concepts: [ Anadolu insanı yerleştiği topraklara gönlünce isimler koymuş kimi bir olaydan kimi ise bir güzelden yadigâr kalmıştır ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786254116063
 languages: ["Türkçe"]
 page: 176 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

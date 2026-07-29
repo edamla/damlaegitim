@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "ÖZGÜRLÜĞÜN BEDELİ"
+title:  "Özgürlüğün Bedeli"
 
 grades: [5, 6, 7, 8]
 concepts: [ İyi bir adam olmak için çok çalış ama geçmişini nereden geldiğini unutma ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786053839729
 languages: ["Türkçe"]
 page: 128 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "HAYALET ADASININ LANETLİ HAZİNESİ"
+title:  "Hayalet Adasının Lanetli Hazinesi"
 
 grades: [5, 6, 7, 8]
 concepts: [ Bu enerji kaynağı kötü insanların eline geçtiği takdirde tüm gezegeni bir anda yok edecek güce de sahipmiş ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Necati Akbaba"]
 ean: 9786254110566
 languages: ["Türkçe"]
 page: 224 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

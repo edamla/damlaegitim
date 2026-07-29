@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "KİTAP KORSANLARININ PEŞİNDE"
+title:  "Kitap Korsanlarının Peşinde"
 
 grades: [5, 6, 7, 8]
 concepts: [ Kitap okuma tutkusunun adaleti sağlamak uğruna tehlikeli bir dedektiflik oyununa dönüştüğü soluksuz bir macera ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786051748122
 languages: ["Türkçe"]
 page: 200 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

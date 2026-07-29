@@ -45,7 +45,16 @@ layout: default
                             {% if book_youtube != '' and book_youtube contains 'http' %}
                             <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" target="_blank" href="{{ book_youtube }}" data-popup-type="youtube" data-popup-title="Tanıtım"><i class="fab fa-youtube fa-2x text-danger" aria-hidden="true"></i><span class="btn-sm">Tanıtım</span></a>
                             {% endif %}
+                            
+                            <!-- KATEGORİ ORTAOKUL İSE DOĞRUDAN DAMLA YAYINEVİ EAN ARAMASINA YÖNLENDİRME -->
+                            {% if book.categories contains "Ortaokul" and book.ean %}
+                            <a class="sscroll btn btn-light btn-sm fw-bold" href="https://www.damlayayinevi.com.tr/arama?q={{ book.ean }}" target="_blank"><i class="fas fa-info-circle fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">Bilgi</span></a>
+                            {% elsif book.categories contains "Ortaokul" and site.damlayayinevi.enabled == true and book.ean %}
+                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" href="#" data-popup-type="iframe" data-popup-url="{{ site.damlayayinevi.prefix }}{{ book.ean }}" data-popup-title="Ürün Bilgisi"><i class="fas fa-info-circle fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">Bilgi</span></a>
+                            {% else %}
                             <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" href="#" data-popup-type="info" data-popup-title="Ürün Tedarik Bilgisi"><i class="fas fa-info-circle fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">Bilgi</span></a>
+                            {% endif %}
+
                             {% if site.pagepreview.enabled and book.previewpage and book.ean %}
                             <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" target="_blank" href="{{ site.pagepreview.prefix }}{{ book.ean }}{{ site.pagepreview.postfix }}" data-popup-type="iframe" data-popup-title="İncele"><i class="fas fa-search fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">İncele</span></a>
                             {% endif %}
@@ -66,6 +75,22 @@ layout: default
                 <!-- Attribute list: -->
                 <div class="col-md-3 order-md-1">
                     <ul class="list-group book-meta mb-4">
+                        {% if book.authors %}
+                        <li class="list-group-item book-meta__item">
+                            <span class="book-meta__icon"><i class="fas fa-user-edit fa-lg text-primary"></i></span>
+                            <span class="book-meta__text"><span class="book-meta__label">Yazar:</span>
+                            {% for bookauthor in book.authors %}
+                            {% assign siteauthor = site.data.authors | where:"key", bookauthor | first %}
+                            {% if siteauthor %}
+                            <a href="{{ site.baseurl }}{{ siteauthor.url }}" class="author-link">{{ siteauthor.title }}</a>
+                            {% else %}
+                            <span class="author-link">{{ bookauthor }}</span>
+                            {% endif %}
+                            {% unless forloop.last %}, {% endunless %}
+                            {% endfor %}
+                            </span>
+                        </li>
+                        {% endif %}
                         {% if book.publish-number %}
                         <li class="list-group-item book-meta__item">
                             <span class="book-meta__icon"><i class="fas fa-fingerprint fa-lg text-dark"></i></span>
@@ -94,13 +119,6 @@ layout: default
                         </li>
                         {% endif %}
 
-                        {% if book.paper %}
-                        <li class="list-group-item book-meta__item">
-                            <span class="book-meta__icon"><i class="fas fa-scroll fa-lg text-secondary"></i></span>
-                            <span class="book-meta__text"><span class="book-meta__label">Kağıt Türü:</span> {{book.paper}}</span>
-                        </li>
-                        {% endif %}
-
                         {% if book.ean %}
                         <li class="list-group-item book-meta__item">
                             <span class="book-meta__icon"><i class="fas fa-barcode fa-lg text-dark"></i></span>
@@ -108,8 +126,15 @@ layout: default
                         </li>
                         {% endif %}
 
+                        {% if book.paper %}
+                        <li class="list-group-item book-meta__item">
+                            <span class="book-meta__icon"><i class="fas fa-scroll fa-lg text-secondary"></i></span>
+                            <span class="book-meta__text"><span class="book-meta__label">Kağıt Türü:</span> {{book.paper}}</span>
+                        </li>
+                        {% endif %}
 
-                      </ul>
+
+                    </ul>
     </div>
         <div class="col-md-9 order-md-2">
             <!-- Article -->

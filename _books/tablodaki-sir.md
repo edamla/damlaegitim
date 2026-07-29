@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "TABLODAKİ SIR"
+title:  "Tablodaki Sır"
 
 grades: [5, 6, 7, 8]
 concepts: [ Geçmişin karanlık sırları hiç beklenmedik ıssız bir dağ evinde gün yüzüne çıkıyor ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Mesut Turan"]
 ean: 9786051740935
 languages: ["Türkçe"]
 page: 312 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

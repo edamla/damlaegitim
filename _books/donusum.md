@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "DÖNÜŞÜM"
+title:  "Dönüşüm"
 
 grades: [5, 6, 7, 8]
 concepts: [ Gregor Samsa kasvetli düşlerden uyandığı bir sabah kendini yatağının üzerinde devasa bir böceğe dönüşmüş olarak buldu ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Franz Kafka"]
 ean: 9786057490483
 languages: ["Türkçe"]
 page: 80 sayfa
-size: "12,5x19,5cm"
+size: "12,5x19,5 cm"
 publish-number: 
 cover: 
 

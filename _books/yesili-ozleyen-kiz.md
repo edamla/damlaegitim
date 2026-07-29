@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "YEŞİLİ ÖZLEYEN KIZ"
+title:  "Yeşili Özleyen Kız"
 
 grades: [5, 6, 7, 8]
 concepts: [ Yeşilin binbir tonundan beton yığınlarının arasına sıkışan bir çocuğun doğaya ve özgürlüğe duyduğu yürek burkan özlem ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786053830726
 languages: ["Türkçe"]
 page: 160 sayfa
-size: "12,5x18,5cm"
+size: "12,5x18,5 cm"
 publish-number: 
 cover: 
 

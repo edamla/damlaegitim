@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "KAHRAMAN KANGAL ALABAŞ"
+title:  "Kahraman Kangal Alabaş"
 
 grades: [5, 6, 7, 8]
 concepts: [ Sadakati uğruna kilometrelerce yol kateden insanların vefasızlığına rağmen hayat kurtarmaktan vazgeçmeyen soylu bir Kangal köpeğinin hikâyesi ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786254116018
 languages: ["Türkçe"]
 page: 152 sayfa
-size: "12,5x18,5cm"
+size: "12,5x18,5 cm"
 publish-number: 
 cover: 
 

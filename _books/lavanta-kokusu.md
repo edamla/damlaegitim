@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "LAVANTA KOKUSU"
+title:  "Lavanta Kokusu"
 
 grades: [5, 6, 7, 8]
 concepts: [ İnsan köklerinden kopabilir mi sorusuna verilmiş en güçlü cevap Engellere ve yoksulluğa rağmen doğduğu topraklara sırtını dönmeyen bir genç kızın hikâyesi ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786053837190
 languages: ["Türkçe"]
 page: 176 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

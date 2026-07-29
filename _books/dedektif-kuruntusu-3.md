@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "DEDEKTİF KURUNTUSU-3"
+title:  "Dedektif Kuruntusu-3"
 
 grades: [5, 6, 7, 8]
 concepts: [ Gerçekler mi daha tehlikelidir yoksa zihnimizin bize oynadığı oyunlar mı]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Esra Avgören"]
 ean: 9786051740317
 languages: ["Türkçe"]
 page: 112 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

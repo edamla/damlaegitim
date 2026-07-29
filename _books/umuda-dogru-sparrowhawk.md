@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "UMUDA DOĞRU SPARROWHAWK"
+title:  "Umuda Doğru Sparrowhawk"
 
 grades: [5, 6, 7, 8]
 concepts: [ Savaşın yıkımına karşı umudun dostluğun ve sadakatin yeşerdiği nefes kesici bir macera ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Natasha Farrant"]
 ean: 9786254116155
 languages: ["Türkçe"]
 page: 272 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

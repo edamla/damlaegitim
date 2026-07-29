@@ -18,7 +18,7 @@ paper: "1. Hamur"
 ean: 8697911223875
 languages: ["Türkçe"]
 page: Her Biri 24
-size: "23,5x16,5cm"
+size: "23,5x16,5 cm"
 publish-number: 1817
 cover: "Karton Kapak"
 

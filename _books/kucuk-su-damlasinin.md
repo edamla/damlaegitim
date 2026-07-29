@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "KÜÇÜK SU DAMLASININ DÜNYA TURU"
+title:  "Küçük Su Damlasının Dünya Turu"
 
 grades: [5, 6, 7, 8]
 concepts: [ Buzdağlarından okyanuslara bulutlardan yeraltı nehirlerine uzanan asırlık bir seyahat ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786254116049
 languages: ["Türkçe"]
 page: 152 sayfa
-size: "12,5x18,5cm"
+size: "12,5x18,5 cm"
 publish-number: 
 cover: 
 

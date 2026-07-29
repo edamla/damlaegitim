@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "SAÇAKLI KIZ’IN PASAKLI GÜNLÜĞÜ-2"
+title:  "Saçaklı Kız’ın Pasaklı Günlüğü-2"
 
 grades: [5, 6, 7, 8]
 concepts: [ Şehrin gürültüsünden köyün huzuruna uzanan güvercinlerin ve yepyeni sırların havalandığı bol kahkahalı bir günlük ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Nur Dombaycı"]
 ean: 9786051746968
 languages: ["Türkçe"]
 page: 160 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

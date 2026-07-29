@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "SAÇAKLI KIZ’IN PASAKLI GÜNLÜĞÜ-1"
+title:  "Saçaklı Kız’ın Pasaklı Günlüğü-1"
 
 grades: [5, 6, 7, 8]
 concepts: [ Prenses masallarını unutun! Futbol aşığı biraz pasaklı ama kocaman yürekli Büş’ün komik ve samimi dünyasına hoş geldiniz. ]
@@ -12,14 +12,14 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
+paper: "Kitap Kağıdı" 
 
 # Book attributes
 authors: ["Nur Dombaycı"]
 ean: 9786051745176
 languages: ["Türkçe"]
 page: 128 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

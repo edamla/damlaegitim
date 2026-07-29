@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "KUKLACI"
+title:  "Kuklacı"
 
 grades: [5, 6, 7, 8]
 concepts: [ Kırgınlıklarını nakış nakış ahşaba işleyen bir adamın sanata ve hayata yeniden tutunma hikâyesi ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Kemalettin Tuğcu"]
 ean: 9786053834144
 languages: ["Türkçe"]
 page: 96 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

@@ -18,7 +18,7 @@ paper: "1. Hamur"
 ean: 9786053832768
 languages: ["Türkçe"]
 page: Her Bİri 64
-size: "14x20cm"
+size: "14x20 cm"
 publish-number: 1448
 cover: "Karton Kapak"
 

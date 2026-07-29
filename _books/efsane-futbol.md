@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "EFSANE FUTBOL TAKIMLARI"
+title:  "Efsane Futbol Takımları"
 
 grades: [5, 6, 7, 8]
 concepts: [ Meşin yuvarlağın peşinde sadece zaferleri değil bir milletin hüznünü bağımsızlığını ve şanlı direnişini keşfedin ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786254113062
 languages: ["Türkçe"]
 page: 120 sayfa
-size: "12,5x19,5cm"
+size: "12,5x19,5 cm"
 publish-number: 
 cover: 
 

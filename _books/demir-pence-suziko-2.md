@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "DEMİR PENÇE SUZİKO-2"
+title:  "Demir Pençe Suziko-2"
 
 grades: [5, 6, 7, 8]
 concepts: [ Bir yapay zekâ robotu ve üç cesur gencin dünyanın en soğuk kıtasına uzanan nefes kesen yolculuğu ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786051748832
 languages: ["Türkçe"]
 page: 168 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

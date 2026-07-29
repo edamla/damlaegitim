@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "DRON SAVAŞÇILARI-3"
+title:  "Dron Savaşçıları-3"
 
 grades: [5, 6, 7, 8]
 concepts: [ Lazer silahlı dronların retina taramalı gizli kasaların ve suç şebekelerinin çarpıştığı yüksek teknoloji ile donatılmış bir macera ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Necati Akbaba"]
 ean: 9786051749358
 languages: ["Türkçe"]
 page: 192 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

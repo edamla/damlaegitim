@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "RÜYA KOLONİSİ"
+title:  "Rüya Kolonisi"
 
 grades: [5, 6, 7, 8]
 concepts: [ Rüyalarınızın kâbusa dönüşmemesi için karanlıkta savaşan gizli kahramanlarla tanışmaya hazır mısınız ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Esra Avgören"]
 ean: 9786051741291
 languages: ["Türkçe"]
 page: 200 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

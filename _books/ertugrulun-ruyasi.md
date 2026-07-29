@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "ERTUĞRUL’UN RÜYASI"
+title:  "Ertuğrul’un Rüyası"
 
 grades: [5, 6, 7, 8]
 concepts: [ Orta Asyadan Söğüte uzanan aşiretten cihan devletine giden kutlu bir göçün ve dirilişin hikâyesi ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Talip Arışahin"]
 ean: 9786051745619
 languages: ["Türkçe"]
 page: 176 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

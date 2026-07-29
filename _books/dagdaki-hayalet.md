@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "DAĞDAKİ HAYALET"
+title:  "Dağdaki Hayalet"
 
 grades: [5, 6, 7, 8]
 concepts: [ Issız bir dağ evinde başlayan asılsız korkuların ormanın derinliklerinde gizlenen esrarengiz bir gerçeğe dönüştüğü nefes kesici bir serüven ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786051743035
 languages: ["Türkçe"]
 page: 208 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

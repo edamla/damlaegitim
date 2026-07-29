@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "ÇEVRECİ KARINCALAR"
+title:  "Çevreci Karıncalar"
 
 grades: [5, 6, 7, 8]
 concepts: [ Şehrin gri duvarları arasına sıkışmış ruhların doğanın sessiz kahramanlarıyla yeniden kucaklaşma hikâyesi ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786053830498
 languages: ["Türkçe"]
 page: 160 sayfa
-size: "12,5x18,5cm"
+size: "12,5x18,5 cm"
 publish-number: 
 cover: 
 

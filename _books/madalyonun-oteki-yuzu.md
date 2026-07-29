@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "MADALYONUN ÖTEKİ YÜZÜ"
+title:  "Madalyonun Öteki Yüzü"
 
 grades: [5, 6, 7, 8]
 concepts: [ Geçmişin karanlık sırları ve yarım bir madalyon Genç Hafiyeler Çetesi için tehlikeli macera şimdi başlıyor ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786053837176
 languages: ["Türkçe"]
 page: 160 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "MUCİT DEDE"
+title:  "Mucit Dede"
 
 grades: [5, 6, 7, 8]
 concepts: [ Sıra dışı icatların çılgın deneylerin ve sınır tanımayan bir hayal gücünün kapıları Mucit Dedenin atölyesinde açılıyor ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Nur Dombaycı"]
 ean: 9786254116469
 languages: ["Türkçe"]
 page: 136 sayfa
-size: "14x21cm"
+size: "14x21 cm"
 publish-number: 
 cover: 
 

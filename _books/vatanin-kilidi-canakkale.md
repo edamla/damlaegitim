@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "VATANIN KİLİDİ ÇANAKKALE"
+title:  "Vatanın Kilidi Çanakkale"
 
 grades: [5, 6, 7, 8]
 concepts: [ Oğlumun başındaki kınaları sormuşsunuz Biz vatana kurban ettiğimiz evladımızın başına kına yakarız kumandan Bunu böyle bilesiniz ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786053833154
 languages: ["Türkçe"]
 page: 176 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

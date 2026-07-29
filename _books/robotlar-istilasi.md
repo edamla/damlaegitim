@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "ROBOTLAR İSTİLASI"
+title:  "Robotlar İstilası"
 
 grades: [5, 6, 7, 8]
 concepts: [ Tüm evreni tehdit eden acımasız bir robot ordusuna karşı insanlığın tek umudu üç cesur çocuğun ellerinde ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Necati Akbaba"]
 ean: 9786254116025
 languages: ["Türkçe"]
 page: 200 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

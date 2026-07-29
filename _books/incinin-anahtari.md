@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "İNCİ’NİN ANAHTARI"
+title:  "İnci’nin Anahtarı"
 
 grades: [5, 6, 7, 8]
 concepts: [ Birine yardım etmek için sevgi ve inançtan başka hiçbir şeye ihtiyacınız yok ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Necati Akbaba"]
 ean: 9786254113000
 languages: ["Türkçe"]
 page: 160 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

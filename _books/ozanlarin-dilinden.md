@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "OZANLARIN DİLİNDEN ANADOLU"
+title:  "Ozanların Dilinden Anadolu"
 
 grades: [5, 6, 7, 8]
 concepts: [ Rüyalarında Kırklar meclisinden aşk badesi içip yâr uğruna yollara düşen Sümmanî ve Nihanînin mahşere kalan destansı sevdaları ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786051742687
 languages: ["Türkçe"]
 page: 200 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

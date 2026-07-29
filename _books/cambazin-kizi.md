@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "CAMBAZIN KIZI"
+title:  "Cambazın Kızı"
 
 grades: [5, 6, 7, 8]
 concepts: [ Hayatın ipinde dengede durmaya çalışan bir kız çocuğunun sevgisiz bir kalbi iyileştirme mucizesi ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Kemalettin Tuğcu"]
 ean: 9786051749617
 languages: ["Türkçe"]
 page: 80 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

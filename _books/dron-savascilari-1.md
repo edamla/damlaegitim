@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "DRON SAVAŞÇILARI-1"
+title:  "Dron Savaşçıları-1"
 
 grades: [5, 6, 7, 8]
 concepts: [ Okan Ümit ve Yarenin okul laboratuvarında başlayan masum çalışmaları gökyüzünde sınır tanımayan görünmez bir dron projesine dönüşüyor]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Necati Akbaba"]
 ean: 9786051748139
 languages: ["Türkçe"]
 page: 192 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

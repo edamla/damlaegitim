@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "BABA EVİ"
+title:  "Baba Evi"
 
 grades: [5, 6, 7, 8]
 concepts: [ Toprak sadece tohumu değil kırık bir kalbi ve dağılmış bir aileyi de yeşertebilir ]
@@ -12,14 +12,14 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
+paper: "Kitap Kağıdı" 
 
 # Book attributes
 authors: ["Kemalettin Tuğcu"]
 ean: 9786254113260
 languages: ["Türkçe"]
 page: 80 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 
