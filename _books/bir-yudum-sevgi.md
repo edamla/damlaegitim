@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "BİR YUDUM SEVGİ"
+title:  "Bir Yudum Sevgi"
 
 grades: [5, 6, 7, 8]
 concepts: [ Depremin bir gecede yerle bir ettiği hayatların ve enkaz altından çocuk yuvasına uzanan küçük bir kız çocuğunun yürek burkan sessiz çığlığı ]
@@ -12,14 +12,14 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
+paper: "Kitap Kağıdı" 
 
 # Book attributes
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786053839712
 languages: ["Türkçe"]
 page: 120 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

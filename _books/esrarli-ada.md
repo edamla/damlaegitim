@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "JULES VERNE Esrarlı Ada"
+title:  "Jules Verne Esrarlı Ada"
 
 grades: [5, 6, 7, 8]
 concepts: [ Fırtınanın ortasından hiçliğe düşen beş kazazede için hayatta kalmak, doğaya meydan okuyarak sıfırdan bir medeniyet kurmak  demekti. ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Jules Verne"]
 ean: 9786259895246
 languages: ["Türkçe"]
 page: 160 sayfa
-size: "12,5x19,5cm"
+size: "12,5x19,5 cm"
 publish-number: 
 cover: 
 

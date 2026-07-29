@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "BİR MİKROBUN GÜNLÜĞÜNDEN"
+title:  "Bir Mikrobun Günlüğünden"
 
 grades: [5, 6, 7, 8]
 concepts: [ Gözle görülmeyen bir düşmanın insan bedeninde kurduğu o karanlık krallığın sarsıcı günlüğü ]
@@ -12,14 +12,14 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
+paper: "Kitap Kağıdı" 
 
 # Book attributes
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786254116032
 languages: ["Türkçe"]
 page: 152 sayfa
-size: "12,5x18,5cm"
+size: "12,5x18,5 cm"
 publish-number: 
 cover: 
 

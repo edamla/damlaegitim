@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "HAVAYA UÇAN AT"
+title:  "Havaya Uçan At"
 
 grades: [5, 6, 7, 8]
 concepts: [ Bulutların ötesinde süzülen sihirli bir at denizleri aşan cesur bir gemici ve zekâsıyla krallara meydan okuyan bir çocuk ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Peyami Safa"]
 ean: 9789753812375
 languages: ["Türkçe"]
 page: 128 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

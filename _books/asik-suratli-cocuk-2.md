@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "ASIK SURATLI ÇOCUK-2"
+title:  "Asık Suratlı Çocuk-2"
 
 grades: [5, 6, 7, 8]
 concepts: [ Gıcırtılı Kasabanın huzuru çalınırken gizemi çözmek yine bizim asık suratlı kahramanımıza düşüyor ]
@@ -12,14 +12,14 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
+paper: "Kitap Kağıdı" 
 
 # Book attributes
 authors: ["Nur Dombaycı"]
 ean: 9786051748207
 languages: ["Türkçe"]
 page: 176 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

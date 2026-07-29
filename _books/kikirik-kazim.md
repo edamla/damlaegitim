@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "KİKİRİK KAZIM"
+title:  "Kikirik Kazım"
 
 grades: [5, 6, 7, 8]
 concepts: [ Diyetkolik bir anne rahat bir baba dâhi bir kız kardeş ve sınır tanımayan bir çocuğun bol kahkahalı serüveni ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786051748788
 languages: ["Türkçe"]
 page: 192 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

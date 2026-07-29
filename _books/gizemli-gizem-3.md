@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "GİZEMLİ GİZEM-3"
+title:  "Gizemli Gizem-3"
 
 grades: [5, 6, 7, 8]
 concepts: [ Sıradan bir Kapadokya tatili gökyüzüne süzülen bir balonla nasıl nefes kesici bir serüvene dönüşebilir ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Nehir Aydın Gökduman"]
 ean: 9786254115059
 languages: ["Türkçe"]
 page: 160 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

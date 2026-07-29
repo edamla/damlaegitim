@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "DEMİR PENÇE SUZİKO-4"
+title:  "Demir Pençe Suziko-4"
 
 grades: [5, 6, 7, 8]
 concepts: [ Göbeklitepenin kadim sırlarından Avrupanın ışıltılı sokaklarına uzanantarih ve teknolojinin harmanlandığı eşsiz bir keşif rotası ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786051749624
 languages: ["Türkçe"]
 page: 192 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

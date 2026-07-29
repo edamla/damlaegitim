@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "ZOYA’DAN KAÇIRILIŞ"
+title:  "Zoya’dan Kaçırılış"
 
 grades: [5, 6, 7, 8]
 concepts: [ Çılgın bir profesör cesur bir torun ve gizemlerle dolu Zoya gezegeni Galaksiler arası bilgi savaşı başlıyor ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786053836421
 languages: ["Türkçe"]
 page: 128 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

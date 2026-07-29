@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "SATRANÇ"
+title:  "Satranç"
 
 grades: [5, 6, 7, 8]
 concepts: [ Satranç hiçbir şey hesaplamayan bir matematikçi sanat eseri olmayan bir sanatçı ve cisimsiz bir bina gibidir ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Stefan Zweig"]
 ean: 9786057490476
 languages: ["Türkçe"]
 page: 80 sayfa
-size: "12,5x19,5cm"
+size: "12,5x19,5 cm"
 publish-number: 
 cover: 
 

@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "DEHLİZDEKİ SIR"
+title:  "Dehlizdeki Sır"
 
 grades: [5, 6, 7, 8]
 concepts: [ Tarihin karanlık tünellerinde adım adım ilerlerken gerçek hazinenin peşinde soluksuz bir serüven ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Necati Akbaba"]
 ean: 9786254115998
 languages: ["Türkçe"]
 page: 176 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

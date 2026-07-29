@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "SAFAHAT’TAN HİKÂYELER"
+title:  "Safahat’tan Hikâyeler"
 
 grades: [5, 6, 7, 8]
 concepts: [ Ne olursa olsun ümidimizi yitirmemeyi öğreten kalplere dokunan hikâyeler ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Emin Osman Uygur"]
 ean: 9786053830023
 languages: ["Türkçe"]
 page: 160 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

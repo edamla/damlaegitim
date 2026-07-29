@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "HACKER NİNE - 1"
+title:  "Hacker Nine - 1"
 
 grades: [5, 6, 7, 8]
 concepts: [ Oyun oynamayı bırak kendi oyununu yaz Pofuduk terlikli Hacker Nine ile dijital dünyanın sırlarını çözmeye hazır mısın ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Nur Dombaycı"]
 ean: 9786254113017
 languages: ["Türkçe"]
 page: 168 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

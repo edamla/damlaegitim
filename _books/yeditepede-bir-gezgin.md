@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "YEDİTEPEDE BİR GEZGİN"
+title:  "Yeditepede Bir Gezgin"
 
 grades: [5, 6, 7, 8]
 concepts: [ Almanyada doğup büyümüş bir gencin köklerine ve İstanbulun gizemli tarihine doğru çıktığı büyüleyici bir yolculuk ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786051740911
 languages: ["Türkçe"]
 page: 352 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

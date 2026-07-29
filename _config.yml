@@ -43,6 +43,10 @@ examlink:
   prefix: 'https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/'
   postfix: '/.pdf'
 
+damlayayinevi:
+  enabled: true
+  prefix: 'https://damlayayinevi.com/'
+
 include: ["_pages"]
 permalink: /:title/
 

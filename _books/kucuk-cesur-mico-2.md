@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "KÜÇÜK CESUR MİÇO-2"
+title:  "Küçük Cesur Miço-2"
 
 grades: [5, 6, 7, 8]
 concepts: [ Engin denizlerin zorlu sınavlarından geçen küçük bir miço şimdi usta bir denizci olma yolunda rüzgâra meydan okuyor ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786051742700
 languages: ["Türkçe"]
 page: 136 sayfa
-size: "12,5x18,5cm"
+size: "12,5x18,5 cm"
 publish-number: 
 cover: 
 

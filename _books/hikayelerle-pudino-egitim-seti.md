@@ -11,7 +11,7 @@ genre: education
 ean: 9786059656344
 languages: ["Türkçe"]
 page: 608
-size: "13,5x21cm"
+size: "13,5x21 cm"
 
 youtube:
 

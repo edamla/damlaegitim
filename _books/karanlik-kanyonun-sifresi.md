@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "KARANLIK KANYON’UN ŞİFRESİ"
+title:  "Karanlık Kanyon’un Şifresi"
 
 grades: [5, 6, 7, 8]
 concepts: [ Biliriz ki bir gün bir at bizi alıp da uzaklara Allahuekber Dağlarının doruğuna götürecek ve orada şahlanıp kişnediği zaman dedemin bütün silah arkadaşları huzura kavuşacak ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786053836414
 languages: ["Türkçe"]
 page: 208 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

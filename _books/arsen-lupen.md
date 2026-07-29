@@ -12,14 +12,14 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
+paper: "Kitap Kağıdı" 
 
 # Book attributes
 authors: ["Peyami Safa"]
 ean: 9786051740928
 languages: ["Türkçe"]
 page: 352 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

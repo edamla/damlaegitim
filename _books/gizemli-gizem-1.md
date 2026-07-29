@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "GİZEMLİ GİZEM-1"
+title:  "Gizemli Gizem-1"
 
 grades: [5, 6, 7, 8]
 concepts: [ Yerinde duramayan kıpır kıpır bir kızın tekerlekli ev hayaliyle başlayan eğlenceli koşusu ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Nehir Aydın Gökduman"]
 ean: 9786051748818
 languages: ["Türkçe"]
 page: 160 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

@@ -99,7 +99,7 @@
   function openBookActionPopup(link) {
     var type = link.getAttribute('data-popup-type');
     var title = link.getAttribute('data-popup-title') || '';
-    var url = (link.getAttribute('href') || '').trim();
+    var url = (link.getAttribute('data-popup-url') || link.getAttribute('href') || '').trim();
     var bodyHtml = '';
     var isMedia = false;
 

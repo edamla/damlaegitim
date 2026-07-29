@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "KAYBOLAN MESLEKLERİ KEŞFEDELİM"
+title:  "Kaybolan Meslekleri Keşfedelim"
 
 grades: [5, 6, 7, 8]
 concepts: [ Geçmişin izlerini süren ve kültürel mirasımız olan unutulmuş meslekleri gün yüzüne çıkaran sıcacık bir aile hikâyesi ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786051748825
 languages: ["Türkçe"]
 page: 160 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

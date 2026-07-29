@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "KÜÇÜK CESUR MİÇO-1"
+title:  "Küçük Cesur Miço-1"
 
 grades: [5, 6, 7, 8]
 concepts: [ Pusulası merak yelkeni cesaret olan genç bir miçonun okyanusları aşan büyük keşif yolculuğu ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786051742694
 languages: ["Türkçe"]
 page: 152 sayfa
-size: "12,5x18,5cm"
+size: "12,5x18,5 cm"
 publish-number: 
 cover: 
 

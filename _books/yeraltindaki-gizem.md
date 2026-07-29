@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "YERALTINDAKİ GİZEM"
+title:  "Yeraltındaki Gizem"
 
 grades: [5, 6, 7, 8]
 concepts: [ Bahçedeki eski bir kuyunun dibinde başlayan macera yerin 2000 kilometre altındaki gizemli bir dünyaya uzanıyor ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Necati Akbaba"]
 ean: 9786254116056
 languages: ["Türkçe"]
 page: 224 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

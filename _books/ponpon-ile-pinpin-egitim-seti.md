@@ -11,7 +11,7 @@ genre: education
 ean: 9786059656702
 languages: ["Türkçe"]
 page: 256
-size: "13,5x21cm"
+size: "13,5x21 cm"
 
 cover: "Coated Paper"
 original-name:  "Hikayelerle 33 Hadis Işıltısı"

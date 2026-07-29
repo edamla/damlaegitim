@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "SOKAK KÖPEĞİ"
+title:  "Sokak Köpeği"
 
 grades: [5, 6, 7, 8]
 concepts: [ Sıcak bir yuva sadece dört duvardan değil birbirine şefkatle kenetlenmiş kalplerden inşa edilir ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Kemalettin Tuğcu"]
 ean: 9786254115158
 languages: ["Türkçe"]
 page: 80 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "DAĞDAKİ YABANCI"
+title:  "Dağdaki Yabancı"
 
 grades: [5, 6, 7, 8]
 concepts: [ Kurumuş topraklara can veren su bazen ön yargılarla çoraklaşmış kalpleri de yeşertir ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Kemalettin Tuğcu"]
 ean: 9786254113277
 languages: ["Türkçe"]
 page: 80 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "DEDEKTİF KURUNTUSU-1"
+title:  "Dedektif Kuruntusu-1"
 
 grades: [5, 6, 7, 8]
 concepts: [ Okulun en belalı kızı ile en zeki çocuğu bir araya gelirse ne olur Karşınızda her kapıyı açan yeni ikili dedektif kuruntusu]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Esra Avgören"]
 ean: 9786051743523
 languages: ["Türkçe"]
 page: 96 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

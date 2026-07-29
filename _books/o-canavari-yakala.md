@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "O CANAVARI YAKALA"
+title:  "O Canavarı Yakala"
 
 grades: [5, 6, 7, 8]
 concepts: [ Trafik canavarının gölgesindeki bir şehirde kuralları hiçe sayanlara karşı akıl ve cesaretle verilen amansız bir mücadele ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786053839620
 languages: ["Türkçe"]
 page: 144 sayfa
-size: "12,5x18,5cm"
+size: "12,5x18,5 cm"
 publish-number: 
 cover: 
 

@@ -12,14 +12,14 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
+paper: "Kitap Kağıdı" 
 
 # Book attributes
 authors: ["Jules Verne"]
 ean: 9786057288752
 languages: ["Türkçe"]
 page: 160 sayfa
-size: "12,5x19,5cm"
+size: "12,5x19,5 cm"
 publish-number: 
 cover: 
 

@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "TANRI MİSAFİRİ"
+title:  "Tanrı Misafiri"
 
 grades: [5, 6, 7, 8]
 concepts: [ Bazen en büyük mucizeler kapıyı çalan yoksul bir garibin heybesinde saklıdır ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Kemalettin Tuğcu"]
 ean: 9786254113284
 languages: ["Türkçe"]
 page: 80 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

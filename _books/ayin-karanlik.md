@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "AY’IN KARANLIK YÜZÜ"
+title:  "Ay’ın Karanlık Yüzü"
 
 grades: [5, 6, 7, 8]
 concepts: [ Tarih boyunca duvarlara çizilen kadim tanrı tasvirlerinin yeryüzündeki devasa işaretlerin ve gökyüzünde beliren UFOların arkasındaki çarpıcı kozmik sır çözülüyor ]
@@ -12,14 +12,14 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
+paper: "Kitap Kağıdı" 
 
 # Book attributes
 authors: ["Necati Akbaba"]
 ean: 9786254116001
 languages: ["Türkçe"]
 page: 208 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

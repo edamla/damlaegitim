@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "DRON SAVAŞÇILARI-5"
+title:  "Dron Savaşçıları-5"
 
 grades: [5, 6, 7, 8]
 concepts: [ Acımasız yasa dışı teşkilatların lazer silahlı dronlarına karşı zekâ ve cesaretin gökyüzündeki büyük kapışması başlıyor ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Necati Akbaba"]
 ean: 9786254112867
 languages: ["Türkçe"]
 page: 216 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

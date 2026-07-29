@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "ASIK SURATLI ÇOCUK-1"
+title:  "Asık Suratlı Çocuk-1"
 
 grades: [5, 6, 7, 8]
 concepts: [ Korkunun bile yaklaşmaya çekindiği Asık Suratlı Mertin gizemli Uğultulu Ormandaki ilk büyük sınavı ]
@@ -12,14 +12,14 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
+paper: "Kitap Kağıdı" 
 
 # Book attributes
 authors: ["Nur Dombaycı"]
 ean: 9786051742663
 languages: ["Türkçe"]
 page: 192 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

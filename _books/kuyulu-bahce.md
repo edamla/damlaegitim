@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "KUYULU BAHÇE"
+title:  "Kuyulu Bahçe"
 
 grades: [5, 6, 7, 8]
 concepts: [ Çatlamış topraklardan fışkıran bir umut damlası sadece doğayı değil kurumuş kalpleri de yeşertir ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Kemalettin Tuğcu"]
 ean: 9786254113307
 languages: ["Türkçe"]
 page: 80 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

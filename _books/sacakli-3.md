@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "SAÇAKLI KIZ’IN PASAKLI GÜNLÜĞÜ-3"
+title:  "Saçaklı Kız’ın Pasaklı Günlüğü-3"
 
 grades: [5, 6, 7, 8]
 concepts: [ Saçları saçaklı odası bazen pasaklı ama kalbi dünyayı değiştirecek kadar büyük bir kızın haksızlıklara karşı eğlenceli isyanı ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Nur Dombaycı"]
 ean: 9786254115042
 languages: ["Türkçe"]
 page: 160 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

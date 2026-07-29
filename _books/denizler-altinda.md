@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "JULES VERNE Denizler Altında"
+title:  "Jules Verne Denizler Altında"
 
 grades: [5, 6, 7, 8]
 concepts: [ Geçmişinden ve insanlıktan kaçarak kendi adaletini okyanusun ulaşılamaz derinliklerinde arayan gizemli Kaptan Nemo’nun sırlarla ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Jules Verne"]
 ean: 9786057288776
 languages: ["Türkçe"]
 page: 160 sayfa
-size: "12,5x19,5cm"
+size: "12,5x19,5 cm"
 publish-number: 
 cover: 
 

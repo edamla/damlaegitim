@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "TOLYA BEKÇİSİ"
+title:  "Tolya Bekçisi"
 
 grades: [5, 6, 7, 8]
 concepts: [ İki dünya arasındaki kapının mührü çatladığında karanlığı durduracak tek şey Tolya Bekçisinin cesaretidir ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Esra Avgören"]
 ean: 9786053839606
 languages: ["Türkçe"]
 page: 144 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

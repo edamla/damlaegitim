@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "ROBOTLAR GEZEGENİ"
+title:  "Robotlar Gezegeni"
 
 grades: [5, 6, 7, 8]
 concepts: [ Masum bir okul gezisinin galaksiler arası nefes kesici bir hayatta kalma mücadelesine dönüştüğü an ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Necati Akbaba"]
 ean: 9786051745138
 languages: ["Türkçe"]
 page: 208 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

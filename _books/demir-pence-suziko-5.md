@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "DEMİR PENÇE SUZİKO-5"
+title:  "Demir Pençe Suziko-5"
 
 grades: [5, 6, 7, 8]
 concepts: [ Kangurular Aborjinler ve ölümcül sırlar Yapay zekânın gücünü korumakiçin dünyanın öbür ucunda verilen amansız bir hayatta kalma mücadelesi ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786051749907
 languages: ["Türkçe"]
 page: 192 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

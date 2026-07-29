@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "AFACAN POLİSLER-1"
+title:  "Afacan Polisler-1"
 
 grades: [5, 6, 7, 8]
 concepts: [ dört afacan gencin sokaktaki masum bir olaya müdahale etmesiyle başlayan ve polis akademisine uzanan nefes kesici serüveni başlıyor ]
@@ -12,14 +12,14 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
+paper: "Kitap Kağıdı" 
 
 # Book attributes
 authors: ["Yavuz Ali Bilge"]
 ean: 9786254115493
 languages: ["Türkçe"]
 page: 160 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

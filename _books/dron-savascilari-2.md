@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "DRON SAVAŞÇILARI-2"
+title:  "Dron Savaşçıları-2"
 
 grades: [5, 6, 7, 8]
 concepts: [ Tehlikeli bir şebeke yanlışlıkla kaçırılan çocuklar ve gökyüzünden gelen kusursuz bir kurtarma operasyonu ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Necati Akbaba"]
 ean: 9786051743011
 languages: ["Türkçe"]
 page: 192 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

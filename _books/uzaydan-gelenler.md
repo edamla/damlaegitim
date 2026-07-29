@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "UZAYDAN GELENLER KULÜBÜ"
+title:  "Uzaydan Gelenler Kulübü"
 
 grades: [5, 6, 7, 8]
 concepts: [ Taşındık yazan bir pastanenin gizli bölmesinden Gezegen9a uzanan aksiyon ve gizem dolu eşsiz bir serüven ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Resul Dede"]
 ean: 9786254114281
 languages: ["Türkçe"]
 page: 128 sayfa
-size: "13,5x21cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

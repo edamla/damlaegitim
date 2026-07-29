@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "İSTANBUL SEMT ÖYKÜLERİ"
+title:  "İstanbul Semt Öyküleri"
 
 grades: [5, 6, 7, 8]
 concepts: [ Dünyanın incisi ve şairlerin ilham kaynağı olan İstanbulu bir de dilden dile söylenen bu kadim efsanelerden dinleyin ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786053838135
 languages: ["Türkçe"]
 page: 176 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "SERGÜZEŞT"
+title:  "Sergüzeşt"
 
 grades: [5, 6, 7, 8]
 concepts: [ Ağlamak uğradığımız felâketlere karşı vücûdumuzda kalan son kuvvetin bir feryâdıdır ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Samipaşazade Sezai"]
 ean: 9786057490414
 languages: ["Türkçe"]
 page: 144 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 

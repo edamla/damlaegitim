@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "DONMUŞ UMUTLAR SARIKAMIŞ"
+title:  "Donmuş Umutlar Sarıkamış"
 
 grades: [5, 6, 7, 8]
 concepts: [ Allahuekber dağlarında zemherinin ayazında donarak can veren şehitlerimizin buz tutan umutlarının hüzünlü hikâyesi ]
@@ -12,14 +12,12 @@ categories: [ "Ortaokul" ]
 tags: [ "hikaye"]
 genre: story
 previewpage: true
-paper: 
-
-# Book attributes
+paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 ean: 9786053837824
 languages: ["Türkçe"]
 page: 288 sayfa
-size: "13,5x19,5cm"
+size: "13,5x19,5 cm"
 publish-number: 
 cover: 
 
