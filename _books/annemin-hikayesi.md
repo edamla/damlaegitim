@@ -15,6 +15,7 @@ previewpage: true
 paper: 
 
 # Book attributes
+authors: ["Kemalettin Tuğcu"]
 ean: 9786051749600
 languages: ["Türkçe"]
 page: 96 Sayfa

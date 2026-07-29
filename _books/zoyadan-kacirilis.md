@@ -1,0 +1,41 @@
+---
+layout: book
+title:  "ZOYA’DAN KAÇIRILIŞ"
+
+grades: [5, 6, 7, 8]
+concepts: [ Çılgın bir profesör cesur bir torun ve gizemlerle dolu Zoya gezegeni Galaksiler arası bilgi savaşı başlıyor ]
+subjects: ["Bilimsel Keşif", "Aile Bağları", "Sorumluluk Alma", "Açgözlülük ve İhtiras", "Ekolojik Bilinç", "İyilik ve Kötülük"]
+
+examlink: 
+
+categories: [ "Ortaokul" ]
+tags: [ "hikaye"]
+genre: story
+previewpage: true
+paper: 
+
+# Book attributes
+authors: ["Sara Gürbüz Özeren"]
+ean: 9786053836421
+languages: ["Türkçe"]
+page: 128 sayfa
+size: "13,5x19,5cm"
+publish-number: 
+cover: 
+
+youtube:
+
+# For adding excerpt add <!--more--> and break the line
+---
+“Çılgın Dedemin Zaman Makinesi” serisinden tanıdığımız Profesör Akif Yurttan-
+çıkmaz ve cesur torunu Yavuz, bu kez sınırları aşarak Zoya gezegenine dudak
+uçuklatan bir yolculuk yapıyor!
+Çocukluk günlerini geride bırakan Yavuz, gizemli sırlarla örülmüş bu yepyeni dün-
+yada dedesini ve tüm galaksiyi acımasız ajanların elinden kurtarmak zorundadır.
+Peki, sonsuz evrenin kaderini elinde tutan bu büyük bilgi savaşını kim kazana-
+cak? Dünyalıların hayatı Zoyalılara mı, yoksa esrarengiz Mayatalılara mı bağlı?
+Zaman makinesi Ertuğrul’un rotasını takip edin ve Mavi Gezegen’den uzaklara,
+yıldızların arasındaki bu unutulmaz kaçış macerasına katılın!
+
+
+<!--more-->

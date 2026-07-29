@@ -1,9 +1,9 @@
 ---
 layout: book
-title:  "Kuklacı"
+title:  "KUKLACI"
 
 grades: [5, 6, 7, 8]
-concepts: [ Kırgınlıklarını nakış nakış ahşaba işleyen bir adamın  sanata ve hayata yeniden tutunma hikâyesi...]
+concepts: [ Kırgınlıklarını nakış nakış ahşaba işleyen bir adamın sanata ve hayata yeniden tutunma hikâyesi ]
 subjects: ["Çocuk Sevgisi", "Kuşak Çatışması", "Kültürel Miras", "Empati", "Sanatın Gücü", "Yardımlaşma"]
 
 examlink: 
@@ -15,9 +15,10 @@ previewpage: true
 paper: 
 
 # Book attributes
+authors: ["Kemalettin Tuğcu"]
 ean: 9786053834144
 languages: ["Türkçe"]
-page: 96 Sayfa
+page: 96 sayfa
 size: "13,5x19,5cm"
 publish-number: 
 cover: 
@@ -30,9 +31,9 @@ Vefasızlığın ve yalnızlığın gölgesinde kalmış emekli vali muavini Rec
 teselliyi geçmişin görkeminde değil, küçük bir dükkânın ahşap kokusunda bulur.
 Cansız kütüklere Mimar Sinan, Yunus Emre, Karagöz ve Hacivat olarak yeniden
 can verirken, aslında kendi kapanmayan yaralarını sarmaktadır.
-Kuklacı, kuşaklar arası görünmez uçurumların şefkatle, sabırla ve sanatın iyileştirici
-gücüyle nasıl kapanabileceğini gösteren, çocukların kalbine dokunacak
+Kuklacı, kuşaklar arası görünmez uçurumların şefkatle, sabırla ve sanatın iyileş-
+tirici gücüyle nasıl kapanabileceğini gösteren, çocukların kalbine dokunacak
 unutulmaz bir klasik.
 
 
-<!--more--> 
+<!--more-->
