@@ -17,7 +17,7 @@ authors: ["Natasha Farrant"]
 ean: 9786254116155
 languages: ["Türkçe"]
 page: 272 sayfa
-size: "13,5x19,5 cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

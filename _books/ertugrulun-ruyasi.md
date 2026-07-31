@@ -17,7 +17,7 @@ authors: ["Talip Arışahin"]
 ean: 9786051745619
 languages: ["Türkçe"]
 page: 176 sayfa
-size: "13,5x19,5 cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

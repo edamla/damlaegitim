@@ -17,7 +17,7 @@ authors: ["Esra Avgören"]
 ean: 9786053839606
 languages: ["Türkçe"]
 page: 144 sayfa
-size: "13,5x19,5 cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

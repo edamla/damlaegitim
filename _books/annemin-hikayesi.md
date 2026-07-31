@@ -18,7 +18,7 @@ paper: "Kitap Kağıdı"
 authors: ["Kemalettin Tuğcu"]
 ean: 9786051749600
 languages: ["Türkçe"]
-page: 96 Sayfa
+page: 80 Sayfa
 size: "13,5x19,5 cm"
 publish-number: 
 cover: 
