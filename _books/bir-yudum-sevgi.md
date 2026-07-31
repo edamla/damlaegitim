@@ -19,7 +19,7 @@ authors: ["Sara Gürbüz Özeren"]
 ean: 9786053839712
 languages: ["Türkçe"]
 page: 120 sayfa
-size: "13,5x19,5 cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

@@ -17,7 +17,7 @@ authors: ["Esra Avgören"]
 ean: 9786254116414
 languages: ["Türkçe"]
 page: 136 sayfa
-size: "13,5x19,5 cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 

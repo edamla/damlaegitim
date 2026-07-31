@@ -17,7 +17,7 @@ authors: ["Esra Avgören"]
 ean: 9786051741291
 languages: ["Türkçe"]
 page: 200 sayfa
-size: "13,5x19,5 cm"
+size: "13,5x21 cm"
 publish-number: 
 cover: 
 
