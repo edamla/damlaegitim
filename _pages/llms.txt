@@ -3,7 +3,20 @@ layout: null
 permalink: /llms.txt
 ---
 # Damla Okul
-> Damla Yayınevi okul yayınları ve eğitim materyalleri kataloğu. Yeni Maarif Modeli uyumlu eğitim setleri ve hikaye kitapları.
+> {{ site.description }}
+
+## Öne Çıkanlar
+- [Hakkımızda]({{ site.url }}{{ site.baseurl }}/hakkimizda): Damla Yayınevi geçmişi, okul yayınları ve Yeni Maarif Modeli uyumlu içerik yaklaşımı
+- [Ölçme ve Değerlendirme]({{ site.url }}{{ site.baseurl }}/olcme-degerlendirme): 4 Boyutlu Ölçme-Değerlendirme Sistemi, PISA destekli sorular ve Akıllı Optik
+- [Sıkça Sorulan Sorular]({{ site.url }}{{ site.baseurl }}/sss): Maarif Modeli uyumu, sipariş ve ürün seçimi hakkında yanıtlar
+- [Ürünler]({{ site.url }}{{ site.baseurl }}/urunler): Sınıf ve tür bazlı eğitim setleri ile hikaye kitapları kataloğu
+- [Kataloglar]({{ site.url }}{{ site.baseurl }}/kataloglar): PDF ve HTML yayın katalogları
+{% assign featured_slugs = "akilli-damla-egitim-seti-1,montessori-egitim-seti-,arda-ile-damla-ilkokuma-egitim-seti,dikkat-zeka-seti,kral-egitim-seti-2,cilgin-problemler,yeni-nesil-kral-deneme,dedektif-kuruntusu-1" | split: "," %}
+{% for slug in featured_slugs %}
+{% assign book = site.books | where_exp: "b", "b.url contains slug" | first %}
+{% if book %}- [{{ book.title }}]({{ site.url }}{{ site.baseurl }}{{ book.url }}): {% if book.description %}{{ book.description | strip }}{% else %}{{ book.title }} — Damla Okul.{% endif %}
+{% endif %}
+{% endfor %}
 
 ## Bölümler
 - [Ana Sayfalar]({{ site.url }}{{ site.baseurl }}/llms/ana-sayfalar.txt): Site sayfaları ve kurumsal bilgi

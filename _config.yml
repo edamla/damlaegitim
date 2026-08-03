@@ -4,7 +4,7 @@ name: 'Damla Okul'
 language: "tr"
 lang: tr
 locale: tr_TR
-description: 'Damla Okul — Damla Yayınevi okul yayınları ve eğitim materyalleri'
+description: 'Damla Yayınevi okul yayınları ve eğitim materyalleri kataloğu. Yeni Maarif Modeli uyumlu eğitim setleri ve hikaye kitapları.'
 url: 'https://damlaokul.com'
 logo: '/assets/images/logo.png'
 twitter:

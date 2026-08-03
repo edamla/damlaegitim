@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "Akıllı Damla Tüm Dersler Soru Bankası | 4.Sınıf"
+description: "4. sınıf tüm dersler için soru bankası; yeni nesil soru tipleri ve kazanım odaklı pekiştirme alıştırmaları içerir."
 categories: ["İlkokul"]
 tags: []
 

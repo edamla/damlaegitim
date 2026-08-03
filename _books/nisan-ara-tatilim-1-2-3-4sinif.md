@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "Nisan Ara Tatilim | 1-2-3-4.Sınıf"
+description: "1–4. sınıflar için nisan ara tatil çalışma kitabı; tatil döneminde kazanımları pekiştiren günlük etkinlikler sunar."
 categories: [Religion]
 tags: []
 

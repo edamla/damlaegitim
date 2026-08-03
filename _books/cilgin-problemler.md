@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "Çılgın Problemler | 2-3-4.Sınıf"
+description: "2., 3. ve 4. sınıflar için eğlenceli matematik problem seti; problem çözme becerisini ve mantıksal düşünmeyi geliştirir."
 categories: [Religion]
 tags: []
 
