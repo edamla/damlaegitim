@@ -1,24 +1,29 @@
 ---
 layout: book
 title:  "Gizli Dedektiflik Bürosu (10 Kitap)"
-grades: [4]
+categories: ["Çocuk", Hikaye]
+tags: [hikaye]
 genre: story
-concepts: [""]
-subjects: ["Akıl Yürütme", "Problem Çözme", "Takım Ruhu", "Gizem ve Macera", "Analitik Düşünme"]
-examlink: gizli-dedektiflik-y.pdf
-categories: [ "Çocuk", "Hikaye" ]
-tags: [ "hikaye"]
 previewpage: true
-paper: "1. Hamur"
 
-# Book attributes
+# Standart Book Attributes
 ean: 8697911223080
 languages: ["Türkçe"]
-page: Her Biri 80
+page: "Her Biri 80"
 size: "14x20 cm"
 publish-number: 1463
 cover: "Karton Kapak"
+paper: "1. Hamur"
 
+# Spesific Filterable Attributes
+grades: [4]
+kavramlar: [""]
+anatemalar: ["Akıl Yürütme", "Problem Çözme", "Takım Ruhu", "Gizem ve Macera", "Analitik Düşünme"]
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/gizli-dedektiflik-y.pdf"
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223080/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

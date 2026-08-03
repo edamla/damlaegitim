@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Cingöz’ün Esrarı"
-
-grades: [5, 6, 7, 8]
-concepts: [ Kılık değiştirme ustası serserilerin kralı Cingöz Recai bu kez devletin en güvenli kurumlarına polis teşkilatının içine sızıyor ]
-subjects: ["Zeka ve Kurnazlık", "Aşk ve Bağlılık", "İllüzyon ve Tuzak", "Kılık Değiştirme", "Gizem ve İhanet", "Gurur ve İnat"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Peyami Safa"]
+
+# Standart Book Attributes
 ean: 9786053838746
 languages: ["Türkçe"]
-page: 304 sayfa
+page: "304 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Peyami Safa"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Kılık değiştirme ustası serserilerin kralı Cingöz Recai bu kez devletin en güvenli kurumlarına polis teşkilatının içine sızıyor"]
+anatemalar: ["Zeka ve Kurnazlık", "Aşk ve Bağlılık", "İllüzyon ve Tuzak", "Kılık Değiştirme", "Gizem ve İhanet", "Gurur ve İnat"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053838746/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

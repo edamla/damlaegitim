@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Demir Pençe Suziko-3"
-
-grades: [5, 6, 7, 8]
-concepts: [ Asyanın gizemli sokaklarında yapay zekâlı robot Suziko vearkadaşlarının tehlikeli casuslardan kaçış serüveni ]
-subjects: ["Yapay Zekâ", "Vatanseverlik", "Kültürel Keşif", "Tarih Bilinci", "Dayanışma", "Macera"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Sara Gürbüz Özeren"]
+
+# Standart Book Attributes
 ean: 9786254110481
 languages: ["Türkçe"]
-page: 192 sayfa
+page: "192 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Sara Gürbüz Özeren"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Asyanın gizemli sokaklarında yapay zekâlı robot Suziko vearkadaşlarının tehlikeli casuslardan kaçış serüveni"]
+anatemalar: ["Yapay Zekâ", Vatanseverlik, "Kültürel Keşif", "Tarih Bilinci", "Dayanışma", Macera]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254110481/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

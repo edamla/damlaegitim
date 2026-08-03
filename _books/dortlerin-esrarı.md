@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Dörtlerin Esrarı"
-
-grades: [5, 6, 7, 8]
-concepts: [ Hindistan’ın tehlikeli bataklıklarında edilen bir intikam yemini yıllar sonra İngiltere’nin kalbinde kanlı bir cinayetle yüzeye çıkıyor ]
-subjects: ["ahlaki çöküş", "kişisel intikam", "suçun sonuçları", "sömürgecilik mirası", "yoldaşlık", "sınıfsal çatışma"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Sir Arthur Conan Doyle"]
+
+# Standart Book Attributes
 ean: 9786057288714
 languages: ["Türkçe"]
-page: 140 sayfa
+page: "140 sayfa"
 size: "12,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Sir Arthur Conan Doyle"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Hindistan’ın tehlikeli bataklıklarında edilen bir intikam yemini yıllar sonra İngiltere’nin kalbinde kanlı bir cinayetle yüzeye çıkıyor"]
+anatemalar: ["ahlaki çöküş", "kişisel intikam", "suçun sonuçları", "sömürgecilik mirası", "yoldaşlık", "sınıfsal çatışma"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288714/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

@@ -32,10 +32,10 @@
   </p>
   {% endif %}
 
-  {% if b.subjects and b.subjects.size > 0 %}
+  {% if b.anatemalar and b.anatemalar.size > 0 %}
   <p>
     <strong>Temalar ve konu başlıkları:</strong>
-    {% for subject in b.subjects %}{{ subject }}{% unless forloop.last %}, {% endunless %}{% endfor %}.
+    {% for subject in b.anatemalar %}{{ subject }}{% unless forloop.last %}, {% endunless %}{% endfor %}.
     Bu {{ genre_label_cap | downcase }} kitabı, öğrencilerin okuma kültürünü güçlendirmeyi ve ders kazanımlarını desteklemeyi hedefler.
   </p>
   {% elsif b.tags and b.tags.size > 0 %}
@@ -45,10 +45,10 @@
   </p>
   {% endif %}
 
-  {% if b.concepts and b.concepts.size > 0 %}
+  {% if b.kavramlar and b.kavramlar.size > 0 %}
   <p>
     <strong>Beceri ve kavram alanları:</strong>
-    {% for concept_key in b.concepts %}
+    {% for concept_key in b.kavramlar %}
       {% unless concept_key == "" %}
         {{ concept_key }}{% unless forloop.last %}, {% endunless %}
       {% endunless %}

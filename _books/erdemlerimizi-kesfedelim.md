@@ -1,24 +1,29 @@
 ---
 layout: book
 title:  "Erdemlerimizi Keşfedelim (10 Kitap)"
-grades: [2, 3]
+categories: ["Çocuk", Hikaye]
+tags: [hikaye]
 genre: story
-concepts: [""]
-subjects: ["Değerler / Erdemler" ,  "Karakter Gelişimi"]
-examlink: erdemlerimizi-kesfedelim-y.pdf
-categories: [ "Çocuk", "Hikaye" ]
-tags: [ "hikaye"]
 previewpage: true
-paper: "1. Hamur"
 
-# Book attributes
+# Standart Book Attributes
 ean: 9786053831181
 languages: ["Türkçe"]
-page: Her Biri 48
+page: "Her Biri 48"
 size: "14x20 cm"
 publish-number: 1335
 cover: "Karton Kapak"
+paper: "1. Hamur"
 
+# Spesific Filterable Attributes
+grades: [2, 3]
+kavramlar: [""]
+anatemalar: ["Değerler / Erdemler", "Karakter Gelişimi"]
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/erdemlerimizi-kesfedelim-y.pdf"
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053831181/mobile/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

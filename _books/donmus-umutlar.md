@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Donmuş Umutlar Sarıkamış"
-
-grades: [5, 6, 7, 8]
-concepts: [ Allahuekber dağlarında zemherinin ayazında donarak can veren şehitlerimizin buz tutan umutlarının hüzünlü hikâyesi ]
-subjects: ["Zorlu Doğa Koşulları", "Vatan Sevgisi", "Hatalı Kararlar", "İhtiras", "Çaresizlik", "Savaşın Gerçek Yüzü"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Sara Gürbüz Özeren"]
+
+# Standart Book Attributes
 ean: 9786053837824
 languages: ["Türkçe"]
-page: 288 sayfa
+page: "288 sayfa"
 size: "13,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Sara Gürbüz Özeren"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Allahuekber dağlarında zemherinin ayazında donarak can veren şehitlerimizin buz tutan umutlarının hüzünlü hikâyesi"]
+anatemalar: ["Zorlu Doğa Koşulları", "Vatan Sevgisi", "Hatalı Kararlar", "İhtiras", "Çaresizlik", "Savaşın Gerçek Yüzü"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053837824/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

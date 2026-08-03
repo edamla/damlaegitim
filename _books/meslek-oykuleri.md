@@ -1,24 +1,29 @@
 ---
 layout: book
 title:  "MESLEK ÖYKÜLERİ (10 KİTAP)"
-grades: [2, 3]
+categories: ["Çocuk", Hikaye]
+tags: [hikaye]
 genre: story
-concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
-subjects: ["Meslekleri Tanıma", "Birey ve Toplum", "Gelecek Planlama", "Toplumsal Farkındalık", "Çalışkanlık"]
-examlink: meslek-oykuleri-y.pdf
-categories: [ "Çocuk", "Hikaye" ]
-tags: [ "hikaye"]
 previewpage: true
-paper: "1. Hamur"
 
-# Book attributes
+# Standart Book Attributes
 ean: 8697911222991
 languages: ["Türkçe"]
-page: Her Biri 48
+page: "Her Biri 48"
 size: "14x20 cm"
 publish-number: 2906
 cover: "Karton Kapak"
+paper: "1. Hamur"
 
+# Spesific Filterable Attributes
+grades: [2, 3]
+kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
+anatemalar: ["Meslekleri Tanıma", "Birey ve Toplum", "Gelecek Planlama", "Toplumsal Farkındalık", "Çalışkanlık"]
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/meslek-oykuleri-y.pdf"
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911222991/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

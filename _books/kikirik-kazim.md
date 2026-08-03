@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Kikirik Kazım"
-
-grades: [5, 6, 7, 8]
-concepts: [ Diyetkolik bir anne rahat bir baba dâhi bir kız kardeş ve sınır tanımayan bir çocuğun bol kahkahalı serüveni ]
-subjects: ["Aile İçi İletişim", "Beden Algısı ve Diyet", "Empati ve Saygı", "Sorumluluklar", "Bütçe Yönetimi", "Sağlıklı Beslenme"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Sara Gürbüz Özeren"]
+
+# Standart Book Attributes
 ean: 9786051748788
 languages: ["Türkçe"]
-page: 192 sayfa
+page: "192 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Sara Gürbüz Özeren"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Diyetkolik bir anne rahat bir baba dâhi bir kız kardeş ve sınır tanımayan bir çocuğun bol kahkahalı serüveni"]
+anatemalar: ["Aile İçi İletişim", "Beden Algısı ve Diyet", "Empati ve Saygı", Sorumluluklar, "Bütçe Yönetimi", "Sağlıklı Beslenme"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051748788/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

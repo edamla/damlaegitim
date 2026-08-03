@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "O Canavarı Yakala"
-
-grades: [5, 6, 7, 8]
-concepts: [ Trafik canavarının gölgesindeki bir şehirde kuralları hiçe sayanlara karşı akıl ve cesaretle verilen amansız bir mücadele ]
-subjects: ["Trafik Bilinci", "Ekip Ruhu", "Görev Bilinci", "Sorumluluk", "Toplumsal Duyarlılık", "Akran Zorbalığı"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Sara Gürbüz Özeren"]
+
+# Standart Book Attributes
 ean: 9786053839620
 languages: ["Türkçe"]
-page: 144 sayfa
+page: "144 sayfa"
 size: "12,5x18,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Sara Gürbüz Özeren"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Trafik canavarının gölgesindeki bir şehirde kuralları hiçe sayanlara karşı akıl ve cesaretle verilen amansız bir mücadele"]
+anatemalar: ["Trafik Bilinci", "Ekip Ruhu", "Görev Bilinci", Sorumluluk, "Toplumsal Duyarlılık", "Akran Zorbalığı"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839620/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

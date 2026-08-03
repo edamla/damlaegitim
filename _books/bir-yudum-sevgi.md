@@ -1,28 +1,30 @@
 ---
 layout: book
 title:  "Bir Yudum Sevgi"
-
-grades: [5, 6, 7, 8]
-concepts: [ Depremin bir gecede yerle bir ettiği hayatların ve enkaz altından çocuk yuvasına uzanan küçük bir kız çocuğunun yürek burkan sessiz çığlığı ]
-subjects: ["Deprem ve Travma", "Kardeşlik Bağı", "Umut", "Sevgi İhtiyacı", "Çocuk Psikolojisi", "Çaresizlik"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı" 
 
-# Book attributes
-authors: ["Sara Gürbüz Özeren"]
+# Standart Book Attributes
 ean: 9786053839712
 languages: ["Türkçe"]
-page: 120 sayfa
+page: "120 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Sara Gürbüz Özeren"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Depremin bir gecede yerle bir ettiği hayatların ve enkaz altından çocuk yuvasına uzanan küçük bir kız çocuğunun yürek burkan sessiz çığlığı"]
+anatemalar: ["Deprem ve Travma", "Kardeşlik Bağı", Umut, "Sevgi İhtiyacı", "Çocuk Psikolojisi", "Çaresizlik"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839712/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

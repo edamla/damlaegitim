@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Tolya Bekçisi"
-
-grades: [5, 6, 7, 8]
-concepts: [ İki dünya arasındaki kapının mührü çatladığında karanlığı durduracak tek şey Tolya Bekçisinin cesaretidir ]
-subjects: ["Sorumluluk", "İnancın Gücü", "Cesaret", "Nefis Mücadelesi", "Doğa Sevgisi", "Kendini Keşfetme"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Esra Avgören"]
+
+# Standart Book Attributes
 ean: 9786053839606
 languages: ["Türkçe"]
-page: 144 sayfa
+page: "144 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Esra Avgören"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["İki dünya arasındaki kapının mührü çatladığında karanlığı durduracak tek şey Tolya Bekçisinin cesaretidir"]
+anatemalar: [Sorumluluk, "İnancın Gücü", Cesaret, "Nefis Mücadelesi", "Doğa Sevgisi", "Kendini Keşfetme"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839606/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

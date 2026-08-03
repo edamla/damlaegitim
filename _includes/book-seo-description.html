@@ -21,8 +21,8 @@
       {% assign genre_label = page.genre %}
     {% endif %}
     {% capture template_desc %}{{ page.title }} — {{ grade_list }}. sınıf {{ genre_label }} kitabı. Damla Okul.{% endcapture %}
-    {% if page.subjects and page.subjects.size > 0 %}
-      {% assign subject_preview = page.subjects | slice: 0, 3 | join: ", " %}
+    {% if page.anatemalar and page.anatemalar.size > 0 %}
+      {% assign subject_preview = page.anatemalar | slice: 0, 3 | join: ", " %}
       {% capture template_desc %}{{ template_desc | strip }} Konular: {{ subject_preview }}.{% endcapture %}
     {% endif %}
 {{ template_desc | truncate: 155, "…" }}
@@ -39,8 +39,8 @@
     {% assign genre_label = page.genre %}
   {% endif %}
   {% capture template_desc %}{{ page.title }} — {{ grade_list }}. sınıf {{ genre_label }} kitabı. Damla Okul.{% endcapture %}
-  {% if page.subjects and page.subjects.size > 0 %}
-    {% assign subject_preview = page.subjects | slice: 0, 3 | join: ", " %}
+  {% if page.anatemalar and page.anatemalar.size > 0 %}
+    {% assign subject_preview = page.anatemalar | slice: 0, 3 | join: ", " %}
     {% capture template_desc %}{{ template_desc | strip }} Konular: {{ subject_preview }}.{% endcapture %}
   {% endif %}
 {{ template_desc | truncate: 155, "…" }}

@@ -1,19 +1,29 @@
 ---
 layout: previewbook
 title:  "Yeni Nesil Din Kültürü ve Ahlak Bilgisi Lgs Föyleri 8.Sınıf"
-
-categories: [ "İlkokul" ]
-tags: [ "Okuma yazma, ilkokuma, yeni müfredat"]
-previewpage: false
-grades: [8]
+categories: ["İlkokul"]
+tags: ["Okuma yazma, ilkokuma, yeni müfredat"]
 genre: education
-# Book attributes
+previewpage: false
+
+# Standart Book Attributes
 ean: 9786051744551
 languages: ["Türkçe"]
 page: 881
 size: "13,5x21 cm"
+publish-number: ""
+cover: ""
 
-youtube: #https://www.youtube.com/watch?v=QRUbpgJeM0c
+# Spesific Filterable Attributes
+grades: [8]
+kavramlar: []
+anatemalar: []
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051744551/index.html"
+damlaurl: ""
+
+# Social Media Attributes
+youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---

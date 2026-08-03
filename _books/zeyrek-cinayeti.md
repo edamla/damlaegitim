@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Zeyrek Cinayeti"
-
-grades: [5, 6, 7, 8]
-concepts: [ Kibar hırsız Cingöz Recai ile ezeli rakibi emekli dedektif Mehmed Rıza Zeyrekte işlenen esrarengiz bir cinayetin ardındaki sırrı çözmek için amansız bir zekâ savaşına tutuşuyor ]
-subjects: ["Akıl Oyunları", "Gizem ve Muamma", "İhanet", "Açgözlülük", "Ezeli Rekabet", "Adalet Arayışı"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Peyami Safa"]
+
+# Standart Book Attributes
 ean: 9786053838722
 languages: ["Türkçe"]
-page: 296 sayfa
+page: "296 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Peyami Safa"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Kibar hırsız Cingöz Recai ile ezeli rakibi emekli dedektif Mehmed Rıza Zeyrekte işlenen esrarengiz bir cinayetin ardındaki sırrı çözmek için amansız bir zekâ savaşına tutuşuyor"]
+anatemalar: ["Akıl Oyunları", "Gizem ve Muamma", "İhanet", "Açgözlülük", "Ezeli Rekabet", "Adalet Arayışı"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053838722/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

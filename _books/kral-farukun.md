@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Kral Faruk’un Elmasları"
-
-grades: [5, 6, 7, 8]
-concepts: [ Prenses Zülfiyenin gizemli ölümüyle başlayan ve Kral Farukun paha biçilmez elmaslarına uzanan nefes kesici bir serüven ]
-subjects: ["Akıl Oyunları", "İhanet ve Kıskançlık", "Gizem", "Kılık Değiştirme", "Tehlike Tutkusu", "Siyasi Entrikalar"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Peyami Safa"]
+
+# Standart Book Attributes
 ean: 9786053837787
 languages: ["Türkçe"]
-page: 336 sayfa
+page: "336 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Peyami Safa"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Prenses Zülfiyenin gizemli ölümüyle başlayan ve Kral Farukun paha biçilmez elmaslarına uzanan nefes kesici bir serüven"]
+anatemalar: ["Akıl Oyunları", "İhanet ve Kıskançlık", Gizem, "Kılık Değiştirme", "Tehlike Tutkusu", "Siyasi Entrikalar"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053837787/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

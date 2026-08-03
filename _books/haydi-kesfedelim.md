@@ -1,19 +1,29 @@
 ---
 layout: previewbook
 title:  "Haydi Keşfedelim"
-
-categories: [ "İlkokul" ]
-tags: [ "Okuma yazma, ilkokuma, yeni müfredat"]
-previewpage: false
-grades: [0]
+categories: ["İlkokul"]
+tags: ["Okuma yazma, ilkokuma, yeni müfredat"]
 genre: education
-# Book attributes
+previewpage: false
+
+# Standart Book Attributes
 ean: 8697911222731
 languages: ["Türkçe"]
 page: 881
 size: "13,5x21 cm"
+publish-number: ""
+cover: ""
 
-youtube: #https://www.youtube.com/watch?v=QRUbpgJeM0c
+# Spesific Filterable Attributes
+grades: [0]
+kavramlar: []
+anatemalar: []
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/8697911222731-1/index.html"
+damlaurl: ""
+
+# Social Media Attributes
+youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---

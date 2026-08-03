@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Hacker Nine - 1"
-
-grades: [5, 6, 7, 8]
-concepts: [ Oyun oynamayı bırak kendi oyununu yaz Pofuduk terlikli Hacker Nine ile dijital dünyanın sırlarını çözmeye hazır mısın ]
-subjects: ["Bilinçli Teknoloji", "Dayanışma", "Cesaret", "Yapay Zekâ", "Empati ve İyilik", "Sanal Gerçeklik"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Nur Dombaycı"]
+
+# Standart Book Attributes
 ean: 9786254113017
 languages: ["Türkçe"]
-page: 168 sayfa
+page: "168 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Nur Dombaycı"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Oyun oynamayı bırak kendi oyununu yaz Pofuduk terlikli Hacker Nine ile dijital dünyanın sırlarını çözmeye hazır mısın"]
+anatemalar: ["Bilinçli Teknoloji", "Dayanışma", Cesaret, "Yapay Zekâ", "Empati ve İyilik", "Sanal Gerçeklik"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113017/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

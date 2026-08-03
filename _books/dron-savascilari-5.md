@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Dron Savaşçıları-5"
-
-grades: [5, 6, 7, 8]
-concepts: [ Acımasız yasa dışı teşkilatların lazer silahlı dronlarına karşı zekâ ve cesaretin gökyüzündeki büyük kapışması başlıyor ]
-subjects: ["Yenilikçilik", "Bilimin Gücü", "Adalet Arayışı", "Dayanışma", "Cesaret", "Umut"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Necati Akbaba"]
+
+# Standart Book Attributes
 ean: 9786254112867
 languages: ["Türkçe"]
-page: 216 sayfa
+page: "216 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Necati Akbaba"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Acımasız yasa dışı teşkilatların lazer silahlı dronlarına karşı zekâ ve cesaretin gökyüzündeki büyük kapışması başlıyor"]
+anatemalar: ["Yenilikçilik", "Bilimin Gücü", "Adalet Arayışı", "Dayanışma", Cesaret, Umut]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254112867/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

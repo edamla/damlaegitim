@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Yunus Emre Divanı"
-
-grades: [5, 6, 7, 8]
-concepts: [ Yaratılanı Yaradandan ötürü sevmeyi öğreten sevelim sevilelim diyerek insanın terbiyesinde sevgiyi esas alan gönül insanının çağları aydınlatan eseri ]
-subjects: ["Hoşgörü ve Sevgi", "Ölüm", "Gönül Yapmak", "Tasavvuf", "Doğruluk", "İlâhî Aşk:"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Yunus Emre"]
+
+# Standart Book Attributes
 ean: 9786057490452
 languages: ["Türkçe"]
-page: 208 sayfa
+page: "208 sayfa"
 size: "13,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Yunus Emre"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Yaratılanı Yaradandan ötürü sevmeyi öğreten sevelim sevilelim diyerek insanın terbiyesinde sevgiyi esas alan gönül insanının çağları aydınlatan eseri"]
+anatemalar: ["Hoşgörü ve Sevgi", "Ölüm", "Gönül Yapmak", Tasavvuf, "Doğruluk", "İlâhî Aşk:"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057490452/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

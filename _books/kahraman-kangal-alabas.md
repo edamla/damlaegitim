@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Kahraman Kangal Alabaş"
-
-grades: [5, 6, 7, 8]
-concepts: [ Sadakati uğruna kilometrelerce yol kateden insanların vefasızlığına rağmen hayat kurtarmaktan vazgeçmeyen soylu bir Kangal köpeğinin hikâyesi ]
-subjects: ["Sadakat", "Göç ve Yabancılaşma", "Kahramanlık ve Fedakârlık", "Hırs ve İhtiras", "Doğaya Özlem", "İnsan ve Hayvan Dostluğu"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Sara Gürbüz Özeren"]
+
+# Standart Book Attributes
 ean: 9786254116018
 languages: ["Türkçe"]
-page: 152 sayfa
+page: "152 sayfa"
 size: "12,5x18,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Sara Gürbüz Özeren"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Sadakati uğruna kilometrelerce yol kateden insanların vefasızlığına rağmen hayat kurtarmaktan vazgeçmeyen soylu bir Kangal köpeğinin hikâyesi"]
+anatemalar: [Sadakat, "Göç ve Yabancılaşma", "Kahramanlık ve Fedakârlık", "Hırs ve İhtiras", "Doğaya Özlem", "İnsan ve Hayvan Dostluğu"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116018/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

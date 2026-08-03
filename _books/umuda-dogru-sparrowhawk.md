@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Umuda Doğru Sparrowhawk"
-
-grades: [5, 6, 7, 8]
-concepts: [ Savaşın yıkımına karşı umudun dostluğun ve sadakatin yeşerdiği nefes kesici bir macera ]
-subjects: ["Dostluk", "Umut ve İnanç", "Aile Kavramı", "Savaşın Etkileri", "Hayvan Sevgisi", "Cesaret ve Macera"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Natasha Farrant"]
+
+# Standart Book Attributes
 ean: 9786254116155
 languages: ["Türkçe"]
-page: 272 sayfa
+page: "272 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Natasha Farrant"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Savaşın yıkımına karşı umudun dostluğun ve sadakatin yeşerdiği nefes kesici bir macera"]
+anatemalar: [Dostluk, "Umut ve İnanç", "Aile Kavramı", "Savaşın Etkileri", "Hayvan Sevgisi", "Cesaret ve Macera"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116155/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

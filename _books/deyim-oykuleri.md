@@ -1,24 +1,29 @@
 ---
 layout: book
 title:  "Deyim Öyküleri (5 Kitap)"
-grades: [3, 4]
+categories: ["Çocuk", Hikaye]
+tags: [hikaye]
 genre: story
-concepts: [""]
-subjects: ["Anadolu Kültürü" , "Birey ve Toplum" , "Dil Bilim" , "Milli Kültür"]
-examlink: deyim-oykuleri-y.pdf
-categories: [ "Çocuk", "Hikaye" ]
-tags: [ "hikaye"]
 previewpage: true
-paper: "1. Hamur"
 
-# Book attributes
+# Standart Book Attributes
 ean: 9786053832874
 languages: ["Türkçe"]
-page: Her Bİri 64
+page: "Her Bİri 64"
 size: "14x20 cm"
 publish-number: 1443
 cover: "Karton Kapak"
+paper: "1. Hamur"
 
+# Spesific Filterable Attributes
+grades: [3, 4]
+kavramlar: [""]
+anatemalar: ["Anadolu Kültürü", "Birey ve Toplum", "Dil Bilim", "Milli Kültür"]
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/deyim-oykuleri-y.pdf"
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832874/mobile/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

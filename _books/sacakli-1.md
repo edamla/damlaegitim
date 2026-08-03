@@ -1,28 +1,30 @@
 ---
 layout: book
 title:  "Saçaklı Kız’ın Pasaklı Günlüğü-1"
-
-grades: [5, 6, 7, 8]
-concepts: [ Prenses masallarını unutun! Futbol aşığı biraz pasaklı ama kocaman yürekli Büş’ün komik ve samimi dünyasına hoş geldiniz. ]
-subjects: ["öZGÜNLÜK", "DOSTLUK", "EMPATİ", "AFFETMEK", "KİŞİSEL GELİŞİM", "BÜYÜMEK"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı" 
 
-# Book attributes
-authors: ["Nur Dombaycı"]
+# Standart Book Attributes
 ean: 9786051745176
 languages: ["Türkçe"]
-page: 128 sayfa
+page: "128 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Nur Dombaycı"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Prenses masallarını unutun! Futbol aşığı biraz pasaklı ama kocaman yürekli Büş’ün komik ve samimi dünyasına hoş geldiniz."]
+anatemalar: ["öZGÜNLÜK", DOSTLUK, "EMPATİ", AFFETMEK, "KİŞİSEL GELİŞİM", "BÜYÜMEK"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051745176/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

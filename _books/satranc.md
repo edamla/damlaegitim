@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Satranç"
-
-grades: [5, 6, 7, 8]
-concepts: [ Satranç hiçbir şey hesaplamayan bir matematikçi sanat eseri olmayan bir sanatçı ve cisimsiz bir bina gibidir ]
-subjects: ["Psikolojik İşkence", "Zihnin Sınırları", "Kibir ve Hırs", "Zekâ ve Yetenek", "Özgürlük ve Tutsaklık", "Satrancın Gizemi"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Stefan Zweig"]
+
+# Standart Book Attributes
 ean: 9786057490476
 languages: ["Türkçe"]
-page: 80 sayfa
+page: "80 sayfa"
 size: "12,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Stefan Zweig"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Satranç hiçbir şey hesaplamayan bir matematikçi sanat eseri olmayan bir sanatçı ve cisimsiz bir bina gibidir"]
+anatemalar: ["Psikolojik İşkence", "Zihnin Sınırları", "Kibir ve Hırs", "Zekâ ve Yetenek", "Özgürlük ve Tutsaklık", "Satrancın Gizemi"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057490476/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

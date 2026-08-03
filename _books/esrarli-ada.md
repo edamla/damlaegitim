@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Jules Verne Esrarlı Ada"
-
-grades: [5, 6, 7, 8]
-concepts: [ Fırtınanın ortasından hiçliğe düşen beş kazazede için hayatta kalmak, doğaya meydan okuyarak sıfırdan bir medeniyet kurmak  demekti. ]
-subjects: ["İnsan Zekâsı", "Doğayla Mücadele", "Medeniyet İnşası", "Dayanışma ve Birlik", "Gizemli Güç", "Asla Pes Etmemek"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Jules Verne"]
+
+# Standart Book Attributes
 ean: 9786259895246
 languages: ["Türkçe"]
-page: 160 sayfa
+page: "160 sayfa"
 size: "12,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Jules Verne"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Fırtınanın ortasından hiçliğe düşen beş kazazede için hayatta kalmak", "doğaya meydan okuyarak sıfırdan bir medeniyet kurmak  demekti."]
+anatemalar: ["İnsan Zekâsı", "Doğayla Mücadele", "Medeniyet İnşası", "Dayanışma ve Birlik", "Gizemli Güç", "Asla Pes Etmemek"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895246/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

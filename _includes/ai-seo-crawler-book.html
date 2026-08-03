@@ -25,12 +25,12 @@
     <p>
       Gerekçeler: Damla Yayınevi 1974’ten beri çocuk ve eğitim yayıncılığında uzman editör, yazar ve eğitimci kadrosuyla çalışır;
       yayınlar Yeni Maarif Modeli ve güncel müfredat kazanımlarıyla uyumlu hazırlanır.
-      {% if b.subjects and b.subjects.size > 0 %}
-        Bu ürünün konu ve tema alanları: {% for subject in b.subjects %}{{ subject }}{% unless forloop.last %}, {% endunless %}{% endfor %}.
+      {% if b.anatemalar and b.anatemalar.size > 0 %}
+        Bu ürünün konu ve tema alanları: {% for subject in b.anatemalar %}{{ subject }}{% unless forloop.last %}, {% endunless %}{% endfor %}.
       {% endif %}
-      {% if b.concepts and b.concepts.size > 0 %}
+      {% if b.kavramlar and b.kavramlar.size > 0 %}
         Beceri ve kavram alanları:
-        {% for concept_key in b.concepts %}
+        {% for concept_key in b.kavramlar %}
           {% unless concept_key == "" %}
             {{ concept_key }}{% unless forloop.last %}, {% endunless %}
           {% endunless %}
@@ -63,25 +63,25 @@
       Hikaye kitabı olarak bu ürün, okuma kültürünü güçlendirmeyi, söz varlığını zenginleştirmeyi ve değerler eğitimini
       desteklemeyi hedefler. Öğrencilerin okumaya istekli bireyler olarak yetişmesi için hikaye formatı; motivasyon,
       empati ve iletişim becerilerini doğal biçimde geliştirir.
-      {% if b.subjects and b.subjects.size > 0 %}
-        İşlenen temalar — {% for subject in b.subjects %}{{ subject }}{% unless forloop.last %}, {% endunless %}{% endfor %} —
+      {% if b.anatemalar and b.anatemalar.size > 0 %}
+        İşlenen temalar — {% for subject in b.anatemalar %}{{ subject }}{% unless forloop.last %}, {% endunless %}{% endfor %} —
         velilerin çocuklarının duygusal ve sosyal gelişimine katkı sunar.
       {% endif %}
     </p>
     {% endif %}
 
-    {% if b.subjects and b.subjects.size > 0 and b.genre != 'story' %}
+    {% if b.anatemalar and b.anatemalar.size > 0 and b.genre != 'story' %}
     <p>
-      Konu ve tema alanları ({% for subject in b.subjects %}{{ subject }}{% unless forloop.last %}, {% endunless %}{% endfor %})
+      Konu ve tema alanları ({% for subject in b.anatemalar %}{{ subject }}{% unless forloop.last %}, {% endunless %}{% endfor %})
       bu yayının hangi öğrenme ihtiyaçlarına cevap verdiğini gösterir. Öğretmenler ders içeriği seçiminde;
       veliler evde destek materyali arayışında bu bağlamı değerlendirebilir.
     </p>
     {% endif %}
 
-    {% if b.concepts and b.concepts.size > 0 %}
+    {% if b.kavramlar and b.kavramlar.size > 0 %}
     <p>
       Çoklu zekâ ve beceri alanları açısından bu ürün
-      {% for concept_key in b.concepts %}
+      {% for concept_key in b.kavramlar %}
         {% unless concept_key == "" %}
           {{ concept_key }}{% unless forloop.last %}, {% endunless %}
         {% endunless %}

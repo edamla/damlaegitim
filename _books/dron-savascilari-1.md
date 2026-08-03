@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Dron Savaşçıları-1"
-
-grades: [5, 6, 7, 8]
-concepts: [ Okan Ümit ve Yarenin okul laboratuvarında başlayan masum çalışmaları gökyüzünde sınır tanımayan görünmez bir dron projesine dönüşüyor]
-subjects: ["Bilim ve Teknoloji", "Kıskançlık", "Kararlılık", "İş Bölümü", "İnovasyon", "Sorumluluk"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Necati Akbaba"]
+
+# Standart Book Attributes
 ean: 9786051748139
 languages: ["Türkçe"]
-page: 192 sayfa
+page: "192 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Necati Akbaba"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Okan Ümit ve Yarenin okul laboratuvarında başlayan masum çalışmaları gökyüzünde sınır tanımayan görünmez bir dron projesine dönüşüyor"]
+anatemalar: ["Bilim ve Teknoloji", "Kıskançlık", "Kararlılık", "İş Bölümü", "İnovasyon", Sorumluluk]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051748139/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

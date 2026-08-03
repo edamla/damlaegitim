@@ -1,28 +1,30 @@
 ---
 layout: book
 title:  "Arsen Lüpen İstanbul'da"
-
-grades: [5, 6, 7, 8]
-concepts: [ Türk polis hafiyesi centilmen Fransız hırsız ve kurnaz Cingöz Recai acımasız bir katilin zehirli ölüm tuzağında karşı karşıya ]
-subjects: ["Akıl Oyunları", "Kılık Değiştirme", "Adalet Anlayışı", "Gizem ve Macera", "Rekabet", "Soğukkanlılık"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı" 
 
-# Book attributes
-authors: ["Peyami Safa"]
+# Standart Book Attributes
 ean: 9786051740928
 languages: ["Türkçe"]
-page: 352 sayfa
+page: "352 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Peyami Safa"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Türk polis hafiyesi centilmen Fransız hırsız ve kurnaz Cingöz Recai acımasız bir katilin zehirli ölüm tuzağında karşı karşıya"]
+anatemalar: ["Akıl Oyunları", "Kılık Değiştirme", "Adalet Anlayışı", "Gizem ve Macera", Rekabet, "Soğukkanlılık"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051740928/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

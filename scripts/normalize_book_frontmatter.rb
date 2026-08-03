@@ -6,11 +6,13 @@ require 'pathname'
 require 'date'
 
 BOOKS_DIR = Pathname.new(__dir__).join('..', '_books').expand_path
+EXAMLINK_PREFIX = 'https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/'.freeze
 
 HEADER_KEYS = %w[layout title categories tags genre previewpage].freeze
 STANDARD_KEYS = %w[ean languages page size publish-number cover].freeze
 OPTIONAL_STANDARD_KEYS = %w[original-name original-language].freeze
-FILTERABLE_KEYS = %w[grades concepts subjects examlink].freeze
+BOOK_DETAIL_KEYS = %w[paper authors].freeze
+FILTERABLE_KEYS = %w[grades kavramlar anatemalar examlink review_link damlaurl].freeze
 
 def parse_frontmatter(content)
   match = content.match(/\A---\r?\n(.*?)\r?\n---\r?\n(.*)\z/m)
@@ -25,14 +27,21 @@ def normalize_data(data)
   data.delete('featured')
   data.delete('sold')
   data.delete('examean')
-  data.delete('review_link')
-
   data['languages'] = ['Türkçe'] if data['languages'].nil? || (data['languages'].is_a?(Array) && data['languages'].empty?)
   data['publish-number'] = '' if data['publish-number'].nil?
   data['cover'] = '' if data['cover'].nil?
-  data['concepts'] = [] if data['concepts'].nil?
-  data['subjects'] = [] if data['subjects'].nil?
+  data['kavramlar'] = data.delete('concepts') if data.key?('concepts')
+  data['kavramlar'] = [] if data['kavramlar'].nil?
+  data['anatemalar'] = data.delete('subjects') if data.key?('subjects')
+  data['anatemalar'] = [] if data['anatemalar'].nil?
   data['examlink'] = '' if data['examlink'].nil?
+  examlink = data['examlink'].to_s.strip
+  if !examlink.empty? && !examlink.match?(%r{\Ahttps?://}i)
+    data['examlink'] = "#{EXAMLINK_PREFIX}#{examlink}"
+  end
+  data['review_link'] = '' if data['review_link'].nil?
+  data['damlaurl'] = data.delete('damlayayinevi') if data.key?('damlayayinevi')
+  data['damlaurl'] = '' if data['damlaurl'].nil?
   data['youtube'] = '' if data['youtube'].nil?
 
   data
@@ -90,6 +99,12 @@ def build_frontmatter(data)
   end
   OPTIONAL_STANDARD_KEYS.each do |key|
     next if data[key].nil? || data[key].to_s.empty?
+
+    lines << "#{key}: #{yaml_value(data[key], key: key)}"
+  end
+
+  BOOK_DETAIL_KEYS.each do |key|
+    next unless data.key?(key)
 
     lines << "#{key}: #{yaml_value(data[key], key: key)}"
   end

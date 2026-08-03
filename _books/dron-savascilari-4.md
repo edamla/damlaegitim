@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Dron Savaşçıları-4"
-
-grades: [5, 6, 7, 8]
-concepts: [ Karanlık Ormanın tehlikeli derinliklerinde vahşi doğaya karşı hayatta kalma mücadelesi veren iki çocuk ve gökyüzünün görünmez kahramanları Dron Savaşçılarının nefes kesen macerası başlıyor ]
-subjects: ["Bilimsel Yaklaşım", "Adalet ve Güvenlik", "Gizem ve Keşif", "Hayatta Kalma", "Takım Çalışması", "Cesaret"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Necati Akbaba"]
+
+# Standart Book Attributes
 ean: 9786254110498
 languages: ["Türkçe"]
-page: 216 sayfa
+page: "216 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Necati Akbaba"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Karanlık Ormanın tehlikeli derinliklerinde vahşi doğaya karşı hayatta kalma mücadelesi veren iki çocuk ve gökyüzünün görünmez kahramanları Dron Savaşçılarının nefes kesen macerası başlıyor"]
+anatemalar: ["Bilimsel Yaklaşım", "Adalet ve Güvenlik", "Gizem ve Keşif", "Hayatta Kalma", "Takım Çalışması", Cesaret]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254110498/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

@@ -1,6 +1,11 @@
 # Damla Okul — Proje Mimarisi
 
-Bu belge, [damlaokul.com](https://damlaokul.com) (Damla Okul) statik sitesinin teknik yapısını, dosya organizasyonunu ve geliştirme kurallarını açıklar.
+> **Dokümantasyon:** Bu projenin belgeleri üç dosyada toplanmıştır; mimari, kurulum veya UI değişikliklerinde ilgili belgeleri birlikte güncelleyin:
+> - [README.md](README.md) — Genel bakış, kurulum ve hızlı başlangıç
+> - [project.md](project.md) — Teknik mimari ve geliştirme kuralları *(bu dosya)*
+> - [design.md](design.md) — Stil, tasarım sistemi ve UI bileşenleri
+
+Bu belge, [damlaokul.com](https://damlaokul.com) (Damla Okul) statik sitesinin teknik yapısını, dosya organizasyonunu ve geliştirme kurallarını açıklar. Stil, renk, tipografi ve bileşen tasarımı için [design.md](design.md) dosyasına bakın.
 
 ## Genel Bakış
 
@@ -46,73 +51,9 @@ Site, **Damla Okul** markası altında Damla Yayınevi’nin okul yayınlarını
 
 ## CSS Katmanları
 
-Stil üç katmanlıdır. Özelleştirme **asla** Bootstrap dosyasına yazılmaz.
+Stil dosyaları ve sorumluluk ayrımı [design.md](design.md) dosyasında ayrıntılı olarak tanımlıdır.
 
-```
-bootstrap.min.css        →  Framework (Bootstrap 5.3, statik dosya)
-fontawesome-all.min.css  →  Font Awesome 5.15.4 (yerel, assets/fonts/fontawesome/)
-theme.css                →  Tasarım sistemi (token, bileşen, layout)
-app.css                  →  Bootstrap override (renk, watermark, geçici fix)
-spotlight.css            →  Arama modal stilleri (async yükleme)
-tiny-slider.css          →  Anasayfa slider (yalnızca slider.html içinde)
-buyout.css               →  E-ticaret barı (yalnızca kitap/katalog detay)
-```
-
-### Sorumluluk ayrımı
-
-| Dosya | Ne yazılır | Ne yazılmaz |
-|-------|------------|-------------|
-| `assets/css/theme.css` | `:root` token’lar, `.book-card`, `.grade-nav`, `.site-nav`, `.prose` | Bootstrap class override, `!important` |
-| `assets/css/app.css` | `--bs-primary`, `.btn-primary`, body arka plan, sayfa özel düzeltmeler | Yeni bileşen tanımı |
-
-**Kural:** Yeni bileşen → `theme.css`. Bootstrap’ı ezmek → `app.css`.
-
-### Tasarım token’ları (`theme.css` → `:root`)
-
-```css
---color-primary: #03a87c;
---color-primary-dark: #028a66;
---color-surface: #fafafa;
---font-nav: "Geometric Sans", system-ui, sans-serif;
---font-display: "Punta", sans-serif;
---font-sans: "Raykjavik", system-ui, sans-serif;
---font-serif: var(--font-sans);
---nav-height: 4rem;
---book-card-media-height: 220px;
---book-card-info-height: 3rem;
-```
-
-### Tipografi
-
-Font dosyaları `assets/fonts/` altında yerel olarak servis edilir; `@font-face` tanımları `theme.css` başında.
-
-| Font | Dosya | Kullanım alanı | CSS seçici |
-|------|-------|----------------|------------|
-| Geometric Sans | `assets/fonts/geometric-sans/geometric.woff2` | Navbar menü linkleri | `.site-nav .navbar-nav.me-auto .nav-link` |
-| Punta | `assets/fonts/punta/Punta-Light.woff2` | Sınıf filtresi, tür başlıkları | `.grade-nav`, `.book-genre-heading` |
-| Raykjavik | `assets/fonts/raykjavik/reykjavik-rounded-regular.woff2` | Genel site metni | `body`, `--font-sans` |
-| Font Awesome | `assets/fonts/fontawesome/*.woff2` | İkonlar (`fas`, `fab`) | `fontawesome-all.min.css` |
-
-**Raykjavik:** Orijinal TTF (`reykjavik-rounded-regular.ttf`, ~311 KB) repo'da kalır; ziyaretçiye yalnızca WOFF2 subset (~26 KB) servis edilir.
-
-**Geometric Sans / Punta:** CSS yalnızca WOFF2 referanslar; OTF dosyaları repo'da kalır.
-
-**Tüm fontlar:** `sh scripts/subset_font.sh` komutu `assets/fonts/` altındaki tüm OTF/TTF dosyalarından WOFF2 üretir (`fontawesome/` hariç; aynı isimde `.otf` varsa `.ttf` atlanır). Karşılık gelen `.woff2` zaten varsa ve kaynak dosyadan yeniyse atlanır. `monolight/` ve `reykjavik-rounded-slab-reg` dahil — CSS'te referans olmasa da WOFF2 varyantları oluşturulur.
-
-**Font Awesome:** CDN yerine tam paket `assets/fonts/fontawesome/` altında yerel olarak tutulur. CSS: `assets/css/fontawesome-all.min.css`.
-
-HTML partial’larında (`menu-header`, `book-grade-nav`, `book-home-groups`) değişiklik gerekmez; mevcut class yapısı yeterlidir.
-
-### Kitap kartı (`.book-card`)
-
-Kartlar [`book-home-groups.html`](_includes/book-home-groups.html) içinde grid’de render edilir. Tüm kartlar sabit genişlik ve yüksekliğe sahiptir.
-
-| Eleman | Class | Davranış |
-|--------|-------|----------|
-| Kart | `.book-card` | Sabit toplam yükseklik (görsel + başlık alanı + padding) |
-| Resim kutusu | `.book-card__media` | Sabit yükseklik (`--book-card-media-height`), `object-fit: contain` |
-| İsim kutusu | `.book-card__info` | Sabit yükseklik (`--book-card-info-height`), en fazla 2 satır başlık |
-| Başlık | `.book-card__title` | En fazla 2 satır (`line-clamp`) |
+Özet: `theme.css` (bileşen + token) → `app.css` (Bootstrap override). `bootstrap.min.css` **düzenlenmez**.
 
 ---
 
@@ -121,7 +62,7 @@ Kartlar [`book-home-groups.html`](_includes/book-home-groups.html) içinde grid�
 ```
 damlaegitim/
 ├── _config.yml           # Site ayarları, koleksiyonlar, plugin’ler
-├── _books/               # Ürünler (kitap / eğitim seti) — ~55 kayıt
+├── _books/               # Ürünler (kitap / eğitim seti) — ~187 kayıt
 ├── _catalogs/            # PDF/flipbook kataloglar
 ├── _slides/              # Anasayfa slider verisi (output: false)
 ├── _posts/               # Blog yazıları
@@ -162,7 +103,9 @@ damlaegitim/
 │   ├── refresh_image_paths.sh    # Windows winget PATH düzeltmesi (dahili)
 │   ├── check_images.sh           # Büyük görsel uyarı raporu (start.sh hook)
 │   ├── check_fonts.sh            # Font / WOFF2 uyarı raporu (install.sh)
-│   └── subset_font.sh            # Tüm OTF/TTF → WOFF2 subset (install.sh)
+│   ├── subset_font.sh            # Tüm OTF/TTF → WOFF2 subset (install.sh)
+│   ├── normalize_book_frontmatter.rb   # Kitap front matter sıralama/normalize (`review_link`, `examlink`, `damlaurl` korunur)
+│   └── fill_review_link_from_config.rb # Tek seferlik: boş review_link → varsayılan CDN URL
 ├── index.html            # Anasayfa
 ├── Gemfile               # Ruby bağımlılıkları
 ├── CNAME                 # damlaokul.com
@@ -220,6 +163,7 @@ Tüm layout’lar `layout: default` zinciri üzerinden `default.html`’i extend
 | `book-grade-filter.html` | Eski sınıf checkbox dropdown’u (artık kullanılmıyor) |
 | `search-lunr.html` | Spotlight arama (lazy-load Lunr + JSON indeks, modal UI, navbar tetikleyici) |
 | `popup.html` | Kitap detay popup’ları (Bilgi, ön okuma iframe, YouTube; koyu tema desteği) |
+| `eanimage.html` | Kitap kapak `<picture>` + koşullu WebP (`eanimage` partial) |
 | `tracking-header.html` / `tracking-footer.html` | Google Analytics |
 
 ---
@@ -332,57 +276,33 @@ sh scripts/subset_font.sh           # Tüm OTF/TTF → WOFF2 subset (fontawesome
 
 ## Navbar (`#MagicMenu`)
 
-Ana navigasyon `default.html` içinde `id="MagicMenu"` ile tanımlıdır; scroll sırasında **her zaman üstte sabit** kalır (eski gizle/göster davranışı kaldırıldı).
+Ana navigasyon `default.html` içinde `id="MagicMenu"` ile tanımlıdır; scroll sırasında **her zaman üstte sabit** kalır.
 
-### Yapı
-
-```
-.container
-├── .site-nav__bar          ← mobil: logo + arama + hamburger (tek satır)
-│   ├── .navbar-brand
-│   ├── .site-nav__search-bar (d-md-none)
-│   └── .navbar-toggler
-└── .navbar-collapse        ← menü linkleri (mobilde alt satır, tam genişlik)
-```
-
-Masaüstünde (`≥992px`) `.site-nav__bar` için `display: contents` kullanılır; Bootstrap’ın yatay navbar düzeni korunur.
+Yapı, responsive davranış ve görsel stiller [design.md — Site Navbar](design.md#1-site-navbar-magicmenu) bölümünde tanımlıdır.
 
 ### `nav.js`
 
 - `--nav-height` CSS değişkenini navbar yüksekliğine göre günceller (`ResizeObserver` ile mobil menü açılınca da)
 - Scroll’da `site-nav--scrolled` sınıfı ile hafif gölge ekler
-- Navbar `position: fixed; top: 0; z-index: 1030`
 
 ---
 
 ## Kitap Detay Sayfası (`book.html`)
 
-Ürün detay layout’u `book-page` sınıfı ile işaretlenir.
+Ürün detay layout’u `book-page` sınıfı ile işaretlenir. Etiket stilleri, prose düzeni ve popup görünümü [design.md — Kitap Detay](design.md#6-kitap-detay-book-page) bölümünde tanımlıdır.
 
 ### Üst alan etiketleri
 
-| Alan (front matter) | Görünüm | Stil |
-|---------------------|---------|------|
-| `subjects` | `#etiket` | Yeşil metin (`--color-primary`), silik gri pill arka plan |
-| `concepts` | `@etiket` | Turuncu metin (`#c88400`), silik gri pill arka plan |
+| Alan (front matter) | Görünüm |
+|---------------------|---------|
+| `anatemalar` | `#etiket` (yeşil) |
+| `kavramlar` | `@etiket` (turuncu) |
 
-`concepts` her kitabın kendi front matter’ında tanımlanır; merkezi bir `_config.yml` eşlemesi yoktur. Yaml’daki metin `@` önekiyle küçük harfe çevrilerek gösterilir (ör. `Dil Bilim` → `@dil bilim`).
-
-### Metadata listesi
-
-Sol sütundaki özellik listesi (yayın no, sayfa, boyut vb.) `.book-meta` flex düzeniyle ikon ve metin hizasını korur.
-
-### İçerik alanı (`.prose--display`)
-
-Markdown gövdesi `.prose--display` ile render edilir:
-
-- `**kalın**` metin: `font-synthesis: weight` ile aynı font ailesinde sentetik bold
-- Liste ve başlık aralıkları sıkılaştırılmıştır
-- Mobilde (`.book-page`) başlık ortalanır; masaüstünde sola hizalı kalır
+`kavramlar` her kitabın kendi front matter’ında tanımlanır. Yaml’daki metin `@` önekiyle küçük harfe çevrilerek gösterilir.
 
 ### Aksiyon butonları ve popup
 
-Ön Okuma, Tanıtım, Bilgi, İncele, HDS butonları `.js-book-action` ile [`popup.html`](_includes/popup.html) üzerinden açılır:
+Ön Okuma, Tanıtım, Bilgi, İncele ve HDS butonları `.js-book-action` ile [`popup.html`](_includes/popup.html) üzerinden açılır:
 
 | `data-popup-type` | Davranış |
 |-------------------|----------|
@@ -390,7 +310,7 @@ Markdown gövdesi `.prose--display` ile render edilir:
 | `iframe` | Tam ekran iframe (ön okuma, incele, HDS) |
 | `youtube` | YouTube embed |
 
-`info` popup’u `prefers-color-scheme: dark` için metin renkleri ayarlanmıştır.
+Masaüstünde iframe/youtube popup; mobilde yeni sekme. `info` popup’u `prefers-color-scheme: dark` destekler.
 
 ---
 
@@ -409,7 +329,7 @@ Navbar üzerinden kitap araması yapılır. macOS Spotlight benzeri tam ekran mo
 
 ### İndeks kapsamı
 
-`site.books` koleksiyonu; alanlar: `title`, `authors`, `categories`, `grades`, `genre`, `subjects`, `tags`, `body`.
+`site.books` koleksiyonu; alanlar: `title`, `authors`, `categories`, `grades`, `genre`, `anatemalar`, `tags`, `body`.
 
 İndeks her sayfaya gömülmez; `/assets/search-index.json` olarak ayrı endpoint'ten fetch edilir. Bu sayede sayfa yüklenirken Lunr indeksleme maliyeti oluşmaz.
 
@@ -453,7 +373,7 @@ Instagram, statik siteden doğrudan feed çekmeye izin vermez. [Behold.so](https
 {% include instagram-carousel.html %}
 ```
 
-Şu an [`index.html`](index.html) içinde slider ile kitap listesi arasında include edilir. Stiller site token’larıyla uyumludur (`--color-primary`, `--font-display`, `--radius`).
+Şu an [`index.html`](index.html) içinde slider ile kitap listesi arasında include edilir. Görsel tasarım [design.md — Instagram Carousel](design.md#8-instagram-carousel-ig-carousel) bölümünde tanımlıdır.
 
 ---
 
@@ -506,7 +426,7 @@ footer_order: 10
   | sort: "footer_order" %}
 ```
 
-Stiller `assets/css/theme.css` içinde `.site-footer__*` ve `.contact-info__*` sınıflarıyla tanımlıdır.
+Footer düzeni ve stiller [design.md — Site Footer](design.md#2-site-footer-site-footer) bölümünde tanımlıdır.
 
 ---
 
@@ -518,11 +438,14 @@ layout: book
 title: "Deyim Öyküleri 5 Kitap"
 grades: [3]
 genre: story          # education | story
-subjects: ["Değerler Eğitimi", "Macera", "Gizem"]   # yeşil # etiketler
-concepts: ["Dil Bilim", "Milli Kültür", "Zaman Mekan"]   # turuncu @ etiketler (kitap front matter)
+anatemalar: ["Değerler Eğitimi", "Macera", "Gizem"]   # yeşil # etiketler
+kavramlar: ["Dil Bilim", "Milli Kültür", "Zaman Mekan"]   # turuncu @ etiketler (kitap front matter)
 categories: ["Çocuk", "Hikaye"]
 previewpage: true
 ean: 9786053832874
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832874/index.html"
+examlink: ""   # HDS yoksa boş; doluysa tam PDF URL (ör. https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/...)
+damlaurl: ""   # Damla Yayınevi ürün sayfası; boşsa Bilgi → tedarik popup
 languages: ["Türkçe"]
 page: Her Biri 64
 size: "14x20cm"
@@ -533,7 +456,57 @@ cover: "Karton Kapak"
 
 Markdown gövdesi ürün açıklaması olarak `book.html` içindeki `.prose--display` alanında render edilir. `**TEMALAR:**` gibi kalın başlıklar ve madde listeleri bu alanda stillenir.
 
-Ön izleme URL’si frontmatter’da tutulmaz. `previewpage: true` ve `ean` olan kitaplarda `book.html`; `previewbook` layout’unda iframe, `_config.yml` içindeki `pagepreview.prefix` + `ean` + `pagepreview.postfix` ile üretilir.
+Ön izleme URL’si kitap front matter’ındaki `review_link` alanında tutulur. `book.html` içindeki İncele butonu ve `previewbook` layout’undaki iframe bu alanı kullanır. Eksik kitaplarda varsayılan desen: `https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/{ean}/index.html`; bazı kitaplarda özel path’ler (`damlaegitim/`, `/mobile/` vb.) korunur. `/urun-inceleme-linkleri` sayfası `review_link` dolu tüm kitapları listeler.
+
+`previewpage` front matter alanı şablonlarda artık kullanılmaz (legacy; isteğe bağlı kalabilir). HDS PDF linkleri kitap front matter’ındaki tam `examlink` URL’si ile tanımlanır; `book.html` içinde `examlink` doluysa HDS butonu görünür, boş veya yoksa görünmez. Site genelinde `examlink` için `_config.yml` ayarı yoktur.
+
+### `examlink` (HDS)
+
+| Durum | Front matter | Kitap sayfası |
+|-------|--------------|---------------|
+| HDS yok | `examlink: ""` | HDS butonu görünmez |
+| HDS var | Tam CDN URL | HDS butonu görünür (popup iframe) |
+
+Örnek URL: `https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/deyim-oykuleri-y.pdf`
+
+`scripts/normalize_book_frontmatter.rb` tüm kitaplarda `examlink` satırını korur; eksikse `examlink: ""` yazar, göreli dosya adı verilmişse tam URL’ye çevirir.
+
+### `damlaurl` (Bilgi)
+
+| Durum | Front matter | Kitap sayfası |
+|-------|--------------|---------------|
+| URL yok | `damlaurl: ""` | Bilgi → tedarik bilgisi popup |
+| URL var | Tam ürün sayfası URL | Bilgi → iframe popup |
+
+Örnek URL: `https://www.damlayayinevi.com.tr/...`
+
+`scripts/normalize_book_frontmatter.rb` tüm kitaplarda `damlaurl` satırını korur; eksikse `damlaurl: ""` yazar. Eski `damlayayinevi` front matter alanı varsa `damlaurl`’a taşınır. Site genelinde `buyout` veya `damlayayinevi` config ayarı yoktur.
+
+### `review_link` bakımı
+
+| Araç | Görev |
+|------|-------|
+| `scripts/fill_review_link_from_config.rb` | `review_link` boş + `ean` dolu kitaplara varsayılan CDN URL yazar; mevcut URL’lere dokunmaz |
+| `scripts/normalize_book_frontmatter.rb` | Front matter sıralar; `review_link`, `examlink` ve `damlaurl` `FILTERABLE_KEYS` içinde korunur |
+
+Yeni kitap eklerken `review_link` doğrudan front matter’a yazılır; özel path gerekmezse `{ean}` ile varsayılan desen kullanılır.
+
+---
+
+## Ürün İnceleme Linkleri Sayfası
+
+| Özellik | Değer |
+|---------|-------|
+| Dosya | [`_pages/linkler.html`](_pages/linkler.html) |
+| URL | `/urun-inceleme-linkleri` |
+| Layout | `page` (`show_title: false`) |
+| Veri | `site.books` → `review_link` dolu kitaplar (`sort: title`) |
+| Stil / JS | Sayfa içi inline `<style>` + `<script>` (include yok) |
+| Footer | `footer_show: true`, `footer_order: 15` |
+
+Kart düzeni: solda kapak (`eanimage.html`), sağda sınıf rozeti + başlık + dört aksiyon — Kitabı incele (`review_link`), Kitaba git (ürün URL), Whatsappda paylaş, Linki kopyala. Arama kutusu başlık ve sınıf rozeti üzerinde client-side filtre uygular (`toLocaleLowerCase('tr-TR')`).
+
+Görsel tasarım [design.md — Ürün İnceleme Linkleri](design.md#13-ürün-inceleme-linkleri-review-links) bölümünde tanımlıdır.
 
 ---
 
@@ -592,7 +565,7 @@ GitHub Pages uyumlu (özel Ruby plugin yok):
 | `_includes/structured-data-site.html` | `Organization` + `WebSite` JSON-LD |
 | `_includes/ai-seo-crawler.html` | Router + visually-hidden wrapper; `default.html` include noktası |
 | `_includes/ai-seo-crawler-base.html` | Ortak Damla Yayınevi marka argümanları |
-| `_includes/ai-seo-crawler-book.html` | Kitap sayfaları (`grades`, `genre`, `subjects`, `concepts`) |
+| `_includes/ai-seo-crawler-book.html` | Kitap sayfaları (`grades`, `genre`, `anatemalar`, `kavramlar`) |
 | `_includes/ai-seo-crawler-home.html` | Anasayfa |
 | `_includes/ai-seo-crawler-catalog.html` | `/urunler` ürün listesi |
 | `_includes/ai-seo-crawler-katalog.html` | Katalog detay sayfaları |
@@ -675,21 +648,23 @@ GitHub Pages, push sonrası kaynak branch’ten Jekyll build alır. **CI/CD veya
 ## Yeni Ürün Ekleme
 
 1. `_books/yeni-urun.md` oluştur
-2. Front matter doldur (`title`, `grades`, `genre`, `ean`…)
-3. İsteğe bağlı `description:` — yoksa build sırasında otomatik üretilir
-4. Kapak görselini `assets/images/ean/{ean}.jpg` olarak ekle (jpg/png optimize et; webp `sh start.sh` ile otomatik)
-5. `sh scripts/check_images.sh` ile boyut kontrolü (veya `sh start.sh`)
-6. `sh start.sh` ile kontrol et
-7. `git push`
+2. Front matter doldur (`title`, `grades`, `genre`, `ean`, `review_link`, `examlink`, `damlaurl`…)
+3. `review_link` — ön izleme URL’si; boş bırakılırsa `scripts/fill_review_link_from_config.rb` ile varsayılan desen yazılabilir
+4. `examlink` — HDS PDF tam URL’si; yoksa `examlink: ""` (HDS butonu görünmez)
+5. `damlaurl` — Damla Yayınevi ürün sayfası tam URL’si; yoksa `damlaurl: ""` (Bilgi → tedarik popup)
+6. İsteğe bağlı `description:` — yoksa build sırasında otomatik üretilir
+7. Kapak görselini `assets/images/ean/{ean}.jpg` olarak ekle (jpg/png optimize et; webp `sh start.sh` ile otomatik)
+8. `sh scripts/check_images.sh` ile boyut kontrolü (veya `sh start.sh`)
+9. `sh start.sh` ile kontrol et
+10. `git push`
 
 ---
 
 ## Yeni Bileşen / Stil Ekleme
 
-1. Kalıcı görsel bileşen → `theme.css` (Components bölümü)
-2. Bootstrap override → `app.css`
+1. Tasarım kuralları ve dosya seçimi → [design.md — Yeni Stil Ekleme Rehberi](design.md#yeni-stil-ekleme-rehberi)
+2. Partial gerekiyorsa → `_includes/` altına ekle
 3. HTML’de Bootstrap grid class’ları (`row`, `col-*`) kullanılabilir
-4. Partial gerekiyorsa → `_includes/` altına ekle
 
 ---
 
@@ -697,9 +672,9 @@ GitHub Pages, push sonrası kaynak branch’ten Jekyll build alır. **CI/CD veya
 
 | Kaynak | Kullanım |
 |--------|----------|
-| `cdn.e-damla.com.tr` | Önizleme sayfaları, örnek sayfalar |
+| `cdn.e-damla.com.tr` | Kitap `review_link` ön izleme sayfaları; `examlink` HDS PDF’leri |
 | `feeds.behold.so` | Instagram carousel JSON feed |
-| Google Analytics | `G-KFMVQ3WNN3` (production) |
+| Google Analytics | `G-PR1C1WGQB6` (`site.google_analytics`; yalnızca production) |
 | Cloudflare | DNS (şu an proxy kapalı — gri bulut) |
 
 Font Awesome artık yerel olarak `assets/fonts/fontawesome/` altından servis edilir; harici CDN kullanılmaz.

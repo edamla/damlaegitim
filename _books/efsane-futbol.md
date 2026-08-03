@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Efsane Futbol Takımları"
-
-grades: [5, 6, 7, 8]
-concepts: [ Meşin yuvarlağın peşinde sadece zaferleri değil bir milletin hüznünü bağımsızlığını ve şanlı direnişini keşfedin ]
-subjects: ["Futbol Tarihi", "Tarihî Miras", "Araştırma Merakı", "Millî Birlik", "Dayanışma", "Sporun Gücü"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Sara Gürbüz Özeren"]
+
+# Standart Book Attributes
 ean: 9786254113062
 languages: ["Türkçe"]
-page: 120 sayfa
+page: "120 sayfa"
 size: "12,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Sara Gürbüz Özeren"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Meşin yuvarlağın peşinde sadece zaferleri değil bir milletin hüznünü bağımsızlığını ve şanlı direnişini keşfedin"]
+anatemalar: ["Futbol Tarihi", "Tarihî Miras", "Araştırma Merakı", "Millî Birlik", "Dayanışma", "Sporun Gücü"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113062/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

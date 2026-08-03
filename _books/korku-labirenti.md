@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Korku Labirenti"
-
-grades: [5, 6, 7, 8]
-concepts: [ Her kapının ardında yeni bir tuzak her adımda yeni bir bilmece cesaret vedostluğun sınandığı bu labirentten çıkış var mı ]
-subjects: ["Dayanışma", "Cesaret", "Gizem", "Açgözlülük", "Problem Çözme", "Doğa İlişkisi"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Necati Akbaba"]
+
+# Standart Book Attributes
 ean: 9786254116407
 languages: ["Türkçe"]
-page: 176 sayfa
+page: "176 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Necati Akbaba"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Her kapının ardında yeni bir tuzak her adımda yeni bir bilmece cesaret vedostluğun sınandığı bu labirentten çıkış var mı"]
+anatemalar: ["Dayanışma", Cesaret, Gizem, "Açgözlülük", "Problem Çözme", "Doğa İlişkisi"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116407/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

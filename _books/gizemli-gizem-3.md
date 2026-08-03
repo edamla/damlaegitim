@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Gizemli Gizem-3"
-
-grades: [5, 6, 7, 8]
-concepts: [ Sıradan bir Kapadokya tatili gökyüzüne süzülen bir balonla nasıl nefes kesici bir serüvene dönüşebilir ]
-subjects: ["Sorumluluk", "Gerçeklik ve Yanılsama", "Tarih Bilinci", "Açgözlülük", "Dayanışma ve Arkadaşlık", "Cesaret ve Korku"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Nehir Aydın Gökduman"]
+
+# Standart Book Attributes
 ean: 9786254115059
 languages: ["Türkçe"]
-page: 160 sayfa
+page: "160 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Nehir Aydın Gökduman"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Sıradan bir Kapadokya tatili gökyüzüne süzülen bir balonla nasıl nefes kesici bir serüvene dönüşebilir"]
+anatemalar: [Sorumluluk, "Gerçeklik ve Yanılsama", "Tarih Bilinci", "Açgözlülük", "Dayanışma ve Arkadaşlık", "Cesaret ve Korku"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115059/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

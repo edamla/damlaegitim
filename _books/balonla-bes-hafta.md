@@ -1,28 +1,30 @@
 ---
 layout: book
 title:  "Balonla Beş Hafta"
-
-grades: [5, 6, 7, 8]
-concepts: [ Altmış yüzyıldır çözülemeyen Afrikanın sırrı Victoria adlı bir balonla gökyüzünden aydınlanıyor ]
-subjects: ["Keşif Tutkusu", "Doğayla Mücadele", "Umut ve Çaresizlik", "Fedakârlık", "Sadakat", "Kültürel Çatışma"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı" 
 
-# Book attributes
-authors: ["Jules Verne"]
+# Standart Book Attributes
 ean: 9786057288752
 languages: ["Türkçe"]
-page: 160 sayfa
+page: "160 sayfa"
 size: "12,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Jules Verne"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Altmış yüzyıldır çözülemeyen Afrikanın sırrı Victoria adlı bir balonla gökyüzünden aydınlanıyor"]
+anatemalar: ["Keşif Tutkusu", "Doğayla Mücadele", "Umut ve Çaresizlik", "Fedakârlık", Sadakat, "Kültürel Çatışma"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288752/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

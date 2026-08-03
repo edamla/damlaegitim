@@ -1,27 +1,29 @@
 ---
 layout: book
 title:  "ETİK DEĞERLER EĞİTİM SETİ-2. SINIF (10 KİTAP)"
-
-grades: [2]
-concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
-subjects: ["Hoşgörü", "Adalet", "Dostluk", "Özdenetim", "Toplumsal Sorumluluk"]
-
-examlink: etik-degerler2-y.pdf
-
-categories: [ "Öykümatik" ]
-tags: [ "hikaye"]
+categories: ["Öykümatik"]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "1. Hamur"
 
-# Book attributes
+# Standart Book Attributes
 ean: 8697911223875
 languages: ["Türkçe"]
-page: Her Biri 24
+page: "Her Biri 24"
 size: "23,5x16,5 cm"
 publish-number: 1817
 cover: "Karton Kapak"
+paper: "1. Hamur"
 
+# Spesific Filterable Attributes
+grades: [2]
+kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
+anatemalar: ["Hoşgörü", Adalet, Dostluk, "Özdenetim", "Toplumsal Sorumluluk"]
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/etik-degerler2-y.pdf"
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223875/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

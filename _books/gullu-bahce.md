@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Güllü Bahçe"
-
-grades: [5, 6, 7, 8]
-concepts: [ Toprak sadece tohumu değil sabırla yoğrulan kırık dökük umutları da yeşertir ]
-subjects: ["Emek ve Doğa", "Vefa", "Merhamet", "Kumarın Bedeli", "Ön Yargılar", "Pişmanlık"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Kemalettin Tuğcu"]
+
+# Standart Book Attributes
 ean: 9786254113321
 languages: ["Türkçe"]
-page: 80 sayfa
+page: "80 sayfa"
 size: "13,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Kemalettin Tuğcu"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Toprak sadece tohumu değil sabırla yoğrulan kırık dökük umutları da yeşertir"]
+anatemalar: ["Emek ve Doğa", Vefa, Merhamet, "Kumarın Bedeli", "Ön Yargılar", "Pişmanlık"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113321/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

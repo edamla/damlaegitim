@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Havaya Uçan At"
-
-grades: [5, 6, 7, 8]
-concepts: [ Bulutların ötesinde süzülen sihirli bir at denizleri aşan cesur bir gemici ve zekâsıyla krallara meydan okuyan bir çocuk ]
-subjects: ["İyilik ve Kötülük", "Cesaret", "Sosyal Dayanışma", "Zekâ", "Sorumluluk", "Aile Bağları ve Vefa"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Peyami Safa"]
+
+# Standart Book Attributes
 ean: 9789753812375
 languages: ["Türkçe"]
-page: 128 sayfa
+page: "128 sayfa"
 size: "13,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Peyami Safa"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Bulutların ötesinde süzülen sihirli bir at denizleri aşan cesur bir gemici ve zekâsıyla krallara meydan okuyan bir çocuk"]
+anatemalar: ["İyilik ve Kötülük", Cesaret, "Sosyal Dayanışma", "Zekâ", Sorumluluk, "Aile Bağları ve Vefa"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9789753812375/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

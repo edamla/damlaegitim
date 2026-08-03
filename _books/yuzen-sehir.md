@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Yüzen Şehir"
-
-grades: [5, 6, 7, 8]
-concepts: [ Okyanusun ortasında devasa bir çelik ada, fırtınalı sularda birbirine doğru sürüklenen eski düşmanlar ve kaderin  kaçınılmaz oyunu... ]
-subjects: ["Mühendislik", "İhtiras ve Kumar", "İlahi Adalet", "Dostluk ve Sadakat", "Yeniden Doğuş", "Yaşamın Kırılganlığı"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Jules Verne"]
+
+# Standart Book Attributes
 ean: 9786259895284
 languages: ["Türkçe"]
-page: 160 sayfa
+page: "160 sayfa"
 size: "12,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Jules Verne"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Okyanusun ortasında devasa bir çelik ada", "fırtınalı sularda birbirine doğru sürüklenen eski düşmanlar ve kaderin  kaçınılmaz oyunu..."]
+anatemalar: ["Mühendislik", "İhtiras ve Kumar", "İlahi Adalet", "Dostluk ve Sadakat", "Yeniden Doğuş", "Yaşamın Kırılganlığı"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895284/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

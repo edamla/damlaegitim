@@ -1,5 +1,10 @@
 # Damla Okul
 
+> **Dokümantasyon:** Bu projenin belgeleri üç dosyada toplanmıştır; mimari, kurulum veya UI değişikliklerinde ilgili belgeleri birlikte güncelleyin:
+> - [README.md](README.md) — Genel bakış, kurulum ve hızlı başlangıç *(bu dosya)*
+> - [project.md](project.md) — Teknik mimari ve geliştirme kuralları
+> - [design.md](design.md) — Stil, tasarım sistemi ve UI bileşenleri
+
 [damlaokul.com](https://damlaokul.com) — Damla Yayınevi’nin okul yayınları ve eğitim materyallerini tanıtan statik web sitesi.
 
 Yeni Maarif Modeline uygun eğitim setleri, hikaye kitapları ve kataloglar tek bir katalogda sunulur.
@@ -7,7 +12,8 @@ Yeni Maarif Modeline uygun eğitim setleri, hikaye kitapları ve kataloglar tek 
 ## Özellikler
 
 - **Ürün kataloğu** — Sınıf ve tür (Eğitim / Hikaye) bazlı filtreleme, paylaşılabilir hash URL’leri
-- **Kitap detay sayfaları** — Kapak, metadata, `#subjects` / `@concepts` etiketleri, önizleme linki, popup ile tedarik bilgisi
+- **Kitap detay sayfaları** — Kapak, metadata, `#anatemalar` / `@kavramlar` etiketleri, `review_link` ile önizleme (İncele), `examlink` ile HDS PDF, `damlaurl` ile ürün bilgisi (Bilgi), popup ile tedarik bilgisi
+- **Ürün inceleme linkleri** — `/urun-inceleme-linkleri` sayfasında tüm `review_link` dolu kitaplar; arama, kopyala ve WhatsApp paylaşımı
 - **Kataloglar** — Html / PDF katalog görüntüleme
 - **Anasayfa slider** — Kampanya ve duyuru görselleri
 - **Instagram carousel** — `@okul.damla` hesabının güncel gönderileri (Behold JSON feed)
@@ -24,7 +30,7 @@ Yeni Maarif Modeline uygun eğitim setleri, hikaye kitapları ve kataloglar tek 
 | Katman | Teknoloji |
 |--------|-----------|
 | Site motoru | Jekyll 4.x (Ruby) |
-| CSS framework | Bootstrap 5.3 |
+| CSS framework | Bootstrap 5.3 (tasarım sistemi: [design.md](design.md)) |
 | Özel stiller | `theme.css` + `app.css` + `fontawesome-all.min.css` |
 | JavaScript | Vanilla JS (filtre, navbar, arama) + Bootstrap bundle + Lunr.js (lazy) |
 | Fontlar | Yerel: Geometric Sans, Punta, Raykjavik (WOFF2), Font Awesome 5.15.4 |
@@ -156,6 +162,8 @@ GitHub Pages otomatik olarak siteyi günceller.
 | [`scripts/check_images.sh`](scripts/check_images.sh) | `start.sh` içinden | Büyük görselleri raporlar (dosyaya dokunmaz) |
 | [`scripts/subset_font.sh`](scripts/subset_font.sh) | `install.sh` içinden | OTF/TTF → WOFF2 subset |
 | [`scripts/check_fonts.sh`](scripts/check_fonts.sh) | `install.sh` içinden | Font boyut uyarı raporu |
+| [`scripts/normalize_book_frontmatter.rb`](scripts/normalize_book_frontmatter.rb) | Manuel | Kitap front matter sıralama; `review_link`, `examlink` ve `damlaurl` korunur |
+| [`scripts/fill_review_link_from_config.rb`](scripts/fill_review_link_from_config.rb) | Manuel (tek seferlik) | Boş `review_link` alanlarına varsayılan CDN URL yazar |
 
 Windows Git Bash'te sıfırdan kurulum: `sh install.sh` → geliştirme: `sh start.sh`.
 
@@ -178,7 +186,7 @@ start.sh         Geliştirme sunucusu + hook'lar
 index.html       Anasayfa
 ```
 
-Detaylı mimari için [project.md](project.md) dosyasına bakın.
+Detaylı mimari için [project.md](project.md), stil ve tasarım için [design.md](design.md) dosyasına bakın.
 
 ## SEO ve AI Crawler
 
@@ -207,14 +215,17 @@ layout: book
 title: "Ürün Adı"
 grades: [1, 2]
 genre: education
-subjects: ["Değerler Eğitimi", "Macera"]     # yeşil # etiketler (detay sayfası üstü)
-concepts: ["Dil Bilim", "Milli Kültür"]       # turuncu @ etiketler (kitap front matter)
+anatemalar: ["Değerler Eğitimi", "Macera"]     # yeşil # etiketler (detay sayfası üstü)
+kavramlar: ["Dil Bilim", "Milli Kültür"]       # turuncu @ etiketler (kitap front matter)
 ean: 9786053832874
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832874/index.html"
+examlink: ""   # HDS PDF tam URL; boşsa HDS butonu görünmez
+damlaurl: ""   # Damla Yayınevi ürün sayfası tam URL; boşsa tedarik bilgisi popup
 ---
 Ürün açıklaması buraya...
 ```
 
-`subjects` TEMALAR için, `concepts` çoklu zekâ / kavram etiketleri içindir. Her ikisi de yalnızca kitap front matter’ında tanımlanır; gösterilecek metni doğrudan yazın (ör. `Dil Bilim`, `Milli Kültür`).
+`anatemalar` TEMALAR için, `kavramlar` çoklu zekâ / kavram etiketleri içindir. Her ikisi de yalnızca kitap front matter’ında tanımlanır; gösterilecek metni doğrudan yazın (ör. `Dil Bilim`, `Milli Kültür`). `review_link` ön izleme URL’sidir; `book.html` İncele butonu ve `previewbook` iframe bu alanı kullanır. `examlink` HDS PDF tam URL’sidir; doluysa HDS butonu görünür, boşsa görünmez. `damlaurl` Damla Yayınevi ürün sayfası tam URL’sidir; doluysa Bilgi butonu iframe popup açar, boşsa tedarik bilgisi popup açılır — site genelinde ayrı config ayarı yoktur.
 
 3. Kapak görselini `assets/images/ean/{ean}.jpg` olarak ekleyin (jpg/png optimize edin; `.webp` `sh start.sh` ile otomatik üretilir)
 4. `sh scripts/check_images.sh` ile boyut kontrolü yapın (veya `sh start.sh` — hook olarak çalışır)
@@ -223,15 +234,9 @@ ean: 9786053832874
 
 ## Stil Düzenleme
 
-| Ne değişiyor? | Hangi dosya? |
-|---------------|--------------|
-| Renk, font, spacing token’ları | `assets/css/theme.css` (`:root`) |
-| Yeni bileşen (kart, nav, vb.) | `assets/css/theme.css` |
-| Bootstrap renk / buton override | `assets/css/app.css` |
-| Font Awesome | `assets/css/fontawesome-all.min.css` + `assets/fonts/fontawesome/` |
-| Arama modal stilleri | `assets/css/spotlight.css` |
+Renk token’ları, tipografi, bileşen kataloğu ve tasarım kuralları için [design.md](design.md) dosyasına bakın.
 
-Bootstrap’ın kendi dosyası (`bootstrap.min.css`) düzenlenmez.
+Özet: yeni bileşen → `theme.css`; Bootstrap override → `app.css`; `bootstrap.min.css` düzenlenmez.
 
 ## Performans ve Görsel Optimizasyonu
 
@@ -343,7 +348,7 @@ Navbar’daki arama kutusu veya `Ctrl+K` / `⌘K` ile kitap araması açılır. 
 
 ## Kitap Detay Popup’ları
 
-Ön Okuma, Tanıtım, Bilgi, İncele ve HDS butonları [`_includes/popup.html`](_includes/popup.html) ile açılır. Bilgi popup’u iPhone koyu temada okunabilir metin renklerine sahiptir.
+Ön Okuma, Tanıtım, Bilgi, İncele ve HDS butonları [`_includes/popup.html`](_includes/popup.html) ile açılır. HDS butonu yalnızca `examlink` dolu kitaplarda görünür. Bilgi butonu `damlaurl` doluysa ürün sayfasını iframe’de açar, boşsa tedarik bilgisi popup’unu gösterir. Bilgi popup’u iPhone koyu temada okunabilir metin renklerine sahiptir.
 
 ## Footer
 
@@ -382,6 +387,7 @@ Yeni bir sayfayı footer’da listelemek için front matter’a `footer_show: tr
 | `/urunler/:title` | Ürün detay |
 | `/kataloglar` | Katalog listesi |
 | `/kataloglar/:title` | Katalog detay |
+| `/urun-inceleme-linkleri` | Ürün inceleme linkleri — `review_link` dolu kitaplar, arama + paylaşım |
 | `/hakkimizda` | Hakkımızda |
 | `/iletisim` | İletişim |
 

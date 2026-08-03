@@ -1,28 +1,30 @@
 ---
 layout: book
 title:  "Bir Mikrobun Günlüğünden"
-
-grades: [5, 6, 7, 8]
-concepts: [ Gözle görülmeyen bir düşmanın insan bedeninde kurduğu o karanlık krallığın sarsıcı günlüğü ]
-subjects: ["Hijyen Bilinci", "İnsan Anatomisi", "Aşı Bilinci", "Sağlık", "Stres ve Hastalık", "Tıp ve Tedavi"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı" 
 
-# Book attributes
-authors: ["Sara Gürbüz Özeren"]
+# Standart Book Attributes
 ean: 9786254116032
 languages: ["Türkçe"]
-page: 152 sayfa
+page: "152 sayfa"
 size: "12,5x18,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Sara Gürbüz Özeren"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Gözle görülmeyen bir düşmanın insan bedeninde kurduğu o karanlık krallığın sarsıcı günlüğü"]
+anatemalar: ["Hijyen Bilinci", "İnsan Anatomisi", "Aşı Bilinci", "Sağlık", "Stres ve Hastalık", "Tıp ve Tedavi"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116032/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line
