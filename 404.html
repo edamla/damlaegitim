@@ -6,23 +6,38 @@ title: "Sayfa bulunamadı"
 description: "Aradığınız sayfa bulunamadı."
 ---
 
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+<section class="error-404" aria-labelledby="error-404-title">
+  <div class="error-404__stage" aria-hidden="true">
+    <div class="error-404__book error-404__book--1"></div>
+    <div class="error-404__book error-404__book--2"></div>
+    <div class="error-404__book error-404__book--3"></div>
+    <div class="error-404__book error-404__book--4"></div>
+    <div class="error-404__book error-404__book--5"></div>
+    <div class="error-404__book error-404__book--6"></div>
+    <div class="error-404__book error-404__book--7"></div>
+  </div>
 
-<div class="container">
-  <h1>404</h1>
-  <p><strong>Sayfa bulunamadı</strong></p>
-  <p>Aradığınız sayfa taşınmış, silinmiş veya hiç var olmamış olabilir.</p>
-  <p><a href="{{ site.baseurl }}/">Anasayfaya dön</a> · <a href="{{ site.baseurl }}/urunler">Ürünler</a></p>
-</div>
+  <div class="error-404__content">
+    <p class="error-404__code" aria-hidden="true">404</p>
+    <h1 class="error-404__title" id="error-404-title">Sayfa bulunamadı</h1>
+    <p class="error-404__text">Aradığınız sayfa taşınmış, silinmiş veya hiç var olmamış olabilir. Kataloğumuzda arama yaparak devam edebilirsiniz.</p>
+
+    <form class="error-404__search" role="search"
+          onsubmit="return typeof lunr_search === 'function' && lunr_search(document.getElementById('error404-search').value);">
+      <label class="visually-hidden" for="error404-search">Kitap ara</label>
+      <input class="error-404__search-input" id="error404-search" type="search" name="q" placeholder="Kitap veya yazar ara…" autocomplete="off">
+      <button type="submit" class="error-404__search-btn" aria-label="Ara">
+        <i class="fas fa-search" aria-hidden="true"></i>
+      </button>
+    </form>
+    <p class="error-404__hint"><kbd>Ctrl</kbd> + <kbd>K</kbd> kısayolu da kullanılabilir</p>
+
+    <nav class="error-404__nav" aria-label="Hızlı bağlantılar">
+      <a class="error-404__link" href="{{ site.baseurl }}/">Anasayfa</a>
+      <span class="error-404__sep" aria-hidden="true">·</span>
+      <a class="error-404__link" href="{{ site.baseurl }}/urunler">Ürünler</a>
+      <span class="error-404__sep" aria-hidden="true">·</span>
+      <a class="error-404__link" href="{{ site.baseurl }}/kataloglar">Kataloglar</a>
+    </nav>
+  </div>
+</section>
