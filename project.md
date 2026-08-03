@@ -12,7 +12,7 @@ Bu belge, [damlaokul.com](https://damlaokul.com) (Damla Okul) statik sitesinin t
 | Özellik | Değer |
 |---------|-------|
 | Tür | Statik site (Jamstack) |
-| Motor | [Jekyll](https://jekyllrb.com/) 4.x |
+| Motor | [Jekyll](https://jekyllrb.com/) 3.10 (`github-pages` gem v232) |
 | Dil | Türkçe (`language: tr`) |
 | Yayın | GitHub Pages (`CNAME` → `damlaokul.com`) |
 | Build çıktısı | `_site/` (gitignore) |
@@ -106,7 +106,7 @@ damlaegitim/
 │   ├── subset_font.sh            # Tüm OTF/TTF → WOFF2 subset (install.sh)
 │   ├── normalize_book_frontmatter.rb   # Kitap front matter sıralama/normalize (`preview_link`, `examlink`, `damlaurl`; eski alan migrasyonu)
 ├── index.html            # Anasayfa
-├── Gemfile               # Ruby bağımlılıkları
+├── Gemfile               # github-pages + webrick (canlı GitHub Pages ile aynı stack)
 ├── CNAME                 # damlaokul.com
 ├── install.sh            # İlk kurulum: bundle, fonttools, WOFF2, görsel araçları, jekyll build
 ├── start.sh              # Geliştirme: check_images + generate_webp hook + jekyll serve
@@ -559,12 +559,15 @@ Okul öncesi ürünler `_books/` içinde henüz tam açılmamış olsa da URL ya
 
 ## Jekyll Plugin’leri
 
+`Gemfile` yalnızca `github-pages` gem'ini kullanır; aşağıdaki plugin'ler bu paketten gelir (GitHub Pages whitelist):
+
 - `jekyll-feed` — RSS
 - `jekyll-sitemap` — sitemap.xml
 - `jekyll-seo-tag` — `{% seo %}` meta etiketleri (kitap sayfaları hariç; özel `book-seo-tags.html`)
 - `jekyll-paginate` — sayfalama
-- `jekyll-archives` — arşiv sayfaları
-- `jekyll-figure` / `jekyll-gist` — içerik zenginleştirme
+- `jekyll-gist` — Gist embed
+
+Kaldırılan (whitelist dışı, projede kullanılmıyordu): `jekyll-archives`, `jekyll-figure`. Özel CSS `assets/css/theme.css` üzerinden; `_sass` / `sass-embedded` yok.
 
 ---
 
