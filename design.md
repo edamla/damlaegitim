@@ -38,8 +38,6 @@ Bu belge [damlaokul.com](https://damlaokul.com) sitesinin görsel kimliğini, CS
 │  spotlight.css            Arama modal (async, tüm sayfalar) │
 ├─────────────────────────────────────────────────────────────┤
 │  tiny-slider.css          Anasayfa slider (yalnızca /)      │
-├─────────────────────────────────────────────────────────────┤
-│  buyout.css               E-ticaret barı (kitap/katalog detay)│
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -60,7 +58,6 @@ Bu belge [damlaokul.com](https://damlaokul.com) sitesinin görsel kimliğini, CS
 | `assets/css/app.css` | `--bs-primary`, `.btn-primary`, `body` arka plan, navbar ince ayar | Yeni bileşen tanımı |
 | `assets/css/bootstrap.min.css` | — | **Hiçbir değişiklik yapılmaz** |
 | `assets/css/spotlight.css` | Arama modal ve tetikleyici stilleri | Genel site bileşenleri |
-| `assets/css/buyout.css` | E-ticaret satıcı barı | — |
 | `assets/css/tiny-slider.css` | Slider kütüphanesi | — |
 
 **Kural:** Yeni kalıcı bileşen → `theme.css`. Bootstrap'ı markaya uydurmak → `app.css`.
@@ -101,9 +98,10 @@ Tüm token'lar `theme.css` → `:root` bloğunda tanımlıdır. Bileşenlerde m�
 |--------|------|----------------|
 | Konu etiketleri (`#`) | `--color-primary` | `.book-detail__tags .tag` |
 | Kavram etiketleri (`@`) | `#c88400` (turuncu) | `.book-detail__concepts .concept` |
+| Kavram özeti (alıntı) | `#c88400` sol border | `.book-detail__tagline` |
 | Grade nav ikonları | Sınıfa göre (aşağıda) | `.grade-nav-item[data-grade="N"] .grade-nav-icons` |
 | Spotlight metin | `#1d1d1f` / `#86868b` | Apple-inspired nötr gri tonları |
-| Buyout bar başlık | `#005e85` | `.buyout li:nth-child(1)` |
+| Satın Al butonu | Bootstrap `text-success` | `.js-book-action` + `fa-shopping-cart` |
 
 ### Tipografi
 
@@ -160,6 +158,7 @@ Tüm `@font-face` tanımlarında `font-display: swap` kullanılır. Raykjavik `d
 | `.site-footer__heading` | Punta | `0.85rem`, 700, uppercase, `letter-spacing: 0.04em` |
 | `.book-card__title` | Raykjavik (serif token) | `1rem`, 2 satır clamp |
 | `.article-headline` (kitap detay) | Raykjavik | `3.2rem` (`.display-4` ile), mobilde ortalı |
+| `.book-detail__tagline` (kavram özeti) | Raykjavik | İtalik alıntı, turuncu sol border |
 | `.prose--display` (ürün açıklaması) | Raykjavik | `0.95rem`, `line-height: 1.15`, `#5c636a` |
 | `article` (blog) | Raykjavik | `1.1rem`, `line-height: 1.86` |
 
@@ -319,10 +318,10 @@ BEM yapısı:
 | Kapak | `.book img` | `drop-shadow` |
 | Başlık | `.article-headline.display-4` | Mobilde ortalı |
 | Konu etiketleri | `.book-detail__tags .tag` | `#etiket`, yeşil, pill |
-| Kavram etiketleri | `.book-detail__concepts .concept` | `@etiket`, turuncu, pill |
+| Kavram / özet | `.book-detail__kavramlar` | Kısa slug → `@etiket` (turuncu pill); uzun cümle → `.book-detail__tagline` (alıntı). Heuristik: tireli boşluksuz slug, ≤18 karakter veya boşluklu ≤28 karakter → pill; aksi halde alıntı |
 | Metadata | `.book-meta__item` | Flex: ikon + metin |
 | Açıklama | `.prose--display` | Markdown gövdesi |
-| Aksiyonlar | `.js-book-action` | Popup tetikleyici butonlar; İncele → `book.preview_link` (iframe popup) |
+| Aksiyonlar | `.js-book-action` | `damlaurl` dolu → Satın Al (iframe); boş → Bilgi (tedarik popup); İncele → `preview_link`; HDS → `examlink` |
 
 **Dosya:** `_layouts/book.html`
 
@@ -362,7 +361,9 @@ macOS Spotlight ilhamlı tam ekran modal:
 
 Kısayol göstergesi: `Ctrl+K` badge. `prefers-color-scheme: dark` desteği var.
 
-**Dosyalar:** `_includes/search-lunr.html`, `assets/css/spotlight.css`, `assets/js/lunr.js`
+Lunr indeks alanları: `title` (yüksek boost), `ean` (barkod), `authors`, `categories`, `grades`, `genre`, `anatemalar`, `tags`, `body`. İndeks kapakları `assets/images/ean/{ean}.webp|jpg` kullanır. 4+ haneli sayısal sorguda `ean` doğrudan eşleştirilir.
+
+**Dosyalar:** `_includes/search-lunr.html`, `_pages/search-index.json`, `assets/css/spotlight.css`, `assets/js/lunr.js`
 
 ### 10. Kitap Popup'ları (`#popup-overlay`)
 
@@ -370,7 +371,7 @@ Spotlight ile aynı görsel dil:
 
 | Varyant | Class | Boyut |
 |---------|-------|-------|
-| Bilgi | `.popup-container` | `520px` max |
+| Tedarik bilgisi | `.popup-container` | `520px` max |
 | Medya (iframe/YouTube) | `.popup-container--media` | `min(960px, 92vw)` |
 
 - `z-index: 10000` (spotlight: 9999)
@@ -379,13 +380,16 @@ Spotlight ile aynı görsel dil:
 
 **Dosya:** `_includes/popup.html` (inline style + script)
 
-### 11. E-ticaret Barı (`.buyout`)
+### 11. Satın Al / Bilgi (`damlaurl`)
 
-Yalnızca kitap/katalog detay sayfalarında (`buyout.css`):
+Eski `.buyout` satıcı barı ve `buyout.css` kaldırıldı. Satın alma akışı kitap front matter’ındaki `damlaurl` alanı ve `book.html` aksiyon butonlarıyla yönetilir:
 
-- Gri zemin `#e5e5e5`, yatay flex
-- İlk öğe: koyu mavi `#005e85` "Satın Al" başlığı
-- Satıcı logoları: varsayılan grayscale + opacity 0.5; hover renkli
+| `damlaurl` | Buton | İkon | Popup |
+|------------|-------|------|-------|
+| Dolu | **Satın Al** | `fa-shopping-cart` (`text-success`) | `data-popup-type="iframe"` → Damla Yayınevi ürün sayfası |
+| Boş | **Bilgi** | `fa-info-circle` (`text-info`) | `data-popup-type="info"` → tedarik bilgisi |
+
+**Dosyalar:** `_layouts/book.html`, `_includes/popup.html`
 
 ### 12. İletişim Bilgisi (`.contact-info`)
 

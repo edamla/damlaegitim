@@ -26,4 +26,3 @@ youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
-Sevgili Öğrenciler; Nitelikli yayınların vazgeçilmez adresi Damla Yayınevi olarak yepyeni bir anlayışla hazırladığımız “Öğrenci Dostu Kitaplar” serimizi sizlere sunmanın onurunu yaşıyoruz. 

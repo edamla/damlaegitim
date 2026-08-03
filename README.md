@@ -12,7 +12,7 @@ Yeni Maarif Modeline uygun eğitim setleri, hikaye kitapları ve kataloglar tek 
 ## Özellikler
 
 - **Ürün kataloğu** — Sınıf ve tür (Eğitim / Hikaye) bazlı filtreleme, paylaşılabilir hash URL’leri
-- **Kitap detay sayfaları** — Kapak, metadata, `#anatemalar` / `@kavramlar` etiketleri, `preview_link` ile önizleme (İncele), `examlink` ile HDS PDF, `damlaurl` ile ürün bilgisi (Bilgi), popup ile tedarik bilgisi
+- **Kitap detay sayfaları** — Kapak, metadata, `#anatemalar` temaları, `kavramlar` (kısa etiket veya özet alıntı), `preview_link` ile önizleme (İncele), `examlink` ile HDS PDF, `damlaurl` doluysa Satın Al / boşsa Bilgi (tedarik popup)
 - **Ürün inceleme linkleri** — `/urun-inceleme-linkleri` sayfasında tüm `preview_link` dolu kitaplar; arama, kopyala ve WhatsApp paylaşımı
 - **Kataloglar** — Html / PDF katalog görüntüleme
 - **Anasayfa slider** — Kampanya ve duyuru görselleri
@@ -162,8 +162,7 @@ GitHub Pages otomatik olarak siteyi günceller.
 | [`scripts/check_images.sh`](scripts/check_images.sh) | `start.sh` içinden | Büyük görselleri raporlar (dosyaya dokunmaz) |
 | [`scripts/subset_font.sh`](scripts/subset_font.sh) | `install.sh` içinden | OTF/TTF → WOFF2 subset |
 | [`scripts/check_fonts.sh`](scripts/check_fonts.sh) | `install.sh` içinden | Font boyut uyarı raporu |
-| [`scripts/normalize_book_frontmatter.rb`](scripts/normalize_book_frontmatter.rb) | Manuel | Kitap front matter sıralama; `preview_link`, `examlink` ve `damlaurl` korunur |
-| [`scripts/fill_preview_link_from_config.rb`](scripts/fill_preview_link_from_config.rb) | Manuel (tek seferlik) | Boş `preview_link` alanlarına varsayılan CDN URL yazar |
+| [`scripts/normalize_book_frontmatter.rb`](scripts/normalize_book_frontmatter.rb) | Manuel | Kitap front matter sıralama; `preview_link`, `examlink`, `damlaurl` korunur; eski `review_link`/`previewpage`/`damlayayinevi` taşınır veya silinir |
 
 Windows Git Bash'te sıfırdan kurulum: `sh install.sh` → geliştirme: `sh start.sh`.
 
@@ -215,17 +214,18 @@ layout: book
 title: "Ürün Adı"
 grades: [1, 2]
 genre: education
+tags: []
 anatemalar: ["Değerler Eğitimi", "Macera"]     # yeşil # etiketler (detay sayfası üstü)
-kavramlar: ["Dil Bilim", "Milli Kültür"]       # turuncu @ etiketler (kitap front matter)
+kavramlar: ["Dil Bilim", "Milli Kültür"]       # kısa etiket → @pill; uzun cümle → özet alıntı
 ean: 9786053832874
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832874/index.html"
 examlink: ""   # HDS PDF tam URL; boşsa HDS butonu görünmez
-damlaurl: ""   # Damla Yayınevi ürün sayfası tam URL; boşsa tedarik bilgisi popup
+damlaurl: ""   # Damla Yayınevi ürün sayfası; doluysa Satın Al, boşsa Bilgi → tedarik popup
 ---
 Ürün açıklaması buraya...
 ```
 
-`anatemalar` TEMALAR için, `kavramlar` çoklu zekâ / kavram etiketleri içindir. Her ikisi de yalnızca kitap front matter’ında tanımlanır; gösterilecek metni doğrudan yazın (ör. `Dil Bilim`, `Milli Kültür`). `preview_link` ön izleme URL’sidir; `book.html` İncele butonu ve `previewbook` iframe bu alanı kullanır. `examlink` HDS PDF tam URL’sidir; doluysa HDS butonu görünür, boşsa görünmez. `damlaurl` Damla Yayınevi ürün sayfası tam URL’sidir; doluysa Bilgi butonu iframe popup açar, boşsa tedarik bilgisi popup açılır — site genelinde ayrı config ayarı yoktur.
+`anatemalar` TEMALAR için yeşil `#etiket` olarak gösterilir. `kavramlar` kısa slug veya kavram adıysa turuncu `@etiket` pill (tireli boşluksuz slug, ≤18 karakter veya boşluklu ≤28 karakter); uzun özet cümlesiysa italik alıntı (`.book-detail__tagline`) olarak render edilir. `tags` şu an aktif UI’da kullanılmaz; normalize betiği boş dizi yazar. `preview_link` doluysa İncele butonu ve `previewbook` iframe görünür. `examlink` doluysa HDS butonu görünür. `damlaurl` doluysa **Satın Al** (iframe), boşsa **Bilgi** (tedarik popup) — site genelinde ayrı config ayarı yoktur.
 
 3. Kapak görselini `assets/images/ean/{ean}.jpg` olarak ekleyin (jpg/png optimize edin; `.webp` `sh start.sh` ile otomatik üretilir)
 4. `sh scripts/check_images.sh` ile boyut kontrolü yapın (veya `sh start.sh` — hook olarak çalışır)
@@ -335,7 +335,9 @@ Navbar’daki arama kutusu veya `Ctrl+K` / `⌘K` ile kitap araması açılır. 
 - **Masaüstü** — Navbar’da tam arama kutusu + `Ctrl+K`
 - **Mobil** — Logo ile hamburger menü arasında minimal `Kitap ara...` çubuğu (collapse dışında, her zaman görünür)
 
-- İndeks: `site.books` → build-time `/assets/search-index.json`
+- İndeks: `site.books` → build-time `/assets/search-index.json` (kapak: `assets/images/ean/{ean}.webp|jpg`)
+- Lunr alanları: `title`, `ean`, `authors`, `categories`, `grades`, `genre`, `anatemalar`, `tags`, `body`
+- 4+ haneli sayısal sorgularda barkod (`ean`) doğrudan eşleştirme; diğer aramalarda Lunr wildcard
 - Lunr.js yalnızca arama açılınca yüklenir (sayfa yükü azaltılır)
 - Dosyalar: [`_includes/search-lunr.html`](_includes/search-lunr.html), [`_pages/search-index.json`](_pages/search-index.json), [`assets/js/lunr.js`](assets/js/lunr.js)
 
@@ -348,7 +350,7 @@ Navbar’daki arama kutusu veya `Ctrl+K` / `⌘K` ile kitap araması açılır. 
 
 ## Kitap Detay Popup’ları
 
-Ön Okuma, Tanıtım, Bilgi, İncele ve HDS butonları [`_includes/popup.html`](_includes/popup.html) ile açılır. HDS butonu yalnızca `examlink` dolu kitaplarda görünür. Bilgi butonu `damlaurl` doluysa ürün sayfasını iframe’de açar, boşsa tedarik bilgisi popup’unu gösterir. Bilgi popup’u iPhone koyu temada okunabilir metin renklerine sahiptir.
+Tanıtım (YouTube), Satın Al / Bilgi, İncele ve HDS butonları [`_includes/popup.html`](_includes/popup.html) ile açılır. `damlaurl` doluysa **Satın Al** ürün sayfasını iframe’de açar; boşsa **Bilgi** tedarik popup’unu gösterir. HDS yalnızca `examlink` dolu kitaplarda görünür. İncele yalnızca `preview_link` dolu kitaplarda görünür. Tedarik popup’u iPhone koyu temada okunabilir metin renklerine sahiptir.
 
 ## Footer
 

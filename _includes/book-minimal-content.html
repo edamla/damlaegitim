@@ -1,6 +1,7 @@
 {% comment %}
   İnce gövdeli kitap sayfaları için front matter tabanlı SEO metni.
   book değişkeni: page veya assign edilmiş kitap nesnesi
+  Boş string ("") Liquid'de truthy olduğu için metin alanları strip + != "" ile kontrol edilir.
 {% endcomment %}
 {% assign b = book | default: page %}
 {% if b.genre == 'story' %}
@@ -13,22 +14,41 @@
   {% assign genre_label = b.genre %}
   {% assign genre_label_cap = b.genre %}
 {% endif %}
-{% assign grade_list = b.grades | join: ", " %}
+
+{% assign page_val = b.page | strip %}
+{% assign size_val = b.size | strip %}
+{% assign cover_val = b.cover | strip %}
+
+{% assign grade_phrase = '' %}
+{% if b.grades and b.grades.size > 0 %}
+  {% if b.grades.size == 1 and b.grades[0] == 0 %}
+    {% assign grade_phrase = 'okul öncesi öğrencileri için hazırlanmış ' %}
+  {% else %}
+    {% assign grade_list = b.grades | join: ', ' %}
+    {% assign grade_phrase = grade_list | append: '. sınıf öğrencileri için hazırlanmış ' %}
+  {% endif %}
+{% endif %}
 
 <div class="book-minimal-content prose prose--display">
   <p>
-    <strong>{{ b.title }}</strong>, Damla Okul yayınları arasında
-    {% if grade_list != "" %}{{ grade_list }}. sınıf öğrencileri için hazırlanmış {% endif %}
+    <strong>{{ b.title }}</strong>, Damla Okul ürünleri arasında
+    {% if grade_phrase != '' %}{{ grade_phrase }}{% endif %}
     bir {{ genre_label }} kitabıdır. Damla Yayınevi’nin okul yayınları kapsamında sunulan bu ürün,
     Yeni Maarif Modeli ve güncel müfredat hedefleriyle uyumlu içerik sunmayı amaçlar.
   </p>
 
   {% if b.categories and b.categories.size > 0 %}
   <p>
-    <strong>Kategori:</strong> {{ b.categories | join: ", " }}.
-    {% if b.page %}<strong>Sayfa:</strong> {{ b.page }}.{% endif %}
-    {% if b.size %}<strong>Boyut:</strong> {{ b.size }}.{% endif %}
-    {% if b.cover %}<strong>Kapak:</strong> {{ b.cover }}.{% endif %}
+    <strong>Kategori:</strong> {{ b.categories | join: ', ' }}.
+    {% if page_val != '' %}<strong>Sayfa:</strong> {{ page_val }}.{% endif %}
+    {% if size_val != '' %}<strong>Boyut:</strong> {{ size_val }}.{% endif %}
+    {% if cover_val != '' %}<strong>Kapak:</strong> {{ cover_val }}.{% endif %}
+  </p>
+  {% elsif page_val != '' or size_val != '' or cover_val != '' %}
+  <p>
+    {% if page_val != '' %}<strong>Sayfa:</strong> {{ page_val }}.{% endif %}
+    {% if size_val != '' %}<strong>Boyut:</strong> {{ size_val }}.{% endif %}
+    {% if cover_val != '' %}<strong>Kapak:</strong> {{ cover_val }}.{% endif %}
   </p>
   {% endif %}
 
@@ -40,7 +60,7 @@
   </p>
   {% elsif b.tags and b.tags.size > 0 %}
   <p>
-    <strong>Etiketler:</strong> {{ b.tags | join: ", " }}.
+    <strong>Etiketler:</strong> {{ b.tags | join: ', ' }}.
     Damla Okul kataloğunda {{ genre_label }} türündeki bu ürün, öğretmen ve velilerin ihtiyaçlarına yönelik hazırlanmıştır.
   </p>
   {% endif %}
@@ -49,8 +69,9 @@
   <p>
     <strong>Beceri ve kavram alanları:</strong>
     {% for concept_key in b.kavramlar %}
-      {% unless concept_key == "" %}
-        {{ concept_key }}{% unless forloop.last %}, {% endunless %}
+      {% assign concept_val = concept_key | strip %}
+      {% unless concept_val == '' %}
+        {{ concept_val }}{% unless forloop.last %}, {% endunless %}
       {% endunless %}
     {% endfor %}.
   </p>
@@ -58,9 +79,9 @@
 
   <p>
   {% if b.preview_link != nil and b.preview_link != '' %}
-    Sayfadaki ön okuma bağlantısıyla kitabın örnek sayfalarını inceleyebilir; detaylı bilgi ve tedarik için Damla Okul ile iletişime geçebilirsiniz.
+    Sayfadaki ön okuma bağlantısıyla kitabın örnek sayfalarını inceleyebilir; detaylı bilgi ve tedarik için Damla Yayınevi ile iletişime geçebilirsiniz.
   {% else %}
-    Ürün hakkında detaylı bilgi ve tedarik seçenekleri için Damla Okul ile iletişime geçebilir veya katalog sayfamızdaki diğer {{ genre_label }} yayınlarımıza göz atabilirsiniz.
+    Ürün hakkında detaylı bilgi ve tedarik seçenekleri için Damla Yayınevi ile iletişime geçebilir veya katalog sayfamızdaki diğer {{ genre_label }} yayınlarımıza göz atabilirsiniz.
   {% endif %}
   </p>
 </div>

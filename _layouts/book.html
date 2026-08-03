@@ -27,14 +27,28 @@ layout: default
                             </span>
                         </div>
 
-                        <div class="book-detail__concepts mb-4">
-                            <span class="conceptlist">
+                        <div class="book-detail__concepts book-detail__kavramlar mb-4">
                             {% for bookconcept in book.kavramlar %}
-                            {% unless bookconcept == "" %}
-                              <span class="concept">@{{ bookconcept | downcase }}</span>
+                            {% assign concept_text = bookconcept | strip %}
+                            {% unless concept_text == "" %}
+                              {% assign concept_len = concept_text | size %}
+                              {% assign concept_is_tag = false %}
+                              {% if concept_text contains '-' %}
+                                {% unless concept_text contains ' ' %}
+                                  {% assign concept_is_tag = true %}
+                                {% endunless %}
+                              {% elsif concept_len <= 18 %}
+                                {% assign concept_is_tag = true %}
+                              {% elsif concept_text contains ' ' and concept_len <= 28 %}
+                                {% assign concept_is_tag = true %}
+                              {% endif %}
+                              {% if concept_is_tag %}
+                              <span class="concept">@{{ concept_text | downcase }}</span>
+                              {% else %}
+                              <blockquote class="book-detail__tagline" cite="{{ book.url | relative_url }}">{{ concept_text }}</blockquote>
+                              {% endif %}
                             {% endunless %}
                             {% endfor %}
-                            </span>
                         </div>
 
                         <div class="icon-block mt-3 d-inline-flex flex-wrap gap-2">
@@ -44,7 +58,7 @@ layout: default
                             {% endif %}
                             
                             {% if book.damlaurl != nil and book.damlaurl != '' %}
-                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" href="#" data-popup-type="iframe" data-popup-url="{{ book.damlaurl }}" data-popup-title="Ürün Bilgisi"><i class="fas fa-info-circle fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">Bilgi</span></a>
+                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" href="#" data-popup-type="iframe" data-popup-url="{{ book.damlaurl }}" data-popup-title="Satın Al"><i class="fas fa-shopping-cart fa-2x text-success" aria-hidden="true"></i><span class="btn-sm">Satın Al</span></a>
                             {% else %}
                             <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" href="#" data-popup-type="info" data-popup-title="Ürün Tedarik Bilgisi"><i class="fas fa-info-circle fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">Bilgi</span></a>
                             {% endif %}
@@ -85,31 +99,35 @@ layout: default
                             </span>
                         </li>
                         {% endif %}
-                        {% if book.publish-number %}
+                        {% assign publish_number_val = book.publish-number | strip %}
+                        {% if publish_number_val != '' %}
                         <li class="list-group-item book-meta__item">
                             <span class="book-meta__icon"><i class="fas fa-fingerprint fa-lg text-dark"></i></span>
-                            <span class="book-meta__text"><span class="book-meta__label">Damla Yayın No:</span> {{book.publish-number}}</span>
+                            <span class="book-meta__text"><span class="book-meta__label">Damla Yayın No:</span> {{ publish_number_val }}</span>
                         </li>
                         {% endif %}
 
-                        {% if book.page %}
+                        {% assign page_val = book.page | strip %}
+                        {% if page_val != '' %}
                         <li class="list-group-item book-meta__item">
                             <span class="book-meta__icon"><i class="fas fa-book-open fa-lg text-primary"></i></span>
-                            <span class="book-meta__text"><span class="book-meta__label">Sayfa:</span> {{book.page}}</span>
+                            <span class="book-meta__text"><span class="book-meta__label">Sayfa:</span> {{ page_val }}</span>
                         </li>
                         {% endif %}
 
-                        {% if book.size %}
+                        {% assign size_val = book.size | strip %}
+                        {% if size_val != '' %}
                         <li class="list-group-item book-meta__item">
                             <span class="book-meta__icon"><i class="fas fa-ruler fa-lg text-danger"></i></span>
-                            <span class="book-meta__text"><span class="book-meta__label">Boyut:</span> {{book.size}}</span>
+                            <span class="book-meta__text"><span class="book-meta__label">Boyut:</span> {{ size_val }}</span>
                         </li>
                         {% endif %}
 
-                        {% if book.cover %}
+                        {% assign cover_val = book.cover | strip %}
+                        {% if cover_val != '' %}
                         <li class="list-group-item book-meta__item">
                             <span class="book-meta__icon"><i class="fas fa-book fa-lg text-dark"></i></span>
-                            <span class="book-meta__text"><span class="book-meta__label">Kapak:</span> {{book.cover}}</span>
+                            <span class="book-meta__text"><span class="book-meta__label">Kapak:</span> {{ cover_val }}</span>
                         </li>
                         {% endif %}
 
