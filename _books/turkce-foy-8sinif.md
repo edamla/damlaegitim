@@ -2,9 +2,7 @@
 layout: previewbook
 title:  "Yeni Nesil Türkçe Lgs Föyleri 8.Sınıf"
 categories: ["İlkokul"]
-tags: ["Okuma yazma, ilkokuma, yeni müfredat"]
-genre: education
-previewpage: false
+tags: []
 
 # Standart Book Attributes
 ean: 9786051749389
@@ -13,14 +11,15 @@ page: 881
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051749389/index.html"
+damlaurl: ""
 
 # Spesific Filterable Attributes
+genre: education
 grades: [8]
 kavramlar: []
 anatemalar: []
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051749389/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

@@ -2,9 +2,7 @@
 layout: book
 title:  "Yunus Emre Divanı"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786057490452
@@ -13,16 +11,17 @@ page: "208 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057490452/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Yunus Emre"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Yaratılanı Yaradandan ötürü sevmeyi öğreten sevelim sevilelim diyerek insanın terbiyesinde sevgiyi esas alan gönül insanının çağları aydınlatan eseri"]
 anatemalar: ["Hoşgörü ve Sevgi", "Ölüm", "Gönül Yapmak", Tasavvuf, "Doğruluk", "İlâhî Aşk:"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057490452/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

@@ -2,9 +2,7 @@
 layout: book
 title:  "Karanlık Kanyon’un Şifresi"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786053836414
@@ -13,16 +11,17 @@ page: "208 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836414/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Biliriz ki bir gün bir at bizi alıp da uzaklara Allahuekber Dağlarının doruğuna götürecek ve orada şahlanıp kişnediği zaman dedemin bütün silah arkadaşları huzura kavuşacak"]
 anatemalar: ["Vatan Hasreti", "Savaşın Etkileri", "Gizem ve Keşif", "Özgürlük", "Cesaret ve Azim", "Ön Yargı ve Güven"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836414/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

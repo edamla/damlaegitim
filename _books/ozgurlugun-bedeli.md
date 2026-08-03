@@ -2,9 +2,7 @@
 layout: book
 title:  "Özgürlüğün Bedeli"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786053839729
@@ -13,16 +11,17 @@ page: "128 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839729/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["İyi bir adam olmak için çok çalış ama geçmişini nereden geldiğini unutma"]
 anatemalar: ["Özgürlük Arayışı", "Sahte Dostluklar", "Pişmanlık", "Kuşak Çatışması", "Aile Bağları", "Dostluk Sınavı"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839729/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

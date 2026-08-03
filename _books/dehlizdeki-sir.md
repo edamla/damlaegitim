@@ -2,9 +2,7 @@
 layout: book
 title:  "Dehlizdeki Sır"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786254115998
@@ -13,16 +11,17 @@ page: "176 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115998/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Necati Akbaba"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Tarihin karanlık tünellerinde adım adım ilerlerken gerçek hazinenin peşinde soluksuz bir serüven"]
 anatemalar: ["Cesaret ve Macera", "Dayanışma", Sorumluluk, "Kültürel Miras", "İyilik ve Kötülük", "Şifre Çözme"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115998/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

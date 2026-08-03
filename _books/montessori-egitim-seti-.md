@@ -2,9 +2,7 @@
 layout: previewbook
 title:  "Montessori Eğitim Seti"
 categories: ["İlkokul"]
-tags: ["Okuma yazma, ilkokuma, yeni müfredat"]
-genre: education
-previewpage: false
+tags: []
 
 # Standart Book Attributes
 ean: 8697911222755
@@ -13,14 +11,15 @@ page: 881
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/8697911222755-1/index.html"
+damlaurl: ""
 
 # Spesific Filterable Attributes
+genre: education
 grades: [0]
 kavramlar: []
 anatemalar: []
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/8697911222755-1/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

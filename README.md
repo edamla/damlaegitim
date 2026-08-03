@@ -12,8 +12,8 @@ Yeni Maarif Modeline uygun eğitim setleri, hikaye kitapları ve kataloglar tek 
 ## Özellikler
 
 - **Ürün kataloğu** — Sınıf ve tür (Eğitim / Hikaye) bazlı filtreleme, paylaşılabilir hash URL’leri
-- **Kitap detay sayfaları** — Kapak, metadata, `#anatemalar` / `@kavramlar` etiketleri, `review_link` ile önizleme (İncele), `examlink` ile HDS PDF, `damlaurl` ile ürün bilgisi (Bilgi), popup ile tedarik bilgisi
-- **Ürün inceleme linkleri** — `/urun-inceleme-linkleri` sayfasında tüm `review_link` dolu kitaplar; arama, kopyala ve WhatsApp paylaşımı
+- **Kitap detay sayfaları** — Kapak, metadata, `#anatemalar` / `@kavramlar` etiketleri, `preview_link` ile önizleme (İncele), `examlink` ile HDS PDF, `damlaurl` ile ürün bilgisi (Bilgi), popup ile tedarik bilgisi
+- **Ürün inceleme linkleri** — `/urun-inceleme-linkleri` sayfasında tüm `preview_link` dolu kitaplar; arama, kopyala ve WhatsApp paylaşımı
 - **Kataloglar** — Html / PDF katalog görüntüleme
 - **Anasayfa slider** — Kampanya ve duyuru görselleri
 - **Instagram carousel** — `@okul.damla` hesabının güncel gönderileri (Behold JSON feed)
@@ -162,8 +162,8 @@ GitHub Pages otomatik olarak siteyi günceller.
 | [`scripts/check_images.sh`](scripts/check_images.sh) | `start.sh` içinden | Büyük görselleri raporlar (dosyaya dokunmaz) |
 | [`scripts/subset_font.sh`](scripts/subset_font.sh) | `install.sh` içinden | OTF/TTF → WOFF2 subset |
 | [`scripts/check_fonts.sh`](scripts/check_fonts.sh) | `install.sh` içinden | Font boyut uyarı raporu |
-| [`scripts/normalize_book_frontmatter.rb`](scripts/normalize_book_frontmatter.rb) | Manuel | Kitap front matter sıralama; `review_link`, `examlink` ve `damlaurl` korunur |
-| [`scripts/fill_review_link_from_config.rb`](scripts/fill_review_link_from_config.rb) | Manuel (tek seferlik) | Boş `review_link` alanlarına varsayılan CDN URL yazar |
+| [`scripts/normalize_book_frontmatter.rb`](scripts/normalize_book_frontmatter.rb) | Manuel | Kitap front matter sıralama; `preview_link`, `examlink` ve `damlaurl` korunur |
+| [`scripts/fill_preview_link_from_config.rb`](scripts/fill_preview_link_from_config.rb) | Manuel (tek seferlik) | Boş `preview_link` alanlarına varsayılan CDN URL yazar |
 
 Windows Git Bash'te sıfırdan kurulum: `sh install.sh` → geliştirme: `sh start.sh`.
 
@@ -218,14 +218,14 @@ genre: education
 anatemalar: ["Değerler Eğitimi", "Macera"]     # yeşil # etiketler (detay sayfası üstü)
 kavramlar: ["Dil Bilim", "Milli Kültür"]       # turuncu @ etiketler (kitap front matter)
 ean: 9786053832874
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832874/index.html"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832874/index.html"
 examlink: ""   # HDS PDF tam URL; boşsa HDS butonu görünmez
 damlaurl: ""   # Damla Yayınevi ürün sayfası tam URL; boşsa tedarik bilgisi popup
 ---
 Ürün açıklaması buraya...
 ```
 
-`anatemalar` TEMALAR için, `kavramlar` çoklu zekâ / kavram etiketleri içindir. Her ikisi de yalnızca kitap front matter’ında tanımlanır; gösterilecek metni doğrudan yazın (ör. `Dil Bilim`, `Milli Kültür`). `review_link` ön izleme URL’sidir; `book.html` İncele butonu ve `previewbook` iframe bu alanı kullanır. `examlink` HDS PDF tam URL’sidir; doluysa HDS butonu görünür, boşsa görünmez. `damlaurl` Damla Yayınevi ürün sayfası tam URL’sidir; doluysa Bilgi butonu iframe popup açar, boşsa tedarik bilgisi popup açılır — site genelinde ayrı config ayarı yoktur.
+`anatemalar` TEMALAR için, `kavramlar` çoklu zekâ / kavram etiketleri içindir. Her ikisi de yalnızca kitap front matter’ında tanımlanır; gösterilecek metni doğrudan yazın (ör. `Dil Bilim`, `Milli Kültür`). `preview_link` ön izleme URL’sidir; `book.html` İncele butonu ve `previewbook` iframe bu alanı kullanır. `examlink` HDS PDF tam URL’sidir; doluysa HDS butonu görünür, boşsa görünmez. `damlaurl` Damla Yayınevi ürün sayfası tam URL’sidir; doluysa Bilgi butonu iframe popup açar, boşsa tedarik bilgisi popup açılır — site genelinde ayrı config ayarı yoktur.
 
 3. Kapak görselini `assets/images/ean/{ean}.jpg` olarak ekleyin (jpg/png optimize edin; `.webp` `sh start.sh` ile otomatik üretilir)
 4. `sh scripts/check_images.sh` ile boyut kontrolü yapın (veya `sh start.sh` — hook olarak çalışır)
@@ -387,7 +387,7 @@ Yeni bir sayfayı footer’da listelemek için front matter’a `footer_show: tr
 | `/urunler/:title` | Ürün detay |
 | `/kataloglar` | Katalog listesi |
 | `/kataloglar/:title` | Katalog detay |
-| `/urun-inceleme-linkleri` | Ürün inceleme linkleri — `review_link` dolu kitaplar, arama + paylaşım |
+| `/urun-inceleme-linkleri` | Ürün inceleme linkleri — `preview_link` dolu kitaplar, arama + paylaşım |
 | `/hakkimizda` | Hakkımızda |
 | `/iletisim` | İletişim |
 

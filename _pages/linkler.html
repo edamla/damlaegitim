@@ -242,9 +242,9 @@ show_title: false
   </div>
 
   <div class="review-links__list" id="reviewLinksList">
-    {% assign review_books = site.books | where_exp: "b", "b.review_link != nil and b.review_link != ''" | sort: "title" %}
+    {% assign preview_books = site.books | where_exp: "b", "b.preview_link != nil and b.preview_link != ''" | sort: "title" %}
 
-    {% for book in review_books %}
+    {% for book in preview_books %}
       {% capture grade_badge %}
         {% if book.grades.size == 1 and book.grades[0] == 0 %}
           Okul Öncesi
@@ -255,7 +255,7 @@ show_title: false
         {% endif %}
       {% endcapture %}
       {% assign grade_badge = grade_badge | strip %}
-      {% capture wa_share_text %}{{ book.title }} — inceleme linki: {{ book.review_link }}{% endcapture %}
+      {% capture wa_share_text %}{{ book.title }} — inceleme linki: {{ book.preview_link }}{% endcapture %}
 
       <article
         class="review-links__card"
@@ -282,7 +282,7 @@ show_title: false
             </h2>
             <div class="review-links__actions">
               <a
-                href="{{ book.review_link }}"
+                href="{{ book.preview_link }}"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn-primary btn-sm review-links__open"
@@ -309,7 +309,7 @@ show_title: false
               <button
                 type="button"
                 class="btn btn-outline-secondary btn-sm review-links__copy"
-                data-link="{{ book.review_link }}"
+                data-link="{{ book.preview_link }}"
               >
                 <i class="far fa-copy" aria-hidden="true"></i>
                 <span>Linki kopyala</span>

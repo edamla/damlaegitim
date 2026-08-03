@@ -2,9 +2,7 @@
 layout: book
 title:  "Fatih’in İstanbul Rüyası"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786053839842
@@ -13,16 +11,17 @@ page: "176 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839842/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Talip Arışahin"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Dünya kuruldu kurulalı böyle bir şey ne duyulmuş ne de görülmüştü gemiler karadan yürütülüyor Haliçe iniyordu"]
 anatemalar: ["Kutsal Hedef", "Strateji ve Askerî Dehâ", "Adalet ve Hoşgörü", "Kahramanlık", "Manevi Güç", "Şehrin Yeniden İnşası"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839842/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

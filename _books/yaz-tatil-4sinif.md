@@ -2,9 +2,7 @@
 layout: previewbook
 title:  "Yaz Tatili 4.Sınıf"
 categories: [Religion]
-tags: [Literature]
-genre: education
-previewpage: false
+tags: []
 
 # Standart Book Attributes
 ean: "yaz-tatil-4sınıf"
@@ -13,14 +11,15 @@ page: 608
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/yaz-tatil-4sınıf/index.html"
+damlaurl: ""
 
 # Spesific Filterable Attributes
+genre: education
 grades: [4]
 kavramlar: []
 anatemalar: []
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/yaz-tatil-4sınıf/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

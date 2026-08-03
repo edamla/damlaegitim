@@ -2,9 +2,7 @@
 layout: book
 title:  "Cingöz Kafeste"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786053837183
@@ -13,16 +11,17 @@ page: "144 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053837183/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Peyami Safa"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Kurnazlığı ve zekâsıyla polisi peşinden sürükleyen kibar hırsız CingözRecainin akılalmaz maceraları"]
 anatemalar: ["Zekâ Çatışması", "Özgüven", Adalet, "Yanılsama", Zaaflar, "Ortak Düşman"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053837183/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

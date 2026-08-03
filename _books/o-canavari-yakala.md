@@ -2,9 +2,7 @@
 layout: book
 title:  "O Canavarı Yakala"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786053839620
@@ -13,16 +11,17 @@ page: "144 sayfa"
 size: "12,5x18,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839620/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Trafik canavarının gölgesindeki bir şehirde kuralları hiçe sayanlara karşı akıl ve cesaretle verilen amansız bir mücadele"]
 anatemalar: ["Trafik Bilinci", "Ekip Ruhu", "Görev Bilinci", Sorumluluk, "Toplumsal Duyarlılık", "Akran Zorbalığı"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839620/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

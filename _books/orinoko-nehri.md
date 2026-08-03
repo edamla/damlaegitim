@@ -2,9 +2,7 @@
 layout: book
 title:  "Orinoko Nehri"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786259895260
@@ -13,16 +11,17 @@ page: "160 sayfa"
 size: "12,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895260/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Jules Verne"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Orinoko Nehrinin gizemli sularında bilimsel merak ile evlat sevgisinin kesiştiği tehlike ve dostluk dolu unutulmaz bir serüven"]
 anatemalar: ["Aile Sevgisi", "Gizem ve Sırlar", Dostluk, "Keşif Tutkusu", "Doğa ile Mücadele", "Fedakârlık"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895260/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

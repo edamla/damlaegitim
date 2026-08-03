@@ -2,9 +2,7 @@
 layout: book
 title:  "Kuklacı"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786053834144
@@ -13,16 +11,17 @@ page: "96 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053834144/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Kemalettin Tuğcu"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Kırgınlıklarını nakış nakış ahşaba işleyen bir adamın sanata ve hayata yeniden tutunma hikâyesi"]
 anatemalar: ["Çocuk Sevgisi", "Kuşak Çatışması", "Kültürel Miras", Empati, "Sanatın Gücü", "Yardımlaşma"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053834144/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

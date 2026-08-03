@@ -2,9 +2,7 @@
 layout: previewbook
 title:  "Hikayelerle Pudino Eğitim Seti 1.Sınıf "
 categories: [Religion]
-tags: [Literature]
-genre: education
-previewpage: false
+tags: []
 
 # Standart Book Attributes
 ean: 9786059656344
@@ -13,14 +11,15 @@ page: 608
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/9786059656344/index.html"
+damlaurl: ""
 
 # Spesific Filterable Attributes
+genre: education
 grades: [1]
 kavramlar: []
 anatemalar: []
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/9786059656344/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

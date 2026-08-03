@@ -2,9 +2,7 @@
 layout: previewbook
 title:  "Dikkat Zeka Seti"
 categories: ["Okul Öncesi"]
-tags: ["okul öncesi"]
-genre: education
-previewpage: false
+tags: []
 
 # Standart Book Attributes
 ean: 9786258432220
@@ -13,14 +11,15 @@ page: ""
 size: ""
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786258432220/index.html"
+damlaurl: ""
 
 # Spesific Filterable Attributes
+genre: education
 grades: [0]
 kavramlar: []
 anatemalar: []
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786258432220/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

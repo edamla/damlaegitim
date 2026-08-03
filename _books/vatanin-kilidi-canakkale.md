@@ -2,9 +2,7 @@
 layout: book
 title:  "Vatanın Kilidi Çanakkale"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786053833154
@@ -13,16 +11,17 @@ page: "176 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053833154/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Oğlumun başındaki kınaları sormuşsunuz Biz vatana kurban ettiğimiz evladımızın başına kına yakarız kumandan Bunu böyle bilesiniz"]
 anatemalar: ["Vatan Sevgisi", Maneviyat, "Fedakârlık", "Kahramanlık", "Direniş", "Birlik ve Kardeşlik"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053833154/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

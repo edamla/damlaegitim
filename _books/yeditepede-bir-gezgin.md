@@ -2,9 +2,7 @@
 layout: book
 title:  "Yeditepede Bir Gezgin"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786051740911
@@ -13,16 +11,17 @@ page: "352 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051740911/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Almanyada doğup büyümüş bir gencin köklerine ve İstanbulun gizemli tarihine doğru çıktığı büyüleyici bir yolculuk"]
 anatemalar: ["Aidiyet ve Kökler", "Kültürel Uyanış", "Mimari Estetik", "Tarihî İhtişam", "Gurbet ve Özlem", Efsaneler]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051740911/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

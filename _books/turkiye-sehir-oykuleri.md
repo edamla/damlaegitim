@@ -2,9 +2,7 @@
 layout: book
 title:  "Türkiye Şehir Öyküleri"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786254116063
@@ -13,16 +11,17 @@ page: "176 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116063/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Anadolu insanı yerleştiği topraklara gönlünce isimler koymuş kimi bir olaydan kimi ise bir güzelden yadigâr kalmıştır"]
 anatemalar: ["Kahramanlık", "Vatan Sevgisi", "Doğa ve İnsan", "İyilik ve Yardımlaşma", "Direniş ve Özgürlük", "Kara Sevda"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116063/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

@@ -49,8 +49,8 @@ layout: default
                             <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" href="#" data-popup-type="info" data-popup-title="Ürün Tedarik Bilgisi"><i class="fas fa-info-circle fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">Bilgi</span></a>
                             {% endif %}
 
-                            {% if book.review_link != nil and book.review_link != '' %}
-                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" target="_blank" href="{{ book.review_link }}" data-popup-type="iframe" data-popup-title="İncele"><i class="fas fa-search fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">İncele</span></a>
+                            {% if book.preview_link != nil and book.preview_link != '' %}
+                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" target="_blank" href="{{ book.preview_link }}" data-popup-type="iframe" data-popup-title="İncele"><i class="fas fa-search fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">İncele</span></a>
                             {% endif %}
                             {% if book.examlink != nil and book.examlink != '' %}
                             <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" target="_blank" href="{{ book.examlink }}" data-popup-type="iframe" data-popup-title="HDS"><i class="fas fa-pen fa-2x text-danger" aria-hidden="true"></i><span class="btn-sm">HDS</span></a>

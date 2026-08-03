@@ -2,9 +2,7 @@
 layout: book
 title:  "Bohemya'da Bir Skandal"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786057274465
@@ -13,16 +11,17 @@ page: "120 sayfa"
 size: "12,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274465/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Sir Arthur Conan Doyle"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Avrupa’nın kaderini belirleyecek bir skandaldan ölümden dönen efsanevi dedektifin amansız avına kadar uzanan beş nefes kesici macera"]
 anatemalar: ["Gözlem gücü", bencillik, "detayların önemi", "kadın zekası", sadakat, "geçmişle yüzleşme"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274465/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

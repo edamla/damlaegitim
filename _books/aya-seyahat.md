@@ -2,9 +2,7 @@
 layout: book
 title:  "Ay’a Seyahat"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786057288745
@@ -13,16 +11,17 @@ page: "160 sayfa"
 size: "12,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288745/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Jules Verne"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["İmkânsız denileni başarmak için dev bir merminin içine hapsolup uzayın karanlığına atılan üç cesur yürek ve akılalmaz bir yolculuk"]
 anatemalar: ["Bilim Tutkusu", "Dayanışma", "Pratik Zeka", "Sınırları Aşmak", Dostluk, "Doğayla Mücadele"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288745/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

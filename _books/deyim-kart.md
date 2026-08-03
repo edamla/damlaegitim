@@ -2,9 +2,7 @@
 layout: book
 title:  "Oyunlarla Deyim Kartları"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786254112546
@@ -13,16 +11,17 @@ page: "50 Kart"
 size: "9,5x13 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254112546/index.html"
+damlaurl: ""
 paper: Bristol
 authors: []
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: []
 anatemalar: []
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254112546/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

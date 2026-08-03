@@ -2,9 +2,7 @@
 layout: book
 title:  "Kitap Korsanlarının Peşinde"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786051748122
@@ -13,16 +11,17 @@ page: "200 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051748122/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Kitap okuma tutkusunun adaleti sağlamak uğruna tehlikeli bir dedektiflik oyununa dönüştüğü soluksuz bir macera"]
 anatemalar: ["Okuma Kültürü", "Korsanla Mücadele", Cesaret, "Telif Hakları", "Arkadaşlık ve Dayanışma", "Dürüstlük"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051748122/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

@@ -2,9 +2,7 @@
 layout: book
 title:  "Zoya’dan Kaçırılış"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786053836421
@@ -13,16 +11,17 @@ page: "128 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836421/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Çılgın bir profesör cesur bir torun ve gizemlerle dolu Zoya gezegeni Galaksiler arası bilgi savaşı başlıyor"]
 anatemalar: ["Bilimsel Keşif", "Aile Bağları", "Sorumluluk Alma", "Açgözlülük ve İhtiras", "Ekolojik Bilinç", "İyilik ve Kötülük"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836421/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

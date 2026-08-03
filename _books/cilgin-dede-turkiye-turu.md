@@ -2,9 +2,7 @@
 layout: book
 title:  "Çılgın Dedemin Türkiye Turu (10 Kitap)"
 categories: ["Çocuk", Hikaye]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 8697911223943
@@ -13,15 +11,16 @@ page: "Her Biri 64"
 size: "14x20 cm"
 publish-number: 3136
 cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/c%C4%B1lg%C4%B1n-dede-turkiye-turu.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223943/index.html"
+damlaurl: ""
 paper: "1. Hamur"
 
 # Spesific Filterable Attributes
+genre: story
 grades: [3, 4]
 kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
 anatemalar: ["Türkiye Coğrafyası", "Kültürel Miras", "Zaman Mekan", "Gezi ve Keşif", "Milli Değerler"]
-examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/c%C4%B1lg%C4%B1n-dede-turkiye-turu.pdf"
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223943/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

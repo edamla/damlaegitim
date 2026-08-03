@@ -2,9 +2,7 @@
 layout: book
 title:  "İki Yıl Okul Tatili"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786259895253
@@ -13,16 +11,17 @@ page: "160 sayfa"
 size: "12,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895253/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Jules Verne"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["On beş genç öğrencinin fırtınalı bir gecede başlayan okyanus yolculuğu onları ıssız bir adada beklenmedik bir cesaret sınavına sokuyor"]
 anatemalar: ["Hayatta Kalma", "Dayanışma", "Eğitim ve Disiplin", Liderlik, Cesaret, "Umut ve Kararlılık"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895253/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

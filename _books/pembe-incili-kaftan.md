@@ -2,9 +2,7 @@
 layout: book
 title:  "Pembe İncili Kaftan"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786259895208
@@ -13,16 +11,17 @@ page: "100 sayfa"
 size: "12,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895208/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Ömer Seyfettin"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Vatan al bayrağın dalgalandığı yer değil midir diyen kahramanların esarete boyun eğmeyenlerin ve aklıyla destan yazanların ölümsüz öyküleri"]
 anatemalar: ["vatan sevgisi", "strateji ve zeka", "sabır ve umut", "milli kimlik", bilgelik, gelenekler]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895208/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

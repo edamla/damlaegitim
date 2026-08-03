@@ -2,9 +2,7 @@
 layout: book
 title:  "Ay’ın Karanlık Yüzü"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786254116001
@@ -13,16 +11,17 @@ page: "208 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116001/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Necati Akbaba"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Tarih boyunca duvarlara çizilen kadim tanrı tasvirlerinin yeryüzündeki devasa işaretlerin ve gökyüzünde beliren UFOların arkasındaki çarpıcı kozmik sır çözülüyor"]
 anatemalar: ["Zorunlu Göç", "Kriyojenik Uyku", "Kültürel Uyum", "Kaynak Yönetimi", "Liderlik ve Kararlılık", "Mitoloji ve Gizem"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116001/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

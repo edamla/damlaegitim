@@ -2,9 +2,7 @@
 layout: book
 title:  "Yüzen Şehir"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786259895284
@@ -13,16 +11,17 @@ page: "160 sayfa"
 size: "12,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895284/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Jules Verne"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Okyanusun ortasında devasa bir çelik ada", "fırtınalı sularda birbirine doğru sürüklenen eski düşmanlar ve kaderin  kaçınılmaz oyunu..."]
 anatemalar: ["Mühendislik", "İhtiras ve Kumar", "İlahi Adalet", "Dostluk ve Sadakat", "Yeniden Doğuş", "Yaşamın Kırılganlığı"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895284/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

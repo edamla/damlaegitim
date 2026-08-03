@@ -2,9 +2,7 @@
 layout: book
 title:  "Dünya’nın Merkezine Yolculuk"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786057288769
@@ -13,16 +11,17 @@ page: "160 sayfa"
 size: "12,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288769/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Jules Verne"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Yeraltı okyanuslarından devasa mantar ormanlarına tarih öncesi canavarlardan dev insanlara Bilimin cesaretin ve sınırların zorlandığı bir Jules Verne klasiği"]
 anatemalar: ["Bilimsel İnatçılık", "Doğanın Gizemi", "Keşif Ruhu", "Korku ve Cesaret", Sadakat, "Tarih Öncesi Yaşam"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288769/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

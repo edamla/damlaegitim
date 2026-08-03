@@ -2,9 +2,7 @@
 layout: book
 title:  "Engel Tanımayanlar (10 Kitap)"
 categories: ["Çocuk", Hikaye]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 8697911223974
@@ -13,15 +11,16 @@ page: "Her Biri 80"
 size: "14x20 cm"
 publish-number: 4
 cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/engel-tanimayanlar.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223974/index.html"
+damlaurl: ""
 paper: "1. Hamur"
 
 # Spesific Filterable Attributes
+genre: story
 grades: [3, 4]
 kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
 anatemalar: ["Engelsiz Yaşam", "Toplumsal Duyarlılık", Empati, "Azim ve Mücadele", "Farkındalık"]
-examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/engel-tanimayanlar.pdf"
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223974/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

@@ -2,9 +2,7 @@
 layout: book
 title:  "ROBOT AVCILARI (10 KİTAP)"
 categories: ["Çocuk", Hikaye]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 8697911223530
@@ -13,15 +11,16 @@ page: "Her Biri 64"
 size: "14x20 cm"
 publish-number: 2528
 cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/robot-avcilari-y.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223530/index.html"
+damlaurl: ""
 paper: "1. Hamur"
 
 # Spesific Filterable Attributes
+genre: story
 grades: [3, 4]
 kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
 anatemalar: [Bilim-Teknoloji, "Yapay Zeka", "Takım Ruhu", Bilimkurgu, "Gelecek Vizyonu"]
-examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/robot-avcilari-y.pdf"
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223530/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

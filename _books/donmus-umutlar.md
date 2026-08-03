@@ -2,9 +2,7 @@
 layout: book
 title:  "Donmuş Umutlar Sarıkamış"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786053837824
@@ -13,16 +11,17 @@ page: "288 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053837824/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Allahuekber dağlarında zemherinin ayazında donarak can veren şehitlerimizin buz tutan umutlarının hüzünlü hikâyesi"]
 anatemalar: ["Zorlu Doğa Koşulları", "Vatan Sevgisi", "Hatalı Kararlar", "İhtiras", "Çaresizlik", "Savaşın Gerçek Yüzü"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053837824/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

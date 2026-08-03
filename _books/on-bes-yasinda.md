@@ -2,9 +2,7 @@
 layout: book
 title:  "On Beş Yaşında Bir Kaptan"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786259895291
@@ -13,16 +11,17 @@ page: "160 sayfa"
 size: "12,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895291/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Jules Verne"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Amerika kıyılarına ulaştıklarını sanırken ihanete uğrayıp kendilerini Afrikanın acımasız köle tüccarlarının arasında bulan kazazedelerin nefes kesen hayatta kalma savaşı"]
 anatemalar: ["Sorumluluk Bilinci", "İnsan Hakları", "Doğayla Mücadele", "İhanet ve Kötülük", "Kahramanlık", "Dayanışma"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895291/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:
