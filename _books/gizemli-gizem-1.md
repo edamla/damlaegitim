@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Gizemli Gizem-1"
+description: "Gizemli Gizem serisinin ilk kitabı; sürükleyici hikaye ile okuma motivasyonu sağlar."
 categories: [Ortaokul]
 tags: []
 

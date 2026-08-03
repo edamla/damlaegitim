@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Saçaklı Kız’ın Pasaklı Günlüğü-1"
+description: "Sacaklı serisinin 1. kitabı; eğlenceli ve öğretici hikaye."
 categories: [Ortaokul]
 tags: []
 

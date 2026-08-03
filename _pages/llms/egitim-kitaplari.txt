@@ -1,0 +1,9 @@
+---
+layout: null
+permalink: /llms/egitim-kitaplari.txt
+---
+# Eğitim Kitapları
+> Damla Okul eğitim setleri ve yardımcı kaynaklar. Ana indeks: {{ site.url }}{{ site.baseurl }}/llms.txt
+
+{% assign education_books = site.books | where_exp: "book", "book.genre == 'education'" | sort: "title" %}
+{% for book in education_books %}{% include llms-book-line.html book=book %}{% endfor %}

@@ -1,0 +1,9 @@
+---
+layout: null
+permalink: /llms/hikaye-kitaplari.txt
+---
+# Hikaye Kitapları
+> Damla Okul hikaye ve okuma kitapları. Ana indeks: {{ site.url }}{{ site.baseurl }}/llms.txt
+
+{% assign story_books = site.books | where_exp: "book", "book.genre == 'story'" | sort: "title" %}
+{% for book in story_books %}{% include llms-book-line.html book=book %}{% endfor %}

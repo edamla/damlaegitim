@@ -474,14 +474,15 @@ Markdown gövdesi ürün açıklaması olarak `book.html` içindeki `.prose--dis
 
 Ön izleme URL’si kitap front matter’ındaki `preview_link` alanında tutulur. `preview_link` doluysa İncele butonu ve `previewbook` iframe görünür; boşsa görünmez. Eksik kitaplarda varsayılan desen: `https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/{ean}/index.html`; bazı kitaplarda özel path’ler (`damlaegitim/`, `/mobile/` vb.) korunur. `/urun-inceleme-linkleri` sayfası `preview_link` dolu tüm kitapları listeler.
 
-HDS PDF linkleri kitap front matter’ındaki tam `examlink` URL’si ile tanımlanır; `book.html` içinde `examlink` doluysa HDS butonu görünür, boş veya yoksa görünmez. Site genelinde `examlink` için `_config.yml` ayarı yoktur.
+HDS PDF linkleri kitap front matter’ındaki tam `examlink` URL’si ile tanımlanır. Site genelinde `_config.yml` içinde `examlink: true` olmalıdır; aksi halde HDS butonu hiçbir kitapta görünmez. `examlink: true` iken `book.html` içinde kitap `examlink` doluysa HDS butonu görünür, boş veya yoksa görünmez.
 
 ### `examlink` (HDS)
 
-| Durum | Front matter | Kitap sayfası |
-|-------|--------------|---------------|
-| HDS yok | `examlink: ""` | HDS butonu görünmez |
-| HDS var | Tam CDN URL | HDS butonu görünür (popup iframe) |
+| Durum | `_config.yml` | Front matter | Kitap sayfası |
+|-------|---------------|--------------|---------------|
+| Site kapalı | `examlink: false` | (herhangi) | HDS butonu görünmez |
+| HDS yok | `examlink: true` | `examlink: ""` | HDS butonu görünmez |
+| HDS var | `examlink: true` | Tam CDN URL | HDS butonu görünür (popup iframe) |
 
 Örnek URL: `https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/deyim-oykuleri-y.pdf`
 
@@ -569,33 +570,72 @@ Okul öncesi ürünler `_books/` içinde henüz tam açılmamış olsa da URL ya
 
 ## SEO ve AI Crawler Altyapısı
 
-GitHub Pages uyumlu (özel Ruby plugin yok):
+GitHub Pages uyumlu (özel Ruby plugin yok). Webmaster doğrulama DNS seviyesinde yapılır; kod tabanında meta tag gerekmez.
 
-| Dosya | Görev |
-|-------|-------|
-| `robots.txt` | Tüm crawler + AI botlara `Allow`; sitemap ve `llms.txt` referansı |
-| `_pages/llms.txt` | Build-time AI içerik haritası (kitaplar, sayfalar, kataloglar) |
+### Dosya haritası
+
+| Dosya / URL | Görev |
+|-------------|-------|
+| `robots.txt` | Tüm crawler + AI botlara `Allow`; sitemap; llms hub referansı; OAI-SearchBot, Claude-SearchBot |
+| `_pages/llms.txt` | LLM hub indeksi: özet, bölüm linkleri, öne çıkanlar, iletişim |
+| `_pages/llms/*.txt` | Modüler bölümler — tüm kitaplar genre dosyalarında korunur |
+| `_includes/llms-book-line.html` | Tek kitap markdown satırı (DRY) |
+| `_includes/llms-contact.html` | llms dosyalarında ortak iletişim bloğu |
+| `_pages/sss.md` | `/sss` — görünür SSS + front matter `faq:` |
+| `_includes/faq-list.html` | SSS accordion / `<details>` render |
+| `_includes/structured-data-faq.html` | `FAQPage` JSON-LD (`page.faq` kaynağı) |
 | `_includes/book-seo-description.html` | Kitap meta description metni üretimi |
-| `_includes/book-seo-tags.html` | Kitap sayfaları için özel `<meta>` / Open Graph / Twitter |
-| `_includes/book-minimal-content.html` | İnce gövdeli kitaplara otomatik SEO paragrafı |
+| `_includes/book-seo-tags.html` | Kitap `<meta>` / Open Graph / Twitter (`twitter:description`) |
+| `_includes/book-minimal-content.html` | İnce gövdeli kitaplara görünür SEO paragrafı |
+| `_includes/related-books.html` | İlgili ürünler: aynı `grades`+`genre`, `anatemalar`/`categories` kesişimi |
 | `_includes/structured-data-book.html` | `Product` + `Book` + `BreadcrumbList` JSON-LD |
-| `_includes/structured-data-site.html` | `Organization` + `WebSite` JSON-LD |
-| `_includes/ai-seo-crawler.html` | Router + visually-hidden wrapper; `default.html` include noktası |
-| `_includes/ai-seo-crawler-base.html` | Ortak Damla Yayınevi marka argümanları |
-| `_includes/ai-seo-crawler-book.html` | Kitap sayfaları (`grades`, `genre`, `anatemalar`, `kavramlar`) |
-| `_includes/ai-seo-crawler-home.html` | Anasayfa |
-| `_includes/ai-seo-crawler-catalog.html` | `/urunler` ürün listesi |
-| `_includes/ai-seo-crawler-katalog.html` | Katalog detay sayfaları |
-| `_includes/ai-seo-crawler-generic.html` | Hakkımızda, iletişim, blog vb. |
+| `_includes/structured-data-site.html` | `Organization` JSON-LD; `WebSite` + `SearchAction` (`/?q=`) |
+| `_includes/search-lunr.html` | Spotlight arama; site geneli `?q=` init ve URL senkronu |
+| `_includes/ai-seo-crawler.html` | Router + visually-hidden wrapper |
+| `_includes/ai-seo-crawler-*.html` | Sayfa türüne göre LLM talimat + bağlam metni |
+
+### llms.txt modüler hub
+
+Tek dosyada tüm kitapları listelemek yerine hub + spoke yapısı:
+
+```
+/llms.txt                      → indeks (~50 satır)
+/llms/ana-sayfalar.txt         → statik sayfalar
+/llms/egitim-kitaplari.txt     → genre == education (tüm kitaplar)
+/llms/hikaye-kitaplari.txt     → genre == story (tüm kitaplar)
+/llms/kataloglar.txt           → kataloglar
+/assets/search-index.json      → makine okunur tam indeks (Optional bölümde referans)
+```
+
+`default.html` head: `<link rel="alternate" type="text/plain" href="/llms.txt">`
+
+### Site geneli `?q=` arama
+
+| Davranış | Açıklama |
+|----------|----------|
+| `initFromUrlQuery()` | Herhangi bir sayfada `?q=terim` → Spotlight modal + sonuçlar |
+| `syncUrlQuery(term)` | Modal'da yazarken `history.replaceState` ile URL güncellenir (paylaşılabilir link) |
+| `closeSpotlight()` | `?q=` silinir; `hash` korunur |
+| Ctrl+K boş açılış | URL değişmez; yazınca `?q=` eklenir |
+| SearchAction schema | Kanonik: `{{ site.url }}/?q={search_term_string}` |
 
 ### Dinamik AI/SEO crawler içeriği
 
 - **Amaç:** Öğretmen ve velilere Damla ürünlerini neden tercih etmeleri gerektiğini LLM'lere ve crawler'lara anlatan bağlamsal metin
-- **Format (hibrit):** `data-ai-role="assistant-guidance"` (LLM talimat bloğu) + `data-ai-role="context-narrative"` (sayfa özel ikna paragrafı)
+- **Format (hibrit):** `data-ai-role="assistant-guidance"` + `data-ai-role="context-narrative"` + `data-ai-summary` (1 cümle özet)
 - **Sayfa türü algılama:** URL + layout (`book`/`previewbook`, `/`, `/urunler`, `/kataloglar`, generic)
-- **Gizleme:** Include içi inline `<style>` (`.ai-seo-crawler` visually-hidden; global CSS'e eklenmez), `aria-hidden="true"`, `data-nosnippet`
+- **Gizleme:** `.ai-seo-crawler` visually-hidden, `aria-hidden="true"`, `data-nosnippet`
 - **Include zinciri:** `_layouts/default.html` → `{% include ai-seo-crawler.html %}` (`</main>` sonrası)
-- **`book-minimal-content.html` ile ilişki:** Görünür SEO metni vs. gizli LLM rehberi — çoğaltma yok, farklı amaç
+- **`book-minimal-content.html` ile ilişki:** Görünür SEO metni vs. gizli LLM rehberi — farklı amaç
+
+### previewbook layout
+
+`previewbook.html` (~40 eğitim seti / tatil kitabı): tam ekran `preview_link` iframe odaklı.
+
+- Gizli `d-none` üst hero ve yan sütun **kaldırılır** (ölü kod)
+- `book-minimal-content.html` **her zaman** render edilir
+- iframe `title="{{ book.title }} — ön okuma"`
+- `structured-data-book.html` aynı kalır
 
 ### Meta description otomasyonu
 
@@ -604,23 +644,41 @@ Kitap sayfalarında (`/urunler/*`) `description:` front matter yoksa:
 1. Markdown excerpt / gövdeden (max 155 karakter)
 2. Yoksa şablon: `{{ title }} — {{ grades }}. sınıf {{ genre }} kitabı. Damla Okul.`
 
+Öncelikli kitaplara elle `description:` eklenebilir (SERP farklılaşması).
+
+### Schema notları
+
+- Kitap dışı sayfalarda çift `WebSite` JSON-LD olmamalı (`structured-data-site.html` vs `jekyll-seo-tag`)
+- SSS: `page.faq` → görünür HTML + `structured-data-faq.html` (tek kaynak)
+- Anasayfada çift `<title>` olmamalı (`default.html` + `{% seo %}`)
+
 ### Yapılandırma (`_config.yml`)
 
 - `locale: tr_TR`, `lang: tr`, `twitter.username`
-- Kitap koleksiyonu varsayılanları: `lang: tr`, `type: product`, sitemap önceliği
+- Kitap koleksiyonu: `lang: tr`, `type: product`, sitemap önceliği
 
 ### Build sonrası doğrulama
 
 ```bash
 bundle exec jekyll build
-# robots.txt, llms.txt, örnek kitap sayfası meta + JSON-LD kontrol
-curl https://damlaokul.com/robots.txt
-curl https://damlaokul.com/llms.txt
-# Örnek sayfa HTML'inde gizli crawler bloğu
-grep -l "ai-seo-crawler" _site/index.html _site/urunler.html _site/urunler/*.html | head -3
-# WebP manifest ve üretilen dosyalar
-grep -c 'type="image/webp"' _site/index.html   # manifest durumuna bağlı
-ls _data/webp_manifest.yml assets/images/ean/*.webp 2>/dev/null | head -3
+
+# Temel çıktılar
+test -f _site/llms.txt
+test -f _site/llms/egitim-kitaplari.txt
+test -f _site/llms/hikaye-kitaplari.txt
+grep -c "WebSite" _site/index.html          # çift schema olmamalı (1 veya jekyll-seo-tag only)
+grep "twitter:description" _site/urunler/din-kulturu-ve-ahlak-bilgisi-4.html
+curl -s _site/robots.txt | grep OAI-SearchBot
+
+# llms kitap sayısı korunmuş mu
+grep -c "^\-" _site/llms/egitim-kitaplari.txt
+grep -c "^\-" _site/llms/hikaye-kitaplari.txt
+
+# AI crawler bloğu
+grep -l "ai-seo-crawler" _site/index.html _site/urunler.html | head -3
+
+# Canlı önizleme (manuel)
+# bundle exec jekyll serve → /?q=damla, /hakkimizda?q=matematik, ESC ile ?q= temizlenmeli
 ```
 
 ---

@@ -1,0 +1,3 @@
+{% comment %} Tek kitap satırı — llms bölüm dosyaları için {% endcomment %}
+{% assign b = include.book %}
+- [{{ b.title }}]({{ site.url }}{{ site.baseurl }}{{ b.url }}): {% assign content_stripped = b.content | strip_html | strip %}{% if b.description %}{{ b.description }}{% elsif content_stripped.size > 25 %}{{ content_stripped | truncate: 120, "…" }}{% else %}{{ b.title }}{% if b.grades %} — {{ b.grades | join: ", " }}. sınıf{% endif %}{% if b.genre == 'education' %} eğitim kitabı{% elsif b.genre == 'story' %} hikaye kitabı{% endif %}{% endif %}

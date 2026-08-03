@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "Haydi Keşfedelim"
+description: "Keşif ve araştırma becerilerini geliştiren etkinlik tabanlı eğitim seti."
 categories: ["İlkokul"]
 tags: []
 

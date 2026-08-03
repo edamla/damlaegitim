@@ -4,7 +4,12 @@
 {% endcomment %}
 {% assign book_canonical = site.url | append: site.baseurl | append: page.url %}
 {% if page.ean and page.ean != '' %}
-  {% assign book_og_image = site.url | append: site.baseurl | append: '/assets/images/ean/' | append: page.ean | append: '.jpg' %}
+  {% assign book_cover_jpg = 'assets/images/ean/' | append: page.ean | append: '.jpg' %}
+  {% assign book_cover_webp = 'assets/images/ean/' | append: page.ean | append: '.webp' %}
+  {% assign book_og_image = site.url | append: site.baseurl | append: '/' | append: book_cover_jpg %}
+  {% if site.data.webp_manifest and site.data.webp_manifest.assets contains book_cover_webp %}
+    {% assign book_og_image = site.url | append: site.baseurl | append: '/' | append: book_cover_webp %}
+  {% endif %}
 {% else %}
   {% assign book_og_image = site.url | append: site.logo %}
 {% endif %}
@@ -22,6 +27,7 @@
 <meta name="twitter:card" content="{{ site.twitter.card | default: 'summary_large_image' }}" />
 <meta property="twitter:image" content="{{ book_og_image }}" />
 <meta property="twitter:title" content="{{ page.title | xml_escape }}" />
+<meta name="twitter:description" content="{{ book_seo_description | xml_escape }}" />
 {% if site.twitter.username %}
 <meta name="twitter:site" content="@{{ site.twitter.username | remove: '@' }}" />
 {% endif %}

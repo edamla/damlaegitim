@@ -2,16 +2,14 @@
 layout: default
 ---
 <style>
-	 iframe {
-    border: 0px;
+  iframe {
+    border: 0;
   }
-  /*Basic Grid Styles*/
   .Grid {
     display: flex;
     flex-wrap: wrap;
     height: 100%;
   }
-  
   .Grid-cell {
     flex: 3;
     height: 100%;
@@ -21,142 +19,25 @@ layout: default
     transition: background-color 0.3s ease;
     height: 100vh;
   }
-  .Demo:after {
-    content: "";
-    display: block;
-  }
 </style>
 
-
 {% assign book = page %}
-<div class="container">
-<div class="book-detail mb-3 ps-0 pt-0 pb-0 bg-white position-relative">
-		<div class="h-100 tofront d-none">
-			<div class="row {% if book.ean %} justify-content-between {% else %} justify-content-center {% endif %}">
-				{% if book.ean %}
-				<div class="col-md-3 pe-2 align-self-center book">
-					{% assign eanimage_class = "rounded" %}
-					{% include eanimage.html book=book alt=page.title %}
-				</div>
-                {% endif %}
 
-				<div class="{% if book.ean %} col-md-9 {% else %} col-md-8 {% endif %} pe-0 pe-md-4 pt-3 pb-3">
-
-
-					<div class="align-items-center">
-						<!-- Author list -->
-						<h1 class="display-4 mb-4 article-headline">{{ book.title }}</h1>
-
-
-						<p class="fw-bold">
-							<span class="catlist">
-							{% for cat in book.categories %}
-							  <a class="sscroll text-danger" href="#">{{ cat }}</a><span class="sep">, </span>
-							{% endfor %}
-							</span>
-						</p>
-
-						<!-- read time and date -->
-						<!-- <h6 class="text-muted d-block mt-1">{{ book.date | date: '%d.%m.%Y' }} · {% include meta-read-time.html %}</h6> -->
-						<!-- <h6 class="text-muted d-block mt-1">{{ book.date | date: '%d.%m.%Y' }}</h6> -->
-
-
-						<div class="icon-block mt-3 d-inline-grid">  
-
-							<a class="sscroll btn btn-light btn-sm fw-bold d-block float-left" target="_blank" href="#iframe"><i class="fas fa-book-reader fa-2x text-primary" aria-hidden="true"></i><span class="fw-bold btn-sm">Kitapları İncele</span></a>  &nbsp;
-
-							{% if book.youtube %}
-							<a class="sscroll btn btn-light btn-sm fw-bold d-block float-left" target="_blank" href="{{ book.youtube }}"><i class="fab fa-youtube fa-2x text-danger" aria-hidden="true"></i><span class="fw-bold btn-sm">Tanıtm Videosu</span></a>  &nbsp;
-							{% endif %}
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+<div class="container-lg pt-4 pb-2">
+  <article class="article-post">
+    {% include book-minimal-content.html %}
+  </article>
+  {% include related-books.html %}
 </div>
 
-
-
-
-
-<div class="container-lg pt-4 pb-4">
-	<div class="row justify-content-center">
-        
-		<div class="col-md-9 order-md-2">
-            
-            <!-- Article -->
-			<article class="article-post text-justify">
-			{% assign body_stripped = content | strip_html | strip %}
-			{% if body_stripped.size < 80 %}
-				{% include book-minimal-content.html %}
-			{% else %}
-			{{ content }}
-			{% endif %}
-			</article>
-
-            
-		</div>
-
-		<!-- Attribute list: -->
-		<div class="col-md-3 order-md-1 d-none">
-						<ul class="list-group mb-4">
-							
-
-							{% if book.authors.size > 0 %}
-							<li class="list-group-item">
-								<div class="md-v-line"></div><i class="fas fa-user-edit me-1 fa-lg text-primary"></i><span class="me-1">Yazar:</span>{{book.authors }}
-							</li>
-							{% endif %}
-
-
-							{% if book.page %}
-							<li class="list-group-item">
-								<div class="md-v-line"></div><i class="fas fa-book-open me-1 fa-lg text-primary"></i><span class="me-1">Sayfa:</span> {{book.page}}
-							</li>
-							{% endif %}
-
-							{% if book.size %}
-							<li class="list-group-item">
-								<div class="md-v-line"></div><i class="fas fa-ruler me-1 fa-lg text-danger"></i><span class="me-1">Ebat:</span>{{book.size}}
-							</li>
-							{% endif %}
-							
-
-							{% if book.ean %}
-							<li class="list-group-item">
-							  <div class="md-v-line"></div><i class="fas fa-barcode me-1 fa-lg text-dark"></i><span class="me-1">Barkod :</span> {{book.ean}}
-							</li>
-							{% endif %}
-
-
-
-						  </ul>
-		</div>
-        
-        
-	</div>
-
-	<!-- Fbook içerik bölümü -->
-	<div class="Grid-cell">
-		<div class="Demo content">
-		  {% if book.preview_link != nil and book.preview_link != '' %}
-		  <iframe id="iframe" src="{{ book.preview_link }}" name="fbook" width="100%" height="100%"></iframe>
-		  {% else %}
-		  <p class="p-4 text-muted">Ön izleme şu anda kullanılamıyor.</p>
-		  {% endif %}
-		  <noframes>
-			<body id="htmlsource">
-			  <p>Üzgünüz, tarayıcınız bu sayfayı görüntüleyemiyor.</p>
-			</body>
-		  </noframes>
-		</div>
-	  </div>
-
-
-	
-
+<div class="Grid-cell">
+  <div class="Demo content">
+    {% if book.preview_link != nil and book.preview_link != '' %}
+    <iframe id="iframe" src="{{ book.preview_link }}" name="fbook" width="100%" height="100%" title="{{ book.title }} — ön okuma"></iframe>
+    {% else %}
+    <p class="p-4 text-muted">Ön izleme şu anda kullanılamıyor.</p>
+    {% endif %}
+  </div>
 </div>
 
 {% include structured-data-book.html %}

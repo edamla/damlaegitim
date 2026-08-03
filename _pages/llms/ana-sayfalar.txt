@@ -1,0 +1,16 @@
+---
+layout: null
+permalink: /llms/ana-sayfalar.txt
+---
+# Ana Sayfalar
+> Damla Okul site sayfaları. Ana indeks: {{ site.url }}{{ site.baseurl }}/llms.txt
+
+- [Anasayfa]({{ site.url }}{{ site.baseurl }}/): {{ site.description }}
+- [Hakkımızda]({{ site.url }}{{ site.baseurl }}/hakkimizda): Damla Okul ve Damla Yayınevi hakkında: okul yayınları, eğitim materyalleri ve Yeni Maarif Modeli uyumlu içerik yaklaşımımız.
+- [Ürünler]({{ site.url }}{{ site.baseurl }}/urunler): Damla Okul ürün kataloğu: sınıf ve tür bazlı eğitim setleri, hikaye kitapları ve okul yayınları.
+- [Kataloglar]({{ site.url }}{{ site.baseurl }}/kataloglar): Damla Okul yayın katalogları (PDF/HTML).
+- [Kitapla Büyüyen Sınıflar]({{ site.url }}{{ site.baseurl }}/kitapla-buyuyen-siniflar): Sosyal sorumluluk projesi: sınıflara kitap ulaştırma.
+- [Ölçme ve Değerlendirme]({{ site.url }}{{ site.baseurl }}/olcme-degerlendirme): 4 Boyutlu Ölçme-Değerlendirme Sistemi ve Akıllı Optik Sistemi.
+- [Sıkça Sorulan Sorular]({{ site.url }}{{ site.baseurl }}/sss): Yayınlar, Maarif Modeli uyumu ve sipariş hakkında SSS.
+- [İletişim]({{ site.url }}{{ site.baseurl }}/iletisim): İletişim bilgileri, adres ve harita.
+- [Gizlilik Politikası]({{ site.url }}{{ site.baseurl }}/gizlilik-ve-kvkk): KVKK aydınlatma metni ve çerez politikası.

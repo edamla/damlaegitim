@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "Yaz Tatili 3.Sınıf"
+description: "3. sınıf öğrencileri için yaz tatili etkinlik ve alıştırma seti."
 categories: [Religion]
 tags: []
 

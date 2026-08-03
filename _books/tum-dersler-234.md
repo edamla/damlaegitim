@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "TÜM DERSLER SORU BANKASI | 2-3-4.Sınıf"
+description: "2., 3. ve 4. sınıflar için tüm dersleri kapsayan tatil tekrar seti."
 categories: [Religion]
 tags: []
 

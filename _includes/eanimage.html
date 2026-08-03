@@ -56,7 +56,7 @@
     {% assign eanimage_alt = alt %}
     {% if eanimage_alt == nil or eanimage_alt == '' %}
       {% if book and book.title %}
-        {% assign eanimage_alt = book.title %}
+        {% assign eanimage_alt = book.title | append: ' — Damla Okul' %}
       {% else %}
         {% assign eanimage_alt = '' %}
       {% endif %}

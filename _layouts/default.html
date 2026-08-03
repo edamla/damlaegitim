@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     {% unless page.url contains '/urunler/' %}
-    <title>{{page.title}} | {{site.name}}</title>
+    {% comment %} title, description, canonical: {% seo %} {% endcomment %}
     {% endunless %}
 
     {% if page.url contains '/urunler/' %}
@@ -48,7 +48,11 @@
     {% endif %}
 
     {% include structured-data-site.html %}
+    {% if page.faq %}
+    {% include structured-data-faq.html %}
+    {% endif %}
 
+    <link rel="alternate" type="text/plain" href="{{ site.baseurl }}/llms.txt" title="LLM site guide">
     <link rel="alternate" type="application/rss+xml" href="{{site.baseurl}}/feed.xml" />
 
     <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/{{site.favicon}}">

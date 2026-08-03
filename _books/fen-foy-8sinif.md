@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "Yeni Nesil Fen Bilimleri Lgs Föyleri 8.Sınıf"
+description: "8. sınıf fen bilimleri föyü; deney ve uygulama odaklı etkinlikler."
 categories: ["İlkokul"]
 tags: []
 

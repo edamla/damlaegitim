@@ -17,13 +17,13 @@ Yeni Maarif Modeline uygun eğitim setleri, hikaye kitapları ve kataloglar tek 
 - **Kataloglar** — Html / PDF katalog görüntüleme
 - **Anasayfa slider** — Kampanya ve duyuru görselleri
 - **Instagram carousel** — `@okul.damla` hesabının güncel gönderileri (Behold JSON feed)
-- **Spotlight arama** — Lunr.js ile kitap araması (`Ctrl+K`; mobilde header’da minimal arama çubuğu)
+- **Spotlight arama** — Lunr.js ile kitap araması (`Ctrl+K`); site genelinde `?q=` deep link ve paylaşılabilir arama URL'si
 - **Sticky navbar** — Scroll’da kaybolmayan sabit üst menü (mobil + masaüstü)
 - **3 sütunlu footer** — Ürünler, önemli bilgiler, iletişim ve sosyal medya
 - **Mobil uyumlu** — Bootstrap 5 responsive grid; hamburger menü alt satırda açılır
 - **Statik & hızlı** — Jekyll ile önceden derlenmiş HTML, GitHub Pages üzerinde yayın
 - **Performans odaklı** — Lazy arama, yerel fontlar, `<picture>` + WebP, slider lazyload, koşullu script yükleme
-- **SEO & AI keşfi** — `robots.txt`, `llms.txt`, otomatik kitap meta description, Product JSON-LD, sayfa bağlamına göre dinamik LLM/SEO crawler içeriği (`ai-seo-crawler`)
+- **SEO & AI keşfi** — `robots.txt`, modüler `llms.txt` hub, site geneli `?q=` arama URL'leri, otomatik kitap meta, Product/FAQ JSON-LD, `ai-seo-crawler`, `/sss` sayfası
 
 ## Teknoloji
 
@@ -189,19 +189,24 @@ Detaylı mimari için [project.md](project.md), stil ve tasarım için [design.m
 
 ## SEO ve AI Crawler
 
-| Dosya | Açıklama |
-|-------|----------|
-| `robots.txt` | Arama motorları ve AI botlara tam erişim |
-| `/llms.txt` | AI crawler'lar için site haritası |
-| `_includes/book-seo-tags.html` | Kitap sayfaları meta / Open Graph |
-| `_includes/structured-data-*.html` | schema.org JSON-LD |
-| `_includes/ai-seo-crawler.html` | Tüm sayfalara `default.html` üzerinden eklenen router; sayfa türüne göre partial seçer |
-| `_includes/ai-seo-crawler-*.html` | Kitap, anasayfa, katalog, katalog detay ve genel sayfa için hibrit içerik (LLM talimat + ikna metni) |
-| `_includes/ai-seo-crawler-base.html` | Ortak marka argümanları (1974, profesyonel kadro, Maarif Modeli) |
+| Dosya / URL | Açıklama |
+|-------------|----------|
+| `robots.txt` | Arama motorları ve AI botlara tam erişim; sitemap + llms hub referansı |
+| `/llms.txt` | LLM indeks (hub): özet, bölüm linkleri, iletişim |
+| `/llms/*.txt` | Modüler bölümler: ana sayfalar, eğitim/hikaye kitapları (tümü), kataloglar |
+| `/?q=` | Site geneli arama deep link; SearchAction kanonik giriş |
+| `/sss` | Sıkça sorulan sorular (görünür içerik + FAQPage JSON-LD) |
+| `_includes/search-lunr.html` | Spotlight arama; `initFromUrlQuery` + `syncUrlQuery` (`history.replaceState`) |
+| `_includes/book-seo-tags.html` | Kitap sayfaları meta / Open Graph / Twitter |
+| `_includes/structured-data-*.html` | schema.org JSON-LD (Organization, WebSite, Product, Book, FAQ) |
+| `_includes/related-books.html` | Kitap detayda ilgili ürünler (grades + genre + anatemalar) |
+| `_includes/ai-seo-crawler*.html` | Sayfa türüne göre gizli LLM talimat + bağlam metni |
 
-Dinamik AI/SEO crawler içeriği yalnızca arama motoru ve LLM crawler'ları için üretilir; include içi `<style>` ile visually-hidden + `aria-hidden` + `data-nosnippet` kullanılır (global CSS'e bağımlı değil). `book-minimal-content.html` **görünür** ince kitap metni sunar; `ai-seo-crawler` **gizli** LLM rehber talimatları içerir. `llms.txt` site haritası; `ai-seo-crawler` sayfa bazlı bağlam — ikisi birbirini tamamlar.
+`book-minimal-content.html` **görünür** ince kitap metni; `ai-seo-crawler` **gizli** LLM rehberi (`aria-hidden`, `data-nosnippet`). `llms.txt` site haritası; `ai-seo-crawler` sayfa bağlamı — ikisi birbirini tamamlar.
 
-Kitap `description:` alanı opsiyoneldir; boşsa başlık, sınıf ve türden otomatik üretilir. Doğrulama: `bundle exec jekyll build` sonrası `_site/robots.txt`, `_site/llms.txt`, örnek kitap HTML'i ve `.ai-seo-crawler` bloğu + `data-ai-role` attribute'ları kontrol edin.
+Kitap `description:` opsiyoneldir; boşsa başlık, sınıf ve türden otomatik üretilir. `previewbook` layout: `book-minimal-content` + tam ekran iframe (gizli `d-none` ölü kod kaldırılmış).
+
+**Doğrulama:** `bundle exec jekyll build` sonrası `_site/robots.txt`, `_site/llms.txt`, `_site/llms/egitim-kitaplari.txt`, `/?q=damla` arama modalı, örnek kitap meta + JSON-LD. Ayrıntılar: [project.md — SEO](project.md#seo-ve-ai-crawler-altyapısı).
 
 ## Yeni Ürün Ekleme
 
@@ -225,7 +230,7 @@ damlaurl: ""   # Damla Yayınevi ürün sayfası; doluysa Satın Al, boşsa Bilg
 Ürün açıklaması buraya...
 ```
 
-`anatemalar` TEMALAR için yeşil `#etiket` olarak gösterilir. `kavramlar` kısa slug veya kavram adıysa turuncu `@etiket` pill (tireli boşluksuz slug, ≤18 karakter veya boşluklu ≤28 karakter); uzun özet cümlesiysa italik alıntı (`.book-detail__tagline`) olarak render edilir. `tags` şu an aktif UI’da kullanılmaz; normalize betiği boş dizi yazar. `preview_link` doluysa İncele butonu ve `previewbook` iframe görünür. `examlink` doluysa HDS butonu görünür. `damlaurl` doluysa **Satın Al** (iframe), boşsa **Bilgi** (tedarik popup) — site genelinde ayrı config ayarı yoktur.
+`anatemalar` TEMALAR için yeşil `#etiket` olarak gösterilir. `kavramlar` kısa slug veya kavram adıysa turuncu `@etiket` pill (tireli boşluksuz slug, ≤18 karakter veya boşluklu ≤28 karakter); uzun özet cümlesiysa italik alıntı (`.book-detail__tagline`) olarak render edilir. `tags` şu an aktif UI’da kullanılmaz; normalize betiği boş dizi yazar. `preview_link` doluysa İncele butonu ve `previewbook` iframe görünür. `examlink` doluysa ve `_config.yml` içinde `examlink: true` ise HDS butonu görünür. `damlaurl` doluysa **Satın Al** (iframe), boşsa **Bilgi** (tedarik popup).
 
 3. Kapak görselini `assets/images/ean/{ean}.jpg` olarak ekleyin (jpg/png optimize edin; `.webp` `sh start.sh` ile otomatik üretilir)
 4. `sh scripts/check_images.sh` ile boyut kontrolü yapın (veya `sh start.sh` — hook olarak çalışır)
@@ -350,7 +355,7 @@ Navbar’daki arama kutusu veya `Ctrl+K` / `⌘K` ile kitap araması açılır. 
 
 ## Kitap Detay Popup’ları
 
-Tanıtım (YouTube), Satın Al / Bilgi, İncele ve HDS butonları [`_includes/popup.html`](_includes/popup.html) ile açılır. `damlaurl` doluysa **Satın Al** ürün sayfasını iframe’de açar; boşsa **Bilgi** tedarik popup’unu gösterir. HDS yalnızca `examlink` dolu kitaplarda görünür. İncele yalnızca `preview_link` dolu kitaplarda görünür. Tedarik popup’u iPhone koyu temada okunabilir metin renklerine sahiptir.
+Tanıtım (YouTube), Satın Al / Bilgi, İncele ve HDS butonları [`_includes/popup.html`](_includes/popup.html) ile açılır. `damlaurl` doluysa **Satın Al** ürün sayfasını iframe’de açar; boşsa **Bilgi** tedarik popup’unu gösterir. HDS yalnızca `_config.yml` içinde `examlink: true` ve kitap `examlink` doluysa görünür. İncele yalnızca `preview_link` dolu kitaplarda görünür. Tedarik popup’u iPhone koyu temada okunabilir metin renklerine sahiptir.
 
 ## Footer
 

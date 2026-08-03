@@ -66,7 +66,7 @@ layout: default
                             {% if book.preview_link != nil and book.preview_link != '' %}
                             <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" target="_blank" href="{{ book.preview_link }}" data-popup-type="iframe" data-popup-title="İncele"><i class="fas fa-search fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">İncele</span></a>
                             {% endif %}
-                            {% if book.examlink != nil and book.examlink != '' %}
+                            {% if site.examlink and book.examlink != nil and book.examlink != '' %}
                             <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" target="_blank" href="{{ book.examlink }}" data-popup-type="iframe" data-popup-title="HDS"><i class="fas fa-pen fa-2x text-danger" aria-hidden="true"></i><span class="btn-sm">HDS</span></a>
                             {% endif %}
                         </div>
@@ -193,3 +193,5 @@ layout: default
 {% include popup.html %}
 
 {% include structured-data-book.html %}
+
+{% include related-books.html %}

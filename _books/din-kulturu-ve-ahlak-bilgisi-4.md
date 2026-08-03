@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "Din Kültürü ve Ahlak Bilgisi 4.Sınıf"
+description: "4. sınıf din kültürü ve ahlak bilgisi dersine uygun, Yeni Maarif Modeli kazanımlarını destekleyen etkinlik kitabı."
 categories: ["İlkokul"]
 tags: []
 

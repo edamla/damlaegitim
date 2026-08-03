@@ -7,6 +7,12 @@ Allow: /
 User-agent: ClaudeBot
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
 User-agent: PerplexityBot
 Allow: /
 
@@ -19,7 +25,7 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-# AI content guide
-# See https://damlaokul.com/llms.txt
+# LLM content guide: https://damlaokul.com/llms.txt
+# Sections: https://damlaokul.com/llms/egitim-kitaplari.txt https://damlaokul.com/llms/hikaye-kitaplari.txt
 
 Sitemap: https://damlaokul.com/sitemap.xml

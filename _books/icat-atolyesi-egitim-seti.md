@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "İcat Atölyesi Eğitim Seti"
+description: "Yaratıcılık ve icat atölyesi temalı eğitim seti; STEM becerilerini destekler."
 categories: [Religion]
 tags: []
 
