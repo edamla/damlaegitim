@@ -2,9 +2,7 @@
 layout: book
 title:  "Demir Pençe Suziko-5"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786051749907
@@ -13,16 +11,17 @@ page: "192 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051749907/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Kangurular Aborjinler ve ölümcül sırlar Yapay zekânın gücünü korumakiçin dünyanın öbür ucunda verilen amansız bir hayatta kalma mücadelesi"]
 anatemalar: ["Sadakat ve Dostluk", "Zorluklarla Mücadele", "Adalet Arayışı", "Coğrafi Keşif", "Hayvan Hakları", "Memleket Özlemi"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051749907/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

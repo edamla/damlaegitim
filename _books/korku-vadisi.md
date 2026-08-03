@@ -2,9 +2,7 @@
 layout: book
 title:  "Korku Vadisi"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786057274472
@@ -13,16 +11,17 @@ page: "220 sayfa"
 size: "12,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274472/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Sir Arthur Conan Doyle"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Londra’da büyük bir beyin Sussexte ise ölü bir adam Bizim takip etmemiz gereken ise ikisi arasındaki bağlantı"]
 anatemalar: ["gerilim ve korku", intikam, "sadakat ve ihanet", gizem, tehlike, "suç dehası"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274472/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

@@ -2,9 +2,7 @@
 layout: book
 title:  "Denizler Altında 20.000 Fersah"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786057288776
@@ -13,16 +11,17 @@ page: "160 sayfa"
 size: "12,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288776/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Jules Verne"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Geçmişinden ve insanlıktan kaçarak kendi adaletini okyanusun ulaşılamaz derinliklerinde arayan gizemli Kaptan Nemonun sırlarla dolu dünyasına hoş geldiniz"]
 anatemalar: ["Özgürlük ve Esaret", "Adalet ve İntikam", "Bilimsel Keşif", "Teknolojinin Gücü", "Doğayla Mücadele", "Doğanın İhtişamı"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288776/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

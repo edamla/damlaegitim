@@ -2,9 +2,7 @@
 layout: book
 title:  "Dedektif Kuruntusu-2"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786051746029
@@ -13,16 +11,17 @@ page: "112 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051746029/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Esra Avgören"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Yarım ısırılmış bir kaşar peyniri kayıp bir ön diş ve çilek kokusu Sahi bu diş izleri kimin"]
 anatemalar: ["Dayanışma", "Analitik Düşünme", "Öz Güven", "Sosyal Farkındalık", "Öfke Kontrolü", Adalet]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051746029/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

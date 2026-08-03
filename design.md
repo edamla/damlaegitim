@@ -322,7 +322,7 @@ BEM yapısı:
 | Kavram etiketleri | `.book-detail__concepts .concept` | `@etiket`, turuncu, pill |
 | Metadata | `.book-meta__item` | Flex: ikon + metin |
 | Açıklama | `.prose--display` | Markdown gövdesi |
-| Aksiyonlar | `.js-book-action` | Popup tetikleyici butonlar; İncele → `book.review_link` (iframe popup) |
+| Aksiyonlar | `.js-book-action` | Popup tetikleyici butonlar; İncele → `book.preview_link` (iframe popup) |
 
 **Dosya:** `_layouts/book.html`
 

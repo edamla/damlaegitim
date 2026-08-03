@@ -2,9 +2,7 @@
 layout: book
 title:  "O BİR DAHİ (10 KİTAP)"
 categories: ["Öykümatik"]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 8697911223516
@@ -13,15 +11,16 @@ page: "Her Biri 80"
 size: "14x20 cm"
 publish-number: 3269
 cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/o-bir-dahi-y.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223516/index.html"
+damlaurl: ""
 paper: "1. Hamur"
 
 # Spesific Filterable Attributes
+genre: story
 grades: [3, 4]
 kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
 anatemalar: [Biyografi, "İlham Veren Hayatlar", "Azim ve Kararlılık", "Bilimsel Keşifler", "Başarı Hikayeleri"]
-examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/o-bir-dahi-y.pdf"
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223516/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

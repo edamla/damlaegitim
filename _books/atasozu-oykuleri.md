@@ -2,9 +2,7 @@
 layout: book
 title:  "Atasözü Öyküleri (5 Kitap)"
 categories: ["Öykümatik"]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786053832768
@@ -13,15 +11,16 @@ page: "Her Bİri 64"
 size: "14x20 cm"
 publish-number: 1448
 cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/atasozu-oykuleri-y.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832768/mobile/index.html"
+damlaurl: ""
 paper: "1. Hamur"
 
 # Spesific Filterable Attributes
+genre: story
 grades: [3, 4]
 kavramlar: [""]
 anatemalar: ["Anadolu Kültürü", "Birey ve Toplum", "Dil Bilim", "Milli Kültür"]
-examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/atasozu-oykuleri-y.pdf"
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832768/mobile/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

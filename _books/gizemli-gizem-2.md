@@ -2,9 +2,7 @@
 layout: book
 title:  "Gizemli Gizem-2"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786051745886
@@ -13,16 +11,17 @@ page: "160 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051745886/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Nehir Aydın Gökduman"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Hayaller gerçeklerden her zaman bir adım önde gider"]
 anatemalar: ["Hak Arama", "Yaratıcılık", "İnisiyatif Alma", "Dayanışma", Sorumluluk, "Gerçeklik Algısı"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051745886/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

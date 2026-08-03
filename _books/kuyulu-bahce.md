@@ -2,9 +2,7 @@
 layout: book
 title:  "Kuyulu Bahçe"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786254113307
@@ -13,16 +11,17 @@ page: "80 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113307/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Kemalettin Tuğcu"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Çatlamış topraklardan fışkıran bir umut damlası sadece doğayı değil kurumuş kalpleri de yeşertir"]
 anatemalar: ["Emek ve Çalışma", "Ön Yargılar", "Eğitim ve Aydınlanma", "Karşılıksız İyilik", Vefa, "Su ve Hayat"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113307/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

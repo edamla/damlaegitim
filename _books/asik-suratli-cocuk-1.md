@@ -2,9 +2,7 @@
 layout: book
 title:  "Asık Suratlı Çocuk-1"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786051742663
@@ -13,16 +11,17 @@ page: "192 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051742663/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Nur Dombaycı"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Korkunun bile yaklaşmaya çekindiği Asık Suratlı Mertin gizemli Uğultulu Ormandaki ilk büyük sınavı"]
 anatemalar: ["Çevre Bilinci", "Cesaret Korku", "Akran Zorbalığı", "Ön Yargı", "Kardeşlik", "Dayanışma"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051742663/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

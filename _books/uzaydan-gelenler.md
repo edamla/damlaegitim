@@ -2,9 +2,7 @@
 layout: book
 title:  "Uzaydan Gelenler Kulübü"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786254114281
@@ -13,16 +11,17 @@ page: "128 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254114281/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Resul Dede"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Taşındık yazan bir pastanenin gizli bölmesinden Gezegen9a uzanan aksiyon ve gizem dolu eşsiz bir serüven"]
 anatemalar: ["Macera Tutkusu", "Otorite ve Adalet", "Bilim ve Teknoloji", "Fedakârlık", "Dayanışma", "Sırlar ve Gizem"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254114281/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

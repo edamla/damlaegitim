@@ -2,9 +2,7 @@
 layout: book
 title:  "Şeytanî Tuzak"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786053837206
@@ -13,16 +11,17 @@ page: "144 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053837206/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Peyami Safa"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Çalınan mücevherler sahte dedektifler ve akılalmaz kaçış planlarıyla dolu okuru ters köşeye yatıran soluksuz bir polisiye macerası"]
 anatemalar: ["Akıl Oyunları", "Özgüven ve Gurur", "İllüzyon", "Kimlik Karmaşası", "Yerel Zekâ", Mizah]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053837206/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

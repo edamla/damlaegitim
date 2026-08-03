@@ -2,9 +2,7 @@
 layout: book
 title:  "Safahat’tan Hikâyeler"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786053830023
@@ -13,16 +11,17 @@ page: "160 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053830023/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Emin Osman Uygur"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Ne olursa olsun ümidimizi yitirmemeyi öğreten kalplere dokunan hikâyeler"]
 anatemalar: ["Ümit", Yoksulluk, "Vatan Özlemi", "Kültürel Etkileşim", "Çocuk Psikolojisi", "Sanat ve İroni"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053830023/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

@@ -2,9 +2,7 @@
 layout: previewbook
 title:  "Ponpon İle Pinpin Eğitim Seti"
 categories: [Religion]
-tags: [Literature]
-genre: education
-previewpage: false
+tags: []
 
 # Standart Book Attributes
 ean: 9786059656702
@@ -13,16 +11,17 @@ page: 256
 size: "13,5x21 cm"
 publish-number: ""
 cover: "Coated Paper"
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/9786059656702-1/index.html"
+damlaurl: ""
 original-name: "Hikayelerle 33 Hadis Işıltısı"
 original-language: Turkish
 
 # Spesific Filterable Attributes
+genre: education
 grades: [0]
 kavramlar: []
 anatemalar: []
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/9786059656702-1/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

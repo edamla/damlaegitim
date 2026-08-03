@@ -2,9 +2,7 @@
 layout: book
 title:  "Kaşağı"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786259895222
@@ -13,16 +11,17 @@ page: "100 sayfa"
 size: "12,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895222/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Ömer Seyfettin"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Bir çocuğun söylediği küçük bir yalanın masum bir kardeşin ölümüne ve ömür boyu sürecek derin bir vicdan azabına dönüşmesinin yürek burkan hikâyesi"]
 anatemalar: ["vicdan azabı", "toplumsal çöküş", istismar, "zeka ve liderlik", "ahlaki çöküş", "milli uyanış"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895222/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

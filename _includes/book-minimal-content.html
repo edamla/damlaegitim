@@ -57,7 +57,7 @@
   {% endif %}
 
   <p>
-  {% if b.previewpage %}
+  {% if b.preview_link != nil and b.preview_link != '' %}
     Sayfadaki ön okuma bağlantısıyla kitabın örnek sayfalarını inceleyebilir; detaylı bilgi ve tedarik için Damla Okul ile iletişime geçebilirsiniz.
   {% else %}
     Ürün hakkında detaylı bilgi ve tedarik seçenekleri için Damla Okul ile iletişime geçebilir veya katalog sayfamızdaki diğer {{ genre_label }} yayınlarımıza göz atabilirsiniz.

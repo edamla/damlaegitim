@@ -104,8 +104,8 @@ damlaegitim/
 │   ├── check_images.sh           # Büyük görsel uyarı raporu (start.sh hook)
 │   ├── check_fonts.sh            # Font / WOFF2 uyarı raporu (install.sh)
 │   ├── subset_font.sh            # Tüm OTF/TTF → WOFF2 subset (install.sh)
-│   ├── normalize_book_frontmatter.rb   # Kitap front matter sıralama/normalize (`review_link`, `examlink`, `damlaurl` korunur)
-│   └── fill_review_link_from_config.rb # Tek seferlik: boş review_link → varsayılan CDN URL
+│   ├── normalize_book_frontmatter.rb   # Kitap front matter sıralama/normalize (`preview_link`, `examlink`, `damlaurl` korunur)
+│   └── fill_preview_link_from_config.rb # Tek seferlik: boş preview_link → varsayılan CDN URL
 ├── index.html            # Anasayfa
 ├── Gemfile               # Ruby bağımlılıkları
 ├── CNAME                 # damlaokul.com
@@ -441,9 +441,8 @@ genre: story          # education | story
 anatemalar: ["Değerler Eğitimi", "Macera", "Gizem"]   # yeşil # etiketler
 kavramlar: ["Dil Bilim", "Milli Kültür", "Zaman Mekan"]   # turuncu @ etiketler (kitap front matter)
 categories: ["Çocuk", "Hikaye"]
-previewpage: true
 ean: 9786053832874
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832874/index.html"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832874/index.html"
 examlink: ""   # HDS yoksa boş; doluysa tam PDF URL (ör. https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/...)
 damlaurl: ""   # Damla Yayınevi ürün sayfası; boşsa Bilgi → tedarik popup
 languages: ["Türkçe"]
@@ -456,9 +455,9 @@ cover: "Karton Kapak"
 
 Markdown gövdesi ürün açıklaması olarak `book.html` içindeki `.prose--display` alanında render edilir. `**TEMALAR:**` gibi kalın başlıklar ve madde listeleri bu alanda stillenir.
 
-Ön izleme URL’si kitap front matter’ındaki `review_link` alanında tutulur. `book.html` içindeki İncele butonu ve `previewbook` layout’undaki iframe bu alanı kullanır. Eksik kitaplarda varsayılan desen: `https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/{ean}/index.html`; bazı kitaplarda özel path’ler (`damlaegitim/`, `/mobile/` vb.) korunur. `/urun-inceleme-linkleri` sayfası `review_link` dolu tüm kitapları listeler.
+Ön izleme URL’si kitap front matter’ındaki `preview_link` alanında tutulur. `preview_link` doluysa İncele butonu ve `previewbook` iframe görünür; boşsa görünmez. Eksik kitaplarda varsayılan desen: `https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/{ean}/index.html`; bazı kitaplarda özel path’ler (`damlaegitim/`, `/mobile/` vb.) korunur. `/urun-inceleme-linkleri` sayfası `preview_link` dolu tüm kitapları listeler.
 
-`previewpage` front matter alanı şablonlarda artık kullanılmaz (legacy; isteğe bağlı kalabilir). HDS PDF linkleri kitap front matter’ındaki tam `examlink` URL’si ile tanımlanır; `book.html` içinde `examlink` doluysa HDS butonu görünür, boş veya yoksa görünmez. Site genelinde `examlink` için `_config.yml` ayarı yoktur.
+HDS PDF linkleri kitap front matter’ındaki tam `examlink` URL’si ile tanımlanır; `book.html` içinde `examlink` doluysa HDS butonu görünür, boş veya yoksa görünmez. Site genelinde `examlink` için `_config.yml` ayarı yoktur.
 
 ### `examlink` (HDS)
 
@@ -482,14 +481,14 @@ Markdown gövdesi ürün açıklaması olarak `book.html` içindeki `.prose--dis
 
 `scripts/normalize_book_frontmatter.rb` tüm kitaplarda `damlaurl` satırını korur; eksikse `damlaurl: ""` yazar. Eski `damlayayinevi` front matter alanı varsa `damlaurl`’a taşınır. Site genelinde `buyout` veya `damlayayinevi` config ayarı yoktur.
 
-### `review_link` bakımı
+### `preview_link` bakımı
 
 | Araç | Görev |
 |------|-------|
-| `scripts/fill_review_link_from_config.rb` | `review_link` boş + `ean` dolu kitaplara varsayılan CDN URL yazar; mevcut URL’lere dokunmaz |
-| `scripts/normalize_book_frontmatter.rb` | Front matter sıralar; `review_link`, `examlink` ve `damlaurl` `FILTERABLE_KEYS` içinde korunur |
+| `scripts/fill_preview_link_from_config.rb` | `preview_link` boş + `ean` dolu kitaplara varsayılan CDN URL yazar; mevcut URL’lere dokunmaz |
+| `scripts/normalize_book_frontmatter.rb` | Front matter sıralar; `preview_link`, `examlink` ve `damlaurl` Standart Book Attributes altında korunur |
 
-Yeni kitap eklerken `review_link` doğrudan front matter’a yazılır; özel path gerekmezse `{ean}` ile varsayılan desen kullanılır.
+Yeni kitap eklerken `preview_link` doğrudan front matter’a yazılır; özel path gerekmezse `{ean}` ile varsayılan desen kullanılır.
 
 ---
 
@@ -500,11 +499,11 @@ Yeni kitap eklerken `review_link` doğrudan front matter’a yazılır; özel pa
 | Dosya | [`_pages/linkler.html`](_pages/linkler.html) |
 | URL | `/urun-inceleme-linkleri` |
 | Layout | `page` (`show_title: false`) |
-| Veri | `site.books` → `review_link` dolu kitaplar (`sort: title`) |
+| Veri | `site.books` → `preview_link` dolu kitaplar (`sort: title`) |
 | Stil / JS | Sayfa içi inline `<style>` + `<script>` (include yok) |
 | Footer | `footer_show: true`, `footer_order: 15` |
 
-Kart düzeni: solda kapak (`eanimage.html`), sağda sınıf rozeti + başlık + dört aksiyon — Kitabı incele (`review_link`), Kitaba git (ürün URL), Whatsappda paylaş, Linki kopyala. Arama kutusu başlık ve sınıf rozeti üzerinde client-side filtre uygular (`toLocaleLowerCase('tr-TR')`).
+Kart düzeni: solda kapak (`eanimage.html`), sağda sınıf rozeti + başlık + dört aksiyon — Kitabı incele (`preview_link`), Kitaba git (ürün URL), Whatsappda paylaş, Linki kopyala. Arama kutusu başlık ve sınıf rozeti üzerinde client-side filtre uygular (`toLocaleLowerCase('tr-TR')`).
 
 Görsel tasarım [design.md — Ürün İnceleme Linkleri](design.md#13-ürün-inceleme-linkleri-review-links) bölümünde tanımlıdır.
 
@@ -648,8 +647,8 @@ GitHub Pages, push sonrası kaynak branch’ten Jekyll build alır. **CI/CD veya
 ## Yeni Ürün Ekleme
 
 1. `_books/yeni-urun.md` oluştur
-2. Front matter doldur (`title`, `grades`, `genre`, `ean`, `review_link`, `examlink`, `damlaurl`…)
-3. `review_link` — ön izleme URL’si; boş bırakılırsa `scripts/fill_review_link_from_config.rb` ile varsayılan desen yazılabilir
+2. Front matter doldur (`title`, `grades`, `genre`, `ean`, `preview_link`, `examlink`, `damlaurl`…)
+3. `preview_link` — ön izleme URL’si; boş bırakılırsa `scripts/fill_preview_link_from_config.rb` ile varsayılan desen yazılabilir
 4. `examlink` — HDS PDF tam URL’si; yoksa `examlink: ""` (HDS butonu görünmez)
 5. `damlaurl` — Damla Yayınevi ürün sayfası tam URL’si; yoksa `damlaurl: ""` (Bilgi → tedarik popup)
 6. İsteğe bağlı `description:` — yoksa build sırasında otomatik üretilir
@@ -672,7 +671,7 @@ GitHub Pages, push sonrası kaynak branch’ten Jekyll build alır. **CI/CD veya
 
 | Kaynak | Kullanım |
 |--------|----------|
-| `cdn.e-damla.com.tr` | Kitap `review_link` ön izleme sayfaları; `examlink` HDS PDF’leri |
+| `cdn.e-damla.com.tr` | Kitap `preview_link` ön izleme sayfaları; `examlink` HDS PDF’leri |
 | `feeds.behold.so` | Instagram carousel JSON feed |
 | Google Analytics | `G-PR1C1WGQB6` (`site.google_analytics`; yalnızca production) |
 | Cloudflare | DNS (şu an proxy kapalı — gri bulut) |

@@ -2,9 +2,7 @@
 layout: book
 title:  "Hayat Bilgisi Öyküleri (10 Kitap)"
 categories: ["Çocuk", Hikaye]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 8697911223004
@@ -13,15 +11,16 @@ page: "Her Biri 48"
 size: "14x20 cm"
 publish-number: 3005
 cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/hayat-bilgisi-oykuleri-y.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223004/index.html"
+damlaurl: ""
 paper: "1. Hamur"
 
 # Spesific Filterable Attributes
+genre: story
 grades: [2, 3]
 kavramlar: [""]
 anatemalar: ["Sosyal Yaşam Kuralları", "Çevre Bilinci", "Sağlık ve Güvenlik", "Toplumsal Duyarlılık", "Görgü Kuralları"]
-examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/hayat-bilgisi-oykuleri-y.pdf"
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223004/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

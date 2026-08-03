@@ -2,9 +2,7 @@
 layout: book
 title:  "Umuda Doğru Sparrowhawk"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786254116155
@@ -13,16 +11,17 @@ page: "272 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116155/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Natasha Farrant"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Savaşın yıkımına karşı umudun dostluğun ve sadakatin yeşerdiği nefes kesici bir macera"]
 anatemalar: [Dostluk, "Umut ve İnanç", "Aile Kavramı", "Savaşın Etkileri", "Hayvan Sevgisi", "Cesaret ve Macera"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116155/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

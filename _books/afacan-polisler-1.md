@@ -2,9 +2,7 @@
 layout: book
 title:  "Afacan Polisler-1"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786254115493
@@ -13,16 +11,17 @@ page: "160 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115493/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Yavuz Ali Bilge"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["dört afacan gencin sokaktaki masum bir olaya müdahale etmesiyle başlayan ve polis akademisine uzanan nefes kesici serüveni başlıyor"]
 anatemalar: ["adalet arayışı", "gençlerin gücü", "disiplin ve kurallar", "ekip ruhu", "meslek bilinci", empati]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115493/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

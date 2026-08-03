@@ -2,9 +2,7 @@
 layout: book
 title:  "İnsan Neyle Yaşar"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786057490490
@@ -13,16 +11,17 @@ page: "80 sayfa"
 size: "12,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057490490/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["L. N. Tolstoy"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["İnsanı ayakta tutan hayata bağlayan ve var eden o büyük sırrı keşfetmeye hazır mısınız"]
 anatemalar: ["Sevgi ve Merhamet", "Vicdan ve Af", Empati, "Açgözlülük", "Öfke ve Kibir", "İlahi Adalet"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057490490/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

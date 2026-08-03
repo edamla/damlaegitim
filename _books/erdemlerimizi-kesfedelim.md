@@ -2,9 +2,7 @@
 layout: book
 title:  "Erdemlerimizi Keşfedelim (10 Kitap)"
 categories: ["Çocuk", Hikaye]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786053831181
@@ -13,15 +11,16 @@ page: "Her Biri 48"
 size: "14x20 cm"
 publish-number: 1335
 cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/erdemlerimizi-kesfedelim-y.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053831181/mobile/index.html"
+damlaurl: ""
 paper: "1. Hamur"
 
 # Spesific Filterable Attributes
+genre: story
 grades: [2, 3]
 kavramlar: [""]
 anatemalar: ["Değerler / Erdemler", "Karakter Gelişimi"]
-examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/erdemlerimizi-kesfedelim-y.pdf"
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053831181/mobile/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

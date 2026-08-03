@@ -2,9 +2,7 @@
 layout: book
 title:  "Bakır Renkli Kayın Ağaçları"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786057288721
@@ -13,16 +11,17 @@ page: "160 sayfa"
 size: "12,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288721/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Sir Arthur Conan Doyle"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["dünya zalimlerin dünyasıdır zeki bir adamın beynini suç için çalıştırması ise tam anlamıyla bir felakettir"]
 anatemalar: ["Gözlem ve Analiz", aldatmaca, "bağlılık ve yanılgı", "açgözlülük", "karanlık sırlar", "kararlılık ve cesaret"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288721/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

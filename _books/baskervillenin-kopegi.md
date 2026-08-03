@@ -2,9 +2,7 @@
 layout: book
 title:  "Baskerville'lerin Köpeği"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786057288738
@@ -13,16 +11,17 @@ page: "180 sayfa"
 size: "12,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288738/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Sir Arthur Conan Doyle"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["batıl inançların aklı esir aldığı ıssız topraklarda gerçeğin peşinden koşan dahi bir dedektifin amansız mücadelesi"]
 anatemalar: ["doğaüstü inançlar", "korkunun gücü", "adalet arayışı", "miras hırsı", "sadakat ve görev", "gizlenen kimlikler"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288738/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

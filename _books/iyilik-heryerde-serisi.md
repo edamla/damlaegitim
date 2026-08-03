@@ -2,9 +2,7 @@
 layout: previewbook
 title:  "İyilik Heryerde Serisi"
 categories: ["Çocuk", Hikaye]
-tags: [hikaye]
-genre: story
-previewpage: false
+tags: []
 
 # Standart Book Attributes
 ean: 869791122418
@@ -13,14 +11,15 @@ page: ""
 size: ""
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/869791122418/index.html"
+damlaurl: ""
 
 # Spesific Filterable Attributes
+genre: story
 grades: [1, 2]
 kavramlar: []
 anatemalar: []
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/869791122418/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

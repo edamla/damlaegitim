@@ -2,9 +2,7 @@
 layout: book
 title:  "Sherlock Holmes İstanbul’da"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786053836391
@@ -13,16 +11,17 @@ page: "136 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836391/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Peyami Safa"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Dünyaca ünlü İngiliz ha fiyesi Sherlock Holmes ve Türk polisinin korkulurüyası faka basmaz hırsız Cingöz Recai İstanbul sokaklarında akılalmaz bir zekâ savaşına tutuşuyor"]
 anatemalar: ["Zekâ Çatışması", "Soğukkanlılık", "Özgüven", "Suç ve Deha", Adalet, "Şehir ve Gizem"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836391/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

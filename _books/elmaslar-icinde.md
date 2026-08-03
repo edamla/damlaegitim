@@ -2,9 +2,7 @@
 layout: book
 title:  "Elmaslar İçinde"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786053836360
@@ -13,16 +11,17 @@ page: "144 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836360/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Peyami Safa"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Adam sen de Ben artık cesaret ve korku kelimelerinin ne manaya geldiklerini bilmiyorum"]
 anatemalar: ["Akıl Oyunları", "Ezeli Rekabet", "Soğukkanlılık", "Kılık Değiştirme", "Kaçış Planları", "Ekip Çalışması"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836360/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

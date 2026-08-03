@@ -2,9 +2,7 @@
 layout: book
 title:  "Güllü Bahçe"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786254113321
@@ -13,16 +11,17 @@ page: "80 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113321/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Kemalettin Tuğcu"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Toprak sadece tohumu değil sabırla yoğrulan kırık dökük umutları da yeşertir"]
 anatemalar: ["Emek ve Doğa", Vefa, Merhamet, "Kumarın Bedeli", "Ön Yargılar", "Pişmanlık"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113321/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

@@ -2,9 +2,7 @@
 layout: book
 title:  "Dron Savaşçıları-3"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786051749358
@@ -13,16 +11,17 @@ page: "192 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051749358/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Necati Akbaba"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Lazer silahlı dronların retina taramalı gizli kasaların ve suç şebekelerinin çarpıştığı yüksek teknoloji ile donatılmış bir macera"]
 anatemalar: ["Teknoloji ve İcatlar", "Sorumluluk Bilinci", Casusluk, "Suç Şebekeleri", "Kararlılık", "Mücadele"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051749358/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

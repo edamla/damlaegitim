@@ -2,9 +2,7 @@
 layout: book
 title:  "Tiyatro Baskını"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786053836384
@@ -13,16 +11,17 @@ page: "144 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836384/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Peyami Safa"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["En zeki insanlar bile böyle aldanırlar Dirayet imtihanlarında her zaman birinci çıkmak mümkün değildir"]
 anatemalar: ["Akıl Oyunları", "Ezeli Rekabet", "Strateji ve Planlama", "Kılık Değiştirme", "Adalet Anlayışı", "Soğukkanlılık"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836384/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

@@ -2,9 +2,7 @@
 layout: book
 title:  Ufolar
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786051745121
@@ -13,16 +11,17 @@ page: "136 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051745121/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Kaz Dağlarının zirvesinden bilinmeyen galaksilere uzanan evrenin sınırlarını zorlayan destansı bir uzay serüveni"]
 anatemalar: ["Dünya Dışı Yaşam", "Temiz Enerji", "Takım Ruhu", "Çevre Bilinci", "Bilim ve Teknoloji", Astronomi]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051745121/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

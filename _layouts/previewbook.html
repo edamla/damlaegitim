@@ -141,8 +141,8 @@ layout: default
 	<!-- Fbook içerik bölümü -->
 	<div class="Grid-cell">
 		<div class="Demo content">
-		  {% if book.review_link != nil and book.review_link != '' %}
-		  <iframe id="iframe" src="{{ book.review_link }}" name="fbook" width="100%" height="100%"></iframe>
+		  {% if book.preview_link != nil and book.preview_link != '' %}
+		  <iframe id="iframe" src="{{ book.preview_link }}" name="fbook" width="100%" height="100%"></iframe>
 		  {% else %}
 		  <p class="p-4 text-muted">Ön izleme şu anda kullanılamıyor.</p>
 		  {% endif %}

@@ -2,9 +2,7 @@
 layout: book
 title:  "Çılgın Dedemin Masal Makinesi (10 Kitap)"
 categories: ["Öykümatik"]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786053838340
@@ -13,15 +11,16 @@ page: "Heri biri 48 Sayfa"
 size: "14x20 cm"
 publish-number: 1892
 cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/masal-makinesi-y.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053838340/index.html"
+damlaurl: ""
 paper: "1. Hamur"
 
 # Spesific Filterable Attributes
+genre: story
 grades: [2, 3]
 kavramlar: ["Dil Bilim", "Milli Kültür", "Zaman Mekan", "Anadolu Kültürü"]
 anatemalar: ["Değerler Eğitimi", "Zaman Makinası", Macera, Gizem, "Keşif", Efsane]
-examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/masal-makinesi-y.pdf"
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053838340/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube: "https://www.youtube.com/watch?v=xAUgoaDYLQc"

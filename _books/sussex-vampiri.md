@@ -2,9 +2,7 @@
 layout: book
 title:  "Sussex Vampiri"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786057274489
@@ -13,16 +11,17 @@ page: "160 sayfa"
 size: "12,5x19,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274489/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Sir Arthur Conan Doyle"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Doğru görüyorsun ama gözlemlemiyorsun Aradaki fark çok açık"]
 anatemalar: ["Gözlem ve Mantık", "Kıskançlık ve Fedakârlık", "Mantık ve Duygu", "Kanun ve Adalet", "Hırs", Aldatmaca]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274489/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

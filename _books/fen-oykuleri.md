@@ -2,9 +2,7 @@
 layout: book
 title:  "Fen Öyküleri (10 KİTAP)"
 categories: ["Öykümatik"]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 8697911223042
@@ -13,15 +11,16 @@ page: "Her Biri 64"
 size: "14x20 cm"
 publish-number: 2895
 cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/fen-oykuleri.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223042/index.html"
+damlaurl: ""
 paper: "1. Hamur"
 
 # Spesific Filterable Attributes
+genre: story
 grades: [3, 4]
 kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
 anatemalar: ["Doğa ve Evren", Bilim-Teknoloji, "Bilimsel Merak", "Keşif ve İcatlar", "Deney ve Gözlem"]
-examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/fen-oykuleri.pdf"
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223042/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

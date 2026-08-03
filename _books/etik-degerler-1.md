@@ -2,9 +2,7 @@
 layout: book
 title:  "ETİK DEĞERLER EĞİTİM SETİ-1. SINIF (10 KİTAP)"
 categories: ["Öykümatik"]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 8697911223851
@@ -13,15 +11,16 @@ page: "Her Biri 16"
 size: "23,5x16,5 cm"
 publish-number: 1746
 cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/etik-degerler1-y.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223851/index.html"
+damlaurl: ""
 paper: "1. Hamur"
 
 # Spesific Filterable Attributes
+genre: story
 grades: [1]
 kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
 anatemalar: ["Dürüstlük", "Saygı ve Sevgi", "Yardımseverlik", "Paylaşmak", "Etik ve Ahlak"]
-examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/etik-degerler1-y.pdf"
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223851/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

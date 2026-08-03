@@ -2,9 +2,7 @@
 layout: book
 title:  "Arsen Lüpen İstanbul'da"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786051740928
@@ -13,16 +11,17 @@ page: "352 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051740928/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Peyami Safa"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Türk polis hafiyesi centilmen Fransız hırsız ve kurnaz Cingöz Recai acımasız bir katilin zehirli ölüm tuzağında karşı karşıya"]
 anatemalar: ["Akıl Oyunları", "Kılık Değiştirme", "Adalet Anlayışı", "Gizem ve Macera", Rekabet, "Soğukkanlılık"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051740928/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:

@@ -8,11 +8,11 @@ require 'date'
 BOOKS_DIR = Pathname.new(__dir__).join('..', '_books').expand_path
 EXAMLINK_PREFIX = 'https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/'.freeze
 
-HEADER_KEYS = %w[layout title categories tags genre previewpage].freeze
-STANDARD_KEYS = %w[ean languages page size publish-number cover].freeze
+HEADER_KEYS = %w[layout title categories tags].freeze
+STANDARD_KEYS = %w[ean languages page size publish-number cover examlink preview_link damlaurl].freeze
 OPTIONAL_STANDARD_KEYS = %w[original-name original-language].freeze
 BOOK_DETAIL_KEYS = %w[paper authors].freeze
-FILTERABLE_KEYS = %w[grades kavramlar anatemalar examlink review_link damlaurl].freeze
+FILTERABLE_KEYS = %w[genre grades kavramlar anatemalar].freeze
 
 def parse_frontmatter(content)
   match = content.match(/\A---\r?\n(.*?)\r?\n---\r?\n(.*)\z/m)
@@ -34,12 +34,15 @@ def normalize_data(data)
   data['kavramlar'] = [] if data['kavramlar'].nil?
   data['anatemalar'] = data.delete('subjects') if data.key?('subjects')
   data['anatemalar'] = [] if data['anatemalar'].nil?
+  data['tags'] = [] if data['tags'].nil?
   data['examlink'] = '' if data['examlink'].nil?
   examlink = data['examlink'].to_s.strip
   if !examlink.empty? && !examlink.match?(%r{\Ahttps?://}i)
     data['examlink'] = "#{EXAMLINK_PREFIX}#{examlink}"
   end
-  data['review_link'] = '' if data['review_link'].nil?
+  data.delete('previewpage')
+  data['preview_link'] = data.delete('review_link') if data.key?('review_link')
+  data['preview_link'] = '' if data['preview_link'].nil?
   data['damlaurl'] = data.delete('damlayayinevi') if data.key?('damlayayinevi')
   data['damlaurl'] = '' if data['damlaurl'].nil?
   data['youtube'] = '' if data['youtube'].nil?

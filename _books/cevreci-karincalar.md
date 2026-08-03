@@ -2,9 +2,7 @@
 layout: book
 title:  "Çevreci Karıncalar"
 categories: [Ortaokul]
-tags: [hikaye]
-genre: story
-previewpage: true
+tags: []
 
 # Standart Book Attributes
 ean: 9786053830498
@@ -13,16 +11,17 @@ page: "160 sayfa"
 size: "12,5x18,5 cm"
 publish-number: ""
 cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053830498/index.html"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 
 # Spesific Filterable Attributes
+genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Şehrin gri duvarları arasına sıkışmış ruhların doğanın sessiz kahramanlarıyla yeniden kucaklaşma hikâyesi"]
 anatemalar: ["Çevre Bilinci", "Dayanışma", "Gözlem ve Yeni Keşifler", "Bilimsel Merak", "Hayatta Kalma", "Üretkenlik ve Emeğin Değeri"]
-examlink: ""
-review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053830498/index.html"
-damlaurl: ""
 
 # Social Media Attributes
 youtube:
