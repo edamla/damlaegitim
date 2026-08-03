@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Madalyonun Öteki Yüzü"
-
-grades: [5, 6, 7, 8]
-concepts: [ Geçmişin karanlık sırları ve yarım bir madalyon Genç Hafiyeler Çetesi için tehlikeli macera şimdi başlıyor ]
-subjects: ["Aile Sırları", "Dayanışma", "Fedakârlık", "Ön Yargılar", "İhanet", "Emaneti Koruma"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Sara Gürbüz Özeren"]
+
+# Standart Book Attributes
 ean: 9786053837176
 languages: ["Türkçe"]
-page: 160 sayfa
+page: "160 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Sara Gürbüz Özeren"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Geçmişin karanlık sırları ve yarım bir madalyon Genç Hafiyeler Çetesi için tehlikeli macera şimdi başlıyor"]
+anatemalar: ["Aile Sırları", "Dayanışma", "Fedakârlık", "Ön Yargılar", "İhanet", "Emaneti Koruma"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053837176/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

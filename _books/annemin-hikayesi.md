@@ -1,28 +1,30 @@
 ---
 layout: book
 title:  "Annemin Hikayesi"
-
-grades: [5, 6, 7, 8]
-concepts: [ Kurak bir köyde umudu yeşerten bir kadının tükenmeyen inancının destanı.]
-subjects: ["Sabır ve Sadakat", "Önyargıları Kırma", "Toplumsal Kalkınma", "İyilik", "Vefa", "Aile Bağları"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı" 
 
-# Book attributes
-authors: ["Kemalettin Tuğcu"]
+# Standart Book Attributes
 ean: 9786051749600
 languages: ["Türkçe"]
-page: 80 Sayfa
+page: "80 Sayfa"
 size: "13,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Kemalettin Tuğcu"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Kurak bir köyde umudu yeşerten bir kadının tükenmeyen inancının destanı."]
+anatemalar: ["Sabır ve Sadakat", "Önyargıları Kırma", "Toplumsal Kalkınma", "İyilik", Vefa, "Aile Bağları"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051749600/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

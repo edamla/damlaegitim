@@ -1,28 +1,30 @@
 ---
 layout: book
 title:  "Asık Suratlı Çocuk-2"
-
-grades: [5, 6, 7, 8]
-concepts: [ Gıcırtılı Kasabanın huzuru çalınırken gizemi çözmek yine bizim asık suratlı kahramanımıza düşüyor ]
-subjects: ["Sağlıklı Beslenme", "Ekip Çalışması", "Geleneksel Miras", "Birlik", "Tüketim Karşıtlığı", "Keşif"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı" 
 
-# Book attributes
-authors: ["Nur Dombaycı"]
+# Standart Book Attributes
 ean: 9786051748207
 languages: ["Türkçe"]
-page: 176 sayfa
+page: "176 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Nur Dombaycı"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Gıcırtılı Kasabanın huzuru çalınırken gizemi çözmek yine bizim asık suratlı kahramanımıza düşüyor"]
+anatemalar: ["Sağlıklı Beslenme", "Ekip Çalışması", "Geleneksel Miras", Birlik, "Tüketim Karşıtlığı", "Keşif"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051748207/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

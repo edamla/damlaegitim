@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Yalnız Efe"
-
-grades: [5, 6, 7, 8]
-concepts: [ Haksızlığa boyun eğmeyip tek başına dağa çıkan ve zalimlerin korkulu rüyası olan genç bir kızın efsanevi direnişi ]
-subjects: ["Adalet Arayışı", "Vefa", "Millî Şuur", "Vatanseverlik", "Cesaret", "Zulüm ve Sömürü"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Ömer Seyfettin"]
+
+# Standart Book Attributes
 ean: 9786057274496
 languages: ["Türkçe"]
-page: 100 sayfa
+page: "100 sayfa"
 size: "12,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Ömer Seyfettin"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Haksızlığa boyun eğmeyip tek başına dağa çıkan ve zalimlerin korkulu rüyası olan genç bir kızın efsanevi direnişi"]
+anatemalar: ["Adalet Arayışı", Vefa, "Millî Şuur", Vatanseverlik, Cesaret, "Zulüm ve Sömürü"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274496/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

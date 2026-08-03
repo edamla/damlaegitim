@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Dönüşüm"
-
-grades: [5, 6, 7, 8]
-concepts: [ Gregor Samsa kasvetli düşlerden uyandığı bir sabah kendini yatağının üzerinde devasa bir böceğe dönüşmüş olarak buldu ]
-subjects: ["Yabancılaşma ve Yalnızlık", "Çıkar İlişkileri", "Suçluluk ve Utanç", "Toplumsal Baskı", "Beden ve Zihin Çatışması", "Bağımsızlaşma"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Franz Kafka"]
+
+# Standart Book Attributes
 ean: 9786057490483
 languages: ["Türkçe"]
-page: 80 sayfa
+page: "80 sayfa"
 size: "12,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Franz Kafka"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Gregor Samsa kasvetli düşlerden uyandığı bir sabah kendini yatağının üzerinde devasa bir böceğe dönüşmüş olarak buldu"]
+anatemalar: ["Yabancılaşma ve Yalnızlık", "Çıkar İlişkileri", "Suçluluk ve Utanç", "Toplumsal Baskı", "Beden ve Zihin Çatışması", "Bağımsızlaşma"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057490483/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

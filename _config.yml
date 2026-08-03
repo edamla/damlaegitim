@@ -33,38 +33,9 @@ instagram_carousel:
   feed_url: 'https://feeds.behold.so/k4ylFSaGtUBY15ZsyXAt'
   limit: 12
 
-pagepreview:
-  enabled: true
-  prefix: 'https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/'
-  postfix: '/index.html'
-
-examlink:
-  enabled: true
-  prefix: 'https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/'
-  postfix: '/.pdf'
-
-damlayayinevi:
-  enabled: true
-  prefix: 'https://damlayayinevi.com/'
 
 include: ["_pages"]
 permalink: /:title/
-
-
-# BuyOut Ecommerce websites:
-buyout:
-  enabled: false
-  damlayayinevi: true
-  hepsiburada: true
-  dnr: true
-  idefix: true
-  kitapyurdu: true
-  odatvkitap: false
-  bkmkitap: true
-  amazontr: true
-  dkitap: true
-  trendyol: true
-  gittigidiyor: true
 
 # Plugins
 plugins: 

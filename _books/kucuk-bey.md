@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Küçük Bey"
-
-grades: [5, 6, 7, 8]
-concepts: [ Lüks salonların soğukluğundan kerpiç duvarların sıcaklığına uzanan bir sevgi köprüsü ]
-subjects: ["Sınıf Farklılıkları", "Aile Bağları", "Sadakat ve Dürüstlük", "Ahlak ve Vicdan", "Ön Yargı", "Gerçek Zenginlik"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Kemalettin Tuğcu"]
+
+# Standart Book Attributes
 ean: 9786254115127
 languages: ["Türkçe"]
-page: 80 sayfa
+page: "80 sayfa"
 size: "13,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Kemalettin Tuğcu"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Lüks salonların soğukluğundan kerpiç duvarların sıcaklığına uzanan bir sevgi köprüsü"]
+anatemalar: ["Sınıf Farklılıkları", "Aile Bağları", "Sadakat ve Dürüstlük", "Ahlak ve Vicdan", "Ön Yargı", "Gerçek Zenginlik"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115127/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

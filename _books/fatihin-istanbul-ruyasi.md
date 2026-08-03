@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Fatih’in İstanbul Rüyası"
-
-grades: [5, 6, 7, 8]
-concepts: [ Dünya kuruldu kurulalı böyle bir şey ne duyulmuş ne de görülmüştü gemiler karadan yürütülüyor Haliçe iniyordu ]
-subjects: ["Kutsal Hedef", "Strateji ve Askerî Dehâ", "Adalet ve Hoşgörü", "Kahramanlık", "Manevi Güç", "Şehrin Yeniden İnşası"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Talip Arışahin"]
+
+# Standart Book Attributes
 ean: 9786053839842
 languages: ["Türkçe"]
-page: 176 sayfa
+page: "176 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Talip Arışahin"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Dünya kuruldu kurulalı böyle bir şey ne duyulmuş ne de görülmüştü gemiler karadan yürütülüyor Haliçe iniyordu"]
+anatemalar: ["Kutsal Hedef", "Strateji ve Askerî Dehâ", "Adalet ve Hoşgörü", "Kahramanlık", "Manevi Güç", "Şehrin Yeniden İnşası"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839842/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

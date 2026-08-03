@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Hacker Nine - 2"
-
-grades: [5, 6, 7, 8]
-concepts: [ Geçmişte yazılan ufak bir kod geleceğin kaderini tamamen değiştirebilir ]
-subjects: ["Yapay Zekâ", "Takım Çalışması", "Distopya", "Sevgi ve Zekâ", "Şifreleme", "Cesaret ve Sorumluluk"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Nur Dombaycı"]
+
+# Standart Book Attributes
 ean: 9786254115172
 languages: ["Türkçe"]
-page: 160 sayfa
+page: "160 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Nur Dombaycı"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Geçmişte yazılan ufak bir kod geleceğin kaderini tamamen değiştirebilir"]
+anatemalar: ["Yapay Zekâ", "Takım Çalışması", Distopya, "Sevgi ve Zekâ", "Şifreleme", "Cesaret ve Sorumluluk"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115172/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

@@ -3,7 +3,9 @@ layout: default
 ---
 
 <div class="container">
+{% unless page.show_title == false %}
 <h3 class="fw-bold spanborder"><span>{{page.title}}</span></h3>
+{% endunless %}
 <div class="page-content">
 {{ content }}
 <!-- Comments -->

@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Savaş Ve Barış"
-
-grades: [5, 6, 7, 8]
-concepts: [ Tarihin akışını değiştiren hırslar ve bu büyük fırtınanın ortasında kendi doğrularını arayan küçük hayatlar ]
-subjects: ["Savaşın Yıkıcılığı", "İçsel Arayış", "Halkın Direnişi", "Aşk ve Affetme", "Liderlik", "Aile Bağları"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Tolstoy"]
+
+# Standart Book Attributes
 ean: 9786057490438
 languages: ["Türkçe"]
-page: 320 sayfa
+page: "320 sayfa"
 size: "13,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: [Tolstoy]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Tarihin akışını değiştiren hırslar ve bu büyük fırtınanın ortasında kendi doğrularını arayan küçük hayatlar"]
+anatemalar: ["Savaşın Yıkıcılığı", "İçsel Arayış", "Halkın Direnişi", "Aşk ve Affetme", Liderlik, "Aile Bağları"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057490438/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

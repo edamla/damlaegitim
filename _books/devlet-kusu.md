@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Devlet Kuşu"
-
-grades: [5, 6, 7, 8]
-concepts: [ Gerçek zenginlik parayla değil zor zamanda yanında güvenebileceğin dostlarının olmasıyla ölçülür ]
-subjects: ["Aile ve Sabır", "Adalet", "Vicdan", "Sınıf Farkı", "Dayanışma", "Emeğin Değeri"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Kemalettin Tuğcu"]
+
+# Standart Book Attributes
 ean: 9786254113338
 languages: ["Türkçe"]
-page: 80 sayfa
+page: "80 sayfa"
 size: "13,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Kemalettin Tuğcu"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Gerçek zenginlik parayla değil zor zamanda yanında güvenebileceğin dostlarının olmasıyla ölçülür"]
+anatemalar: ["Aile ve Sabır", Adalet, Vicdan, "Sınıf Farkı", "Dayanışma", "Emeğin Değeri"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113338/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

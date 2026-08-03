@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Karanlık Kanyon’un Şifresi"
-
-grades: [5, 6, 7, 8]
-concepts: [ Biliriz ki bir gün bir at bizi alıp da uzaklara Allahuekber Dağlarının doruğuna götürecek ve orada şahlanıp kişnediği zaman dedemin bütün silah arkadaşları huzura kavuşacak ]
-subjects: ["Vatan Hasreti", "Savaşın Etkileri", "Gizem ve Keşif", "Özgürlük", "Cesaret ve Azim", "Ön Yargı ve Güven"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Sara Gürbüz Özeren"]
+
+# Standart Book Attributes
 ean: 9786053836414
 languages: ["Türkçe"]
-page: 208 sayfa
+page: "208 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Sara Gürbüz Özeren"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Biliriz ki bir gün bir at bizi alıp da uzaklara Allahuekber Dağlarının doruğuna götürecek ve orada şahlanıp kişnediği zaman dedemin bütün silah arkadaşları huzura kavuşacak"]
+anatemalar: ["Vatan Hasreti", "Savaşın Etkileri", "Gizem ve Keşif", "Özgürlük", "Cesaret ve Azim", "Ön Yargı ve Güven"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836414/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

@@ -1,24 +1,29 @@
 ---
 layout: book
 title:  "İstiklal Marşı Yazdıran Kahramanlar (10 Kitap)"
-grades: [3, 4]
+categories: ["Çocuk", Hikaye]
+tags: [hikaye]
 genre: story
-concepts: [""]
-subjects: ["Milli Mücadele", "Vatan Sevgisi", "Bağımsızlık", "Tarih Bilinci", "Kahramanlık"]
-examlink: istiklal-marsi-yazdiran-y.pdf
-categories: [ "Çocuk", "Hikaye" ]
-tags: [ "hikaye"]
 previewpage: true
-paper: "1. Hamur"
 
-# Book attributes
+# Standart Book Attributes
 ean: 9786254112560
 languages: ["Türkçe"]
-page: Her Biri 64
+page: "Her Biri 64"
 size: "14x20 cm"
 publish-number: 2972
 cover: "Karton Kapak"
+paper: "1. Hamur"
 
+# Spesific Filterable Attributes
+grades: [3, 4]
+kavramlar: [""]
+anatemalar: ["Milli Mücadele", "Vatan Sevgisi", "Bağımsızlık", "Tarih Bilinci", "Kahramanlık"]
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/istiklal-marsi-yazdiran-y.pdf"
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254112560/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

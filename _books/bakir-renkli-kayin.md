@@ -1,28 +1,30 @@
 ---
 layout: book
 title:  "Bakır Renkli Kayın Ağaçları"
-
-grades: [5, 6, 7, 8]
-concepts: [ dünya zalimlerin dünyasıdır zeki bir adamın beynini suç için çalıştırması ise tam anlamıyla bir felakettir ]
-subjects: ["Gözlem ve Analiz", "aldatmaca", "bağlılık ve yanılgı", "açgözlülük", "karanlık sırlar", "kararlılık ve cesaret"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı" 
 
-# Book attributes
-authors: ["Sir Arthur Conan Doyle"]
+# Standart Book Attributes
 ean: 9786057288721
 languages: ["Türkçe"]
-page: 160 sayfa
+page: "160 sayfa"
 size: "12,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Sir Arthur Conan Doyle"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["dünya zalimlerin dünyasıdır zeki bir adamın beynini suç için çalıştırması ise tam anlamıyla bir felakettir"]
+anatemalar: ["Gözlem ve Analiz", aldatmaca, "bağlılık ve yanılgı", "açgözlülük", "karanlık sırlar", "kararlılık ve cesaret"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288721/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

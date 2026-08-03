@@ -1,24 +1,29 @@
 ---
 layout: book
 title:  "DUYGULARIMI KEŞFEDİYORUM (10 KİTAP)"
-grades: [1, 2]
+categories: ["Çocuk", Hikaye]
+tags: [hikaye]
 genre: story
-concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
-subjects: ["Duygusal Farkındalık", "Empati", "Özgüven", "Duygu Yönetimi", "Kişisel Gelişim"]
-examlink: duygularimi-kesfediyorum-y.pdf
-categories: [ "Çocuk", "Hikaye" ]
-tags: [ "hikaye"]
 previewpage: true
-paper: "1. Hamur"
 
-# Book attributes
+# Standart Book Attributes
 ean: 8697911223752
 languages: ["Türkçe"]
-page: Her Biri 64
+page: "Her Biri 64"
 size: "14x20 cm"
 publish-number: 4
 cover: "Karton Kapak"
+paper: "1. Hamur"
 
+# Spesific Filterable Attributes
+grades: [1, 2]
+kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
+anatemalar: ["Duygusal Farkındalık", Empati, "Özgüven", "Duygu Yönetimi", "Kişisel Gelişim"]
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/duygularimi-kesfediyorum-y.pdf"
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/duygularimi-kesfediyorum/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

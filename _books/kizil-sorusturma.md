@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Kızıl Soruşturma"
-
-grades: [5, 6, 7, 8]
-concepts: [ Londra’nın sisli sokaklarından Amerikanın ıssız çöllerine uzanan yıllarca sabırla ilmek ilmek örülmüş bir intikamın hikâyesi ]
-subjects: ["adalet arayışı", "aşk ve trajedi", "kader inancı", "fanatizm", "geçmişin kaçınılmazlığı", "tarihi sırlar"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Sir Arthur Conan Doyle"]
+
+# Standart Book Attributes
 ean: 9786057288707
 languages: ["Türkçe"]
-page: 160 sayfa
+page: "160 sayfa"
 size: "12,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Sir Arthur Conan Doyle"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Londra’nın sisli sokaklarından Amerikanın ıssız çöllerine uzanan yıllarca sabırla ilmek ilmek örülmüş bir intikamın hikâyesi"]
+anatemalar: ["adalet arayışı", "aşk ve trajedi", "kader inancı", fanatizm, "geçmişin kaçınılmazlığı", "tarihi sırlar"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288707/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

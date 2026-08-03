@@ -1,24 +1,29 @@
 ---
 layout: book
 title:  "ROBOT AVCILARI (10 KİTAP)"
-grades: [3, 4]
+categories: ["Çocuk", Hikaye]
+tags: [hikaye]
 genre: story
-concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
-subjects: ["Bilim-Teknoloji", "Yapay Zeka", "Takım Ruhu", "Bilimkurgu", "Gelecek Vizyonu"]
-examlink: robot-avcilari-y.pdf
-categories: [ "Çocuk", "Hikaye" ]
-tags: [ "hikaye"]
 previewpage: true
-paper: "1. Hamur"
 
-# Book attributes
+# Standart Book Attributes
 ean: 8697911223530
 languages: ["Türkçe"]
-page: Her Biri 64
+page: "Her Biri 64"
 size: "14x20 cm"
 publish-number: 2528
 cover: "Karton Kapak"
+paper: "1. Hamur"
 
+# Spesific Filterable Attributes
+grades: [3, 4]
+kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
+anatemalar: [Bilim-Teknoloji, "Yapay Zeka", "Takım Ruhu", Bilimkurgu, "Gelecek Vizyonu"]
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/robot-avcilari-y.pdf"
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223530/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

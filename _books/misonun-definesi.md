@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Mişon’un Definesi"
-
-grades: [5, 6, 7, 8]
-concepts: [ Ölüm döşeğindeki Mişonun gizli definesinden esrarlı kasalara kadaruzanan bu maceralarda sırlar ancak usta bir zekâ ile çözülüyor ]
-subjects: ["Zeka ve Kurnazlık", "İhanet", "Mizah", "Polis Rekabeti", "Gizem ve Keşif", "Cesaret"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Peyami Safa"]
+
+# Standart Book Attributes
 ean: 9786053836377
 languages: ["Türkçe"]
-page: 136 sayfa
+page: "136 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Peyami Safa"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Ölüm döşeğindeki Mişonun gizli definesinden esrarlı kasalara kadaruzanan bu maceralarda sırlar ancak usta bir zekâ ile çözülüyor"]
+anatemalar: ["Zeka ve Kurnazlık", "İhanet", Mizah, "Polis Rekabeti", "Gizem ve Keşif", Cesaret]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836377/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

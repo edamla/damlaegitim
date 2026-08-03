@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Denizler Altında 20.000 Fersah"
-
-grades: [5, 6, 7, 8]
-concepts: [ Geçmişinden ve insanlıktan kaçarak kendi adaletini okyanusun ulaşılamaz derinliklerinde arayan gizemli Kaptan Nemonun sırlarla dolu dünyasına hoş geldiniz ]
-subjects: ["Özgürlük ve Esaret", "Adalet ve İntikam", "Bilimsel Keşif", "Teknolojinin Gücü", "Doğayla Mücadele", "Doğanın İhtişamı"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Jules Verne"]
+
+# Standart Book Attributes
 ean: 9786057288776
 languages: ["Türkçe"]
-page: 160 sayfa
+page: "160 sayfa"
 size: "12,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Jules Verne"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Geçmişinden ve insanlıktan kaçarak kendi adaletini okyanusun ulaşılamaz derinliklerinde arayan gizemli Kaptan Nemonun sırlarla dolu dünyasına hoş geldiniz"]
+anatemalar: ["Özgürlük ve Esaret", "Adalet ve İntikam", "Bilimsel Keşif", "Teknolojinin Gücü", "Doğayla Mücadele", "Doğanın İhtişamı"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288776/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Esrarlı Köşk"
-
-grades: [5, 6, 7, 8]
-concepts: [ Hafiye ile hırsız ara sında oynanan Amerika polisinin bile çözemediği tehlikeli ve düşündürücü bir polis santrancı ]
-subjects: ["Akıl Oyunları", "Adalet Çatışması", "Polisiye Gerilim", "Kılık Değiştirme", "Çalma Tutkusu", "İhanet ve Sadakat"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Peyami Safa"]
+
+# Standart Book Attributes
 ean: 9786053836407
 languages: ["Türkçe"]
-page: 128 sayfa
+page: "128 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Peyami Safa"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Hafiye ile hırsız ara sında oynanan Amerika polisinin bile çözemediği tehlikeli ve düşündürücü bir polis santrancı"]
+anatemalar: ["Akıl Oyunları", "Adalet Çatışması", "Polisiye Gerilim", "Kılık Değiştirme", "Çalma Tutkusu", "İhanet ve Sadakat"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836407/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

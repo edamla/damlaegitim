@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Dağdaki Yabancı"
-
-grades: [5, 6, 7, 8]
-concepts: [ Kurumuş topraklara can veren su bazen ön yargılarla çoraklaşmış kalpleri de yeşertir ]
-subjects: ["Cehalet ve Ön Yargı", "Dayanışma", "Yalnızlık", "Doğa Sevgisi", "Affetmek", "Yardımlaşma"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Kemalettin Tuğcu"]
+
+# Standart Book Attributes
 ean: 9786254113277
 languages: ["Türkçe"]
-page: 80 sayfa
+page: "80 sayfa"
 size: "13,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Kemalettin Tuğcu"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Kurumuş topraklara can veren su bazen ön yargılarla çoraklaşmış kalpleri de yeşertir"]
+anatemalar: ["Cehalet ve Ön Yargı", "Dayanışma", "Yalnızlık", "Doğa Sevgisi", Affetmek, "Yardımlaşma"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113277/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

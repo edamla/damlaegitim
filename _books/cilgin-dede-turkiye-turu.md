@@ -1,24 +1,29 @@
 ---
 layout: book
 title:  "Çılgın Dedemin Türkiye Turu (10 Kitap)"
-grades: [3, 4]
+categories: ["Çocuk", Hikaye]
+tags: [hikaye]
 genre: story
-concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
-subjects: ["Türkiye Coğrafyası", "Kültürel Miras", "Zaman Mekan", "Gezi ve Keşif", "Milli Değerler"]
-examlink: c%C4%B1lg%C4%B1n-dede-turkiye-turu.pdf
-categories: [ "Çocuk", "Hikaye" ]
-tags: [ "hikaye"]
 previewpage: true
-paper: "1. Hamur"
 
-# Book attributes
+# Standart Book Attributes
 ean: 8697911223943
 languages: ["Türkçe"]
-page: Her Biri 64
+page: "Her Biri 64"
 size: "14x20 cm"
 publish-number: 3136
 cover: "Karton Kapak"
+paper: "1. Hamur"
 
+# Spesific Filterable Attributes
+grades: [3, 4]
+kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
+anatemalar: ["Türkiye Coğrafyası", "Kültürel Miras", "Zaman Mekan", "Gezi ve Keşif", "Milli Değerler"]
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/c%C4%B1lg%C4%B1n-dede-turkiye-turu.pdf"
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223943/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

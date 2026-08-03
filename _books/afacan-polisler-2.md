@@ -1,28 +1,30 @@
 ---
 layout: book
 title:  "Afacan Polisler-2"
-
-grades: [5, 6, 7, 8]
-concepts: [ En güzel temizlik kirletmemektir ilkesiyle yola çıkan Afacanlar bu kez hem çevreyi hem de sanal dünyayı temizlemek için işbaşında ]
-subjects: ["Çevre Bilinci", "Aile İletişimi", "Dayanışma", "Siber Güvenlik", "Analitik Düşünme", "Hukuka Saygı"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı" 
 
-# Book attributes
-authors: ["Yavuz Ali Bilge"]
+# Standart Book Attributes
 ean: 9786254115974
 languages: ["Türkçe"]
-page: 160 sayfa
+page: "160 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Yavuz Ali Bilge"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["En güzel temizlik kirletmemektir ilkesiyle yola çıkan Afacanlar bu kez hem çevreyi hem de sanal dünyayı temizlemek için işbaşında"]
+anatemalar: ["Çevre Bilinci", "Aile İletişimi", "Dayanışma", "Siber Güvenlik", "Analitik Düşünme", "Hukuka Saygı"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115974/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

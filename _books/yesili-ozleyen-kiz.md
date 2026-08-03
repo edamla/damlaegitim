@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Yeşili Özleyen Kız"
-
-grades: [5, 6, 7, 8]
-concepts: [ Yeşilin binbir tonundan beton yığınlarının arasına sıkışan bir çocuğun doğaya ve özgürlüğe duyduğu yürek burkan özlem ]
-subjects: ["Doğa Özlemi", "Toprak Sevgisi", "İnsan ve Tabiat Uyumu", "Çernobil Felaketi", "Ön Yargılar", "Köyden Kente Göç"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Sara Gürbüz Özeren"]
+
+# Standart Book Attributes
 ean: 9786053830726
 languages: ["Türkçe"]
-page: 160 sayfa
+page: "160 sayfa"
 size: "12,5x18,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Sara Gürbüz Özeren"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Yeşilin binbir tonundan beton yığınlarının arasına sıkışan bir çocuğun doğaya ve özgürlüğe duyduğu yürek burkan özlem"]
+anatemalar: ["Doğa Özlemi", "Toprak Sevgisi", "İnsan ve Tabiat Uyumu", "Çernobil Felaketi", "Ön Yargılar", "Köyden Kente Göç"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053830726/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

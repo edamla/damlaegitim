@@ -1,26 +1,29 @@
 ---
 layout: book
 title:  "O BİR DAHİ (10 KİTAP)"
-
-grades: [3, 4]
-concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
-subjects: ["Biyografi", "İlham Veren Hayatlar", "Azim ve Kararlılık", "Bilimsel Keşifler", "Başarı Hikayeleri"]
-examlink: o-bir-dahi-y.pdf
-
-categories: [ "Öykümatik" ]
-tags: [ "hikaye"]
+categories: ["Öykümatik"]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "1. Hamur"
 
-# Book attributes
+# Standart Book Attributes
 ean: 8697911223516
 languages: ["Türkçe"]
-page: Her Biri 80
+page: "Her Biri 80"
 size: "14x20 cm"
 publish-number: 3269
 cover: "Karton Kapak"
+paper: "1. Hamur"
 
+# Spesific Filterable Attributes
+grades: [3, 4]
+kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
+anatemalar: [Biyografi, "İlham Veren Hayatlar", "Azim ve Kararlılık", "Bilimsel Keşifler", "Başarı Hikayeleri"]
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/o-bir-dahi-y.pdf"
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223516/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

@@ -1,9 +1,6 @@
 ---
 layout: default
 ---
-<!-- Buyout Modified -->
-<link rel="stylesheet" href="{{site.baseurl}}/assets/css/buyout.css">
-
 {% assign book = page %}
 <div class="container">
 <div class="book-detail book-page mb-3 position-relative">
@@ -24,7 +21,7 @@ layout: default
 
                         <div class="book-detail__tags mb-4">
                             <span class="taglist">
-                            {% for tag in page.subjects %}
+                            {% for tag in page.anatemalar %}
                             <span class="tag">#{{ tag | downcase }}</span>
                             {% endfor %}
                             </span>
@@ -32,7 +29,7 @@ layout: default
 
                         <div class="book-detail__concepts mb-4">
                             <span class="conceptlist">
-                            {% for bookconcept in book.concepts %}
+                            {% for bookconcept in book.kavramlar %}
                             {% unless bookconcept == "" %}
                               <span class="concept">@{{ bookconcept | downcase }}</span>
                             {% endunless %}
@@ -46,20 +43,17 @@ layout: default
                             <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" target="_blank" href="{{ book_youtube }}" data-popup-type="youtube" data-popup-title="Tanıtım"><i class="fab fa-youtube fa-2x text-danger" aria-hidden="true"></i><span class="btn-sm">Tanıtım</span></a>
                             {% endif %}
                             
-                            <!-- KATEGORİ ORTAOKUL İSE DOĞRUDAN DAMLA YAYINEVİ EAN ARAMASINA YÖNLENDİRME -->
-                            {% if book.categories contains "Ortaokul" and book.ean %}
-                            <a class="sscroll btn btn-light btn-sm fw-bold" href="https://www.damlayayinevi.com.tr/arama?q={{ book.ean }}" target="_blank"><i class="fas fa-info-circle fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">Bilgi</span></a>
-                            {% elsif book.categories contains "Ortaokul" and site.damlayayinevi.enabled == true and book.ean %}
-                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" href="#" data-popup-type="iframe" data-popup-url="{{ site.damlayayinevi.prefix }}{{ book.ean }}" data-popup-title="Ürün Bilgisi"><i class="fas fa-info-circle fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">Bilgi</span></a>
+                            {% if book.damlaurl != nil and book.damlaurl != '' %}
+                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" href="#" data-popup-type="iframe" data-popup-url="{{ book.damlaurl }}" data-popup-title="Ürün Bilgisi"><i class="fas fa-info-circle fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">Bilgi</span></a>
                             {% else %}
                             <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" href="#" data-popup-type="info" data-popup-title="Ürün Tedarik Bilgisi"><i class="fas fa-info-circle fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">Bilgi</span></a>
                             {% endif %}
 
-                            {% if site.pagepreview.enabled and book.previewpage and book.ean %}
-                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" target="_blank" href="{{ site.pagepreview.prefix }}{{ book.ean }}{{ site.pagepreview.postfix }}" data-popup-type="iframe" data-popup-title="İncele"><i class="fas fa-search fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">İncele</span></a>
+                            {% if book.review_link != nil and book.review_link != '' %}
+                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" target="_blank" href="{{ book.review_link }}" data-popup-type="iframe" data-popup-title="İncele"><i class="fas fa-search fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">İncele</span></a>
                             {% endif %}
-                            {% if book.layout == "book" and site.examlink.enabled == true and book.examlink and book.examlink != '' %}
-                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" target="_blank" href="{{ site.examlink.prefix }}{{ book.examlink }}" data-popup-type="iframe" data-popup-title="HDS"><i class="fas fa-pen fa-2x text-danger" aria-hidden="true"></i><span class="btn-sm">HDS</span></a>
+                            {% if book.examlink != nil and book.examlink != '' %}
+                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" target="_blank" href="{{ book.examlink }}" data-popup-type="iframe" data-popup-title="HDS"><i class="fas fa-pen fa-2x text-danger" aria-hidden="true"></i><span class="btn-sm">HDS</span></a>
                             {% endif %}
                         </div>
 
@@ -150,104 +144,6 @@ layout: default
 
 
         
-    </div>
-
-    <!-- BuyOut -->
-    <div class="row" id="buyout">
-        {% if site.buyout.enabled %}
-            <ul class="buyout list-inline mb-4">
-                <li class="list-inline-item">E-Satış:</li>
-
-                {%if site.buyout.dnr == true and book.dnr %}
-                <li class="list-inline-item">
-                    <a href="{{book.dnr}}" target="_blank" title="D&amp;R">
-                        <img class="img-fluid" src="{{ site.baseurl }}/assets/images/dr.svg" alt="D&amp;R Satış">
-                    </a>
-                </li>
-                {%endif %}
-
-                {%if site.buyout.kitapyurdu == true and book.kitapyurdu %}
-                <li class="list-inline-item">
-                    <a href="{{book.kitapyurdu}}" target="_blank" title="Kitapyurdu">
-                        <img class="img-fluid" src="{{ site.baseurl }}/assets/images/kitapyurdu.svg" alt="Kitapyurdu Satış">
-                    </a>
-                </li>
-                {%endif %}
-
-                {%if site.buyout.damlayayinevi == true and book.damlayayinevi %}
-                <li class="list-inline-item">
-                    <a href="{{book.damlayayinevi}}" target="_blank" title="Damla Yayınevi">
-                        <img class="img-fluid" src="{{ site.baseurl }}/assets/images/damla.svg" alt="Damla Yayınevi Satış">
-                    </a>
-                </li>
-                {%endif %}
-
-                {%if site.buyout.idefix == true and book.idefix %}
-                <li class="list-inline-item">
-                    <a href="{{book.idefix}}" target="_blank" title="İdefix">
-                        <img class="img-fluid" src="{{ site.baseurl }}/assets/images/idefix.svg" alt="İdefix Satış">
-                    </a>
-                </li>
-                {%endif %}
-
-                {%if site.buyout.hepsiburada == true and book.hepsiburada %}
-                <li class="list-inline-item">
-                    <a href="{{book.hepsiburada}}" target="_blank" title="Hepsiburada">
-                        <img class="img-fluid" src="{{ site.baseurl }}/assets/images/hepsiburada.svg" alt="Hepsiburada Satış">
-                    </a>
-                </li>
-                {%endif %}
-
-                {%if site.buyout.trendyol == true and book.trendyol %}
-                <li class="list-inline-item">
-                    <a href="{{book.trendyol}}" target="_blank" title="Trendyol">
-                        <img class="img-fluid" src="{{ site.baseurl }}/assets/images/trendyol.svg" alt="Trendyol Satış">
-                    </a>
-                </li>
-                {%endif %}
-
-                {%if site.buyout.gittigidiyor == true and book.gittigidiyor %}
-                <li class="list-inline-item">
-                    <a href="{{book.gittigidiyor}}" target="_blank" title="Trendyol">
-                        <img class="img-fluid" src="{{ site.baseurl }}/assets/images/gittigidiyor.svg" alt="Gittigidiyor Satış">
-                    </a>
-                </li>
-                {%endif %}
-
-                {%if site.buyout.odatvkitap == true and book.odatvkitap %}
-                <li class="list-inline-item">
-                    <a href="{{book.odatvkitap}}" target="_blank" title="Oda Kitap">
-                        <img class="img-fluid" src="{{ site.baseurl }}/assets/images/odakitap.svg" alt="Oda Kitap Satış">
-                    </a>
-                </li>
-                {%endif %}
-
-                {%if site.buyout.dkitap == true and book.dkitap %}
-                <li class="list-inline-item">
-                    <a href="{{book.dkitap}}" target="_blank" title="Dkitap">
-                        <img class="img-fluid" src="{{ site.baseurl }}/assets/images/dkitap.svg" alt="Dkitap Satış">
-                    </a>
-                </li>
-                {%endif %}
-
-                {%if site.buyout.bkmkitap == true and book.bkmkitap %}
-                <li class="list-inline-item">
-                    <a href="{{book.bkmkitap}}" target="_blank" title="BKM Kitap">
-                        <img class="img-fluid" src="{{ site.baseurl }}/assets/images/bkmkitap.svg" alt="BKM Kitap Satış">
-                    </a>
-                </li>
-                {%endif %}
-
-                {%if site.buyout.amazontr == true and book.amazontr %}
-                <li class="list-inline-item">
-                    <a href="{{book.amazontr}}" target="_blank" title="Amazon">
-                        <img class="img-fluid" src="{{ site.baseurl }}/assets/images/amazon.svg" alt="Amazon Kitap Satış">
-                    </a>
-                </li>
-                {%endif %}
-
-            </ul>
-            {% endif %}
     </div>
 </div>
 

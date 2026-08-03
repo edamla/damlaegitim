@@ -1,28 +1,30 @@
 ---
 layout: book
 title:  "Korku Vadisi"
-
-grades: [5, 6, 7, 8]
-concepts: [ Londra’da büyük bir beyin Sussexte ise ölü bir adam Bizim takip etmemiz gereken ise ikisi arasındaki bağlantı ]
-subjects: ["gerilim ve korku", "intikam", "sadakat ve ihanet", "gizem", "tehlike", "suç dehası"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı" 
 
-# Book attributes
-authors: ["Sir Arthur Conan Doyle"]
+# Standart Book Attributes
 ean: 9786057274472
 languages: ["Türkçe"]
-page: 220 sayfa
+page: "220 sayfa"
 size: "12,5x19,5 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Sir Arthur Conan Doyle"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Londra’da büyük bir beyin Sussexte ise ölü bir adam Bizim takip etmemiz gereken ise ikisi arasındaki bağlantı"]
+anatemalar: ["gerilim ve korku", intikam, "sadakat ve ihanet", gizem, tehlike, "suç dehası"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274472/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

@@ -1,28 +1,30 @@
 ---
 layout: book
 title:  "Ay’ın Karanlık Yüzü"
-
-grades: [5, 6, 7, 8]
-concepts: [ Tarih boyunca duvarlara çizilen kadim tanrı tasvirlerinin yeryüzündeki devasa işaretlerin ve gökyüzünde beliren UFOların arkasındaki çarpıcı kozmik sır çözülüyor ]
-subjects: ["Zorunlu Göç", "Kriyojenik Uyku", "Kültürel Uyum", "Kaynak Yönetimi", "Liderlik ve Kararlılık", "Mitoloji ve Gizem"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı" 
 
-# Book attributes
-authors: ["Necati Akbaba"]
+# Standart Book Attributes
 ean: 9786254116001
 languages: ["Türkçe"]
-page: 208 sayfa
+page: "208 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Necati Akbaba"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Tarih boyunca duvarlara çizilen kadim tanrı tasvirlerinin yeryüzündeki devasa işaretlerin ve gökyüzünde beliren UFOların arkasındaki çarpıcı kozmik sır çözülüyor"]
+anatemalar: ["Zorunlu Göç", "Kriyojenik Uyku", "Kültürel Uyum", "Kaynak Yönetimi", "Liderlik ve Kararlılık", "Mitoloji ve Gizem"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116001/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

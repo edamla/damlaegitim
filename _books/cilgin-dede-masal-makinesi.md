@@ -1,31 +1,30 @@
 ---
 layout: book
 title:  "Çılgın Dedemin Masal Makinesi (10 Kitap)"
-
-grades: [2, 3]
-subjects: ["Değerler Eğitimi", "Zaman Makinası", "Macera", "Gizem", "Keşif", "Efsane"]
-concepts: ["Dil Bilim","Milli Kültür","Zaman Mekan","Anadolu Kültürü"]
-
-
-
-examlink: masal-makinesi-y.pdf
-
-categories: [ "Öykümatik" ]
-tags: [ "hikaye"]
+categories: ["Öykümatik"]
+tags: [hikaye]
 genre: story
 previewpage: true
 
-
-# Book attributes
+# Standart Book Attributes
 ean: 9786053838340
 languages: ["Türkçe"]
-page: Heri biri 48 Sayfa
-size: 14x20 cm
+page: "Heri biri 48 Sayfa"
+size: "14x20 cm"
 publish-number: 1892
 cover: "Karton Kapak"
 paper: "1. Hamur"
 
-youtube: https://www.youtube.com/watch?v=xAUgoaDYLQc
+# Spesific Filterable Attributes
+grades: [2, 3]
+kavramlar: ["Dil Bilim", "Milli Kültür", "Zaman Mekan", "Anadolu Kültürü"]
+anatemalar: ["Değerler Eğitimi", "Zaman Makinası", Macera, Gizem, "Keşif", Efsane]
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/masal-makinesi-y.pdf"
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053838340/index.html"
+damlaurl: ""
+
+# Social Media Attributes
+youtube: "https://www.youtube.com/watch?v=xAUgoaDYLQc"
 
 # For adding excerpt add <!--more--> and break the line
 ---

@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Tablodaki Sır"
-
-grades: [5, 6, 7, 8]
-concepts: [ Geçmişin karanlık sırları hiç beklenmedik ıssız bir dağ evinde gün yüzüne çıkıyor ]
-subjects: ["İntikam ve Pişmanlık", "Kader", "Affetmek", "Kardeşlik Bağı", "İletişimsizlik", "Güçlü Kadınlar"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Mesut Turan"]
+
+# Standart Book Attributes
 ean: 9786051740935
 languages: ["Türkçe"]
-page: 312 sayfa
+page: "312 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Mesut Turan"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Geçmişin karanlık sırları hiç beklenmedik ıssız bir dağ evinde gün yüzüne çıkıyor"]
+anatemalar: ["İntikam ve Pişmanlık", Kader, Affetmek, "Kardeşlik Bağı", "İletişimsizlik", "Güçlü Kadınlar"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051740935/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

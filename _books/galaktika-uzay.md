@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Galaktika Uzay İmparatorluğu"
-
-grades: [5, 6, 7, 8]
-concepts: [ Sınırsız bir güç uğruna tüm galaksiyi ateşe atan bir hain ve barışı yeniden inşa etmek için savaşan efsanevi bir komutan ]
-subjects: ["İktidar Hırsı", "İhanet", "Adalet ve Merhamet", "Savaş Stratejisi", "Liderlik", "Bölünme"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Necati Akbaba"]
+
+# Standart Book Attributes
 ean: 9786051745855
 languages: ["Türkçe"]
-page: 160 sayfa
+page: "160 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Necati Akbaba"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Sınırsız bir güç uğruna tüm galaksiyi ateşe atan bir hain ve barışı yeniden inşa etmek için savaşan efsanevi bir komutan"]
+anatemalar: ["İktidar Hırsı", "İhanet", "Adalet ve Merhamet", "Savaş Stratejisi", Liderlik, "Bölünme"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051745855/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

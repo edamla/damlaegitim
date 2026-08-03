@@ -1,26 +1,30 @@
 ---
 layout: book
-title:  "Ufolar"
-
-grades: [5, 6, 7, 8]
-concepts: [ Kaz Dağlarının zirvesinden bilinmeyen galaksilere uzanan evrenin sınırlarını zorlayan destansı bir uzay serüveni ]
-subjects: ["Dünya Dışı Yaşam", "Temiz Enerji", "Takım Ruhu", "Çevre Bilinci", "Bilim ve Teknoloji", "Astronomi"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+title:  Ufolar
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Sara Gürbüz Özeren"]
+
+# Standart Book Attributes
 ean: 9786051745121
 languages: ["Türkçe"]
-page: 136 sayfa
+page: "136 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Sara Gürbüz Özeren"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Kaz Dağlarının zirvesinden bilinmeyen galaksilere uzanan evrenin sınırlarını zorlayan destansı bir uzay serüveni"]
+anatemalar: ["Dünya Dışı Yaşam", "Temiz Enerji", "Takım Ruhu", "Çevre Bilinci", "Bilim ve Teknoloji", Astronomi]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051745121/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

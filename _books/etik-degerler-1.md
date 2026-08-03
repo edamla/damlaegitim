@@ -1,26 +1,29 @@
 ---
 layout: book
 title:  "ETİK DEĞERLER EĞİTİM SETİ-1. SINIF (10 KİTAP)"
-
-grades: [1]
-concepts: ["sozel-dilsel","mantiksal-matematiksel","icsel","doga"]
-subjects: ["Dürüstlük", "Saygı ve Sevgi", "Yardımseverlik", "Paylaşmak", "Etik ve Ahlak"]
-examlink: etik-degerler1-y.pdf
-
-categories: [ "Öykümatik" ]
-tags: [ "hikaye"]
+categories: ["Öykümatik"]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "1. Hamur"
 
-# Book attributes
+# Standart Book Attributes
 ean: 8697911223851
 languages: ["Türkçe"]
-page: Her Biri 16
+page: "Her Biri 16"
 size: "23,5x16,5 cm"
 publish-number: 1746
 cover: "Karton Kapak"
+paper: "1. Hamur"
 
+# Spesific Filterable Attributes
+grades: [1]
+kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
+anatemalar: ["Dürüstlük", "Saygı ve Sevgi", "Yardımseverlik", "Paylaşmak", "Etik ve Ahlak"]
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/etik-degerler1-y.pdf"
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223851/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line

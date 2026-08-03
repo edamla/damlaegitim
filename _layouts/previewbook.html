@@ -28,9 +28,6 @@ layout: default
 </style>
 
 
-<!-- Buyout Modified -->
-<link rel="stylesheet" href="{{site.baseurl}}/assets/css/buyout.css">
-
 {% assign book = page %}
 <div class="container">
 <div class="book-detail mb-3 ps-0 pt-0 pb-0 bg-white position-relative">
@@ -144,8 +141,8 @@ layout: default
 	<!-- Fbook içerik bölümü -->
 	<div class="Grid-cell">
 		<div class="Demo content">
-		  {% if site.pagepreview.enabled == true and book.ean %}
-		  <iframe id="iframe" src="{{ site.pagepreview.prefix }}{{ book.ean }}{{ site.pagepreview.postfix }}" name="fbook" width="100%" height="100%"></iframe>
+		  {% if book.review_link != nil and book.review_link != '' %}
+		  <iframe id="iframe" src="{{ book.review_link }}" name="fbook" width="100%" height="100%"></iframe>
 		  {% else %}
 		  <p class="p-4 text-muted">Ön izleme şu anda kullanılamıyor.</p>
 		  {% endif %}

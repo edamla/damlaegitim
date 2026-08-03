@@ -1,26 +1,30 @@
 ---
 layout: book
 title:  "Uzman Dedektiflik Bürosu"
-
-grades: [5, 6, 7, 8]
-concepts: [ Kış biterken açan mimozaların peşinde akıl dolu bilmecelerle örülmüşheyecan verici bir dedektiflik serüveni ]
-subjects: ["Dayanışma", "Dürüstlük", "Çevre Bilinci", "Akıl Yürütme", "Sorumluluk", "Soğukkanlılık"]
-
-examlink: 
-
-categories: [ "Ortaokul" ]
-tags: [ "hikaye"]
+categories: [Ortaokul]
+tags: [hikaye]
 genre: story
 previewpage: true
-paper: "Kitap Kağıdı"
-authors: ["Esra Avgören"]
+
+# Standart Book Attributes
 ean: 9786254116414
 languages: ["Türkçe"]
-page: 136 sayfa
+page: "136 sayfa"
 size: "13,5x21 cm"
-publish-number: 
-cover: 
+publish-number: ""
+cover: ""
+paper: "Kitap Kağıdı"
+authors: ["Esra Avgören"]
 
+# Spesific Filterable Attributes
+grades: [5, 6, 7, 8]
+kavramlar: ["Kış biterken açan mimozaların peşinde akıl dolu bilmecelerle örülmüşheyecan verici bir dedektiflik serüveni"]
+anatemalar: ["Dayanışma", "Dürüstlük", "Çevre Bilinci", "Akıl Yürütme", Sorumluluk, "Soğukkanlılık"]
+examlink: ""
+review_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116414/index.html"
+damlaurl: ""
+
+# Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line
