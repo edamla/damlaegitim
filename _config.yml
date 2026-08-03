@@ -43,8 +43,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
-  - jekyll-archives
-  - jekyll-figure
   - jekyll-gist
  
 # Defaults
@@ -116,11 +114,6 @@ lazyimages: "enabled"
 
 # HDS sınav PDF bağlantıları (true: kitaplarda examlink doluysa HDS butonu görünür; false: hiçbir yerde gösterilmez)
 examlink: false
-
-# Sass
-sass:
-  sass_dir: _sass
-  style: compressed
 
 collections:
   books:

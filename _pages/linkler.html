@@ -242,7 +242,7 @@ show_title: false
   </div>
 
   <div class="review-links__list" id="reviewLinksList">
-    {% assign preview_books = site.books | where_exp: "b", "b.preview_link != nil and b.preview_link != ''" | sort: "title" %}
+    {% assign preview_books = site.books | where_exp: "b", "b.preview_link != ''" | sort: "title" %}
 
     {% for book in preview_books %}
       {% capture grade_badge %}

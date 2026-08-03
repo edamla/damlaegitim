@@ -29,7 +29,7 @@ Yeni Maarif Modeline uygun eğitim setleri, hikaye kitapları ve kataloglar tek 
 
 | Katman | Teknoloji |
 |--------|-----------|
-| Site motoru | Jekyll 4.x (Ruby) |
+| Site motoru | Jekyll 3.10 (`github-pages` gem, Ruby) |
 | CSS framework | Bootstrap 5.3 (tasarım sistemi: [design.md](design.md)) |
 | Özel stiller | `theme.css` + `app.css` + `fontawesome-all.min.css` |
 | JavaScript | Vanilla JS (filtre, navbar, arama) + Bootstrap bundle + Lunr.js (lazy) |
@@ -50,7 +50,7 @@ Yerel geliştirme için aşağıdaki ortam önerilir. Canlı site GitHub Pages �
 | Gereksinim | Zorunlu | Açıklama |
 |------------|---------|----------|
 | **Git** | Evet | Repoyu klonlamak ve sürüm kontrolü |
-| **Ruby 3.x** | Evet | Jekyll ve gem bağımlılıkları |
+| **Ruby 3.x** | Evet | Jekyll ve gem bağımlılıkları (`github-pages` gem — canlı ile aynı sürüm) |
 | **Bundler** | Evet | `Gemfile` üzerinden gem kurulumu (`install.sh` eksikse kurar) |
 | **Python 3** + **pip** | Evet | Font WOFF2 subset (`fonttools`, `brotli` — `install.sh` kurar) |
 | **Bash** | Evet | `install.sh` / `start.sh` ve `scripts/*.sh` için |
@@ -148,7 +148,16 @@ git commit -m "Değişiklik açıklaması"
 git push
 ```
 
-GitHub Pages otomatik olarak siteyi günceller.
+GitHub Pages otomatik olarak siteyi günceller (klasik Jekyll build — özel Actions yok). Repo ayarları: **Settings → Pages → Deploy from a branch** (`main`, `/ (root)`).
+
+Yerel build, canlı ile aynı stack'i kullanır:
+
+```bash
+bundle install
+bundle exec jekyll build
+```
+
+`bundle exec github-pages health-check` isteğe bağlıdır (Linux/WSL önerilir; Windows'ta libcurl eksikliği nedeniyle başarısız olabilir).
 
 ## Kurulum ve geliştirme script'leri
 
