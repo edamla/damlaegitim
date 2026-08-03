@@ -1,11 +1,12 @@
+{% assign card = include.book | default: book %}
 <article class="book-card">
-    <a class="book-card__link baslik-link" href="{{ book.url }}">
+    <a class="book-card__link baslik-link" href="{{ card.url }}">
         <div class="book-card__media">
             {% assign eanimage_class = "book-card__cover cover-images" %}
-            {% include eanimage.html book=book width="400" height="600" loading="lazy" fetchpriority="low" decoding="async" %}
+            {% include eanimage.html book=card width="400" height="600" loading="lazy" fetchpriority="low" decoding="async" %}
         </div>
         <div class="book-card__info">
-            <h3 class="book-card__title">{{ book.title }}</h3>
+            <h3 class="book-card__title">{{ card.title }}</h3>
         </div>
     </a>
 </article>

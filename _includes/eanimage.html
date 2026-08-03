@@ -3,6 +3,7 @@
   Parametreler: book, ean, img_class, img_only=yes, width, height, loading, alt, ...
   Not: Jekyll include'da class parametresi kullanılamaz (rezerve).
 {% endcomment %}
+{% assign book = include.book | default: book %}
 {% assign ean_value = ean %}
 {% if ean_value == nil or ean_value == '' %}
   {% if book and book.ean %}
