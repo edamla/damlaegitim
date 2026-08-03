@@ -77,7 +77,7 @@ damlaegitim/
 │   │   ├── app.css
 │   │   ├── spotlight.css
 │   │   ├── tiny-slider.css
-│   │   └── buyout.css
+│   │   └── buyout.css            # Kullanılmıyor (legacy; layout’ta yüklenmez)
 │   ├── fonts/
 │   │   ├── fontawesome/          # Font Awesome 5.15.4 webfonts (tam paket)
 │   │   ├── geometric-sans/
@@ -104,8 +104,7 @@ damlaegitim/
 │   ├── check_images.sh           # Büyük görsel uyarı raporu (start.sh hook)
 │   ├── check_fonts.sh            # Font / WOFF2 uyarı raporu (install.sh)
 │   ├── subset_font.sh            # Tüm OTF/TTF → WOFF2 subset (install.sh)
-│   ├── normalize_book_frontmatter.rb   # Kitap front matter sıralama/normalize (`preview_link`, `examlink`, `damlaurl` korunur)
-│   └── fill_preview_link_from_config.rb # Tek seferlik: boş preview_link → varsayılan CDN URL
+│   ├── normalize_book_frontmatter.rb   # Kitap front matter sıralama/normalize (`preview_link`, `examlink`, `damlaurl`; eski alan migrasyonu)
 ├── index.html            # Anasayfa
 ├── Gemfile               # Ruby bağımlılıkları
 ├── CNAME                 # damlaokul.com
@@ -162,7 +161,7 @@ Tüm layout’lar `layout: default` zinciri üzerinden `default.html`’i extend
 | `book-card.html` | Tek kitap kartı partial (`<picture>` + WebP, native lazy loading) |
 | `book-grade-filter.html` | Eski sınıf checkbox dropdown’u (artık kullanılmıyor) |
 | `search-lunr.html` | Spotlight arama (lazy-load Lunr + JSON indeks, modal UI, navbar tetikleyici) |
-| `popup.html` | Kitap detay popup’ları (Bilgi, ön okuma iframe, YouTube; koyu tema desteği) |
+| `popup.html` | Kitap detay popup’ları (Satın Al / Bilgi, İncele iframe, YouTube, HDS; koyu tema desteği) |
 | `eanimage.html` | Kitap kapak `<picture>` + koşullu WebP (`eanimage` partial) |
 | `tracking-header.html` / `tracking-footer.html` | Google Analytics |
 
@@ -295,19 +294,34 @@ Yapı, responsive davranış ve görsel stiller [design.md — Site Navbar](desi
 
 | Alan (front matter) | Görünüm |
 |---------------------|---------|
-| `anatemalar` | `#etiket` (yeşil) |
-| `kavramlar` | `@etiket` (turuncu) |
+| `anatemalar` | `#etiket` (yeşil pill) |
+| `kavramlar` | Kısa slug/kavram → `@etiket` (turuncu pill); uzun özet cümlesi → `.book-detail__tagline` (italik alıntı) |
 
-`kavramlar` her kitabın kendi front matter’ında tanımlanır. Yaml’daki metin `@` önekiyle küçük harfe çevrilerek gösterilir.
+`kavramlar` her kitabın front matter’ında tanımlanır. Layout, metin uzunluğu ve biçimine göre pill veya alıntı seçer:
+
+| Koşul | Görünüm |
+|-------|---------|
+| Tire içerir ve boşluk yok (`sozel-dilsel`) | `@etiket` pill |
+| ≤ 18 karakter | `@etiket` pill |
+| Boşluklu ve ≤ 28 karakter | `@etiket` pill |
+| Diğer (uzun özet cümlesi) | `.book-detail__tagline` alıntı |
 
 ### Aksiyon butonları ve popup
 
-Ön Okuma, Tanıtım, Bilgi, İncele ve HDS butonları `.js-book-action` ile [`popup.html`](_includes/popup.html) üzerinden açılır:
+Tanıtım (YouTube), Satın Al / Bilgi, İncele ve HDS butonları `.js-book-action` ile [`popup.html`](_includes/popup.html) üzerinden açılır:
+
+| Buton | Koşul | Davranış |
+|-------|-------|----------|
+| Tanıtım | `youtube` dolu | YouTube embed / yeni sekme |
+| Satın Al | `damlaurl` dolu | iframe popup (ürün sayfası) |
+| Bilgi | `damlaurl` boş | Tedarik bilgisi modal |
+| İncele | `preview_link` dolu | iframe popup (ön izleme) |
+| HDS | `examlink` dolu | iframe popup (PDF) |
 
 | `data-popup-type` | Davranış |
 |-------------------|----------|
 | `info` | Tedarik bilgisi modal (mobil + masaüstü) |
-| `iframe` | Tam ekran iframe (ön okuma, incele, HDS) |
+| `iframe` | Tam ekran iframe (Satın Al, İncele, HDS) |
 | `youtube` | YouTube embed |
 
 Masaüstünde iframe/youtube popup; mobilde yeni sekme. `info` popup’u `prefers-color-scheme: dark` destekler.
@@ -329,7 +343,9 @@ Navbar üzerinden kitap araması yapılır. macOS Spotlight benzeri tam ekran mo
 
 ### İndeks kapsamı
 
-`site.books` koleksiyonu; alanlar: `title`, `authors`, `categories`, `grades`, `genre`, `anatemalar`, `tags`, `body`.
+`site.books` koleksiyonu; alanlar: `title`, `ean`, `authors`, `categories`, `grades`, `genre`, `anatemalar`, `tags`, `body`. Kapak görseli indekste `assets/images/ean/{ean}.webp` (yoksa `.jpg`) kullanılır.
+
+4+ haneli tamamen sayısal aramalarda `ean` alanında doğrudan eşleştirme yapılır; diğer sorgularda Lunr wildcard araması kullanılır.
 
 İndeks her sayfaya gömülmez; `/assets/search-index.json` olarak ayrı endpoint'ten fetch edilir. Bu sayede sayfa yüklenirken Lunr indeksleme maliyeti oluşmaz.
 
@@ -438,13 +454,14 @@ layout: book
 title: "Deyim Öyküleri 5 Kitap"
 grades: [3]
 genre: story          # education | story
+tags: []
 anatemalar: ["Değerler Eğitimi", "Macera", "Gizem"]   # yeşil # etiketler
-kavramlar: ["Dil Bilim", "Milli Kültür", "Zaman Mekan"]   # turuncu @ etiketler (kitap front matter)
+kavramlar: ["Dil Bilim", "Milli Kültür"]   # kısa → @pill; uzun cümle → özet alıntı
 categories: ["Çocuk", "Hikaye"]
 ean: 9786053832874
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832874/index.html"
 examlink: ""   # HDS yoksa boş; doluysa tam PDF URL (ör. https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/...)
-damlaurl: ""   # Damla Yayınevi ürün sayfası; boşsa Bilgi → tedarik popup
+damlaurl: ""   # Damla Yayınevi ürün sayfası; doluysa Satın Al, boşsa Bilgi → tedarik popup
 languages: ["Türkçe"]
 page: Her Biri 64
 size: "14x20cm"
@@ -470,12 +487,12 @@ HDS PDF linkleri kitap front matter’ındaki tam `examlink` URL’si ile tanım
 
 `scripts/normalize_book_frontmatter.rb` tüm kitaplarda `examlink` satırını korur; eksikse `examlink: ""` yazar, göreli dosya adı verilmişse tam URL’ye çevirir.
 
-### `damlaurl` (Bilgi)
+### `damlaurl` (Satın Al / Bilgi)
 
 | Durum | Front matter | Kitap sayfası |
 |-------|--------------|---------------|
-| URL yok | `damlaurl: ""` | Bilgi → tedarik bilgisi popup |
-| URL var | Tam ürün sayfası URL | Bilgi → iframe popup |
+| URL yok | `damlaurl: ""` | **Bilgi** → tedarik bilgisi popup |
+| URL var | Tam ürün sayfası URL | **Satın Al** → iframe popup |
 
 Örnek URL: `https://www.damlayayinevi.com.tr/...`
 
@@ -485,10 +502,11 @@ HDS PDF linkleri kitap front matter’ındaki tam `examlink` URL’si ile tanım
 
 | Araç | Görev |
 |------|-------|
-| `scripts/fill_preview_link_from_config.rb` | `preview_link` boş + `ean` dolu kitaplara varsayılan CDN URL yazar; mevcut URL’lere dokunmaz |
-| `scripts/normalize_book_frontmatter.rb` | Front matter sıralar; `preview_link`, `examlink` ve `damlaurl` Standart Book Attributes altında korunur |
+| `scripts/normalize_book_frontmatter.rb` | Front matter sıralar; `preview_link`, `examlink`, `damlaurl` Standart Book Attributes altında korunur; `review_link` → `preview_link`, `previewpage` silinir |
 
-Yeni kitap eklerken `preview_link` doğrudan front matter’a yazılır; özel path gerekmezse `{ean}` ile varsayılan desen kullanılır.
+Front matter anahtar sırası (betik): `layout`, `title`, `categories`, `tags` → `ean`, `languages`, `page`, `size`, `publish-number`, `cover`, `examlink`, `preview_link`, `damlaurl` → `genre`, `grades`, `kavramlar`, `anatemalar` → diğer alanlar.
+
+Yeni kitap eklerken `preview_link` doğrudan front matter’a yazılır; özel path gerekmezse `https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/{ean}/index.html` varsayılan desenidir.
 
 ---
 
@@ -648,9 +666,9 @@ GitHub Pages, push sonrası kaynak branch’ten Jekyll build alır. **CI/CD veya
 
 1. `_books/yeni-urun.md` oluştur
 2. Front matter doldur (`title`, `grades`, `genre`, `ean`, `preview_link`, `examlink`, `damlaurl`…)
-3. `preview_link` — ön izleme URL’si; boş bırakılırsa `scripts/fill_preview_link_from_config.rb` ile varsayılan desen yazılabilir
+3. `preview_link` — ön izleme URL’si; boş bırakılabilir (`preview_link: ""` → İncele butonu görünmez)
 4. `examlink` — HDS PDF tam URL’si; yoksa `examlink: ""` (HDS butonu görünmez)
-5. `damlaurl` — Damla Yayınevi ürün sayfası tam URL’si; yoksa `damlaurl: ""` (Bilgi → tedarik popup)
+5. `damlaurl` — Damla Yayınevi ürün sayfası tam URL’si; doluysa Satın Al butonu, yoksa Bilgi → tedarik popup
 6. İsteğe bağlı `description:` — yoksa build sırasında otomatik üretilir
 7. Kapak görselini `assets/images/ean/{ean}.jpg` olarak ekle (jpg/png optimize et; webp `sh start.sh` ile otomatik)
 8. `sh scripts/check_images.sh` ile boyut kontrolü (veya `sh start.sh`)
@@ -685,4 +703,5 @@ Font Awesome artık yerel olarak `assets/fonts/fontawesome/` altından servis ed
 Aşağıdaki dosyalar geçmişten kalma olabilir; aktif kullanılmıyorsa temizlenebilir:
 
 - `assets/js/theme.js` (jQuery tabanlı; `loadSearch()` kullanılmıyor)
+- `assets/css/buyout.css` (eski satıcı barı; hiçbir layout’ta yüklenmez)
 - `_pages/_draft/books.html`

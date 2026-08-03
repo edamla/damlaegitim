@@ -54,6 +54,7 @@
     idx = lunr(function () {
       this.ref('id');
       this.field('title', { boost: 10 });
+      this.field('ean', { boost: 12 });
       this.field('authors', { boost: 5 });
       this.field('categories', { boost: 3 });
       this.field('grades', { boost: 4 });
@@ -185,25 +186,59 @@
     updateResultsHeader(documents.length, 'Tüm Kitaplar');
   }
 
+  function searchByEan(term) {
+    var hits = [];
+    for (var j = 0; j < documents.length; j++) {
+      var eanStr = String(documents[j].ean || '');
+      if (eanStr && eanStr.indexOf(term) !== -1) {
+        hits.push(j);
+      }
+    }
+
+    hits.sort(function (a, b) {
+      var ea = String(documents[a].ean || '');
+      var eb = String(documents[b].ean || '');
+      if (ea === term && eb !== term) return -1;
+      if (eb === term && ea !== term) return 1;
+      if (ea.indexOf(term) === 0 && eb.indexOf(term) !== 0) return -1;
+      if (eb.indexOf(term) === 0 && ea.indexOf(term) !== 0) return 1;
+      return 0;
+    });
+
+    return hits;
+  }
+
   function performSearch(term) {
     var listEl = document.querySelector('.spotlight-list');
     if (!listEl) return;
 
-    if (!term || term.length < 1) {
+    var trimmed = (term || '').trim();
+    if (!trimmed || trimmed.length < 1) {
       showAllBooks();
       return;
     }
 
-    var results = idx.search(term + '*');
+    var resultIndexes = [];
 
-    if (results.length > 0) {
+    if (/^\d+$/.test(trimmed) && trimmed.length >= 4) {
+      resultIndexes = searchByEan(trimmed);
+    }
+
+    if (!resultIndexes.length) {
+      var results = idx.search(trimmed + '*');
+      for (var r = 0; r < results.length; r++) {
+        resultIndexes.push(parseInt(results[r].ref, 10));
+      }
+    }
+
+    if (resultIndexes.length > 0) {
       var html = '';
-      for (var i = 0; i < results.length; i++) {
-        var doc = documents[results[i].ref];
+      for (var i = 0; i < resultIndexes.length; i++) {
+        var doc = documents[resultIndexes[i]];
         if (doc) html += createResultItem(doc, i);
       }
       listEl.innerHTML = html;
-      updateResultsHeader(results.length, "'" + term + "' için sonuçlar");
+      updateResultsHeader(resultIndexes.length, "'" + trimmed + "' için sonuçlar");
     } else {
       listEl.innerHTML =
         '<li class="spotlight-empty">' +
