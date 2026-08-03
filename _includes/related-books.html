@@ -1,18 +1,17 @@
 {% comment %}
   İlgili ürünler: aynı genre + grades kesişimi.
+  Liquid 4 uyumlu (continue/break kullanılmaz).
 {% endcomment %}
 {% assign book = include.book | default: page %}
 {% assign max_items = 4 %}
-{% assign shown = 0 %}
+{% assign related_count = 0 %}
+{% assign slider_slug = book.url | remove: '/urunler/' | remove: '/' | default: 'kitap' %}
 
 {% if book.genre and book.url %}
-<section class="related-books mt-4 mb-4" aria-label="İlgili ürünler">
-  <h2 class="h5 fw-bold mb-3">İlgili Ürünler</h2>
-  <div class="row g-3">
-    {% for b in site.books %}
-      {% if shown >= max_items %}{% break %}{% endif %}
-      {% if b.url == book.url %}{% continue %}{% endif %}
-      {% unless b.genre == book.genre %}{% continue %}{% endunless %}
+{% capture related_items %}
+{% for b in site.books %}
+  {% if related_count < max_items %}
+    {% if b.url != book.url and b.genre == book.genre %}
       {% assign grade_match = false %}
       {% if book.grades.size == 0 %}
         {% assign grade_match = true %}
@@ -23,12 +22,75 @@
           {% endif %}
         {% endfor %}
       {% endif %}
-      {% unless grade_match %}{% continue %}{% endunless %}
-      <div class="col-6 col-md-3">
-        {% include book-card.html book=b %}
-      </div>
-      {% assign shown = shown | plus: 1 %}
-    {% endfor %}
+      {% if grade_match %}
+        <div class="item">
+          {% include book-card.html book=b %}
+        </div>
+        {% assign related_count = related_count | plus: 1 %}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+{% endcapture %}
+
+{% if related_count > 0 %}
+<section class="related-books container" aria-label="İlgili ürünler">
+  <h2 class="related-books__heading h5 fw-bold">İlgili Ürünler</h2>
+  <div class="related-books-slider">
+    <div class="related-books-slider__track" id="related-slider-{{ slider_slug }}">
+      {{ related_items }}
+    </div>
   </div>
 </section>
+<script>
+(function () {
+  var selector = '#related-slider-{{ slider_slug }}';
+
+  function initRelatedSlider() {
+    if (typeof tns !== 'function') return false;
+    var container = document.querySelector(selector);
+    if (!container) return false;
+    if (container.classList.contains('tns-slider')) return true;
+
+    tns({
+      container: selector,
+      items: 2,
+      slideBy: 1,
+      mouseDrag: true,
+      swipeAngle: false,
+      loop: false,
+      autoplay: false,
+      controls: true,
+      controlsPosition: 'bottom',
+      nav: false,
+      gutter: 16,
+      edgePadding: 8,
+      responsive: {
+        576: { items: 2, gutter: 16 },
+        768: { items: 3, gutter: 20 },
+        992: { items: 4, gutter: 24, edgePadding: 0 }
+      }
+    });
+    return true;
+  }
+
+  function waitForSlider() {
+    if (initRelatedSlider()) return;
+    var attempts = 0;
+    var timer = setInterval(function () {
+      attempts += 1;
+      if (initRelatedSlider() || attempts > 50) {
+        clearInterval(timer);
+      }
+    }, 100);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', waitForSlider);
+  } else {
+    waitForSlider();
+  }
+})();
+</script>
+{% endif %}
 {% endif %}

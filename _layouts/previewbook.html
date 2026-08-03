@@ -13,31 +13,36 @@ layout: default
   .Grid-cell {
     flex: 3;
     height: 100%;
+    width: 100%;
   }
   .Demo {
     background: #212121;
     transition: background-color 0.3s ease;
     height: 100vh;
   }
+  .Demo:after {
+    content: "";
+    display: block;
+  }
 </style>
 
 {% assign book = page %}
 
-<div class="container-lg pt-4 pb-2">
+<div class="container-lg pt-4 pb-4">
   <article class="article-post">
     {% include book-minimal-content.html %}
   </article>
-  {% include related-books.html %}
-</div>
 
-<div class="Grid-cell">
-  <div class="Demo content">
-    {% if book.preview_link != nil and book.preview_link != '' %}
-    <iframe id="iframe" src="{{ book.preview_link }}" name="fbook" width="100%" height="100%" title="{{ book.title }} — ön okuma"></iframe>
-    {% else %}
-    <p class="p-4 text-muted">Ön izleme şu anda kullanılamıyor.</p>
-    {% endif %}
+  <div class="Grid-cell">
+    <div class="Demo content">
+      {% if book.preview_link != nil and book.preview_link != '' %}
+      <iframe id="iframe" src="{{ book.preview_link }}" name="fbook" width="100%" height="100%" title="{{ book.title }} — ön okuma"></iframe>
+      {% else %}
+      <p class="p-4 text-muted">Ön izleme şu anda kullanılamıyor.</p>
+      {% endif %}
+    </div>
   </div>
 </div>
 
+{% include related-books.html %}
 {% include structured-data-book.html %}

@@ -73,6 +73,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/images/favicon/manifest.json">
 
+    {% if page.url == "/" or page.layout == 'book' or page.layout == 'previewbook' %}
+    <link rel="preload" href="{{ site.baseurl }}/assets/css/tiny-slider.css" as="style">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/tiny-slider.css">
+    {% endif %}
+
     {% if page.url == "/" %}
     {% assign first_slide = site.slides | first %}
     {% assign first_mobile_webp = first_slide.mobile-img | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.png', '.webp' %}
@@ -95,8 +100,6 @@
     {% else %}
     <link rel="preload" as="image" href="{{ site.baseurl }}/{{ first_slide.img }}" media="(min-width: 768px)" fetchpriority="high">
     {% endif %}
-    <link rel="preload" href="{{ site.baseurl }}/assets/css/tiny-slider.css" as="style">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/tiny-slider.css">
     {% endif %}
 
     <link rel="preload" href="{{ site.baseurl }}/assets/fonts/raykjavik/reykjavik-rounded-regular.woff2"
@@ -171,8 +174,11 @@
     <script defer src="{{ site.baseurl }}/assets/js/book-filter.js?v={{ site.time | date: '%s' }}"></script>
     {% endif %}
 
-    {% if page.url == "/" %}
+    {% if page.url == "/" or page.layout == 'book' or page.layout == 'previewbook' %}
     <script defer src="{{ site.baseurl }}/assets/js/tiny-slider.js"></script>
+    {% endif %}
+
+    {% if page.url == "/" %}
     <script defer src="{{ site.baseurl }}/assets/js/slider-init.js?v={{ site.time | date: '%s' }}"></script>
     {% endif %}
 
