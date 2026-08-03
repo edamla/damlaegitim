@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "Yaz Tatili 4.Sınıf"
+description: "4. sınıf öğrencileri için yaz tatili tekrar ve müfredat pekiştirme kitabı."
 categories: [Religion]
 tags: []
 

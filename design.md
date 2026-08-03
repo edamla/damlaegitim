@@ -361,6 +361,8 @@ macOS Spotlight ilhamlı tam ekran modal:
 
 Kısayol göstergesi: `Ctrl+K` badge. `prefers-color-scheme: dark` desteği var.
 
+**URL senkronu (`?q=`):** Site genelinde geçerli. Sayfa `?q=terim` ile yüklenince modal otomatik açılır. Modal'da yazarken `history.replaceState` ile bulunulan sayfanın URL'sine `?q=` eklenir (paylaşılabilir arama linki). ESC / kapatınca `?q=` silinir; sayfa hash'i (`/urunler#2-sinif/egitim`) korunur. Boş Ctrl+K açılışında URL değişmez. SearchAction schema kanonik giriş: `/?q={search_term_string}`.
+
 Lunr indeks alanları: `title` (yüksek boost), `ean` (barkod), `authors`, `categories`, `grades`, `genre`, `anatemalar`, `tags`, `body`. İndeks kapakları `assets/images/ean/{ean}.webp|jpg` kullanır. 4+ haneli sayısal sorguda `ean` doğrudan eşleştirilir.
 
 **Dosyalar:** `_includes/search-lunr.html`, `_pages/search-index.json`, `assets/css/spotlight.css`, `assets/js/lunr.js`

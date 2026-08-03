@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "Yeni Nesil Türkçe Lgs Föyleri 8.Sınıf"
+description: "8. sınıf Türkçe föyü; okuma, yazma ve dil bilgisi becerilerini güçlendirir."
 categories: ["İlkokul"]
 tags: []
 

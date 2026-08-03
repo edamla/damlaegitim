@@ -1,0 +1,11 @@
+{% comment %} SSS sayfası — page.faq front matter listesinden accordion {% endcomment %}
+{% if page.faq and page.faq.size > 0 %}
+<div class="faq-list">
+  {% for item in page.faq %}
+  <details class="faq-list__item mb-3 border rounded p-3">
+    <summary class="faq-list__question fw-bold">{{ item.question }}</summary>
+    <div class="faq-list__answer mt-2 text-muted">{{ item.answer }}</div>
+  </details>
+  {% endfor %}
+</div>
+{% endif %}

@@ -16,7 +16,33 @@
   var idx = null;
   var spotlightTypingInterval = null;
   var spotlightRoot = document.getElementById('lunrsearchresults');
-  var pendingSearchTerm = null;
+
+  function getQueryParam(name) {
+    return new URLSearchParams(window.location.search).get(name);
+  }
+
+  function syncUrlQuery(term) {
+    var url = new URL(window.location.href);
+    var trimmed = (term || '').trim();
+
+    if (trimmed) {
+      url.searchParams.set('q', trimmed);
+    } else {
+      url.searchParams.delete('q');
+    }
+
+    var newUrl = url.pathname + url.search + url.hash;
+    var current = window.location.pathname + window.location.search + window.location.hash;
+    if (newUrl !== current) {
+      history.replaceState(null, '', newUrl);
+    }
+  }
+
+  function initFromUrlQuery() {
+    var q = getQueryParam('q');
+    if (!q || !q.trim()) return;
+    lunr_search(q.trim());
+  }
 
   function escapeHtml(str) {
     if (!str) return '';
@@ -114,6 +140,7 @@
 
   window.closeSpotlight = function () {
     if (!spotlightRoot) return;
+    syncUrlQuery('');
     if (spotlightTypingInterval) {
       clearTimeout(spotlightTypingInterval);
       spotlightTypingInterval = null;
@@ -322,6 +349,7 @@
       startSpotlightTyping(spotlightInput);
       spotlightInput.addEventListener('input', function () {
         performSearch(this.value);
+        syncUrlQuery(this.value);
       });
       spotlightInput.addEventListener('keydown', function (e) {
         if (e.key === 'Enter') {
@@ -334,6 +362,7 @@
 
     if (term) {
       performSearch(term);
+      syncUrlQuery(term);
     } else {
       showAllBooks();
     }
@@ -400,10 +429,15 @@
     setTimeout(type, 1000);
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initTriggerTyping);
-  } else {
+  function initOnReady() {
     initTriggerTyping();
+    initFromUrlQuery();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initOnReady);
+  } else {
+    initOnReady();
   }
 })();
 </script>

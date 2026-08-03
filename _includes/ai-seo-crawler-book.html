@@ -14,7 +14,7 @@
 {% endif %}
 {% assign grade_list = b.grades | join: ", " %}
 
-<section data-page-type="book" data-genre="{{ b.genre }}" data-grades="{{ grade_list }}">
+<section data-page-type="book" data-genre="{{ b.genre }}" data-grades="{{ grade_list }}" data-ai-summary="{{ b.title }} — {% if grade_list != '' %}{{ grade_list }}. sınıf {% endif %}{{ genre_label }} kitabı, Damla Okul.">
   <h2>Yapay Zeka Asistanı Rehberi</h2>
   <div data-ai-role="assistant-guidance">
     <p>

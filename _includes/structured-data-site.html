@@ -32,21 +32,12 @@
   "@type": "WebSite",
   "name": {{ site.name | jsonify }},
   "url": {{ site.url | append: site.baseurl | jsonify }},
-  "description": {{ site.description | jsonify }},
   "inLanguage": "tr-TR",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Damla Okul",
-    "logo": {
-      "@type": "ImageObject",
-      "url": {{ site.url | append: site.logo | jsonify }}
-    }
-  },
   "potentialAction": {
     "@type": "SearchAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "{{ site.url }}{{ site.baseurl }}/urunler?q={search_term_string}"
+      "urlTemplate": "{{ site.url }}{{ site.baseurl }}/?q={search_term_string}"
     },
     "query-input": "required name=search_term_string"
   }

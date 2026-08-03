@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "Akıllı Damla Eğitim Seti 2.Sınıf"
+description: "2. sınıf Akıllı Damla eğitim seti; etkinlik tabanlı öğrenme materyalleri."
 categories: ["İlkokul"]
 tags: []
 

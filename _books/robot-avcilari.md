@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "ROBOT AVCILARI (10 KİTAP)"
+description: "Bilim kurgu ve macera temalı hikaye; genç okurlar için sürükleyici anlatım."
 categories: ["Çocuk", Hikaye]
 tags: []
 

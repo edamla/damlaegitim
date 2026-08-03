@@ -114,6 +114,9 @@ adsense-data-ad-slot: "1363087678"
 # Lazy Images ("enabled" or "disabled")
 lazyimages: "enabled"
 
+# HDS sınav PDF bağlantıları (true: kitaplarda examlink doluysa HDS butonu görünür; false: hiçbir yerde gösterilmez)
+examlink: false
+
 # Sass
 sass:
   sass_dir: _sass

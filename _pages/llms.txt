@@ -5,35 +5,13 @@ permalink: /llms.txt
 # Damla Okul
 > Damla Yayınevi okul yayınları ve eğitim materyalleri kataloğu. Yeni Maarif Modeli uyumlu eğitim setleri ve hikaye kitapları.
 
-## Ana Sayfalar
-- [Anasayfa]({{ site.url }}{{ site.baseurl }}/): {{ site.description }}
-- [Hakkımızda]({{ site.url }}{{ site.baseurl }}/hakkimizda): Damla Okul ve Damla Yayınevi hakkında: okul yayınları, eğitim materyalleri ve Yeni Maarif Modeli uyumlu içerik yaklaşımımız.
-- [Ürünler]({{ site.url }}{{ site.baseurl }}/urunler): Damla Okul ürün kataloğu: sınıf ve tür bazlı eğitim setleri, hikaye kitapları ve okul yayınları. Yeni Maarif Modeli uyumlu materyaller.
-- [Kataloglar]({{ site.url }}{{ site.baseurl }}/kataloglar): Damla Okul ve Damla Yayınevi okul yayınları katalogları. Eğitim setleri ve hikaye kitapları PDF/HTML katalogları.
-- [Kitapla Büyüyen Sınıflar]({{ site.url }}{{ site.baseurl }}/kitapla-buyuyen-siniflar): Damla Yayın Grubu sosyal sorumluluk projesi: öğretmenlerin emeğiyle şekillenen sınıflara kitap ulaştırıyor, öğrencilerin okurla kurduğu bağı güçlendiriyoruz.
-- [Ölçme ve Değerlendirme]({{ site.url }}{{ site.baseurl }}/olcme-degerlendirme): Damla Okul Eğitim Müfredatı ve 4 Boyutlu Ölçme-Değerlendirme Sistemi: PISA destekli yeni nesil sorular, Akıllı Optik Sistemi ve kazanım analizi.
-- [İletişim]({{ site.url }}{{ site.baseurl }}/iletisim): Damla Okul ve Damla Yayınevi iletişim bilgileri, adres ve harita. Okul yayınları hakkında bilgi almak için bize ulaşın.
-- [Gizlilik Politikası]({{ site.url }}{{ site.baseurl }}/gizlilik-ve-kvkk): Damla Okul gizlilik politikası, KVKK aydınlatma metni, çerez politikası ve kişisel verilerin korunması hakkında bilgilendirme.
+## Bölümler
+- [Ana Sayfalar]({{ site.url }}{{ site.baseurl }}/llms/ana-sayfalar.txt): Site sayfaları ve kurumsal bilgi
+- [Eğitim Kitapları]({{ site.url }}{{ site.baseurl }}/llms/egitim-kitaplari.txt): Tüm eğitim setleri ({{ site.books | where_exp: "b", "b.genre == 'education'" | size }} ürün)
+- [Hikaye Kitapları]({{ site.url }}{{ site.baseurl }}/llms/hikaye-kitaplari.txt): Tüm hikaye kitapları ({{ site.books | where_exp: "b", "b.genre == 'story'" | size }} ürün)
+- [Kataloglar]({{ site.url }}{{ site.baseurl }}/llms/kataloglar.txt): PDF/HTML kataloglar
 
-## Eğitim Kitapları
-{% assign education_books = site.books | where_exp: "book", "book.genre == 'education'" | sort: "title" %}
-{% for book in education_books %}
-- [{{ book.title }}]({{ site.url }}{{ site.baseurl }}{{ book.url }}): {% assign content_stripped = book.content | strip_html | strip %}{% if book.description %}{{ book.description }}{% elsif content_stripped.size > 25 %}{{ content_stripped | truncate: 120, "…" }}{% else %}{{ book.title }}{% if book.grades %} — {{ book.grades | join: ", " }}. sınıf{% endif %} eğitim kitabı{% endif %}
-{% endfor %}
+## Optional
+- [Tam ürün indeksi (JSON)]({{ site.url }}{{ site.baseurl }}/assets/search-index.json): Programatik arama; title, EAN, grades, tags, anatemalar
 
-## Hikaye Kitapları
-{% assign story_books = site.books | where_exp: "book", "book.genre == 'story'" | sort: "title" %}
-{% for book in story_books %}
-- [{{ book.title }}]({{ site.url }}{{ site.baseurl }}{{ book.url }}): {% assign content_stripped = book.content | strip_html | strip %}{% if book.description %}{{ book.description }}{% elsif content_stripped.size > 25 %}{{ content_stripped | truncate: 120, "…" }}{% else %}{{ book.title }}{% if book.grades %} — {{ book.grades | join: ", " }}. sınıf{% endif %} hikaye kitabı{% endif %}
-{% endfor %}
-
-## Kataloglar
-{% for catalog in site.catalogs %}
-- [{{ catalog.title }}]({{ site.url }}{{ site.baseurl }}{{ catalog.url }}): Damla Okul yayın kataloğu
-{% endfor %}
-
-## İletişim
-- Web: {{ site.url }}
-- E-posta: {{ site.contact_email }}
-- Telefon: {{ site.contact_phone }}
-- Adres: {{ site.contact_address }}
+{% include llms-contact.html %}

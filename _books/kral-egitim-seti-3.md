@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "Kral Eğitim Seti 3.Sınıf"
+description: "3. sınıf için Kral eğitim seti; Yeni Maarif Modeli uyumlu içerik ve etkinlikler."
 categories: ["İlkokul"]
 tags: []
 

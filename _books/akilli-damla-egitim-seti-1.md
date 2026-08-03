@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "Akıllı Damla | 1.Sınıf 2.Dönem"
+description: "1. sınıf Akıllı Damla eğitim seti; temel beceriler ve müfredat kazanımlarına yönelik."
 categories: ["İlkokul"]
 tags: []
 

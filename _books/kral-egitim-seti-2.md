@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "Kral Eğitim Seti 2.Sınıf"
+description: "2. sınıf müfredatına uygun Kral eğitim seti; ders kazanımlarını sistematik pekiştirir."
 categories: ["İlkokul"]
 tags: []
 
