@@ -14,7 +14,7 @@ publish-number: ""
 cover: ""
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115493/index.html"
-damlaurl: ""
+damlaurl: "https://www.damlayayinevi.com.tr/afacan-polisler-is-basinda"
 paper: "Kitap Kağıdı"
 authors: ["Yavuz Ali Bilge"]
 
@@ -25,7 +25,7 @@ kavramlar: ["dört afacan gencin sokaktaki masum bir olaya müdahale etmesiyle b
 anatemalar: ["adalet arayışı", "gençlerin gücü", "disiplin ve kurallar", "ekip ruhu", "meslek bilinci", empati]
 
 # Social Media Attributes
-youtube:
+youtube: "https://www.youtube.com/watch?v=wyKcbC_RZbc&t=5s"
 
 # For adding excerpt add <!--more--> and break the line
 ---
