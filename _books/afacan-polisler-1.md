@@ -14,7 +14,7 @@ publish-number: ""
 cover: ""
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115493/index.html"
-damlaurl: "https://www.damlayayinevi.com.tr/afacan-polisler-is-basinda"
+damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Yavuz Ali Bilge"]
 
