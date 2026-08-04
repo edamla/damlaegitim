@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "Akıllı Damla Paragraf-Dilbilgisi 2-3-4.Sınıf Soru Bankası"
+description: "2., 3. ve 4. sınıflar için paragraf ve dil bilgisi soru bankası; çoklu sınıf düzeyinde Türkçe becerilerini pekiştirir."
 categories: [Religion]
 tags: []
 

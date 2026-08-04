@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "Akıllı Damla Tüm Dersler | 4.Sınıf"
+description: "4. sınıf tüm dersleri kapsayan Akıllı Damla eğitim seti; müfredat kazanımlarını pekiştiren çok yönlü içerik sunar."
 categories: ["İlkokul"]
 tags: []
 

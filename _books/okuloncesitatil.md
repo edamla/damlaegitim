@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "Yarı Yıl Tatilim | Okul Öncesi"
+description: "Okul öncesi için yarı yıl tatil kitabı; oyun temelli etkinliklerle erken çocukluk becerilerini tatilde de destekler."
 categories: [Religion]
 tags: []
 
