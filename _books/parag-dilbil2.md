@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "Akıllı Damla Paragraf-Dilbilgisi 2.Sınıf Soru Bankası"
+description: "2. sınıf paragraf ve dil bilgisi soru bankası; temel okuma ve dil becerilerini kazanım odaklı alıştırmalarla destekler."
 categories: [Religion]
 tags: []
 

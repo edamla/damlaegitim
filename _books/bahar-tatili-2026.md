@@ -1,6 +1,7 @@
 ---
 layout: previewbook
 title:  "Gün Gün Bahar Tatilim | 1-2-3-4.Sınıf"
+description: "1–4. sınıflar için bahar ara tatil çalışma kitabı; günlük planlı etkinliklerle tatilde kazanım kaybını önler."
 categories: [Religion]
 tags: []
 
