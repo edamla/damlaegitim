@@ -19,7 +19,7 @@ paper: "1. Hamur"
 
 # Spesific Filterable Attributes
 genre: story
-grades: [3, 4]
+grades: [3]
 kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
 anatemalar: [Bilim-Teknoloji, "Yapay Zeka", "Takım Ruhu", Bilimkurgu, "Gelecek Vizyonu"]
 

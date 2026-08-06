@@ -18,7 +18,7 @@ paper: "1. Hamur"
 
 # Spesific Filterable Attributes
 genre: story
-grades: [3, 4]
+grades: [4]
 kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
 anatemalar: [Biyografi, "İlham Veren Hayatlar", "Azim ve Kararlılık", "Bilimsel Keşifler", "Başarı Hikayeleri"]
 

@@ -18,7 +18,7 @@ paper: "1. Hamur"
 
 # Spesific Filterable Attributes
 genre: story
-grades: [2, 3]
+grades: [2]
 kavramlar: [""]
 anatemalar: ["Sosyal Yaşam Kuralları", "Çevre Bilinci", "Sağlık ve Güvenlik", "Toplumsal Duyarlılık", "Görgü Kuralları"]
 

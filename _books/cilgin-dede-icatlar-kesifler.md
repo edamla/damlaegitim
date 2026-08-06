@@ -18,7 +18,7 @@ paper: "1. Hamur"
 
 # Spesific Filterable Attributes
 genre: story
-grades: [3, 4]
+grades: [3]
 kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
 anatemalar: ["Zaman Mekan", "İcatlar ve Keşifler", "Tarih Bilinci", "Bilim Tarihi", "Merak ve Öğrenme"]
 
