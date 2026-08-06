@@ -1,24 +1,24 @@
 ---
 layout: previewbook
-title:  "Çılgın Problemler | 2-3-4.Sınıf"
-description: "2., 3. ve 4. sınıflar için eğlenceli matematik problem seti; problem çözme becerisini ve mantıksal düşünmeyi geliştirir."
+title:  "Tüm Dersler Soru Bankası 2. Sınıf"
+description: "2. sınıflar için tüm dersleri kapsayan tatil tekrar seti."
 categories: [Religion]
 tags: []
 
 # Standart Book Attributes
-ean: cilgin-problemler
+ean: 9786254116476
 languages: ["Türkçe"]
 page: 608
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
 examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/cilgin-problemler/index.html"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116476/index.html"
 damlaurl: ""
 
 # Spesific Filterable Attributes
 genre: education
-grades: [2, 3, 4]
+grades: [2]
 kavramlar: []
 anatemalar: []
 

@@ -1,24 +1,24 @@
 ---
 layout: previewbook
-title:  "TÜM DERSLER SORU BANKASI | 2-3-4.Sınıf"
-description: "2., 3. ve 4. sınıflar için tüm dersleri kapsayan tatil tekrar seti."
-categories: [Religion]
+title:  "Cankurtaran Denemeler Türkçe 8. Sınıf"
+description: ""
+categories: ["İlkokul"]
 tags: []
 
 # Standart Book Attributes
-ean: tum-dersler-234
+ean: 9786254110344
 languages: ["Türkçe"]
-page: 608
+page: 
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
 examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/tum-dersler-234/index.html"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254110344/index.html"
 damlaurl: ""
 
 # Spesific Filterable Attributes
 genre: education
-grades: [2, 3, 4]
+grades: [8]
 kavramlar: []
 anatemalar: []
 
@@ -27,4 +27,4 @@ youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
-<!--more--> 
+  

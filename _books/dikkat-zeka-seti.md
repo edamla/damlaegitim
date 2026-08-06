@@ -1,6 +1,6 @@
 ---
 layout: previewbook
-title:  "Dikkat Zeka Seti"
+title:  "Dikkat Zeka Ve Hafıza Geliştirme Seti"
 description: "Dikkat ve zeka gelişimini destekleyen çok yönlü etkinlik seti; okul öncesi ve ilkokul düzeyine uygun."
 categories: ["Okul Öncesi"]
 tags: []

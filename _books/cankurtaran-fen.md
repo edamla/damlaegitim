@@ -1,24 +1,24 @@
 ---
 layout: previewbook
-title:  "Yeni Nesil Kral Deneme"
-description: "4. sınıf için yeni nesil deneme sınavı; LGS formatına uygun soru tipleri ve kapsamlı kazanım değerlendirmesi sunar."
+title:  "Cankurtaran Denemeler Fen Bilimleri 8. Sınıf"
+description: ""
 categories: ["İlkokul"]
 tags: []
 
 # Standart Book Attributes
-ean: yeni-nesil-kral-deneme
+ean: 9786254110375
 languages: ["Türkçe"]
-page: 136
+page: 
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
 examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/yeni-nesil-kral-deneme/index.html"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254110375/index.html"
 damlaurl: ""
 
 # Spesific Filterable Attributes
 genre: education
-grades: [4]
+grades: [8]
 kavramlar: []
 anatemalar: []
 
@@ -27,6 +27,4 @@ youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
-
-<hr>
-<hr>
+  
