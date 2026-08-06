@@ -18,7 +18,7 @@ paper: "1. Hamur"
 
 # Spesific Filterable Attributes
 genre: story
-grades: [2, 3]
+grades: [2]
 kavramlar: [""]
 anatemalar: ["Değerler / Erdemler", "Karakter Gelişimi"]
 

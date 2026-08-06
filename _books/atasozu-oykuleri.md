@@ -18,7 +18,7 @@ paper: "1. Hamur"
 
 # Spesific Filterable Attributes
 genre: story
-grades: [3, 4]
+grades: [3]
 kavramlar: [""]
 anatemalar: ["Anadolu Kültürü", "Birey ve Toplum", "Dil Bilim", "Milli Kültür"]
 
