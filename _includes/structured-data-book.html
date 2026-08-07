@@ -2,7 +2,9 @@
 {% assign b = page %}
 {% capture book_seo_description %}{% include book-seo-description.html %}{% endcapture %}
 {% assign book_seo_description = book_seo_description | strip %}
-{% if b.ean and b.ean != '' %}
+{% if book_og_image and book_og_image != '' %}
+  {% assign book_image_url = book_og_image %}
+{% elsif b.ean and b.ean != '' %}
   {% assign book_image_url = site.url | append: site.baseurl | append: '/assets/images/ean/' | append: b.ean | append: '.jpg' %}
 {% else %}
   {% assign book_image_url = site.url | append: site.baseurl | append: '/assets/images/logo.png' %}
