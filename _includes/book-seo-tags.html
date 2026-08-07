@@ -1,17 +1,39 @@
 {% comment %}
   Kitap sayfaları için özel SEO meta etiketleri (description front matter olmadan).
   Önkoşul: book_seo_description değişkeni atanmış olmalı.
+  OG görsel: yalnızca JPG/PNG (WebP yok) — WhatsApp/Telegram önizlemesi için.
+  book_og_image assign'i structured-data-book.html tarafından da kullanılır.
+  Not: _config.yml books default image (logo) EAN kapağının önüne geçmemeli.
 {% endcomment %}
 {% assign book_canonical = site.url | append: site.baseurl | append: page.url %}
+{% assign book_og_image_width = 400 %}
+{% assign book_og_image_height = 452 %}
+{% assign book_og_image_type = 'image/png' %}
+{% assign book_og_image = site.url | append: site.logo %}
+{% assign default_book_image = 'assets/images/logo.png' %}
+
 {% if page.ean and page.ean != '' %}
   {% assign book_cover_jpg = 'assets/images/ean/' | append: page.ean | append: '.jpg' %}
-  {% assign book_cover_webp = 'assets/images/ean/' | append: page.ean | append: '.webp' %}
-  {% assign book_og_image = site.url | append: site.baseurl | append: '/' | append: book_cover_jpg %}
-  {% if site.data.webp_manifest and site.data.webp_manifest.assets contains book_cover_webp %}
-    {% assign book_og_image = site.url | append: site.baseurl | append: '/' | append: book_cover_webp %}
+  {% assign book_cover_has_jpg = false %}
+  {% for static_file in site.static_files %}
+    {% if static_file.path contains book_cover_jpg %}
+      {% assign book_cover_has_jpg = true %}
+    {% endif %}
+  {% endfor %}
+  {% if book_cover_has_jpg %}
+    {% assign book_og_image = site.url | append: site.baseurl | append: '/' | append: book_cover_jpg %}
+    {% assign book_og_image_type = 'image/jpeg' %}
   {% endif %}
-{% else %}
-  {% assign book_og_image = site.url | append: site.logo %}
+{% elsif page.image and page.image != '' and page.image != default_book_image %}
+  {% if page.image contains '/' %}
+    {% assign book_image_path = page.image %}
+  {% else %}
+    {% assign book_image_path = '/' | append: page.image %}
+  {% endif %}
+  {% assign book_og_image = site.url | append: site.baseurl | append: book_image_path %}
+  {% if page.image contains '.jpg' or page.image contains '.jpeg' %}
+    {% assign book_og_image_type = 'image/jpeg' %}
+  {% endif %}
 {% endif %}
 <title>{{ page.title }} | {{ site.name }}</title>
 <meta name="generator" content="Jekyll SEO (Damla Okul)" />
@@ -23,6 +45,11 @@
 <meta property="og:url" content="{{ book_canonical }}" />
 <meta property="og:site_name" content="{{ site.name | xml_escape }}" />
 <meta property="og:image" content="{{ book_og_image }}" />
+<meta property="og:image:secure_url" content="{{ book_og_image }}" />
+<meta property="og:image:type" content="{{ book_og_image_type }}" />
+<meta property="og:image:width" content="{{ book_og_image_width }}" />
+<meta property="og:image:height" content="{{ book_og_image_height }}" />
+<meta property="og:image:alt" content="{{ page.title | xml_escape }} — Damla Okul" />
 <meta property="og:type" content="product" />
 <meta name="twitter:card" content="{{ site.twitter.card | default: 'summary_large_image' }}" />
 <meta property="twitter:image" content="{{ book_og_image }}" />
