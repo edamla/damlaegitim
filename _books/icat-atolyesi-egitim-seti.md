@@ -6,7 +6,7 @@ categories: [Religion]
 tags: []
 
 # Standart Book Attributes
-ean: 9786059656795
+ean: 8697911222779
 languages: ["Türkçe"]
 page: 608
 size: "13,5x21 cm"
