@@ -14,6 +14,9 @@ SCAN_DIRS=(
   "assets/images/ean"
   "assets/images/slides"
 )
+SCAN_ROOT_DIRS=(
+  "assets/images"
+)
 MANIFEST="_data/webp_manifest.yml"
 QUALITY=82
 GENERATED=0
@@ -92,6 +95,15 @@ write_manifest() {
         echo "  - ${webp}"
       done < <(find "$dir" -type f -iname '*.webp' -print0 | sort -z)
     done
+    for dir in "${SCAN_ROOT_DIRS[@]}"; do
+      if [ ! -d "$dir" ]; then
+        continue
+      fi
+      while IFS= read -r -d '' webp; do
+        webp="${webp//\\/\/}"
+        echo "  - ${webp}"
+      done < <(find "$dir" -maxdepth 1 -type f -iname '*.webp' -print0 | sort -z)
+    done
   } > "$MANIFEST"
 }
 
@@ -127,6 +139,30 @@ for dir in "${SCAN_DIRS[@]}"; do
       echo "  ! Başarısız: $src" >&2
     fi
   done < <(find "$dir" -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) -print0)
+done
+
+for dir in "${SCAN_ROOT_DIRS[@]}"; do
+  if [ ! -d "$dir" ]; then
+    continue
+  fi
+
+  while IFS= read -r -d '' src; do
+    src="${src//\\/\/}"
+    dst="$(to_webp_path "$src")"
+
+    if ! needs_regenerate "$src" "$dst"; then
+      SKIPPED=$((SKIPPED + 1))
+      continue
+    fi
+
+    if convert_to_webp "$src" "$dst"; then
+      GENERATED=$((GENERATED + 1))
+      echo "  + $dst"
+    else
+      FAILED=$((FAILED + 1))
+      echo "  ! Başarısız: $src" >&2
+    fi
+  done < <(find "$dir" -maxdepth 1 -type f \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' \) -print0)
 done
 
 write_manifest

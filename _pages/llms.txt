@@ -8,6 +8,7 @@ permalink: /llms.txt
 ## Öne Çıkanlar
 - [Hakkımızda]({{ site.url }}{{ site.baseurl }}/hakkimizda): Damla Yayınevi geçmişi, okul yayınları ve Yeni Maarif Modeli uyumlu içerik yaklaşımı
 - [Ölçme ve Değerlendirme]({{ site.url }}{{ site.baseurl }}/olcme-degerlendirme): 4 Boyutlu Ölçme-Değerlendirme Sistemi, PISA destekli sorular ve Akıllı Optik
+- [Öykümatikle Tanışın]({{ site.url }}{{ site.baseurl }}/oykumatikle-tanisin): Hikâye kitapları için 4 boyutlu ölçme-değerlendirme ve kazanım analizi
 - [Sıkça Sorulan Sorular]({{ site.url }}{{ site.baseurl }}/sss): Maarif Modeli uyumu, sipariş ve ürün seçimi hakkında yanıtlar
 - [Ürünler]({{ site.url }}{{ site.baseurl }}/urunler): Sınıf ve tür bazlı eğitim setleri ile hikaye kitapları kataloğu
 - [Kataloglar]({{ site.url }}{{ site.baseurl }}/kataloglar): PDF ve HTML yayın katalogları

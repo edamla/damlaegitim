@@ -13,7 +13,7 @@ faq:
   - question: "Eğitim seti ile hikaye kitabı arasındaki fark nedir?"
     answer: "Eğitim setleri ders kazanımlarını pekiştirmeye yönelik etkinlik ve alıştırmalar içerir. Hikaye kitapları okuma kültürünü güçlendirmeyi, söz varlığını geliştirmeyi ve değerler eğitimini desteklemeyi hedefler."
   - question: "Ölçme ve değerlendirme sisteminiz nasıl çalışır?"
-    answer: "Damla Okul 4 Boyutlu Ölçme-Değerlendirme Sistemi, PISA destekli yeni nesil sorular ve Akıllı Optik Sistemi ile kazanım analizi sunar. Ayrıntılar için Ölçme ve Değerlendirme sayfamıza bakın."
+    answer: "Damla Okul 4 Boyutlu Ölçme-Değerlendirme Sistemi, PISA destekli yeni nesil sorular ve Akıllı Optik Sistemi ile kazanım analizi sunar. Hikâye kitapları için [Öykümatik](/oykumatikle-tanisin) ve [Hikâye Müfredatı](/hikaye-mufredati) sayfalarına; genel bilgi için [Ölçme ve Değerlendirme](/olcme-degerlendirme) sayfamıza bakın."
   - question: "Kitapları nasıl temin edebilirim?"
     answer: "Ürünler bayiler aracılığıyla satılmaktadır. Ürün sayfasındaki Bilgi veya Satın Al bağlantılarından ya da iletişim sayfamızdan bize ulaşarak en yakın satış noktasını öğrenebilirsiniz."
   - question: "Ürünlerin ön izlemesine nasıl erişirim?"

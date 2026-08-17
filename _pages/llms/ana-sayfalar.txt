@@ -11,6 +11,8 @@ permalink: /llms/ana-sayfalar.txt
 - [Kataloglar]({{ site.url }}{{ site.baseurl }}/kataloglar): Damla Okul yayın katalogları (PDF/HTML).
 - [Kitapla Büyüyen Sınıflar]({{ site.url }}{{ site.baseurl }}/kitapla-buyuyen-siniflar): Sosyal sorumluluk projesi: sınıflara kitap ulaştırma.
 - [Ölçme ve Değerlendirme]({{ site.url }}{{ site.baseurl }}/olcme-degerlendirme): 4 Boyutlu Ölçme-Değerlendirme Sistemi ve Akıllı Optik Sistemi.
+- [Öykümatikle Tanışın]({{ site.url }}{{ site.baseurl }}/oykumatikle-tanisin): Hikâye Ölçme ve Değerlendirme Sistemi (Öykümatik) tanıtımı; 4 katmanlı beceri temelli hikâye müfredatı.
+- [Hikâye Müfredatı]({{ site.url }}{{ site.baseurl }}/hikaye-mufredati): Kavramsal ve bilişsel süreçlere göre kazanım kodlama yapısı (H, 1K–4K, 1D–4D).
 - [Sıkça Sorulan Sorular]({{ site.url }}{{ site.baseurl }}/sss): Yayınlar, Maarif Modeli uyumu ve sipariş hakkında SSS.
 - [İletişim]({{ site.url }}{{ site.baseurl }}/iletisim): İletişim bilgileri, adres ve harita.
 - [Gizlilik Politikası]({{ site.url }}{{ site.baseurl }}/gizlilik-ve-kvkk): KVKK aydınlatma metni ve çerez politikası.
