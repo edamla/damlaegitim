@@ -9,7 +9,13 @@
   {% assign rl_books = rl_books | where_exp: "b", "b.grades contains rl_grade_num" %}
 {% endif %}
 {% if rl_theme != "" %}
-  {% assign rl_books = rl_books | where_exp: "b", "b.anatemalar contains rl_theme or b.tags contains rl_theme" %}
+  {% assign rl_filtered = "" | split: "" %}
+  {% for book in rl_books %}
+    {% if book.anatemalar contains rl_theme or book.tags contains rl_theme %}
+      {% assign rl_filtered = rl_filtered | push: book %}
+    {% endif %}
+  {% endfor %}
+  {% assign rl_books = rl_filtered %}
 {% endif %}
 
 {% if rl_grade != nil and rl_grade != "" %}
