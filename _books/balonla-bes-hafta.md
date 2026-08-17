@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Balonla Beş Hafta"
-description: "Klasik çocuk edebiyatından uyarlanan macera romanı; okuma kültürünü güçlendirir."
+description: "Gizemlerle dolu Afrika kıtasının henüz haritalandırılmamış, vahşi ve tehlikeli yardımcısı Joe, “Victoria” adını verdikleri ileri teknoloji ürünü bir…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -9,9 +9,9 @@ tags: []
 ean: 9786057288752
 languages: ["Türkçe"]
 page: "160 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288752/index.html"
 damlaurl: ""
@@ -22,7 +22,7 @@ authors: ["Jules Verne"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Altmış yüzyıldır çözülemeyen Afrikanın sırrı Victoria adlı bir balonla gökyüzünden aydınlanıyor"]
-anatemalar: ["Keşif Tutkusu", "Doğayla Mücadele", "Umut ve Çaresizlik", "Fedakârlık", Sadakat, "Kültürel Çatışma"]
+anatemalar: ["Keşif Tutkusu", "Fedakârlık", "Doğayla Mücadele", "Umut ve Çaresizlik", "Sadakat", "Kültürel Çatışma", "47 47"]
 
 # Social Media Attributes
 youtube:

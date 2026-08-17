@@ -28,3 +28,13 @@ youtube:
 # For adding excerpt add <!--more--> and break the line
 ---
 Sevgili Öğrenciler; Nitelikli yayınların vazgeçilmez adresi Damla Yayınevi olarak yepyeni bir anlayışla hazırladığımız “Öğrenci Dostu Kitaplar” serimizi sizlere sunmanın onurunu yaşıyoruz.
+
+## Maarif uyum tablosu
+
+| Ünite | Ders | TYMM kazanımı | Sayfa |
+| --- | --- | --- | --- |
+| 1. Tema | Türkçe | Okuduğu metindeki ana fikri ve yardımcı fikirleri belirler. | 14–22 |
+| 1. Tema | Matematik | Dört işlemle ilgili problem çözer. | 56–68 |
+| 2. Tema | Fen Bilimleri | Maddenin hâllerini gözlemler ve sınıflandırır. | 102–110 |
+
+<!--more-->

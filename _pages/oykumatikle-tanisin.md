@@ -36,3 +36,5 @@ detaylı olarak sunulmaktadır.
 ---
 
 [Hikâye Müfredatı]({{ site.baseurl }}/hikaye-mufredati) sayfasında kazanım kodlama yapısını inceleyebilirsiniz.
+
+<p class="mt-4"><a href="{{ site.baseurl }}/oykumatik/demo" class="btn btn-primary">Öykümatik demo raporunu dene</a></p>

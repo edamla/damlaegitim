@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Baskerville'lerin Köpeği"
+description: "Devonshire’ın sisli ve tekinsiz bataklıklarında, Baskerville soyunu yüzyıllardır Charles Baskerville’in malikânesinin bahçesinde, yüzünde dehşet verici…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786057288738
 languages: ["Türkçe"]
 page: "180 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288738/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sir Arthur Conan Doyle"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["batıl inançların aklı esir aldığı ıssız topraklarda gerçeğin peşinden koşan dahi bir dedektifin amansız mücadelesi"]
-anatemalar: ["doğaüstü inançlar", "korkunun gücü", "adalet arayışı", "miras hırsı", "sadakat ve görev", "gizlenen kimlikler"]
+anatemalar: ["Doğaüstü İnançlar", "Miras Hırsı", "Korkunun Gücü", "Adalet Arayışı", "Sadakat ve Görev", "Gizlenen Kimlikler", "doğaüstü inançlar"]
 
 # Social Media Attributes
 youtube:

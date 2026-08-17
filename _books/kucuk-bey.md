@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Küçük Bey"
+description: "Parıltılı ve zengin bir hayattan kopup kendini yoksul bir gecekondu mahallesinde dek sadece ‘Küçük Bey’ olarak el üstünde tutulan bu narin çocuk; dar…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "80 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115127/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Kemalettin Tuğcu"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Lüks salonların soğukluğundan kerpiç duvarların sıcaklığına uzanan bir sevgi köprüsü"]
-anatemalar: ["Sınıf Farklılıkları", "Aile Bağları", "Sadakat ve Dürüstlük", "Ahlak ve Vicdan", "Ön Yargı", "Gerçek Zenginlik"]
+anatemalar: ["Ahlak ve Vicdan", "Aile Bağları", "Sadakat ve Dürüstlük", "Ön Yargı", "Gerçek Zenginlik", "Sınıf Farklılıkları"]
 
 # Social Media Attributes
 youtube:

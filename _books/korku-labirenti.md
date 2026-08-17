@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Korku Labirenti"
+description: "Zeynep, Elif, Soykan ve Miraç’ın sıradan geçeceğini sandıkları yaz tatili, Hayalet çarken yanlışlıkla sığındıkları denizaltı mağarası, aslında hiç de…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "176 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116407/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Necati Akbaba"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Her kapının ardında yeni bir tuzak her adımda yeni bir bilmece cesaret vedostluğun sınandığı bu labirentten çıkış var mı"]
-anatemalar: ["Dayanışma", Cesaret, Gizem, "Açgözlülük", "Problem Çözme", "Doğa İlişkisi"]
+anatemalar: ["Dayanışma", "Açgözlülük", "Cesaret", "Gizem", "Problem Çözme", "Doğa İlişkisi"]
 
 # Social Media Attributes
 youtube:

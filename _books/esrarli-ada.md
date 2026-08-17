@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Jules Verne Esrarlı Ada"
+description: "Amerikan İç Savaşı’nın karanlık günlerinden kaçmak için bir balona binip fırtı- ortasında, haritalarda dahi bulunmayan ıssız bir adada bulurlar!…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786259895246
 languages: ["Türkçe"]
 page: "160 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895246/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Jules Verne"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Fırtınanın ortasından hiçliğe düşen beş kazazede için hayatta kalmak", "doğaya meydan okuyarak sıfırdan bir medeniyet kurmak  demekti."]
-anatemalar: ["İnsan Zekâsı", "Doğayla Mücadele", "Medeniyet İnşası", "Dayanışma ve Birlik", "Gizemli Güç", "Asla Pes Etmemek"]
+anatemalar: ["İnsan Zekâsı", "Dayanışma ve Birlik", "Doğayla Mücadele", "Medeniyet İnşası", "Gizemli Güç", "Asla Pes Etmemek"]
 
 # Social Media Attributes
 youtube:

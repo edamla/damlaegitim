@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "İnsan Neyle Yaşar"
+description: "Cezalandırılarak yeryüzüne, fakir bir ayakkabıcının yanına sürgüne gönderilen bir cevabını bulmak zorundadır: İnsanın içinde ne vardır? İnsana ne…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786057490490
 languages: ["Türkçe"]
 page: "80 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057490490/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["L. N. Tolstoy"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["İnsanı ayakta tutan hayata bağlayan ve var eden o büyük sırrı keşfetmeye hazır mısınız"]
-anatemalar: ["Sevgi ve Merhamet", "Vicdan ve Af", Empati, "Açgözlülük", "Öfke ve Kibir", "İlahi Adalet"]
+anatemalar: ["Sevgi ve Merhamet", "Açgözlülük", "Vicdan ve Af", "Empati", "Öfke ve Kibir", "İlahi Adalet"]
 
 # Social Media Attributes
 youtube:

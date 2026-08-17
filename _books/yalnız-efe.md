@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Yalnız Efe"
+description: "Tefeci Eseoğlu’nun bitmek bilmeyen zulmüne başkaldıran, haksız yere öldürü- Kezban’ın destansı hikâyesi! Osmanlı’nın son dönemlerinde, Anadolu’nun ücra…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786057274496
 languages: ["Türkçe"]
 page: "100 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274496/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Ömer Seyfettin"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Haksızlığa boyun eğmeyip tek başına dağa çıkan ve zalimlerin korkulu rüyası olan genç bir kızın efsanevi direnişi"]
-anatemalar: ["Adalet Arayışı", Vefa, "Millî Şuur", Vatanseverlik, Cesaret, "Zulüm ve Sömürü"]
+anatemalar: ["Adalet Arayışı", "Vatanseverlik", "Vefa", "Millî Şuur", "Cesaret", "Zulüm ve Sömürü"]
 
 # Social Media Attributes
 youtube:

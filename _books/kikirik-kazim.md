@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Kikirik Kazım"
+description: "Kikirik Kazım, lakabının hakkını veren, kıpır kıpır ve her daim eğlenceli bir çocuk! her şeyi hafife alan babası ve ondan çok daha zeki olan kız kardeşi…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "192 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051748788/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Diyetkolik bir anne rahat bir baba dâhi bir kız kardeş ve sınır tanımayan bir çocuğun bol kahkahalı serüveni"]
-anatemalar: ["Aile İçi İletişim", "Beden Algısı ve Diyet", "Empati ve Saygı", Sorumluluklar, "Bütçe Yönetimi", "Sağlıklı Beslenme"]
+anatemalar: ["Aile İçi İletişim", "Sorumluluklar", "Beden Algısı ve Diyet", "Empati ve Saygı", "Bütçe Yönetimi", "Sağlıklı Beslenme"]
 
 # Social Media Attributes
 youtube:

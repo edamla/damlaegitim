@@ -27,6 +27,10 @@ contact_phone_href: "tel:+902125142828"
 contact_email: "iletisim@damlayayinevi.com.tr"
 contact_address: "Alemdar Mh. Prof. Kazım İsmail Gürkan Cad. No:8 Fatih, 34110 İstanbul"
 
+# Form endpoints (Google Apps Script / Forms embed — Workspace'te oluşturulur)
+ogretmen_submit_url: ""
+teklif_form_url: ""
+
 # behold.so instagram carousel
 instagram_carousel:
   username: okul.damla

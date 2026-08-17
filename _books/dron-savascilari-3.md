@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Dron Savaşçıları-3"
+description: "Bilimkurgu ve aksiyon dolu macera hız kesmeden devam ediyor! Yaren, Ümit karanlık gölgeleri peşlerini bırakmaz. İntikam ateşiyle yanıp tutuşan Kenan ve…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "192 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051749358/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Necati Akbaba"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Lazer silahlı dronların retina taramalı gizli kasaların ve suç şebekelerinin çarpıştığı yüksek teknoloji ile donatılmış bir macera"]
-anatemalar: ["Teknoloji ve İcatlar", "Sorumluluk Bilinci", Casusluk, "Suç Şebekeleri", "Kararlılık", "Mücadele"]
+anatemalar: ["Teknoloji ve İcatlar", "Suç Şebekeleri", "Sorumluluk Bilinci", "Casusluk", "Kararlılık", "Mücadele"]
 
 # Social Media Attributes
 youtube:

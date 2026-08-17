@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Bohemya'da Bir Skandal"
+description: "Dünyaca ünlü dedektif Sherlock Holmes, bu kez sıradan bir hırsızlık vakasıyla Bohemya Kralı, herkesten gizlediği kimliğiyle Baker Sokağı’ndaki ünlü…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786057274465
 languages: ["Türkçe"]
 page: "120 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274465/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sir Arthur Conan Doyle"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Avrupa’nın kaderini belirleyecek bir skandaldan ölümden dönen efsanevi dedektifin amansız avına kadar uzanan beş nefes kesici macera"]
-anatemalar: ["Gözlem gücü", bencillik, "detayların önemi", "kadın zekası", sadakat, "geçmişle yüzleşme"]
+anatemalar: ["Gözlem Gücü", "Kadın Zekâsı", "Bencillik", "Detayların Önemi", "Sadakat", "Geçmişle Yüzleşme", "kadın zekası"]
 
 # Social Media Attributes
 youtube:

@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Madalyonun Öteki Yüzü"
+description: "Annesinin esrarengiz vasiyeti üzerine, yıllardır hiç ayak basmadığı o kasabaya yapbozun da ortasında bulur. Annesinden yadigâr kalan, üzerinde eski…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "160 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053837176/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Geçmişin karanlık sırları ve yarım bir madalyon Genç Hafiyeler Çetesi için tehlikeli macera şimdi başlıyor"]
-anatemalar: ["Aile Sırları", "Dayanışma", "Fedakârlık", "Ön Yargılar", "İhanet", "Emaneti Koruma"]
+anatemalar: ["Aile Sırları", "Ön Yargılar", "Dayanışma", "Fedakârlık", "İhanet", "Emaneti Koruma"]
 
 # Social Media Attributes
 youtube:

@@ -1,0 +1,44 @@
+---
+layout: default
+---
+<div class="container py-4">
+  <header class="mb-4">
+    <h1 class="display-5">{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="lead text-muted">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  {% assign grade_num = page.grade | plus: 0 %}
+  {% assign grade_books = site.books | where_exp: "b", "b.grades contains grade_num" %}
+  {% assign story_books = grade_books | where_exp: "b", "b.genre == 'story'" %}
+  {% assign education_books = grade_books | where_exp: "b", "b.genre == 'education'" %}
+
+  {% if education_books.size > 0 %}
+  <section class="mb-5" aria-labelledby="sinif-egitim-heading">
+    <h2 id="sinif-egitim-heading" class="h3 mb-3">Eğitim setleri</h2>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+      {% for book in education_books %}
+      <div class="col">{% include book-card.html book=book %}</div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if story_books.size > 0 %}
+  <section class="mb-5" aria-labelledby="sinif-hikaye-heading">
+    <h2 id="sinif-hikaye-heading" class="h3 mb-3">Hikaye kitapları</h2>
+    <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+      {% for book in story_books %}
+      <div class="col">{% include book-card.html book=book %}</div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+
+  {% if grade_books.size == 0 %}
+  <p class="text-muted">Bu sınıf için henüz listelenen ürün bulunmuyor.</p>
+  {% endif %}
+
+  <p class="mt-4"><a href="{{ site.baseurl }}/okuma-listeleri/{{ page.grade }}-sinif.html" class="btn btn-outline-primary btn-sm">Okuma listesine git</a></p>
+</div>

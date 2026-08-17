@@ -3235,6 +3235,174 @@ div.a2a_full_footer {display:none;}
 
 
 
+/* Öğretmen müfredat kutusu (hikaye) */
+
+.book-curriculum-box {
+
+  background: linear-gradient(135deg, #f4faf7 0%, #fff 100%);
+
+  border: 1px solid #e3efe9;
+
+  border-radius: calc(var(--radius, 0.5rem) * 2);
+
+  padding: 1.5rem;
+
+  margin-bottom: 1.5rem;
+
+}
+
+.book-curriculum-box__title {
+
+  font-family: var(--font-display);
+
+  font-size: 1.25rem;
+
+  font-weight: 600;
+
+  color: var(--color-primary-dark, #028a66);
+
+  margin: 0 0 1rem;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+}
+
+.book-curriculum-box__section {
+
+  margin-bottom: 1rem;
+
+}
+
+.book-curriculum-box__section:last-child {
+
+  margin-bottom: 0;
+
+}
+
+.book-curriculum-box__label {
+
+  font-size: 0.8rem;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.04em;
+
+  color: var(--color-muted, #6c757d);
+
+  margin: 0 0 0.5rem;
+
+}
+
+.book-curriculum-box__kavramlar {
+
+  margin: 0;
+
+  padding-left: 1.25rem;
+
+  color: #4a5568;
+
+  line-height: 1.6;
+
+}
+
+.book-curriculum-box__kavramlar li {
+
+  margin-bottom: 0.35rem;
+
+}
+
+
+
+/* Maarif uyum tablosu (eğitim seti gövdesi) */
+
+.maarif-content table,
+
+.article-post table.maarif-table {
+
+  width: 100%;
+
+  border-collapse: collapse;
+
+  margin: 1.5rem 0;
+
+  font-size: 0.9rem;
+
+}
+
+.maarif-content h2 + table,
+
+.maarif-content h3 + table {
+
+  margin-top: 0.75rem;
+
+}
+
+.maarif-content table th,
+
+.maarif-content table td,
+
+.article-post table.maarif-table th,
+
+.article-post table.maarif-table td {
+
+  border: 1px solid #e3efe9;
+
+  padding: 0.6rem 0.75rem;
+
+  text-align: left;
+
+  vertical-align: top;
+
+}
+
+.maarif-content table th,
+
+.article-post table.maarif-table th {
+
+  background: #f4faf7;
+
+  color: var(--color-primary-dark, #028a66);
+
+  font-weight: 600;
+
+}
+
+
+
+/* Okuma listeleri */
+
+.reading-list {
+
+  margin-bottom: 3rem;
+
+}
+
+.reading-list__title {
+
+  font-family: var(--font-display);
+
+  font-size: 1.5rem;
+
+  margin-bottom: 0.75rem;
+
+}
+
+.reading-list__intro {
+
+  max-width: 42rem;
+
+  margin-bottom: 1.5rem;
+
+}
+
+
+
 .book-meta__item {
 
   display: flex;

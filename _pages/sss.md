@@ -28,6 +28,10 @@ faq:
     answer: "Önce sınıf düzeyi ve ders ihtiyacını belirleyin; eğitim setleri kazanım pekiştirme, hikaye kitapları okuma kültürü için uygundur. Ürün sayfalarındaki ana temalar, kavramlar ve ön izleme bağlantıları içerik uyumunu değerlendirmenize yardımcı olur."
   - question: "Damla Okul yayınları nerede satılır?"
     answer: "Yayınlar yetkili bayiler ve dağıtım kanalları aracılığıyla satılır. Ürün sayfasındaki Bilgi veya Satın Al bağlantılarından ya da iletişim formu üzerinden en yakın satış noktası hakkında bilgi alabilirsiniz."
+  - question: "Öğretmen olarak ürün talebi nasıl iletebilirim?"
+    answer: "[Öğretmen Köşesi](/ogretmen) sayfasından sınıfınızı seçip ürün listesi oluşturabilir ve talebinizi gönderebilirsiniz. Talebiniz en geç 48 saat içinde değerlendirilir."
+  - question: "Okul programı için teklif nasıl alınır?"
+    answer: "[Teklif formu](/teklif) üzerinden okulunuz için program teklifi talep edebilirsiniz. Yetkili bayimiz iş günü içinde 48 saat içinde sizinle iletişime geçer."
 ---
 
 {% include faq-list.html %}

@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Dağdaki Yabancı"
+description: "Erol, yaz tatili için geldiği Kavaklı’da, hayallerindeki o yeşil ve neşeli köyü değil; birer birer şehre göçtüğü bu yorgun köyde, Erol’un yolu dağlarda…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "80 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113277/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Kemalettin Tuğcu"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Kurumuş topraklara can veren su bazen ön yargılarla çoraklaşmış kalpleri de yeşertir"]
-anatemalar: ["Cehalet ve Ön Yargı", "Dayanışma", "Yalnızlık", "Doğa Sevgisi", Affetmek, "Yardımlaşma"]
+anatemalar: ["Cehalet ve Ön Yargı", "Doğa Sevgisi", "Dayanışma", "Yalnızlık", "Affetmek", "Yardımlaşma"]
 
 # Social Media Attributes
 youtube:

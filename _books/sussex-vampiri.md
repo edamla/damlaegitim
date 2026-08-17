@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Sussex Vampiri"
+description: "Sevecenliğiyle tanınan Bayan Ferguson, aniden ortaya çıkan tuhaf ve ürkütücü kahreden olay ise, karısını kendi öz bebeğinin boynundan kan emerken yakala-…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786057274489
 languages: ["Türkçe"]
 page: "160 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274489/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sir Arthur Conan Doyle"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Doğru görüyorsun ama gözlemlemiyorsun Aradaki fark çok açık"]
-anatemalar: ["Gözlem ve Mantık", "Kıskançlık ve Fedakârlık", "Mantık ve Duygu", "Kanun ve Adalet", "Hırs", Aldatmaca]
+anatemalar: ["Gözlem ve Mantık", "Kanun ve Adalet", "Kıskançlık ve Fedakârlık", "Mantık ve Duygu", "Hırs", "Aldatmaca"]
 
 # Social Media Attributes
 youtube:

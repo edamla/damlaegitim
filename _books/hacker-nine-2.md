@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Hacker Nine - 2"
+description: "Zamanın içinden gelen karanlık bir gölge ve yazılan hatalı bir kod... Hacker kendisini de büküyor! Geçmiş ile geleceğin birbirine karıştığı, insanların…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "160 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115172/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Nur Dombaycı"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Geçmişte yazılan ufak bir kod geleceğin kaderini tamamen değiştirebilir"]
-anatemalar: ["Yapay Zekâ", "Takım Çalışması", Distopya, "Sevgi ve Zekâ", "Şifreleme", "Cesaret ve Sorumluluk"]
+anatemalar: ["Yapay Zekâ", "Sevgi ve Zekâ", "Takım Çalışması", "Distopya", "Şifreleme", "Cesaret ve Sorumluluk"]
 
 # Social Media Attributes
 youtube:

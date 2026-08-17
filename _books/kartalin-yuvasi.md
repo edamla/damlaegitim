@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Kartalın Yuvası"
+description: "Şehrin boğucu gürültüsünden ve insan doğasının acımasızlığından kaçan çaresiz bir komşu bu ıssız dağ başında, çilekeş Ümmühan Nine ve torunu Mustafa’nın…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "80 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113314/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Kemalettin Tuğcu"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["İnsanların merhametsizliğinden kaçan yaralı yüreklerin sarp kayalıklardaki sessiz direnişi"]
-anatemalar: ["İftira", "Kıskançlık", Metanet, "İyilik ve Merhamet", Adalet, Azim]
+anatemalar: ["İftira", "İyilik ve Merhamet", "Kıskançlık", "Metanet", "Adalet", "Azim"]
 
 # Social Media Attributes
 youtube:

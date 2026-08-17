@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Tiyatro Baskını"
+description: "Cingöz Recai, bu kez sahne ışıklarının altında, akılalmaz bir kedi-fare oyunu Başkomiser Mehmed Rıza’yı ve polis teşkilatını bir kez daha şaşkına…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "144 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836384/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Peyami Safa"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["En zeki insanlar bile böyle aldanırlar Dirayet imtihanlarında her zaman birinci çıkmak mümkün değildir"]
-anatemalar: ["Akıl Oyunları", "Ezeli Rekabet", "Strateji ve Planlama", "Kılık Değiştirme", "Adalet Anlayışı", "Soğukkanlılık"]
+anatemalar: ["Akıl Oyunları", "Kılık Değiştirme", "Ezelî Rekabet", "Strateji ve Planlama", "Adalet Anlayışı", "Soğukkanlılık", "Ezeli Rekabet"]
 
 # Social Media Attributes
 youtube:

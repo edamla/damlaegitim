@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Dron Savaşçıları-5"
+description: "Dron Savaşçıları serisinin nefes kesen finaline hazır olun! Bu kez Kenan ve tır. Yaren, Okan ve Ümit bir yandan Karanlık Orman’ın çözülemeyen sırlarıyla…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "216 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254112867/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Necati Akbaba"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Acımasız yasa dışı teşkilatların lazer silahlı dronlarına karşı zekâ ve cesaretin gökyüzündeki büyük kapışması başlıyor"]
-anatemalar: ["Yenilikçilik", "Bilimin Gücü", "Adalet Arayışı", "Dayanışma", Cesaret, Umut]
+anatemalar: ["Yenilikçilik", "Dayanışma", "Bilimin Gücü", "Adalet Arayışı", "Cesaret", "Umut"]
 
 # Social Media Attributes
 youtube:

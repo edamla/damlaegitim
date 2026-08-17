@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Ozanların Dilinden Anadolu"
+description: "Sazın teline her vurduklarında Anadolu’nun kalbini titreten, dağları, ovaları ve eşsiz bir yolculuk... Sınır boylarındaki kahramanlık destanları, sel ve…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "200 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051742687/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Rüyalarında Kırklar meclisinden aşk badesi içip yâr uğruna yollara düşen Sümmanî ve Nihanînin mahşere kalan destansı sevdaları"]
-anatemalar: ["İlahi Aşk", "Gurbet ve Hasret", "Kader ve Tevekkül", "Kültürel Aktarım", "Vatan Sevgisi", "Tasavvuf ve Maneviyat"]
+anatemalar: ["İlahi Aşk", "Kültürel Aktarım", "Gurbet ve Hasret", "Kader ve Tevekkül", "Vatan Sevgisi", "Tasavvuf ve Maneviyat"]
 
 # Social Media Attributes
 youtube:

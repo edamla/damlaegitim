@@ -27,4 +27,12 @@ youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
+## Maarif uyum tablosu
+
+| Ünite | Ders | TYMM kazanımı | Sayfa |
+| --- | --- | --- | --- |
+| 1. Tema | Türkçe | Okuduğu metindeki ana fikri belirler. | 12–18 |
+| 1. Tema | Matematik | Doğal sayılarla toplama işlemi yapar. | 45–52 |
+| 2. Tema | Hayat Bilgisi | Aile bireylerinin görev ve sorumluluklarını açıklar. | 88–95 |
+
 <!--more--> 

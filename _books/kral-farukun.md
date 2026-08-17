@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Kral Faruk’un Elmasları"
+description: "Türk edebiyatının efsanevi kibar hırsızı Cingöz Recai, bu kez gözünü uluslararası ardında birçok soru işareti bırakan şüpheli ölümünün ardından,…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "336 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053837787/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Peyami Safa"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Prenses Zülfiyenin gizemli ölümüyle başlayan ve Kral Farukun paha biçilmez elmaslarına uzanan nefes kesici bir serüven"]
-anatemalar: ["Akıl Oyunları", "İhanet ve Kıskançlık", Gizem, "Kılık Değiştirme", "Tehlike Tutkusu", "Siyasi Entrikalar"]
+anatemalar: ["Akıl Oyunları", "Kılık Değiştirme", "İhanet ve Kıskançlık", "Gizem", "Tehlike Tutkusu", "Siyasi Entrikalar"]
 
 # Social Media Attributes
 youtube:

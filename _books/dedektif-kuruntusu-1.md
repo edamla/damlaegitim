@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Dedektif Kuruntusu-1"
-description: "Dedektif Kuruntusu serisinin başlangıç kitabı; gizem ve mantık yürütme becerilerini destekler."
+description: "Okulun “belalı kızı” olarak bilinen Fatma, resim atölyesindeki en önemli tablonun bu kez durum farklıdır; çünkü okulun en zeki çocuğu Ali Bozkurt,…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -11,7 +11,7 @@ languages: ["Türkçe"]
 page: "96 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051743523/index.html"
 damlaurl: ""
@@ -22,7 +22,7 @@ authors: ["Esra Avgören"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Okulun en belalı kızı ile en zeki çocuğu bir araya gelirse ne olur Karşınızda her kapıyı açan yeni ikili dedektif kuruntusu"]
-anatemalar: ["Ön Yargılar", "Gözlem ve Düşünce", "Adalet Arayışı", "İş Birliği", "Dürüstlük", "Kıskançlık"]
+anatemalar: ["Ön Yargılar", "İş Birliği", "Gözlem ve Düşünce", "Adalet Arayışı", "Dürüstlük", "Kıskançlık"]
 
 # Social Media Attributes
 youtube:

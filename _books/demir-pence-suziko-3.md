@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Demir Pençe Suziko-3"
+description: "Antarktika’nın dondurucu soğuğunu ardında bırakan kahramanlarımız Alper, Oğuz Japonya’nın karlı Fuji Dağı’ndan Çin Seddi’ne, Orhun Abideleri’nden…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "192 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254110481/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Asyanın gizemli sokaklarında yapay zekâlı robot Suziko vearkadaşlarının tehlikeli casuslardan kaçış serüveni"]
-anatemalar: ["Yapay Zekâ", Vatanseverlik, "Kültürel Keşif", "Tarih Bilinci", "Dayanışma", Macera]
+anatemalar: ["Yapay Zekâ", "Tarih Bilinci", "Vatanseverlik", "Kültürel Keşif", "Dayanışma", "Macera"]
 
 # Social Media Attributes
 youtube:

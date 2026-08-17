@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Hayalet Adasının Lanetli Hazinesi"
+description: "Olgun, İsmail ve Vildan kardeşlerin sıradan günleri, esrarengiz bir hatıra defteri derinliklerinde, karanlık deniz altı mağaralarında ve ürkütücü…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "224 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254110566/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Necati Akbaba"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Bu enerji kaynağı kötü insanların eline geçtiği takdirde tüm gezegeni bir anda yok edecek güce de sahipmiş"]
-anatemalar: ["Macera Tutkusu", "Şifre Çözme", Teknoloji, "Dayanışma", "İyilik", "Evrenin Düzeni"]
+anatemalar: ["Macera Tutkusu", "Dayanışma", "Şifre Çözme", "Teknoloji", "İyilik", "Evrenin Düzeni"]
 
 # Social Media Attributes
 youtube:

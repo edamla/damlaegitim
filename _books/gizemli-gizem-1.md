@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Gizemli Gizem-1"
-description: "Gizemli Gizem serisinin ilk kitabı; sürükleyici hikaye ile okuma motivasyonu sağlar."
+description: "Dünyadaki her şeyin peşinden koşmayı kendine görev edinen rekortmen kızımız Kardeşinin yardıma mı ihtiyacı var? Ninesinin ördeği mi kayboldu? Gizem her…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -11,7 +11,7 @@ languages: ["Türkçe"]
 page: "160 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051748818/index.html"
 damlaurl: ""
@@ -22,7 +22,7 @@ authors: ["Nehir Aydın Gökduman"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Yerinde duramayan kıpır kıpır bir kızın tekerlekli ev hayaliyle başlayan eğlenceli koşusu"]
-anatemalar: ["Hayal Gücü", Sorumluluk, Empati, "Kardeşlik", "Yardımlaşma", "İletişim"]
+anatemalar: ["Hayal Gücü", "Kardeşlik", "Sorumluluk", "Empati", "Yardımlaşma", "İletişim"]
 
 # Social Media Attributes
 youtube:

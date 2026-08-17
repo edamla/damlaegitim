@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Cingöz Kafeste"
+description: "İyiliksever ve kibar hırsızımız Cingöz Recai, bu kez köşeye sıkışıyor! Zekâsı ve göz, Başkomiser Mehmed Rıza’nın kurduğu ustaca bir tuzağın içine, yani…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "144 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053837183/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Peyami Safa"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Kurnazlığı ve zekâsıyla polisi peşinden sürükleyen kibar hırsız CingözRecainin akılalmaz maceraları"]
-anatemalar: ["Zekâ Çatışması", "Özgüven", Adalet, "Yanılsama", Zaaflar, "Ortak Düşman"]
+anatemalar: ["Zekâ Çatışması", "Yanılsama", "Özgüven", "Adalet", "Zaaflar", "Ortak Düşman"]
 
 # Social Media Attributes
 youtube:

@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Hacker Nine - 1"
+description: "kendi oyununu yaz! Nine ile dijital dünyanın sırlarını çözmeye hazır Pofuduk terlikli Hacker Mahalledeki gizemli şatodan gelen garip sesler, sıradan bir…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "168 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113017/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Nur Dombaycı"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Oyun oynamayı bırak kendi oyununu yaz Pofuduk terlikli Hacker Nine ile dijital dünyanın sırlarını çözmeye hazır mısın"]
-anatemalar: ["Bilinçli Teknoloji", "Dayanışma", Cesaret, "Yapay Zekâ", "Empati ve İyilik", "Sanal Gerçeklik"]
+anatemalar: ["Bilinçli Teknoloji", "Yapay Zekâ", "Dayanışma", "Cesaret", "Empati ve İyilik", "Sanal Gerçeklik"]
 
 # Social Media Attributes
 youtube:

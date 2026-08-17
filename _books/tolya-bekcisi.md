@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Tolya Bekçisi"
+description: "Birbirinden tamamen habersiz seçilmiş üç cesur genç ve iki fantastik dünya ara- aniden çıkan korkunç bir yangının ortasında kendini “nefislerin” karanlık…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "144 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839606/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Esra Avgören"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["İki dünya arasındaki kapının mührü çatladığında karanlığı durduracak tek şey Tolya Bekçisinin cesaretidir"]
-anatemalar: [Sorumluluk, "İnancın Gücü", Cesaret, "Nefis Mücadelesi", "Doğa Sevgisi", "Kendini Keşfetme"]
+anatemalar: ["Sorumluluk", "Nefis Mücadelesi", "İnancın Gücü", "Cesaret", "Doğa Sevgisi", "Kendini Keşfetme"]
 
 # Social Media Attributes
 youtube:

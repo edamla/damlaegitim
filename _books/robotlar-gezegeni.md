@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Robotlar Gezegeni"
+description: "Hüseyin, Göktuğ ve Gül, okuldaki üstün başarılarının ödülü olarak hayallerini düşerek gizlice bir uzay mekiğine binmeleri, bu sıradan okul gezisini…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "208 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051745138/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Necati Akbaba"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Masum bir okul gezisinin galaksiler arası nefes kesici bir hayatta kalma mücadelesine dönüştüğü an"]
-anatemalar: ["Keşif", "Dayanışma", "Özgürlük Mücadelesi", "Yapay Zekâ", "Kriz Yönetimi", "Aile Özlemi"]
+anatemalar: ["Keşif", "Yapay Zekâ", "Dayanışma", "Özgürlük Mücadelesi", "Kriz Yönetimi", "Aile Özlemi"]
 
 # Social Media Attributes
 youtube:

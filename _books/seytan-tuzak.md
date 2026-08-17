@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Şeytanî Tuzak"
+description: "Kibar hırsızımız Cingöz Recai, bu kez ava giderken avlanma tehlikesiyle karşı tiflerin, kurnaz dolandırıcıların ve sinsi planların kol gezdiği karanlık…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "144 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053837206/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Peyami Safa"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Çalınan mücevherler sahte dedektifler ve akılalmaz kaçış planlarıyla dolu okuru ters köşeye yatıran soluksuz bir polisiye macerası"]
-anatemalar: ["Akıl Oyunları", "Özgüven ve Gurur", "İllüzyon", "Kimlik Karmaşası", "Yerel Zekâ", Mizah]
+anatemalar: ["Akıl Oyunları", "Kimlik Karmaşası", "Özgüven ve Gurur", "İllüzyon", "Yerel Zekâ", "Mizah"]
 
 # Social Media Attributes
 youtube:

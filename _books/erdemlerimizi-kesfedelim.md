@@ -1,56 +1,41 @@
 ---
 layout: book
 title:  "Erdemlerimizi Keşfedelim (10 Kitap)"
+description: "MESapan... LERİ İnsanı insan yapan...MES LERİ Ben İnsanı insan yapan... MES LERİ İnsanı insan yapan... MES LERİ İnsanı insan yapan... Çınarın Feryadı…"
 categories: ["Hikaye", "İlkokul"]
-tags: []
+tags: ["Doğru Karar Vermek", "Haksızlık Yapmamak", "Yalan Söylememek", "Yeteneklerini Keşfetmek", "Fedakâr Olmak", "Vefalı Olmak", "Sorumluluk", "Söz Dinlemek", "Paylaşmak", "Hasta Ziyareti", "Cesaret", "Yardımseverlik", "Fedakârlık", "Dürüstlük", "Kanaatkârlık", "Doğayı Korumak"]
 
 # Standart Book Attributes
 ean: 9786053831181
 languages: ["Türkçe"]
 page: "Her Biri 48"
-size: "14x20 cm"
+size: "13,5x19,5 cm"
 publish-number: 1335
 cover: "Karton Kapak"
 examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/erdemlerimizi-kesfedelim-y.pdf"
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053831181/mobile/index.html"
 damlaurl: ""
 paper: "1. Hamur"
+authors: ["Sara Gürbüz Özeren"]
+illustrators: ["Sernur Işık"]
 
 # Spesific Filterable Attributes
 genre: story
 grades: [2]
 kavramlar: [""]
-anatemalar: ["Değerler / Erdemler", "Karakter Gelişimi"]
+anatemalar: ["Hikâyelerle Değerler Eğitimi", "Erdemler ile Karakter Gelişimi", "Özveri", "Değerler / Erdemler", "Karakter Gelişimi"]
 
 # Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
-İnsanı insan yapan, insanı yücelten, keşfedilmeyi bekleyen erdemlerimiz…
-Hepsi “Erdemlerimizi Keşfedelim” kitaplarında…
-Kitaplar, hayat bilgisi kazanımları ile uyumludur. Edinilecek kazanımlar kitap başlangıçlarında verilmiştir.
+MESapan... LERİ İnsanı insan yapan...MES LERİ Ben İnsanı insan yapan... MES LERİ İnsanı insan yapan... MES LERİ İnsanı insan yapan... Çınarın Feryadı n... Baba PenguenİnisnanFı yeüdcaeltkeân.r..lığı bekleyen UzaydanİnsGaneı ylüecenltleen..r. Kıİrnsmanıaydücıemlten... AçgözlİünsanKı yuürceltten... .. Keşfedilmeyi bekleyen Keşfedilmeyi bekleyen Keşfedilmeyi bekleyen Keşfedilmeyi bekleyen erdemlerimiz... erdemlerimiz... erdemlerimiz... erdemlerimiz...
 
-Haksızlık Yapmamak - Dürüstlük - İyi yürekli olmak - Fedakârlık - Doğayı Korumak - Affetmek - Vefalı Olmak - Özür Dilemeyi Bilmek - Kanaatkârlık - Saygı - Yardımseverlik - Yalan Söylememek - Cesaret - Paylaşmak - Böbürlenmemek
+**TEMALAR:** Hikâyelerle Değerler Eğitimi, Erdemler ile Karakter Gelişimi, Özveri
 
-1- Uzaydan Gelenler
+**KAZANIMLAR:** Olumlu Davranış Geliştirmek, Erdemleri Öğrenmek, Yeni Kelimeler Öğrenmek, Yeni Deyim ve Atasözü Öğrenmek
 
-2- Ben Kırmadım
+**ETİKETLER:** Doğru Karar Vermek, Haksızlık Yapmamak, Yalan Söylememek, Yeteneklerini Keşfetmek, Fedakâr Olmak, Vefalı Olmak, Sorumluluk, Söz Dinlemek, Paylaşmak, Hasta Ziyareti, Cesaret, Yardımseverlik, Fedakârlık, Dürüstlük, Kanaatkârlık, Doğayı Korumak
 
-3- Baba Penguenin Fedakârlığı
-
-4- Açgözlü Kurt
-
-5- Çınarın Feryadı
-
-6- Güneşin Öfkesi
-
-7- Vefalı At
-
-8- Nene Hatun
-
-9- Dağınık Emre’nin Rüyası
-
-10- Hayat Ağacı
-
-<!--more--> 
+<!--more-->

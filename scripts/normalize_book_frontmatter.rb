@@ -8,11 +8,11 @@ require 'date'
 BOOKS_DIR = Pathname.new(__dir__).join('..', '_books').expand_path
 EXAMLINK_PREFIX = 'https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/'.freeze
 
-HEADER_KEYS = %w[layout title categories tags].freeze
+HEADER_KEYS = %w[layout title description categories].freeze
 STANDARD_KEYS = %w[ean languages page size publish-number cover examlink preview_link damlaurl].freeze
 OPTIONAL_STANDARD_KEYS = %w[original-name original-language].freeze
-BOOK_DETAIL_KEYS = %w[paper authors].freeze
-FILTERABLE_KEYS = %w[genre grades kavramlar anatemalar].freeze
+BOOK_DETAIL_KEYS = %w[paper authors illustrators].freeze
+FILTERABLE_KEYS = %w[genre grades tags kavramlar anatemalar].freeze
 
 def parse_frontmatter(content)
   match = content.match(/\A---\r?\n(.*?)\r?\n---\r?\n(.*)\z/m)
@@ -90,6 +90,7 @@ def build_frontmatter(data)
 
   HEADER_KEYS.each do |key|
     next unless data.key?(key)
+    next if key == 'description' && (data[key].nil? || data[key].to_s.empty?)
 
     prefix = key == 'title' ? "#{key}:  " : "#{key}: "
     lines << "#{prefix}#{yaml_value(data[key], key: key)}"

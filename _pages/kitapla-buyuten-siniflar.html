@@ -85,6 +85,37 @@ footer_order: 15
     margin-bottom: 1.1rem;
   }
 
+  .kbs-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 1.25rem;
+    background: #fff;
+    border: 1px solid var(--kbs-border);
+    border-radius: calc(var(--radius, 0.5rem) * 2);
+  }
+
+  .kbs-stat {
+    text-align: center;
+    min-width: 6rem;
+  }
+
+  .kbs-stat strong {
+    display: block;
+    font-size: 1.75rem;
+    color: var(--kbs-accent-dark);
+    font-weight: 700;
+  }
+
+  .kbs-stat span {
+    font-size: 0.85rem;
+    color: var(--color-muted, #6c757d);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
   .kbs-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -229,6 +260,21 @@ footer_order: 15
       <strong>Damla Yayın Grubu</strong> olarak, okurla kitap arasındaki bağın her şeyin ötesinde bir bağ olduğunu düşünüyor ve bu bağın en sağlıklı kurulduğu ortamlardan birinin de sınıflar olduğuna inanıyoruz.
     </p>
   </section>
+
+  <div class="kbs-stats" role="group" aria-label="Proje sayıları">
+    <div class="kbs-stat">
+      <strong>120+</strong>
+      <span>okul</span>
+    </div>
+    <div class="kbs-stat">
+      <strong>40+</strong>
+      <span>il</span>
+    </div>
+    <div class="kbs-stat">
+      <strong>15.000+</strong>
+      <span>kitap</span>
+    </div>
+  </div>
 
   <div class="kbs-intro">
     <p>

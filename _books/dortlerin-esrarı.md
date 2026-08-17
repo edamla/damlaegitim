@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Dörtlerin Esrarı"
+description: "Hindistan’daki Büyük İsyan’ın yarattığı kargaşadan faydalanan üç yerli asker ve bu kanlı servetin beraberinde getireceği felaketlerden habersiz olan dört…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786057288714
 languages: ["Türkçe"]
 page: "140 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288714/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sir Arthur Conan Doyle"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Hindistan’ın tehlikeli bataklıklarında edilen bir intikam yemini yıllar sonra İngiltere’nin kalbinde kanlı bir cinayetle yüzeye çıkıyor"]
-anatemalar: ["ahlaki çöküş", "kişisel intikam", "suçun sonuçları", "sömürgecilik mirası", "yoldaşlık", "sınıfsal çatışma"]
+anatemalar: ["Ahlaki Çöküş", "Sömürgecilik Mirası", "Kişisel İntikam", "Suçun Sonuçları", "Yoldaşlık", "kişisel intikam", "sınıfsal çatışma"]
 
 # Social Media Attributes
 youtube:

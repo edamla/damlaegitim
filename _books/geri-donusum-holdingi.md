@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Geri Dönüşüm Holdingi"
+description: "Bilim Kültür Romanları Okul sıralarında filizlenen küçük bir fikrin, atık kâğıtların arasından doğup deva- sa bir holdinge dönüşmesinin ilham verici…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "136 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113826/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Çöpe atılan sadece bir kâğıt değil geleceğimizdi ta ki altı cesur yürek dünyayı dönüştürmeye karar verene dek"]
-anatemalar: ["İnovasyon", "Kararlılık, Sabır ve Mücadele", "Kültürel Miras", "Çevre Bilinci", "Sürdürülebilirlik", "Öz Güven"]
+anatemalar: ["İnovasyon", "Çevre Bilinci", "Kararlılık, Sabır ve Mücadele", "Kültürel Miras", "Sürdürülebilirlik", "Öz Güven", "Geri Dönüşüm", "Girişimcilik", "Takım Çalışması", "Kararlılık", "Doğa Sevgisi"]
 
 # Social Media Attributes
 youtube:

@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Uzaydan Gelenler Kulübü"
+description: "Karanlığın içinden odasına süzülen gizemli bir uzaylı, Ali’nin hayatını sonsuza Bu esrarengiz cihazın peşine düşen Ali, içgüdüsel bir merakla kendini bir…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "128 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254114281/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Resul Dede"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Taşındık yazan bir pastanenin gizli bölmesinden Gezegen9a uzanan aksiyon ve gizem dolu eşsiz bir serüven"]
-anatemalar: ["Macera Tutkusu", "Otorite ve Adalet", "Bilim ve Teknoloji", "Fedakârlık", "Dayanışma", "Sırlar ve Gizem"]
+anatemalar: ["Macera Tutkusu", "Fedakârlık", "Otorite ve Adalet", "Bilim ve Teknoloji", "Dayanışma", "Sırlar ve Gizem"]
 
 # Social Media Attributes
 youtube:

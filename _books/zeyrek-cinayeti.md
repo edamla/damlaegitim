@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Zeyrek Cinayeti"
+description: "İstanbul’un tarihî semti Zeyrek’te işlenen esrarengiz bir cinayet, ezelî rakipleri emekli Başkomiser Mehmed Rıza, karanlık sırlarla dolu bu muammayı…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "296 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053838722/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Peyami Safa"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Kibar hırsız Cingöz Recai ile ezeli rakibi emekli dedektif Mehmed Rıza Zeyrekte işlenen esrarengiz bir cinayetin ardındaki sırrı çözmek için amansız bir zekâ savaşına tutuşuyor"]
-anatemalar: ["Akıl Oyunları", "Gizem ve Muamma", "İhanet", "Açgözlülük", "Ezeli Rekabet", "Adalet Arayışı"]
+anatemalar: ["Akıl Oyunları", "Açgözlülük", "Gizem ve Muamma", "İhanet", "Ezelî Rekabet", "Adalet Arayışı", "Ezeli Rekabet"]
 
 # Social Media Attributes
 youtube:

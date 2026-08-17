@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Devlet Kuşu"
+description: "Gerçek zenginlik parayla değil, zor zamanda yanında güvenebileceğin dostlarının İstanbul’un kıyısında, yoksulluğun kol gezdiği dar sokaklarda yaşayan…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "80 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113338/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Kemalettin Tuğcu"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Gerçek zenginlik parayla değil zor zamanda yanında güvenebileceğin dostlarının olmasıyla ölçülür"]
-anatemalar: ["Aile ve Sabır", Adalet, Vicdan, "Sınıf Farkı", "Dayanışma", "Emeğin Değeri"]
+anatemalar: ["Aile ve Sabır", "Adalet", "Vicdan", "Dayanışma", "Emeğin Değeri", "Sınıf Farkı"]
 
 # Social Media Attributes
 youtube:

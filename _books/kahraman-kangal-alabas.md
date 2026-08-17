@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Kahraman Kangal Alabaş"
+description: "Gözlerini yumuşacık bir samanlıkta açan soylu bir Kangal köpeğinin, sadakati yol katederek İstanbul’un karmaşık ve tehlikeli sokaklarına varan Alabaş,…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "152 sayfa"
 size: "12,5x18,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116018/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Sadakati uğruna kilometrelerce yol kateden insanların vefasızlığına rağmen hayat kurtarmaktan vazgeçmeyen soylu bir Kangal köpeğinin hikâyesi"]
-anatemalar: [Sadakat, "Göç ve Yabancılaşma", "Kahramanlık ve Fedakârlık", "Hırs ve İhtiras", "Doğaya Özlem", "İnsan ve Hayvan Dostluğu"]
+anatemalar: ["Sadakat", "Hırs ve İhtiras", "Göç ve Yabancılaşma", "Kahramanlık ve Fedakârlık", "Doğaya Özlem", "İnsan ve Hayvan Dostluğu"]
 
 # Social Media Attributes
 youtube:

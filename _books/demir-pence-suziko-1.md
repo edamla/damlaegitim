@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Demir Pençe Suziko-1"
-description: "Demir Pençe Suziko serisinin 1. kitabı; heyecan verici dedektiflik hikayesi."
+description: "Alper, Oğuz ve Caner’in sıradan hayatları, Kaz Dağları’nda geçirdikleri uçak zarif bir insana benzeyen ancak aslında üstün yetenekli bir yapay zekâ…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -11,7 +11,7 @@ languages: ["Türkçe"]
 page: "176 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051748610/index.html"
 damlaurl: ""
@@ -22,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Kaz Dağlarının sisli zirvelerine düşen bir uçağın enkazından Afrikanın uçsuz bucaksız çöllerine uzanan nefes kesici bir serüven"]
-anatemalar: ["Yapay Zekâ", "Sömürgecilik", Casusluk, "Keşif Ruhu", "Afrika Coğrafyası", Dostluk]
+anatemalar: ["Yapay Zekâ", "Keşif Ruhu", "Sömürgecilik", "Casusluk", "Afrika Coğrafyası", "Dostluk"]
 
 # Social Media Attributes
 youtube:

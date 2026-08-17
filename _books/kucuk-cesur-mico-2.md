@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Küçük Cesur Miço-2"
+description: "Perikızı” yelkenlisinin beyaz kanatları, bu kez Avrupa kıyılarından Amerika kı- sınanan, dalgalarla büyüyen ve artık denizlerin dilini çok daha iyi…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "136 sayfa"
 size: "12,5x18,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051742700/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Engin denizlerin zorlu sınavlarından geçen küçük bir miço şimdi usta bir denizci olma yolunda rüzgâra meydan okuyor"]
-anatemalar: ["Deniz Tutkusu", "Coğrafi Keşif", "Olgunlaşma", "Aile ve Dayanışma", "Doğayla Mücadele", "Vatan Özlemi"]
+anatemalar: ["Deniz Tutkusu", "Aile ve Dayanışma", "Coğrafi Keşif", "Olgunlaşma", "Doğayla Mücadele", "Vatan Özlemi"]
 
 # Social Media Attributes
 youtube:

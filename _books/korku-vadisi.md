@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Korku Vadisi"
+description: "Sherlock Holmes, ezelî düşmanı Profesör Moriarty’nin karanlık ağından sızan like altındadır! Ancak bu uyarı Baker Sokağı’na ulaştığında çok geç…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786057274472
 languages: ["Türkçe"]
 page: "220 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274472/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sir Arthur Conan Doyle"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Londra’da büyük bir beyin Sussexte ise ölü bir adam Bizim takip etmemiz gereken ise ikisi arasındaki bağlantı"]
-anatemalar: ["gerilim ve korku", intikam, "sadakat ve ihanet", gizem, tehlike, "suç dehası"]
+anatemalar: ["Gerilim ve Korku", "Gizem", "İntikam", "Sadakat ve İhanet", "Tehlike", "Suç Dehası", "intikam", "sadakat ve ihanet"]
 
 # Social Media Attributes
 youtube:

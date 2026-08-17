@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Saçaklı Kız’ın Pasaklı Günlüğü-1"
-description: "Sacaklı serisinin 1. kitabı; eğlenceli ve öğretici hikaye."
+description: "Eğer saçları her daim fönlü, ayakkabısını bile başkalarına giydiren masal pren- işini kendi yapan, pembeden pek de hoşlanmayan, hayvanları korumak veya…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -11,7 +11,7 @@ languages: ["Türkçe"]
 page: "128 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051745176/index.html"
 damlaurl: ""
@@ -22,7 +22,7 @@ authors: ["Nur Dombaycı"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Prenses masallarını unutun! Futbol aşığı biraz pasaklı ama kocaman yürekli Büş’ün komik ve samimi dünyasına hoş geldiniz."]
-anatemalar: ["öZGÜNLÜK", DOSTLUK, "EMPATİ", AFFETMEK, "KİŞİSEL GELİŞİM", "BÜYÜMEK"]
+anatemalar: ["Özgünlük", "Affetmek", "Dostluk", "Empati", "Kişisel Gelişim", "Büyümek", "EMPATİ", "KİŞİSEL GELİŞİM"]
 
 # Social Media Attributes
 youtube:

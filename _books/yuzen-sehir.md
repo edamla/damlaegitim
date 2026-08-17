@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Yüzen Şehir"
+description: "On dokuzuncu yüzyıl mühendisliğinin en büyük mucizesi olan Great Eastern boyutlarıyla adeta okyanusun üzerinde yüzen çelikten bir şehri andıran bu gemide…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786259895284
 languages: ["Türkçe"]
 page: "160 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895284/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Jules Verne"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Okyanusun ortasında devasa bir çelik ada", "fırtınalı sularda birbirine doğru sürüklenen eski düşmanlar ve kaderin  kaçınılmaz oyunu..."]
-anatemalar: ["Mühendislik", "İhtiras ve Kumar", "İlahi Adalet", "Dostluk ve Sadakat", "Yeniden Doğuş", "Yaşamın Kırılganlığı"]
+anatemalar: ["Mühendislik", "Dostluk ve Sadakat", "İhtiras ve Kumar", "İlahi Adalet", "Yeniden Doğuş", "Yaşamın Kırılganlığı"]
 
 # Social Media Attributes
 youtube:

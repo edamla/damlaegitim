@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Fatih’in İstanbul Rüyası"
+description: "O, sadece ordulara hükmeden yenilmez bir komutan değil; aynı zamanda çağı- Mehmet, asırlardır aşılamayan o efsanevi surları yıkmak ve Peygamber’in müj-…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "176 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839842/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Talip Arışahin"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Dünya kuruldu kurulalı böyle bir şey ne duyulmuş ne de görülmüştü gemiler karadan yürütülüyor Haliçe iniyordu"]
-anatemalar: ["Kutsal Hedef", "Strateji ve Askerî Dehâ", "Adalet ve Hoşgörü", "Kahramanlık", "Manevi Güç", "Şehrin Yeniden İnşası"]
+anatemalar: ["Kutsal Hedef", "Kahramanlık", "Strateji ve Askerî Dehâ", "Adalet ve Hoşgörü", "Manevi Güç", "Şehrin Yeniden İnşası"]
 
 # Social Media Attributes
 youtube:

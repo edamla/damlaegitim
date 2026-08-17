@@ -1,31 +1,41 @@
 ---
 layout: book
 title:  "Değerler Okyanusu"
+description: "Masmavi suların derinliklerine dalıp okyanusun sevimli kahramanlarıyla tanışmaya ne dersiniz? Somurtkan ahtapottan cesur denizanasına, tembel ıstakozdan…"
 categories: ["Hikaye", "İlkokul"]
-tags: []
+tags: ["Değerler Eğitimi", "Klasik Masallar", "Uykudan Önce", "Değerlerimizi Masallarla Öğrenmek", "Erdemli Bireyler Olmak", "Dünya", "Doğruluk", "Tevazu", "Arkadaşlık", "Sevgi", "Saygı", "Sözünde Durmak", "Hayvan"]
 
 # Standart Book Attributes
 ean: 9786053839446
 languages: ["Türkçe"]
 page: "Her Biri 16"
-size: "19.5x27.5 cm"
+size: "19,5x27,5 cm"
 publish-number:
 cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839446/mobile/index.html"
 damlaurl: ""
-paper: "Kuşe"
+paper: "Kuşe Kağıdı"
+authors: ["Komisyon"]
+illustrators: ["Amit Sharma"]
 
 # Spesific Filterable Attributes
 genre: story
 grades: [1]
 kavramlar: []
-anatemalar: []
+anatemalar: ["Değerler Eğitimi", "Klasik Masallar", "Uykudan Önce"]
 
 # Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
-Kocaman bir okyanus... İçinde çeşit çeşit deniz canlıları... Kimisi tembel, kimisi çalışkan, kimisi hiç gülmüyor, kimisi çok neşeli... Yaşadıkları bir sürü maceranın içinde palyaço balığı gülmeyi, kırmızı ıstakoz çalışkanlığı, mürekkepbalığı farklılığını kabullenmeyi, renk değiştiren ahtapot kibar olmayı, sevimli denizanası arkadaşlığı, denizatı kendisiyle barışık olmayı, denizayısı yardımseverliği, küçük deniz yıldızı sabırlı olmayı, neşeli istiridye paylaşmayı, yengeç kardeşler affetmeyi öğreniyor. Değerler Okyanusu Serisi, sizleri bu sevimli deniz canlılarıyla birlikte maceradan maceraya koşmaya ve değerlerimizi öğrenmeye davet ediyor. 1- Haydi Saklambaç Oynayalım 2- Cesur Denizanası 3- Ben Kimim? 4- Gülmeyen Balık 5- Bir Yıldız Gördüm 6- Doğum Günüm 7- Somurtkan Ahtapot 8- Kalemizi Kim Yıktı 9- Tembel Istakoz 10- Neden Bu Kadar Büyüğüm?
-<!--more--> 
+Masmavi suların derinliklerine dalıp okyanusun sevimli kahramanlarıyla tanışmaya ne dersiniz? Somurtkan ahtapottan cesur denizanasına, tembel ıstakozdan gülmeyen balığa kadar deniz altı dünyasının birbirinden renkli sakinleri bu 10 kitaplık sette minik okurları bekliyor! “Maarif Modeli” Türkçe ve Hayat Bilgisi kazanımlarıyla tam uyumlu olarak hazırlanan Değerler Okyanusu; 1. sınıf öğrencilerimizin okuma becerilerini geliştirirken onlara doğruluk, yardımlaşma, alçakgönüllülük ve hayvan sevgisi gibi evrensel erdemleri eğlenceli deniz masallarıyla öğretiyor. Optik formlu değerlendirme kitapçığıyla desteklenen bu set, hem eğlenceli bir okuma serüveni hem de mükemmel bir eğitim materyali!
+
+**TEMALAR:** Değerler Eğitimi, Klasik Masallar, Uykudan Önce
+
+**KAZANIMLAR:** Değerlerimizi Masallarla Öğrenmek, Erdemli Bireyler Olmak, Dünya
+
+**ETİKETLER:** Değerler Eğitimi, Klasik Masallar, Uykudan Önce, Değerlerimizi Masallarla Öğrenmek, Erdemli Bireyler Olmak, Dünya, Doğruluk, Tevazu, Arkadaşlık, Sevgi, Saygı, Sözünde Durmak, Hayvan
+
+<!--more-->

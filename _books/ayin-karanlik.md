@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Ay’ın Karanlık Yüzü"
+description: "İrus gezegeninden ayrılan bir grup cesur kâşifin, yeni bir yuva bulma umuduyla yetenekli ekibi, İrus 8011 Uzay Gemisi’nin sınırlı kaynaklarıyla hayatta…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "208 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116001/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Necati Akbaba"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Tarih boyunca duvarlara çizilen kadim tanrı tasvirlerinin yeryüzündeki devasa işaretlerin ve gökyüzünde beliren UFOların arkasındaki çarpıcı kozmik sır çözülüyor"]
-anatemalar: ["Zorunlu Göç", "Kriyojenik Uyku", "Kültürel Uyum", "Kaynak Yönetimi", "Liderlik ve Kararlılık", "Mitoloji ve Gizem"]
+anatemalar: ["Zorunlu Göç", "Kaynak Yönetimi", "Kriyojenik Uyku", "Kültürel Uyum", "Liderlik ve Kararlılık", "Mitoloji ve Gizem"]
 
 # Social Media Attributes
 youtube:

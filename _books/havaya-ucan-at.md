@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Havaya Uçan At"
+description: "Türk edebiyatının büyük ustası Peyami Safa’nın, namıdiğer Server Bedî’nin ka- gökyüzünü arşınlayan Şehzade Sacir, hırçın dalgalara kafa tutan efsanevi…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "128 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9789753812375/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Peyami Safa"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Bulutların ötesinde süzülen sihirli bir at denizleri aşan cesur bir gemici ve zekâsıyla krallara meydan okuyan bir çocuk"]
-anatemalar: ["İyilik ve Kötülük", Cesaret, "Sosyal Dayanışma", "Zekâ", Sorumluluk, "Aile Bağları ve Vefa"]
+anatemalar: ["İyilik ve Kötülük", "Zekâ", "Cesaret", "Sosyal Dayanışma", "Sorumluluk", "Aile Bağları ve Vefa"]
 
 # Social Media Attributes
 youtube:

@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Donmuş Umutlar Sarıkamış"
+description: "1914 yılının o dondurucu kışında, Allahuekber Dağları’nın zirvesinde yazılan acı rest planları arasına sıkışan, düşmandan ziyade amansız dondurucu…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "288 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053837824/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Allahuekber dağlarında zemherinin ayazında donarak can veren şehitlerimizin buz tutan umutlarının hüzünlü hikâyesi"]
-anatemalar: ["Zorlu Doğa Koşulları", "Vatan Sevgisi", "Hatalı Kararlar", "İhtiras", "Çaresizlik", "Savaşın Gerçek Yüzü"]
+anatemalar: ["Zorlu Doğa Koşulları", "İhtiras", "Vatan Sevgisi", "Hatalı Kararlar", "Çaresizlik", "Savaşın Gerçek Yüzü"]
 
 # Social Media Attributes
 youtube:

@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Ertuğrul’un Rüyası"
+description: "Kayı Boyu’nun yiğit lideri Ertuğrul Gazi, Moğolların acımasız baskısına ve Bizans’ın girişir. Sadece birkaç yüz çadırla yurt edindiği Söğüt’te, adaleti…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "176 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051745619/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Talip Arışahin"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Orta Asyadan Söğüte uzanan aşiretten cihan devletine giden kutlu bir göçün ve dirilişin hikâyesi"]
-anatemalar: ["Yurt Arayışı", "Tasavvuf ve Rehberlik", "Töreye Bağlılık", "Liderlik ve Adalet", "Birlik ve Dayanışma", "Fedakârlık"]
+anatemalar: ["Yurt Arayışı", "Liderlik ve Adalet", "Tasavvuf ve Rehberlik", "Töreye Bağlılık", "Birlik ve Dayanışma", "Fedakârlık"]
 
 # Social Media Attributes
 youtube:

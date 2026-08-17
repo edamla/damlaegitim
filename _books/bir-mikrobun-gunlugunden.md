@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Bir Mikrobun Günlüğünden"
+description: "Bilim Kültür Romanları Yere dikkatsizce tüküren bir adamın taşıdığı ölümcül bir mikrop, insan bedeni gibi devasa bir medeniyeti nasıl ele geçirir?…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "152 sayfa"
 size: "12,5x18,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116032/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Gözle görülmeyen bir düşmanın insan bedeninde kurduğu o karanlık krallığın sarsıcı günlüğü"]
-anatemalar: ["Hijyen Bilinci", "İnsan Anatomisi", "Aşı Bilinci", "Sağlık", "Stres ve Hastalık", "Tıp ve Tedavi"]
+anatemalar: ["Hijyen Bilinci", "Sağlık", "İnsan Anatomisi", "Aşı Bilinci", "Stres ve Hastalık", "Tıp ve Tedavi"]
 
 # Social Media Attributes
 youtube:

@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Tanrı Misafiri"
+description: "Kışın dondurucu soğuğunda, çaresizliğin ve yoksulluğun pençesindeki eski bir cakları o karanlık gecede kapılarını çalan gizemli bir “Tanrı Misafiri” ile…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "80 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113284/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Kemalettin Tuğcu"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Bazen en büyük mucizeler kapıyı çalan yoksul bir garibin heybesinde saklıdır"]
-anatemalar: [Yoksulluk, Merhamet, "Dürüstlük", "Ön Yargı", "Aile ve Şefkat", "Minnet ve Vefa"]
+anatemalar: ["Yoksulluk", "Ön Yargı", "Merhamet", "Dürüstlük", "Aile ve Şefkat", "Minnet ve Vefa"]
 
 # Social Media Attributes
 youtube:

@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Dans Eden Adamlar"
+description: "Birbiri ardına çizilmiş, çöp adamları andıran masum figürler aslında ne anlama gelen ve sadece “Dans Eden Adamlar” adı verilen gizemli şifrelerle dolu…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786057274458
 languages: ["Türkçe"]
 page: "120 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274458/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sir Arthur Conan Doyle"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Görünürdeki en kusursuz deliller bile zekice kurgulanmış bir intikam planının sahte parçalarıdır"]
-anatemalar: ["karanlık izler", "hırs ve bedel", "yanıltıcı deliller", "intikam ve kin", kriptoloji, "masumiyetin ispatı"]
+anatemalar: ["Karanlık İzler", "İntikam ve Kin", "Hırs ve Bedel", "Yanıltıcı Deliller", "Kriptoloji", "Masumiyetin İspatı", "karanlık izler", "intikam ve kin", "masumiyetin ispatı"]
 
 # Social Media Attributes
 youtube:

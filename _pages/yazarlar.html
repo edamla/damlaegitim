@@ -1,0 +1,51 @@
+---
+title: "Yazarlar"
+description: "Damla Okul hikaye ve eğitim kitaplarının yazarları."
+layout: page
+permalink: "/yazarlar"
+footer_show: true
+---
+
+<div class="container py-4">
+  <header class="mb-4">
+    <h1 class="display-5">Yazarlar</h1>
+    <p class="lead text-muted">Damla Okul kataloğundaki yazarlar ve eserleri.</p>
+  </header>
+
+  <nav class="yazar-nav mb-4" aria-label="Yazar listesi">
+    <div class="d-flex flex-wrap gap-2" id="yazar-nav-list">
+      {% capture author_raw %}{% for book in site.books %}{% for author in book.authors %}{{ author }}|{% endfor %}{% endfor %}{% endcapture %}
+      {% assign author_names = author_raw | split: "|" | uniq | sort %}
+      {% for author_name in author_names %}
+        {% if author_name != "" %}
+        <a class="btn btn-sm btn-outline-secondary" href="#yazar-{{ author_name | slugify }}">{{ author_name }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </nav>
+
+  {% for author_name in author_names %}
+    {% if author_name != "" %}
+    {% assign author_books = site.books | where_exp: "b", "b.authors contains author_name" %}
+    <section class="yazar-section mb-5" id="yazar-{{ author_name | slugify }}">
+      <h2 class="h3 mb-3">{{ author_name }}</h2>
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+        {% for book in author_books %}
+        <div class="col">{% include book-card.html book=book %}</div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<script>
+(function() {
+  if (!window.location.hash) return;
+  var target = document.querySelector(window.location.hash);
+  if (target) {
+    target.classList.add('yazar-section--highlight');
+    setTimeout(function() { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
+  }
+})();
+</script>

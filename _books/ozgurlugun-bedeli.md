@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Özgürlüğün Bedeli"
+description: "Üniversiteyi kazanıp taşradan İstanbul’a gelen Erdem için bu devasa şehir, maya başlayan genç adam, yeni arkadaşlıkların ve modern hayatın cazibesine…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "128 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839729/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["İyi bir adam olmak için çok çalış ama geçmişini nereden geldiğini unutma"]
-anatemalar: ["Özgürlük Arayışı", "Sahte Dostluklar", "Pişmanlık", "Kuşak Çatışması", "Aile Bağları", "Dostluk Sınavı"]
+anatemalar: ["Özgürlük Arayışı", "Kuşak Çatışması", "Sahte Dostluklar", "Pişmanlık", "Aile Bağları", "Dostluk Sınavı"]
 
 # Social Media Attributes
 youtube:

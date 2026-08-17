@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Karanlık Kanyon’un Şifresi"
+description: "Sibirya’nın uçsuz bucaksız steplerinde at çobanlığı yapan genç bir adam, kay- karşısında sırlarla dolu ıssız bir ada belirir! Çok sevdiği atıyla bu adada…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "208 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836414/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Biliriz ki bir gün bir at bizi alıp da uzaklara Allahuekber Dağlarının doruğuna götürecek ve orada şahlanıp kişnediği zaman dedemin bütün silah arkadaşları huzura kavuşacak"]
-anatemalar: ["Vatan Hasreti", "Savaşın Etkileri", "Gizem ve Keşif", "Özgürlük", "Cesaret ve Azim", "Ön Yargı ve Güven"]
+anatemalar: ["Vatan Hasreti", "Özgürlük", "Savaşın Etkileri", "Gizem ve Keşif", "Cesaret ve Azim", "Ön Yargı ve Güven"]
 
 # Social Media Attributes
 youtube:

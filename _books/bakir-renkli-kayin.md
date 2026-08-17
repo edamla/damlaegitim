@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Bakır Renkli Kayın Ağaçları"
+description: "Genç ve zeki bir mürebbiye olan Violet Hunter, kendisine teklif edilen inanılmaz tuhaf şartları vardır: Saçlarını kısacık kestirmek ve belirli zamanlarda…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786057288721
 languages: ["Türkçe"]
 page: "160 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288721/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sir Arthur Conan Doyle"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["dünya zalimlerin dünyasıdır zeki bir adamın beynini suç için çalıştırması ise tam anlamıyla bir felakettir"]
-anatemalar: ["Gözlem ve Analiz", aldatmaca, "bağlılık ve yanılgı", "açgözlülük", "karanlık sırlar", "kararlılık ve cesaret"]
+anatemalar: ["Gözlem ve Analiz", "Açgözlülük", "Aldatmaca", "Bağlılık ve Yanılgı", "Karanlık Sırlar", "Kararlılık ve Cesaret"]
 
 # Social Media Attributes
 youtube:

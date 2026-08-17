@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "İstanbul Semt Öyküleri"
+description: "Yedi tepeli efsanevi şehir İstanbul’un her bir semti, taşı toprağı tarih kokan mahal- Kulesi’nin hüzünlü dalgalarından Galata’nın rüzgârlı sokaklarına…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "176 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053838135/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Dünyanın incisi ve şairlerin ilham kaynağı olan İstanbulu bir de dilden dile söylenen bu kadim efsanelerden dinleyin"]
-anatemalar: ["İsim Kökenleri", "Fetih ve Kültür", "Gelenekler ve Eğlence", "Efsaneler ve Mitoloji", "Tarihî Yapılar", "Kültürel Çeşitlilik"]
+anatemalar: ["İsim Kökenleri", "Efsaneler ve Mitoloji", "Fetih ve Kültür", "Gelenekler ve Eğlence", "Tarihî Yapılar", "Kültürel Çeşitlilik"]
 
 # Social Media Attributes
 youtube:

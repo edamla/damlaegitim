@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Elmaslar İçinde"
+description: "Cingöz Recai’nin gözü bu kez paha biçilemez elmaslarda! Sıradan hırsızlıklarla hırsızımız, İstanbul’un en gösterişli mekânlarında kusursuz bir kaçış…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "144 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836360/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Peyami Safa"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Adam sen de Ben artık cesaret ve korku kelimelerinin ne manaya geldiklerini bilmiyorum"]
-anatemalar: ["Akıl Oyunları", "Ezeli Rekabet", "Soğukkanlılık", "Kılık Değiştirme", "Kaçış Planları", "Ekip Çalışması"]
+anatemalar: ["Akıl Oyunları", "Kılık Değiştirme", "Ezelî Rekabet", "Soğukkanlılık", "Kaçış Planları", "Ekip Çalışması", "Ezeli Rekabet"]
 
 # Social Media Attributes
 youtube:

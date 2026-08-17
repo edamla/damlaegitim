@@ -1,3 +1,81 @@
+/* Paylaşılan katalog filtresi (DOM'suz çekirdek) */
+var BookFilter = (function() {
+  function norm(s) {
+    return String(s || '').toLowerCase().trim();
+  }
+
+  function arr(v) {
+    return Array.isArray(v) ? v : [];
+  }
+
+  function matchesGrade(book, grade) {
+    if (grade === null || grade === undefined || grade === '') return true;
+    var g = String(grade);
+    return arr(book.grades).some(function(bg) { return String(bg) === g; });
+  }
+
+  function matchesGenre(book, genre) {
+    if (!genre) return true;
+    return book.genre === genre;
+  }
+
+  function matchesCategories(book, categories) {
+    if (!categories || categories.length === 0) return true;
+    var bookCats = arr(book.categories);
+    return categories.some(function(c) { return bookCats.indexOf(c) !== -1; });
+  }
+
+  function matchesTags(book, tags) {
+    if (!tags || tags.length === 0) return true;
+    var bookTags = arr(book.tags);
+    return tags.some(function(t) { return bookTags.indexOf(t) !== -1; });
+  }
+
+  function matchesAnatemalar(book, anatemalar) {
+    if (!anatemalar || anatemalar.length === 0) return true;
+    var bookAna = arr(book.anatemalar);
+    return anatemalar.some(function(a) { return bookAna.indexOf(a) !== -1; });
+  }
+
+  function matchesKavramlar(book, kavramlar) {
+    if (!kavramlar || kavramlar.length === 0) return true;
+    var bookKav = arr(book.kavramlar);
+    return kavramlar.some(function(k) {
+      return bookKav.some(function(bk) { return norm(bk).indexOf(norm(k)) !== -1; });
+    });
+  }
+
+  function matchesSearch(book, q) {
+    if (!q) return true;
+    var query = norm(q);
+    return norm(book.title).indexOf(query) !== -1;
+  }
+
+  function filterCatalog(books, criteria) {
+    criteria = criteria || {};
+    return (books || []).filter(function(book) {
+      return matchesGrade(book, criteria.grade) &&
+        matchesGenre(book, criteria.genre) &&
+        matchesCategories(book, criteria.categories) &&
+        matchesTags(book, criteria.tags) &&
+        matchesAnatemalar(book, criteria.anatemalar) &&
+        matchesKavramlar(book, criteria.kavramlar) &&
+        matchesSearch(book, criteria.q);
+    });
+  }
+
+  return {
+    matchesGrade: matchesGrade,
+    matchesGenre: matchesGenre,
+    matchesCategories: matchesCategories,
+    matchesTags: matchesTags,
+    matchesAnatemalar: matchesAnatemalar,
+    matchesKavramlar: matchesKavramlar,
+    matchesSearch: matchesSearch,
+    filterCatalog: filterCatalog
+  };
+})();
+
 function getSelectedGrades(checkboxSelector) {
     var selected = [];
     document.querySelectorAll(checkboxSelector).forEach(function(checkbox) {

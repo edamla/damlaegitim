@@ -19,38 +19,6 @@ layout: default
                     <div class="align-items-center">
                         <h1 class="display-4 mb-4 article-headline">{{ book.title }}</h1>
 
-                        <div class="book-detail__tags mb-4">
-                            <span class="taglist">
-                            {% for tag in page.anatemalar %}
-                            <span class="tag">#{{ tag | downcase }}</span>
-                            {% endfor %}
-                            </span>
-                        </div>
-
-                        <div class="book-detail__concepts book-detail__kavramlar mb-4">
-                            {% for bookconcept in book.kavramlar %}
-                            {% assign concept_text = bookconcept | strip %}
-                            {% unless concept_text == "" %}
-                              {% assign concept_len = concept_text | size %}
-                              {% assign concept_is_tag = false %}
-                              {% if concept_text contains '-' %}
-                                {% unless concept_text contains ' ' %}
-                                  {% assign concept_is_tag = true %}
-                                {% endunless %}
-                              {% elsif concept_len <= 18 %}
-                                {% assign concept_is_tag = true %}
-                              {% elsif concept_text contains ' ' and concept_len <= 28 %}
-                                {% assign concept_is_tag = true %}
-                              {% endif %}
-                              {% if concept_is_tag %}
-                              <span class="concept">@{{ concept_text | downcase }}</span>
-                              {% else %}
-                              <blockquote class="book-detail__tagline" cite="{{ book.url | relative_url }}">{{ concept_text }}</blockquote>
-                              {% endif %}
-                            {% endunless %}
-                            {% endfor %}
-                        </div>
-
                         <div class="icon-block mt-3 d-inline-flex flex-wrap gap-2">
                             {% assign book_youtube = book.youtube | strip %}
                             {% if book_youtube != '' and book_youtube contains 'http' %}
@@ -149,8 +117,9 @@ layout: default
                     </ul>
     </div>
         <div class="col-md-9 order-md-2">
+            {% include book-curriculum-box.html book=book %}
             <!-- Article -->
-            <article class="article-post prose prose--display text-justify">
+            <article class="article-post prose prose--display text-justify maarif-content">
             {% assign body_stripped = content | strip_html | strip %}
             {% if body_stripped.size < 80 %}
                 {% include book-minimal-content.html %}

@@ -1,16 +1,17 @@
 ---
 layout: book
 title:  "Annemin Hikayesi"
+description: "Çorak ve imkânsızlıklar içindeki Kuzuluk köyü, sadece doğanın değil, insan ve yetim Emine’nin göğsünde yeşeren umut, köyün tüm kaderini değiştirmeye…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes
 ean: 9786051749600
 languages: ["Türkçe"]
-page: "80 Sayfa"
+page: "80 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051749600/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Kemalettin Tuğcu"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Kurak bir köyde umudu yeşerten bir kadının tükenmeyen inancının destanı."]
-anatemalar: ["Sabır ve Sadakat", "Önyargıları Kırma", "Toplumsal Kalkınma", "İyilik", Vefa, "Aile Bağları"]
+anatemalar: ["Sabır ve Sadakat", "İyilik", "Önyargıları Kırma", "Toplumsal Kalkınma", "Vefa", "Aile Bağları"]
 
 # Social Media Attributes
 youtube:

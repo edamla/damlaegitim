@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Ay’a Seyahat"
+description: "Amerikan İç Savaşı’nın bitimiyle işsiz kalan Silah Kulübü üyeleri, Başkan Bar- imza atarlar: Ay’a bir mermi göndermek! Dünyanın en büyük topu olan…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786057288745
 languages: ["Türkçe"]
 page: "160 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288745/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Jules Verne"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["İmkânsız denileni başarmak için dev bir merminin içine hapsolup uzayın karanlığına atılan üç cesur yürek ve akılalmaz bir yolculuk"]
-anatemalar: ["Bilim Tutkusu", "Dayanışma", "Pratik Zeka", "Sınırları Aşmak", Dostluk, "Doğayla Mücadele"]
+anatemalar: ["Bilim Tutkusu", "Sınırları Aşmak", "Dayanışma", "Pratik Zekâ", "Dostluk", "Doğayla Mücadele", "Pratik Zeka"]
 
 # Social Media Attributes
 youtube:

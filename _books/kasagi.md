@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Kaşağı"
+description: "Atlara ve ahıra büyük bir ilgi duyan genç bir çocuğun, çok sevdiği o yepyeni bir sırra dönüşür. Kırılan kaşağının suçunu masum küçük kardeşi Hasan’ın…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786259895222
 languages: ["Türkçe"]
 page: "100 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895222/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Ömer Seyfettin"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Bir çocuğun söylediği küçük bir yalanın masum bir kardeşin ölümüne ve ömür boyu sürecek derin bir vicdan azabına dönüşmesinin yürek burkan hikâyesi"]
-anatemalar: ["vicdan azabı", "toplumsal çöküş", istismar, "zeka ve liderlik", "ahlaki çöküş", "milli uyanış"]
+anatemalar: ["Vicdan Azabı", "Zekâ ve Liderlik", "Toplumsal Çöküş", "İstismar", "Ahlaki Düşüş", "Millî Uyanış", "istismar", "zeka ve liderlik", "ahlaki çöküş", "milli uyanış"]
 
 # Social Media Attributes
 youtube:

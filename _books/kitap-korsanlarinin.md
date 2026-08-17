@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Kitap Korsanlarının Peşinde"
+description: "Mehmet ve yakın arkadaşları, hayatı kitap sayfalarında keşfeden tam birer kitap gerçeği fark etmeleriyle tüm sakin hayatları altüst olur. “Kitap Kurtları…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "200 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051748122/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Kitap okuma tutkusunun adaleti sağlamak uğruna tehlikeli bir dedektiflik oyununa dönüştüğü soluksuz bir macera"]
-anatemalar: ["Okuma Kültürü", "Korsanla Mücadele", Cesaret, "Telif Hakları", "Arkadaşlık ve Dayanışma", "Dürüstlük"]
+anatemalar: ["Okuma Kültürü", "Telif Hakları", "Korsanla Mücadele", "Cesaret", "Arkadaşlık ve Dayanışma", "Dürüstlük"]
 
 # Social Media Attributes
 youtube:

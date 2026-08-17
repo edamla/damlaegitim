@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  Ufolar
+description: "Kaz Dağları’nın zirvesinden bilinmeyen galaksilere uzanan, evrenin sınırlarını zorlayan destansı Sıradan bir yaz akşamı, Ankara semalarında beliren…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "136 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051745121/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Kaz Dağlarının zirvesinden bilinmeyen galaksilere uzanan evrenin sınırlarını zorlayan destansı bir uzay serüveni"]
-anatemalar: ["Dünya Dışı Yaşam", "Temiz Enerji", "Takım Ruhu", "Çevre Bilinci", "Bilim ve Teknoloji", Astronomi]
+anatemalar: ["Dünya Dışı Yaşam", "Çevre Bilinci", "Temiz Enerji", "Takım Ruhu", "Bilim ve Teknoloji", "Astronomi"]
 
 # Social Media Attributes
 youtube:

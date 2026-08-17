@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Küçük Su Damlasının Dünya Turu"
+description: "Yüzyıllar boyunca devasa bir buz dağının kalbinde esir kalan Küçük Damla, turuna başlar. Atlas Okyanusu’nun derinliklerinden Afrika’nın kurak çöllerine,…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "152 sayfa"
 size: "12,5x18,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116049/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Buzdağlarından okyanuslara bulutlardan yeraltı nehirlerine uzanan asırlık bir seyahat"]
-anatemalar: ["Su Döngüsü", "Ekolojik Denge", "Coğrafya ve Keşif", "Çevre Bilinci", "Doğal Afetler", "Temiz Enerji"]
+anatemalar: ["Su Döngüsü", "Çevre Bilinci", "Ekolojik Denge", "Coğrafya ve Keşif", "Doğal Afetler", "Temiz Enerji"]
 
 # Social Media Attributes
 youtube:

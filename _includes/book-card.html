@@ -7,6 +7,17 @@
         </div>
         <div class="book-card__info">
             <h3 class="book-card__title">{{ card.title }}</h3>
+            {% if card.authors and card.authors.size > 0 %}
+            <p class="book-card__author text-muted small mb-1">
+              {% for author_slug in card.authors %}
+                {% assign siteauthor = site.data.authors | where:"key", author_slug | first %}
+                {% if siteauthor %}{{ siteauthor.title }}{% else %}{{ author_slug }}{% endif %}{% unless forloop.last %}, {% endunless %}
+              {% endfor %}
+            </p>
+            {% endif %}
+            {% if card.anatemalar and card.anatemalar.size > 0 %}
+            <span class="book-card__theme badge bg-light text-primary border">{{ card.anatemalar | first }}</span>
+            {% endif %}
         </div>
     </a>
 </article>

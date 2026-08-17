@@ -1,43 +1,44 @@
 ---
 layout: book
 title:  "Alican'ın Günlüğü (10 Kitap)"
+description: "Çocuklar dünyayı bir de Alican’ın gözünden görmeye ne dersiniz? Yaşadığı her olaydan kendine dersler çıkaran Alican, en gizli sırlarını ve heyecan dolu…"
 categories: ["Hikaye", "İlkokul"]
-tags: []
+tags: ["Macera", "Yardımseverlik", "Aile Büyüklerine Saygı", "Günlük"]
 
 # Standart Book Attributes
-ean: 8697911223028
+ean: 9786053831303
 languages: ["Türkçe"]
 page: "Her Biri 48"
-size: "14x20 cm"
+size: "13,5x19,5 cm"
 publish-number: 1355
 cover: "Karton Kapak"
 examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/alican-y.pdf"
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223028/index.html"
 damlaurl: ""
 paper: "1. Hamur"
+authors: ["Nehi̇r Aydın Gökduman"]
+illustrators: ["Mustafa Kocabaş"]
 
 # Spesific Filterable Attributes
 genre: story
 grades: [2]
 kavramlar: [gorsel-uzamsal, sosyal, doga]
-anatemalar: ["Kişisel Gelişim", "Okul ve Aile Hayatı", Mizah, "Arkadaşlık", "Özfarkındalık"]
+anatemalar: ["Hikâyelerle Değerler Eğitimi", "Macera", "Dostluk", "Kardeşlik", "Cesaret", "Kişisel Gelişim", "Okul ve Aile Hayatı", "Mizah", "Arkadaşlık", "Özfarkındalık"]
 
 # Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
-Yaşadıklarından ders alan Alican, bunları herkesle paylaşıyor.
-Günlüğünün sayfalarından sevgi, dostluk, kardeşlik fışkırıyor.
-Macera dolu kitaplarda; yardımlaşma, hayvan sevgisi, dayanışma, araştırma, büyüklere saygı, affedebilme, sözünde durma, doğayı koruma, alay etmeme, cesur olma, yalan söylememe ve diğer pek çok erdem Alican'ın dilinden anlatılıyor.
+Çocuklar dünyayı bir de Alican’ın gözünden görmeye ne dersiniz? Yaşadığı her olaydan kendine dersler çıkaran Alican, en gizli sırlarını ve heyecan dolu maceralarını bu günlükte herkesle paylaşıyor! 2. ve 3. sınıf öğrencileri için özenle hazırlanan bu 10 kitaplık eğlenceli seri; sayfalardan taşan bir sevgi, dostluk ve kardeşlik hikâyesi sunuyor. Maarif Modeli kazanımlarına tam uyumlu olarak kurgulanan “Alican’ın Günlüğü”; yardımlaşma, hayvan sevgisi, büyüklere saygı, doğayı koruma, cesaret ve dürüstlük gibi pek çok evrensel erdemi çocukların en çok sevdiği “günlük” formatında, sıcacık bir dille anlatıyor.
 
-**TEMALAR:** Hikayelerle Değerler Eğitimi, Macera, Dostluk, Kardeşlik, Cesaret, Yardımlaşma, Hayvan Sevgisi, Dedektiflik, Macera, Dayanışma, Affetmek, Kardeş Sevgisi, Doğa Sevgisi
+**TEMALAR:** Hikâyelerle Değerler Eğitimi, Macera, Dostluk, Kardeşlik, Cesaret
 
-**KAZANIMLAR:** Topluma, Büyüklerine Saygılı Bireyler Kazandırmak, Sözünde Durmanın Faydalarını Göstermek, Yalan Söylemenin Sakıncalarını Göstermek, Alay Etmenin Kötü Bir Davranış Olduğunu Göstermek, Olumlu Davranış Geliştirme
+**KAZANIMLAR:** Topluma ve Büyüklere Saygılı Bireyler Kazandırmak, Sözünde Durmanın Önemini Kavratmak, Yalan Söylemenin Sakıncalarını Öğretmek, Alay Etmenin Kötü Bir Davranış Olduğunu Göstermek, Olumlu Davranışlar Geliştirmek
 
 **ETİKETLER:** Macera, Yardımseverlik, Aile Büyüklerine Saygı, Günlük
 
-**Setin İçerdiği Hikayeler**
+Setin İçerdiği Hikayeler**
 
 1- Bir Köpeğim Olsun <br>
 2- Eyvah Koyboldum!<br>
@@ -50,5 +51,4 @@ Macera dolu kitaplarda; yardımlaşma, hayvan sevgisi, dayanışma, araştırma,
 9- Kaplanlar Dondurma Yemez<br>
 10- Çiko Nerede?
 
-
-<!--more--> 
+<!--more-->

@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Orinoko Nehri"
+description: "Güney Amerika’nın kalbinde, bilinmezliklerle dolu devasa Orinoko Nehri’nin vahşi Çavuş Martial ile birlikte, yıllar önce bu ıssız topraklarda kaybolan…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786259895260
 languages: ["Türkçe"]
 page: "160 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895260/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Jules Verne"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Orinoko Nehrinin gizemli sularında bilimsel merak ile evlat sevgisinin kesiştiği tehlike ve dostluk dolu unutulmaz bir serüven"]
-anatemalar: ["Aile Sevgisi", "Gizem ve Sırlar", Dostluk, "Keşif Tutkusu", "Doğa ile Mücadele", "Fedakârlık"]
+anatemalar: ["Aile Sevgisi", "Keşif Tutkusu", "Gizem ve Sırlar", "Dostluk", "Doğa ile Mücadele", "Fedakârlık"]
 
 # Social Media Attributes
 youtube:

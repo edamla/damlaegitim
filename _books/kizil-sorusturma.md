@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Kızıl Soruşturma"
+description: "Eski bir ordu doktoru olan John Watson, Londra’da uygun fiyatlı bir daire ararken, mes ile tanışır. Baker Sokağı 221B’de başlayan bu tarihî ev…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786057288707
 languages: ["Türkçe"]
 page: "160 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288707/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sir Arthur Conan Doyle"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Londra’nın sisli sokaklarından Amerikanın ıssız çöllerine uzanan yıllarca sabırla ilmek ilmek örülmüş bir intikamın hikâyesi"]
-anatemalar: ["adalet arayışı", "aşk ve trajedi", "kader inancı", fanatizm, "geçmişin kaçınılmazlığı", "tarihi sırlar"]
+anatemalar: ["Adalet Arayışı", "Fanatizm", "Aşk ve Trajedi", "Kader İnancı", "Geçmişin Kaçınılmazlığı", "Tarihî Sırlar", "kader inancı", "tarihi sırlar"]
 
 # Social Media Attributes
 youtube:

@@ -1,8 +1,9 @@
 ---
 layout: book
 title:  "O Canavarı Yakala"
+description: "Bilim Kültür Romanları Trafik canavarının sokaklarda kol gezdiği bir şehirde, kuralları hiçe sayanlara karşı amansız bir mücadele... Ersin ve Hilal,…"
 categories: ["Hikaye", "Ortaokul"]
-tags: []
+tags: [Trafik, Kaza, Polis, "Trafik Kuralları", "İlk Yardım", "Trafik Güvenliği"]
 
 # Standart Book Attributes
 ean: 9786053839620
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "144 sayfa"
 size: "12,5x18,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839620/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Trafik canavarının gölgesindeki bir şehirde kuralları hiçe sayanlara karşı akıl ve cesaretle verilen amansız bir mücadele"]
-anatemalar: ["Trafik Bilinci", "Ekip Ruhu", "Görev Bilinci", Sorumluluk, "Toplumsal Duyarlılık", "Akran Zorbalığı"]
+anatemalar: ["Trafik Bilinci", "Sorumluluk", "Ekip Ruhu", "Görev Bilinci", "Toplumsal Duyarlılık", "Akran Zorbalığı", "Trafik Kazaları", "İlk Yardım", "Görev Aşkı", "Kahramanlık", "Polis Teşkilatı"]
 
 # Social Media Attributes
 youtube:

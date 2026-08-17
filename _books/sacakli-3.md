@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Saçaklı Kız’ın Pasaklı Günlüğü-3"
+description: "değiştirecek kadar büyük eğlenceli isyanı!” bir kızın haksızlıklara karşı Pasaklı Günlüğü, serinin üçüncü kitabıyla nihayet karşınızda! Kendine has…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "160 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115042/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Nur Dombaycı"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Saçları saçaklı odası bazen pasaklı ama kalbi dünyayı değiştirecek kadar büyük bir kızın haksızlıklara karşı eğlenceli isyanı"]
-anatemalar: ["Dayanışma", "Hayvan Hakları", "Ekip Ruhu", "Ön Yargılar", "Sosyal Çevre", "Büyümek"]
+anatemalar: ["Dayanışma", "Ön Yargılar", "Hayvan Hakları", "Ekip Ruhu", "Sosyal Çevre", "Büyümek"]
 
 # Social Media Attributes
 youtube:

@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Yeditepede Bir Gezgin"
+description: "Almanya’da doğup büyümüş, üçüncü kuşak bir Türk genci... Kendi kültürüne masasında gördüğü büyüleyici bir fotoğraf tüm dünyasını değiştirir. Emma’nın…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "352 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051740911/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Almanyada doğup büyümüş bir gencin köklerine ve İstanbulun gizemli tarihine doğru çıktığı büyüleyici bir yolculuk"]
-anatemalar: ["Aidiyet ve Kökler", "Kültürel Uyanış", "Mimari Estetik", "Tarihî İhtişam", "Gurbet ve Özlem", Efsaneler]
+anatemalar: ["Aidiyet ve Kökler", "Tarihî İhtişam", "Kültürel Uyanış", "Mimari Estetik", "Gurbet ve Özlem", "Efsaneler"]
 
 # Social Media Attributes
 youtube:

@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Gizemli Gizem-3"
+description: "Aranızda onu hâlâ tanımayan var mı? Enerjisiyle sınır tanımayan kahramanımız gidiyor! Sakin geçmesi beklenen bu tatil, yaramaz kuzeni Tayfun’un ortadan…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "160 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115059/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Nehir Aydın Gökduman"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Sıradan bir Kapadokya tatili gökyüzüne süzülen bir balonla nasıl nefes kesici bir serüvene dönüşebilir"]
-anatemalar: [Sorumluluk, "Gerçeklik ve Yanılsama", "Tarih Bilinci", "Açgözlülük", "Dayanışma ve Arkadaşlık", "Cesaret ve Korku"]
+anatemalar: ["Sorumluluk", "Açgözlülük", "Gerçeklik ve Yanılsama", "Tarih Bilinci", "Dayanışma ve Arkadaşlık", "Cesaret ve Korku"]
 
 # Social Media Attributes
 youtube:

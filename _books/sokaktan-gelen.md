@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Sokaktan Gelen Çocuk"
+description: "Henüz on bir yaşındayken en güvendiği limanlardan, anne ve babasından ko- Yardımsever bir polisin uzattığı şefkatli elle, köhne bir dükkânda kunduracı…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "80 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113291/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Kemalettin Tuğcu"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Sokakların dondurucu karanlığında iyilik ve dürüstlükle parlayan sarsılmaz bir umut ışığı"]
-anatemalar: ["Aile İçi İhmal ve Terk Edilme", "Dürüstlük ve İftira", "Yardımlaşma", "Hayatta Kalma Mücadelesi", Vefa, "Kötü Alışkanlıklar"]
+anatemalar: ["Aile İçi İhmal ve Terk Edilme", "Hayatta Kalma Mücadelesi", "Dürüstlük ve İftira", "Yardımlaşma", "Vefa", "Kötü Alışkanlıklar"]
 
 # Social Media Attributes
 youtube:

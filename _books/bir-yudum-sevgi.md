@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Bir Yudum Sevgi"
+description: "Aynur ve Seher, büyük bir depremle hayatları altüst olan ve evleri başlarına birbirinden koparır ve iki kardeşi farklı çocuk yuvalarına savurur. Ancak…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "120 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839712/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Depremin bir gecede yerle bir ettiği hayatların ve enkaz altından çocuk yuvasına uzanan küçük bir kız çocuğunun yürek burkan sessiz çığlığı"]
-anatemalar: ["Deprem ve Travma", "Kardeşlik Bağı", Umut, "Sevgi İhtiyacı", "Çocuk Psikolojisi", "Çaresizlik"]
+anatemalar: ["Deprem ve Travma", "Sevgi İhtiyacı", "Kardeşlik Bağı", "Umut", "Çocuk Psikolojisi", "Çaresizlik"]
 
 # Social Media Attributes
 youtube:

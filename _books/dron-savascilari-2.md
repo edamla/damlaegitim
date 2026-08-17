@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Dron Savaşçıları-2"
+description: "Nanoteknoloji kullanarak geliştirdikleri ve tamamen görünmez kıldıkları yeni zamanda büyük bir sırrın anahtarıdır. Gece yarısı eski havalimanı…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "192 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051743011/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Necati Akbaba"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Tehlikeli bir şebeke yanlışlıkla kaçırılan çocuklar ve gökyüzünden gelen kusursuz bir kurtarma operasyonu"]
-anatemalar: ["İnovasyon", "Takım Çalışması", Sorumluluk, "Araştırma Merakı", Rekabet, "Adalet Arayışı"]
+anatemalar: ["İnovasyon", "Araştırma Merakı", "Takım Çalışması", "Sorumluluk", "Rekabet", "Adalet Arayışı"]
 
 # Social Media Attributes
 youtube:

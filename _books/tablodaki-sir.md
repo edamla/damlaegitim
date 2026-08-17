@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Tablodaki Sır"
+description: "Ünlü iş adamı Cemil Rıza Bey’in kızı Cansu’nun gizemli bir şekilde kaçırılması, dağ evinde rehin tutulan Cansu ve tesadüfen kendini bu karmaşanın…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "312 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051740935/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Mesut Turan"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Geçmişin karanlık sırları hiç beklenmedik ıssız bir dağ evinde gün yüzüne çıkıyor"]
-anatemalar: ["İntikam ve Pişmanlık", Kader, Affetmek, "Kardeşlik Bağı", "İletişimsizlik", "Güçlü Kadınlar"]
+anatemalar: ["İntikam ve Pişmanlık", "Kardeşlik Bağı", "Kader", "Affetmek", "İletişimsizlik", "Güçlü Kadınlar"]
 
 # Social Media Attributes
 youtube:

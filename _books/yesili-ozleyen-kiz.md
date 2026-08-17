@@ -1,8 +1,9 @@
 ---
 layout: book
 title:  "Yeşili Özleyen Kız"
+description: "Beton duvarların arasına sıkışmış bir çocuğun gözünden, yitip giden yeşile yakılan köyünden koparılıp gri bir kente sürüklenen sevimli bir kızın içsel…"
 categories: ["Hikaye", "Ortaokul"]
-tags: []
+tags: ["Çernobil", Radyasyon, "Nükleer Kirlilik", Mevsimler, Ekoloji, "Göç", "Kırsal ve Kensel Yaşam"]
 
 # Standart Book Attributes
 ean: 9786053830726
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "160 sayfa"
 size: "12,5x18,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053830726/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Yeşilin binbir tonundan beton yığınlarının arasına sıkışan bir çocuğun doğaya ve özgürlüğe duyduğu yürek burkan özlem"]
-anatemalar: ["Doğa Özlemi", "Toprak Sevgisi", "İnsan ve Tabiat Uyumu", "Çernobil Felaketi", "Ön Yargılar", "Köyden Kente Göç"]
+anatemalar: ["Doğa Özlemi", "Çernobil Felaketi", "Toprak Sevgisi", "İnsan ve Tabiat Uyumu", "Ön Yargılar", "Köyden Kente Göç", "Çevre Kirliliği", "Ekoloji", "Mevsimsel Değişim", "Orman Varlığı"]
 
 # Social Media Attributes
 youtube:

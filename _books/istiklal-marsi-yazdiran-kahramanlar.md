@@ -1,47 +1,42 @@
 ---
 layout: book
 title:  "İstiklal Marşı Yazdıran Kahramanlar (10 Kitap)"
+description: "Kahraman milletimizin bağımsızlık yolunda yazdığı o büyük destanı, gerçek Kuvâ-yi Millîye öyküleriyle keşfetmeye hazır mısınız? 3. ve 4. sınıf…"
 categories: ["Hikaye", "İlkokul"]
-tags: []
+tags: ["Gazilik", "Şehitlik", "Vatanseverlik", "Tarih", "Kültür", "Medeniyet", "Bayrak", "Kültür Birliği", "Mücadele", "Cihad Şuuru", "Kahramanlık", "Gençlik", "Asker", "Ordu", "Cesaret", "Millet"]
 
 # Standart Book Attributes
 ean: 9786254112560
 languages: ["Türkçe"]
 page: "Her Biri 64"
-size: "14x20 cm"
+size: "13,5x19,5 cm"
 publish-number: 2972
 cover: "Karton Kapak"
 examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/istiklal-marsi-yazdiran-y.pdf"
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254112560/index.html"
 damlaurl: ""
-paper: "1. Hamur"
+paper: "Kitap Kağıdı"
+authors: ["Sara Gürbüz Özeren"]
+illustrators: ["Erhan Acar"]
 
 # Spesific Filterable Attributes
 genre: story
 grades: [3, 4]
 kavramlar: [""]
-anatemalar: ["Milli Mücadele", "Vatan Sevgisi", "Bağımsızlık", "Tarih Bilinci", "Kahramanlık"]
+anatemalar: ["Vatanseverlik", "Tarih", "Kültür", "Kurtuluş Mücadelesi", "Milli Mücadele", "Vatan Sevgisi", "Bağımsızlık", "Tarih Bilinci", "Kahramanlık"]
 
 # Social Media Attributes
 youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
-Kurtuluş Savaşı'nda kahraman milletimizin nasıl bir destan yazdığını öğrenmek, gerçek öyküleriyle Kuvâ-yi Millîye kahramanlarını tanımak ister misin?
+**TEMALAR:** Vatanseverlik, Tarih, Kültür, Kurtuluş Mücadelesi
 
-Her bir kitapta İstiklâl Marşı'mızın bir kıtasının anlatıldığı, Sosyal Bilgiler kazanımlarını destekleyen bu seri sayesinde; vatan sevgisi, fedakârlık, cesaret, dayanışma gibi millî ve manevî değerlerimizi öğreneceksin.
+**KAZANIMLAR:** Millî Mücadele Dönemini ve Kahramanlarını Tanımak, Vatan Sev gisi ve Bağımsızlık Bilincini İçselleştirmek, İstiklâl Marşı’nın Yazılış Sürecini ve Anlamını Kavramak, Cesaret, Fedakârlık ve Dayanışma Gibi Millî Değerleri Özümsemek
 
-Yurdumuzun dört bir yanını saran düşmana karşı destansı bir mücadele veren milletimizin yaşadıklarını okudukça İstiklâl Marşı'mızın hangi şartlarda yazıldığını daha iyi kavrayacaksın.
+**ETİKETLER:** Gazilik, Şehitlik, Vatanseverlik, Tarih, Kültür, Medeniyet, Bayrak, Kültür Birliği, Mücadele, Cihad Şuuru, Kahramanlık, Gençlik, Asker, Ordu, Cesaret, Millet
 
-"Bastığın yerleri "toprak" diyerek geçme, tanı,<br>
-Düşün altındaki binlerce kefensiz yatanı.<br>
-Sen şehit oğlusun, incitme, yazıktır atanı,<br>
-Verme, dünyaları alsan da bu cennet vatanı."<br>
-Mehmet Âkif Ersoy
-
-*Allah bu millete bir daha İstiklâl Marşı yazdırmasın!*
-
-**Setin İçerdiği Hikayeler**
+Setin İçerdiği Hikayeler**
 
 1- İlk Kurşun <br>
 2- Topkapılı Cambaz Mehmet<br>
@@ -54,4 +49,4 @@ Mehmet Âkif Ersoy
 9- Köprülülü Hamdi Bey<br>
 10- Erzurumlu Gül Hanım
 
-<!--more--> 
+<!--more-->

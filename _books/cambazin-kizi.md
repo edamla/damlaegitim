@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Cambazın Kızı"
+description: "Acımasız bir trapez kazası, 12 yaşındaki Sevim’in dünyasını karartsa da içindeki çalışan bu cesur kız, tesadüflerin ağında kendini kasvetli bir hastane…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "80 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051749617/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Kemalettin Tuğcu"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Hayatın ipinde dengede durmaya çalışan bir kız çocuğunun sevgisiz bir kalbi iyileştirme mucizesi"]
-anatemalar: ["Ön Yargıların Yıkılması", "Dürüstlük ve Onurlu Yaşam", "Alın Teri ve Dürüst Kazanç", "Gerçek Sevgi ve Vefa", "Eğitimin Önemi", "Vicdan Muhasebesi"]
+anatemalar: ["Ön Yargıların Yıkılması", "Gerçek Sevgi ve Vefa", "Dürüstlük ve Onurlu Yaşam", "Alın Teri ve Dürüst Kazanç", "Eğitimin Önemi", "Vicdan Muhasebesi"]
 
 # Social Media Attributes
 youtube:

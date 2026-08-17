@@ -1,0 +1,10 @@
+<div class="ogretmen-wizard__panel" data-step="1" id="ow-step-1">
+  <h2 class="h4 mb-3">1. Sınıf seçin</h2>
+  <p class="text-muted mb-3">Talebiniz hangi sınıf düzeyi için?</p>
+  <div class="ogretmen-wizard__grade-grid" id="ow-grade-grid" role="group" aria-label="Sınıf seçimi">
+    <button type="button" class="ogretmen-wizard__grade-btn" data-grade="0">Okul Öncesi</button>
+    {% for g in (1..8) %}
+    <button type="button" class="ogretmen-wizard__grade-btn" data-grade="{{ g }}">{{ g }}. Sınıf</button>
+    {% endfor %}
+  </div>
+</div>

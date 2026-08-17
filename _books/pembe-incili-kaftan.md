@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Pembe İncili Kaftan"
+description: "Osmanlı Devleti’nin kudretli günlerinde, Şah İsmail’e elçi olarak gönderilecek korkudan titrediği bu görev için, makam ve mevki peşinde koşmayan, mağrur…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786259895208
 languages: ["Türkçe"]
 page: "100 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895208/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Ömer Seyfettin"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Vatan al bayrağın dalgalandığı yer değil midir diyen kahramanların esarete boyun eğmeyenlerin ve aklıyla destan yazanların ölümsüz öyküleri"]
-anatemalar: ["vatan sevgisi", "strateji ve zeka", "sabır ve umut", "milli kimlik", bilgelik, gelenekler]
+anatemalar: ["Vatan Sevgisi", "Millî Kimlik", "Strateji ve Zekâ", "Sabır ve Umut", "Bilgelik", "Gelenekler", "strateji ve zeka", "milli kimlik"]
 
 # Social Media Attributes
 youtube:

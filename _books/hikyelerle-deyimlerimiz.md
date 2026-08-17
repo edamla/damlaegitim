@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Hikâyelerle Deyimlerimiz"
+description: "Sohbetlerimizin tuzu biberi, dilimizin bin yıllık hafızası olan deyimler, aslında noktası’ derken aslında tarihin hangi tozlu sayfasına dokunuyoruz?…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "160 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053833789/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sevda Dıraga Canbaz"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Binlerce yıllık hafızamızın şifrelerini taşıyan sözcüklerin dilden dile dolaşan efsanevi öyküleri"]
-anatemalar: ["Ticaret Ahlakı", "İlim ve Sabır", "Cehalet ve Ön Yargı", "Kanaatkârlık", "Adalet Arayışı", "Kurnazlık"]
+anatemalar: ["Ticaret Ahlakı", "Kanaatkârlık", "İlim ve Sabır", "Cehalet ve Ön Yargı", "Adalet Arayışı", "Kurnazlık"]
 
 # Social Media Attributes
 youtube:

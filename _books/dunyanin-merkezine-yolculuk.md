@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Dünya’nın Merkezine Yolculuk"
+description: "Eksantrik ve inatçı bilim insanı Profesör Lidenbrock, eski bir parşömen kâğıdının Şifre, İzlanda’daki sönmüş bir yanardağın kraterinden Dünya’nın…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786057288769
 languages: ["Türkçe"]
 page: "160 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288769/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Jules Verne"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Yeraltı okyanuslarından devasa mantar ormanlarına tarih öncesi canavarlardan dev insanlara Bilimin cesaretin ve sınırların zorlandığı bir Jules Verne klasiği"]
-anatemalar: ["Bilimsel İnatçılık", "Doğanın Gizemi", "Keşif Ruhu", "Korku ve Cesaret", Sadakat, "Tarih Öncesi Yaşam"]
+anatemalar: ["Bilimsel İnatçılık", "Korku ve Cesaret", "Doğanın Gizemi", "Keşif Ruhu", "Sadakat", "Tarih Öncesi Yaşam", "48 48"]
 
 # Social Media Attributes
 youtube:

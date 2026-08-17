@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Efsane Futbol Takımları"
+description: "Zaman makinesi Ertuğrul ile geçmişin derinliklerine dalıp, Türk futbolunun te- ilk spor kulübü Beşiktaş’ın kırmızı beyazdan siyah beyaza dönen hüzünlü…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "120 sayfa"
 size: "12,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113062/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Meşin yuvarlağın peşinde sadece zaferleri değil bir milletin hüznünü bağımsızlığını ve şanlı direnişini keşfedin"]
-anatemalar: ["Futbol Tarihi", "Tarihî Miras", "Araştırma Merakı", "Millî Birlik", "Dayanışma", "Sporun Gücü"]
+anatemalar: ["Futbol Tarihi", "Millî Birlik", "Tarihî Miras", "Araştırma Merakı", "Dayanışma", "Sporun Gücü"]
 
 # Social Media Attributes
 youtube:

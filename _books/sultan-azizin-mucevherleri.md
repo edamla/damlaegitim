@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Sultan Aziz’in Mücevherleri"
+description: "Osmanlı’nın derinliklerinden günümüze uzanan tarihî bir sır gün yüzüne çıkıyor! Sultan Abdülaziz’den kalan efsanevi mirasın ve paha biçilmez…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "176 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053838418/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Peyami Safa"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Sultan Azizden kalan efsanevi bir mirasın etrafında dönen karanlık sırlargizli şifreler ve uluslararası çeteler tüm bu karmaşık düğümleri çözecek olan tek şey kibar hırsız Cingöz Recainin keskin zekâsıdır"]
-anatemalar: ["Akıl Oyunları", "Adalet Anlayışı", Rekabet, "İhtiras", Gizem, "Sızma Operasyonu"]
+anatemalar: ["Akıl Oyunları", "İhtiras", "Adalet Anlayışı", "Rekabet", "Gizem", "Sızma Operasyonu", "41 41"]
 
 # Social Media Attributes
 youtube:

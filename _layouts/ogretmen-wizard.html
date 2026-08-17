@@ -1,0 +1,340 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ogretmen-wizard.css?v={{ site.time | date: '%s' }}">
+
+<div class="container ogretmen-wizard">
+  <header class="mb-3">
+    <h1 class="display-6">{{ page.title | default: "Öğretmen Köşesi" }}</h1>
+    <p class="text-muted">{{ page.description | default: "Sınıfınıza uygun ürünleri seçin, listenizi oluşturun ve talebinizi gönderin." }}</p>
+  </header>
+
+  <div class="ogretmen-wizard__progress" aria-hidden="true">
+    {% for i in (1..5) %}
+    <div class="ogretmen-wizard__step-dot{% if i == 1 %} is-active{% endif %}" data-progress="{{ i }}"></div>
+    {% endfor %}
+  </div>
+
+  {% include ogretmen-wizard/step-grade.html %}
+  {% include ogretmen-wizard/step-products.html %}
+  {% include ogretmen-wizard/step-list.html %}
+  {% include ogretmen-wizard/step-contact.html %}
+  {% include ogretmen-wizard/step-submit.html %}
+
+  <div class="ogretmen-wizard__actions">
+    <button type="button" class="btn btn-outline-secondary" id="ow-btn-prev" disabled>Geri</button>
+    <button type="button" class="btn btn-primary" id="ow-btn-next">İleri</button>
+  </div>
+</div>
+
+<script type="application/json" id="ogretmen-catalog">[
+{% for book in site.books %}
+{% assign book_slug = book.url | split: '/' | last | remove: '.html' %}
+{% assign book_cover = book.image %}
+{% if book.ean %}
+{% assign cover_jpg = 'assets/images/ean/' | append: book.ean | append: '.jpg' %}
+{% assign cover_webp = 'assets/images/ean/' | append: book.ean | append: '.webp' %}
+{% assign cover_jpg_rel = '/' | append: cover_jpg %}
+{% assign cover_webp_rel = '/' | append: cover_webp %}
+{% for static_file in site.static_files %}
+{% if static_file.path == cover_webp_rel %}{% assign book_cover = cover_webp %}{% endif %}
+{% if static_file.path == cover_jpg_rel and book_cover == book.image %}{% assign book_cover = cover_jpg %}{% endif %}
+{% endfor %}
+{% endif %}
+{
+  "slug": {{ book_slug | jsonify }},
+  "title": {{ book.title | jsonify }},
+  "ean": {{ book.ean | append: '' | jsonify }},
+  "genre": {{ book.genre | jsonify }},
+  "grades": {{ book.grades | jsonify }},
+  "categories": {{ book.categories | jsonify }},
+  "tags": {{ book.tags | jsonify }},
+  "anatemalar": {{ book.anatemalar | jsonify }},
+  "kavramlar": {{ book.kavramlar | jsonify }},
+  "url": {{ book.url | jsonify }},
+  "cover": {{ book_cover | jsonify }}
+}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]</script>
+
+<script defer src="{{ site.baseurl }}/assets/js/book-filter.js?v={{ site.time | date: '%s' }}"></script>
+<script>
+(function() {
+  var STORAGE_KEY = 'damlaokul:ogretmen-wizard';
+  var SUBMIT_URL = {{ site.ogretmen_submit_url | default: '' | jsonify }};
+  var catalog = [];
+  var state = { step: 1, grade: null, genre: 'education', list: [], contact: {}, filters: { q: '' } };
+
+  function loadState() {
+    try {
+      var raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) Object.assign(state, JSON.parse(raw));
+    } catch (e) { /* ignore */ }
+  }
+
+  function saveState() {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  }
+
+  function uuid() {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+      var r = Math.random() * 16 | 0;
+      return (c === 'x' ? r : (r & 0x3 | 0x8)).toString(16);
+    });
+  }
+
+  function showStep(n) {
+    state.step = n;
+    saveState();
+    document.querySelectorAll('.ogretmen-wizard__panel').forEach(function(p) {
+      p.classList.toggle('is-active', parseInt(p.dataset.step, 10) === n);
+    });
+    document.querySelectorAll('.ogretmen-wizard__step-dot').forEach(function(d) {
+      var i = parseInt(d.dataset.progress, 10);
+      d.classList.toggle('is-active', i === n);
+      d.classList.toggle('is-done', i < n);
+    });
+    document.getElementById('ow-btn-prev').disabled = n <= 1;
+    document.getElementById('ow-btn-next').textContent = n >= 5 ? 'Gönder' : 'İleri';
+    if (n === 2) renderCatalog();
+    if (n === 3) renderList();
+    if (n === 5) renderSummary();
+  }
+
+  function getCriteria() {
+    return {
+      grade: state.grade,
+      genre: state.genre,
+      q: state.filters.q || ''
+    };
+  }
+
+  function renderCatalog() {
+    var el = document.getElementById('ow-catalog');
+    if (!el || !window.BookFilter) return;
+    var filtered = BookFilter.filterCatalog(catalog, getCriteria());
+    el.innerHTML = filtered.map(function(book) {
+      var inList = state.list.some(function(i) { return i.slug === book.slug; });
+      var cover = book.cover ? ('{{ site.baseurl }}/' + book.cover) : '';
+      return '<article class="ogretmen-wizard__product">' +
+        (cover ? '<img src="' + cover + '" alt="" loading="lazy" width="80" height="120">' : '') +
+        '<div class="ogretmen-wizard__product-title">' + escapeHtml(book.title) + '</div>' +
+        '<button type="button" class="btn btn-sm ' + (inList ? 'btn-secondary' : 'btn-outline-primary') + '" data-add-slug="' + escapeHtml(book.slug) + '"' + (inList ? ' disabled' : '') + '>Listeye ekle</button>' +
+        '</article>';
+    }).join('') || '<p class="text-muted">Bu kriterlere uygun ürün bulunamadı.</p>';
+  }
+
+  function renderList() {
+    var el = document.getElementById('ow-list');
+    var empty = document.getElementById('ow-list-empty');
+    if (!el) return;
+    if (state.list.length === 0) {
+      el.innerHTML = '';
+      if (empty) empty.style.display = 'block';
+      return;
+    }
+    if (empty) empty.style.display = 'none';
+    el.innerHTML = state.list.map(function(item, idx) {
+      return '<div class="ogretmen-wizard__list-item">' +
+        '<span>' + escapeHtml(item.title) + ' <small class="text-muted">(' + (item.genre === 'education' ? 'Eğitim' : 'Hikaye') + ')</small></span>' +
+        '<button type="button" class="btn btn-sm btn-outline-danger" data-remove-idx="' + idx + '">Çıkar</button></div>';
+    }).join('');
+  }
+
+  function renderSummary() {
+    var el = document.getElementById('ow-summary');
+    if (!el) return;
+    var c = readContactForm();
+    el.innerHTML = '<p><strong>Sınıf:</strong> ' + gradeLabel(state.grade) + '</p>' +
+      '<p><strong>Ürün sayısı:</strong> ' + state.list.length + '</p>' +
+      '<ul class="small">' + state.list.map(function(i) { return '<li>' + escapeHtml(i.title) + '</li>'; }).join('') + '</ul>' +
+      '<p><strong>İletişim:</strong> ' + escapeHtml(c.firstName + ' ' + c.lastName) + ', ' + escapeHtml(c.school) + '</p>';
+  }
+
+  function gradeLabel(g) {
+    if (g === '0' || g === 0) return 'Okul Öncesi';
+    return g + '. Sınıf';
+  }
+
+  function escapeHtml(s) {
+    return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  }
+
+  function readContactForm() {
+    return {
+      firstName: document.getElementById('ow-first-name').value.trim(),
+      lastName: document.getElementById('ow-last-name').value.trim(),
+      city: document.getElementById('ow-city').value.trim(),
+      district: document.getElementById('ow-district').value.trim(),
+      phone: document.getElementById('ow-phone').value.trim(),
+      email: document.getElementById('ow-email').value.trim(),
+      school: document.getElementById('ow-school').value.trim()
+    };
+  }
+
+  function fillContactForm() {
+    var c = state.contact || {};
+    if (c.firstName) document.getElementById('ow-first-name').value = c.firstName;
+    if (c.lastName) document.getElementById('ow-last-name').value = c.lastName;
+    if (c.city) document.getElementById('ow-city').value = c.city;
+    if (c.district) document.getElementById('ow-district').value = c.district;
+    if (c.phone) document.getElementById('ow-phone').value = c.phone;
+    if (c.email) document.getElementById('ow-email').value = c.email;
+    if (c.school) document.getElementById('ow-school').value = c.school;
+  }
+
+  function buildSheetRow() {
+    var c = state.contact;
+    var education = state.list.filter(function(i) { return i.genre === 'education'; }).length;
+    var story = state.list.filter(function(i) { return i.genre === 'story'; }).length;
+    return {
+      talep_id: uuid(),
+      sinif: state.grade,
+      ad: c.firstName,
+      soyad: c.lastName,
+      il: c.city,
+      ilce: c.district,
+      telefon: c.phone,
+      eposta: c.email,
+      okul_adi: c.school,
+      urun_sayisi: state.list.length,
+      egitim_sayisi: education,
+      hikaye_sayisi: story,
+      urun_basliklari: state.list.map(function(i) { return i.title; }).join(' | '),
+      urun_eanleri: state.list.map(function(i) { return i.ean || ''; }).join(' | '),
+      urun_sluglari: state.list.map(function(i) { return i.slug; }).join(' | '),
+      filtre_tur: state.genre === 'education' ? 'egitim' : 'hikaye',
+      filtre_kategori: '',
+      filtre_tags: '',
+      filtre_anatemalar: '',
+      filtre_arama: state.filters.q || '',
+      kaynak_url: window.location.href,
+      urunler: state.list.map(function(item, idx) {
+        return {
+          sira: idx + 1,
+          slug: item.slug,
+          baslik: item.title,
+          ean: item.ean || '',
+          tur: item.genre === 'education' ? 'Eğitim' : 'Hikaye'
+        };
+      })
+    };
+  }
+
+  function setStatus(msg, type) {
+    var el = document.getElementById('ow-status');
+    el.textContent = msg;
+    el.className = 'ogretmen-wizard__status is-' + type;
+  }
+
+  function submitToSheets() {
+    if (!SUBMIT_URL) {
+      setStatus('Gönderim henüz yapılandırılmadı. Talebiniz yerel olarak kaydedildi; yöneticiniz Apps Script URL\'sini eklediğinde tekrar deneyin.', 'error');
+      return;
+    }
+    var payload = buildSheetRow();
+    fetch(SUBMIT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    }).then(function() {
+      setStatus('Talebiniz alındı. En geç 48 saat içinde sizinle iletişime geçeceğiz.', 'success');
+      localStorage.removeItem(STORAGE_KEY);
+    }).catch(function() {
+      localStorage.setItem(STORAGE_KEY + ':pending', JSON.stringify(payload));
+      setStatus('Gönderim sırasında hata oluştu. Lütfen tekrar deneyin.', 'error');
+    });
+  }
+
+  function validateStep(n) {
+    if (n === 1 && state.grade === null) { alert('Lütfen sınıf seçin.'); return false; }
+    if (n === 3 && state.list.length === 0) { alert('Listeye en az bir ürün ekleyin.'); return false; }
+    if (n === 4) {
+      var c = readContactForm();
+      if (!c.firstName || !c.lastName || !c.city || !c.district || !c.phone || !c.email || !c.school) {
+        alert('Lütfen tüm iletişim alanlarını doldurun.');
+        return false;
+      }
+      state.contact = c;
+      saveState();
+    }
+    return true;
+  }
+
+  function init() {
+    var catalogEl = document.getElementById('ogretmen-catalog');
+    if (catalogEl) catalog = JSON.parse(catalogEl.textContent);
+    loadState();
+    fillContactForm();
+
+    document.querySelectorAll('.ogretmen-wizard__grade-btn').forEach(function(btn) {
+      if (String(btn.dataset.grade) === String(state.grade)) btn.classList.add('is-selected');
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.ogretmen-wizard__grade-btn').forEach(function(b) { b.classList.remove('is-selected'); });
+        btn.classList.add('is-selected');
+        state.grade = btn.dataset.grade;
+        saveState();
+      });
+    });
+
+    document.querySelectorAll('.ogretmen-wizard__tab').forEach(function(tab) {
+      if (tab.dataset.genre === state.genre) tab.classList.add('is-active');
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.ogretmen-wizard__tab').forEach(function(t) { t.classList.remove('is-active'); });
+        tab.classList.add('is-active');
+        state.genre = tab.dataset.genre;
+        saveState();
+        renderCatalog();
+      });
+    });
+
+    document.getElementById('ow-search').addEventListener('input', function(e) {
+      state.filters.q = e.target.value;
+      saveState();
+      renderCatalog();
+    });
+
+    document.getElementById('ow-catalog').addEventListener('click', function(e) {
+      var btn = e.target.closest('[data-add-slug]');
+      if (!btn) return;
+      var slug = btn.dataset.addSlug;
+      var book = catalog.find(function(b) { return b.slug === slug; });
+      if (!book || state.list.some(function(i) { return i.slug === slug; })) return;
+      state.list.push({ slug: book.slug, title: book.title, ean: book.ean, genre: book.genre });
+      saveState();
+      renderCatalog();
+    });
+
+    document.getElementById('ow-list').addEventListener('click', function(e) {
+      var btn = e.target.closest('[data-remove-idx]');
+      if (!btn) return;
+      state.list.splice(parseInt(btn.dataset.removeIdx, 10), 1);
+      saveState();
+      renderList();
+    });
+
+    document.getElementById('ow-btn-prev').addEventListener('click', function() {
+      if (state.step > 1) showStep(state.step - 1);
+    });
+
+    document.getElementById('ow-btn-next').addEventListener('click', function() {
+      if (state.step < 5) {
+        if (!validateStep(state.step)) return;
+        showStep(state.step + 1);
+      } else {
+        if (!validateStep(4)) { showStep(4); return; }
+        submitToSheets();
+      }
+    });
+
+    showStep(state.step);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>

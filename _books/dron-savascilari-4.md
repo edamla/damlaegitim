@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Dron Savaşçıları-4"
+description: "Karanlık Orman’ın derinliklerinden gelen ürpertici haberler tüm kasabayı sar- güçlerinin bile çaresiz kaldığı bu büyük gizemi çözmek için devletin özel…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "216 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254110498/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Necati Akbaba"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Karanlık Ormanın tehlikeli derinliklerinde vahşi doğaya karşı hayatta kalma mücadelesi veren iki çocuk ve gökyüzünün görünmez kahramanları Dron Savaşçılarının nefes kesen macerası başlıyor"]
-anatemalar: ["Bilimsel Yaklaşım", "Adalet ve Güvenlik", "Gizem ve Keşif", "Hayatta Kalma", "Takım Çalışması", Cesaret]
+anatemalar: ["Bilimsel Yaklaşım", "Hayatta Kalma", "Adalet ve Güvenlik", "Gizem ve Keşif", "Takım Çalışması", "Cesaret"]
 
 # Social Media Attributes
 youtube:

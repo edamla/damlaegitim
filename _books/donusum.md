@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Dönüşüm"
+description: "Kumaş pazarlamacısı Gregor Samsa, sıradan ve kasvetli bir sabaha uyanırken sanlığını kaybetmenin verdiği dehşetle başa çıkmaya çalışırken, bir yandan da…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786057490483
 languages: ["Türkçe"]
 page: "80 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057490483/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Franz Kafka"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Gregor Samsa kasvetli düşlerden uyandığı bir sabah kendini yatağının üzerinde devasa bir böceğe dönüşmüş olarak buldu"]
-anatemalar: ["Yabancılaşma ve Yalnızlık", "Çıkar İlişkileri", "Suçluluk ve Utanç", "Toplumsal Baskı", "Beden ve Zihin Çatışması", "Bağımsızlaşma"]
+anatemalar: ["Yabancılaşma ve Yalnızlık", "Toplumsal Baskı", "Çıkar İlişkileri", "Suçluluk ve Utanç", "Beden ve Zihin Çatışması", "Bağımsızlaşma"]
 
 # Social Media Attributes
 youtube:

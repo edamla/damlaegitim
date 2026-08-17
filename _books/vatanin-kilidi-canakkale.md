@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Vatanın Kilidi Çanakkale"
-description: "Çanakkale destanını anlatan tarihî kurgu; vatan sevgisi ve milli değerler teması."
+description: "Birinci Dünya Savaşı’nın en çetin cephesi olan Çanakkale’de, “Çanakkale Geçil- nın en güçlü donanmalarına karşı etten ve kemikten bir duvar ören…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -11,7 +11,7 @@ languages: ["Türkçe"]
 page: "176 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053833154/index.html"
 damlaurl: ""
@@ -22,7 +22,7 @@ authors: ["Sara Gürbüz Özeren"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Oğlumun başındaki kınaları sormuşsunuz Biz vatana kurban ettiğimiz evladımızın başına kına yakarız kumandan Bunu böyle bilesiniz"]
-anatemalar: ["Vatan Sevgisi", Maneviyat, "Fedakârlık", "Kahramanlık", "Direniş", "Birlik ve Kardeşlik"]
+anatemalar: ["Vatan Sevgisi", "Kahramanlık", "Maneviyat", "Fedakârlık", "Direniş", "Birlik ve Kardeşlik"]
 
 # Social Media Attributes
 youtube:

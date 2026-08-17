@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Afacan Polisler-1"
-description: "Afacan Polisler serisinin ilk kitabı; macera dolu hikaye ile okuma alışkanlığı kazandırır."
+description: "Fikriye Ana ne olur yapma!” diye yalvaran minik çocuğun sesi, olayların fitilini miz Bilgin’in hemen dikkatini çeker. Çünkü hiçbir çocuk öz annesine…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -11,7 +11,7 @@ languages: ["Türkçe"]
 page: "160 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115493/index.html"
 damlaurl: ""
@@ -22,7 +22,7 @@ authors: ["Yavuz Ali Bilge"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["dört afacan gencin sokaktaki masum bir olaya müdahale etmesiyle başlayan ve polis akademisine uzanan nefes kesici serüveni başlıyor"]
-anatemalar: ["adalet arayışı", "gençlerin gücü", "disiplin ve kurallar", "ekip ruhu", "meslek bilinci", empati]
+anatemalar: ["Adalet Arayışı", "Ekip Ruhu", "Gençlerin Gücü", "Disiplin ve Kurallar", "Meslek Bilinci", "Empati", "Ahlaki Değerler ve Empati", "Birlik ve Takım Çalışması", "Bilim", "Mantık", "Sorumluluk ve Disiplin"]
 
 # Social Media Attributes
 youtube: "https://www.youtube.com/watch?v=wyKcbC_RZbc&t=5s"

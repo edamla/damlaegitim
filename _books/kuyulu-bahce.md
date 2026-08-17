@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Kuyulu Bahçe"
+description: "Susuzluğun kavurduğu, umutların toprağın çatlaklarında kuruyup gittiği göç Küçük Oktay ve ailesinin taşıma suyla hayata tutunmaya çalıştığı bu ıssız…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "80 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113307/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Kemalettin Tuğcu"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Çatlamış topraklardan fışkıran bir umut damlası sadece doğayı değil kurumuş kalpleri de yeşertir"]
-anatemalar: ["Emek ve Çalışma", "Ön Yargılar", "Eğitim ve Aydınlanma", "Karşılıksız İyilik", Vefa, "Su ve Hayat"]
+anatemalar: ["Emek ve Çalışma", "Karşılıksız İyilik", "Ön Yargılar", "Eğitim ve Aydınlanma", "Vefa", "Su ve Hayat"]
 
 # Social Media Attributes
 youtube:

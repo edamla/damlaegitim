@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "On Beş Yaşında Bir Kaptan"
+description: "Pilgrim gemisinin cesur kaptanı ve deneyimli mürettebatı trajik bir balina avında omuzlarına kalır! Yüzlerce millik okyanusu aşarak yolcuları sağ salim…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -8,9 +9,9 @@ tags: []
 ean: 9786259895291
 languages: ["Türkçe"]
 page: "160 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895291/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Jules Verne"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Amerika kıyılarına ulaştıklarını sanırken ihanete uğrayıp kendilerini Afrikanın acımasız köle tüccarlarının arasında bulan kazazedelerin nefes kesen hayatta kalma savaşı"]
-anatemalar: ["Sorumluluk Bilinci", "İnsan Hakları", "Doğayla Mücadele", "İhanet ve Kötülük", "Kahramanlık", "Dayanışma"]
+anatemalar: ["Sorumluluk Bilinci", "İhanet ve Kötülük", "İnsan Hakları", "Doğayla Mücadele", "Kahramanlık", "Dayanışma"]
 
 # Social Media Attributes
 youtube:

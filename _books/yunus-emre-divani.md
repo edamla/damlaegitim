@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Yunus Emre Divanı"
+description: "Anadolu’nun Moğol istilaları ve iç karışıklıklarla sarsıldığı o karanlık çağda, in- “Yetmiş iki millete bir göz ile bakma” felsefesiyle dil, din ve ırk…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "208 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057490452/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Yunus Emre"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Yaratılanı Yaradandan ötürü sevmeyi öğreten sevelim sevilelim diyerek insanın terbiyesinde sevgiyi esas alan gönül insanının çağları aydınlatan eseri"]
-anatemalar: ["Hoşgörü ve Sevgi", "Ölüm", "Gönül Yapmak", Tasavvuf, "Doğruluk", "İlâhî Aşk:"]
+anatemalar: ["Hoşgörü ve Sevgi", "Tasavvuf", "Ölüm", "Gönül Yapmak", "Doğruluk", "İlâhî Aşk:"]
 
 # Social Media Attributes
 youtube:

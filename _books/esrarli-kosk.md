@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Esrarlı Köşk"
+description: "Zekâsı ve kurnazlığıyla nam salan kibar hırsızımız Cingöz Recai, bu kez okurla- oluşan bu sürükleyici eserde Cingöz, sadece Başkomiser Mehmed Rıza’yı at-…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "128 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836407/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Peyami Safa"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Hafiye ile hırsız ara sında oynanan Amerika polisinin bile çözemediği tehlikeli ve düşündürücü bir polis santrancı"]
-anatemalar: ["Akıl Oyunları", "Adalet Çatışması", "Polisiye Gerilim", "Kılık Değiştirme", "Çalma Tutkusu", "İhanet ve Sadakat"]
+anatemalar: ["Akıl Oyunları", "Kılık Değiştirme", "Adalet Çatışması", "Polisiye Gerilim", "Çalma Tutkusu", "İhanet ve Sadakat"]
 
 # Social Media Attributes
 youtube:

@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Güllü Bahçe"
+description: "Bir zamanların saygın veznedarı, kumarın karanlık girdabında itibarını ve yuvasını lerinden kaçıp ıssız ve çorak bir araziye sığınan bu yaralı baba-oğul,…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "80 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113321/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Kemalettin Tuğcu"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Toprak sadece tohumu değil sabırla yoğrulan kırık dökük umutları da yeşertir"]
-anatemalar: ["Emek ve Doğa", Vefa, Merhamet, "Kumarın Bedeli", "Ön Yargılar", "Pişmanlık"]
+anatemalar: ["Emek ve Doğa", "Kumarın Bedeli", "Vefa", "Merhamet", "Ön Yargılar", "Pişmanlık"]
 
 # Social Media Attributes
 youtube:

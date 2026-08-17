@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Afacan Polisler-2"
+description: "Bilgin, evinin salonunda kurduğu sinevizyon sistemini çalıştırdığında tüm ekibin Telefonuna gelen gizemli mesajlar ve birbirini takip eden kanıtlar,…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "160 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115974/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Yavuz Ali Bilge"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["En güzel temizlik kirletmemektir ilkesiyle yola çıkan Afacanlar bu kez hem çevreyi hem de sanal dünyayı temizlemek için işbaşında"]
-anatemalar: ["Çevre Bilinci", "Aile İletişimi", "Dayanışma", "Siber Güvenlik", "Analitik Düşünme", "Hukuka Saygı"]
+anatemalar: ["Çevre Bilinci", "Siber Güvenlik", "Aile İletişimi", "Dayanışma", "Analitik Düşünme", "Hukuka Saygı", "Dijital Güvenlik ve Siber Suçlar", "Aile İçi İletişim ve Çocuk İhmali", "Adli İnceleme ve Teknoloji", "Takım Çalışması ve Dayanışma"]
 
 # Social Media Attributes
 youtube:

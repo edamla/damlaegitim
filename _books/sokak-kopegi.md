@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Sokak Köpeği"
+description: "Annesini kaybetmenin ağır yükünü omuzlayan Yüksel ve babasının hayattaki en dönmüş arsaların arasında, yaşam mücadelesi veren bu iki yalnız kalbe beklen-…"
 categories: ["Hikaye", "Ortaokul"]
 tags: []
 
@@ -10,7 +11,7 @@ languages: ["Türkçe"]
 page: "80 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115158/index.html"
 damlaurl: ""
@@ -21,7 +22,7 @@ authors: ["Kemalettin Tuğcu"]
 genre: story
 grades: [5, 6, 7, 8]
 kavramlar: ["Sıcak bir yuva sadece dört duvardan değil birbirine şefkatle kenetlenmiş kalplerden inşa edilir"]
-anatemalar: ["Yuva Hasreti", "Ön Yargılar", "Kayıp ve Yas", "Sadakat ve Dostluk", "Yeni Bir Başlangıç", Aile]
+anatemalar: ["Yuva Hasreti", "Sadakat ve Dostluk", "Ön Yargılar", "Kayıp ve Yas", "Yeni Bir Başlangıç", "Aile"]
 
 # Social Media Attributes
 youtube:
