@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Dünya’nın Merkezine Yolculuk"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

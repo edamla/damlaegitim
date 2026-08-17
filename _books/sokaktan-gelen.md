@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Sokaktan Gelen Çocuk"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

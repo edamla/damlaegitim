@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Arda ile Damla İlkokuma Yazma Eğitim Seti"
 description: "Arda ile Damla ilk okuma eğitim seti; okuma yazma sürecini adım adım destekler."
-categories: ["İlkokul"]
+categories: ["Eğitim", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

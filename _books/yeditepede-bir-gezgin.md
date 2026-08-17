@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Yeditepede Bir Gezgin"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

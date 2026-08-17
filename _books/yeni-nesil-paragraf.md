@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Yeni Nesil Paragraf 8. Sınıf"
 description: ""
-categories: ["İlkokul"]
+categories: ["Eğitim", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Tüm Dersler Soru Bankası 2. Sınıf"
 description: "2. sınıflar için tüm dersleri kapsayan tatil tekrar seti."
-categories: [Religion]
+categories: ["Eğitim", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Çılgın Dedemin Türkiye Turu (10 Kitap)"
-categories: ["Çocuk", Hikaye]
+categories: ["Hikaye", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

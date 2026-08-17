@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Şeytanî Tuzak"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

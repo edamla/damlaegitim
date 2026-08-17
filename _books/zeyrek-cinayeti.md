@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Zeyrek Cinayeti"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

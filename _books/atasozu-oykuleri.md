@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Atasözü Öyküleri (5 Kitap)"
-categories: ["Öykümatik"]
+categories: ["Hikaye", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

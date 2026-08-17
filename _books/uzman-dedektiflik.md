@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Uzman Dedektiflik Bürosu"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

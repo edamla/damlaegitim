@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Lavanta Kokusu"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

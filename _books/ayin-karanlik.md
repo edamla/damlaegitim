@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Ay’ın Karanlık Yüzü"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

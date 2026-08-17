@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Uzaydan Gelenler Kulübü"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Arsen Lüpen İstanbul'da"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

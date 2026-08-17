@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Etkinliklerle Nasrettin Hoca"
-categories: ["Öykümatik"]
+categories: ["Hikaye", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

@@ -2,7 +2,7 @@
 layout: book
 title:  "Sherlock Holmes İstanbul’da"
 description: "Sherlock Holmes'un İstanbul macerası; dedektiflik ve tarih temalı hikaye."
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

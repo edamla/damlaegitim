@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Yeni Nesil Din Kültürü ve Ahlak Bilgisi Lgs Föyleri 8.Sınıf"
 description: "8. sınıf din kültürü ve ahlak bilgisi föyü; kazanım temelli çalışma sayfaları."
-categories: ["İlkokul"]
+categories: ["Eğitim", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "ETİK DEĞERLER EĞİTİM SETİ-1. SINIF (10 KİTAP)"
-categories: ["Öykümatik"]
+categories: ["Hikaye", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

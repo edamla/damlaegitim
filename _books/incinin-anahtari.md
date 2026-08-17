@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "İnci’nin Anahtarı"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

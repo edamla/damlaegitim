@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Gizemli Gizem-3"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

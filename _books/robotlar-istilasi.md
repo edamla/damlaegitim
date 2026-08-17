@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Robotlar İstilası"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

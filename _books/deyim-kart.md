@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Oyunlarla Deyim Kartları"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

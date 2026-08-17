@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Ertuğrul’un Rüyası"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Madalyonun Öteki Yüzü"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

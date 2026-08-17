@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Kitap Korsanlarının Peşinde"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

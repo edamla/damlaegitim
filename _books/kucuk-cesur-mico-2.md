@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Küçük Cesur Miço-2"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

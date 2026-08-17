@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "MESLEK ÖYKÜLERİ (10 KİTAP)"
-categories: ["Çocuk", Hikaye]
+categories: ["Hikaye", "İlkokul"]
 tags: []
 
 # Standart Book Attributes
@@ -27,20 +27,20 @@ youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
-Merhaba çocuklar! Sizi, bilimin büyülü dünyasına davet ediyoruz! Bu kitapta, dünyanın dört bir yanından gelmiş ve insanlığın bilgi hazinesine değerli katkılarda bulunmuş 10 büyük bilim insanını tanıyacaksınız.
-Albert Einstein’ın evrenin gizemlerini keşfi,
+“Büyüyünce Ne Olacağım?” Serisi
 
-Graham Bell’in icatlarıyla iletişimi nasıl değiştirdiğini,
+Meslekleri eğlenceli bir yolculukla keşfedin!
 
-Nicola Tesla’nın mucizevi buluşlarını ve daha birçoğunu keşfedeceksiniz.
+Çocuklar, büyüyünce ne olmak istediklerine karar vermekte zorlanabilirler. Bu süreçte onlara rehberlik edebilmek ve meslekleri daha yakından tanımalarına yardımcı olabilmek için “Büyüyünce Ne Olacağım?” serisi özenle hazırlanmıştır. 10 kitaptan oluşan bu seri, çocukların meslekleri eğlenceli ve anlaşılır bir şekilde öğrenmesini sağlar ve gelecekte yapacakları meslek seçimlerine ışık tutar.
 
-El Cezeri’nin matematikteki büyük başarıları,
+Hey, arkadaşım! Büyüyünce ne olacaksın? Ben doktor olacağım. Dur, dur! Belki de bir asker olurum. Peki ya avukat veya mimara ne dersin? Yoksa terzi mi olsam? Acaba yazar olup çeşit çeşit kitaplar mı yazsam... Ah, mesleğine karar vermek ne zormuş... Peki, karar vermeden önce meslekleri tanımaya var mısın? Eğer “varım” diyorsan; kâğıttan uçaklar uçuran Ümit’in nasıl pilot olduğunu, Kerim’le beraber aşçılığın inceliklerini, ziraat mühendisinin ne iş yaptığını görecek, meslekler hakkında merak ettiklerini öğreneceksin.
 
-Wilhelm Rontgen’in X ışınlarını keşfi,
+• Eğlenceli ve eğitici hikâyeler: Her kitap farklı bir mesleği tanıtır. Pilot olmak isteyen Ümit’in gökyüzüne olan tutkusundan, aşçı Kerim’in mutfak maceralarına kadar çocuklar kendilerini karakterlerin yerine koyarak meslekleri keşfeder.
 
-İbn-i Sina’nın tıp alanındaki derin bilgisi sizi büyüleyecek!
+• Meslekleri tanıma ve kendini keşfetme: Seri, çocukların farklı mesleklerin gerekliliklerini anlamasını, ilgi alanlarını fark etmesini ve kendilerini tanımasına yardımcı olur.
 
-Bu kitap, genç zihinlerinizin bilime olan merakını artıracak ve belki de ileride siz de dünyaya değerli katkılarda bulunacaksınız.
-Haydi, bilimin heyecan verici yolculuğuna başlayalım!
+• Değerler eğitimi: Özveri, çalışma disiplini, üretkenlik ve liderlik gibi değerler meslek tanıtımıyla birlikte işlenir.
+
+• Öykümatik Hikâye Ölçme ve Değerlendirme Sistemi: Her hikâye, mesleki bilgi ve okuduğunu anlama becerilerini geliştiren 20 soruluk hikâye değerlendirme testi ile desteklenir.
 <!-- <img style="height: 50vh" src="/assets/images/ean/8697911222991-1.jpg" alt="">
 <!--more--> 

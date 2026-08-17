@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Alican'ın Günlüğü (10 Kitap)"
-categories: ["Öykümatik"]
+categories: ["Hikaye", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

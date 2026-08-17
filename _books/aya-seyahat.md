@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Ay’a Seyahat"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

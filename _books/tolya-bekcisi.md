@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Tolya Bekçisi"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

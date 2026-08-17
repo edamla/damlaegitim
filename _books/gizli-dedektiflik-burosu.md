@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Gizli Dedektiflik Bürosu (10 Kitap)"
-categories: ["Çocuk", Hikaye]
+categories: ["Hikaye", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

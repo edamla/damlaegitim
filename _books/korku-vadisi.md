@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Korku Vadisi"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

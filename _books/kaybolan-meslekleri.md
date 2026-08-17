@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Kaybolan Meslekleri Keşfedelim"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

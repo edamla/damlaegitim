@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Yeşili Özleyen Kız"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

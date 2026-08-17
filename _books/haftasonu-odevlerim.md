@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Hafta Sonu Ödevlerim 2. Sınıf"
 description: ""
-categories: ["İlkokul"]
+categories: ["Eğitim", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

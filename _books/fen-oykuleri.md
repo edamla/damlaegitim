@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Fen Öyküleri (10 KİTAP)"
-categories: ["Öykümatik"]
+categories: ["Hikaye", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

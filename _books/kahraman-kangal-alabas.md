@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Kahraman Kangal Alabaş"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

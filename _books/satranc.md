@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Satranç"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

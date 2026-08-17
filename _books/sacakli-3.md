@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Saçaklı Kız’ın Pasaklı Günlüğü-3"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

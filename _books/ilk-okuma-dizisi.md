@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "İlk Okuma Dizisi (8 Kitap)"
 description: "İlk okuma sürecine uygun 8 kitaplık dizisi; sınırlı kelime dağarcığı ve görsel destekle okuma alışkanlığı kazandırır."
-categories: ["İlkokul"]
+categories: ["Eğitim", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

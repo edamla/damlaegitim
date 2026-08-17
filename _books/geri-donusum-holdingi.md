@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Geri Dönüşüm Holdingi"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Bohemya'da Bir Skandal"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

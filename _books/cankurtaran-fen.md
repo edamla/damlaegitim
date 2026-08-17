@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Cankurtaran Denemeler Fen Bilimleri 8. Sınıf"
 description: ""
-categories: ["İlkokul"]
+categories: ["Eğitim", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

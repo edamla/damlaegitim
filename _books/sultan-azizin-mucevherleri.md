@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Sultan Aziz’in Mücevherleri"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

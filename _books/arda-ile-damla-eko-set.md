@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Arda ile Damla Eko Set"
 description: ""
-categories: ["İlkokul"]
+categories: ["Eğitim", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

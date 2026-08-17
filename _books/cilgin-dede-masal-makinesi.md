@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Çılgın Dedemin Masal Makinesi (10 Kitap)"
-categories: ["Öykümatik"]
+categories: ["Hikaye", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Pembe İncili Kaftan"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

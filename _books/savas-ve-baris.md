@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Savaş Ve Barış"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

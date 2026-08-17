@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Devlet Kuşu"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

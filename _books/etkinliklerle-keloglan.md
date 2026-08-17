@@ -1,7 +1,7 @@
 ---
 layout: book
-title:  "Etkinliklerle Keloğlan ilr Devler"
-categories: ["Öykümatik"]
+title:  "Etkinliklerle Keloğlan ile Devler"
+categories: ["Hikaye", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

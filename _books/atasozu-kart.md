@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Oyunlarla Atasözü Kartları"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

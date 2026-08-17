@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Hikayelerle Pudino Eğitim Seti 1.Sınıf "
 description: "1. sınıf için Pudino karakteriyle hazırlanan hikayeli eğitim seti; okuma yazma ve temel becerileri eğlenceli biçimde destekler."
-categories: [Religion]
+categories: ["Eğitim", "İlkokul"]
 tags: []
 
 

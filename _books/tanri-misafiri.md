@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Tanrı Misafiri"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

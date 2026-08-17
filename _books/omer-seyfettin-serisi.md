@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Ömer Seyfettin Serisi"
-categories: ["Öykümatik"]
+categories: ["Hikaye", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

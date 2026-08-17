@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Çılgın Problemler 4. Sınıf"
 description: "4. sınıflar için eğlenceli matematik problem seti; problem çözme becerisini ve mantıksal düşünmeyi geliştirir."
-categories: [Religion]
+categories: ["Eğitim", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

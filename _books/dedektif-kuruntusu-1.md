@@ -2,7 +2,7 @@
 layout: book
 title:  "Dedektif Kuruntusu-1"
 description: "Dedektif Kuruntusu serisinin başlangıç kitabı; gizem ve mantık yürütme becerilerini destekler."
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

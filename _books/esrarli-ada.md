@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Jules Verne Esrarlı Ada"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

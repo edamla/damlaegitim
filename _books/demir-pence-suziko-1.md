@@ -2,7 +2,7 @@
 layout: book
 title:  "Demir Pençe Suziko-1"
 description: "Demir Pençe Suziko serisinin 1. kitabı; heyecan verici dedektiflik hikayesi."
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

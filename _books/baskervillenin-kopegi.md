@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Baskerville'lerin Köpeği"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

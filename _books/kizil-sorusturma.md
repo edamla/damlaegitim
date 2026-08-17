@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Kızıl Soruşturma"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

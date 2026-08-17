@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Mişon’un Definesi"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Dönüşüm"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

@@ -2,7 +2,7 @@
 layout: book
 title:  "Baba Evi"
 description: "Duygusal gelişimi destekleyen, ödüllü çocuk romanı."
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

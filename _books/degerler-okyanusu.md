@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Değerler Okyanusu"
-categories: ["Öykümatik"]
+categories: ["Hikaye", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

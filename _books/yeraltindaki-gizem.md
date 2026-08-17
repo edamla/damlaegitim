@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Yeraltındaki Gizem"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

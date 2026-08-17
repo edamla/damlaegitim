@@ -1,7 +1,7 @@
 ---
 layout: previewbook
 title:  "İyilik Heryerde Serisi"
-categories: ["Çocuk", Hikaye]
+categories: ["Hikaye", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

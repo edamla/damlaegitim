@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Bakır Renkli Kayın Ağaçları"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

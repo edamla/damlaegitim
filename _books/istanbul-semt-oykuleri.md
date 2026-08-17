@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "İstanbul Semt Öyküleri"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

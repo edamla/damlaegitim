@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Karanlık Kanyon’un Şifresi"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

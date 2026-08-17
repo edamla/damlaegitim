@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Kral Faruk’un Elmasları"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

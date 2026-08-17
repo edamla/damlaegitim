@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Dedektif Kuruntusu-3"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

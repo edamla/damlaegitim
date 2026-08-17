@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Denizler Altında 20.000 Fersah"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

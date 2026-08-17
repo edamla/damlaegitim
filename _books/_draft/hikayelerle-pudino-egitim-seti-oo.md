@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Hikayelerle Pudino Eğitim Seti Okul Öncesi "
 description: "Okul öncesi için Pudino karakterli hikayeli eğitim seti; okuma öncesi becerileri ve temel kavramları destekler."
-categories: [Religion]
+categories: ["Eğitim", "Okul Öncesi"]
 tags: []
 
 # Standart Book Attributes

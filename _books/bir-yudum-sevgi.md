@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Bir Yudum Sevgi"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

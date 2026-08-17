@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Yeni Nesil Kral Deneme 4. Sınıf"
 description: "4. sınıf için yeni nesil deneme sınavı; LGS formatına uygun soru tipleri ve kapsamlı kazanım değerlendirmesi sunar."
-categories: ["İlkokul"]
+categories: ["Eğitim", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

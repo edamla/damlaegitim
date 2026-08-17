@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Deyim Öyküleri (5 Kitap)"
-categories: ["Çocuk", Hikaye]
+categories: ["Hikaye", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

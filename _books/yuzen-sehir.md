@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Yüzen Şehir"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

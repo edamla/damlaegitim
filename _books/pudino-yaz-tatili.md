@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Pudino ile Yaz Tatili"
 description: "Okul öncesi Pudino karakteriyle hazırlanan yaz tatili kitabı; eğlenceli etkinliklerle yaz döneminde öğrenmeyi sürdürür."
-categories: [Religion]
+categories: ["Eğitim", "Okul Öncesi"]
 tags: []
 
 # Standart Book Attributes

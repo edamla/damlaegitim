@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Cingöz’ün Esrarı"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

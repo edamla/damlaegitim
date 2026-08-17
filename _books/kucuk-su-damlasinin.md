@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Küçük Su Damlasının Dünya Turu"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Bir Mikrobun Günlüğünden"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

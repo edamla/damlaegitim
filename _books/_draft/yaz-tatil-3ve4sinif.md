@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Yaz Tatili 3 ve 4.Sınıf"
 description: "3. ve 4. sınıflar için yaz tatili çalışma kitabı; tatil boyunca kazanımları koruyan günlük ders etkinlikleri sunar."
-categories: [Religion]
+categories: ["Eğitim", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

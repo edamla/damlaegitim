@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Hacker Nine - 1"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

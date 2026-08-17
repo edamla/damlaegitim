@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Kartalın Yuvası"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

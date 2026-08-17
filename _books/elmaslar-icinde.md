@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Elmaslar İçinde"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

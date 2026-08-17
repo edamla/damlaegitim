@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Yeni Nesil Matematik Lgs Föyleri 8.Sınıf"
 description: "8. sınıf matematik föyü; LGS hazırlık ve kazanım odaklı alıştırmalar."
-categories: ["İlkokul"]
+categories: ["Eğitim", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

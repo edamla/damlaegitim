@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Tiyatro Baskını"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

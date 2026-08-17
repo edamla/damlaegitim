@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Demir Pençe Suziko-3"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

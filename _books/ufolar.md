@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  Ufolar
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

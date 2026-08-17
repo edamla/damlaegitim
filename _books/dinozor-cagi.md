@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Dinozor Çağı"
-categories: ["Öykümatik"]
+categories: ["Hikaye", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

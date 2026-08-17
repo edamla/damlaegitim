@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Korku Labirenti"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

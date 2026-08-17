@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Donmuş Umutlar Sarıkamış"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

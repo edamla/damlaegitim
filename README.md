@@ -1,6 +1,7 @@
 # Damla Okul
 
 > **Dokümantasyon:** Bu projenin belgeleri üç dosyada toplanmıştır; mimari, kurulum veya UI değişikliklerinde ilgili belgeleri birlikte güncelleyin:
+>
 > - [README.md](README.md) — Genel bakış, kurulum ve hızlı başlangıç *(bu dosya)*
 > - [project.md](project.md) — Teknik mimari ve geliştirme kuralları
 > - [design.md](design.md) — Stil, tasarım sistemi ve UI bileşenleri
@@ -25,21 +26,27 @@ Yeni Maarif Modeline uygun eğitim setleri, hikaye kitapları ve kataloglar tek 
 - **Performans odaklı** — Lazy arama, yerel fontlar, `<picture>` + WebP, slider lazyload, koşullu script yükleme
 - **SEO & AI keşfi** — `robots.txt`, modüler `llms.txt` hub, site geneli `?q=` arama URL'leri, otomatik kitap meta, Product/FAQ JSON-LD, `ai-seo-crawler`, `/sss` sayfası
 
+
+
 ## Teknoloji
 
-| Katman | Teknoloji |
-|--------|-----------|
-| Site motoru | Jekyll 3.10 (`github-pages` gem, Ruby) |
-| CSS framework | Bootstrap 5.3 (tasarım sistemi: [design.md](design.md)) |
-| Özel stiller | `theme.css` + `app.css` + `fontawesome-all.min.css` |
-| JavaScript | Vanilla JS (filtre, navbar, arama) + Bootstrap bundle + Lunr.js (lazy) |
-| Fontlar | Yerel: Geometric Sans, Punta, Raykjavik (WOFF2), Font Awesome 5.15.4 |
-| Yayın | GitHub Pages |
-| İçerik | Markdown + YAML front matter |
+
+| Katman        | Teknoloji                                                              |
+| ------------- | ---------------------------------------------------------------------- |
+| Site motoru   | Jekyll 3.10 (`github-pages` gem, Ruby)                                 |
+| CSS framework | Bootstrap 5.3 (tasarım sistemi: [design.md](design.md))                |
+| Özel stiller  | `theme.css` + `app.css` + `fontawesome-all.min.css`                    |
+| JavaScript    | Vanilla JS (filtre, navbar, arama) + Bootstrap bundle + Lunr.js (lazy) |
+| Fontlar       | Yerel: Geometric Sans, Punta, Raykjavik (WOFF2), Font Awesome 5.15.4   |
+| Yayın         | GitHub Pages                                                           |
+| İçerik        | Markdown + YAML front matter                                           |
+
 
 Node.js veya npm **gerekmez**.
 
 ## Hızlı Başlangıç
+
+
 
 ### Sistem gereksinimleri
 
@@ -47,25 +54,29 @@ Yerel geliştirme için aşağıdaki ortam önerilir. Canlı site GitHub Pages �
 
 #### Tüm platformlar
 
-| Gereksinim | Zorunlu | Açıklama |
-|------------|---------|----------|
-| **Git** | Evet | Repoyu klonlamak ve sürüm kontrolü |
-| **Ruby 3.x** | Evet | Jekyll ve gem bağımlılıkları (`github-pages` gem — canlı ile aynı sürüm) |
-| **Bundler** | Evet | `Gemfile` üzerinden gem kurulumu (`install.sh` eksikse kurar) |
-| **Python 3** + **pip** | Evet | Font WOFF2 subset (`fonttools`, `brotli` — `install.sh` kurar) |
-| **Bash** | Evet | `install.sh` / `start.sh` ve `scripts/*.sh` için |
+
+| Gereksinim             | Zorunlu | Açıklama                                                                 |
+| ---------------------- | ------- | ------------------------------------------------------------------------ |
+| **Git**                | Evet    | Repoyu klonlamak ve sürüm kontrolü                                       |
+| **Ruby 3.x**           | Evet    | Jekyll ve gem bağımlılıkları (`github-pages` gem — canlı ile aynı sürüm) |
+| **Bundler**            | Evet    | `Gemfile` üzerinden gem kurulumu (`install.sh` eksikse kurar)            |
+| **Python 3** + **pip** | Evet    | Font WOFF2 subset (`fonttools`, `brotli` — `install.sh` kurar)           |
+| **Bash**               | Evet    | `install.sh` / `start.sh` ve `scripts/*.sh` için                         |
+
 
 Node.js veya npm **gerekmez**.
 
 #### Windows (önerilen: Windows 10 ve üzeri)
 
-| Gereksinim | Zorunlu | Açıklama |
-|------------|---------|----------|
-| **Windows 10+** | Evet | Geliştirme ortamı hedefi |
-| **Git for Windows** | Evet | [git-scm.com](https://git-scm.com/) — **Git Bash** ile `sh install.sh` / `sh start.sh` |
-| **RubyInstaller** | Evet | [rubyinstaller.org](https://rubyinstaller.org/) — Ruby 3.x + **Devkit** (MSYS2) seçin; kurulumdan sonra Git Bash'i yeniden açın |
-| **winget** | Önerilen | Windows App Installer ile gelir; `install.sh` ImageMagick ve libwebp kurulumunda kullanır |
-| **ImageMagick** / **libwebp** | Opsiyonel | Yoksa `install.sh` winget ile kurmayı dener; başarısızsa site jpg/png ile çalışır |
+
+| Gereksinim                    | Zorunlu   | Açıklama                                                                                                                        |
+| ----------------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| **Windows 10+**               | Evet      | Geliştirme ortamı hedefi                                                                                                        |
+| **Git for Windows**           | Evet      | [git-scm.com](https://git-scm.com/) — **Git Bash** ile `sh install.sh` / `sh start.sh`                                          |
+| **RubyInstaller**             | Evet      | [rubyinstaller.org](https://rubyinstaller.org/) — Ruby 3.x + **Devkit** (MSYS2) seçin; kurulumdan sonra Git Bash'i yeniden açın |
+| **winget**                    | Önerilen  | Windows App Installer ile gelir; `install.sh` ImageMagick ve libwebp kurulumunda kullanır                                       |
+| **ImageMagick** / **libwebp** | Opsiyonel | Yoksa `install.sh` winget ile kurmayı dener; başarısızsa site jpg/png ile çalışır                                               |
+
 
 Windows'ta `winget` yoksa (eski Windows veya kurumsal kısıt): ImageMagick'i [imagemagick.org](https://imagemagick.org) üzerinden manuel kurun veya yalnızca jpg/png ile devam edin.
 
@@ -78,28 +89,42 @@ winget install ImageMagick.ImageMagick
 winget install Google.Libwebp
 ```
 
+
+
 #### macOS
 
-| Gereksinim | Zorunlu | Açıklama |
-|------------|---------|----------|
+
+| Gereksinim   | Zorunlu  | Açıklama                                                       |
+| ------------ | -------- | -------------------------------------------------------------- |
 | **Homebrew** | Önerilen | `install_image_tools.sh` → `brew install imagemagick` / `webp` |
-| **Ruby 3.x** | Evet | `brew install ruby` veya RubyInstaller benzeri |
+| **Ruby 3.x** | Evet     | `brew install ruby` veya RubyInstaller benzeri                 |
+
+
+
 
 #### Linux
 
-| Gereksinim | Zorunlu | Açıklama |
-|------------|---------|----------|
+
+| Gereksinim                          | Zorunlu  | Açıklama                                                                       |
+| ----------------------------------- | -------- | ------------------------------------------------------------------------------ |
 | **imagemagick**, **webp** paketleri | Önerilen | `install_image_tools.sh` → `sudo apt install imagemagick webp` (Debian/Ubuntu) |
+
+
+
 
 #### Özet: ne ne için?
 
-| Araç | Kullanım |
-|------|----------|
-| Ruby + Bundler | Jekyll build / serve |
-| Python + fonttools | `subset_font.sh` — OTF/TTF → WOFF2 |
-| winget (Windows) | `install_image_tools.sh` — ImageMagick + libwebp otomatik kurulum |
-| ImageMagick / cwebp | `generate_webp.sh` — jpg/png → WebP (`start.sh` hook) |
-| Git Bash | Windows'ta shell script'leri çalıştırma |
+
+| Araç                | Kullanım                                                          |
+| ------------------- | ----------------------------------------------------------------- |
+| Ruby + Bundler      | Jekyll build / serve                                              |
+| Python + fonttools  | `subset_font.sh` — OTF/TTF → WOFF2                                |
+| winget (Windows)    | `install_image_tools.sh` — ImageMagick + libwebp otomatik kurulum |
+| ImageMagick / cwebp | `generate_webp.sh` — jpg/png → WebP (`start.sh` hook)             |
+| Git Bash            | Windows'ta shell script'leri çalıştırma                           |
+
+
+
 
 ### Kurulum (ilk kez)
 
@@ -120,6 +145,8 @@ sh install.sh
 7. `_data/webp_manifest.yml` yoksa oluşturma
 8. `jekyll build` ile kurulum doğrulama
 
+
+
 ### Yerel geliştirme (kurulum sonrası)
 
 ```bash
@@ -139,6 +166,8 @@ Windows’ta Git Bash ile `sh install.sh` ve `sh start.sh` çalıştırılabilir
 ```bash
 bundle exec jekyll serve
 ```
+
+
 
 ### Canlıya alma
 
@@ -161,17 +190,19 @@ bundle exec jekyll build
 
 ## Kurulum ve geliştirme script'leri
 
-| Script | Ne zaman | Görev |
-|--------|----------|-------|
-| [`install.sh`](install.sh) | İlk kez (`git clone` sonrası) | Ruby gems, fonttools, WOFF2 subset, görsel araçları (winget), `jekyll build` doğrulama — **hook yok** |
-| [`start.sh`](start.sh) | Her geliştirme oturumu | `check_images` + `generate_webp` hook'ları + `jekyll serve` |
-| [`scripts/install_image_tools.sh`](scripts/install_image_tools.sh) | `install.sh` içinden | Windows: winget ImageMagick + libwebp; macOS: brew; Linux: apt |
-| [`scripts/generate_webp.sh`](scripts/generate_webp.sh) | `start.sh` içinden | `ean/` ve `slides/` için eksik `.webp` üretir; `_data/webp_manifest.yml` günceller |
-| [`scripts/refresh_image_paths.sh`](scripts/refresh_image_paths.sh) | Dahili | Windows'ta winget kurulum yollarını PATH'e ekler |
-| [`scripts/check_images.sh`](scripts/check_images.sh) | `start.sh` içinden | Büyük görselleri raporlar (dosyaya dokunmaz) |
-| [`scripts/subset_font.sh`](scripts/subset_font.sh) | `install.sh` içinden | OTF/TTF → WOFF2 subset |
-| [`scripts/check_fonts.sh`](scripts/check_fonts.sh) | `install.sh` içinden | Font boyut uyarı raporu |
-| [`scripts/normalize_book_frontmatter.rb`](scripts/normalize_book_frontmatter.rb) | Manuel | Kitap front matter sıralama; `preview_link`, `examlink`, `damlaurl` korunur; eski `review_link`/`previewpage`/`damlayayinevi` taşınır veya silinir |
+
+| Script                                                                           | Ne zaman                      | Görev                                                                                                                                              |
+| -------------------------------------------------------------------------------- | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `[install.sh](install.sh)`                                                       | İlk kez (`git clone` sonrası) | Ruby gems, fonttools, WOFF2 subset, görsel araçları (winget), `jekyll build` doğrulama — **hook yok**                                              |
+| `[start.sh](start.sh)`                                                           | Her geliştirme oturumu        | `check_images` + `generate_webp` hook'ları + `jekyll serve`                                                                                        |
+| `[scripts/install_image_tools.sh](scripts/install_image_tools.sh)`               | `install.sh` içinden          | Windows: winget ImageMagick + libwebp; macOS: brew; Linux: apt                                                                                     |
+| `[scripts/generate_webp.sh](scripts/generate_webp.sh)`                           | `start.sh` içinden            | `ean/` ve `slides/` için eksik `.webp` üretir; `_data/webp_manifest.yml` günceller                                                                 |
+| `[scripts/refresh_image_paths.sh](scripts/refresh_image_paths.sh)`               | Dahili                        | Windows'ta winget kurulum yollarını PATH'e ekler                                                                                                   |
+| `[scripts/check_images.sh](scripts/check_images.sh)`                             | `start.sh` içinden            | Büyük görselleri raporlar (dosyaya dokunmaz)                                                                                                       |
+| `[scripts/subset_font.sh](scripts/subset_font.sh)`                               | `install.sh` içinden          | OTF/TTF → WOFF2 subset                                                                                                                             |
+| `[scripts/check_fonts.sh](scripts/check_fonts.sh)`                               | `install.sh` içinden          | Font boyut uyarı raporu                                                                                                                            |
+| `[scripts/normalize_book_frontmatter.rb](scripts/normalize_book_frontmatter.rb)` | Manuel                        | Kitap front matter sıralama; `preview_link`, `examlink`, `damlaurl` korunur; eski `review_link`/`previewpage`/`damlayayinevi` taşınır veya silinir |
+
 
 Windows Git Bash'te sıfırdan kurulum: `sh install.sh` → geliştirme: `sh start.sh`.
 
@@ -198,18 +229,20 @@ Detaylı mimari için [project.md](project.md), stil ve tasarım için [design.m
 
 ## SEO ve AI Crawler
 
-| Dosya / URL | Açıklama |
-|-------------|----------|
-| `robots.txt` | Arama motorları ve AI botlara tam erişim; sitemap + llms hub referansı |
-| `/llms.txt` | LLM indeks (hub): özet, bölüm linkleri, iletişim |
-| `/llms/*.txt` | Modüler bölümler: ana sayfalar, eğitim/hikaye kitapları (tümü), kataloglar |
-| `/?q=` | Site geneli arama deep link; SearchAction kanonik giriş |
-| `/sss` | Sıkça sorulan sorular (görünür içerik + FAQPage JSON-LD) |
-| `_includes/search-lunr.html` | Spotlight arama; `initFromUrlQuery` + `syncUrlQuery` (`history.replaceState`) |
-| `_includes/book-seo-tags.html` | Kitap sayfaları meta / Open Graph / Twitter |
-| `_includes/structured-data-*.html` | schema.org JSON-LD (Organization, WebSite, Product, Book, FAQ) |
-| `_includes/related-books.html` | Kitap detayda ilgili ürünler (grades + genre + anatemalar) |
-| `_includes/ai-seo-crawler*.html` | Sayfa türüne göre gizli LLM talimat + bağlam metni |
+
+| Dosya / URL                        | Açıklama                                                                      |
+| ---------------------------------- | ----------------------------------------------------------------------------- |
+| `robots.txt`                       | Arama motorları ve AI botlara tam erişim; sitemap + llms hub referansı        |
+| `/llms.txt`                        | LLM indeks (hub): özet, bölüm linkleri, iletişim                              |
+| `/llms/*.txt`                      | Modüler bölümler: ana sayfalar, eğitim/hikaye kitapları (tümü), kataloglar    |
+| `/?q=`                             | Site geneli arama deep link; SearchAction kanonik giriş                       |
+| `/sss`                             | Sıkça sorulan sorular (görünür içerik + FAQPage JSON-LD)                      |
+| `_includes/search-lunr.html`       | Spotlight arama; `initFromUrlQuery` + `syncUrlQuery` (`history.replaceState`) |
+| `_includes/book-seo-tags.html`     | Kitap sayfaları meta / Open Graph / Twitter                                   |
+| `_includes/structured-data-*.html` | schema.org JSON-LD (Organization, WebSite, Product, Book, FAQ)                |
+| `_includes/related-books.html`     | Kitap detayda ilgili ürünler (grades + genre + anatemalar)                    |
+| `_includes/ai-seo-crawler*.html`   | Sayfa türüne göre gizli LLM talimat + bağlam metni                            |
+
 
 `book-minimal-content.html` **görünür** ince kitap metni; `ai-seo-crawler` **gizli** LLM rehberi (`aria-hidden`, `data-nosnippet`). `llms.txt` site haritası; `ai-seo-crawler` sayfa bağlamı — ikisi birbirini tamamlar.
 
@@ -241,10 +274,49 @@ damlaurl: ""   # Damla Yayınevi ürün sayfası; doluysa Satın Al, boşsa Bilg
 
 `anatemalar` TEMALAR için yeşil `#etiket` olarak gösterilir. `kavramlar` kısa slug veya kavram adıysa turuncu `@etiket` pill (tireli boşluksuz slug, ≤18 karakter veya boşluklu ≤28 karakter); uzun özet cümlesiysa italik alıntı (`.book-detail__tagline`) olarak render edilir. `tags` şu an aktif UI’da kullanılmaz; normalize betiği boş dizi yazar. `preview_link` doluysa İncele butonu ve `previewbook` iframe görünür. `examlink` doluysa ve `_config.yml` içinde `examlink: true` ise HDS butonu görünür. `damlaurl` doluysa **Satın Al** (iframe), boşsa **Bilgi** (tedarik popup).
 
-3. Kapak görselini `assets/images/ean/{ean}.jpg` olarak ekleyin (jpg/png optimize edin; `.webp` `sh start.sh` ile otomatik üretilir)
-4. `sh scripts/check_images.sh` ile boyut kontrolü yapın (veya `sh start.sh` — hook olarak çalışır)
-5. `sh start.sh` ile önizleyin
-6. Commit ve push
+1. Kapak görselini `assets/images/ean/{ean}.jpg` olarak ekleyin (jpg/png optimize edin; `.webp` `sh start.sh` ile otomatik üretilir)
+2. `sh scripts/check_images.sh` ile boyut kontrolü yapın (veya `sh start.sh` — hook olarak çalışır)
+3. `sh start.sh` ile önizleyin
+4. Commit ve push
+
+
+
+## Kategoriler
+
+Kitaplar iki ana kategoriye ayrılır: Eğitim ve Hikaye. Her biri kademeye göre Okul Öncesi (0), İlkokul (1–4) veya Ortaokul (5–8) alır. 
+
+# Kitap kategorileri: Eğitim / Hikaye + kademe
+
+İki eksen; `genre` türü, `grades` kademeyi verir:
+
+- Ana kategori: `Eğitim` (`genre: education`) veya `Hikaye` (`genre: story`)
+- Kademe (her iki tür için aynı): `0` → Okul Öncesi; `1–4` → İlkokul; `5–8` → Ortaokul
+
+Front matter örneği (altı geçerli kombinasyon):
+
+- `categories: ["Eğitim", "Okul Öncesi"]`
+- `categories: ["Eğitim", "İlkokul"]`
+- `categories: ["Eğitim", "Ortaokul"]`
+- `categories: ["Hikaye", "Okul Öncesi"]`
+- `categories: ["Hikaye", "İlkokul"]`
+- `categories: ["Hikaye", "Ortaokul"]`
+
+```mermaid
+flowchart TD
+  book[Kitap]
+  book --> edu[Eğitim]
+  book --> story[Hikaye]
+  edu --> eduOO[Okul Öncesi 0]
+  edu --> eduIlk[İlkokul 1-4]
+  edu --> eduOrta[Ortaokul 5-8]
+  story --> storyOO[Okul Öncesi 0]
+  story --> storyIlk[İlkokul 1-4]
+  story --> storyOrta[Ortaokul 5-8]
+```
+
+
+
+`/kategoriler.html` beş düz grup listeler: Eğitim, Hikaye, İlkokul, Ortaokul, Okul Öncesi. Kitap hem türde hem kademede görünür. Hiyerarşik menü bu turun dışında.
 
 ## Stil Düzenleme
 
@@ -256,23 +328,29 @@ Renk token’ları, tipografi, bileşen kataloğu ve tasarım kuralları için [
 
 Site hızı için uygulanan önlemler:
 
-| Alan | Uygulama |
-|------|----------|
-| Hero slider | Mobil-öncelik `<picture>` + koşullu WebP, mobil LCP preload (webp), `slider-init.js` defer |
-| Kitap kapakları | `<picture>` + koşullu WebP, `loading="lazy"`, `fetchpriority="low"` |
-| Arama | Lunr lazy-load; indeks `/assets/search-index.json` |
-| Scriptler | Bootstrap `defer`; `book-filter.js` idle init (`requestIdleCallback`); tiny-slider defer |
-| CSS | `content-visibility` kitap grupları; `tiny-slider.css` anasayfa head'de |
-| Fontlar | Font Awesome yerel; Raykjavik WOFF2 subset (~26 KB) |
-| Instagram | Feed `IntersectionObserver` ile gecikmeli yüklenir |
+
+| Alan            | Uygulama                                                                                   |
+| --------------- | ------------------------------------------------------------------------------------------ |
+| Hero slider     | Mobil-öncelik `<picture>` + koşullu WebP, mobil LCP preload (webp), `slider-init.js` defer |
+| Kitap kapakları | `<picture>` + koşullu WebP, `loading="lazy"`, `fetchpriority="low"`                        |
+| Arama           | Lunr lazy-load; indeks `/assets/search-index.json`                                         |
+| Scriptler       | Bootstrap `defer`; `book-filter.js` idle init (`requestIdleCallback`); tiny-slider defer   |
+| CSS             | `content-visibility` kitap grupları; `tiny-slider.css` anasayfa head'de                    |
+| Fontlar         | Font Awesome yerel; Raykjavik WOFF2 subset (~26 KB)                                        |
+| Instagram       | Feed `IntersectionObserver` ile gecikmeli yüklenir                                         |
+
+
+
 
 ### Görsel politikası
 
-| İş | Araç |
-|----|------|
+
+| İş                       | Araç                                                     |
+| ------------------------ | -------------------------------------------------------- |
 | Resize / JPEG sıkıştırma | **Photoshop** (manuel) — ImageMagick ile resize yapılmaz |
-| jpg/png → webp | `scripts/generate_webp.sh` (`start.sh` hook) |
-| Boyut uyarısı | `scripts/check_images.sh` — dosyaya dokunmaz |
+| jpg/png → webp           | `scripts/generate_webp.sh` (`start.sh` hook)             |
+| Boyut uyarısı            | `scripts/check_images.sh` — dosyaya dokunmaz             |
+
 
 Mobil slider `*m.jpg` hedefi: ≤ 120 KB (`sh scripts/check_images.sh slides`). Kod tarafında webp preload ve `<picture>` ile LCP iyileşir; kalıcı küçültme Photoshop ile yapılır.
 
@@ -290,15 +368,19 @@ sh scripts/check_images.sh slides   # Slider görselleri
 sh scripts/check_images.sh ean      # Kitap kapakları
 ```
 
+
+
 ### WebP otomatik üretim (hibrit)
 
-`assets/images/ean/` ve `assets/images/slides/` altındaki jpg/png dosyalarından eksik `.webp` varyantları üretilir; manifest [`_data/webp_manifest.yml`](_data/webp_manifest.yml) güncellenir. [`eanimage.html`](_includes/eanimage.html), [`book-card.html`](_includes/book-card.html) ve [`slider.html`](_includes/slider.html) yalnızca manifest'te kayıtlı webp'ler için `<source type="image/webp">` ekler — araç veya dosya yoksa jpg/png ile devam eder, 404 oluşmaz.
+`assets/images/ean/` ve `assets/images/slides/` altındaki jpg/png dosyalarından eksik `.webp` varyantları üretilir; manifest `[_data/webp_manifest.yml](_data/webp_manifest.yml)` güncellenir. `[eanimage.html](_includes/eanimage.html)`, `[book-card.html](_includes/book-card.html)` ve `[slider.html](_includes/slider.html)` yalnızca manifest'te kayıtlı webp'ler için `<source type="image/webp">` ekler — araç veya dosya yoksa jpg/png ile devam eder, 404 oluşmaz.
 
-| Aşama | Ne yapar |
-|-------|----------|
-| `install.sh` | `install_image_tools.sh` — Windows'ta winget ile ImageMagick (`ImageMagick.ImageMagick`) ve gerekirse libwebp (`Google.Libwebp`) kurar |
-| `start.sh` | `generate_webp.sh` — eksik webp üretir, manifest günceller |
-| `refresh_image_paths.sh` | Winget kurulum yollarını Git Bash PATH'ine ekler |
+
+| Aşama                    | Ne yapar                                                                                                                               |
+| ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `install.sh`             | `install_image_tools.sh` — Windows'ta winget ile ImageMagick (`ImageMagick.ImageMagick`) ve gerekirse libwebp (`Google.Libwebp`) kurar |
+| `start.sh`               | `generate_webp.sh` — eksik webp üretir, manifest günceller                                                                             |
+| `refresh_image_paths.sh` | Winget kurulum yollarını Git Bash PATH'ine ekler                                                                                       |
+
 
 ```bash
 sh scripts/generate_webp.sh         # Manuel çalıştırma
@@ -314,13 +396,15 @@ pip install fonttools brotli   # bir kez
 sh scripts/subset_font.sh      # Tüm fontlar için WOFF2 oluşturur (fontawesome hariç)
 ```
 
+
+
 ### Cloudflare
 
 Site şu an Cloudflare DNS-only modunda (gri bulut).
 
 ## Instagram Carousel
 
-Anasayfada `@okul.damla` gönderilerini gösteren carousel modülü [`_includes/instagram-carousel.html`](_includes/instagram-carousel.html) dosyasındadır. Tek dosyada inline HTML, CSS ve JS içerir.
+Anasayfada `@okul.damla` gönderilerini gösteren carousel modülü `[_includes/instagram-carousel.html](_includes/instagram-carousel.html)` dosyasındadır. Tek dosyada inline HTML, CSS ve JS içerir.
 
 ### Kurulum
 
@@ -342,37 +426,44 @@ Başka bir sayfaya eklemek için:
 {% include instagram-carousel.html %}
 ```
 
+
+
 ## Spotlight Arama
 
 Navbar’daki arama kutusu veya `Ctrl+K` / `⌘K` ile kitap araması açılır. Sonuçlar kapak görseli, başlık, yazar ve sınıf/tür bilgisiyle listelenir.
 
 - **Masaüstü** — Navbar’da tam arama kutusu + `Ctrl+K`
 - **Mobil** — Logo ile hamburger menü arasında minimal `Kitap ara...` çubuğu (collapse dışında, her zaman görünür)
-
 - İndeks: `site.books` → build-time `/assets/search-index.json` (kapak: `assets/images/ean/{ean}.webp|jpg`)
 - Lunr alanları: `title`, `ean`, `authors`, `categories`, `grades`, `genre`, `anatemalar`, `tags`, `body`
 - 4+ haneli sayısal sorgularda barkod (`ean`) doğrudan eşleştirme; diğer aramalarda Lunr wildcard
 - Lunr.js yalnızca arama açılınca yüklenir (sayfa yükü azaltılır)
-- Dosyalar: [`_includes/search-lunr.html`](_includes/search-lunr.html), [`_pages/search-index.json`](_pages/search-index.json), [`assets/js/lunr.js`](assets/js/lunr.js)
+- Dosyalar: `[_includes/search-lunr.html](_includes/search-lunr.html)`, `[_pages/search-index.json](_pages/search-index.json)`, `[assets/js/lunr.js](assets/js/lunr.js)`
+
+
 
 ## Navbar
 
 Üst menü (`#MagicMenu`) scroll sırasında sabit kalır; aşağı kaydırınca gizlenmez.
 
 - Yapı: mobilde logo + arama + hamburger üst satır; menü linkleri alt satırda tam genişlik
-- Script: [`assets/js/nav.js`](assets/js/nav.js) (`--nav-height` senkronizasyonu, scroll gölgesi)
+- Script: `[assets/js/nav.js](assets/js/nav.js)` (`--nav-height` senkronizasyonu, scroll gölgesi)
+
+
 
 ## Kitap Detay Popup’ları
 
-Tanıtım (YouTube), Satın Al / Bilgi, İncele ve HDS butonları [`_includes/popup.html`](_includes/popup.html) ile açılır. `damlaurl` doluysa **Satın Al** ürün sayfasını iframe’de açar; boşsa **Bilgi** tedarik popup’unu gösterir. HDS yalnızca `_config.yml` içinde `examlink: true` ve kitap `examlink` doluysa görünür. İncele yalnızca `preview_link` dolu kitaplarda görünür. Tedarik popup’u iPhone koyu temada okunabilir metin renklerine sahiptir.
+Tanıtım (YouTube), Satın Al / Bilgi, İncele ve HDS butonları `[_includes/popup.html](_includes/popup.html)` ile açılır. `damlaurl` doluysa **Satın Al** ürün sayfasını iframe’de açar; boşsa **Bilgi** tedarik popup’unu gösterir. HDS yalnızca `_config.yml` içinde `examlink: true` ve kitap `examlink` doluysa görünür. İncele yalnızca `preview_link` dolu kitaplarda görünür. Tedarik popup’u iPhone koyu temada okunabilir metin renklerine sahiptir.
 
 ## Footer
 
-Site alt bilgisi [`_includes/footer-menu.html`](_includes/footer-menu.html) ile 3 sütunlu olarak gösterilir:
+Site alt bilgisi `[_includes/footer-menu.html](_includes/footer-menu.html)` ile 3 sütunlu olarak gösterilir:
 
 1. **Ürünler** — Eğitim / Hikaye kitapları (`/urunler`) ve kataloglar sayfası
 2. **Önemli Bilgiler** — `footer_show: true` olan `_pages` kayıtları (`footer_order` ile sıralama)
-3. **Adres & İletişim** — `_config.yml` içindeki `contact_*` alanları + sosyal medya ikonları
+3. **Adres & İletişim** — `_config.yml` içindeki `contact_`* alanları + sosyal medya ikonları
+
+
 
 ### İletişim bilgileri
 
@@ -385,7 +476,7 @@ contact_email: "iletisim@damlayayinevi.com.tr"
 contact_address: "Alemdar Mh. Prof. Kazım İsmail Gürkan Cad. No:8 Fatih, 34110 İstanbul"
 ```
 
-Paylaşılan partial: [`_includes/contact-info.html`](_includes/contact-info.html)
+Paylaşılan partial: `[_includes/contact-info.html](_includes/contact-info.html)`
 
 ```liquid
 {% include contact-info.html mode='footer' %}  {# footer #}
@@ -396,16 +487,20 @@ Yeni bir sayfayı footer’da listelemek için front matter’a `footer_show: tr
 
 ## Sayfalar
 
-| URL | Açıklama |
-|-----|----------|
-| `/` | Anasayfa — slider + Instagram carousel + sınıf/tür filtreli ürün listesi |
-| `/urunler` | Tüm ürünler, sınıf/tür nav filtresi, hash URL desteği |
-| `/urunler/:title` | Ürün detay |
-| `/kataloglar` | Katalog listesi |
-| `/kataloglar/:title` | Katalog detay |
-| `/urun-inceleme-linkleri` | Ürün inceleme linkleri — `preview_link` dolu kitaplar, arama + paylaşım |
-| `/hakkimizda` | Hakkımızda |
-| `/iletisim` | İletişim |
+
+| URL                       | Açıklama                                                                 |
+| ------------------------- | ------------------------------------------------------------------------ |
+| `/`                       | Anasayfa — slider + Instagram carousel + sınıf/tür filtreli ürün listesi |
+| `/urunler`                | Tüm ürünler, sınıf/tür nav filtresi, hash URL desteği                    |
+| `/urunler/:title`         | Ürün detay                                                               |
+| `/kataloglar`             | Katalog listesi                                                          |
+| `/kataloglar/:title`      | Katalog detay                                                            |
+| `/urun-inceleme-linkleri` | Ürün inceleme linkleri — `preview_link` dolu kitaplar, arama + paylaşım  |
+| `/hakkimizda`             | Hakkımızda                                                               |
+| `/iletisim`               | İletişim                                                                 |
+
+
+
 
 ## Filtre URL’leri
 
@@ -429,3 +524,4 @@ Nav’dan filtre seçildiğinde URL otomatik güncellenir; hash ile açılan say
 - [Instagram (Damla Okul)](https://instagram.com/okul.damla)
 - [YouTube](https://www.youtube.com/c/damlayayinevi)
 - [Twitter](https://twitter.com/damlayayinevi)
+

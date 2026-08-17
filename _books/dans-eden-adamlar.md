@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Dans Eden Adamlar"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

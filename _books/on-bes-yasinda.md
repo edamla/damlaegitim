@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "On Beş Yaşında Bir Kaptan"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

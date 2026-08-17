@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Yaz Tatili 2.Sınıf"
 description: "2. sınıf öğrencileri için yaz tatili tekrar ve kazanım pekiştirme kitabı."
-categories: [Religion]
+categories: ["Eğitim", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

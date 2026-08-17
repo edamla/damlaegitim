@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Esrarlı Köşk"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

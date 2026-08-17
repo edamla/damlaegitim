@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "İnsan Neyle Yaşar"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

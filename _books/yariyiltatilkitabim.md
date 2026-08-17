@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Yarı Yıl Tatil Kitabım | 1-2-3-4.Sınıf"
 description: "1–4. sınıflar için yarı yıl tatil çalışma kitabı; tüm derslerden pekiştirme etkinlikleri ve eğlenceli alıştırmalar içerir."
-categories: [Religion]
+categories: ["Eğitim", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

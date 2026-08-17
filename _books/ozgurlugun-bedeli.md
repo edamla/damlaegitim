@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Özgürlüğün Bedeli"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

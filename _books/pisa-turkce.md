@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Pisa Türkçe 8. Sınıf"
 description: ""
-categories: ["İlkokul"]
+categories: ["Eğitim", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

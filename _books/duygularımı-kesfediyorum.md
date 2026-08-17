@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "DUYGULARIMI KEŞFEDİYORUM (10 KİTAP)"
-categories: ["Çocuk", Hikaye]
+categories: ["Hikaye", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

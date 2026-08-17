@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Çılgın Dedemin Zaman Makinesi-İcatlar ve Keşifler (10 Kitap)"
-categories: ["Öykümatik"]
+categories: ["Hikaye", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

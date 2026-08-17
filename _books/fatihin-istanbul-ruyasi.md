@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Fatih’in İstanbul Rüyası"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

@@ -2,7 +2,7 @@
 layout: book
 title:  "Vatanın Kilidi Çanakkale"
 description: "Çanakkale destanını anlatan tarihî kurgu; vatan sevgisi ve milli değerler teması."
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

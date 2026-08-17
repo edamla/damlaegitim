@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Ponpon İle Pinpin Eğitim Seti"
 description: "Okul öncesi Ponpon ve Pinpin karakterleriyle hazırlanan eğitim seti; erken çocukluk gelişimini destekleyen etkinlikler içerir."
-categories: [Religion]
+categories: ["Eğitim", "Okul Öncesi"]
 tags: []
 
 # Standart Book Attributes

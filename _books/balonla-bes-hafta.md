@@ -2,7 +2,7 @@
 layout: book
 title:  "Balonla Beş Hafta"
 description: "Klasik çocuk edebiyatından uyarlanan macera romanı; okuma kültürünü güçlendirir."
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

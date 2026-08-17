@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Kikirik Kazım"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

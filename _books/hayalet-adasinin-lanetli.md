@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Hayalet Adasının Lanetli Hazinesi"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

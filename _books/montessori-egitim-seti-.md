@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Montessori Eğitim Seti"
 description: "Montessori yaklaşımıyla hazırlanmış okul öncesi eğitim seti."
-categories: ["İlkokul"]
+categories: ["Eğitim", "Okul Öncesi"]
 tags: []
 
 # Standart Book Attributes

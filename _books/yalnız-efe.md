@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Yalnız Efe"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

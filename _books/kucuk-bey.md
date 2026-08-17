@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Küçük Bey"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

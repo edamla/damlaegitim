@@ -2,7 +2,7 @@
 layout: book
 title:  "Afacan Polisler-1"
 description: "Afacan Polisler serisinin ilk kitabı; macera dolu hikaye ile okuma alışkanlığı kazandırır."
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

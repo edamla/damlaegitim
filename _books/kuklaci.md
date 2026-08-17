@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Kuklacı"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

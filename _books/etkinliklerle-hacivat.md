@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Etkinliklerle Hacivat Karagöz"
-categories: ["Öykümatik"]
+categories: ["Hikaye", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

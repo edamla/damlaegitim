@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Yaz Tatili 1.Sınıf"
 description: "1. sınıf öğrencileri için yaz tatili boyunca tekrar ve pekiştirme sağlayan eğitim seti."
-categories: [Religion]
+categories: ["Eğitim", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

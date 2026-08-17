@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Dron Savaşçıları-4"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes

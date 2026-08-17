@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Sokak Köpeği"
-categories: [Ortaokul]
+categories: ["Hikaye", "Ortaokul"]
 tags: []
 
 # Standart Book Attributes
