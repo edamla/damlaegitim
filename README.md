@@ -259,20 +259,28 @@ Kitap `description:` opsiyoneldir; boşsa başlık, sınıf ve türden otomatik 
 ---
 layout: book
 title: "Ürün Adı"
-grades: [1, 2]
-genre: education
-tags: []
-anatemalar: ["Değerler Eğitimi", "Macera"]     # yeşil # etiketler (detay sayfası üstü)
-kavramlar: ["Dil Bilim", "Milli Kültür"]       # kısa etiket → @pill; uzun cümle → özet alıntı
+categories: ["Hikaye", "Ortaokul"]
+
+# Standart Book Attributes
 ean: 9786053832874
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832874/index.html"
-examlink: ""   # HDS PDF tam URL; boşsa HDS butonu görünmez
-damlaurl: ""   # Damla Yayınevi ürün sayfası; doluysa Satın Al, boşsa Bilgi → tedarik popup
+examlink: ""
+damlaurl: ""
+
+# Spesific Filterable Attributes
+genre: story
+grades: [3, 4]
+tags: [empati, dedektiflik]
+kavramlar:
+  - "Adalet arayışı ve ekip ruhu kazanımları"
+anatemalar: ["Değerler Eğitimi", "Macera"]
 ---
 Ürün açıklaması buraya...
 ```
 
-`anatemalar` TEMALAR için yeşil `#etiket` olarak gösterilir. `kavramlar` kısa slug veya kavram adıysa turuncu `@etiket` pill (tireli boşluksuz slug, ≤18 karakter veya boşluklu ≤28 karakter); uzun özet cümlesiysa italik alıntı (`.book-detail__tagline`) olarak render edilir. `tags` şu an aktif UI’da kullanılmaz; normalize betiği boş dizi yazar. `preview_link` doluysa İncele butonu ve `previewbook` iframe görünür. `examlink` doluysa ve `_config.yml` içinde `examlink: true` ise HDS butonu görünür. `damlaurl` doluysa **Satın Al** (iframe), boşsa **Bilgi** (tedarik popup).
+Hikaye kitaplarında `anatemalar`, `tags` ve `kavramlar` [`book-curriculum-box.html`](_includes/book-curriculum-box.html) **Öğretmen için** kutusunda gösterilir. Eğitim setlerinde Maarif uyum tablosu gövdede markdown tablo olarak yer alır.
+
+`tags` tireli slug (`empati`, `ekran-bagimliligi`). `kavramlar` tam kazanım cümlesi. `preview_link` doluysa İncele butonu görünür. `examlink` doluysa ve `_config.yml` içinde `examlink: true` ise HDS butonu görünür. `damlaurl` doluysa **Satın Al**, boşsa **Bilgi** (tedarik popup).
 
 1. Kapak görselini `assets/images/ean/{ean}.jpg` olarak ekleyin (jpg/png optimize edin; `.webp` `sh start.sh` ile otomatik üretilir)
 2. `sh scripts/check_images.sh` ile boyut kontrolü yapın (veya `sh start.sh` — hook olarak çalışır)
@@ -435,7 +443,7 @@ Navbar’daki arama kutusu veya `Ctrl+K` / `⌘K` ile kitap araması açılır. 
 - **Masaüstü** — Navbar’da tam arama kutusu + `Ctrl+K`
 - **Mobil** — Logo ile hamburger menü arasında minimal `Kitap ara...` çubuğu (collapse dışında, her zaman görünür)
 - İndeks: `site.books` → build-time `/assets/search-index.json` (kapak: `assets/images/ean/{ean}.webp|jpg`)
-- Lunr alanları: `title`, `ean`, `authors`, `categories`, `grades`, `genre`, `anatemalar`, `tags`, `body`
+- Lunr alanları: `title`, `ean`, `authors`, `categories`, `grades`, `genre`, `anatemalar`, `tags`, `kavramlar`, `body`
 - 4+ haneli sayısal sorgularda barkod (`ean`) doğrudan eşleştirme; diğer aramalarda Lunr wildcard
 - Lunr.js yalnızca arama açılınca yüklenir (sayfa yükü azaltılır)
 - Dosyalar: `[_includes/search-lunr.html](_includes/search-lunr.html)`, `[_pages/search-index.json](_pages/search-index.json)`, `[assets/js/lunr.js](assets/js/lunr.js)`

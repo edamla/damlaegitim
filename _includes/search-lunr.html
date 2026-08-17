@@ -87,6 +87,7 @@
       this.field('genre', { boost: 3 });
       this.field('anatemalar', { boost: 2 });
       this.field('tags', { boost: 2 });
+      this.field('kavramlar', { boost: 2 });
       this.field('body');
 
       documents.forEach(function (doc) {

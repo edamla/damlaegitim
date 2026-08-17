@@ -12,6 +12,13 @@ permalink: /llms/ana-sayfalar.txt
 - [Kitapla Büyüyen Sınıflar]({{ site.url }}{{ site.baseurl }}/kitapla-buyuyen-siniflar): Sosyal sorumluluk projesi: sınıflara kitap ulaştırma.
 - [Ölçme ve Değerlendirme]({{ site.url }}{{ site.baseurl }}/olcme-degerlendirme): 4 Boyutlu Ölçme-Değerlendirme Sistemi ve Akıllı Optik Sistemi.
 - [Öykümatikle Tanışın]({{ site.url }}{{ site.baseurl }}/oykumatikle-tanisin): Hikâye Ölçme ve Değerlendirme Sistemi (Öykümatik) tanıtımı; 4 katmanlı beceri temelli hikâye müfredatı.
+- [Öykümatik Demo]({{ site.url }}{{ site.baseurl }}/oykumatik/demo): Örnek sorular ve sınıf raporu özeti.
+- [Maarif Modeli]({{ site.url }}{{ site.baseurl }}/maarif-modeli): Eğitim setlerinde kazanım tablosu açıklaması.
+- [Okuma Listeleri]({{ site.url }}{{ site.baseurl }}/okuma-listeleri): Sınıf ve tema bazlı hikaye önerileri.
+- [Yazarlar]({{ site.url }}{{ site.baseurl }}/yazarlar): Katalog yazarları ve eserleri.
+- [Ortaokul]({{ site.url }}{{ site.baseurl }}/ortaokul): 5–8. sınıf sınıf × ders vitrini.
+- [Okul programı teklifi]({{ site.url }}{{ site.baseurl }}/teklif): Müdür / idareci lead formu.
+- [Öğretmen Köşesi]({{ site.url }}{{ site.baseurl }}/ogretmen): Ürün listesi oluşturma ve talep (beta).
 - [Hikâye Müfredatı]({{ site.url }}{{ site.baseurl }}/hikaye-mufredati): Kavramsal ve bilişsel süreçlere göre kazanım kodlama yapısı (H, 1K–4K, 1D–4D).
 - [Sıkça Sorulan Sorular]({{ site.url }}{{ site.baseurl }}/sss): Yayınlar, Maarif Modeli uyumu ve sipariş hakkında SSS.
 - [İletişim]({{ site.url }}{{ site.baseurl }}/iletisim): İletişim bilgileri, adres ve harita.

@@ -3,7 +3,6 @@ layout: book
 title:  "Uçan Kitap"
 description: "Günümüzün en büyük pedagojik sorunlarından biri olan “ekran bağımlılığına” karşı çocuklarımıza kitap okuma sevgisini aşılamaya ne dersiniz? “Uçan Kitap”,…"
 categories: [Hikaye, "İlkokul"]
-tags: []
 
 # Standart Book Attributes
 ean: 9786254115813

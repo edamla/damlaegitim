@@ -3,7 +3,6 @@ layout: book
 title:  "Afacan Polisler-1"
 description: "Fikriye Ana ne olur yapma!” diye yalvaran minik çocuğun sesi, olayların fitilini miz Bilgin’in hemen dikkatini çeker. Çünkü hiçbir çocuk öz annesine…"
 categories: ["Hikaye", "Ortaokul"]
-tags: []
 
 # Standart Book Attributes
 ean: 9786254115493
@@ -21,7 +20,8 @@ authors: ["Yavuz Ali Bilge"]
 # Spesific Filterable Attributes
 genre: story
 grades: [5, 6, 7, 8]
-kavramlar: ["dört afacan gencin sokaktaki masum bir olaya müdahale etmesiyle başlayan ve polis akademisine uzanan nefes kesici serüveni başlıyor"]
+tags: [dedektiflik, adalet, ekip-ruhu, macera]
+kavramlar: ["Dört afacan gencin sokaktaki masum bir olaya müdahale etmesiyle başlayan ve polis akademisine uzanan nefes kesici serüveni başlıyor"]
 anatemalar: ["Adalet Arayışı", "Ekip Ruhu", "Gençlerin Gücü", "Disiplin ve Kurallar", "Meslek Bilinci", "Empati", "Ahlaki Değerler ve Empati", "Birlik ve Takım Çalışması", "Bilim", "Mantık", "Sorumluluk ve Disiplin"]
 
 # Social Media Attributes
