@@ -14,6 +14,7 @@ permalink: /llms/ana-sayfalar.txt
 - [Öykümatikle Tanışın]({{ site.url }}{{ site.baseurl }}/oykumatikle-tanisin): Hikâye Ölçme ve Değerlendirme Sistemi (Öykümatik) tanıtımı; 4 katmanlı beceri temelli hikâye müfredatı.
 - [Öykümatik Demo]({{ site.url }}{{ site.baseurl }}/oykumatik/demo): Örnek sorular ve sınıf raporu özeti.
 - [Maarif Modeli]({{ site.url }}{{ site.baseurl }}/maarif-modeli): Eğitim setlerinde kazanım tablosu açıklaması.
+- [TYMM Okuma Atölyesi]({{ site.url }}{{ site.baseurl }}/okumaatolyesi): Maarif Modeli Okuma Atölyesi tanımı, uygulama adımları; Damla okuma listeleri, Hikâye Müfredatı ve Öykümatik bağlantıları.
 - [Okuma Listeleri]({{ site.url }}{{ site.baseurl }}/okuma-listeleri): Sınıf ve tema bazlı hikaye önerileri.
 - [Yazarlar]({{ site.url }}{{ site.baseurl }}/yazarlar): Katalog yazarları ve eserleri.
 - [Ortaokul]({{ site.url }}{{ site.baseurl }}/ortaokul): 5–8. sınıf sınıf × ders vitrini.

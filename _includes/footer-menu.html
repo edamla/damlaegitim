@@ -1,7 +1,7 @@
 <footer class="site-footer border-top text-white small">
   <div class="container">
     <div class="row site-footer__columns">
-      <div class="col-6 col-md-4 col-lg site-footer__col">
+      <div class="col-12 col-sm-6 col-md-4 col-lg site-footer__col">
         <h3 class="site-footer__heading">Okulöncesi</h3>
         <ul class="site-footer__list">
           <li><a class="site-footer__link" href="{{ site.baseurl }}/urunler#okul-oncesi">Tüm Yayınlar</a></li>
@@ -10,7 +10,7 @@
         </ul>
       </div>
 
-      <div class="col-6 col-md-4 col-lg site-footer__col">
+      <div class="col-12 col-sm-6 col-md-4 col-lg site-footer__col">
         <h3 class="site-footer__heading">İlkokul</h3>
         <ul class="site-footer__list">
           <li><a class="site-footer__link" href="{{ site.baseurl }}/siniflar/1-sinif">1. Sınıf Yayınları</a></li>
@@ -25,7 +25,7 @@
         </ul>
       </div>
 
-      <div class="col-6 col-md-4 col-lg site-footer__col">
+      <div class="col-12 col-sm-6 col-md-4 col-lg site-footer__col">
         <h3 class="site-footer__heading">Ortaokul</h3>
         <ul class="site-footer__list">
           <li><a class="site-footer__link" href="{{ site.baseurl }}/ortaokul">Ortaokul Yayınları</a></li>
@@ -37,7 +37,7 @@
         </ul>
       </div>
 
-      <div class="col-6 col-md-4 col-lg site-footer__col">
+      <div class="col-12 col-sm-6 col-md-4 col-lg site-footer__col">
         <h3 class="site-footer__heading">Öğretmen</h3>
         <ul class="site-footer__list">
           <li><a class="site-footer__link" href="{{ site.baseurl }}/ogretmen">Öğretmen Köşesi</a></li>
@@ -46,6 +46,7 @@
           <li><a class="site-footer__link" href="{{ site.baseurl }}/okuma-listeleri/degerler">Değerler Eğitimi Okuma Listesi</a></li>
           <li><a class="site-footer__link" href="{{ site.baseurl }}/okuma-listeleri/okuma-kulturu">Okuma Kültürü Listesi</a></li>
           <li><a class="site-footer__link" href="{{ site.baseurl }}/maarif-modeli">Maarif Modeli</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/okumaatolyesi">TYMM Okuma Atölyesi</a></li>
           <li><a class="site-footer__link" href="{{ site.baseurl }}/olcme-degerlendirme">Ölçme ve Değerlendirme</a></li>
           <li><a class="site-footer__link" href="{{ site.baseurl }}/hikaye-mufredati">Hikâye Müfredatı</a></li>
           <li><a class="site-footer__link" href="{{ site.baseurl }}/oykumatikle-tanisin">Öykümatikle Tanışın</a></li>
@@ -54,7 +55,7 @@
         </ul>
       </div>
 
-      <div class="col-6 col-md-4 col-lg site-footer__col">
+      <div class="col-12 col-sm-6 col-md-4 col-lg site-footer__col">
         <h3 class="site-footer__heading">Kurumsal</h3>
         <ul class="site-footer__list">
           <li><a class="site-footer__link" href="{{ site.baseurl }}/">Anasayfa</a></li>
@@ -71,26 +72,18 @@
         </ul>
       </div>
 
-      <div class="col-12 col-md-6 col-lg site-footer__col">
+      <div class="col-12 col-sm-6 col-md-6 col-lg site-footer__col">
         <h3 class="site-footer__heading">Adres &amp; İletişim</h3>
+        <div class="site-footer__brand mb-3">
+          <img class="site-footer__logo" src="{{ site.baseurl }}/assets/images/logo-bw.png" alt="{{ site.name }}">
+        </div>
         {% include contact-info.html mode='footer' %}
         <ul class="site-footer__social list-inline mb-0">
           {% include menu-socialmedia.html %}
         </ul>
-      </div>
-    </div>
-
-    <div class="site-footer__bottom">
-      <div class="row justify-content-center">
-        <span class="navbar-brand me-2 mb-0 text-center">
-          <img class="site-footer__logo" src="{{ site.baseurl }}/assets/images/logo-bw.png" alt="{{ site.name }}">
-        </span>
-      </div>
-      <br>
-      <div class="row align-items-center justify-content-center">
-        <div class="text-center">
-          <span>Copyright © <script>document.write(new Date().getFullYear())</script> Damla Yayınevi</span>
-        </div>
+        <p class="site-footer__copyright mb-0 mt-3">
+          Copyright © <script>document.write(new Date().getFullYear())</script> Damla Yayınevi
+        </p>
       </div>
     </div>
   </div>

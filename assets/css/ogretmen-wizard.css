@@ -144,6 +144,68 @@
   border-bottom: 1px solid var(--ow-border);
 }
 
+.ogretmen-wizard__list-item:last-child {
+  border-bottom: none;
+}
+
+.ogretmen-wizard__list-item.is-new {
+  animation: ow-list-enter 0.4s ease-out;
+}
+
+@keyframes ow-list-enter {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.ogretmen-wizard__list-box {
+  margin-top: 1.5rem;
+  border: 2px dashed var(--ow-border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background: #f8faf9;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  scroll-margin-bottom: 5rem;
+}
+
+.ogretmen-wizard__list-box.has-items {
+  border-style: solid;
+  border-color: var(--ow-accent);
+  box-shadow: 0 2px 8px rgba(3, 168, 124, 0.08);
+}
+
+.ogretmen-wizard__list-box.is-highlight {
+  box-shadow: 0 0 0 3px rgba(3, 168, 124, 0.25);
+}
+
+.ogretmen-wizard__list-box-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.ogretmen-wizard__list-count {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ow-accent);
+  background: #f4faf7;
+  border: 1px solid var(--ow-border);
+  border-radius: 2rem;
+  padding: 0.15rem 0.65rem;
+  white-space: nowrap;
+}
+
+.ogretmen-wizard__list-count:empty {
+  display: none;
+}
+
 .ogretmen-wizard__form .form-label {
   font-weight: 600;
 }
@@ -165,4 +227,154 @@
   display: block;
   background: #def7ec;
   color: #03543f;
+}
+
+.ogretmen-wizard__progress-label {
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6c757d;
+  margin: -1.25rem 0 1.5rem;
+}
+
+.ogretmen-wizard__step-title-short {
+  display: none;
+}
+
+.ogretmen-wizard__step-title-full {
+  display: inline;
+}
+
+.ogretmen-wizard__list-item-title {
+  display: block;
+}
+
+@media (max-width: 767.98px) {
+  .ogretmen-wizard {
+    padding: 1rem 0 5.5rem;
+  }
+
+  .ogretmen-wizard header .display-6 {
+    font-size: clamp(1.25rem, 5vw, 1.75rem);
+  }
+
+  .ogretmen-wizard__panel {
+    padding: 1rem;
+  }
+
+  .ogretmen-wizard__progress {
+    margin-bottom: 0.5rem;
+  }
+
+  .ogretmen-wizard__step-dot {
+    min-width: 0;
+  }
+
+  .ogretmen-wizard__progress-label {
+    margin: 0 0 1.25rem;
+  }
+
+  .ogretmen-wizard__step-title-full {
+    display: none;
+  }
+
+  .ogretmen-wizard__step-title-short {
+    display: inline;
+  }
+
+  .ogretmen-wizard__grade-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ogretmen-wizard__grade-btn {
+    min-height: 48px;
+    font-size: 0.95rem;
+  }
+
+  .ogretmen-wizard__filters input[type="search"] {
+    width: 100%;
+    min-width: 0;
+    font-size: 16px;
+  }
+
+  .ogretmen-wizard__catalog {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    max-height: none;
+    overflow: visible;
+    padding: 0;
+  }
+
+  .ogretmen-wizard__product {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: left;
+  }
+
+  .ogretmen-wizard__product img {
+    width: 64px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+  }
+
+  .ogretmen-wizard__product-title {
+    flex: 1;
+    min-width: 0;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+
+  .ogretmen-wizard__product .btn {
+    flex-shrink: 0;
+    min-height: 44px;
+    padding: 0.5rem 0.75rem;
+    white-space: nowrap;
+  }
+
+  .ogretmen-wizard__list-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .ogretmen-wizard__list-item-title {
+    word-break: break-word;
+  }
+
+  .ogretmen-wizard__list-item .btn {
+    width: 100%;
+    min-height: 44px;
+    margin-top: 0.35rem;
+  }
+
+  .ogretmen-wizard__actions {
+    position: sticky;
+    bottom: 0;
+    z-index: 20;
+    margin-top: 1rem;
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    padding: 0.75rem 0.75rem calc(0.75rem + env(safe-area-inset-bottom, 0px));
+    background: #fff;
+    border-top: 1px solid var(--ow-border);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.06);
+    flex-wrap: nowrap;
+  }
+
+  .ogretmen-wizard__actions .btn {
+    flex: 1;
+    min-height: 48px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ogretmen-wizard__list-item.is-new {
+    animation: none;
+  }
+
+  .ogretmen-wizard__step-dot,
+  .ogretmen-wizard__list-box {
+    transition: none;
+  }
 }

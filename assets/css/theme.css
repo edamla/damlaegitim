@@ -1956,7 +1956,29 @@ div.a2a_full_footer {display:none;}
 
 .site-footer__columns {
 
-  margin-bottom: 2rem;
+  margin-bottom: 0;
+
+}
+
+
+
+.site-footer__brand {
+
+  margin-bottom: 0.5rem;
+
+}
+
+
+
+.site-footer__copyright {
+
+  color: rgba(255, 255, 255, 0.6);
+
+  font-size: 0.85em;
+
+  padding-top: 1rem;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 
 }
 
@@ -2119,6 +2141,50 @@ div.a2a_full_footer {display:none;}
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 
   color: rgba(255, 255, 255, 0.6);
+
+}
+
+
+
+@media (max-width: 575.98px) {
+
+  .site-footer {
+
+    margin-top: 4rem;
+
+    padding: 2rem 0 1.25rem;
+
+  }
+
+  .site-footer__columns {
+
+    margin-bottom: 1.5rem;
+
+  }
+
+  .site-footer__col {
+
+    margin-bottom: 1.75rem;
+
+  }
+
+  .site-footer__col:last-child {
+
+    margin-bottom: 0;
+
+  }
+
+  .site-footer__heading {
+
+    margin-bottom: 0.75rem;
+
+  }
+
+  .site-footer__bottom {
+
+    padding-top: 1.25rem;
+
+  }
 
 }
 
