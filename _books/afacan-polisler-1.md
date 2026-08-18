@@ -59,12 +59,8 @@ beceriler:
 - Problem Çözme Becerisi
 - Çıkarım Yapma Becerisi
 - Okuma Becerisi
-- Dinleme/İzleme Becerisi
 - Konuşma Becerisi
 - Yazma Becerisi
-- Bilgi Okuryazarlığı
-- Dijital Okuryazarlık
-- Görsel Okuryazarlık
 unite:
 - AKADEMİK DÜŞÜNME DÜNYASI
 - FARKLI DÜNYALAR
