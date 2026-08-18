@@ -21,9 +21,12 @@
       {% assign genre_label = page.genre %}
     {% endif %}
     {% capture template_desc %}{{ page.title }} — {{ grade_list }}. sınıf {{ genre_label }} kitabı. Damla Okul.{% endcapture %}
-    {% if page.anatemalar and page.anatemalar.size > 0 %}
-      {% assign subject_preview = page.anatemalar | slice: 0, 3 | join: ", " %}
-      {% capture template_desc %}{{ template_desc | strip }} Konular: {{ subject_preview }}.{% endcapture %}
+    {% if page.unite and page.unite.size > 0 %}
+      {% assign subject_preview = page.unite | slice: 0, 3 | join: ", " %}
+      {% capture template_desc %}{{ template_desc | strip }} Üniteler: {{ subject_preview }}.{% endcapture %}
+    {% elsif page.anatema and page.anatema.size > 0 %}
+      {% assign subject_preview = page.anatema | slice: 0, 3 | join: ", " %}
+      {% capture template_desc %}{{ template_desc | strip }} Temalar: {{ subject_preview }}.{% endcapture %}
     {% endif %}
 {{ template_desc | truncate: 155, "…" }}
   {% endif %}
@@ -39,9 +42,12 @@
     {% assign genre_label = page.genre %}
   {% endif %}
   {% capture template_desc %}{{ page.title }} — {{ grade_list }}. sınıf {{ genre_label }} kitabı. Damla Okul.{% endcapture %}
-  {% if page.anatemalar and page.anatemalar.size > 0 %}
-    {% assign subject_preview = page.anatemalar | slice: 0, 3 | join: ", " %}
-    {% capture template_desc %}{{ template_desc | strip }} Konular: {{ subject_preview }}.{% endcapture %}
+  {% if page.unite and page.unite.size > 0 %}
+    {% assign subject_preview = page.unite | slice: 0, 3 | join: ", " %}
+    {% capture template_desc %}{{ template_desc | strip }} Üniteler: {{ subject_preview }}.{% endcapture %}
+  {% elsif page.anatema and page.anatema.size > 0 %}
+    {% assign subject_preview = page.anatema | slice: 0, 3 | join: ", " %}
+    {% capture template_desc %}{{ template_desc | strip }} Temalar: {{ subject_preview }}.{% endcapture %}
   {% endif %}
 {{ template_desc | truncate: 155, "…" }}
 {% endif %}

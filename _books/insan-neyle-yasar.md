@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "İnsan Neyle Yaşar"
-description: "Cezalandırılarak yeryüzüne, fakir bir ayakkabıcının yanına sürgüne gönderilen bir cevabını bulmak zorundadır: İnsanın içinde ne vardır? İnsana ne…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: İnsan Neyle Yaşar
+description: 'Cezalandırılarak yeryüzüne, fakir bir ayakkabıcının yanına sürgüne gönderilen
+  bir cevabını bulmak zorundadır: İnsanın içinde ne vardır? İnsana ne…'
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786057490490
-languages: ["Türkçe"]
-page: "80 sayfa"
-size: "12,3x19,2 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057490490/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["L. N. Tolstoy"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 80 sayfa
+size: 12,3x19,2 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057490490/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- L. N. Tolstoy
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["İnsanı ayakta tutan hayata bağlayan ve var eden o büyük sırrı keşfetmeye hazır mısınız"]
-anatemalar: ["Sevgi ve Merhamet", "Açgözlülük", "Vicdan ve Af", "Empati", "Öfke ve Kibir", "İlahi Adalet"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.1.2.2
+- H.1.2.3
+- H.1.2.4
+- H.2.2.1
+- H.2.2.2
+- H.3.2.1
+- H.4.2.1
+- H.4.2.2
+- H.4.2.3
+- H.4.2.4
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 Cezalandırılarak yeryüzüne, fakir bir ayakkabıcının yanına sürgüne gönderilen bir
 melek, insanların arasında yaşayarak Tanrı’nın ona sorduğu üç büyük sorunun

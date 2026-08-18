@@ -31,18 +31,30 @@ var BookFilter = (function() {
     return tags.some(function(t) { return bookTags.indexOf(t) !== -1; });
   }
 
-  function matchesAnatemalar(book, anatemalar) {
-    if (!anatemalar || anatemalar.length === 0) return true;
-    var bookAna = arr(book.anatemalar);
-    return anatemalar.some(function(a) { return bookAna.indexOf(a) !== -1; });
+  function matchesFieldList(book, field, values) {
+    if (!values || values.length === 0) return true;
+    var bookValues = arr(book[field]);
+    return values.some(function(v) { return bookValues.indexOf(v) !== -1; });
   }
 
-  function matchesKavramlar(book, kavramlar) {
-    if (!kavramlar || kavramlar.length === 0) return true;
-    var bookKav = arr(book.kavramlar);
-    return kavramlar.some(function(k) {
-      return bookKav.some(function(bk) { return norm(bk).indexOf(norm(k)) !== -1; });
+  function matchesAnatema(book, anatema) {
+    return matchesFieldList(book, 'anatema', anatema);
+  }
+
+  function matchesUnite(book, unite) {
+    return matchesFieldList(book, 'unite', unite);
+  }
+
+  function matchesBeceriler(book, beceriler) {
+    if (!beceriler || beceriler.length === 0) return true;
+    var bookBec = arr(book.beceriler);
+    return beceriler.some(function(b) {
+      return bookBec.some(function(bb) { return norm(bb).indexOf(norm(b)) !== -1; });
     });
+  }
+
+  function matchesKazanim(book, kazanim) {
+    return matchesFieldList(book, 'kazanim', kazanim);
   }
 
   function matchesSearch(book, q) {
@@ -58,8 +70,10 @@ var BookFilter = (function() {
         matchesGenre(book, criteria.genre) &&
         matchesCategories(book, criteria.categories) &&
         matchesTags(book, criteria.tags) &&
-        matchesAnatemalar(book, criteria.anatemalar) &&
-        matchesKavramlar(book, criteria.kavramlar) &&
+        matchesAnatema(book, criteria.anatema) &&
+        matchesUnite(book, criteria.unite) &&
+        matchesBeceriler(book, criteria.beceriler) &&
+        matchesKazanim(book, criteria.kazanim) &&
         matchesSearch(book, criteria.q);
     });
   }
@@ -69,8 +83,10 @@ var BookFilter = (function() {
     matchesGenre: matchesGenre,
     matchesCategories: matchesCategories,
     matchesTags: matchesTags,
-    matchesAnatemalar: matchesAnatemalar,
-    matchesKavramlar: matchesKavramlar,
+    matchesAnatema: matchesAnatema,
+    matchesUnite: matchesUnite,
+    matchesBeceriler: matchesBeceriler,
+    matchesKazanim: matchesKazanim,
     matchesSearch: matchesSearch,
     filterCatalog: filterCatalog
   };

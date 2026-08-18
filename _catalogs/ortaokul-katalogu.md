@@ -1,6 +1,6 @@
 ---
 layout: catalog
-title:  "Ortaokul Kataloğu 2027"
+title:  "Ortaokul Kataloğu"
 
 publisher: damlapublishing
 image: assets/images/ean/ortaokul-katalogu.jpg

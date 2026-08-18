@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "Yalnız Efe"
-description: "Tefeci Eseoğlu’nun bitmek bilmeyen zulmüne başkaldıran, haksız yere öldürü- Kezban’ın destansı hikâyesi! Osmanlı’nın son dönemlerinde, Anadolu’nun ücra…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Yalnız Efe
+description: Tefeci Eseoğlu’nun bitmek bilmeyen zulmüne başkaldıran, haksız yere öldürü-
+  Kezban’ın destansı hikâyesi! Osmanlı’nın son dönemlerinde, Anadolu’nun ücra…
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786057274496
-languages: ["Türkçe"]
-page: "100 sayfa"
-size: "12,3x19,2 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274496/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Ömer Seyfettin"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 100 sayfa
+size: 12,3x19,2 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274496/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Ömer Seyfettin
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["Haksızlığa boyun eğmeyip tek başına dağa çıkan ve zalimlerin korkulu rüyası olan genç bir kızın efsanevi direnişi"]
-anatemalar: ["Adalet Arayışı", "Vatanseverlik", "Vefa", "Millî Şuur", "Cesaret", "Zulüm ve Sömürü"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.1.2.2
+- H.1.2.3
+- H.1.2.4
+- H.2.2.1
+- H.2.2.2
+- H.3.2.1
+- H.4.2.1
+- H.4.2.2
+- H.4.2.3
+- H.4.2.4
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 Tefeci Eseoğlu’nun bitmek bilmeyen zulmüne başkaldıran, haksız yere öldürülen
 babasının intikamını almak için tek başına dağa çıkan cesur bir genç kızın,

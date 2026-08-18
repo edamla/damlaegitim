@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "Denizler Altında 20.000 Fersah"
-description: "1866 yılında dünya denizlerine korku salan gizemli bir deniz canavarının peşine kendilerini akılalmaz bir maceranın tam ortasında bulurlar!…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Denizler Altında 20.000 Fersah
+description: 1866 yılında dünya denizlerine korku salan gizemli bir deniz canavarının
+  peşine kendilerini akılalmaz bir maceranın tam ortasında bulurlar!…
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786057288776
-languages: ["Türkçe"]
-page: "160 sayfa"
-size: "12,3x19,2 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288776/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Jules Verne"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 160 sayfa
+size: 12,3x19,2 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288776/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Jules Verne
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["Geçmişinden ve insanlıktan kaçarak kendi adaletini okyanusun ulaşılamaz derinliklerinde arayan gizemli Kaptan Nemonun sırlarla dolu dünyasına hoş geldiniz"]
-anatemalar: ["Özgürlük ve Esaret", "Teknolojinin Gücü", "Adalet", "Bilimsel Keşif", "Doğayla Mücadele", "Doğanın İhtişamı", "Adalet ve İntikam"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.1.3.5
+- H.2.3.3
+- H.3.3.3
+- H.4.2.1
+- H.4.2.2
+- H.4.2.3
+- H.4.2.4
+- H.4.3.1
+- H.4.4.1
+- H.4.4.2
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 
 1866 yılında dünya denizlerine korku salan gizemli bir deniz canavarının peşine

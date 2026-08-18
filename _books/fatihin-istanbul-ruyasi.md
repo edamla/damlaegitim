@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "Fatih’in İstanbul Rüyası"
-description: "O, sadece ordulara hükmeden yenilmez bir komutan değil; aynı zamanda çağı- Mehmet, asırlardır aşılamayan o efsanevi surları yıkmak ve Peygamber’in müj-…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Fatih’in İstanbul Rüyası
+description: O, sadece ordulara hükmeden yenilmez bir komutan değil; aynı zamanda
+  çağı- Mehmet, asırlardır aşılamayan o efsanevi surları yıkmak ve Peygamber’in müj-…
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786053839842
-languages: ["Türkçe"]
-page: "176 sayfa"
-size: "13,5x21 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839842/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Talip Arışahin"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 176 sayfa
+size: 13,5x21 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839842/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Talip Arışahin
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["Dünya kuruldu kurulalı böyle bir şey ne duyulmuş ne de görülmüştü gemiler karadan yürütülüyor Haliçe iniyordu"]
-anatemalar: ["Kutsal Hedef", "Kahramanlık", "Strateji ve Askerî Dehâ", "Adalet ve Hoşgörü", "Manevi Güç", "Şehrin Yeniden İnşası"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.2.2.1
+- H.2.2.2
+- H.2.3.1
+- H.2.3.2
+- H.2.3.3
+- H.2.3.5
+- H.3.2.1
+- H.3.3.1
+- H.3.3.2
+- H.3.3.3
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 O, sadece ordulara hükmeden yenilmez bir komutan değil; aynı zamanda çağı-
 nın ötesinde bir vizyona sahip, bilime âşık entelektüel bir dehaydı! Sultan İkinci

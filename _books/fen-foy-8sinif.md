@@ -2,8 +2,7 @@
 layout: previewbook
 title:  "Yeni Nesil Fen Bilimleri Lgs Föyleri 8.Sınıf"
 description: "8. sınıf fen bilimleri föyü; deney ve uygulama odaklı etkinlikler."
-categories: ["Eğitim", "Ortaokul"]
-tags: []
+categories: ["Eğitim", Ortaokul]
 
 # Standart Book Attributes
 ean: 9786051749419
@@ -17,10 +16,14 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051749419/in
 damlaurl: ""
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: education
 grades: [8]
-kavramlar: []
-anatemalar: []
+tags: []
+anatema: []
+kazanim: []
+beceriler: []
+unite: []
 
 # Social Media Attributes
 youtube:

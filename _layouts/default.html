@@ -36,9 +36,12 @@
           {% assign genre_label = page.genre %}
         {% endif %}
         {% capture book_seo_description %}{{ page.title }} — {{ grade_list }}. sınıf {{ genre_label }} kitabı. Damla Okul.{% endcapture %}
-        {% if page.anatemalar and page.anatemalar.size > 0 %}
-          {% assign subject_preview = page.anatemalar | slice: 0, 3 | join: ", " %}
-          {% capture book_seo_description %}{{ book_seo_description | strip }} Konular: {{ subject_preview }}.{% endcapture %}
+        {% if page.unite and page.unite.size > 0 %}
+          {% assign subject_preview = page.unite | slice: 0, 3 | join: ", " %}
+          {% capture book_seo_description %}{{ book_seo_description | strip }} Üniteler: {{ subject_preview }}.{% endcapture %}
+        {% elsif page.anatema and page.anatema.size > 0 %}
+          {% assign subject_preview = page.anatema | slice: 0, 3 | join: ", " %}
+          {% capture book_seo_description %}{{ book_seo_description | strip }} Temalar: {{ subject_preview }}.{% endcapture %}
         {% endif %}
         {% assign book_seo_description = book_seo_description | strip | truncate: 155, "…" %}
       {% endunless %}
@@ -154,7 +157,7 @@
     </div>
 
     <!-- Content -->
-    <main role="main" class="site-content">
+    <main id="main" role="main" class="site-content">
         {{ content }}
     </main>
 
@@ -184,7 +187,10 @@
 
     {% include search-lunr.html %}
 
+    {% include scroll-fab.html %}
     {% include footer-menu.html %}
+
+    <script defer src="{{ site.baseurl }}/assets/js/scroll-fab.js?v={{ site.time | date: '%s' }}"></script>
 
 </body>
 

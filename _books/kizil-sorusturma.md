@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "Kızıl Soruşturma"
-description: "Eski bir ordu doktoru olan John Watson, Londra’da uygun fiyatlı bir daire ararken, mes ile tanışır. Baker Sokağı 221B’de başlayan bu tarihî ev…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Kızıl Soruşturma
+description: Eski bir ordu doktoru olan John Watson, Londra’da uygun fiyatlı bir daire
+  ararken, mes ile tanışır. Baker Sokağı 221B’de başlayan bu tarihî ev…
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786057288707
-languages: ["Türkçe"]
-page: "160 sayfa"
-size: "12,3x19,2 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288707/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Sir Arthur Conan Doyle"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 160 sayfa
+size: 12,3x19,2 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288707/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Sir Arthur Conan Doyle
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["Londra’nın sisli sokaklarından Amerikanın ıssız çöllerine uzanan yıllarca sabırla ilmek ilmek örülmüş bir intikamın hikâyesi"]
-anatemalar: ["Adalet Arayışı", "Fanatizm", "Aşk ve Trajedi", "Kader İnancı", "Geçmişin Kaçınılmazlığı", "Tarihî Sırlar", "kader inancı", "tarihi sırlar"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.2.2.1
+- H.2.2.2
+- H.2.3.1
+- H.2.3.2
+- H.2.3.3
+- H.2.3.4
+- H.3.2.1
+- H.4.2.1
+- H.4.2.2
+- H.4.2.4
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 Eski bir ordu doktoru olan John Watson, Londra’da uygun fiyatlı bir daire ararken,
 tuhaf alışkanlıkları ve benzersiz gözlem yetenekleriyle dikkat çeken Sherlock Holmes

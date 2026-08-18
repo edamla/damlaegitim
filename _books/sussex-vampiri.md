@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "Sussex Vampiri"
-description: "Sevecenliğiyle tanınan Bayan Ferguson, aniden ortaya çıkan tuhaf ve ürkütücü kahreden olay ise, karısını kendi öz bebeğinin boynundan kan emerken yakala-…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Sussex Vampiri
+description: Sevecenliğiyle tanınan Bayan Ferguson, aniden ortaya çıkan tuhaf ve ürkütücü
+  kahreden olay ise, karısını kendi öz bebeğinin boynundan kan emerken yakala-…
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786057274489
-languages: ["Türkçe"]
-page: "160 sayfa"
-size: "12,3x19,2 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274489/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Sir Arthur Conan Doyle"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 160 sayfa
+size: 12,3x19,2 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274489/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Sir Arthur Conan Doyle
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["Doğru görüyorsun ama gözlemlemiyorsun Aradaki fark çok açık"]
-anatemalar: ["Gözlem ve Mantık", "Kanun ve Adalet", "Kıskançlık ve Fedakârlık", "Mantık ve Duygu", "Hırs", "Aldatmaca"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.1.2.2
+- H.1.3.1
+- H.1.3.2
+- H.1.3.3
+- H.1.3.4
+- H.1.3.5
+- H.1.3.6
+- H.1.3.7
+- H.1.3.8
+- H.1.3.9
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 Sevecenliğiyle tanınan Bayan Ferguson, aniden ortaya çıkan tuhaf ve ürkütücü
 davranışlarıyla tüm aileyi dehşete düşürmüştür. Kocası Robert Ferguson’u asıl

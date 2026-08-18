@@ -1,32 +1,68 @@
 ---
 layout: book
-title:  "Sergüzeşt"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Sergüzeşt
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786057490414
-languages: ["Türkçe"]
-page: "144 sayfa"
-size: "13,5x19,5 cm"
-publish-number: ""
-cover: ""
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057490414/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Samipaşazade Sezai"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 144 sayfa
+size: 13,5x19,5 cm
+publish-number: ''
+cover: ''
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057490414/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Samipaşazade Sezai
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["Ağlamak uğradığımız felâketlere karşı vücûdumuzda kalan son kuvvetin bir feryâdıdır"]
-anatemalar: ["Esaret ve Hürriyet", "Zulüm", "Kuşak Çatışması", "Sınıf Çatışması", "İmkânsız Aşk", "Çaresizlik"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.1.2.1
+- H.1.2.2
+- H.1.2.4
+- H.2.2.1
+- H.2.2.2
+- H.3.2.1
+- H.4.2.1
+- H.4.2.2
+- H.4.2.3
+- H.4.2.4
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 Kafkasya’nın hür dağlarından koparılıp İstanbul’un acımasız esir pazarlarına
 savrulan dokuz yaşındaki küçük Dilber’in yürek yakan hikâyesi... Girdiği her

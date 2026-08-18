@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "Lavanta Kokusu"
-description: "Gülbeyaz, yılın altı ayı karla kaplı, zorlu şartların hüküm sürdüğü bir köyde ya- hayallerin karların altına gömüldüğü bu köyde, onun kaderi de diğer…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Lavanta Kokusu
+description: Gülbeyaz, yılın altı ayı karla kaplı, zorlu şartların hüküm sürdüğü bir
+  köyde ya- hayallerin karların altına gömüldüğü bu köyde, onun kaderi de diğer…
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786053837190
-languages: ["Türkçe"]
-page: "176 sayfa"
-size: "13,5x21 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053837190/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Sara Gürbüz Özeren"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 176 sayfa
+size: 13,5x21 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053837190/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Sara Gürbüz Özeren
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["İnsan köklerinden kopabilir mi sorusuna verilmiş en güçlü cevap Engellere ve yoksulluğa rağmen doğduğu topraklara sırtını dönmeyen bir genç kızın hikâyesi"]
-anatemalar: ["Kız Çocuklarının Eğitimi", "Azim", "İdealizm", "Ön Yargılar", "Memleket Sevgisi", "Eğitimin Gücü"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.1.2.2
+- H.1.2.3
+- H.1.2.4
+- H.2.2.1
+- H.2.2.2
+- H.3.2.1
+- H.4.2.1
+- H.4.2.2
+- H.4.2.3
+- H.4.2.4
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 
 Gülbeyaz, yılın altı ayı karla kaplı, zorlu şartların hüküm sürdüğü bir köyde ya-

@@ -12,7 +12,7 @@ HEADER_KEYS = %w[layout title description categories].freeze
 STANDARD_KEYS = %w[ean languages page size publish-number cover examlink preview_link damlaurl].freeze
 OPTIONAL_STANDARD_KEYS = %w[original-name original-language].freeze
 BOOK_DETAIL_KEYS = %w[paper authors illustrators].freeze
-FILTERABLE_KEYS = %w[genre grades tags kavramlar anatemalar].freeze
+FILTERABLE_KEYS = %w[genre grades tags anatema kazanim beceriler unite].freeze
 
 def parse_frontmatter(content)
   match = content.match(/\A---\r?\n(.*?)\r?\n---\r?\n(.*)\z/m)
@@ -30,11 +30,10 @@ def normalize_data(data)
   data['languages'] = ['Türkçe'] if data['languages'].nil? || (data['languages'].is_a?(Array) && data['languages'].empty?)
   data['publish-number'] = '' if data['publish-number'].nil?
   data['cover'] = '' if data['cover'].nil?
-  data['kavramlar'] = data.delete('concepts') if data.key?('concepts')
-  data['kavramlar'] = [] if data['kavramlar'].nil?
-  data['anatemalar'] = data.delete('subjects') if data.key?('subjects')
-  data['anatemalar'] = [] if data['anatemalar'].nil?
-  data['tags'] = [] if data['tags'].nil?
+  %w[anatema kazanim beceriler unite tags].each do |key|
+    data[key] = [] if data[key].nil?
+  end
+  %w[kavramlar anatemalar concepts subjects].each { |key| data.delete(key) }
   data['examlink'] = '' if data['examlink'].nil?
   examlink = data['examlink'].to_s.strip
   if !examlink.empty? && !examlink.match?(%r{\Ahttps?://}i)
@@ -115,6 +114,7 @@ def build_frontmatter(data)
 
   lines << ''
   lines << '# Spesific Filterable Attributes'
+  lines << '# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri'
   FILTERABLE_KEYS.each do |key|
     lines << "#{key}: #{yaml_value(data[key], key: key)}"
   end

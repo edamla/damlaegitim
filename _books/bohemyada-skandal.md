@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "Bohemya'da Bir Skandal"
-description: "Dünyaca ünlü dedektif Sherlock Holmes, bu kez sıradan bir hırsızlık vakasıyla Bohemya Kralı, herkesten gizlediği kimliğiyle Baker Sokağı’ndaki ünlü…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Bohemya'da Bir Skandal
+description: Dünyaca ünlü dedektif Sherlock Holmes, bu kez sıradan bir hırsızlık vakasıyla
+  Bohemya Kralı, herkesten gizlediği kimliğiyle Baker Sokağı’ndaki ünlü…
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786057274465
-languages: ["Türkçe"]
-page: "120 sayfa"
-size: "12,3x19,2 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274465/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Sir Arthur Conan Doyle"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 120 sayfa
+size: 12,3x19,2 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057274465/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Sir Arthur Conan Doyle
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["Avrupa’nın kaderini belirleyecek bir skandaldan ölümden dönen efsanevi dedektifin amansız avına kadar uzanan beş nefes kesici macera"]
-anatemalar: ["Gözlem Gücü", "Kadın Zekâsı", "Bencillik", "Detayların Önemi", "Sadakat", "Geçmişle Yüzleşme", "kadın zekası"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.1.2.1
+- H.1.2.2
+- H.1.2.3
+- H.1.2.4
+- H.1.3.5
+- H.2.2.2
+- H.3.2.1
+- H.4.2.1
+- H.4.2.2
+- H.4.2.4
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 Dünyaca ünlü dedektif Sherlock Holmes, bu kez sıradan bir hırsızlık vakasıyla
 değil, Avrupa’nın kaderini değiştirebilecek devasa bir skandalla karşı karşıya!

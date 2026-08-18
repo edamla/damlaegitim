@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "Şeytanî Tuzak"
-description: "Kibar hırsızımız Cingöz Recai, bu kez ava giderken avlanma tehlikesiyle karşı tiflerin, kurnaz dolandırıcıların ve sinsi planların kol gezdiği karanlık…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Şeytanî Tuzak
+description: Kibar hırsızımız Cingöz Recai, bu kez ava giderken avlanma tehlikesiyle
+  karşı tiflerin, kurnaz dolandırıcıların ve sinsi planların kol gezdiği karanlık…
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786053837206
-languages: ["Türkçe"]
-page: "144 sayfa"
-size: "13,5x21 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053837206/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Peyami Safa"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 144 sayfa
+size: 13,5x21 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053837206/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Peyami Safa
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["Çalınan mücevherler sahte dedektifler ve akılalmaz kaçış planlarıyla dolu okuru ters köşeye yatıran soluksuz bir polisiye macerası"]
-anatemalar: ["Akıl Oyunları", "Kimlik Karmaşası", "Özgüven ve Gurur", "İllüzyon", "Yerel Zekâ", "Mizah"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.2.2.1
+- H.2.2.2
+- H.2.3.3
+- H.3.2.1
+- H.3.3.1
+- H.3.3.2
+- H.3.3.3
+- H.4.2.1
+- H.4.2.2
+- H.4.2.4
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 Kibar hırsızımız Cingöz Recai, bu kez ava giderken avlanma tehlikesiyle karşı
 karşıya! Kendisine kurulan şeytanî bir tuzağın içine çekilen Cingöz, sahte dedek-

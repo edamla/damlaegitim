@@ -3,7 +3,6 @@ layout: previewbook
 title:  "Dikkat Zeka Ve Hafıza Geliştirme Seti"
 description: "Dikkat ve zeka gelişimini destekleyen çok yönlü etkinlik seti; okul öncesi ve ilkokul düzeyine uygun."
 categories: ["Eğitim", "Okul Öncesi"]
-tags: []
 
 # Standart Book Attributes
 ean: 9786258432220
@@ -17,10 +16,14 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786258432220/in
 damlaurl: ""
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: education
 grades: [0]
-kavramlar: []
-anatemalar: []
+tags: []
+anatema: []
+kazanim: []
+beceriler: []
+unite: []
 
 # Social Media Attributes
 youtube:

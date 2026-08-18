@@ -85,9 +85,11 @@
       this.field('categories', { boost: 3 });
       this.field('grades', { boost: 4 });
       this.field('genre', { boost: 3 });
-      this.field('anatemalar', { boost: 2 });
+      this.field('unite', { boost: 3 });
+      this.field('anatema', { boost: 2 });
+      this.field('kazanim', { boost: 2 });
+      this.field('beceriler', { boost: 2 });
       this.field('tags', { boost: 2 });
-      this.field('kavramlar', { boost: 2 });
       this.field('body');
 
       documents.forEach(function (doc) {

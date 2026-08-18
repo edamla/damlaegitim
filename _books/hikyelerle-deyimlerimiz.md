@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "Hikâyelerle Deyimlerimiz"
-description: "Sohbetlerimizin tuzu biberi, dilimizin bin yıllık hafızası olan deyimler, aslında noktası’ derken aslında tarihin hangi tozlu sayfasına dokunuyoruz?…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Hikâyelerle Deyimlerimiz
+description: Sohbetlerimizin tuzu biberi, dilimizin bin yıllık hafızası olan deyimler,
+  aslında noktası’ derken aslında tarihin hangi tozlu sayfasına dokunuyoruz?…
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786053833789
-languages: ["Türkçe"]
-page: "160 sayfa"
-size: "13,5x19,5 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053833789/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Sevda Dıraga Canbaz"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 160 sayfa
+size: 13,5x19,5 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053833789/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Sevda Dıraga Canbaz
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["Binlerce yıllık hafızamızın şifrelerini taşıyan sözcüklerin dilden dile dolaşan efsanevi öyküleri"]
-anatemalar: ["Ticaret Ahlakı", "Kanaatkârlık", "İlim ve Sabır", "Cehalet ve Ön Yargı", "Adalet Arayışı", "Kurnazlık"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.1.2.2
+- H.1.2.3
+- H.1.2.4
+- H.2.2.1
+- H.2.2.2
+- H.3.2.1
+- H.4.2.1
+- H.4.2.2
+- H.4.2.3
+- H.4.2.4
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 Sohbetlerimizin tuzu biberi, dilimizin bin yıllık hafızası olan deyimler, aslında
 ardında ne büyük sırlar saklıyor? ‘Çam devirmek’, ‘Ateş püskürmek’ veya ‘Püf

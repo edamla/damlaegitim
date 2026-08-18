@@ -3,7 +3,6 @@ layout: previewbook
 title:  "Yeni Nesil Kral Deneme 4. Sınıf"
 description: "4. sınıf için yeni nesil deneme sınavı; LGS formatına uygun soru tipleri ve kapsamlı kazanım değerlendirmesi sunar."
 categories: ["Eğitim", "İlkokul"]
-tags: []
 
 # Standart Book Attributes
 ean: 9786254115066
@@ -17,10 +16,14 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/yeni-nesil-kral-den
 damlaurl: ""
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: education
 grades: [4]
-kavramlar: []
-anatemalar: []
+tags: []
+anatema: []
+kazanim: []
+beceriler: []
+unite: []
 
 # Social Media Attributes
 youtube:

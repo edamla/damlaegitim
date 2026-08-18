@@ -2,8 +2,7 @@
 layout: previewbook
 title:  "Yeni Nesil Din Kültürü ve Ahlak Bilgisi Lgs Föyleri 8.Sınıf"
 description: "8. sınıf din kültürü ve ahlak bilgisi föyü; kazanım temelli çalışma sayfaları."
-categories: ["Eğitim", "Ortaokul"]
-tags: []
+categories: ["Eğitim", Ortaokul]
 
 # Standart Book Attributes
 ean: 9786051744551
@@ -17,10 +16,14 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051744551/in
 damlaurl: ""
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: education
 grades: [8]
-kavramlar: []
-anatemalar: []
+tags: []
+anatema: []
+kazanim: []
+beceriler: []
+unite: []
 
 # Social Media Attributes
 youtube:

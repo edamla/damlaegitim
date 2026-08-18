@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "Dağdaki Yabancı"
-description: "Erol, yaz tatili için geldiği Kavaklı’da, hayallerindeki o yeşil ve neşeli köyü değil; birer birer şehre göçtüğü bu yorgun köyde, Erol’un yolu dağlarda…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Dağdaki Yabancı
+description: Erol, yaz tatili için geldiği Kavaklı’da, hayallerindeki o yeşil ve neşeli
+  köyü değil; birer birer şehre göçtüğü bu yorgun köyde, Erol’un yolu dağlarda…
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786254113277
-languages: ["Türkçe"]
-page: "80 sayfa"
-size: "13,5x19,5 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113277/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Kemalettin Tuğcu"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 80 sayfa
+size: 13,5x19,5 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113277/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Kemalettin Tuğcu
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["Kurumuş topraklara can veren su bazen ön yargılarla çoraklaşmış kalpleri de yeşertir"]
-anatemalar: ["Cehalet ve Ön Yargı", "Doğa Sevgisi", "Dayanışma", "Yalnızlık", "Affetmek", "Yardımlaşma"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.1.2.1
+- H.1.2.2
+- H.1.2.3
+- H.1.2.4
+- H.1.3.6
+- H.1.3.7
+- H.1.3.8
+- H.3.2.1
+- H.4.2.1
+- H.4.2.2
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 Erol, yaz tatili için geldiği Kavaklı’da, hayallerindeki o yeşil ve neşeli köyü değil;
 susuzluğun, çoraklığın ve umutsuzluğun yorduğu bir manzarayı bulur. Gençlerin

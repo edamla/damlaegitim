@@ -3,7 +3,6 @@ layout: previewbook
 title:  "Arda ile Damla İlkokuma Yazma Eğitim Seti"
 description: "Arda ile Damla ilk okuma eğitim seti; okuma yazma sürecini adım adım destekler."
 categories: ["Eğitim", "İlkokul"]
-tags: []
 
 # Standart Book Attributes
 ean: 869791122263
@@ -17,10 +16,14 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/869791122263/index.
 damlaurl: ""
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: education
 grades: [1]
-kavramlar: []
-anatemalar: []
+tags: []
+anatema: []
+kazanim: []
+beceriler: []
+unite: []
 
 # Social Media Attributes
 youtube:

@@ -1,36 +1,101 @@
 ---
 layout: book
-title:  "ROBOT AVCILARI (10 KİTAP)"
-description: "Dünya’da 2200 yılına gelinmiş ve yapay zekâya sahip gelişmiş robotlar hayatın her alanında yerini almıştı. Robotlar Çağı’nda yaşayan Erdem, kendi…"
-categories: ["Hikaye", "İlkokul"]
-tags: ["Teknoloji", "Bilim", "Eğitim", "İcad", "İyi ve Kötü", "Bilimsel Düşünce", "Gelecek", "Geçmiş", "Macera", "Dünya Kültürü", "Bilim Kurgu", "Takım Çalışması"]
-
-# Standart Book Attributes
+title: ROBOT AVCILARI (10 KİTAP)
+description: Bilim kurgu ve macera temalı hikaye; genç okurlar için sürükleyici anlatım.
+categories:
+- Hikaye
+- İlkokul
 ean: 8697911223547
-languages: ["Türkçe"]
-page: "Her Biri 64"
-size: "13,5x19,5 cm"
+languages:
+- Türkçe
+page: Her Biri 64
+size: 13,5x19,5 cm
 publish-number: 2528
-cover: "Karton Kapak"
-examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/robot-avcilari-y.pdf"
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223530/index.html"
-damlaurl: ""
-paper: "1. Hamur"
-authors: ["Necati Akbaba"]
-illustrators: ["Gökhan Gülkan"]
-
-# Spesific Filterable Attributes
+cover: Karton Kapak
+examlink: https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/robot-avcilari-y.pdf
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223530/index.html
+damlaurl: ''
+paper: 1. Hamur
+authors:
+- Necati Akbaba
+illustrators:
+- Gökhan Gülkan
 genre: story
-grades: [3]
-kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
-anatemalar: ["Teknoloji", "Birey ve Toplum", "Zaman ve Mekân", "Bilim", "Macera", "Robot", "Bilim-Teknoloji", "Yapay Zeka", "Takım Ruhu", "Bilimkurgu", "Gelecek Vizyonu"]
-
-# Social Media Attributes
+grades:
+- 3
+tags:
+- Teknoloji
+- Bilim
+- Eğitim
+- İcad
+- İyi ve Kötü
+- Bilimsel Düşünce
+- Gelecek
+- Geçmiş
+- Macera
+- Dünya Kültürü
+- Bilim Kurgu
+- Takım Çalışması
+anatema:
+- Merak
+- Gerçeği Arama
+- Çalışkanlık
+- Saygı
+- Sorumluluk
+- Vatanseverlik
+- Kendine İnanma (Öz Yeterlilik)
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Soru Sorma
+- Bağımsızlık
+- Açık Fikirlilik
+kazanim:
+- H.1.2.1
+- H.1.2.3
+- H.1.2.4
+- H.1.3.2
+- H.1.3.3
+- H.1.3.7
+- H.1.4.2
+- H.1.4.5
+- H.2.1.2
+- H.3.4.1
+beceriler:
+- Okuma Becerisi
+- Dinleme/İzleme Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+- İletişim Becerisi
+- Sosyal Farkındalık Becerisi
+unite:
+- HAK VE SORUMLULUKLARIMIZ
+- ATATÜRK VE KAHRAMANLARIMIZ
+- DEĞERLERİMİZLE YAŞIYORUZ
+- DOĞAYI TANIYORUZ
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
-Dünya’da 2200 yılına gelinmiş ve yapay zekâya sahip gelişmiş robotlar hayatın her alanında yerini almıştı. “Robotlar Çağı” olarak adlandırılan bu dönemde yaşayan Erdem; son derece zeki, yeni şeyler keşfetmeye meraklı ve robotlara büyük ilgi duyan bir çocuktur. En büyük hayali kendi robotunu yaparak turnuvalara katılmak olan Erdem, eğitim almak için gittiği Japonya’daki Hirotoma Robot Okulu’nda dünyanın dört bir yanından gelen çocuklarla arkadaş olur. Ancak kendi robotlarını tasarlamanın heyecanını yaşarken, kendilerini bir anda uluslararası bir suç şebekesiyle karşı karşıya bulurlar!
+Yıl 2200… Dünya artık “Robot Avcıları”nda! Robotlara
+tutkusu büyük olan Erdem, hayalinin peşinden
+giderek Japonya’daki ünlü Hirotoma Robot Okulu’na
+katılır. Ancak bu macera, düşündüğünden çok daha
+karmaşık ve tehlikelidir.
+Erdem ve arkadaşları, yalnızca robotlarını tasarlamakla
+kalmaz, aynı zamanda uluslararası bir suç
+şebekesiyle mücadele etmek zorundadır. Kodları
+çözüp robotları koruyarak büyük bir sırrı açığa
+çıkarabilecekler mi?
+Neden Bu Seriyi Seçmelisiniz?
+• Kodlama, strateji ve takım çalışması iç içe.
+• Bilim ve teknolojiyi eğlenceli bir öyküyle anlatır.
+• Problem çözme ve analitik düşünme becerilerini
+geliştirir.
+• Heyecan, merak ve öğrenme bir arada.
+• Her kitapta değerlendirme testleriyle desteklenmiştir
+<!-- <img style="height: 50vh" src="/assets/images/ean/8697911223530-1.jpg" alt="">
 
 **TEMALAR:** Teknoloji, Birey ve Toplum, Zaman ve Mekân, Bilim, Macera, Robot
 

@@ -17,27 +17,41 @@ layout: default
 
 
                     <div class="align-items-center">
-                        <h1 class="display-4 mb-4 article-headline">{{ book.title }}</h1>
+                        <h1 class="display-4 article-headline">{{ book.title }}</h1>
 
-                        <div class="icon-block mt-3 d-inline-flex flex-wrap gap-2">
-                            {% assign book_youtube = book.youtube | strip %}
-                            {% if book_youtube != '' and book_youtube contains 'http' %}
-                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" target="_blank" href="{{ book_youtube }}" data-popup-type="youtube" data-popup-title="Tanıtım"><i class="fab fa-youtube fa-2x text-danger" aria-hidden="true"></i><span class="btn-sm">Tanıtım</span></a>
-                            {% endif %}
-                            
-                            {% if book.damlaurl != nil and book.damlaurl != '' %}
-                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" href="#" data-popup-type="iframe" data-popup-url="{{ book.damlaurl }}" data-popup-title="Satın Al"><i class="fas fa-shopping-cart fa-2x text-success" aria-hidden="true"></i><span class="btn-sm">Satın Al</span></a>
-                            {% else %}
-                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" href="#" data-popup-type="info" data-popup-title="Ürün Tedarik Bilgisi"><i class="fas fa-info-circle fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">Bilgi</span></a>
+                        {% include book-hero-meta.html book=book %}
+
+                        {% assign book_youtube = book.youtube | strip %}
+                        {% assign book_has_youtube = false %}
+                        {% if book_youtube != '' and book_youtube contains 'http' %}{% assign book_has_youtube = true %}{% endif %}
+                        {% assign book_has_buy = false %}
+                        {% if book.damlaurl != nil and book.damlaurl != '' %}{% assign book_has_buy = true %}{% endif %}
+                        {% assign book_has_preview = false %}
+                        {% if book.preview_link != nil and book.preview_link != '' %}{% assign book_has_preview = true %}{% endif %}
+                        {% assign book_has_exam = false %}
+                        {% if site.examlink and book.examlink != nil and book.examlink != '' %}{% assign book_has_exam = true %}{% endif %}
+                        {% assign book_has_info = false %}
+                        {% unless book_has_buy %}{% assign book_has_info = true %}{% endunless %}
+                        {% if book_has_youtube or book_has_buy or book_has_info or book_has_preview or book_has_exam %}
+                        <div class="book-detail__actions d-flex flex-wrap gap-2">
+                            {% if book_has_youtube %}
+                            <a class="sscroll btn btn-outline-danger btn-sm js-book-action" target="_blank" href="{{ book_youtube }}" data-popup-type="youtube" data-popup-title="Tanıtım"><i class="fab fa-youtube fa-sm" aria-hidden="true"></i><span>Tanıtım</span></a>
                             {% endif %}
 
-                            {% if book.preview_link != nil and book.preview_link != '' %}
-                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" target="_blank" href="{{ book.preview_link }}" data-popup-type="iframe" data-popup-title="İncele"><i class="fas fa-search fa-2x text-info" aria-hidden="true"></i><span class="btn-sm">İncele</span></a>
+                            {% if book_has_buy %}
+                            <a class="sscroll btn btn-outline-success btn-sm js-book-action" href="#" data-popup-type="iframe" data-popup-url="{{ book.damlaurl }}" data-popup-title="Satın Al"><i class="fas fa-shopping-cart fa-sm" aria-hidden="true"></i><span>Satın Al</span></a>
+                            {% elsif book_has_info %}
+                            <a class="sscroll btn btn-outline-secondary btn-sm js-book-action" href="#" data-popup-type="info" data-popup-title="Ürün Tedarik Bilgisi"><i class="fas fa-info-circle fa-sm" aria-hidden="true"></i><span>Bilgi</span></a>
                             {% endif %}
-                            {% if site.examlink and book.examlink != nil and book.examlink != '' %}
-                            <a class="sscroll btn btn-light btn-sm fw-bold js-book-action" target="_blank" href="{{ book.examlink }}" data-popup-type="iframe" data-popup-title="HDS"><i class="fas fa-pen fa-2x text-danger" aria-hidden="true"></i><span class="btn-sm">HDS</span></a>
+
+                            {% if book_has_preview %}
+                            <a class="sscroll btn btn-outline-secondary btn-sm js-book-action" target="_blank" href="{{ book.preview_link }}" data-popup-type="iframe" data-popup-title="İncele"><i class="fas fa-search fa-sm" aria-hidden="true"></i><span>İncele</span></a>
+                            {% endif %}
+                            {% if book_has_exam %}
+                            <a class="sscroll btn btn-outline-danger btn-sm js-book-action" target="_blank" href="{{ book.examlink }}" data-popup-type="iframe" data-popup-title="HDS"><i class="fas fa-pen fa-sm" aria-hidden="true"></i><span>HDS</span></a>
                             {% endif %}
                         </div>
+                        {% endif %}
 
                     </div>
                 </div>
@@ -117,7 +131,6 @@ layout: default
                     </ul>
     </div>
         <div class="col-md-9 order-md-2">
-            {% include book-curriculum-box.html book=book %}
             <!-- Article -->
             <article class="article-post prose prose--display text-justify maarif-content">
             {% assign body_stripped = content | strip_html | strip %}

@@ -3,7 +3,6 @@ layout: previewbook
 title:  "Kral Eğitim Seti 4.Sınıf"
 description: "4. sınıf Kral eğitim seti; sınıf içi ve evde öğrenmeyi destekleyen kapsamlı kaynak."
 categories: ["Eğitim", "İlkokul"]
-tags: []
 
 # Standart Book Attributes
 ean: 8697911221079
@@ -17,10 +16,14 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/8697911221079-1/ind
 damlaurl: ""
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: education
 grades: [4]
-kavramlar: []
-anatemalar: []
+tags: []
+anatema: []
+kazanim: []
+beceriler: []
+unite: []
 
 # Social Media Attributes
 youtube:
@@ -28,13 +31,5 @@ youtube:
 # For adding excerpt add <!--more--> and break the line
 ---
 Sevgili Öğrenciler; Nitelikli yayınların vazgeçilmez adresi Damla Yayınevi olarak yepyeni bir anlayışla hazırladığımız “Öğrenci Dostu Kitaplar” serimizi sizlere sunmanın onurunu yaşıyoruz.
-
-## Maarif uyum tablosu
-
-| Ünite | Ders | TYMM kazanımı | Sayfa |
-| --- | --- | --- | --- |
-| 1. Tema | Türkçe | Okuduğu metindeki ana fikri ve yardımcı fikirleri belirler. | 14–22 |
-| 1. Tema | Matematik | Dört işlemle ilgili problem çözer. | 56–68 |
-| 2. Tema | Fen Bilimleri | Maddenin hâllerini gözlemler ve sınıflandırır. | 102–110 |
 
 <!--more-->

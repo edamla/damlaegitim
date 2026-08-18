@@ -13,7 +13,7 @@ Yeni Maarif Modeline uygun eğitim setleri, hikaye kitapları ve kataloglar tek 
 ## Özellikler
 
 - **Ürün kataloğu** — Sınıf ve tür (Eğitim / Hikaye) bazlı filtreleme, paylaşılabilir hash URL’leri
-- **Kitap detay sayfaları** — Kapak, metadata, `#anatemalar` temaları, `kavramlar` (kısa etiket veya özet alıntı), `preview_link` ile önizleme (İncele), `examlink` ile HDS PDF, `damlaurl` doluysa Satın Al / boşsa Bilgi (tedarik popup)
+- **Kitap detay sayfaları** — Kapak, metadata, TYMM alanları (`unite`, `anatema`, `beceriler`) ve Öykümatik `kazanim` kodları, `preview_link` ile önizleme (İncele), `examlink` ile HDS PDF, `damlaurl` doluysa Satın Al / boşsa Bilgi (tedarik popup)
 - **Ürün inceleme linkleri** — `/urun-inceleme-linkleri` sayfasında tüm `preview_link` dolu kitaplar; arama, kopyala ve WhatsApp paylaşımı
 - **Kataloglar** — Html / PDF katalog görüntüleme
 - **Anasayfa slider** — Kampanya ve duyuru görselleri
@@ -202,6 +202,8 @@ bundle exec jekyll build
 | `[scripts/subset_font.sh](scripts/subset_font.sh)`                               | `install.sh` içinden          | OTF/TTF → WOFF2 subset                                                                                                                             |
 | `[scripts/check_fonts.sh](scripts/check_fonts.sh)`                               | `install.sh` içinden          | Font boyut uyarı raporu                                                                                                                            |
 | `[scripts/normalize_book_frontmatter.rb](scripts/normalize_book_frontmatter.rb)` | Manuel                        | Kitap front matter sıralama; `preview_link`, `examlink`, `damlaurl` korunur; eski `review_link`/`previewpage`/`damlayayinevi` taşınır veya silinir |
+| `[scripts/build_tymm_reference.rb](scripts/build_tymm_reference.rb)`             | Manuel                        | `docs/tymm-*` API JSON → `_data/tymm.yml` + `docs/tymmreferans.csv`                                                                                |
+| `[scripts/build_oykumatik_reference.rb](scripts/build_oykumatik_reference.rb)`   | Manuel                        | Öykümatik xlsx → `_data/oykumatik-kazanimlari.yml` + `docs/oykumatikkazanimlar.csv`                                                                |
 
 
 Windows Git Bash'te sıfırdan kurulum: `sh install.sh` → geliştirme: `sh start.sh`.
@@ -240,7 +242,7 @@ Detaylı mimari için [project.md](project.md), stil ve tasarım için [design.m
 | `_includes/search-lunr.html`       | Spotlight arama; `initFromUrlQuery` + `syncUrlQuery` (`history.replaceState`) |
 | `_includes/book-seo-tags.html`     | Kitap sayfaları meta / Open Graph / Twitter                                   |
 | `_includes/structured-data-*.html` | schema.org JSON-LD (Organization, WebSite, Product, Book, FAQ)                |
-| `_includes/related-books.html`     | Kitap detayda ilgili ürünler (grades + genre + anatemalar)                    |
+| `_includes/related-books.html`     | Kitap detayda ilgili ürünler (grades + genre)                    |
 | `_includes/ai-seo-crawler*.html`   | Sayfa türüne göre gizli LLM talimat + bağlam metni                            |
 
 
@@ -268,19 +270,21 @@ examlink: ""
 damlaurl: ""
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [3, 4]
 tags: [empati, dedektiflik]
-kavramlar:
-  - "Adalet arayışı ve ekip ruhu kazanımları"
-anatemalar: ["Değerler Eğitimi", "Macera"]
+anatema: [Saygı, Empati, Merak]
+kazanim: [H.1.2.1, H.3.3.3]
+beceriler: [Okuma Becerisi, "Problem Çözme Becerisi"]
+unite: ["Oyun Dünyası", "Değerlerimizle Varız"]
 ---
 Ürün açıklaması buraya...
 ```
 
-Hikaye kitaplarında `anatemalar`, `tags` ve `kavramlar` [`book-curriculum-box.html`](_includes/book-curriculum-box.html) **Öğretmen için** kutusunda gösterilir. Eğitim setlerinde Maarif uyum tablosu gövdede markdown tablo olarak yer alır.
+Hikaye kitaplarında `unite`, `anatema`, `beceriler`, `kazanim` ve `tags` [`book-hero-meta.html`](_includes/book-hero-meta.html) ile başlık altında gösterilir. Eğitim setlerinde Maarif uyum tablosu gövdede markdown tablo olarak yer alır.
 
-`tags` tireli slug (`empati`, `ekran-bagimliligi`). `kavramlar` tam kazanım cümlesi. `preview_link` doluysa İncele butonu görünür. `examlink` doluysa ve `_config.yml` içinde `examlink: true` ise HDS butonu görünür. `damlaurl` doluysa **Satın Al**, boşsa **Bilgi** (tedarik popup).
+`tags` serbest etiket (`empati`, `Dedektiflik`). `kazanim` yalnızca Öykümatik kod dizisi (`H.1.2.1`); sitede `_data/oykumatik-kazanimlari.yml` ile metne çözülür. `preview_link` doluysa İncele butonu görünür. `examlink` doluysa ve `_config.yml` içinde `examlink: true` ise HDS butonu görünür. `damlaurl` doluysa **Satın Al**, boşsa **Bilgi** (tedarik popup).
 
 1. Kapak görselini `assets/images/ean/{ean}.jpg` olarak ekleyin (jpg/png optimize edin; `.webp` `sh start.sh` ile otomatik üretilir)
 2. `sh scripts/check_images.sh` ile boyut kontrolü yapın (veya `sh start.sh` — hook olarak çalışır)
@@ -443,7 +447,7 @@ Navbar’daki arama kutusu veya `Ctrl+K` / `⌘K` ile kitap araması açılır. 
 - **Masaüstü** — Navbar’da tam arama kutusu + `Ctrl+K`
 - **Mobil** — Logo ile hamburger menü arasında minimal `Kitap ara...` çubuğu (collapse dışında, her zaman görünür)
 - İndeks: `site.books` → build-time `/assets/search-index.json` (kapak: `assets/images/ean/{ean}.webp|jpg`)
-- Lunr alanları: `title`, `ean`, `authors`, `categories`, `grades`, `genre`, `anatemalar`, `tags`, `kavramlar`, `body`
+- Lunr alanları: `title`, `ean`, `authors`, `categories`, `grades`, `genre`, `unite`, `anatema`, `kazanim`, `beceriler`, `tags`, `body`
 - 4+ haneli sayısal sorgularda barkod (`ean`) doğrudan eşleştirme; diğer aramalarda Lunr wildcard
 - Lunr.js yalnızca arama açılınca yüklenir (sayfa yükü azaltılır)
 - Dosyalar: `[_includes/search-lunr.html](_includes/search-lunr.html)`, `[_pages/search-index.json](_pages/search-index.json)`, `[assets/js/lunr.js](assets/js/lunr.js)`

@@ -3,7 +3,6 @@ layout: previewbook
 title:  "Akıllı Damla Eğitim Seti 2.Sınıf"
 description: "2. sınıf Akıllı Damla eğitim seti; etkinlik tabanlı öğrenme materyalleri."
 categories: ["Eğitim", "İlkokul"]
-tags: []
 
 # Standart Book Attributes
 ean: 8697911223783
@@ -17,10 +16,14 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/akillidamla-2/index
 damlaurl: ""
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: education
 grades: [2]
-kavramlar: []
-anatemalar: []
+tags: []
+anatema: []
+kazanim: []
+beceriler: []
+unite: []
 
 # Social Media Attributes
 youtube:

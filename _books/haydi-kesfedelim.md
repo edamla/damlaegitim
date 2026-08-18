@@ -3,7 +3,6 @@ layout: previewbook
 title:  "Haydi Keşfedelim"
 description: "Keşif ve araştırma becerilerini geliştiren etkinlik tabanlı eğitim seti."
 categories: ["Eğitim", "Okul Öncesi"]
-tags: []
 
 # Standart Book Attributes
 ean: 8697911222731
@@ -17,10 +16,14 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/8697911222731-1/ind
 damlaurl: ""
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: education
 grades: [0]
-kavramlar: []
-anatemalar: []
+tags: []
+anatema: []
+kazanim: []
+beceriler: []
+unite: []
 
 # Social Media Attributes
 youtube:

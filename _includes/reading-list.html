@@ -11,7 +11,7 @@
 {% if rl_theme != "" %}
   {% assign rl_filtered = "" | split: "" %}
   {% for book in rl_books %}
-    {% if book.anatemalar contains rl_theme or book.tags contains rl_theme %}
+    {% if book.unite contains rl_theme or book.anatema contains rl_theme or book.tags contains rl_theme %}
       {% assign rl_filtered = rl_filtered | push: book %}
     {% endif %}
   {% endfor %}

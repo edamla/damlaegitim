@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "Hacker Nine - 2"
-description: "Zamanın içinden gelen karanlık bir gölge ve yazılan hatalı bir kod... Hacker kendisini de büküyor! Geçmiş ile geleceğin birbirine karıştığı, insanların…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Hacker Nine - 2
+description: Zamanın içinden gelen karanlık bir gölge ve yazılan hatalı bir kod...
+  Hacker kendisini de büküyor! Geçmiş ile geleceğin birbirine karıştığı, insanların…
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786254115172
-languages: ["Türkçe"]
-page: "160 sayfa"
-size: "13,5x21 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115172/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Nur Dombaycı"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 160 sayfa
+size: 13,5x21 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115172/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Nur Dombaycı
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["Geçmişte yazılan ufak bir kod geleceğin kaderini tamamen değiştirebilir"]
-anatemalar: ["Yapay Zekâ", "Sevgi ve Zekâ", "Takım Çalışması", "Distopya", "Şifreleme", "Cesaret ve Sorumluluk"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.2.2.1
+- H.2.2.2
+- H.2.3.1
+- H.2.3.2
+- H.2.3.3
+- H.2.3.5
+- H.3.2.1
+- H.4.2.1
+- H.4.2.2
+- H.4.2.4
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 Zamanın içinden gelen karanlık bir gölge ve yazılan hatalı bir kod... Hacker
 Nine’nin yazdığı gizemli şifreler sadece bilgisayar ekranlarını değil, zamanın ta

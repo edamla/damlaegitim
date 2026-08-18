@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "Sokaktan Gelen Çocuk"
-description: "Henüz on bir yaşındayken en güvendiği limanlardan, anne ve babasından ko- Yardımsever bir polisin uzattığı şefkatli elle, köhne bir dükkânda kunduracı…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Sokaktan Gelen Çocuk
+description: Henüz on bir yaşındayken en güvendiği limanlardan, anne ve babasından
+  ko- Yardımsever bir polisin uzattığı şefkatli elle, köhne bir dükkânda kunduracı…
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786254113291
-languages: ["Türkçe"]
-page: "80 sayfa"
-size: "13,5x19,5 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113291/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Kemalettin Tuğcu"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 80 sayfa
+size: 13,5x19,5 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254113291/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Kemalettin Tuğcu
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["Sokakların dondurucu karanlığında iyilik ve dürüstlükle parlayan sarsılmaz bir umut ışığı"]
-anatemalar: ["Aile İçi İhmal ve Terk Edilme", "Hayatta Kalma Mücadelesi", "Dürüstlük ve İftira", "Yardımlaşma", "Vefa", "Kötü Alışkanlıklar"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.1.2.1
+- H.1.2.2
+- H.1.2.4
+- H.2.2.1
+- H.2.2.2
+- H.3.2.1
+- H.4.2.1
+- H.4.2.2
+- H.4.2.3
+- H.4.2.4
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 Henüz on bir yaşındayken en güvendiği limanlardan, anne ve babasından ko-
 parılan Murat, kendini acımasız sokakların dondurucu yüzüyle baş başa bulur.

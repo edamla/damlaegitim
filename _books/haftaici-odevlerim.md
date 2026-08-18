@@ -1,14 +1,12 @@
 ---
 layout: previewbook
 title:  "Hafta İçi Ödevlerim 2. Sınıf"
-description: ""
 categories: ["Eğitim", "İlkokul"]
-tags: []
 
 # Standart Book Attributes
 ean: 9786254115905
 languages: ["Türkçe"]
-page: 
+page: ""
 size: "13,5x21 cm"
 publish-number: ""
 cover: ""
@@ -17,10 +15,14 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115905/in
 damlaurl: ""
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: education
 grades: [2]
-kavramlar: []
-anatemalar: []
+tags: []
+anatema: []
+kazanim: []
+beceriler: []
+unite: []
 
 # Social Media Attributes
 youtube:

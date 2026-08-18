@@ -1,36 +1,83 @@
 ---
 layout: book
-title:  "O BİR DAHİ (10 KİTAP)"
-description: "Çocuklarımızı bilimin gizemli dünyasında, tarihe yön veren dâhilerin izinde eşsiz bir yolculuğa çıkarıyoruz! 3. ve 4. sınıf öğrencileri için özenle…"
-categories: ["Hikaye", "İlkokul"]
-tags: []
-
-# Standart Book Attributes
+title: O BİR DAHİ (10 KİTAP)
+categories:
+- Hikaye
+- İlkokul
 ean: 8697911223516
-languages: ["Türkçe"]
-page: "Her Biri 80"
-size: "13,5x19,5 cm"
+languages:
+- Türkçe
+page: Her Biri 80
+size: 13,5x19,5 cm
 publish-number: 3269
-cover: "Karton Kapak"
-examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/o-bir-dahi-y.pdf"
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223516/index.html"
-damlaurl: ""
-paper: "1. Hamur"
-authors: ["Seda Bilgin"]
-illustrators: ["Ahmet Demirtaş"]
-
-# Spesific Filterable Attributes
+cover: Karton Kapak
+examlink: https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/o-bir-dahi-y.pdf
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223516/index.html
+damlaurl: ''
+paper: 1. Hamur
+authors:
+- Seda Bilgin
+illustrators:
+- Ahmet Demirtaş
 genre: story
-grades: [4]
-kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
-anatemalar: ["Merak", "Hayal Gücü", "Keşif", "Yenilik", "Teknoloji", "Mühendislik", "Cesaret", "Bilimsel", "Biyografi", "İlham Veren Hayatlar", "Azim ve Kararlılık", "Bilimsel Keşifler", "Başarı Hikayeleri"]
-
-# Social Media Attributes
+grades:
+- 4
+tags: []
+anatema:
+- Çalışkanlık
+- Saygı
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine İnanma (Öz Yeterlilik)
+- Kendine Güvenme (Öz Güven)
+- Empati
+- Girişkenlik
+- Gerçeği Arama
+- Sistematiklik
+kazanim:
+- H.1.2.1
+- H.1.2.3
+- H.1.2.4
+- H.1.3.5
+- H.2.2.1
+- H.2.2.2
+- H.2.3.1
+- H.3.2.1
+- H.4.2.1
+- H.4.2.2
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Görsel Okuryazarlık
+- İletişim Becerisi
+- Sosyal Farkındalık Becerisi
+- Özetleme Becerisi
+- Çözümleme Becerisi
+unite:
+- DOĞA VE İNSAN
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
-Çocuklarımızı bilimin gizemli dünyasında, tarihe yön veren dâhilerin izinde eşsiz bir yolculuğa çıkarıyoruz! 3. ve 4. sınıf öğrencileri için özenle hazırlanan bu 10 kitaplık dev koleksiyon; Doğu ve Batı medeniyetlerinin en büyük bilim insanlarını bir araya getiriyor. Albert Einstein’dan İbn-i Sina’ya, Nicola Tesla’dan El Cezeri’ye, Graham Bell’den Hârezmî’ye uzanan bu seride çocuklarımız, insanlığın bilgi hazinesini inşa eden isimlerin ilham verici hayat hikâyeleriyle tanışacak. Yeni Maarif Modeli Sosyal Bilgiler kazanımlarına tam uyumlu olarak kurgulanan “O Bir Dâhi” seti; öğrencilerimizin bilime olan merakını artıracak, araştırma tutkularını besleyecek ve belki de geleceğin mucitlerini bugünden şekillendirecek! • 1. Hamur Kâğıt Maarif Modeli TEMALAR • Karton Kapak Sosyal Bilgiler • Resimli Sayfalar Kazanımlarına • Merak, Hayal Gücü, Keşif, Yenilik, Teknoloji, Mühendislik, Cesaret, Bilimsel • Her biri 80 sayfa Yöntem, Doğa Sevgisi, Gözlem. • 13.5 x 19.5 cm Uygun KAZANIMLAR  • Farklı Kültürlerden Gelen Bilim İnsanlarını ve İnsanlığa Katkılarını Tanımak, Bilime Merak Duyma ve Araştırma Tutkusu Geliştirmek, Azim ve Çalışkanlığın Başarıya Götürdüğünü Kavramak, Problem Çözme, Yaratıcı Düşünme ve Sorgulama Becerisi Kazanmak, Kendi Potansiyelini Keşfederek Evrensel Bir Bakış Açısı Geliştirmek O BİR DAHİ! SERİSİ-1 O BİR DAHİ! SERİSİ-2 O BİR DAHİ! SERİSİ-3 O BİR DAHİ! SERİSİ-4 O BİR DAHİ! SERİSİ-5
+Merhaba çocuklar! Sizi, bilimin büyülü dünyasına davet ediyoruz! Bu kitapta, dünyanın dört bir yanından gelmiş ve insanlığın bilgi hazinesine değerli katkılarda bulunmuş 10 büyük bilim insanını tanıyacaksınız.
+Albert Einstein’ın evrenin gizemlerini keşfi,
+
+Graham Bell’in icatlarıyla iletişimi nasıl değiştirdiğini,
+
+Nicola Tesla’nın mucizevi buluşlarını ve daha birçoğunu keşfedeceksiniz.
+
+El Cezeri’nin matematikteki büyük başarıları,
+
+Wilhelm Rontgen’in X ışınlarını keşfi,
+
+İbn-i Sina’nın tıp alanındaki derin bilgisi sizi büyüleyecek!
+
+Bu kitap, genç zihinlerinizin bilime olan merakını artıracak ve belki de ileride siz de dünyaya değerli katkılarda bulunacaksınız.
+Haydi, bilimin heyecan verici yolculuğuna başlayalım!
+<!-- <img style="height: 50vh" src="/assets/images/ean/8697911223851-1.jpg" alt="">
 
 **TEMALAR:** Merak, Hayal Gücü, Keşif, Yenilik, Teknoloji, Mühendislik, Cesaret, Bilimsel
 

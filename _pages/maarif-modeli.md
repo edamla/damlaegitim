@@ -23,7 +23,7 @@ Eğitim seti (`genre: education`) sayfalarında gövdede yer alan tablo; öğret
 
 ## Hikaye kitaplarında ne var?
 
-Hikaye kitaplarında tablo yerine **Öğretmen için** kutusu kullanılır: `anatemalar` (program teması), `tags` (etiket) ve `kavramlar` (kazanım cümlesi).
+Hikaye kitaplarında tablo yerine başlık altında hero meta kullanılır: `anatemalar` (program teması), `tags` (etiket) ve `kavramlar` (kısa pill veya uzun alıntı).
 
 ## Örnek ürünler
 

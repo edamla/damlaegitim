@@ -290,27 +290,45 @@ Yapı, responsive davranış ve görsel stiller [design.md — Site Navbar](desi
 
 Ürün detay layout’u `book-page` sınıfı ile işaretlenir. Etiket stilleri, prose düzeni ve popup görünümü [design.md — Kitap Detay](design.md#6-kitap-detay-book-page) bölümünde tanımlıdır.
 
-### Üst alan ve öğretmen kutusu
+### Üst alan (hero meta)
 
-Hikaye kitaplarında (`genre: story`) müfredat bilgisi üst başlıkta değil, [`book-curriculum-box.html`](_includes/book-curriculum-box.html) içinde gösterilir:
+Hikaye kitaplarında (`genre: story`) müfredat bilgisi başlık altında [`book-hero-meta.html`](_includes/book-hero-meta.html) içindeki `.book-curriculum` paneli ile gösterilir. Panel iki bölümden oluşur:
 
-| Alan (front matter) | Görünüm |
-|---------------------|---------|
-| `anatemalar` | Program teması — `#etiket` (yeşil pill) |
-| `tags` | Kısa slug etiket — `@etiket` (turuncu pill) |
-| `kavramlar` | Kazanım cümlesi — madde listesi |
+**Türkiye Yüzyılı Maarif Modeli**
+
+| UI etiketi | Front matter | Görünüm |
+|------------|--------------|---------|
+| Ünitesi: | `unite` | Dolu yeşil chip; yatay scroll şeridi |
+| Anateması: | `anatema` | Outline chip; yatay scroll şeridi |
+| Becerileri: | `beceriler` | Düz chip listesi; yatay scroll şeridi |
+
+**Türkiye'de İlk ve Tek Damla Hikaye Kazanım Sistemi**
+
+| UI etiketi | Front matter | Görünüm |
+|------------|--------------|---------|
+| Öykümatik Kazanım Kodu: | `kazanim` | Kod chip'leri; `title` ile kazanım metni; yatay scroll |
+
+**Etiketler** (panel altında)
+
+| UI etiketi | Front matter | Görünüm |
+|------------|--------------|---------|
+| (etiket) | `tags` | Turuncu pill |
+
+Mobilde müfredat satırları dikey (etiket üstte, chip şeridi altta tam genişlik); sağ kenarda fade ve chevron kaydırma ipucu verir.
+
+Görünür metinde `#` / `@` öneki kullanılmaz. Müfredat ve etiket alanlarının tamamı boşsa hero meta bloğu render edilmez.
 
 Eğitim setlerinde (`genre: education`) müfredat kanıtı gövdedeki **Maarif uyum tablosu** (markdown tablo, `.maarif-content` stili) ile sunulur; ayrıntı [`maarif-modeli`](/maarif-modeli).
 
 ### Filtre bloğu sırası (`# Spesific Filterable Attributes`)
 
-`genre` → `grades` → `tags` → `kavramlar` → `anatemalar`
+`genre` → `grades` → `tags` → `anatema` → `kazanim` → `beceriler` → `unite`
 
 `tags` üst bölümde (`categories` yanında) tutulmaz; [`normalize_book_frontmatter.rb`](scripts/normalize_book_frontmatter.rb) aynı sırayı yazar.
 
 ### Eski üst alan notu (kaldırıldı)
 
-Önceden `anatemalar` ve `kavramlar` kapak altında gösterilirdi; artık hikayede yalnızca öğretmen kutusunda yer alır.
+Önceden `anatemalar` ve `kavramlar` yan kolondaki «Öğretmen için» kutusundaydı; TYMM revizyonuyla `unite`, `anatema`, `beceriler` ve `kazanim` hero başlık altında gösterilir.
 
 ### Aksiyon butonları ve popup
 
@@ -349,7 +367,7 @@ Navbar üzerinden kitap araması yapılır. macOS Spotlight benzeri tam ekran mo
 
 ### İndeks kapsamı
 
-`site.books` koleksiyonu; alanlar: `title`, `ean`, `authors`, `categories`, `grades`, `genre`, `anatemalar`, `tags`, `kavramlar`, `body`. Kapak görseli indekste `assets/images/ean/{ean}.webp` (yoksa `.jpg`) kullanılır.
+`site.books` koleksiyonu; alanlar: `title`, `ean`, `authors`, `categories`, `grades`, `genre`, `unite`, `anatema`, `kazanim`, `beceriler`, `tags`, `body`. Kapak görseli indekste `assets/images/ean/{ean}.webp` (yoksa `.jpg`) kullanılır.
 
 4+ haneli tamamen sayısal aramalarda `ean` alanında doğrudan eşleştirme yapılır; diğer sorgularda Lunr wildcard araması kullanılır.
 
@@ -461,8 +479,10 @@ title: "Deyim Öyküleri 5 Kitap"
 grades: [3]
 genre: story          # education | story
 tags: []
-anatemalar: ["Değerler Eğitimi", "Macera", "Gizem"]   # yeşil # etiketler
-kavramlar: ["Dil Bilim", "Milli Kültür"]   # kısa → @pill; uzun cümle → özet alıntı
+anatema: [Saygı, Empati]
+kazanim: [H.1.2.1, H.3.3.3]
+beceriler: [Okuma Becerisi, "Problem Çözme Becerisi"]
+unite: ["Oyun Dünyası"]
 categories: ["Çocuk", "Hikaye"]
 ean: 9786053832874
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832874/index.html"
@@ -511,7 +531,7 @@ HDS PDF linkleri kitap front matter’ındaki tam `examlink` URL’si ile tanım
 |------|-------|
 | `scripts/normalize_book_frontmatter.rb` | Front matter sıralar; `preview_link`, `examlink`, `damlaurl` Standart Book Attributes altında korunur; `review_link` → `preview_link`, `previewpage` silinir |
 
-Front matter anahtar sırası (betik): `layout`, `title`, `description`, `categories` → `ean`, … → `# Spesific Filterable Attributes`: `genre`, `grades`, `tags`, `kavramlar`, `anatemalar` → diğer alanlar.
+Front matter anahtar sırası (betik): `layout`, `title`, `description`, `categories` → `ean`, … → `# Spesific Filterable Attributes`: `genre`, `grades`, `tags`, `anatema`, `kazanim`, `beceriler`, `unite` → diğer alanlar.
 
 Yeni kitap eklerken `preview_link` doğrudan front matter’a yazılır; özel path gerekmezse `https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/{ean}/index.html` varsayılan desenidir.
 
@@ -596,7 +616,7 @@ GitHub Pages uyumlu (özel Ruby plugin yok). Webmaster doğrulama DNS seviyesind
 | `_includes/book-seo-description.html` | Kitap meta description metni üretimi |
 | `_includes/book-seo-tags.html` | Kitap `<meta>` / Open Graph / Twitter (`twitter:description`) |
 | `_includes/book-minimal-content.html` | İnce gövdeli kitaplara görünür SEO paragrafı |
-| `_includes/related-books.html` | İlgili ürünler: aynı `grades`+`genre`, `anatemalar`/`categories` kesişimi |
+| `_includes/related-books.html` | İlgili ürünler: aynı `grades`+`genre` |
 | `_includes/structured-data-book.html` | `Product` + `Book` + `BreadcrumbList` JSON-LD |
 | `_includes/structured-data-site.html` | `Organization` JSON-LD; `WebSite` + `SearchAction` (`/?q=`) |
 | `_includes/search-lunr.html` | Spotlight arama; site geneli `?q=` init ve URL senkronu |

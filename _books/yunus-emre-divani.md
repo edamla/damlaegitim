@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "Yunus Emre Divanı"
-description: "Anadolu’nun Moğol istilaları ve iç karışıklıklarla sarsıldığı o karanlık çağda, in- “Yetmiş iki millete bir göz ile bakma” felsefesiyle dil, din ve ırk…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Yunus Emre Divanı
+description: Anadolu’nun Moğol istilaları ve iç karışıklıklarla sarsıldığı o karanlık
+  çağda, in- “Yetmiş iki millete bir göz ile bakma” felsefesiyle dil, din ve ırk…
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786057490452
-languages: ["Türkçe"]
-page: "208 sayfa"
-size: "13,5x19,5 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057490452/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Yunus Emre"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 208 sayfa
+size: 13,5x19,5 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057490452/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Yunus Emre
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["Yaratılanı Yaradandan ötürü sevmeyi öğreten sevelim sevilelim diyerek insanın terbiyesinde sevgiyi esas alan gönül insanının çağları aydınlatan eseri"]
-anatemalar: ["Hoşgörü ve Sevgi", "Tasavvuf", "Ölüm", "Gönül Yapmak", "Doğruluk", "İlâhî Aşk:"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.1.3.8
+- H.3.2.1
+- H.3.3.3
+- H.4.1.1
+- H.4.2.1
+- H.4.2.2
+- H.4.2.3
+- H.4.2.4
+- H.4.3.1
+- H.4.4.1
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 Anadolu’nun Moğol istilaları ve iç karışıklıklarla sarsıldığı o karanlık çağda, in-
 sanlığın kalbine sevgi, barış ve umut tohumları eken bir hak aşığı: Yunus Emre...

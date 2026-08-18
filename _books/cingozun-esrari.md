@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "Cingöz’ün Esrarı"
-description: "Kibar hırsızımız Cingöz Recai bu kez sınırları zorluyor ve doğrudan aslanın inine, kullanarak emniyetin en güvenli koridorlarında dolaşan Cingöz,…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Cingöz’ün Esrarı
+description: Kibar hırsızımız Cingöz Recai bu kez sınırları zorluyor ve doğrudan aslanın
+  inine, kullanarak emniyetin en güvenli koridorlarında dolaşan Cingöz,…
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786053838746
-languages: ["Türkçe"]
-page: "304 sayfa"
-size: "13,5x21 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053838746/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Peyami Safa"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 304 sayfa
+size: 13,5x21 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053838746/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Peyami Safa
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["Kılık değiştirme ustası serserilerin kralı Cingöz Recai bu kez devletin en güvenli kurumlarına polis teşkilatının içine sızıyor"]
-anatemalar: ["Zekâ ve Kurnazlık", "Kılık Değiştirme", "Aşk ve Bağlılık", "İllüzyon ve Tuzak", "Gizem ve İhanet", "Gurur ve İnat", "Zeka ve Kurnazlık"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.1.3.5
+- H.1.3.7
+- H.1.3.8
+- H.2.3.2
+- H.2.3.3
+- H.3.2.1
+- H.3.3.1
+- H.3.3.2
+- H.3.3.3
+- H.4.3.1
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 Kibar hırsızımız Cingöz Recai bu kez sınırları zorluyor ve doğrudan aslanın inine,
 polis teşkilatının kalbine sızıyor! Kılık değiştirme sanatındaki eşsiz yeteneğini

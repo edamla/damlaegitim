@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "Dünya’nın Merkezine Yolculuk"
-description: "Eksantrik ve inatçı bilim insanı Profesör Lidenbrock, eski bir parşömen kâğıdının Şifre, İzlanda’daki sönmüş bir yanardağın kraterinden Dünya’nın…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Dünya’nın Merkezine Yolculuk
+description: Eksantrik ve inatçı bilim insanı Profesör Lidenbrock, eski bir parşömen
+  kâğıdının Şifre, İzlanda’daki sönmüş bir yanardağın kraterinden Dünya’nın…
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786057288769
-languages: ["Türkçe"]
-page: "160 sayfa"
-size: "12,3x19,2 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288769/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Jules Verne"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 160 sayfa
+size: 12,3x19,2 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288769/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Jules Verne
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["Yeraltı okyanuslarından devasa mantar ormanlarına tarih öncesi canavarlardan dev insanlara Bilimin cesaretin ve sınırların zorlandığı bir Jules Verne klasiği"]
-anatemalar: ["Bilimsel İnatçılık", "Korku ve Cesaret", "Doğanın Gizemi", "Keşif Ruhu", "Sadakat", "Tarih Öncesi Yaşam", "48 48"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.1.2.1
+- H.1.2.2
+- H.1.2.3
+- H.1.2.4
+- H.1.3.8
+- H.2.2.1
+- H.2.2.2
+- H.2.3.3
+- H.2.3.4
+- H.4.2.1
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 Eksantrik ve inatçı bilim insanı Profesör Lidenbrock, eski bir parşömen kâğıdının
 içinde yüzyıllardır saklı kalan gizemli bir şifreyi çözdüğünde tüm hayatı değişir!

@@ -1,36 +1,94 @@
 ---
 layout: book
-title:  "Deyim Öyküleri (5 Kitap)"
-description: "Dilimizin anlatım gücünü zenginleştiren, en karmaşık düşünceleri bile tek bir cümlede özetleyen deyimler sohbetlerimizin tuzu biberidir! 3. ve 4. sınıf…"
-categories: ["Hikaye", "İlkokul"]
-tags: ["Deyim", "Öykü", "Macera", "Sevgi", "Saygı", "Dayanış- Damla Yayınevi Damla Yayınevi 16"]
-
-# Standart Book Attributes
+title: Deyim Öyküleri (5 Kitap)
+categories:
+- Hikaye
+- İlkokul
 ean: 9786053832874
-languages: ["Türkçe"]
-page: "Her Biri 64"
-size: "13,5x19,5 cm"
+languages:
+- Türkçe
+page: Her Biri 64
+size: 13,5x19,5 cm
 publish-number: 1443
-cover: "Karton Kapak"
-examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/deyim-oykuleri-y.pdf"
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832874/mobile/index.html"
-damlaurl: ""
-paper: "1. Hamur"
-authors: ["Fatma Çağdaş"]
-illustrators: ["Süleyman Özkonuk"]
-
-# Spesific Filterable Attributes
+cover: Karton Kapak
+examlink: https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/deyim-oykuleri-y.pdf
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832874/mobile/index.html
+damlaurl: ''
+paper: 1. Hamur
+authors:
+- Fatma Çağdaş
+illustrators:
+- Süleyman Özkonuk
 genre: story
-grades: [3]
-kavramlar: [""]
-anatemalar: ["Millî Kültür", "Dilbilim", "Birey ve Toplum Deyim Öyküleri - 3 Deyim Öyküleri - 4 Deyim Öyküleri - 5", "Anadolu Kültürü", "Birey ve Toplum", "Dil Bilim", "Milli Kültür"]
-
-# Social Media Attributes
+grades:
+- 3
+tags:
+- Deyim
+- Öykü
+- Macera
+- Sevgi
+- Saygı
+- Dayanış- Damla Yayınevi Damla Yayınevi 16
+anatema:
+- Saygı
+- Sevgi
+- Merak
+- Gerçeği Arama
+- Sorumluluk
+- Vatanseverlik
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Soru Sorma
+- Dostluk
+- Dürüstlük
+kazanim:
+- H.1.1.2
+- H.1.2.1
+- H.1.2.3
+- H.1.2.4
+- H.2.1.2
+- H.3.1.1
+- H.3.4.1
+- H.4.1.1
+- H.4.1.2
+- H.4.1.3
+beceriler:
+- Okuma Becerisi
+- Dinleme/İzleme Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Görsel Okuryazarlık
+- İletişim Becerisi
+- Çözümleme Becerisi
+- Sınıflandırma Becerisi
+- Bilgi Toplama Becerisi
+- Karşılaştırma Becerisi
+unite:
+- BİLGİ HAZİNEMİZ
+- BİLİM YOLCULUĞU
+- DEĞERLERİMİZLE YAŞIYORUZ
+- DOĞAYI TANIYORUZ
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
-Dilimizin anlatım gücünü zenginleştiren, en karmaşık düşünceleri bile tek bir cümlede özetleyen deyimler sohbetlerimizin tuzu biberidir! 3. ve 4. sınıf öğrencilerimizin soyut düşünme becerilerini desteklemek amacıyla hazırlanan “Deyim Öyküleri” serisi, kültürümüzün bu renkli mirasını çocuklarla buluşturuyor. Maarif Modeli Türkçe kazanımlarıyla tam uyumlu bu 5 kitaplık özel sette, birbirinden ilginç ve eğlenceli hikâyelerle tam 56 farklı deyimin anlamını ve günlük hayattaki kullanımını keşfedeceğiz. “Deyim Öyküleri”, çocuklarımızın kelime dağarcığını geliştirirken ana dilimizi daha etkili ve doğru kullanmalarına harika bir katkı sunacak! 5 Maarif Modeli Türkçe Kazanımlarına Uygun
+Dilimizin anlatım gücünü zenginleştiren, uzun anlatımlarımızı özetleyen, fikirlerimizin süsü, sohbetlerimizin tuzu biberidir deyimler.
+Tarihin derinliklerinden günümüze değin söylenegelen deyimlerimizin her birinin ayrı bir öyküsü vardır.
+Bu öyküleri bilmesek de deyimlerimizi sık sık kullanırız.
+"Deyim Öyküleri" adlı serimizde özenle seçilen deyimlerimizin birbirinden ilginç hikâyelerini bulacaksınız.
+
+**TEMALAR:** Milli Kültür, Dil Bilim, Birey ve Toplum
+
+**KAZANIMLAR:** Yeni Deyimler, Kelime Hazinesi, Dil Bilgisi, Türkçe Kazanımları Okuma ve Anlama, Deyimler Sözlüğü Kullanma, Deyimli Konuşma Yeteneği
+
+**ETİKETLER:** Deyim, Öykü, Macera, Sevgi, Saygı, Dayanışma, Tarih, Toplum, Birey, Dil Bilim
+
+**Setin İçerdiği Hikayeler**
+
+1- Kabak Başıma Patladı<br>
+2- İki Ayağını Bir Pabuca Sokmak<br>
+3- Maymun Gözünü Açtı<br>
+4- Dananın Kuyruğu Koptu<br>
+5- Sarı Çizmeli Mehmet Ağa
 
 **TEMALAR:** Millî Kültür, Dilbilim, Birey ve Toplum Deyim Öyküleri - 3 Deyim Öyküleri - 4 Deyim Öyküleri - 5
 

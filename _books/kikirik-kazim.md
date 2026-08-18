@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "Kikirik Kazım"
-description: "Kikirik Kazım, lakabının hakkını veren, kıpır kıpır ve her daim eğlenceli bir çocuk! her şeyi hafife alan babası ve ondan çok daha zeki olan kız kardeşi…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Kikirik Kazım
+description: Kikirik Kazım, lakabının hakkını veren, kıpır kıpır ve her daim eğlenceli
+  bir çocuk! her şeyi hafife alan babası ve ondan çok daha zeki olan kız kardeşi…
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786051748788
-languages: ["Türkçe"]
-page: "192 sayfa"
-size: "13,5x21 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051748788/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Sara Gürbüz Özeren"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 192 sayfa
+size: 13,5x21 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051748788/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Sara Gürbüz Özeren
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["Diyetkolik bir anne rahat bir baba dâhi bir kız kardeş ve sınır tanımayan bir çocuğun bol kahkahalı serüveni"]
-anatemalar: ["Aile İçi İletişim", "Sorumluluklar", "Beden Algısı ve Diyet", "Empati ve Saygı", "Bütçe Yönetimi", "Sağlıklı Beslenme"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.1.2.2
+- H.1.2.3
+- H.1.2.4
+- H.2.2.1
+- H.2.2.2
+- H.3.2.1
+- H.4.2.1
+- H.4.2.2
+- H.4.2.3
+- H.4.2.4
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 Kikirik Kazım, lakabının hakkını veren, kıpır kıpır ve her daim eğlenceli bir çocuk!
 Ancak onun dünyası sadece şakalardan ibaret değil. Sürekli diyet yapan annesi,

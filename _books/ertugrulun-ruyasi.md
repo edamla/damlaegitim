@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "Ertuğrul’un Rüyası"
-description: "Kayı Boyu’nun yiğit lideri Ertuğrul Gazi, Moğolların acımasız baskısına ve Bizans’ın girişir. Sadece birkaç yüz çadırla yurt edindiği Söğüt’te, adaleti…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Ertuğrul’un Rüyası
+description: Kayı Boyu’nun yiğit lideri Ertuğrul Gazi, Moğolların acımasız baskısına
+  ve Bizans’ın girişir. Sadece birkaç yüz çadırla yurt edindiği Söğüt’te, adaleti…
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786051745619
-languages: ["Türkçe"]
-page: "176 sayfa"
-size: "13,5x21 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051745619/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Talip Arışahin"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 176 sayfa
+size: 13,5x21 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051745619/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Talip Arışahin
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["Orta Asyadan Söğüte uzanan aşiretten cihan devletine giden kutlu bir göçün ve dirilişin hikâyesi"]
-anatemalar: ["Yurt Arayışı", "Liderlik ve Adalet", "Tasavvuf ve Rehberlik", "Töreye Bağlılık", "Birlik ve Dayanışma", "Fedakârlık"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.1.2.2
+- H.1.2.3
+- H.1.2.4
+- H.2.2.1
+- H.2.2.2
+- H.3.2.1
+- H.4.2.1
+- H.4.2.2
+- H.4.2.3
+- H.4.2.4
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 
 Kayı Boyu’nun yiğit lideri Ertuğrul Gazi, Moğolların acımasız baskısına ve Bizans’ın

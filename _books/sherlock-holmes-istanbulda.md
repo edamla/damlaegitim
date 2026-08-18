@@ -1,33 +1,70 @@
 ---
 layout: book
-title:  "Sherlock Holmes İstanbul’da"
-description: "Polisiye dünyasının iki büyük efsanesi İstanbul sokaklarında karşı karşıya geliyor! Cingöz Recai’yi durdurmak için bu kez İngiltere’nin en iyi zihni,…"
-categories: ["Hikaye", "Ortaokul"]
-tags: []
-
-# Standart Book Attributes
+title: Sherlock Holmes İstanbul’da
+description: Polisiye dünyasının iki büyük efsanesi İstanbul sokaklarında karşı karşıya
+  geliyor! Cingöz Recai’yi durdurmak için bu kez İngiltere’nin en iyi zihni,…
+categories:
+- Hikaye
+- Ortaokul
 ean: 9786053836391
-languages: ["Türkçe"]
-page: "136 sayfa"
-size: "13,5x21 cm"
-publish-number: ""
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836391/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Peyami Safa"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: 136 sayfa
+size: 13,5x21 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053836391/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Peyami Safa
 genre: story
-grades: [5, 6, 7, 8]
-kavramlar: ["Dünyaca ünlü İngiliz ha fiyesi Sherlock Holmes ve Türk polisinin korkulurüyası faka basmaz hırsız Cingöz Recai İstanbul sokaklarında akılalmaz bir zekâ savaşına tutuşuyor"]
-anatemalar: ["Zekâ Çatışması", "Suç ve Deha", "Soğukkanlılık", "Özgüven", "Adalet", "Şehir ve Gizem"]
-
-# Social Media Attributes
+grades:
+- 5
+- 6
+- 7
+- 8
+tags: []
+anatema:
+- Özgürlük
+- Saygı
+- Sevgi
+- Sorumluluk
+- Vatanseverlik
+- Merak
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Girişkenlik
+- Güven
+- Muhakeme
+- Odaklanma
+kazanim:
+- H.2.2.1
+- H.2.2.2
+- H.2.3.1
+- H.2.3.2
+- H.2.3.3
+- H.2.3.5
+- H.3.2.1
+- H.4.2.1
+- H.4.2.2
+- H.4.2.4
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kültür Okuryazarlıği
+- Veri Okuryazarlığı
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+unite:
+- Atatürk’ü TANIMAK
+- DUYGULARIMI TANIYORUM
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
 Polisiye dünyasının iki büyük efsanesi İstanbul sokaklarında karşı karşıya geliyor!
 Türk polisinin bir türlü yakalayamadığı, haksız kazanç sağlayanların baş belası

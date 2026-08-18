@@ -3,7 +3,6 @@ layout: previewbook
 title:  "Akıllı Damla | 1.Sınıf 2.Dönem"
 description: "1. sınıf Akıllı Damla eğitim seti; temel beceriler ve müfredat kazanımlarına yönelik."
 categories: ["Eğitim", "İlkokul"]
-tags: []
 
 # Standart Book Attributes
 ean: 8697911223240
@@ -17,10 +16,14 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/ak%C4%B1ll%C4%B1dam
 damlaurl: ""
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: education
 grades: [1]
-kavramlar: []
-anatemalar: []
+tags: []
+anatema: []
+kazanim: []
+beceriler: []
+unite: []
 
 # Social Media Attributes
 youtube:

@@ -1,36 +1,95 @@
 ---
 layout: book
-title:  "Alican'ın Günlüğü (10 Kitap)"
-description: "Çocuklar dünyayı bir de Alican’ın gözünden görmeye ne dersiniz? Yaşadığı her olaydan kendine dersler çıkaran Alican, en gizli sırlarını ve heyecan dolu…"
-categories: ["Hikaye", "İlkokul"]
-tags: ["Macera", "Yardımseverlik", "Aile Büyüklerine Saygı", "Günlük"]
-
-# Standart Book Attributes
+title: Alican'ın Günlüğü (10 Kitap)
+categories:
+- Hikaye
+- İlkokul
 ean: 9786053831303
-languages: ["Türkçe"]
-page: "Her Biri 48"
-size: "13,5x19,5 cm"
+languages:
+- Türkçe
+page: Her Biri 48
+size: 13,5x19,5 cm
 publish-number: 1355
-cover: "Karton Kapak"
-examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/alican-y.pdf"
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223028/index.html"
-damlaurl: ""
-paper: "1. Hamur"
-authors: ["Nehi̇r Aydın Gökduman"]
-illustrators: ["Mustafa Kocabaş"]
-
-# Spesific Filterable Attributes
+cover: Karton Kapak
+examlink: https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/alican-y.pdf
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223028/index.html
+damlaurl: ''
+paper: 1. Hamur
+authors:
+- Nehi̇r Aydın Gökduman
+illustrators:
+- Mustafa Kocabaş
 genre: story
-grades: [2]
-kavramlar: [gorsel-uzamsal, sosyal, doga]
-anatemalar: ["Hikâyelerle Değerler Eğitimi", "Macera", "Dostluk", "Kardeşlik", "Cesaret", "Kişisel Gelişim", "Okul ve Aile Hayatı", "Mizah", "Arkadaşlık", "Özfarkındalık"]
-
-# Social Media Attributes
+grades:
+- 2
+tags:
+- Macera
+- Yardımseverlik
+- Aile Büyüklerine Saygı
+- Günlük
+anatema:
+- Saygı
+- Merak
+- Gerçeği Arama
+- Aile Bütünlüğü
+- Sevgi
+- Merhamet
+- Dostluk
+- Sorumluluk
+- Bağımsızlık
+- Kendine Güvenme (Öz Güven)
+- Estetik
+- Oyunseverlik
+kazanim:
+- H.1.1.1
+- H.1.1.2
+- H.1.2.1
+- H.1.2.3
+- H.1.3.2
+- H.1.4.2
+- H.2.1.2
+- H.3.4.1
+- H.4.1.1
+beceriler:
+- Okuma Becerisi
+- Dinleme/İzleme Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Dijital Okuryazarlık
+- Görsel Okuryazarlık
+- Kendini Tanıma (Öz Farkındalık Becerisi)
+- Kendine Uyarlama (Öz Yansıtma Becerisi)
+- İletişim Becerisi
+unite:
+- ATATÜRK VE ÇOCUK
+- DOĞADA NELER Oluyor?
+- OKUMA SERÜVENİMİZ
+- KÜLTÜR HAZİNEMİZ
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
-Çocuklar dünyayı bir de Alican’ın gözünden görmeye ne dersiniz? Yaşadığı her olaydan kendine dersler çıkaran Alican, en gizli sırlarını ve heyecan dolu maceralarını bu günlükte herkesle paylaşıyor! 2. ve 3. sınıf öğrencileri için özenle hazırlanan bu 10 kitaplık eğlenceli seri; sayfalardan taşan bir sevgi, dostluk ve kardeşlik hikâyesi sunuyor. Maarif Modeli kazanımlarına tam uyumlu olarak kurgulanan “Alican’ın Günlüğü”; yardımlaşma, hayvan sevgisi, büyüklere saygı, doğayı koruma, cesaret ve dürüstlük gibi pek çok evrensel erdemi çocukların en çok sevdiği “günlük” formatında, sıcacık bir dille anlatıyor.
+Yaşadıklarından ders alan Alican, bunları herkesle paylaşıyor.
+Günlüğünün sayfalarından sevgi, dostluk, kardeşlik fışkırıyor.
+Macera dolu kitaplarda; yardımlaşma, hayvan sevgisi, dayanışma, araştırma, büyüklere saygı, affedebilme, sözünde durma, doğayı koruma, alay etmeme, cesur olma, yalan söylememe ve diğer pek çok erdem Alican'ın dilinden anlatılıyor.
+
+**TEMALAR:** Hikayelerle Değerler Eğitimi, Macera, Dostluk, Kardeşlik, Cesaret, Yardımlaşma, Hayvan Sevgisi, Dedektiflik, Macera, Dayanışma, Affetmek, Kardeş Sevgisi, Doğa Sevgisi
+
+**KAZANIMLAR:** Topluma, Büyüklerine Saygılı Bireyler Kazandırmak, Sözünde Durmanın Faydalarını Göstermek, Yalan Söylemenin Sakıncalarını Göstermek, Alay Etmenin Kötü Bir Davranış Olduğunu Göstermek, Olumlu Davranış Geliştirme
+
+**ETİKETLER:** Macera, Yardımseverlik, Aile Büyüklerine Saygı, Günlük
+
+**Setin İçerdiği Hikayeler**
+
+1- Bir Köpeğim Olsun <br>
+2- Eyvah Koyboldum!<br>
+3- Maceralı Piknik<br>
+4- Kediler de Okula Gider<br>
+5- Hırsız Geliyorum Demez<br>
+6- Bir Daha Resim Yapmayacağım<br>
+7- Uzun Kuyruklu Uçurtmam<br>
+8- Minik Kuş Fıstık<br>
+9- Kaplanlar Dondurma Yemez<br>
+10- Çiko Nerede?
 
 **TEMALAR:** Hikâyelerle Değerler Eğitimi, Macera, Dostluk, Kardeşlik, Cesaret
 

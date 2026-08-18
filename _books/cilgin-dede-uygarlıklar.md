@@ -1,36 +1,85 @@
 ---
 layout: book
-title:  "Çılgın Dedemin Zaman Makinesi-Geçmişten Geleceğe Uygarlıklar (10 Kitap)"
-description: "Makinesi geçmişten geleceğe ZAMAN MAKİNESİNİN İCADI Çılgın Dedemin Zaman Makinesi geçmişten geleceğe MAYA UYGARLIĞININ SAKLADIĞI SIR Çılgın Dedemin Zaman…"
-categories: ["Hikaye", "İlkokul"]
-tags: ["Zaman Makinesi", "Uygarlıklar", "Geçmiş", "Gelecek", "Mayalar", "Mısır Uygarlığı", "Çin Seddi", "Atlantis Medeniyeti", "Fetih", "Keşif", "Mitoloji", "Efsane", "Bilim", "Tarih"]
-
-# Standart Book Attributes
+title: Çılgın Dedemin Zaman Makinesi-Geçmişten Geleceğe Uygarlıklar (10 Kitap)
+categories:
+- Hikaye
+- İlkokul
 ean: 9786053834458
-languages: ["Türkçe"]
-page: "Her Biri 80"
-size: "13,5x19,5 cm"
-publish-number: 
-cover: "Karton Kapak"
-examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053834458/index.html"
-damlaurl: ""
-paper: "Kitap Kağıdı"
-authors: ["Sara Gürbüz Özeren"]
-illustrators: ["Süleyman Özkonuk"]
-
-# Spesific Filterable Attributes
+languages:
+- Türkçe
+page: Her Biri 80
+size: 13,5x19,5 cm
+publish-number: ''
+cover: Karton Kapak
+examlink: ''
+preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053834458/index.html
+damlaurl: ''
+paper: Kitap Kağıdı
+authors:
+- Sara Gürbüz Özeren
+illustrators:
+- Süleyman Özkonuk
 genre: story
-grades: [4]
-kavramlar: []
-anatemalar: ["Geçmişten Geleceğe Uygarlıklar", "Zaman Yolculuğu", "Birey ve Toplum"]
-
-# Social Media Attributes
+grades:
+- 4
+tags:
+- Zaman Makinesi
+- Uygarlıklar
+- Geçmiş
+- Gelecek
+- Mayalar
+- Mısır Uygarlığı
+- Çin Seddi
+- Atlantis Medeniyeti
+- Fetih
+- Keşif
+- Mitoloji
+- Efsane
+- Bilim
+- Tarih
+anatema:
+- Merak
+- Gerçeği Arama
+- Muhakeme
+- Analitiklik
+- Soru Sorma
+- Vatanseverlik
+- Saygı
+- Özgürlük
+- Çalışkanlık
+- Sorumluluk
+- Bağımsızlık
+- Kendine İnanma (Öz Yeterlilik)
+kazanim:
+- H.1.2.1
+- H.1.2.3
+- H.1.2.4
+- H.1.3.5
+- H.2.2.1
+- H.2.2.2
+- H.2.3.1
+- H.3.2.1
+- H.4.2.1
+- H.4.2.2
+beceriler:
+- Dinleme/İzleme Becerisi
+- Okuma Becerisi
+- Konuşma Becerisi
+- Yazma Becerisi
+- Bilgi Okuryazarlığı
+- Görsel Okuryazarlık
+- İletişim Becerisi
+- Sosyal Farkındalık Becerisi
+- Özetleme Becerisi
+- Çözümleme Becerisi
+unite:
+- DOĞA VE İNSAN
+- KÜTÜPHANEMİZ
+- BİLİM VE TEKNOLOJİ
+- GEÇMİŞTEN GELECEĞE MİRASIMIZ
 youtube:
-
-# For adding excerpt add <!--more--> and break the line
 ---
-Makinesi geçmişten geleceğe ZAMAN MAKİNESİNİN İCADI Çılgın Dedemin Zaman Makinesi geçmişten geleceğe MAYA UYGARLIĞININ SAKLADIĞI SIR Çılgın Dedemin Zaman Makinesi geçmişten geleceğe ÇAĞ AÇAN FETİH Çılgın Dedemin Zaman Makinesi geçmişten geleceğe ZOYA GECEGENİ’NDEN KAÇIŞ Çılgın Dedemin Zaman Makinesi geçmişten geleceğe KAYIP KITA ATLANTİS yor. Anadolu Türk Uygarlığından uçuyor, uygarlıkları keşfediyor. Anadolu Türk Uygarlığından uçuyor, uygarlıkları keşfediyor. Anadolu Türk Uygarlığından uçuyor, uygarlıkları keşfediyor. Anadolu Türk Uygarlığından uçuyor, uygarlıkları keşfediyor. Anadolu Türk Uygarlığından mitlerinden Maya Uygarlığının den Mars Uygarlığına, geçmişin Çin Seddi'ne, Mısır Piramitlerinden Maya Uygarlığının Çin Seddi'ne, Mısır Piramitlerinden Maya Uygarlığının Çin Seddi'ne, Mısır Piramitlerinden Maya Uygarlığının Çin Seddi'ne, Mısır Piramitlerinden Maya Uygarlığının eğin gizemine soluk soluğa sırlarına, Zoya Gezegeni'nden Mars Uygarlığına, geçmişin sırlarına, Zoya Gezegeni'nden Mars Uygarlığına, geçmişin sırlarına, Zoya Gezegeni'nden Mars Uygarlığına, geçmişin sırlarına, Zoya Gezegeni'nden Mars Uygarlığına, geçmişin a, tarih ve keşiflerle dolu derinliklerinden geleceğin gizemine soluk soluğa derinliklerinden geleceğin gizemine soluk soluğa derinliklerinden geleceğin gizemine soluk soluğa derinliklerinden geleceğin gizemine soluk soluğa GU KİTAPLARI... okuyacağınız macera, tarih ve keşiflerle dolu okuyacağınız macera, tarih ve keşiflerle dolu okuyacağınız macera, tarih ve keşiflerle dolu okuyacağınız macera, tarih ve keşiflerle dolu
+Çılgın Dedemin Zaman Makinesi geçmişten geleceğe uçuyor, uygarlıkları keşfediyor. Anadolu Türk Uygarlığından Çin Seddi'ne, Mısır Piramitlerinden Maya Uygarlığı'nın sırlarına, Zoya Gezegeni'nden Mars Uygarlığına, geçmişin derinliklerinden geleceğin gizemine soluk soluğa okuyacağınız macera, tarih ve keşiflerle dolu serüvenler... TEMALAR: • Geçmişten Geleceğe Uygarlıklar, Zaman Yolculuğu, Birey ve Toplum, Tarih, Mitoloji, Efsane, Bilim Tarihi, Geçmiş ve Gelecek Medeniyetler KAZANIMLAR: • Dünya Medeniyetlerini Tanıma, Uygarlıklar Tarihini Öğrenme, Çin Seddi, Mayalar, Türk Tarihi, Gelecekteki Mars Medeniyeti, Atlantis, Keşifler, Fetihler, Piramitler, Türk Kurtuluş Savaşı, Türk Medeniyeti ETİKETLER: • Zaman Makinesi, Uygarlıklar, Geçmiş, Gelecek, Mayalar, Mısır Uygarlığı, Çin Seddi, Atlantis Medeniyeti, Fetih, Keşif, Mitoloji, Efsane, Bilim, Tarih Setin İçerdiği Kitaplar: 1- Zaman Makinesinin İcadı 2- Maya Uygarlığının Sakladığı Sır 3- Çağ Açan Fetih 4- Zoya Gezegeninden Kaçış 5- Kayıp Kıta Atlantis 6- Kaşıkçı Elması 7- Mısır Piramitlerindeki Gizem 8- Akdeniz Gölü 9- Kurtuluş Destanı 10- Çin Seddi'ne Yolculuk
 
 **TEMALAR:** Geçmişten Geleceğe Uygarlıklar, Zaman Yolculuğu, Birey ve Toplum
 

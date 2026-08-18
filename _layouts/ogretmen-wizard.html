@@ -49,8 +49,10 @@ layout: default
   "grades": {{ book.grades | jsonify }},
   "categories": {{ book.categories | jsonify }},
   "tags": {{ book.tags | jsonify }},
-  "anatemalar": {{ book.anatemalar | jsonify }},
-  "kavramlar": {{ book.kavramlar | jsonify }},
+  "anatema": {{ book.anatema | jsonify }},
+  "kazanim": {{ book.kazanim | jsonify }},
+  "beceriler": {{ book.beceriler | jsonify }},
+  "unite": {{ book.unite | jsonify }},
   "url": {{ book.url | jsonify }},
   "cover": {{ book_cover | jsonify }}
 }{% unless forloop.last %},{% endunless %}
@@ -206,7 +208,8 @@ layout: default
       filtre_tur: state.genre === 'education' ? 'egitim' : 'hikaye',
       filtre_kategori: '',
       filtre_tags: '',
-      filtre_anatemalar: '',
+      filtre_unite: '',
+      filtre_anatema: '',
       filtre_arama: state.filters.q || '',
       kaynak_url: window.location.href,
       urunler: state.list.map(function(item, idx) {
