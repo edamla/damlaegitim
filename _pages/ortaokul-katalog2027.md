@@ -1,3 +1,10 @@
+---
+title: "Katalog redirect"
+description: "Katalog"
+layout: page
+permalink: "/kataloglar/ortaokul-katalog2027"
+footer_show: false
+---
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -5,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- JavaScript çalışmazsa 5 saniye sonra yönlendir -->
-  <meta http-equiv="refresh" content="5;url=https://damlaokul.com/ortaokul-katalogu">
+  <meta http-equiv="refresh" content="5;url=https://damlaokul.com/kataloglar/ortaokul-katalogu">
 
   <title>Yönlendiriliyor...</title>
 
@@ -64,13 +71,13 @@
     <noscript>
       <p>
         Otomatik yönlendirme çalışmazsa
-        <a href="https://damlaokul.com/ortaokul-katalogu">buraya tıklayın</a>.
+        <a href="https://damlaokul.com/kataloglar/ortaokul-katalogu">buraya tıklayın</a>.
       </p>
     </noscript>
   </div>
 
   <script>
-    const redirectUrl = "https://damlaokul.com/ortaokul-katalogu";
+    const redirectUrl = "https://damlaokul.com/kataloglar/ortaokul-katalogu";
     let seconds = 5;
 
     const counter = document.getElementById("counter");
