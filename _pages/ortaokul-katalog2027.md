@@ -78,7 +78,7 @@ footer_show: false
 
   <script>
     const redirectUrl = "https://damlaokul.com/kataloglar/ortaokul-katalogu";
-    let seconds = 5;
+    let seconds = 1;
 
     const counter = document.getElementById("counter");
 
