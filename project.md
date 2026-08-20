@@ -75,6 +75,7 @@ damlaegitim/
 │   │   ├── fontawesome-all.min.css
 │   │   ├── theme.css
 │   │   ├── app.css
+│   │   ├── ogretmen-wizard.css   # Öğretmen talep formu (/ogretmen)
 │   │   ├── spotlight.css
 │   │   ├── tiny-slider.css
 │   │   └── buyout.css            # Kullanılmıyor (legacy; layout’ta yüklenmez)
@@ -87,7 +88,7 @@ damlaegitim/
 │   ├── js/
 │   │   ├── bootstrap.bundle.min.js
 │   │   ├── nav.js                # Navbar scroll (vanilla JS)
-│   │   ├── book-filter.js        # Sınıf/tür filtreleme (yalnızca / ve /urunler)
+│   │   ├── book-filter.js        # Sınıf/tür filtreleme (/ , /urunler, /ogretmen wizard)
 │   │   ├── lunr.js               # Arama (lazy-load; açılınca yüklenir)
 │   │   ├── tiny-slider.js        # Anasayfa slider
 │   │   └── theme.js              # Eski (jQuery) — kullanılmıyor
@@ -105,6 +106,7 @@ damlaegitim/
 │   ├── check_fonts.sh            # Font / WOFF2 uyarı raporu (install.sh)
 │   ├── subset_font.sh            # Tüm OTF/TTF → WOFF2 subset (install.sh)
 │   ├── normalize_book_frontmatter.rb   # Kitap front matter sıralama/normalize (`preview_link`, `examlink`, `damlaurl`; eski alan migrasyonu)
+│   ├── ogretmen-submit.gs              # Öğretmen wizard → Sheets + mail (Workspace’te dağıtılır; repo referans kopyası)
 ├── index.html            # Anasayfa
 ├── Gemfile               # github-pages + webrick (canlı GitHub Pages ile aynı stack)
 ├── CNAME                 # damlaokul.com
@@ -141,8 +143,99 @@ damlaegitim/
 | `catalog.html` | Katalog detay + iframe görüntüleyici |
 | `post.html` | Blog yazısı |
 | `person.html` / `illustrator.html` / `translator.html` | Kişi profilleri |
+| `ogretmen-wizard.html` | 6 adımlı öğretmen talep formu (`/ogretmen`) |
 
 Tüm layout’lar `layout: default` zinciri üzerinden `default.html`’i extend eder.
+
+---
+
+## Öğretmen talep formu (wizard)
+
+**URL:** `/ogretmen` — **Durum:** Canlı (Jekyll → Apps Script → Sheets + e-posta)
+
+Öğretmenler sınıf seçer, hikaye ve eğitim kitaplarından liste oluşturur, iletişim bilgilerini girer ve talebi gönderir. Statik sitede backend yok; gönderim **Google Apps Script** web uygulamasına `fetch` POST ile yapılır.
+
+```mermaid
+flowchart LR
+  Browser["Tarayıcı /ogretmen"]
+  GAS["Apps Script doPost"]
+  Sheet["Sheets Talepler"]
+  Mail["MailApp"]
+  Captcha["reCAPTCHA siteverify"]
+  Browser -->|"POST JSON"| GAS
+  GAS --> Captcha
+  GAS --> Sheet
+  GAS --> Mail
+```
+
+### Sihirbaz adımları
+
+| # | Adım | İçerik |
+|---|------|--------|
+| 1 | Sınıf | Okul öncesi – 8. sınıf |
+| 2 | Okuma listesi | Hikaye; ünite / anatema / beceri filtreleri |
+| 3 | Eğitim kitapları | Eğitim setleri; arama |
+| 4 | Liste | Seçilen ürünler; okuma + eğitim grupları |
+| 5 | İletişim | Ad, soyad, il, ilçe, telefon, e-posta, okul |
+| 6 | Gönder | Özet, reCAPTCHA v2, gönder |
+
+**State:** `localStorage` → `damlaokul:ogretmen-wizard` (`version: 3`). Sınıf değişince liste ve filtreler sıfırlanır. Katalog build’de `site.books` JSON; listeye eklenen kitap katalogdan çıkar.
+
+### Dosyalar
+
+| Dosya | Görev |
+|-------|-------|
+| `_pages/ogretmen.html` | Permalink, SEO, footer |
+| `_layouts/ogretmen-wizard.html` | Adımlar, state, katalog JSON, submit |
+| `_includes/ogretmen-wizard/step-*.html` | 6 adım UI |
+| `assets/css/ogretmen-wizard.css` | Wizard stilleri ([design.md](design.md#14-öğretmen-talep-formu-wizard)) |
+| `assets/js/book-filter.js` | TYMM filtreleri |
+| `_data/turkiye_il_ilce.json` | İl / ilçe select |
+| `_data/tymm.yml` | Hikaye filtre sıralaması |
+| `scripts/ogretmen-submit.gs` | Backend referansı (Workspace’te dağıtılır) |
+
+### Yapılandırma (`_config.yml`)
+
+```yaml
+ogretmen_submit_url: "https://script.google.com/macros/s/…/exec"
+ogretmen_recaptcha_site_key: "…"   # v2 site key (herkese açık)
+```
+
+Gizli anahtar config’e **yazılmaz** — Apps Script Script Properties → `RECAPTCHA_SECRET`.
+
+### Gönderim akışı
+
+1. `buildSheetRow()` → JSON (`talep_id`, iletişim, ürünler, `filtre_*`, `recaptcha_token`, `urunler[]`)
+2. `POST`, `Content-Type: text/plain;charset=utf-8`
+3. Yanıt `{ ok: true }` → başarı ekranı; `localStorage` temizlenir
+4. Hata → öğretmene genel mesaj; ayrıntı `console.log('Gönderim hatası:', …)`
+
+### Google Workspace kurulumu
+
+1. Shared Drive’da **Öğretmen Talepleri** e-tablosu; Apps Script e-tabloya bağlı
+2. `scripts/ogretmen-submit.gs` içeriğini editöre yapıştır
+3. Script properties: `NOTIFY_EMAIL` (virgülle alıcılar), `RECAPTCHA_SECRET` (gizli anahtar)
+4. **`izinleriAl`** fonksiyonunu editörden çalıştır → UrlFetchApp izni ver
+5. Web app deploy: **Execute as Me**, **Anyone**; kod değişince **New version**
+6. `/exec` URL → `ogretmen_submit_url`; siteyi yeniden deploy et
+
+**Sheet sayfaları** (ilk POST’ta oluşur): `Talepler`, `Talep_Urunleri`. Form `filtre_unite` / `filtre_anatema` / `filtre_beceriler` de gönderir; Sheet başlıklarına isteğe bağlı eklenir.
+
+Tarayıcıda `/exec` URL’sini GET ile açmak `doGet not found` döner — normal (`doPost` only).
+
+Mail hatası Sheet kaydını iptal etmez.
+
+### Sorun giderme
+
+| Console / belirti | Çözüm |
+|-------------------|--------|
+| `UrlFetchApp… izniniz yok` | `izinleriAl` + izin ver + yeni sürüm deploy |
+| `invalid-input-secret` | `RECAPTCHA_SECRET` = gizli anahtar (site key değil) |
+| `missing_token` | reCAPTCHA yeniden işaretle |
+| Sheet var, mail yok | `NOTIFY_EMAIL` / MailApp kotası |
+| Eski davranış | Deploy → New version |
+
+Yerel test: `sh start.sh` → `http://localhost:4000/ogretmen` (reCAPTCHA admin’de `localhost` tanımlı olmalı).
 
 ---
 
@@ -173,7 +266,7 @@ Tüm layout’lar `layout: default` zinciri üzerinden `default.html`’i extend
 |-------|---------|-------|
 | `bootstrap.bundle.min.js` | `defer`, tüm sayfalar | Collapse, dropdown, modal |
 | `nav.js` | `defer`, tüm sayfalar | Sticky navbar yüksekliği (`--nav-height`), scroll gölgesi |
-| `book-filter.js` | `defer`, yalnızca `/` ve `/urunler` | Sınıf/tür filtreleme + hash URL senkronizasyonu |
+| `book-filter.js` | `defer`, `/`, `/urunler`, `/ogretmen` | Sınıf/tür filtreleme + hash URL; wizard’da TYMM filtreleri |
 | `lunr.js` | **Lazy** — arama açılınca | Spotlight kitap araması (client-side indeks) |
 | `tiny-slider.js` | Anasayfa (`slider.html`) | Slider + lazyload |
 
@@ -778,6 +871,8 @@ GitHub Pages, push sonrası kaynak branch’ten Jekyll build alır. **CI/CD veya
 |--------|----------|
 | `cdn.e-damla.com.tr` | Kitap `preview_link` ön izleme sayfaları; `examlink` HDS PDF’leri |
 | `feeds.behold.so` | Instagram carousel JSON feed |
+| `script.google.com` | Öğretmen talep formu Apps Script web app (`ogretmen_submit_url`) |
+| `google.com/recaptcha` | Form gönderiminde bot koruması (v2) |
 | Google Analytics | `G-PR1C1WGQB6` (`site.google_analytics`; yalnızca production) |
 | Cloudflare | DNS (şu an proxy kapalı — gri bulut) |
 

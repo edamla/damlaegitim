@@ -27,6 +27,14 @@ layout: default
     <button type="button" class="btn btn-outline-secondary" id="ow-btn-prev" disabled>Geri</button>
     <button type="button" class="btn btn-primary" id="ow-btn-next">İleri</button>
   </div>
+
+  <div class="ogretmen-wizard__loading" id="ow-loading" hidden aria-live="polite" aria-busy="true">
+    <div class="ogretmen-wizard__loading-inner" role="status">
+      <div class="ogretmen-wizard__spinner" aria-hidden="true"></div>
+      <p class="ogretmen-wizard__loading-text">Talebiniz gönderiliyor…</p>
+      <p class="ogretmen-wizard__loading-hint">Bu işlem birkaç saniye sürebilir. Lütfen sayfayı kapatmayın.</p>
+    </div>
+  </div>
 </div>
 
 <script type="application/json" id="ogretmen-catalog">[
@@ -673,6 +681,20 @@ window.owOnRecaptchaReady = function() {
     grecaptcha.reset(recaptchaWidgetId);
   }
 
+  function setSubmitting(active) {
+    var loading = document.getElementById('ow-loading');
+    var nextBtn = document.getElementById('ow-btn-next');
+    var prevBtn = document.getElementById('ow-btn-prev');
+    var wizardEl = document.querySelector('.ogretmen-wizard');
+    if (loading) loading.hidden = !active;
+    if (wizardEl) wizardEl.classList.toggle('is-submitting', active);
+    if (nextBtn) {
+      nextBtn.disabled = active;
+      nextBtn.textContent = active ? 'Gönderiliyor…' : (state.step >= TOTAL_STEPS ? 'Gönder' : 'İleri');
+    }
+    if (prevBtn) prevBtn.disabled = active || state.step <= 1;
+  }
+
   function submitToSheets() {
     if (!SUBMIT_URL) {
       setStatus('Gönderim henüz yapılandırılmadı. Talebiniz yerel olarak kaydedildi; yöneticiniz Apps Script URL\'sini eklediğinde tekrar deneyin.', 'error');
@@ -684,6 +706,7 @@ window.owOnRecaptchaReady = function() {
     }
     var payload = buildSheetRow();
     if (RECAPTCHA_SITE_KEY) payload.recaptcha_token = getRecaptchaToken();
+    setSubmitting(true);
     fetch(SUBMIT_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'text/plain;charset=utf-8' },
@@ -693,30 +716,26 @@ window.owOnRecaptchaReady = function() {
         try {
           return JSON.parse(text);
         } catch (parseErr) {
-          console.error('Apps Script yanıtı JSON değil:', text.slice(0, 500));
+          console.log('Apps Script yanıtı JSON değil:', text.slice(0, 500));
           return { ok: false, error: 'invalid_response' };
         }
       });
     }).then(function(data) {
       if (!data || data.ok !== true) {
-        console.error('Gönderim reddedildi:', data);
+        console.log('Gönderim hatası:', data);
         resetRecaptcha();
-        if (data && data.error === 'recaptcha') {
-          var capDetail = data.detail ? ' (' + data.detail + ')' : '';
-          setStatus('Güvenlik doğrulaması başarısız' + capDetail + '. reCAPTCHA gizli anahtarını (RECAPTCHA_SECRET) kontrol edin.', 'error');
-        } else if (data && data.error === 'invalid_response') {
-          setStatus('Sunucu yanıtı okunamadı. Apps Script web uygulaması dağıtımını kontrol edin.', 'error');
-        } else {
-          setStatus('Gönderim reddedildi: ' + ((data && data.error) || 'bilinmeyen hata'), 'error');
-        }
+        setStatus('Gönderim sırasında bir hata oluştu. Lütfen tekrar deneyin.', 'error');
         return;
       }
       showSuccessView();
       localStorage.removeItem(STORAGE_KEY);
-    }).catch(function() {
+    }).catch(function(err) {
+      console.log('Gönderim hatası:', err);
       resetRecaptcha();
       localStorage.setItem(STORAGE_KEY + ':pending', JSON.stringify(payload));
-      setStatus('Gönderim sırasında hata oluştu. Lütfen tekrar deneyin.', 'error');
+      setStatus('Gönderim sırasında bir hata oluştu. Lütfen tekrar deneyin.', 'error');
+    }).finally(function() {
+      setSubmitting(false);
     });
   }
 

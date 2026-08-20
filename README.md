@@ -24,6 +24,7 @@ Yeni Maarif Modeline uygun eğitim setleri, hikaye kitapları ve kataloglar tek 
 - **Mobil uyumlu** — Bootstrap 5 responsive grid; hamburger menü alt satırda açılır
 - **Statik & hızlı** — Jekyll ile önceden derlenmiş HTML, GitHub Pages üzerinde yayın
 - **Performans odaklı** — Lazy arama, yerel fontlar, `<picture>` + WebP, slider lazyload, koşullu script yükleme
+- **Öğretmen talep formu** — [`/ogretmen`](/ogretmen) 6 adımlı wizard; kitap listesi + Google Sheets + e-posta ([project.md](project.md#öğretmen-talep-formu-wizard))
 - **SEO & AI keşfi** — `robots.txt`, modüler `llms.txt` hub, site geneli `?q=` arama URL'leri, otomatik kitap meta, Product/FAQ JSON-LD, `ai-seo-crawler`, `/sss` sayfası
 
 
@@ -202,6 +203,7 @@ bundle exec jekyll build
 | `[scripts/subset_font.sh](scripts/subset_font.sh)`                               | `install.sh` içinden          | OTF/TTF → WOFF2 subset                                                                                                                             |
 | `[scripts/check_fonts.sh](scripts/check_fonts.sh)`                               | `install.sh` içinden          | Font boyut uyarı raporu                                                                                                                            |
 | `[scripts/normalize_book_frontmatter.rb](scripts/normalize_book_frontmatter.rb)` | Manuel                        | Kitap front matter sıralama; `preview_link`, `examlink`, `damlaurl` korunur; eski `review_link`/`previewpage`/`damlayayinevi` taşınır veya silinir |
+| `[scripts/ogretmen-submit.gs](scripts/ogretmen-submit.gs)`                     | Workspace     | Öğretmen wizard backend; e-tablo Apps Script’ine yapıştırılır — [project.md](project.md#öğretmen-talep-formu-wizard) |
 | `[scripts/build_tymm_reference.rb](scripts/build_tymm_reference.rb)`             | Manuel                        | `docs/tymm-*` API JSON → `_data/tymm.yml` + `docs/tymmreferans.csv`                                                                                |
 | `[scripts/build_oykumatik_reference.rb](scripts/build_oykumatik_reference.rb)`   | Manuel                        | Öykümatik xlsx → `_data/oykumatik-kazanimlari.yml` + `docs/oykumatikkazanimlar.csv`                                                                |
 
@@ -508,6 +510,7 @@ Yeni bir sayfayı footer’da listelemek için front matter’a `footer_show: tr
 | `/kataloglar`             | Katalog listesi                                                          |
 | `/kataloglar/:title`      | Katalog detay                                                            |
 | `/urun-inceleme-linkleri` | Ürün inceleme linkleri — `preview_link` dolu kitaplar, arama + paylaşım  |
+| `/ogretmen`               | Öğretmen talep formu — sınıf, okuma/eğitim listesi, iletişim, Sheets gönderimi |
 | `/hakkimizda`             | Hakkımızda                                                               |
 | `/iletisim`               | İletişim                                                                 |
 

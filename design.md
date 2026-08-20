@@ -38,6 +38,8 @@ Bu belge [damlaokul.com](https://damlaokul.com) sitesinin görsel kimliğini, CS
 │  spotlight.css            Arama modal (async, tüm sayfalar) │
 ├─────────────────────────────────────────────────────────────┤
 │  tiny-slider.css          Anasayfa slider (yalnızca /)      │
+├─────────────────────────────────────────────────────────────┤
+│  ogretmen-wizard.css      Öğretmen talep formu (/ogretmen)  │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -524,6 +526,34 @@ Navbar, footer ve ana içerik koyu tema desteklemez.
 
 ---
 
+## 14. Öğretmen talep formu (wizard)
+
+**URL:** `/ogretmen` — Teknik kurulum: [project.md — Öğretmen talep formu](project.md#öğretmen-talep-formu-wizard)
+
+Sayfa özel CSS yükler (`ogretmen-wizard.css`); Bootstrap grid + marka token’ları ile uyumludur.
+
+### Bileşenler
+
+| Sınıf / öğe | Görev |
+|-------------|-------|
+| `.ogretmen-wizard` | Kök sarmalayıcı |
+| `.ogretmen-wizard__progress` | 6 noktalı adım göstergesi |
+| `.ogretmen-wizard__step-dot.is-active` | Aktif adım |
+| `.ogretmen-wizard__panel` | Adım içeriği (`hidden` ile geçiş) |
+| `.ogretmen-wizard__catalog` | Kitap grid (max 4 sütun mobil uyumlu) |
+| `.ogretmen-wizard__list-row` | Seçilen kitap satırı (thumbnail + başlık) |
+| `.ogretmen-wizard__status.is-error` / `.is-success` | Gönderim durumu |
+| `.ogretmen-wizard__success` | Başarı ekranı |
+
+### UX notları
+
+- Liste kutusu ekleme animasyonu; katalogdan eklenen kitap kaldırılır
+- Adım 4: Okuma listesi ve eğitim listesi ayrı gruplar
+- Mobil: filtreler ve katalog tek sütuna düşer; dokunma hedefleri yeterli padding
+- Hata mesajları öğretmene genel; teknik ayrıntı yalnızca tarayıcı konsolunda
+
+---
+
 ## Yeni Stil Ekleme Rehberi
 
 ### Kalıcı bileşen
@@ -573,6 +603,7 @@ Navbar, footer ve ana içerik koyu tema desteklemez.
 | Ana stil | `assets/css/theme.css` |
 | Bootstrap override | `assets/css/app.css` |
 | Arama UI | `assets/css/spotlight.css` |
+| Öğretmen wizard | `assets/css/ogretmen-wizard.css` |
 | Kök şablon | `_layouts/default.html` |
 | Navbar JS | `assets/js/nav.js` |
 | Font subset | `scripts/subset_font.sh` |
