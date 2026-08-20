@@ -61,31 +61,69 @@ layout: default
 {% endfor %}
 ]</script>
 
+<script type="application/json" id="ogretmen-tymm">{{ site.data.tymm | jsonify }}</script>
+
+{% if site.ogretmen_recaptcha_site_key != '' %}
+<script>
+window.owOnRecaptchaReady = function() {
+  window.owRecaptchaApiReady = true;
+  document.dispatchEvent(new Event('ow-recaptcha-ready'));
+};
+</script>
+<script src="https://www.google.com/recaptcha/api.js?onload=owOnRecaptchaReady&amp;render=explicit" async defer></script>
+{% endif %}
+
 <script defer src="{{ site.baseurl }}/assets/js/book-filter.js?v={{ site.time | date: '%s' }}"></script>
 <script>
 (function() {
   var STORAGE_KEY = 'damlaokul:ogretmen-wizard';
   var SUBMIT_URL = {{ site.ogretmen_submit_url | default: '' | jsonify }};
+  var RECAPTCHA_SITE_KEY = {{ site.ogretmen_recaptcha_site_key | default: '' | jsonify }};
+  var recaptchaWidgetId = null;
+  var recaptchaRetryCount = 0;
   var TOTAL_STEPS = 6;
   var STEP_LABELS = ['Sınıf', 'Okuma Listesi', 'Eğitim Kitapları', 'Liste', 'İletişim', 'Gönder'];
   var catalog = [];
-  var state = { step: 1, grade: null, list: [], contact: {}, filters: { storyQ: '', educationQ: '' }, version: 2 };
+  var tymmData = {};
+  var ilIlceData = {};
+  var citySelectInitialized = false;
+  var state = {
+    step: 1,
+    grade: null,
+    list: [],
+    contact: {},
+    filters: { storyQ: '', educationQ: '', storyUnite: '', storyAnatema: '', storyBeceriler: '' },
+    version: 3
+  };
 
   function loadState() {
     try {
       var raw = localStorage.getItem(STORAGE_KEY);
       if (!raw) return;
       var saved = JSON.parse(raw);
-      if (saved.version !== 2) {
-        if (saved.step >= 3) saved.step += 1;
-        if (saved.filters && saved.filters.q) {
-          saved.filters.storyQ = saved.filters.q;
-          saved.filters.educationQ = '';
+      if (saved.version !== 3) {
+        if (!saved.version || saved.version < 2) {
+          if (saved.step >= 3) saved.step += 1;
+          if (saved.filters && saved.filters.q) {
+            saved.filters.storyQ = saved.filters.q;
+            saved.filters.educationQ = '';
+          }
         }
-        saved.version = 2;
+        saved.filters = saved.filters || {};
+        saved.filters.storyQ = saved.filters.storyQ || '';
+        saved.filters.educationQ = saved.filters.educationQ || '';
+        saved.filters.storyUnite = saved.filters.storyUnite || '';
+        saved.filters.storyAnatema = saved.filters.storyAnatema || '';
+        saved.filters.storyBeceriler = saved.filters.storyBeceriler || '';
+        saved.version = 3;
       }
       Object.assign(state, saved);
-      if (!state.filters) state.filters = { storyQ: '', educationQ: '' };
+      if (!state.filters) {
+        state.filters = { storyQ: '', educationQ: '', storyUnite: '', storyAnatema: '', storyBeceriler: '' };
+      }
+      if (!hasGrade() && state.step > 1) {
+        state.step = 1;
+      }
     } catch (e) { /* ignore */ }
   }
 
@@ -100,7 +138,23 @@ layout: default
     });
   }
 
+  function hasGrade() {
+    return state.grade !== null && state.grade !== undefined && state.grade !== '';
+  }
+
+  function syncGradeFromDom() {
+    var selected = document.querySelector('.ogretmen-wizard__grade-btn.is-selected');
+    if (selected && !hasGrade()) {
+      state.grade = selected.dataset.grade;
+      saveState();
+    }
+  }
+
   function showStep(n) {
+    if (n === 2 || n === 3) {
+      syncGradeFromDom();
+      if (!hasGrade()) n = 1;
+    }
     state.step = n;
     saveState();
     document.querySelectorAll('.ogretmen-wizard__panel').forEach(function(p) {
@@ -123,6 +177,7 @@ layout: default
     document.getElementById('ow-btn-prev').disabled = n <= 1;
     document.getElementById('ow-btn-next').textContent = n >= TOTAL_STEPS ? 'Gönder' : 'İleri';
     if (n === 2) {
+      renderStoryFilterOptions();
       renderCatalog('ow-catalog-story', 'story');
       renderList();
     }
@@ -131,7 +186,11 @@ layout: default
       renderList();
     }
     if (n === 4) renderList();
-    if (n === 6) renderSummary();
+    if (n === 5) initCityDistrictSelects();
+    if (n === 6) {
+      renderSummary();
+      ensureRecaptcha();
+    }
     var wizardEl = document.querySelector('.ogretmen-wizard');
     if (wizardEl) {
       wizardEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -139,56 +198,161 @@ layout: default
   }
 
   function getCriteria(genre) {
-    return {
+    var criteria = {
       grade: state.grade,
       genre: genre,
       q: genre === 'story' ? (state.filters.storyQ || '') : (state.filters.educationQ || '')
     };
+    if (genre === 'story') {
+      criteria.unite = state.filters.storyUnite ? [state.filters.storyUnite] : [];
+      criteria.anatema = state.filters.storyAnatema ? [state.filters.storyAnatema] : [];
+      criteria.beceriler = state.filters.storyBeceriler ? [state.filters.storyBeceriler] : [];
+    }
+    return criteria;
+  }
+
+  function fillSelect(id, options, selected, emptyLabel, disabled) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    el.disabled = !!disabled;
+    el.innerHTML = '<option value="">' + escapeHtml(emptyLabel) + '</option>' +
+      options.map(function(opt) {
+        return '<option value="' + escapeHtml(opt) + '"' + (opt === selected ? ' selected' : '') + '>' + escapeHtml(opt) + '</option>';
+      }).join('');
+  }
+
+  function renderStoryFilterOptions() {
+    if (!window.BookFilter) return;
+    syncGradeFromDom();
+    if (!hasGrade()) {
+      fillSelect('ow-filter-unite', [], '', 'Önce sınıf seçin', true);
+      fillSelect('ow-filter-anatema', [], '', 'Önce sınıf seçin', true);
+      fillSelect('ow-filter-beceriler', [], '', 'Önce sınıf seçin', true);
+      return;
+    }
+
+    var grade = state.grade;
+    var opts = BookFilter.storyFilterOptions(catalog, grade, tymmData, state.filters.storyUnite || '');
+    if (state.filters.storyUnite && opts.unites.indexOf(state.filters.storyUnite) === -1) {
+      state.filters.storyUnite = '';
+      state.filters.storyAnatema = '';
+      state.filters.storyBeceriler = '';
+      opts = BookFilter.storyFilterOptions(catalog, grade, tymmData, '');
+    }
+    if (state.filters.storyAnatema && opts.anatema.indexOf(state.filters.storyAnatema) === -1) {
+      state.filters.storyAnatema = '';
+    }
+    if (state.filters.storyBeceriler && opts.beceriler.indexOf(state.filters.storyBeceriler) === -1) {
+      state.filters.storyBeceriler = '';
+    }
+
+    fillSelect('ow-filter-unite', opts.unites, state.filters.storyUnite, 'Tüm üniteler', false);
+    fillSelect('ow-filter-anatema', opts.anatema, state.filters.storyAnatema, 'Tüm anatema', false);
+    fillSelect('ow-filter-beceriler', opts.beceriler, state.filters.storyBeceriler, 'Tüm beceriler', false);
   }
 
   function renderCatalog(catalogId, genre) {
     var el = document.getElementById(catalogId);
     if (!el || !window.BookFilter) return;
+    if (genre === 'story' && !hasGrade()) {
+      el.innerHTML = '<p class="text-muted">Kitapları görmek için 1. adımdan sınıf seçin.</p>';
+      return;
+    }
     var filtered = BookFilter.filterCatalog(catalog, getCriteria(genre)).filter(function(book) {
       return !state.list.some(function(i) { return i.slug === book.slug; });
     });
+    if (genre === 'story') {
+      filtered = BookFilter.sortStoryCatalog(filtered, state.grade, tymmData);
+    }
     el.innerHTML = filtered.map(function(book) {
       var cover = book.cover ? ('{{ site.baseurl }}/' + book.cover) : '';
+      var uniteLabel = genre === 'story' ? BookFilter.getPrimaryUniteLabel(book) : '';
       return '<article class="ogretmen-wizard__product">' +
         (cover ? '<img src="' + cover + '" alt="" loading="lazy" width="80" height="120">' : '') +
+        (uniteLabel ? '<small class="ogretmen-wizard__product-unite">' + escapeHtml(uniteLabel) + '</small>' : '') +
         '<div class="ogretmen-wizard__product-title">' + escapeHtml(book.title) + '</div>' +
         '<button type="button" class="btn btn-sm btn-outline-primary" data-add-slug="' + escapeHtml(book.slug) + '">Listeye ekle</button>' +
         '</article>';
     }).join('') || '<p class="text-muted">Bu kriterlere uygun ürün bulunamadı.</p>';
   }
 
+  function getListItemCover(item) {
+    if (item.cover) return item.cover;
+    var book = catalog.find(function(b) { return b.slug === item.slug; });
+    return book && book.cover ? book.cover : '';
+  }
+
+  function listItemThumbHtml(item) {
+    var cover = getListItemCover(item);
+    if (cover) {
+      return '<img class="ogretmen-wizard__list-item-thumb" src="{{ site.baseurl }}/' + escapeHtml(cover) + '" alt="" loading="lazy" width="40" height="56">';
+    }
+    return '<span class="ogretmen-wizard__list-item-icon" aria-hidden="true">' +
+      '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" focusable="false">' +
+      '<path d="M6 2c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6H6zm7 1.5L18.5 9H13V3.5zM6 4h5v7h9v9H6V4z"/>' +
+      '</svg></span>';
+  }
+
   function listItemHtml(item, idx, highlightIdx) {
     var cls = 'ogretmen-wizard__list-item' + (idx === highlightIdx ? ' is-new' : '');
     return '<div class="' + cls + '" data-list-idx="' + idx + '">' +
+      '<div class="ogretmen-wizard__list-item-main">' +
+      listItemThumbHtml(item) +
       '<span class="ogretmen-wizard__list-item-title">' + escapeHtml(item.title) + ' <small class="text-muted">(' + (item.genre === 'education' ? 'Eğitim' : 'Hikaye') + ')</small></span>' +
+      '</div>' +
       '<button type="button" class="btn btn-sm btn-outline-danger" data-remove-idx="' + idx + '">Çıkar</button></div>';
   }
 
   function renderList(highlightIdx) {
-    var html = state.list.map(function(item, idx) {
+    state.list = state.list || [];
+    var flatHtml = state.list.map(function(item, idx) {
       return listItemHtml(item, idx, highlightIdx);
     }).join('');
 
-    var targets = [
-      { els: document.querySelectorAll('.ow-list-preview'), empties: document.querySelectorAll('.ow-list-preview-empty') },
-      { els: [document.getElementById('ow-list')], empties: [document.getElementById('ow-list-empty')] }
-    ];
-
-    targets.forEach(function(target) {
-      Array.prototype.forEach.call(target.els, function(el) {
-        if (!el) return;
-        el.innerHTML = html;
-      });
-      Array.prototype.forEach.call(target.empties, function(empty) {
-        if (!empty) return;
-        empty.style.display = state.list.length === 0 ? 'block' : 'none';
-      });
+    document.querySelectorAll('.ow-list-preview').forEach(function(el) {
+      el.innerHTML = flatHtml;
     });
+    document.querySelectorAll('.ow-list-preview-empty').forEach(function(empty) {
+      empty.style.display = state.list.length === 0 ? 'block' : 'none';
+    });
+
+    var storyEntries = [];
+    var educationEntries = [];
+    state.list.forEach(function(item, idx) {
+      if (item.genre === 'education') educationEntries.push({ item: item, idx: idx });
+      else storyEntries.push({ item: item, idx: idx });
+    });
+
+    var storyEl = document.getElementById('ow-list-story');
+    var educationEl = document.getElementById('ow-list-education');
+    if (storyEl) {
+      storyEl.innerHTML = storyEntries.map(function(entry) {
+        return listItemHtml(entry.item, entry.idx, highlightIdx);
+      }).join('');
+    }
+    if (educationEl) {
+      educationEl.innerHTML = educationEntries.map(function(entry) {
+        return listItemHtml(entry.item, entry.idx, highlightIdx);
+      }).join('');
+    }
+
+    var listEmpty = document.getElementById('ow-list-empty');
+    if (listEmpty) listEmpty.style.display = state.list.length === 0 ? 'block' : 'none';
+
+    var storyGroup = document.getElementById('ow-list-story-group');
+    var educationGroup = document.getElementById('ow-list-education-group');
+    if (storyGroup) storyGroup.hidden = state.list.length === 0;
+    if (educationGroup) educationGroup.hidden = state.list.length === 0;
+
+    var storyEmpty = document.getElementById('ow-list-story-empty');
+    var educationEmpty = document.getElementById('ow-list-education-empty');
+    if (storyEmpty) storyEmpty.hidden = storyEntries.length > 0;
+    if (educationEmpty) educationEmpty.hidden = educationEntries.length > 0;
+
+    var storyCount = document.getElementById('ow-list-story-count');
+    var educationCount = document.getElementById('ow-list-education-count');
+    if (storyCount) storyCount.textContent = storyEntries.length > 0 ? storyEntries.length + ' ürün' : '';
+    if (educationCount) educationCount.textContent = educationEntries.length > 0 ? educationEntries.length + ' ürün' : '';
 
     document.querySelectorAll('.ow-list-count').forEach(function(countEl) {
       countEl.textContent = state.list.length > 0 ? state.list.length + ' ürün' : '';
@@ -196,6 +360,10 @@ layout: default
 
     document.querySelectorAll('.ow-list-box').forEach(function(listBox) {
       listBox.classList.toggle('has-items', state.list.length > 0);
+    });
+
+    document.querySelectorAll('.ow-btn-clear-list').forEach(function(btn) {
+      btn.hidden = state.list.length === 0;
     });
 
     if (highlightIdx != null) {
@@ -228,19 +396,97 @@ layout: default
     renderActiveCatalog();
   }
 
-  function renderSummary() {
-    var el = document.getElementById('ow-summary');
-    if (!el) return;
-    var c = readContactForm();
-    el.innerHTML = '<p><strong>Sınıf:</strong> ' + gradeLabel(state.grade) + '</p>' +
-      '<p><strong>Ürün sayısı:</strong> ' + state.list.length + '</p>' +
-      '<ul class="small">' + state.list.map(function(i) { return '<li>' + escapeHtml(i.title) + '</li>'; }).join('') + '</ul>' +
-      '<p><strong>İletişim:</strong> ' + escapeHtml(c.firstName + ' ' + c.lastName) + ', ' + escapeHtml(c.school) + '</p>';
+  function bindClearListHandlers() {
+    document.querySelectorAll('.ow-btn-clear-list').forEach(function(btn) {
+      if (btn.dataset.clearBound) return;
+      btn.dataset.clearBound = '1';
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        handleClearList();
+      });
+    });
+  }
+
+  function handleClearList() {
+    if (state.list.length === 0) return;
+    if (!confirm('Listedeki tüm ürünleri kaldırmak istediğinize emin misiniz?')) return;
+    state.list = [];
+    saveState();
+    renderList();
+    renderActiveCatalog();
   }
 
   function gradeLabel(g) {
     if (g === '0' || g === 0) return 'Okul Öncesi';
     return g + '. Sınıf';
+  }
+
+  function summaryCoverHtml(item) {
+    var cover = getListItemCover(item);
+    if (cover) {
+      return '<img class="ogretmen-wizard__summary-cover" src="{{ site.baseurl }}/' + escapeHtml(cover) + '" alt="" loading="lazy" width="72" height="100">';
+    }
+    return '<span class="ogretmen-wizard__summary-cover ogretmen-wizard__summary-cover--fallback" aria-hidden="true">' +
+      '<svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor" focusable="false">' +
+      '<path d="M6 2c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6H6zm7 1.5L18.5 9H13V3.5zM6 4h5v7h9v9H6V4z"/>' +
+      '</svg></span>';
+  }
+
+  function summaryProductHtml(item) {
+    return '<li class="ogretmen-wizard__summary-item">' +
+      summaryCoverHtml(item) +
+      '<span class="ogretmen-wizard__summary-title">' + escapeHtml(item.title) + '</span>' +
+      '<span class="ogretmen-wizard__summary-genre">' + (item.genre === 'education' ? 'Eğitim' : 'Hikaye') + '</span>' +
+      '</li>';
+  }
+
+  function renderSummaryProductsHtml() {
+    return state.list.map(summaryProductHtml).join('');
+  }
+
+  function renderSummary() {
+    var greetingEl = document.getElementById('ow-summary-greeting');
+    var metaEl = document.getElementById('ow-summary-meta');
+    var productsEl = document.getElementById('ow-summary-products');
+    var countEl = document.getElementById('ow-summary-count');
+    if (!metaEl || !productsEl) return;
+    var c = readContactForm();
+    if (greetingEl) {
+      greetingEl.innerHTML =
+        '<p class="ogretmen-wizard__summary-greeting">Değerli öğretmenimiz ' +
+        '<strong>' + escapeHtml(c.firstName + ' ' + c.lastName) + '</strong>, ' +
+        'aşağıda bulunan ürünler için örnek ve bilgi talebiniz alınacaktır.</p>';
+    }
+    metaEl.innerHTML =
+      '<div class="ogretmen-wizard__summary-meta-row"><span>Sınıf</span><strong>' + escapeHtml(gradeLabel(state.grade)) + '</strong></div>' +
+      '<div class="ogretmen-wizard__summary-meta-row"><span>Okul</span><strong>' + escapeHtml(c.school) + '</strong></div>' +
+      '<div class="ogretmen-wizard__summary-meta-row"><span>Konum</span><strong>' + escapeHtml(c.city + ' / ' + c.district) + '</strong></div>' +
+      '<div class="ogretmen-wizard__summary-meta-row"><span>Telefon</span><strong>' + escapeHtml(c.phone) + '</strong></div>' +
+      '<div class="ogretmen-wizard__summary-meta-row"><span>E-posta</span><strong>' + escapeHtml(c.email) + '</strong></div>';
+    productsEl.innerHTML = renderSummaryProductsHtml();
+    if (countEl) countEl.textContent = String(state.list.length);
+  }
+
+  function showSuccessView() {
+    var summaryView = document.getElementById('ow-summary-view');
+    var successView = document.getElementById('ow-success-view');
+    var successProducts = document.getElementById('ow-success-products');
+    var prevBtn = document.getElementById('ow-btn-prev');
+    var nextBtn = document.getElementById('ow-btn-next');
+    var actions = document.querySelector('.ogretmen-wizard__actions');
+    if (summaryView) summaryView.hidden = true;
+    if (successView) successView.hidden = false;
+    if (successProducts) successProducts.innerHTML = renderSummaryProductsHtml();
+    if (prevBtn) prevBtn.hidden = true;
+    if (nextBtn) nextBtn.hidden = true;
+    if (actions) actions.hidden = true;
+    var statusEl = document.getElementById('ow-status');
+    if (statusEl) {
+      statusEl.textContent = '';
+      statusEl.className = 'ogretmen-wizard__status';
+    }
+    var wizardEl = document.querySelector('.ogretmen-wizard');
+    if (wizardEl) wizardEl.classList.add('is-submitted');
   }
 
   function escapeHtml(s) {
@@ -259,15 +505,90 @@ layout: default
     };
   }
 
+  function populateDistrictSelect(city, selectedDistrict) {
+    var districtSel = document.getElementById('ow-district');
+    if (!districtSel) return;
+    districtSel.innerHTML = '';
+    if (!city || !ilIlceData[city]) {
+      districtSel.disabled = true;
+      var emptyOpt = document.createElement('option');
+      emptyOpt.value = '';
+      emptyOpt.textContent = 'Önce il seçin';
+      districtSel.appendChild(emptyOpt);
+      return;
+    }
+    districtSel.disabled = false;
+    var placeholder = document.createElement('option');
+    placeholder.value = '';
+    placeholder.textContent = 'İlçe seçin';
+    districtSel.appendChild(placeholder);
+    ilIlceData[city].forEach(function(name) {
+      var opt = document.createElement('option');
+      opt.value = name;
+      opt.textContent = name;
+      districtSel.appendChild(opt);
+    });
+    if (selectedDistrict && ilIlceData[city].indexOf(selectedDistrict) !== -1) {
+      districtSel.value = selectedDistrict;
+    }
+  }
+
+  function ensureCityOption(citySel, city) {
+    if (!city || !citySel) return;
+    for (var i = 0; i < citySel.options.length; i++) {
+      if (citySel.options[i].value === city) return;
+    }
+    var legacy = document.createElement('option');
+    legacy.value = city;
+    legacy.textContent = city;
+    citySel.appendChild(legacy);
+  }
+
+  function initCityDistrictSelects() {
+    var citySel = document.getElementById('ow-city');
+    var districtSel = document.getElementById('ow-district');
+    if (!citySel || !districtSel) return;
+
+    if (!citySelectInitialized) {
+      Object.keys(ilIlceData).sort(function(a, b) {
+        return a.localeCompare(b, 'tr');
+      }).forEach(function(city) {
+        var opt = document.createElement('option');
+        opt.value = city;
+        opt.textContent = city;
+        citySel.appendChild(opt);
+      });
+      citySel.addEventListener('change', function() {
+        populateDistrictSelect(citySel.value, '');
+        state.contact = readContactForm();
+        state.contact.district = '';
+        saveState();
+      });
+      districtSel.addEventListener('change', function() {
+        state.contact = readContactForm();
+        saveState();
+      });
+      citySelectInitialized = true;
+    }
+
+    var savedCity = (state.contact && state.contact.city) || citySel.value;
+    if (savedCity) {
+      ensureCityOption(citySel, savedCity);
+      citySel.value = savedCity;
+      populateDistrictSelect(savedCity, state.contact && state.contact.district);
+    } else {
+      populateDistrictSelect('', '');
+    }
+  }
+
   function fillContactForm() {
     var c = state.contact || {};
     if (c.firstName) document.getElementById('ow-first-name').value = c.firstName;
     if (c.lastName) document.getElementById('ow-last-name').value = c.lastName;
-    if (c.city) document.getElementById('ow-city').value = c.city;
-    if (c.district) document.getElementById('ow-district').value = c.district;
     if (c.phone) document.getElementById('ow-phone').value = c.phone;
     if (c.email) document.getElementById('ow-email').value = c.email;
     if (c.school) document.getElementById('ow-school').value = c.school;
+    initCityDistrictSelects();
   }
 
   function buildSheetRow() {
@@ -293,8 +614,10 @@ layout: default
       filtre_tur: [story > 0 ? 'hikaye' : '', education > 0 ? 'egitim' : ''].filter(Boolean).join('+'),
       filtre_kategori: '',
       filtre_tags: '',
-      filtre_unite: '',
-      filtre_anatema: '',
+      filtre_unite: state.filters.storyUnite || '',
+      filtre_anatema: state.filters.storyAnatema || '',
+      filtre_anatemalar: state.filters.storyAnatema || '',
+      filtre_beceriler: state.filters.storyBeceriler || '',
       filtre_arama: [state.filters.storyQ, state.filters.educationQ].filter(Boolean).join(' | '),
       kaynak_url: window.location.href,
       urunler: state.list.map(function(item, idx) {
@@ -315,36 +638,84 @@ layout: default
     el.className = 'ogretmen-wizard__status is-' + type;
   }
 
+  function ensureRecaptcha() {
+    if (!RECAPTCHA_SITE_KEY) return;
+    var wrap = document.getElementById('ow-recaptcha-wrap');
+    var el = document.getElementById('ow-recaptcha');
+    if (!wrap || !el) return;
+    if (typeof grecaptcha === 'undefined' || typeof grecaptcha.render !== 'function') {
+      if (recaptchaRetryCount < 25) {
+        recaptchaRetryCount++;
+        setTimeout(ensureRecaptcha, 300);
+      }
+      return;
+    }
+    recaptchaRetryCount = 0;
+    if (recaptchaWidgetId === null) {
+      try {
+        recaptchaWidgetId = grecaptcha.render(el, { sitekey: RECAPTCHA_SITE_KEY });
+      } catch (err) {
+        recaptchaWidgetId = null;
+      }
+      return;
+    }
+    grecaptcha.reset(recaptchaWidgetId);
+  }
+
+  function getRecaptchaToken() {
+    if (!RECAPTCHA_SITE_KEY) return '';
+    if (typeof grecaptcha === 'undefined' || recaptchaWidgetId === null) return '';
+    return grecaptcha.getResponse(recaptchaWidgetId);
+  }
+
+  function resetRecaptcha() {
+    if (typeof grecaptcha === 'undefined' || recaptchaWidgetId === null) return;
+    grecaptcha.reset(recaptchaWidgetId);
+  }
+
   function submitToSheets() {
     if (!SUBMIT_URL) {
       setStatus('Gönderim henüz yapılandırılmadı. Talebiniz yerel olarak kaydedildi; yöneticiniz Apps Script URL\'sini eklediğinde tekrar deneyin.', 'error');
       return;
     }
+    if (RECAPTCHA_SITE_KEY && !getRecaptchaToken()) {
+      setStatus('Lütfen «Ben robot değilim» doğrulamasını tamamlayın.', 'error');
+      return;
+    }
     var payload = buildSheetRow();
+    if (RECAPTCHA_SITE_KEY) payload.recaptcha_token = getRecaptchaToken();
     fetch(SUBMIT_URL, {
       method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       body: JSON.stringify(payload)
-    }).then(function() {
-      setStatus('Talebiniz alındı. En geç 48 saat içinde sizinle iletişime geçeceğiz.', 'success');
+    }).then(function(res) {
+      return res.json().catch(function() { return { ok: false, error: 'invalid_response' }; });
+    }).then(function(data) {
+      if (!data || data.ok !== true) {
+        resetRecaptcha();
+        if (data && data.error === 'recaptcha') {
+          setStatus('Güvenlik doğrulaması başarısız. Lütfen reCAPTCHA\'yı tekrar işaretleyin.', 'error');
+        } else {
+          setStatus('Gönderim sunucuda reddedildi. Lütfen tekrar deneyin.', 'error');
+        }
+        return;
+      }
+      showSuccessView();
       localStorage.removeItem(STORAGE_KEY);
     }).catch(function() {
+      resetRecaptcha();
       localStorage.setItem(STORAGE_KEY + ':pending', JSON.stringify(payload));
       setStatus('Gönderim sırasında hata oluştu. Lütfen tekrar deneyin.', 'error');
     });
   }
 
   function validateStep(n) {
-    if (n === 1 && state.grade === null) { alert('Lütfen sınıf seçin.'); return false; }
+    if (n === 1 && !hasGrade()) { alert('Lütfen sınıf seçin.'); return false; }
     if (n === 4 && state.list.length === 0) { alert('Listeye en az bir ürün ekleyin.'); return false; }
     if (n === 5) {
-      var c = readContactForm();
-      if (!c.firstName || !c.lastName || !c.city || !c.district || !c.phone || !c.email || !c.school) {
-        alert('Lütfen tüm iletişim alanlarını doldurun.');
-        return false;
-      }
-      state.contact = c;
+      var form = document.getElementById('ow-contact-form');
+      if (!form || !form.reportValidity()) return false;
+      state.contact = readContactForm();
       saveState();
     }
     return true;
@@ -353,16 +724,54 @@ layout: default
   function init() {
     var catalogEl = document.getElementById('ogretmen-catalog');
     if (catalogEl) catalog = JSON.parse(catalogEl.textContent);
+    var tymmEl = document.getElementById('ogretmen-tymm');
+    if (tymmEl) {
+      try { tymmData = JSON.parse(tymmEl.textContent); } catch (e) { tymmData = {}; }
+    }
+    var ilIlceEl = document.getElementById('ogretmen-il-ilce');
+    if (ilIlceEl) {
+      try { ilIlceData = JSON.parse(ilIlceEl.textContent); } catch (e) { ilIlceData = {}; }
+    }
     loadState();
+    bindClearListHandlers();
+    var contactForm = document.getElementById('ow-contact-form');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) { e.preventDefault(); });
+    }
+    document.addEventListener('ow-recaptcha-ready', function() {
+      if (state.step === 6) ensureRecaptcha();
+    });
     fillContactForm();
+    syncGradeFromDom();
 
     document.querySelectorAll('.ogretmen-wizard__grade-btn').forEach(function(btn) {
       if (String(btn.dataset.grade) === String(state.grade)) btn.classList.add('is-selected');
       btn.addEventListener('click', function() {
+        var previousGrade = state.grade;
         document.querySelectorAll('.ogretmen-wizard__grade-btn').forEach(function(b) { b.classList.remove('is-selected'); });
         btn.classList.add('is-selected');
         state.grade = btn.dataset.grade;
+        if (previousGrade !== null && previousGrade !== undefined && String(previousGrade) !== String(state.grade)) {
+          state.list = [];
+          state.filters.storyQ = '';
+          state.filters.educationQ = '';
+        }
+        state.filters.storyUnite = '';
+        state.filters.storyAnatema = '';
+        state.filters.storyBeceriler = '';
         saveState();
+        renderList();
+        var storySearchEl = document.getElementById('ow-search-story');
+        if (storySearchEl) storySearchEl.value = state.filters.storyQ || '';
+        var educationSearchEl = document.getElementById('ow-search-education');
+        if (educationSearchEl) educationSearchEl.value = state.filters.educationQ || '';
+        if (state.step === 2) {
+          renderStoryFilterOptions();
+          renderCatalog('ow-catalog-story', 'story');
+        }
+        if (state.step === 3) {
+          renderCatalog('ow-catalog-education', 'education');
+        }
       });
     });
 
@@ -389,7 +798,7 @@ layout: default
         var slug = btn.dataset.addSlug;
         var book = catalog.find(function(b) { return b.slug === slug; });
         if (!book || state.list.some(function(i) { return i.slug === slug; })) return;
-        state.list.push({ slug: book.slug, title: book.title, ean: book.ean, genre: book.genre });
+        state.list.push({ slug: book.slug, title: book.title, ean: book.ean, genre: book.genre, cover: book.cover || '' });
         saveState();
         renderActiveCatalog();
         renderList(state.list.length - 1);
@@ -407,6 +816,36 @@ layout: default
       storySearch.value = state.filters.storyQ || '';
       storySearch.addEventListener('input', function(e) {
         state.filters.storyQ = e.target.value;
+        saveState();
+        renderCatalog('ow-catalog-story', 'story');
+      });
+    }
+
+    var filterUnite = document.getElementById('ow-filter-unite');
+    if (filterUnite) {
+      filterUnite.addEventListener('change', function(e) {
+        state.filters.storyUnite = e.target.value;
+        state.filters.storyAnatema = '';
+        state.filters.storyBeceriler = '';
+        saveState();
+        renderStoryFilterOptions();
+        renderCatalog('ow-catalog-story', 'story');
+      });
+    }
+
+    var filterAnatema = document.getElementById('ow-filter-anatema');
+    if (filterAnatema) {
+      filterAnatema.addEventListener('change', function(e) {
+        state.filters.storyAnatema = e.target.value;
+        saveState();
+        renderCatalog('ow-catalog-story', 'story');
+      });
+    }
+
+    var filterBeceriler = document.getElementById('ow-filter-beceriler');
+    if (filterBeceriler) {
+      filterBeceriler.addEventListener('change', function(e) {
+        state.filters.storyBeceriler = e.target.value;
         saveState();
         renderCatalog('ow-catalog-story', 'story');
       });

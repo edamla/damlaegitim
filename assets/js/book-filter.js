@@ -78,6 +78,194 @@ var BookFilter = (function() {
     });
   }
 
+  function normLabel(s) {
+    return norm(String(s || '')
+      .replace(/İ/g, 'i')
+      .replace(/I/g, 'i')
+      .replace(/ı/g, 'i')
+      .replace(/ğ/g, 'g')
+      .replace(/ü/g, 'u')
+      .replace(/ş/g, 's')
+      .replace(/ö/g, 'o')
+      .replace(/ç/g, 'c')
+      .replace(/\s+/g, ' '));
+  }
+
+  function labelsMatch(a, b) {
+    var na = normLabel(a);
+    var nb = normLabel(b);
+    if (!na || !nb) return false;
+    if (na === nb) return true;
+    return na.indexOf(nb) !== -1 || nb.indexOf(na) !== -1;
+  }
+
+  function buildGradeTymmIndex(tymmData, grade) {
+    var gradeKey = String(grade);
+    var gradeData = tymmData && tymmData.grades && tymmData.grades[gradeKey];
+    var uniteOrder = {};
+    var uniteLabels = [];
+    if (!gradeData || !gradeData.unites) {
+      return { uniteOrder: uniteOrder, uniteLabels: uniteLabels, hasTymm: false };
+    }
+    gradeData.unites.forEach(function(u, idx) {
+      var label = u.label || '';
+      uniteLabels.push(label);
+      uniteOrder[normLabel(label)] = {
+        index: idx,
+        label: label,
+        anatema: arr(u.degerler).concat(arr(u.egilimler)),
+        beceriler: arr(u.beceriler)
+      };
+    });
+    return { uniteOrder: uniteOrder, uniteLabels: uniteLabels, hasTymm: true };
+  }
+
+  function findUniteIndex(uniteValue, tymmIndex) {
+    if (!uniteValue) return 9999;
+    var key = normLabel(uniteValue);
+    if (tymmIndex.uniteOrder[key]) return tymmIndex.uniteOrder[key].index;
+    var keys = Object.keys(tymmIndex.uniteOrder);
+    for (var i = 0; i < keys.length; i++) {
+      if (labelsMatch(uniteValue, tymmIndex.uniteOrder[keys[i]].label)) {
+        return tymmIndex.uniteOrder[keys[i]].index;
+      }
+    }
+    return 9999;
+  }
+
+  function collectStoryBooks(catalog, grade) {
+    return filterCatalog(catalog, { grade: grade, genre: 'story' });
+  }
+
+  function collectStoryValues(catalog, grade) {
+    var books = collectStoryBooks(catalog, grade);
+    var unites = {};
+    var anatema = {};
+    var beceriler = {};
+    books.forEach(function(book) {
+      arr(book.unite).forEach(function(u) { if (u) unites[u] = true; });
+      arr(book.anatema).forEach(function(a) { if (a) anatema[a] = true; });
+      arr(book.beceriler).forEach(function(b) { if (b) beceriler[b] = true; });
+    });
+    return {
+      unites: Object.keys(unites),
+      anatema: Object.keys(anatema),
+      beceriler: Object.keys(beceriler)
+    };
+  }
+
+  function sortByOrderList(values, orderList) {
+    var orderMap = {};
+    orderList.forEach(function(v, idx) {
+      orderMap[normLabel(v)] = idx;
+    });
+    return values.slice().sort(function(a, b) {
+      var ia = orderMap[normLabel(a)];
+      var ib = orderMap[normLabel(b)];
+      if (ia == null) ia = 9999;
+      if (ib == null) ib = 9999;
+      if (ia !== ib) return ia - ib;
+      return a.localeCompare(b, 'tr');
+    });
+  }
+
+  function getTymmUniteEntry(selectedUnite, tymmIndex) {
+    if (!selectedUnite) return null;
+    var key = normLabel(selectedUnite);
+    if (tymmIndex.uniteOrder[key]) return tymmIndex.uniteOrder[key];
+    var keys = Object.keys(tymmIndex.uniteOrder);
+    for (var i = 0; i < keys.length; i++) {
+      if (labelsMatch(selectedUnite, tymmIndex.uniteOrder[keys[i]].label)) {
+        return tymmIndex.uniteOrder[keys[i]];
+      }
+    }
+    return null;
+  }
+
+  function storyFilterOptions(catalog, grade, tymmData, selectedUnite) {
+    var values = collectStoryValues(catalog, grade);
+    var tymmIndex = buildGradeTymmIndex(tymmData, grade);
+    var unites = values.unites.slice().sort(function(a, b) {
+      var diff = findUniteIndex(a, tymmIndex) - findUniteIndex(b, tymmIndex);
+      return diff !== 0 ? diff : a.localeCompare(b, 'tr');
+    });
+
+    var baseBooks = collectStoryBooks(catalog, grade);
+    if (selectedUnite) {
+      baseBooks = baseBooks.filter(function(book) {
+        return arr(book.unite).indexOf(selectedUnite) !== -1;
+      });
+    }
+
+    var anatemaSet = {};
+    var becerilerSet = {};
+    baseBooks.forEach(function(book) {
+      arr(book.anatema).forEach(function(a) { if (a) anatemaSet[a] = true; });
+      arr(book.beceriler).forEach(function(b) { if (b) becerilerSet[b] = true; });
+    });
+
+    var anatemas = Object.keys(anatemaSet);
+    var becerilers = Object.keys(becerilerSet);
+    var uniteEntry = getTymmUniteEntry(selectedUnite, tymmIndex);
+
+    if (uniteEntry && uniteEntry.anatema.length) {
+      anatemas = sortByOrderList(anatemas, uniteEntry.anatema);
+    } else if (tymmIndex.hasTymm) {
+      var allAnatema = [];
+      tymmIndex.uniteLabels.forEach(function(label) {
+        var entry = getTymmUniteEntry(label, tymmIndex);
+        if (entry) allAnatema = allAnatema.concat(entry.anatema);
+      });
+      anatemas = sortByOrderList(anatemas, allAnatema);
+    } else {
+      anatemas.sort(function(a, b) { return a.localeCompare(b, 'tr'); });
+    }
+
+    if (uniteEntry && uniteEntry.beceriler.length) {
+      becerilers = sortByOrderList(becerilers, uniteEntry.beceriler);
+    } else if (tymmIndex.hasTymm) {
+      var allBeceriler = [];
+      tymmIndex.uniteLabels.forEach(function(label) {
+        var entry = getTymmUniteEntry(label, tymmIndex);
+        if (entry) allBeceriler = allBeceriler.concat(entry.beceriler);
+      });
+      becerilers = sortByOrderList(becerilers, allBeceriler);
+    } else {
+      becerilers.sort(function(a, b) { return a.localeCompare(b, 'tr'); });
+    }
+
+    return { unites: unites, anatema: anatemas, beceriler: becerilers };
+  }
+
+  function getPrimaryUniteSortKey(book, tymmIndex) {
+    var unites = arr(book.unite);
+    if (unites.length === 0) return 9999;
+    var minIdx = 9999;
+    unites.forEach(function(u) {
+      var idx = findUniteIndex(u, tymmIndex);
+      if (idx < minIdx) minIdx = idx;
+    });
+    return minIdx;
+  }
+
+  function getPrimaryUniteLabel(book) {
+    var unites = arr(book.unite);
+    return unites.length ? unites[0] : '';
+  }
+
+  function sortStoryCatalog(books, grade, tymmData) {
+    var tymmIndex = buildGradeTymmIndex(tymmData, grade);
+    return (books || []).slice().sort(function(a, b) {
+      var ua = getPrimaryUniteSortKey(a, tymmIndex);
+      var ub = getPrimaryUniteSortKey(b, tymmIndex);
+      if (ua !== ub) return ua - ub;
+      var la = getPrimaryUniteLabel(a);
+      var lb = getPrimaryUniteLabel(b);
+      if (la !== lb) return la.localeCompare(lb, 'tr');
+      return (a.title || '').localeCompare(b.title || '', 'tr');
+    });
+  }
+
   return {
     matchesGrade: matchesGrade,
     matchesGenre: matchesGenre,
@@ -88,7 +276,13 @@ var BookFilter = (function() {
     matchesBeceriler: matchesBeceriler,
     matchesKazanim: matchesKazanim,
     matchesSearch: matchesSearch,
-    filterCatalog: filterCatalog
+    filterCatalog: filterCatalog,
+    normLabel: normLabel,
+    buildGradeTymmIndex: buildGradeTymmIndex,
+    collectStoryValues: collectStoryValues,
+    storyFilterOptions: storyFilterOptions,
+    sortStoryCatalog: sortStoryCatalog,
+    getPrimaryUniteLabel: getPrimaryUniteLabel
   };
 })();
 

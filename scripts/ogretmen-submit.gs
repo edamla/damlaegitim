@@ -1,7 +1,10 @@
 /**
  * Öğretmen wizard → Google Sheets
  * Dağıtım: Execute as Me, Who has access: Anyone
- * Script Properties: NOTIFY_EMAIL (virgülle ayrılmış alıcılar)
+ *
+ * Script Properties:
+ *   NOTIFY_EMAIL — virgülle ayrılmış alıcılar
+ *   RECAPTCHA_SECRET — reCAPTCHA v2 secret key (site key _config.yml'de)
  */
 var TALEPLER_SHEET = 'Talepler';
 var URUNLER_SHEET = 'Talep_Urunleri';
@@ -18,16 +21,39 @@ var URUNLER_HEADERS = ['talep_id', 'sira', 'slug', 'baslik', 'ean', 'tur'];
 function doPost(e) {
   try {
     var data = JSON.parse(e.postData.contents);
+    if (!verifyRecaptcha_(data.recaptcha_token)) {
+      return jsonResponse_({ ok: false, error: 'recaptcha' });
+    }
     data.gonderim_zamani = new Date();
     appendTalepRow_(data);
     appendUrunRows_(data);
     notifyTeam_(data);
-    return ContentService.createTextOutput(JSON.stringify({ ok: true }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return jsonResponse_({ ok: true });
   } catch (err) {
-    return ContentService.createTextOutput(JSON.stringify({ ok: false, error: String(err) }))
-      .setMimeType(ContentService.MimeType.JSON);
+    return jsonResponse_({ ok: false, error: String(err) });
   }
+}
+
+function verifyRecaptcha_(token) {
+  var secret = PropertiesService.getScriptProperties().getProperty('RECAPTCHA_SECRET');
+  if (!secret) return true;
+  if (!token) return false;
+  var resp = UrlFetchApp.fetch('https://www.google.com/recaptcha/api/siteverify', {
+    method: 'post',
+    contentType: 'application/x-www-form-urlencoded',
+    payload: {
+      secret: secret,
+      response: token
+    },
+    muteHttpExceptions: true
+  });
+  var result = JSON.parse(resp.getContentText());
+  return result.success === true;
+}
+
+function jsonResponse_(obj) {
+  return ContentService.createTextOutput(JSON.stringify(obj))
+    .setMimeType(ContentService.MimeType.JSON);
 }
 
 function appendTalepRow_(data) {

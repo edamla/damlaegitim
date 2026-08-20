@@ -1,6 +1,6 @@
 <div class="ogretmen-wizard__panel" data-step="5" id="ow-step-5">
   <h2 class="h4 mb-3">5. İletişim bilgileri</h2>
-  <form class="ogretmen-wizard__form" id="ow-contact-form" novalidate>
+  <form class="ogretmen-wizard__form" id="ow-contact-form">
     <div class="row g-3">
       <div class="col-md-6">
         <label class="form-label" for="ow-first-name">Ad *</label>
@@ -12,19 +12,28 @@
       </div>
       <div class="col-md-6">
         <label class="form-label" for="ow-city">İl *</label>
-        <input class="form-control" type="text" id="ow-city" required>
+        <select class="form-select" id="ow-city" required autocomplete="address-level1">
+          <option value="">İl seçin</option>
+        </select>
       </div>
       <div class="col-md-6">
         <label class="form-label" for="ow-district">İlçe *</label>
-        <input class="form-control" type="text" id="ow-district" required>
+        <select class="form-select" id="ow-district" required autocomplete="address-level2" disabled>
+          <option value="">Önce il seçin</option>
+        </select>
       </div>
       <div class="col-md-6">
         <label class="form-label" for="ow-phone">Telefon *</label>
-        <input class="form-control" type="tel" id="ow-phone" required autocomplete="tel">
+        <input class="form-control" type="tel" id="ow-phone" required autocomplete="tel" inputmode="numeric"
+          pattern="0?5[0-9]{9}"
+          maxlength="11"
+          title="5xxXXXxxXX şeklinde giriniz!">
       </div>
       <div class="col-md-6">
         <label class="form-label" for="ow-email">E-posta *</label>
-        <input class="form-control" type="email" id="ow-email" required autocomplete="email">
+        <input class="form-control" type="email" id="ow-email" required autocomplete="email"
+          pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+          title="Geçerli bir e-posta adresi giriniz (ör. ad@okul.edu.tr).">
       </div>
       <div class="col-12">
         <label class="form-label" for="ow-school">Okul adı *</label>
@@ -32,4 +41,5 @@
       </div>
     </div>
   </form>
+  <script type="application/json" id="ogretmen-il-ilce">{{ site.data.turkiye_il_ilce | jsonify }}</script>
 </div>

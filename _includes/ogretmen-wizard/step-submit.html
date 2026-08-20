@@ -1,6 +1,33 @@
 <div class="ogretmen-wizard__panel" data-step="6" id="ow-step-6">
-  <h2 class="h4 mb-3">6. Özet ve gönder</h2>
-  <div id="ow-summary" class="mb-3"></div>
-  <p class="text-muted small">Gönder butonuna bastığınızda talebiniz kayıt altına alınır. En geç <strong>48 saat</strong> içinde sizinle iletişime geçilir.</p>
+  <div id="ow-summary-view">
+    <h2 class="h4 mb-3">6. Özet ve gönder</h2>
+    <div class="ogretmen-wizard__summary-intro" id="ow-summary-greeting" aria-live="polite"></div>
+    <div id="ow-summary" class="ogretmen-wizard__summary">
+      <div class="ogretmen-wizard__summary-meta" id="ow-summary-meta"></div>
+      <h3 class="ogretmen-wizard__summary-heading h6">
+        Seçtiğiniz ürünler
+        <span class="ogretmen-wizard__summary-count" id="ow-summary-count">0</span>
+      </h3>
+      <ul class="ogretmen-wizard__summary-grid" id="ow-summary-products" aria-label="Seçilen ürünler"></ul>
+    </div>
+    {% if site.ogretmen_recaptcha_site_key != '' %}
+    <div class="ogretmen-wizard__recaptcha" id="ow-recaptcha-wrap">
+      <div id="ow-recaptcha" aria-label="Robot doğrulama"></div>
+    </div>
+    {% endif %}
+    <p class="ogretmen-wizard__summary-note text-muted small mb-0">Bilgilerinizi kontrol edin. «Gönder» ile talebinizi iletin.</p>
+  </div>
+
+  <div id="ow-success-view" class="ogretmen-wizard__success" hidden>
+    <div class="ogretmen-wizard__success-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+        <path d="M20 6L9 17l-5-5"/>
+      </svg>
+    </div>
+    <h2 class="ogretmen-wizard__success-title">Talebiniz alındı</h2>
+    <p class="ogretmen-wizard__success-text">Kitap ve Bilgi talebiniz alındı. Danışmanlarımız size en kısa sürede ulaşacaktır.</p>
+    <ul class="ogretmen-wizard__summary-grid ogretmen-wizard__summary-grid--success" id="ow-success-products" aria-label="Talep edilen ürünler"></ul>
+  </div>
+
   <div class="ogretmen-wizard__status" id="ow-status" role="status"></div>
 </div>

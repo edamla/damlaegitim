@@ -28,7 +28,9 @@ contact_email: "iletisim@damlayayinevi.com.tr"
 contact_address: "Alemdar Mh. Prof. Kazım İsmail Gürkan Cad. No:8 Fatih, 34110 İstanbul"
 
 # Form endpoints (Google Apps Script / Forms embed — Workspace'te oluşturulur)
-ogretmen_submit_url: ""
+ogretmen_submit_url: "https://script.google.com/macros/s/AKfycbwvDFx-F4z2K8cKtX2oCVtbckdgjIh9LMMrDZbvWVNrgCV2CYdjqTiUpjXQoHMUAmjC/exec"
+# Google reCAPTCHA v2 — https://www.google.com/recaptcha/admin (damlaokul.com + localhost)
+ogretmen_recaptcha_site_key: "6LfsHJAtAAAAAG_j7xRL46_TXnDKfA4a7PARcltD"
 teklif_form_url: ""
 
 # behold.so instagram carousel

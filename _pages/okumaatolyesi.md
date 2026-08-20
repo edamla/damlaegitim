@@ -11,7 +11,7 @@ footer_order: 14
 
 ## Okuma Atölyesi nedir?
 
-2024 Ortaokul Türkçe Dersi Öğretim Programı’na göre Okuma Atölyesi:
+Ortaokul Türkçe Dersi Öğretim Programı’na göre Okuma Atölyesi:
 
 - Her eğitim öğretim **döneminde** öğrenci seviyesine uygun **iki kitabın** seçilmesini,
 - Bu kitapların **aile katılımıyla** okunmasını,
@@ -41,7 +41,6 @@ Okuma Atölyesi, Maarif Modeli’nin beceri odaklı yapısıyla uyumludur:
 - **Eleştirel okuma** becerileri — sorgulama, çelişki saptama, benzerlik ve farklılıkları ayırt etme — metin inceleme sürecinde kazandırılır.
 - **Erdem–Değer–Eylem** çerçevesi ve sosyal-duygusal öğrenme becerileri, seçilen kitapların temaları üzerinden desteklenir.
 
-Resmi okuryazarlık becerileri ve süreç bileşenleri için [TYMM Okuryazarlık Becerileri](https://tymm.meb.gov.tr/beceriler/okuryazarlik-becerileri) sayfasına bakabilirsiniz.
 
 ## Damla Okul nasıl destekler?
 
@@ -55,8 +54,12 @@ Sınıf ve tema bazlı [okuma listelerimiz](/okuma-listeleri), öğretmenin TYMM
 - [2. Sınıf Okuma Listesi](/okuma-listeleri/2-sinif)
 - [3. Sınıf Okuma Listesi](/okuma-listeleri/3-sinif)
 - [4. Sınıf Okuma Listesi](/okuma-listeleri/4-sinif)
-- [Değerler Eğitimi Okuma Listesi](/okuma-listeleri/degerler)
-- [Okuma Kültürü Listesi](/okuma-listeleri/okuma-kulturu)
+- [5. Sınıf Okuma Listesi](/okuma-listeleri/5-sinif)
+- [6. Sınıf Okuma Listesi](/okuma-listeleri/6-sinif)
+- [7. Sınıf Okuma Listesi](/okuma-listeleri/7-sinif)
+- [8. Sınıf Okuma Listesi](/okuma-listeleri/8-sinif)
+
+
 
 ### 2. Hikâye Müfredatı
 
