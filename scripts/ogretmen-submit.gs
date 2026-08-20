@@ -5,6 +5,11 @@
  * Script Properties:
  *   NOTIFY_EMAIL — virgülle ayrılmış alıcılar
  *   RECAPTCHA_SECRET — reCAPTCHA v2 secret key (site key _config.yml'de)
+ *
+ * İlk kurulum — dış ağ izni (reCAPTCHA siteverify için):
+ *   1. Editörde izinleriAl fonksiyonunu seç → Çalıştır (▶)
+ *   2. İzin isteğinde İncele → Hesabınızla devam → İzin ver
+ *   3. Deploy → Manage deployments → New version → Deploy
  */
 var TALEPLER_SHEET = 'Talepler';
 var URUNLER_SHEET = 'Talep_Urunleri';
@@ -17,6 +22,17 @@ var TALEPLER_HEADERS = [
 ];
 
 var URUNLER_HEADERS = ['talep_id', 'sira', 'slug', 'baslik', 'ean', 'tur'];
+
+/** Editörden bir kez çalıştırın — UrlFetchApp iznini açar (reCAPTCHA için). */
+function izinleriAl() {
+  UrlFetchApp.fetch('https://www.google.com/recaptcha/api/siteverify', {
+    method: 'post',
+    contentType: 'application/x-www-form-urlencoded',
+    payload: { secret: 'test', response: 'test' },
+    muteHttpExceptions: true
+  });
+  Logger.log('Tamam. Şimdi Deploy → Manage deployments → New version → Deploy yapın.');
+}
 
 function doPost(e) {
   try {
