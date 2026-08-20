@@ -20,24 +20,32 @@ var URUNLER_HEADERS = ['talep_id', 'sira', 'slug', 'baslik', 'ean', 'tur'];
 
 function doPost(e) {
   try {
+    if (!e || !e.postData || !e.postData.contents) {
+      return jsonResponse_({ ok: false, error: 'empty_body' });
+    }
     var data = JSON.parse(e.postData.contents);
-    if (!verifyRecaptcha_(data.recaptcha_token)) {
-      return jsonResponse_({ ok: false, error: 'recaptcha' });
+    var captcha = verifyRecaptcha_(data.recaptcha_token);
+    if (!captcha.ok) {
+      return jsonResponse_({ ok: false, error: 'recaptcha', detail: captcha.detail || '' });
     }
     data.gonderim_zamani = new Date();
     appendTalepRow_(data);
     appendUrunRows_(data);
-    notifyTeam_(data);
+    try {
+      notifyTeam_(data);
+    } catch (mailErr) {
+      // Sheet kaydı başarılı; mail hatası gönderimi iptal etmesin
+    }
     return jsonResponse_({ ok: true });
   } catch (err) {
-    return jsonResponse_({ ok: false, error: String(err) });
+    return jsonResponse_({ ok: false, error: String(err.message || err) });
   }
 }
 
 function verifyRecaptcha_(token) {
   var secret = PropertiesService.getScriptProperties().getProperty('RECAPTCHA_SECRET');
-  if (!secret) return true;
-  if (!token) return false;
+  if (!secret) return { ok: true };
+  if (!token) return { ok: false, detail: 'missing_token' };
   var resp = UrlFetchApp.fetch('https://www.google.com/recaptcha/api/siteverify', {
     method: 'post',
     contentType: 'application/x-www-form-urlencoded',
@@ -48,7 +56,8 @@ function verifyRecaptcha_(token) {
     muteHttpExceptions: true
   });
   var result = JSON.parse(resp.getContentText());
-  return result.success === true;
+  var codes = (result['error-codes'] || []).join(',');
+  return { ok: result.success === true, detail: codes };
 }
 
 function jsonResponse_(obj) {

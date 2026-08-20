@@ -689,14 +689,25 @@ window.owOnRecaptchaReady = function() {
       headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       body: JSON.stringify(payload)
     }).then(function(res) {
-      return res.json().catch(function() { return { ok: false, error: 'invalid_response' }; });
+      return res.text().then(function(text) {
+        try {
+          return JSON.parse(text);
+        } catch (parseErr) {
+          console.error('Apps Script yanıtı JSON değil:', text.slice(0, 500));
+          return { ok: false, error: 'invalid_response' };
+        }
+      });
     }).then(function(data) {
       if (!data || data.ok !== true) {
+        console.error('Gönderim reddedildi:', data);
         resetRecaptcha();
         if (data && data.error === 'recaptcha') {
-          setStatus('Güvenlik doğrulaması başarısız. Lütfen reCAPTCHA\'yı tekrar işaretleyin.', 'error');
+          var capDetail = data.detail ? ' (' + data.detail + ')' : '';
+          setStatus('Güvenlik doğrulaması başarısız' + capDetail + '. reCAPTCHA gizli anahtarını (RECAPTCHA_SECRET) kontrol edin.', 'error');
+        } else if (data && data.error === 'invalid_response') {
+          setStatus('Sunucu yanıtı okunamadı. Apps Script web uygulaması dağıtımını kontrol edin.', 'error');
         } else {
-          setStatus('Gönderim sunucuda reddedildi. Lütfen tekrar deneyin.', 'error');
+          setStatus('Gönderim reddedildi: ' + ((data && data.error) || 'bilinmeyen hata'), 'error');
         }
         return;
       }
