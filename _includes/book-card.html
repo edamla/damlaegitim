@@ -15,10 +15,8 @@
               {% endfor %}
             </p>
             {% endif %}
-            {% if card.unite and card.unite.size > 0 %}
-            <span class="book-card__theme">{{ card.unite | first }}</span>
-            {% elsif card.anatema and card.anatema.size > 0 %}
-            <span class="book-card__theme">{{ card.anatema | first }}</span>
+            {% if card.anatema and card.anatema.size > 0 %}
+            <span class="book-card__theme">{{ card.anatema | slice: 0, 3 | join: ", " }}</span>
             {% endif %}
         </div>
     </a>

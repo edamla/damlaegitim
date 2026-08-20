@@ -253,6 +253,11 @@ var BookFilter = (function() {
     return unites.length ? unites[0] : '';
   }
 
+  function getPrimaryAnatemaLabel(book) {
+    var anatemas = arr(book.anatema).slice(0, 3);
+    return anatemas.length ? anatemas.join(', ') : '';
+  }
+
   function sortStoryCatalog(books, grade, tymmData) {
     var tymmIndex = buildGradeTymmIndex(tymmData, grade);
     return (books || []).slice().sort(function(a, b) {
@@ -282,7 +287,8 @@ var BookFilter = (function() {
     collectStoryValues: collectStoryValues,
     storyFilterOptions: storyFilterOptions,
     sortStoryCatalog: sortStoryCatalog,
-    getPrimaryUniteLabel: getPrimaryUniteLabel
+    getPrimaryUniteLabel: getPrimaryUniteLabel,
+    getPrimaryAnatemaLabel: getPrimaryAnatemaLabel
   };
 })();
 

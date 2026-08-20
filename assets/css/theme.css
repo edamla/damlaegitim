@@ -3058,11 +3058,9 @@ div.a2a_full_footer {display:none;}
 
   line-height: 1.3;
 
-  white-space: nowrap;
+  white-space: normal;
 
-  overflow: hidden;
-
-  text-overflow: ellipsis;
+  text-align: center;
 
 }
 

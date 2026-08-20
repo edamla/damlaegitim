@@ -274,10 +274,10 @@ window.owOnRecaptchaReady = function() {
     }
     el.innerHTML = filtered.map(function(book) {
       var cover = book.cover ? ('{{ site.baseurl }}/' + book.cover) : '';
-      var uniteLabel = genre === 'story' ? BookFilter.getPrimaryUniteLabel(book) : '';
+      var anatemaLabel = genre === 'story' ? BookFilter.getPrimaryAnatemaLabel(book) : '';
       return '<article class="ogretmen-wizard__product">' +
         (cover ? '<img src="' + cover + '" alt="" loading="lazy" width="80" height="120">' : '') +
-        (uniteLabel ? '<small class="ogretmen-wizard__product-unite">' + escapeHtml(uniteLabel) + '</small>' : '') +
+        (anatemaLabel ? '<small class="ogretmen-wizard__product-unite">' + escapeHtml(anatemaLabel) + '</small>' : '') +
         '<div class="ogretmen-wizard__product-title">' + escapeHtml(book.title) + '</div>' +
         '<button type="button" class="btn btn-sm btn-outline-primary" data-add-slug="' + escapeHtml(book.slug) + '">Listeye ekle</button>' +
         '</article>';
