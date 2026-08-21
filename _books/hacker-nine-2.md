@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Hacker Nine - 2"
-description: "Zamanın içinden gelen karanlık bir gölge ve yazılan hatalı bir kod... Hacker kendisini de büküyor! Geçmiş ile geleceğin birbirine karıştığı, insanların…"
+description: "Geçmişte yazılan ufak bir kod, geleceğin kaderini tamamen değiştirebilir."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -21,11 +21,11 @@ authors: ["Nur Dombaycı"]
 # anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Yapay Zekâ,Takım Çalışması,Distopya,Sevgi ve Zekâ,Şifreleme,Cesaret ve Sorumluluk]
 anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
 kazanim: [H.2.2.1, H.2.2.2, H.2.3.1, H.2.3.2, H.2.3.3, H.2.3.5, H.3.2.1, H.4.2.1, H.4.2.2, H.4.2.4]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
-unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
+unite: ["DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

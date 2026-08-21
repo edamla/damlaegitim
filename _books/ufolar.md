@@ -21,11 +21,11 @@ authors: ["Sara Gürbüz Özeren"]
 # anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Dünya Dışı Yaşam,Temiz Enerji,Takım Ruhu,Çevre Bilinci,Bilim ve Teknoloji,Astronomi]
 anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
 kazanim: [H.1.2.2, H.1.3.1, H.1.3.2, H.1.3.3, H.1.3.4, H.1.3.5, H.1.3.6, H.1.3.7, H.1.3.8, H.1.3.9]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
-unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
+unite: ["DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

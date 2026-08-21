@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Dron Savaşçıları-1"
-description: "Yaren, Ümit ve Okan, öğretmenleri tarafından özel bir proje için seçilmiş, bir- bilim insanlarından da destek alarak eşsiz bir dron tasarlamak için gece…"
+description: "Okan, Ümit ve Yaren'in okul labaratuvarında başlayan masum çalışmaları, gökyüzünde sınır tanımayan görünmez bir dron projesine dönüşüyor!"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -21,11 +21,11 @@ authors: ["Necati Akbaba"]
 # anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Bilim ve Teknoloji,Kıskançlık,Kararlılık,İş Bölümü,İnovasyon,Sorumluluk]
 anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
 kazanim: [H.1.2.2, H.1.3.1, H.1.3.2, H.1.3.3, H.1.3.4, H.1.3.5, H.1.3.6, H.1.3.7, H.1.3.8, H.1.3.9]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
-unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
+unite: ["DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

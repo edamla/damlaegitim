@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Uzaydan Gelenler Kulübü"
-description: "Karanlığın içinden odasına süzülen gizemli bir uzaylı, Ali’nin hayatını sonsuza Bu esrarengiz cihazın peşine düşen Ali, içgüdüsel bir merakla kendini bir…"
+description: "Taşındık yazan bir pastanenin gizli bölmesinden Gezegen-9'a uzanan, aksiyon ve gizem dolu eşsiz bir serüven!"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -21,11 +21,11 @@ authors: ["Resul Dede"]
 # anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Macera Tutkusu,Otorite ve Adalet,Bilim ve Teknoloji,Fedakârlık,Dayanışma,Sırlar ve Gizem]
 anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
 kazanim: [H.1.2.1, H.1.2.2, H.1.2.3, H.1.2.4, H.1.3.4, H.1.3.6, H.2.2.2, H.3.2.1, H.4.2.1, H.4.2.2]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
-unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
+unite: ["DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:
