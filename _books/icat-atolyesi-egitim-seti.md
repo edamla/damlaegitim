@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "İcat Atölyesi Eğitim Seti"
 description: "Yaratıcılık ve icat atölyesi temalı eğitim seti; STEM becerilerini destekler."
-categories: ["Eğitim", "Okul Öncesi"]
+categories: [Eğitim, "Okul Öncesi"]
 
 # Standart Book Attributes
 ean: 8697911222779
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 608
 size: "13,5x21 cm"
 publish-number: ""

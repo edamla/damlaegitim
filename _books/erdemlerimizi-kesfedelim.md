@@ -1,84 +1,36 @@
 ---
 layout: book
-title: Erdemlerimizi Keşfedelim (10 Kitap)
-categories:
-- Hikaye
-- İlkokul
+title:  "Erdemlerimizi Keşfedelim (10 Kitap)"
+categories: [Hikaye, İlkokul]
+
+# Standart Book Attributes
 ean: 9786053831181
-languages:
-- Türkçe
-page: Her Biri 48
-size: 13,5x19,5 cm
+languages: [Türkçe]
+page: "Her Biri 48"
+size: "13,5x19,5 cm"
 publish-number: 1335
-cover: Karton Kapak
-examlink: https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/erdemlerimizi-kesfedelim-y.pdf
-preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053831181/mobile/index.html
-damlaurl: ''
-paper: 1. Hamur
-authors:
-- Sara Gürbüz Özeren
-illustrators:
-- Sernur Işık
+cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/erdemlerimizi-kesfedelim-y.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053831181/mobile/index.html"
+damlaurl: ""
+paper: "1. Hamur"
+authors: ["Sara Gürbüz Özeren"]
+illustrators: ["Sernur Işık"]
+
+# Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
-grades:
-- 2
-tags:
-- Doğru Karar Vermek
-- Haksızlık Yapmamak
-- Yalan Söylememek
-- Yeteneklerini Keşfetmek
-- Fedakâr Olmak
-- Vefalı Olmak
-- Sorumluluk
-- Söz Dinlemek
-- Paylaşmak
-- Hasta Ziyareti
-- Cesaret
-- Yardımseverlik
-- Fedakârlık
-- Dürüstlük
-- Kanaatkârlık
-- Doğayı Korumak
-anatema:
-- Cesaret
-- Azim ve Kararlılık
-- Kendine Güvenme (Öz Güven)
-- Duyarlılık
-- Estetik
-- Merak
-- Merhamet
-- Dostluk
-- Sorumluluk
-- Saygı
-- Bağımsızlık
-- Oyunseverlik
-kazanim:
-- H.1.1.1
-- H.1.1.2
-- H.1.2.1
-- H.1.2.3
-- H.1.3.2
-- H.1.4.2
-- H.2.1.2
-- H.3.4.1
-- H.4.1.1
-beceriler:
-- Gözlemleme Becerisi
-- Bilgi Toplama Becerisi
-- Dinleme/İzleme Becerisi
-- Okuma Becerisi
-- Konuşma Becerisi
-- Yazma Becerisi
-- Bilgi Okuryazarlığı
-- Dijital Okuryazarlık
-- Görsel Okuryazarlık
-- Kendini Düzenleme (Öz Düzenleme Becerisi)
-unite:
-- DOĞADA NELER Oluyor?
-- DEĞERLERİMİZLE VARIZ
-- YETENEKLERİMİZİ TANIYORUZ
-- ATATÜRK VE ÇOCUK
+grades: [2]
+tags: ["Doğru Karar Vermek", "Haksızlık Yapmamak", "Yalan Söylememek", "Yeteneklerini Keşfetmek", "Fedakâr Olmak", "Vefalı Olmak", Sorumluluk, "Söz Dinlemek", Paylaşmak, "Hasta Ziyareti", Cesaret, Yardımseverlik, Fedakârlık, Dürüstlük, Kanaatkârlık, "Doğayı Korumak"]
+anatema: [Cesaret, "Azim ve Kararlılık", "Kendine Güvenme (Öz Güven)", Duyarlılık, Estetik, Merak, Merhamet, Dostluk, Sorumluluk, Saygı, Bağımsızlık, Oyunseverlik]
+kazanim: [H.1.1.1, H.1.1.2, H.1.2.1, H.1.2.3, H.1.3.2, H.1.4.2, H.2.1.2, H.3.4.1, H.4.1.1]
+beceriler: ["Gözlemleme Becerisi", "Bilgi Toplama Becerisi", "Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kendini Düzenleme (Öz Düzenleme Becerisi)"]
+unite: ["DOĞADA NELER Oluyor?", "DEĞERLERİMİZLE VARIZ", "YETENEKLERİMİZİ TANIYORUZ", "ATATÜRK VE ÇOCUK"]
+
+# Social Media Attributes
 youtube:
+
+# For adding excerpt add <!--more--> and break the line
 ---
 İnsanı insan yapan, insanı yücelten, keşfedilmeyi bekleyen erdemlerimiz…
 Hepsi “Erdemlerimizi Keşfedelim” kitaplarında…

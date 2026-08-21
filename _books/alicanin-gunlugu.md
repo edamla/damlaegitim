@@ -1,72 +1,36 @@
 ---
 layout: book
-title: Alican'ın Günlüğü (10 Kitap)
-categories:
-- Hikaye
-- İlkokul
+title:  "Alican'ın Günlüğü (10 Kitap)"
+categories: [Hikaye, İlkokul]
+
+# Standart Book Attributes
 ean: 9786053831303
-languages:
-- Türkçe
-page: Her Biri 48
-size: 13,5x19,5 cm
+languages: [Türkçe]
+page: "Her Biri 48"
+size: "13,5x19,5 cm"
 publish-number: 1355
-cover: Karton Kapak
-examlink: https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/alican-y.pdf
-preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223028/index.html
-damlaurl: ''
-paper: 1. Hamur
-authors:
-- Nehi̇r Aydın Gökduman
-illustrators:
-- Mustafa Kocabaş
+cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/alican-y.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223028/index.html"
+damlaurl: ""
+paper: "1. Hamur"
+authors: ["Nehi̇r Aydın Gökduman"]
+illustrators: ["Mustafa Kocabaş"]
+
+# Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
-grades:
-- 2
-tags:
-- Macera
-- Yardımseverlik
-- Aile Büyüklerine Saygı
-- Günlük
-anatema:
-- Saygı
-- Merak
-- Gerçeği Arama
-- Aile Bütünlüğü
-- Sevgi
-- Merhamet
-- Dostluk
-- Sorumluluk
-- Bağımsızlık
-- Kendine Güvenme (Öz Güven)
-- Estetik
-- Oyunseverlik
-kazanim:
-- H.1.1.1
-- H.1.1.2
-- H.1.2.1
-- H.1.2.3
-- H.1.3.2
-- H.1.4.2
-- H.2.1.2
-- H.3.4.1
-- H.4.1.1
-beceriler:
-- Okuma Becerisi
-- Dinleme/İzleme Becerisi
-- Konuşma Becerisi
-- Yazma Becerisi
-- Bilgi Okuryazarlığı
-- Dijital Okuryazarlık
-- Görsel Okuryazarlık
-- Kendini Tanıma (Öz Farkındalık Becerisi)
-- Kendine Uyarlama (Öz Yansıtma Becerisi)
-- İletişim Becerisi
-unite:
-- ATATÜRK VE ÇOCUK
-- DOĞADA NELER Oluyor?
-- OKUMA SERÜVENİMİZ
-- KÜLTÜR HAZİNEMİZ
+grades: [2]
+tags: [Macera, Yardımseverlik, "Aile Büyüklerine Saygı", Günlük]
+anatema: [Saygı, Merak, "Gerçeği Arama", "Aile Bütünlüğü", Sevgi, Merhamet, Dostluk, Sorumluluk, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Estetik, Oyunseverlik]
+kazanim: [H.1.1.1, H.1.1.2, H.1.2.1, H.1.2.3, H.1.3.2, H.1.4.2, H.2.1.2, H.3.4.1, H.4.1.1]
+beceriler: ["Okuma Becerisi", "Dinleme/İzleme Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "İletişim Becerisi"]
+unite: ["ATATÜRK VE ÇOCUK", "DOĞADA NELER Oluyor?", "OKUMA SERÜVENİMİZ", "KÜLTÜR HAZİNEMİZ"]
+
+# Social Media Attributes
 youtube:
+
+# For adding excerpt add <!--more--> and break the line
 ---
 Yaşadıklarından ders alan Alican, bunları herkesle paylaşıyor.
 Günlüğünün sayfalarından sevgi, dostluk, kardeşlik fışkırıyor.

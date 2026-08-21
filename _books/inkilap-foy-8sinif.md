@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Yeni Nesil İnkılap Tarihi ve Atatürkçülük Lgs Föyleri 8.Sınıf"
 description: "8. sınıf LGS İnkılap Tarihi ve Atatürkçülük föyleri; yeni nesil sorular ve kazanım bazlı ölçme-değerlendirme içerir."
-categories: ["Eğitim", Ortaokul]
+categories: [Eğitim, Ortaokul]
 
 # Standart Book Attributes
 ean: 9786051749396
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 881
 size: "13,5x21 cm"
 publish-number: ""

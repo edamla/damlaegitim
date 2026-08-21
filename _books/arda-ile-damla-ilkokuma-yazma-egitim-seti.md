@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Arda ile Damla İlkokuma Yazma Eğitim Seti"
 description: "Arda ile Damla ilk okuma eğitim seti; okuma yazma sürecini adım adım destekler."
-categories: ["Eğitim", "İlkokul"]
+categories: [Eğitim, İlkokul]
 
 # Standart Book Attributes
 ean: 869791122263
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 136
 size: "13,5x21 cm"
 publish-number: ""

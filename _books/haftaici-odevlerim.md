@@ -1,11 +1,11 @@
 ---
 layout: previewbook
 title:  "Hafta İçi Ödevlerim 2. Sınıf"
-categories: ["Eğitim", "İlkokul"]
+categories: [Eğitim, İlkokul]
 
 # Standart Book Attributes
 ean: 9786254115905
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: ""
 size: "13,5x21 cm"
 publish-number: ""

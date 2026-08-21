@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Çılgın Problemler 3. Sınıf"
 description: "3.sınıflar için eğlenceli matematik problem seti; problem çözme becerisini ve mantıksal düşünmeyi geliştirir."
-categories: ["Eğitim", "İlkokul"]
+categories: [Eğitim, İlkokul]
 
 # Standart Book Attributes
 ean: 9786254115516
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 608
 size: "13,5x21 cm"
 publish-number: ""

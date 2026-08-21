@@ -1,11 +1,11 @@
 ---
 layout: previewbook
 title:  "Cankurtaran Denemeler Fen Bilimleri 8. Sınıf"
-categories: ["Eğitim", Ortaokul]
+categories: [Eğitim, Ortaokul]
 
 # Standart Book Attributes
 ean: 9786254110375
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: ""
 size: "13,5x21 cm"
 publish-number: ""

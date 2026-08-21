@@ -1,75 +1,36 @@
 ---
 layout: book
-title: MESLEK ÖYKÜLERİ (10 KİTAP)
-categories:
-- Hikaye
-- İlkokul
+title:  "MESLEK ÖYKÜLERİ (10 KİTAP)"
+categories: [Hikaye, İlkokul]
+
+# Standart Book Attributes
 ean: 9786254110139
-languages:
-- Türkçe
-page: Her Biri 48
-size: 13,5x19,5 cm
+languages: [Türkçe]
+page: "Her Biri 48"
+size: "13,5x19,5 cm"
 publish-number: 2906
-cover: Karton Kapak
-examlink: https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/meslek-oykuleri-y.pdf
-preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911222991/index.html
-damlaurl: ''
-paper: 1. Hamur
-authors:
-- Sara Gürbüz Özeren
-illustrators:
-- Ebru Diril
+cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/meslek-oykuleri-y.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911222991/index.html"
+damlaurl: ""
+paper: "1. Hamur"
+authors: ["Sara Gürbüz Özeren"]
+illustrators: ["Ebru Diril"]
+
+# Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
-grades:
-- 2
-tags:
-- Doktor
-- pilot
-- aşçı
-- stilist
-- terzi
-- ziraat mühendisi
-- yazar
-- mimar
-- asker
-- avukat
-- bilim insanı
-- hemşire
-- hostes
-anatema:
-- Sevgi
-- Saygı
-- Sorumluluk
-- Merak
-- Bağımsızlık
-- Kendine Güvenme (Öz Güven)
-- Odaklanma
-- Gerçeği Arama
-kazanim:
-- H.1.1.1
-- H.1.1.2
-- H.1.2.1
-- H.1.2.3
-- H.1.3.2
-- H.1.4.2
-- H.2.1.2
-- H.3.4.1
-- H.4.1.1
-beceriler:
-- Dinleme/İzleme Becerisi
-- Okuma Becerisi
-- Konuşma Becerisi
-- Yazma Becerisi
-- Bilgi Okuryazarlığı
-- Dijital Okuryazarlık
-- Görsel Okuryazarlık
-- Kendini Tanıma (Öz Farkındalık Becerisi)
-- Kendini Düzenleme (Öz Düzenleme Becerisi)
-- İletişim Becerisi
-unite:
-- MUCİT ÇOCUK
-- ATATÜRK VE ÇOCUK
+grades: [2]
+tags: [Doktor, pilot, aşçı, stilist, terzi, "ziraat mühendisi", yazar, mimar, asker, avukat, "bilim insanı", hemşire, hostes]
+anatema: [Sevgi, Saygı, Sorumluluk, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Odaklanma, "Gerçeği Arama"]
+kazanim: [H.1.1.1, H.1.1.2, H.1.2.1, H.1.2.3, H.1.3.2, H.1.4.2, H.2.1.2, H.3.4.1, H.4.1.1]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Kendini Düzenleme (Öz Düzenleme Becerisi)", "İletişim Becerisi"]
+unite: ["MUCİT ÇOCUK", "ATATÜRK VE ÇOCUK"]
+
+# Social Media Attributes
 youtube:
+
+# For adding excerpt add <!--more--> and break the line
 ---
 “Büyüyünce Ne Olacağım?” Serisi
 

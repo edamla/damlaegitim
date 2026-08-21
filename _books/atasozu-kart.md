@@ -1,67 +1,35 @@
 ---
 layout: book
-title: Oyunlarla Atasözü Kartları
-categories:
-- Hikaye
-- Ortaokul
+title:  "Oyunlarla Atasözü Kartları"
+categories: [Hikaye, Ortaokul]
+
+# Standart Book Attributes
 ean: 9786254112553
-languages:
-- Türkçe
-page: 50 Kart
-size: 9,5x13 cm
-publish-number: ''
-cover: ''
-examlink: ''
-preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254112553/index.html
-damlaurl: ''
+languages: [Türkçe]
+page: "50 Kart"
+size: "9,5x13 cm"
+publish-number: ""
+cover: ""
+examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254112553/index.html"
+damlaurl: ""
 paper: Bristol
 authors: []
+
+# Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
-grades:
-- 5
-- 6
-- 7
-- 8
+grades: [5, 6, 7, 8]
 tags: []
-anatema:
-- Özgürlük
-- Saygı
-- Sevgi
-- Sorumluluk
-- Vatanseverlik
-- Merak
-- Bağımsızlık
-- Kendine Güvenme (Öz Güven)
-- Girişkenlik
-- Güven
-- Muhakeme
-- Odaklanma
-kazanim:
-- H.1.2.1
-- H.1.2.2
-- H.1.2.3
-- H.1.2.4
-- H.2.2.1
-- H.2.2.2
-- H.4.2.1
-- H.4.2.2
-- H.4.2.3
-- H.4.2.4
-beceriler:
-- Dinleme/İzleme Becerisi
-- Okuma Becerisi
-- Konuşma Becerisi
-- Yazma Becerisi
-- Bilgi Okuryazarlığı
-- Dijital Okuryazarlık
-- Görsel Okuryazarlık
-- Kültür Okuryazarlıği
-- Veri Okuryazarlığı
-- Kendini Tanıma (Öz Farkındalık Becerisi)
-unite:
-- Atatürk’ü TANIMAK
-- DUYGULARIMI TANIYORUM
+anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
+kazanim: [H.1.2.1, H.1.2.2, H.1.2.3, H.1.2.4, H.2.2.1, H.2.2.2, H.4.2.1, H.4.2.2, H.4.2.3, H.4.2.4]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
+unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
+
+# Social Media Attributes
 youtube:
+
+# For adding excerpt add <!--more--> and break the line
 ---
 Aç ayı oynamaz mı? Altın kafese konulan bülbül ne der? Düdüğü kim çalar? Damla Yayınevi olarak, eğlenceli karikatürlerle hazırladığımız atasözü kartları ile atasözlerimizi öğrenmek artık çok kolay! Birbirinden renkli resimler sayesinde atasözlerini çok daha rahat aklınızda tutabileceksiniz! Atasözü kartının ön yüzünde atasözünü anlatan birbirinden eğlenceli karikatürleri, arka yüzünde ise atasözlerinin anlamını ve örnek cümle içinde kullanımını bulacaksınız. Bu yönüyle kartları, bir oyun gibi kullanabilir, çizimden hareketle atasözünü tahmin edebilir ve cümle içinde kullanabilirsiniz. Aynı zamanda Türkçe kazanımlarını desteklediğinden derslerde de bu kartlardan faydalanabilirsiniz. “ATASÖZÜ BULMACA OYUNU” nasıl oynanır? Kartlarımızın resimsiz olan arka yüzünde, sağ üst köşede o atasözüne ait puan yer alıyor. Resme bakarak atasözünü doğru tahmin eden kişi, orada yazan (+) puanı kazanırken yanlış tahminde bulunan kişi ise, orada yazan kadar (-) puan kaybediyor. Atasözlerinin puanları, zorluk derecesine göre değişkenlik gösteriyor. Oyun kartları karıştırılarak ortaya konur. Oyuncular sırayla kartı çekip ön yüzündeki resmi gösterir. Resimden hareketle atasözünü doğru bilen oyuncu kartın üzerindeki (+) puan kadar, bilemeyen oyuncu (–) puan kazanır. Atasözünü ayrıca cümlede kullanan oyuncu ilave olarak (+) puan daha kazanır. Cümlede kullanamaz ise (–) puan yazılmaz. Oyun bu şekilde devam eder ve sonunda en çok puanı toplayan, oyunu kazanır. Örneğin: 10 puanlık bir karttaki atasözünü bilen ve cümlede kullanabilen oyuncu +20 puan kazanır. Sadece atasözünü bilen, +10 puan kazanır. Bilemeyen -10 puan kazanır. Bu oyun iki, üç ve dört kişiyle oynanabileceği gibi gruplar hâlinde yahut akıllı tahta üzerinde sınıfça oynanabilir. Oyuncular atasözünü grup hâlinde bilmeye çalışabilir. Yapılan bir araştırmaya göre öğrenciler; Okuduklarının % 10’unu, işittiklerinin % 26’sını, gördüklerinin % 30’unu, görüp işittiklerinin % 50’sini, söylediklerinin % 70’ini, yapıp söylediklerinin % 90’ını akıllarında tutuyor. Bu atasözü kartları sayesinde öğrenciler atasözlerini hem görecek hem işitecek hem de söyleyecekler!.. Her biri özenle hazırlanan bu atasözü kartlarıyla çocuklarımızın, Türkçemizin dil zenginliği olan atasözlerimizi, zevkle öğrenmesini amaçladık. Keyifli vakit geçirmeniz dileğiyle...
 

@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Akıllı Damla Paragraf-Dilbilgisi 3.Sınıf Soru Bankası"
 description: "3. sınıf paragraf ve dil bilgisi soru bankası; okuduğunu anlama ve dil kuralları becerilerini pekiştirir."
-categories: ["Eğitim", "İlkokul"]
+categories: [Eğitim, İlkokul]
 
 # Standart Book Attributes
 ean: parag-dilbil3
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 128
 size: "13,5x21 cm"
 publish-number: ""

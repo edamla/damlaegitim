@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Yeni Nesil Türkçe Lgs Föyleri 8.Sınıf"
 description: "8. sınıf Türkçe föyü; okuma, yazma ve dil bilgisi becerilerini güçlendirir."
-categories: ["Eğitim", Ortaokul]
+categories: [Eğitim, Ortaokul]
 
 # Standart Book Attributes
 ean: 9786051749389
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 881
 size: "13,5x21 cm"
 publish-number: ""

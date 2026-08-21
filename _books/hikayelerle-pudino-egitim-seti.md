@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Hikayelerle Pudino Eğitim Seti 1.Sınıf "
 description: "1. sınıf için Pudino karakteriyle hazırlanan hikayeli eğitim seti; okuma yazma ve temel becerileri eğlenceli biçimde destekler."
-categories: ["Eğitim", "İlkokul"]
+categories: [Eğitim, İlkokul]
 
 # Standart Book Attributes
 ean: 9786059656344
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 608
 size: "13,5x21 cm"
 publish-number: ""

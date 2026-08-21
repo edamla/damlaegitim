@@ -1,11 +1,11 @@
 ---
 layout: previewbook
 title:  "Pisa Matematik 8. Sınıf"
-categories: ["Eğitim", Ortaokul]
+categories: [Eğitim, Ortaokul]
 
 # Standart Book Attributes
 ean: 9786051748368
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: ""
 size: "13,5x21 cm"
 publish-number: ""

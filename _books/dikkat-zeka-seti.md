@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Dikkat Zeka Ve Hafıza Geliştirme Seti"
 description: "Dikkat ve zeka gelişimini destekleyen çok yönlü etkinlik seti; okul öncesi ve ilkokul düzeyine uygun."
-categories: ["Eğitim", "Okul Öncesi"]
+categories: [Eğitim, "Okul Öncesi"]
 
 # Standart Book Attributes
 ean: 9786258432220
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: ""
 size: ""
 publish-number: ""

@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Yarı Yıl Tatilim | Okul Öncesi"
 description: "Okul öncesi için yarı yıl tatil kitabı; oyun temelli etkinliklerle erken çocukluk becerilerini tatilde de destekler."
-categories: ["Eğitim", "Okul Öncesi"]
+categories: [Eğitim, "Okul Öncesi"]
 
 # Standart Book Attributes
 ean: 9786256859166
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 608
 size: "13,5x21 cm"
 publish-number: ""

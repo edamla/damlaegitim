@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Ponpon İle Pinpin Eğitim Seti"
 description: "Okul öncesi Ponpon ve Pinpin karakterleriyle hazırlanan eğitim seti; erken çocukluk gelişimini destekleyen etkinlikler içerir."
-categories: ["Eğitim", "Okul Öncesi"]
+categories: [Eğitim, "Okul Öncesi"]
 
 # Standart Book Attributes
 ean: 9786059656702
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 256
 size: "13,5x21 cm"
 publish-number: ""

@@ -1,64 +1,36 @@
 ---
 layout: book
-title: Çılgın Dedemin Türkiye Turu (10 Kitap)
-categories:
-- Hikaye
-- İlkokul
+title:  "Çılgın Dedemin Türkiye Turu (10 Kitap)"
+categories: [Hikaye, İlkokul]
+
+# Standart Book Attributes
 ean: 9786254114540
-languages:
-- Türkçe
-page: Her Biri 64
-size: 12,5x19,2 cm
+languages: [Türkçe]
+page: "Her Biri 64"
+size: "12,5x19,2 cm"
 publish-number: 3136
-cover: Karton Kapak
-examlink: https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/c%C4%B1lg%C4%B1n-dede-turkiye-turu.pdf
-preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223943/index.html
-damlaurl: ''
-paper: 1. Hamur
-authors:
-- Sara Gürbüz Özeren
-illustrators:
-- Melike Tan
+cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/c%C4%B1lg%C4%B1n-dede-turkiye-turu.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223943/index.html"
+damlaurl: ""
+paper: "1. Hamur"
+authors: ["Sara Gürbüz Özeren"]
+illustrators: ["Melike Tan"]
+
+# Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
-grades:
-- 3
+grades: [3]
 tags: []
-anatema:
-- Saygı
-- Vatanseverlik
-- Merak
-- Bağımsızlık
-- Kendine Güvenme (Öz Güven)
-- Girişkenlik
-- Açık Fikirlilik
-- Sorumluluk
-- Soru Sorma
-kazanim:
-- H.1.1.2
-- H.1.2.1
-- H.1.2.3
-- H.1.2.4
-- H.1.3.2
-- H.1.3.3
-- H.1.3.7
-- H.2.1.2
-- H.3.1.1
-- H.4.1.1
-beceriler:
-- Dinleme/İzleme Becerisi
-- Okuma Becerisi
-- Konuşma Becerisi
-- Yazma Becerisi
-- Bilgi Okuryazarlığı
-- Görsel Okuryazarlık
-- Kendine Uyarlama (Öz Yansıtma Becerisi)
-- İletişim Becerisi
-- Gözlemleme Becerisi
-- Çözümleme Becerisi
-unite:
-- ATATÜRK VE KAHRAMANLARIMIZ
-- BİLGİ HAZİNEMİZ
+anatema: [Saygı, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Açık Fikirlilik", Sorumluluk, "Soru Sorma"]
+kazanim: [H.1.1.2, H.1.2.1, H.1.2.3, H.1.2.4, H.1.3.2, H.1.3.3, H.1.3.7, H.2.1.2, H.3.1.1, H.4.1.1]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Görsel Okuryazarlık", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "İletişim Becerisi", "Gözlemleme Becerisi", "Çözümleme Becerisi"]
+unite: ["ATATÜRK VE KAHRAMANLARIMIZ", "BİLGİ HAZİNEMİZ"]
+
+# Social Media Attributes
 youtube:
+
+# For adding excerpt add <!--more--> and break the line
 ---
 Bir göl çıldırabilir mi?
 Ya da nehir ters akabilir mi?

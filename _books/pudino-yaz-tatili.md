@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Pudino ile Yaz Tatili"
 description: "Okul öncesi Pudino karakteriyle hazırlanan yaz tatili kitabı; eğlenceli etkinliklerle yaz döneminde öğrenmeyi sürdürür."
-categories: ["Eğitim", "Okul Öncesi"]
+categories: [Eğitim, "Okul Öncesi"]
 
 # Standart Book Attributes
 ean: pudino-yaz-tatili
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 608
 size: "13,5x21 cm"
 publish-number: ""

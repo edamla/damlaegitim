@@ -1,84 +1,36 @@
 ---
 layout: book
-title: DUYGULARIMI KEŞFEDİYORUM (10 KİTAP)
-categories:
-- Hikaye
-- İlkokul
+title:  "DUYGULARIMI KEŞFEDİYORUM (10 KİTAP)"
+categories: [Hikaye, İlkokul]
+
+# Standart Book Attributes
 ean: 8697911223752
-languages:
-- Türkçe
-page: Her Biri 24
-size: 16,5x23,5 cm
+languages: [Türkçe]
+page: "Her Biri 24"
+size: "16,5x23,5 cm"
 publish-number: 4
-cover: Karton Kapak
-examlink: https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/duygularimi-kesfediyorum-y.pdf
-preview_link: https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/duygularimi-kesfediyorum/index.html
-damlaurl: ''
-paper: 1. Hamur
-authors:
-- Komisyon
-illustrators:
-- Amit Sharma
+cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/duygularimi-kesfediyorum-y.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/duygularimi-kesfediyorum/index.html"
+damlaurl: ""
+paper: "1. Hamur"
+authors: [Komisyon]
+illustrators: ["Amit Sharma"]
+
+# Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
-grades:
-- 1
-- 2
-tags:
-- Sosyal ve Duygusal Gelişim
-- Empati
-- Arkadaşlık ve İletişim Becerisi
-- Yardımlaşma ve Duyarlı Olma
-- Akran Zorbalığı
-- Saygı ve İç Farkındalık
-- Korkuyu Yenme
-- Cesaret
-- Öz Güven ve Farklılıkları Anlamak
-- 'Duygularla Tanışma ve Anlamlandırma AKRAN Becerisi Kazandırır: Her bir kitap'
-- Korku
-- kıskançlık
-- öfke
-- pişmanlık gibi yoğun duyguların yanında dostluk
-- paylaşma
-anatema:
-- Saygı
-- Dostluk
-- Empati
-- Cesaret
-- Azim ve Kararlılık
-- Kendine Güvenme (Öz Güven)
-- Duyarlılık
-- Merhamet
-- Merak
-- Odaklanma
-- Sorumluluk
-- Estetik
-kazanim:
-- H.1.1.1
-- H.1.1.2
-- H.1.2.1
-- H.1.2.3
-- H.1.3.2
-- H.1.4.2
-- H.2.1.2
-- H.3.4.1
-- H.4.1.1
-beceriler:
-- Dinleme/İzleme Becerisi
-- Okuma Becerisi
-- Konuşma Becerisi
-- Yazma Becerisi
-- Görsel Okuryazarlık
-- İletişim Becerisi
-- Karşılaştırma Becerisi
-- Mevcut Bilgiye/Veriye Dayalı Tahmin Etme Becerisi
-- Muhakeme (Akıl Yürütme) Becerisi
-- Sentezleme Becerisi
-unite:
-- YOL ARKADAŞIMIZ KİTAPLAR
-- OKUMA SERÜVENİMİZ
-- ATATÜRK VE ÇOCUK
-- YETENEKLERİMİZİ TANIYORUZ
+grades: [1, 2]
+tags: ["Sosyal ve Duygusal Gelişim", Empati, "Arkadaşlık ve İletişim Becerisi", "Yardımlaşma ve Duyarlı Olma", "Akran Zorbalığı", "Saygı ve İç Farkındalık", "Korkuyu Yenme", Cesaret, "Öz Güven ve Farklılıkları Anlamak", "Duygularla Tanışma ve Anlamlandırma AKRAN Becerisi Kazandırır: Her bir kitap", Korku, kıskançlık, öfke, "pişmanlık gibi yoğun duyguların yanında dostluk", paylaşma]
+anatema: [Saygı, Dostluk, Empati, Cesaret, "Azim ve Kararlılık", "Kendine Güvenme (Öz Güven)", Duyarlılık, Merhamet, Merak, Odaklanma, Sorumluluk, Estetik]
+kazanim: [H.1.1.1, H.1.1.2, H.1.2.1, H.1.2.3, H.1.3.2, H.1.4.2, H.2.1.2, H.3.4.1, H.4.1.1]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Görsel Okuryazarlık", "İletişim Becerisi", "Karşılaştırma Becerisi", "Mevcut Bilgiye/Veriye Dayalı Tahmin Etme Becerisi", "Muhakeme (Akıl Yürütme) Becerisi", "Sentezleme Becerisi"]
+unite: ["YOL ARKADAŞIMIZ KİTAPLAR", "OKUMA SERÜVENİMİZ", "ATATÜRK VE ÇOCUK", "YETENEKLERİMİZİ TANIYORUZ"]
+
+# Social Media Attributes
 youtube:
+
+# For adding excerpt add <!--more--> and break the line
 ---
 “Duygularımı Keşfediyorum” serisi, ilkokul çağındaki çocukların dünyasına uygun sade dili, güçlü anlatımı ve pedagojik içeriğiyle duyguların renkli ve öğretici dünyasına kapı aralıyor. Bu seri, çocukları yalnızca birer okuyucu değil; kendi duygularını fark eden, anlamlandıran ve yönetebilen güçlü bireyler hâline getirmek için kurgulandı.
 

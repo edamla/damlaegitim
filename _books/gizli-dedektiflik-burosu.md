@@ -1,75 +1,36 @@
 ---
 layout: book
-title: Gizli Dedektiflik Bürosu (10 Kitap)
-categories:
-- Hikaye
-- İlkokul
+title:  "Gizli Dedektiflik Bürosu (10 Kitap)"
+categories: [Hikaye, İlkokul]
+
+# Standart Book Attributes
 ean: 9786053833413
-languages:
-- Türkçe
-page: Her Biri 80
-size: 13,5x19,5 cm
+languages: [Türkçe]
+page: "Her Biri 80"
+size: "13,5x19,5 cm"
 publish-number: 1463
-cover: Karton Kapak
-examlink: https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/gizli-dedektiflik-y.pdf
-preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223080/index.html
-damlaurl: ''
-paper: 1. Hamur
-authors:
-- Esra Avgören
-illustrators:
-- Gökhan Kalafat
+cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/gizli-dedektiflik-y.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223080/index.html"
+damlaurl: ""
+paper: "1. Hamur"
+authors: ["Esra Avgören"]
+illustrators: ["Gökhan Kalafat"]
+
+# Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
-grades:
-- 4
-tags:
-- Arkadaşlık
-- Yardımseverlik
-- Cesaret
-- Vurdumduymaz Olmamak
-- Takım Ruhu
-- Planlı Çalışma
-anatema:
-- Dostluk
-- Empati
-- Cesaret
-- Azim ve Kararlılık
-- Kendine Güvenme (Öz Güven)
-- Merhamet
-- Sorumluluk
-- Çalışkanlık
-- Mahremiyet
-- Saygı
-- Merak
-- Girişkenlik
-kazanim:
-- H.1.2.1
-- H.1.2.3
-- H.1.2.4
-- H.1.3.5
-- H.1.3.7
-- H.2.2.1
-- H.2.2.2
-- H.3.2.1
-- H.4.2.1
-- H.4.2.2
-beceriler:
-- Dinleme/İzleme Becerisi
-- Okuma Becerisi
-- Konuşma Becerisi
-- Yazma Becerisi
-- Bilgi Okuryazarlığı
-- Dijital Okuryazarlık
-- Görsel Okuryazarlık
-- İletişim Becerisi
-- Sosyal Farkındalık Becerisi
-- Özetleme Becerisi
-unite:
-- KENDİMİZİ GELİŞTİRİYORUZ
-- DOĞA VE İNSAN
-- Mi̇llî MÜCADELE VE ATATÜRK
-- GEÇMİŞTEN GELECEĞE MİRASIMIZ
+grades: [4]
+tags: [Arkadaşlık, Yardımseverlik, Cesaret, "Vurdumduymaz Olmamak", "Takım Ruhu", "Planlı Çalışma"]
+anatema: [Dostluk, Empati, Cesaret, "Azim ve Kararlılık", "Kendine Güvenme (Öz Güven)", Merhamet, Sorumluluk, Çalışkanlık, Mahremiyet, Saygı, Merak, Girişkenlik]
+kazanim: [H.1.2.1, H.1.2.3, H.1.2.4, H.1.3.5, H.1.3.7, H.2.2.1, H.2.2.2, H.3.2.1, H.4.2.1, H.4.2.2]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "İletişim Becerisi", "Sosyal Farkındalık Becerisi", "Özetleme Becerisi"]
+unite: ["KENDİMİZİ GELİŞTİRİYORUZ", "DOĞA VE İNSAN", "Mi̇llî MÜCADELE VE ATATÜRK", "GEÇMİŞTEN GELECEĞE MİRASIMIZ"]
+
+# Social Media Attributes
 youtube:
+
+# For adding excerpt add <!--more--> and break the line
 ---
 Gizli Dedektiflik Bürosu, müthiş kurgusu ile okuyucuları kitabın içerisine çekip, onları bir dedektif gibi ipuçları toplamaya, analizler yapıp tahminler yürütmeye ve olayı çözüme kavuşturmaya davet ediyor.
 

@@ -1,11 +1,11 @@
 ---
 layout: previewbook
 title:  "Arda ile Damla Eko Set"
-categories: ["Eğitim", "İlkokul"]
+categories: [Eğitim, İlkokul]
 
 # Standart Book Attributes
 ean: 8697911223899
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: ""
 size: "13,5x21 cm"
 publish-number: ""

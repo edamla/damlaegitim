@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Akıllı Damla Paragraf-Dilbilgisi 2.Sınıf Soru Bankası"
 description: "2. sınıf paragraf ve dil bilgisi soru bankası; temel okuma ve dil becerilerini kazanım odaklı alıştırmalarla destekler."
-categories: ["Eğitim", "İlkokul"]
+categories: [Eğitim, İlkokul]
 
 # Standart Book Attributes
 ean: parag-dilbil2
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 128
 size: "13,5x21 cm"
 publish-number: ""

@@ -1,11 +1,11 @@
 ---
 layout: previewbook
 title:  "Yeni Nesil Paragraf 8. Sınıf"
-categories: ["Eğitim", Ortaokul]
+categories: [Eğitim, Ortaokul]
 
 # Standart Book Attributes
 ean: 9786254112287
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: ""
 size: "13,5x21 cm"
 publish-number: ""

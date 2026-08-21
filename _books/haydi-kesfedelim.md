@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Haydi Keşfedelim"
 description: "Keşif ve araştırma becerilerini geliştiren etkinlik tabanlı eğitim seti."
-categories: ["Eğitim", "Okul Öncesi"]
+categories: [Eğitim, "Okul Öncesi"]
 
 # Standart Book Attributes
 ean: 8697911222731
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 881
 size: "13,5x21 cm"
 publish-number: ""

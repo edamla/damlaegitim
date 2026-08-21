@@ -49,6 +49,12 @@ def normalize_data(data)
   data
 end
 
+def plain_scalar?(value)
+  value.is_a?(String) &&
+    !value.empty? &&
+    value.match?(/\A[\p{L}\p{N}._-]+\z/u)
+end
+
 def yaml_scalar(value)
   return '""' if value.nil? || (value.is_a?(String) && value.empty?)
 
@@ -58,9 +64,7 @@ def yaml_scalar(value)
   when Integer, Float
     value.to_s
   when String
-    if value.match?(/\A[\w.-]+\z/u) && !value.match?(/\A\d+\z/)
-      value
-    elsif value.match?(/\A\d+\z/)
+    if plain_scalar?(value)
       value
     else
       %("#{value.gsub('\\', '\\\\').gsub('"', '\\"')}")

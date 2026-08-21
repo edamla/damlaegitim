@@ -1,86 +1,36 @@
 ---
 layout: book
-title: İstiklal Marşı Yazdıran Kahramanlar (10 Kitap)
-categories:
-- Hikaye
-- İlkokul
+title:  "İstiklal Marşı Yazdıran Kahramanlar (10 Kitap)"
+categories: [Hikaye, İlkokul]
+
+# Standart Book Attributes
 ean: 9786254112560
-languages:
-- Türkçe
-page: Her Biri 64
-size: 13,5x19,5 cm
+languages: [Türkçe]
+page: "Her Biri 64"
+size: "13,5x19,5 cm"
 publish-number: 2972
-cover: Karton Kapak
-examlink: https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/istiklal-marsi-yazdiran-y.pdf
-preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254112560/index.html
-damlaurl: ''
-paper: Kitap Kağıdı
-authors:
-- Sara Gürbüz Özeren
-illustrators:
-- Erhan Acar
+cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/istiklal-marsi-yazdiran-y.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254112560/index.html"
+damlaurl: ""
+paper: "Kitap Kağıdı"
+authors: ["Sara Gürbüz Özeren"]
+illustrators: ["Erhan Acar"]
+
+# Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
-grades:
-- 3
-- 4
-tags:
-- Gazilik
-- Şehitlik
-- Vatanseverlik
-- Tarih
-- Kültür
-- Medeniyet
-- Bayrak
-- Kültür Birliği
-- Mücadele
-- Cihad Şuuru
-- Kahramanlık
-- Gençlik
-- Asker
-- Ordu
-- Cesaret
-- Millet
-anatema:
-- Sevgi
-- Cesaret
-- Azim ve Kararlılık
-- Kendine Güvenme (Öz Güven)
-- Vatanseverlik
-- Saygı
-- Özgürlük
-- Estetik
-- Sorumluluk
-- Merak
-- Empati
-- Girişkenlik
-kazanim:
-- H.1.2.1
-- H.1.2.3
-- H.1.2.4
-- H.2.2.1
-- H.2.2.2
-- H.2.3.1
-- H.3.2.1
-- H.3.3.2
-- H.4.2.1
-- H.4.2.2
-beceriler:
-- Dinleme/İzleme Becerisi
-- Okuma Becerisi
-- Konuşma Becerisi
-- Yazma Becerisi
-- Görsel Okuryazarlık
-- İletişim Becerisi
-- İş Birliği Becerisi
-- Sorumlu Karar Verme Becerisi
-- Özetleme Becerisi
-- Çözümleme Becerisi
-unite:
-- Mi̇llî MÜCADELE VE ATATÜRK
-- KÜTÜPHANEMİZ
-- DOĞA VE İNSAN
-- DOĞAYI TANIYORUZ
+grades: [3, 4]
+tags: [Gazilik, Şehitlik, Vatanseverlik, Tarih, Kültür, Medeniyet, Bayrak, "Kültür Birliği", Mücadele, "Cihad Şuuru", Kahramanlık, Gençlik, Asker, Ordu, Cesaret, Millet]
+anatema: [Sevgi, Cesaret, "Azim ve Kararlılık", "Kendine Güvenme (Öz Güven)", Vatanseverlik, Saygı, Özgürlük, Estetik, Sorumluluk, Merak, Empati, Girişkenlik]
+kazanim: [H.1.2.1, H.1.2.3, H.1.2.4, H.2.2.1, H.2.2.2, H.2.3.1, H.3.2.1, H.3.3.2, H.4.2.1, H.4.2.2]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Görsel Okuryazarlık", "İletişim Becerisi", "İş Birliği Becerisi", "Sorumlu Karar Verme Becerisi", "Özetleme Becerisi", "Çözümleme Becerisi"]
+unite: ["Mi̇llî MÜCADELE VE ATATÜRK", KÜTÜPHANEMİZ, "DOĞA VE İNSAN", "DOĞAYI TANIYORUZ"]
+
+# Social Media Attributes
 youtube:
+
+# For adding excerpt add <!--more--> and break the line
 ---
 Kurtuluş Savaşı'nda kahraman milletimizin nasıl bir destan yazdığını öğrenmek, gerçek öyküleriyle Kuvâ-yi Millîye kahramanlarını tanımak ister misin?
 

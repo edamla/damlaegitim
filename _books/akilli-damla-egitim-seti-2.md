@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Akıllı Damla Eğitim Seti 2.Sınıf"
 description: "2. sınıf Akıllı Damla eğitim seti; etkinlik tabanlı öğrenme materyalleri."
-categories: ["Eğitim", "İlkokul"]
+categories: [Eğitim, İlkokul]
 
 # Standart Book Attributes
 ean: 8697911223783
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 136
 size: "13,5x21 cm"
 publish-number: ""

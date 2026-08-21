@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Akıllı Damla Tüm Dersler | 3.Sınıf"
 description: "3. sınıf tüm dersleri kapsayan Akıllı Damla eğitim seti; Maarif Modeli kazanımlarına uygun etkinlik ve alıştırmalar içerir."
-categories: ["Eğitim", "İlkokul"]
+categories: [Eğitim, İlkokul]
 
 # Standart Book Attributes
 ean: 9786254115943
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 136
 size: "13,5x21 cm"
 publish-number: ""

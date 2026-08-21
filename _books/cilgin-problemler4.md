@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Çılgın Problemler 4. Sınıf"
 description: "4. sınıflar için eğlenceli matematik problem seti; problem çözme becerisini ve mantıksal düşünmeyi geliştirir."
-categories: ["Eğitim", "İlkokul"]
+categories: [Eğitim, İlkokul]
 
 # Standart Book Attributes
 ean: 9786254115523
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 608
 size: "13,5x21 cm"
 publish-number: ""

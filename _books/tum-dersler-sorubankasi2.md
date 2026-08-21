@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Tüm Dersler Soru Bankası 2. Sınıf"
 description: "2. sınıflar için tüm dersleri kapsayan tatil tekrar seti."
-categories: ["Eğitim", "İlkokul"]
+categories: [Eğitim, İlkokul]
 
 # Standart Book Attributes
 ean: 9786254116476
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 608
 size: "13,5x21 cm"
 publish-number: ""

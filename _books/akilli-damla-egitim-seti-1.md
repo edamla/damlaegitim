@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Akıllı Damla | 1.Sınıf 2.Dönem"
 description: "1. sınıf Akıllı Damla eğitim seti; temel beceriler ve müfredat kazanımlarına yönelik."
-categories: ["Eğitim", "İlkokul"]
+categories: [Eğitim, İlkokul]
 
 # Standart Book Attributes
 ean: 8697911223240
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 608
 size: "13,5x21 cm"
 publish-number: ""

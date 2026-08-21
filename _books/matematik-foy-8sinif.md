@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Yeni Nesil Matematik Lgs Föyleri 8.Sınıf"
 description: "8. sınıf matematik föyü; LGS hazırlık ve kazanım odaklı alıştırmalar."
-categories: ["Eğitim", Ortaokul]
+categories: [Eğitim, Ortaokul]
 
 # Standart Book Attributes
 ean: 9786051749402
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 881
 size: "13,5x21 cm"
 publish-number: ""

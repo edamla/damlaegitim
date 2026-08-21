@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "İlk Okuma Dizisi (8 Kitap)"
 description: "İlk okuma sürecine uygun 8 kitaplık dizisi; sınırlı kelime dağarcığı ve görsel destekle okuma alışkanlığı kazandırır."
-categories: ["Eğitim", "İlkokul"]
+categories: [Eğitim, İlkokul]
 
 # Standart Book Attributes
 ean: 8697911222625
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 881
 size: "13,5x21 cm"
 publish-number: ""

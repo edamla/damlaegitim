@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Akıllı Damla Tüm Dersler | 4.Sınıf"
 description: "4. sınıf tüm dersleri kapsayan Akıllı Damla eğitim seti; müfredat kazanımlarını pekiştiren çok yönlü içerik sunar."
-categories: ["Eğitim", "İlkokul"]
+categories: [Eğitim, İlkokul]
 
 # Standart Book Attributes
 ean: 9786254115950
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 136
 size: "13,5x21 cm"
 publish-number: ""

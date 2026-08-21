@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Yeni Nesil Fen Bilimleri Lgs Föyleri 8.Sınıf"
 description: "8. sınıf fen bilimleri föyü; deney ve uygulama odaklı etkinlikler."
-categories: ["Eğitim", Ortaokul]
+categories: [Eğitim, Ortaokul]
 
 # Standart Book Attributes
 ean: 9786051749419
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 881
 size: "13,5x21 cm"
 publish-number: ""

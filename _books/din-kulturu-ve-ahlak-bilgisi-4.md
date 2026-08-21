@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Din Kültürü ve Ahlak Bilgisi 4.Sınıf"
 description: "4. sınıf din kültürü ve ahlak bilgisi dersine uygun, Yeni Maarif Modeli kazanımlarını destekleyen etkinlik kitabı."
-categories: ["Eğitim", "İlkokul"]
+categories: [Eğitim, İlkokul]
 
 # Standart Book Attributes
 ean: 9786254115264
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 881
 size: "13,5x21 cm"
 publish-number: ""

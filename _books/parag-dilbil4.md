@@ -2,11 +2,11 @@
 layout: previewbook
 title:  "Akıllı Damla Paragraf-Dilbilgisi 4.Sınıf Soru Bankası"
 description: "4. sınıf paragraf ve dil bilgisi soru bankası; yeni nesil soru formatlarıyla okuduğunu anlama becerisini geliştirir."
-categories: ["Eğitim", "İlkokul"]
+categories: [Eğitim, İlkokul]
 
 # Standart Book Attributes
 ean: parag-dilbil4
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 128
 size: "13,5x21 cm"
 publish-number: ""

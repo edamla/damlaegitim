@@ -1,82 +1,37 @@
 ---
 layout: book
-title: ROBOT AVCILARI (10 KİTAP)
-description: Bilim kurgu ve macera temalı hikaye; genç okurlar için sürükleyici anlatım.
-categories:
-- Hikaye
-- İlkokul
+title:  "ROBOT AVCILARI (10 KİTAP)"
+description: "Bilim kurgu ve macera temalı hikaye; genç okurlar için sürükleyici anlatım."
+categories: [Hikaye, İlkokul]
+
+# Standart Book Attributes
 ean: 8697911223547
-languages:
-- Türkçe
-page: Her Biri 64
-size: 13,5x19,5 cm
+languages: [Türkçe]
+page: "Her Biri 64"
+size: "13,5x19,5 cm"
 publish-number: 2528
-cover: Karton Kapak
-examlink: https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/robot-avcilari-y.pdf
-preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223530/index.html
-damlaurl: ''
-paper: 1. Hamur
-authors:
-- Necati Akbaba
-illustrators:
-- Gökhan Gülkan
+cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/robot-avcilari-y.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223530/index.html"
+damlaurl: ""
+paper: "1. Hamur"
+authors: ["Necati Akbaba"]
+illustrators: ["Gökhan Gülkan"]
+
+# Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
-grades:
-- 3
-tags:
-- Teknoloji
-- Bilim
-- Eğitim
-- İcad
-- İyi ve Kötü
-- Bilimsel Düşünce
-- Gelecek
-- Geçmiş
-- Macera
-- Dünya Kültürü
-- Bilim Kurgu
-- Takım Çalışması
-anatema:
-- Merak
-- Gerçeği Arama
-- Çalışkanlık
-- Saygı
-- Sorumluluk
-- Vatanseverlik
-- Kendine İnanma (Öz Yeterlilik)
-- Kendine Güvenme (Öz Güven)
-- Girişkenlik
-- Soru Sorma
-- Bağımsızlık
-- Açık Fikirlilik
-kazanim:
-- H.1.2.1
-- H.1.2.3
-- H.1.2.4
-- H.1.3.2
-- H.1.3.3
-- H.1.3.7
-- H.1.4.2
-- H.1.4.5
-- H.2.1.2
-- H.3.4.1
-beceriler:
-- Okuma Becerisi
-- Dinleme/İzleme Becerisi
-- Konuşma Becerisi
-- Yazma Becerisi
-- Bilgi Okuryazarlığı
-- Dijital Okuryazarlık
-- Görsel Okuryazarlık
-- Kendini Tanıma (Öz Farkındalık Becerisi)
-- İletişim Becerisi
-- Sosyal Farkındalık Becerisi
-unite:
-- HAK VE SORUMLULUKLARIMIZ
-- ATATÜRK VE KAHRAMANLARIMIZ
-- DEĞERLERİMİZLE YAŞIYORUZ
-- DOĞAYI TANIYORUZ
+grades: [3]
+tags: [Teknoloji, Bilim, Eğitim, İcad, "İyi ve Kötü", "Bilimsel Düşünce", Gelecek, Geçmiş, Macera, "Dünya Kültürü", "Bilim Kurgu", "Takım Çalışması"]
+anatema: [Merak, "Gerçeği Arama", Çalışkanlık, Saygı, Sorumluluk, Vatanseverlik, "Kendine İnanma (Öz Yeterlilik)", "Kendine Güvenme (Öz Güven)", Girişkenlik, "Soru Sorma", Bağımsızlık, "Açık Fikirlilik"]
+kazanim: [H.1.2.1, H.1.2.3, H.1.2.4, H.1.3.2, H.1.3.3, H.1.3.7, H.1.4.2, H.1.4.5, H.2.1.2, H.3.4.1]
+beceriler: ["Okuma Becerisi", "Dinleme/İzleme Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kendini Tanıma (Öz Farkındalık Becerisi)", "İletişim Becerisi", "Sosyal Farkındalık Becerisi"]
+unite: ["HAK VE SORUMLULUKLARIMIZ", "ATATÜRK VE KAHRAMANLARIMIZ", "DEĞERLERİMİZLE YAŞIYORUZ", "DOĞAYI TANIYORUZ"]
+
+# Social Media Attributes
 youtube:
+
+# For adding excerpt add <!--more--> and break the line
 ---
 Yıl 2200… Dünya artık “Robot Avcıları”nda! Robotlara
 tutkusu büyük olan Erdem, hayalinin peşinden

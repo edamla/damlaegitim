@@ -1,64 +1,36 @@
 ---
 layout: book
-title: Matematik Öyküleri (10 KİTAP)
-categories:
-- Hikaye
-- İlkokul
+title:  "Matematik Öyküleri (10 KİTAP)"
+categories: [Hikaye, İlkokul]
+
+# Standart Book Attributes
 ean: 9786254112775
-languages:
-- Türkçe
-page: Her Biri 64
-size: 13,5x19,5 cm
+languages: [Türkçe]
+page: "Her Biri 64"
+size: "13,5x19,5 cm"
 publish-number: 2982
-cover: Karton Kapak
-examlink: https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/matematik-oykuleri-oykumatik.pdf
-preview_link: https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223066/index.html
-damlaurl: ''
-paper: Kitap Kağıdı
-authors:
-- Necati Akbaba
-illustrators:
-- Ramila Aliyeva
+cover: "Karton Kapak"
+examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/matematik-oykuleri-oykumatik.pdf"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223066/index.html"
+damlaurl: ""
+paper: "Kitap Kağıdı"
+authors: ["Necati Akbaba"]
+illustrators: ["Ramila Aliyeva"]
+
+# Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
-grades:
-- 3
+grades: [3]
 tags: []
-anatema:
-- Saygı
-- Vatanseverlik
-- Merak
-- Bağımsızlık
-- Kendine Güvenme (Öz Güven)
-- Girişkenlik
-- Açık Fikirlilik
-- Sorumluluk
-- Soru Sorma
-kazanim:
-- H.1.1.1
-- H.1.1.2
-- H.1.2.1
-- H.1.2.3
-- H.1.2.4
-- H.1.3.2
-- H.1.3.3
-- H.1.3.7
-- H.1.4.2
-- H.1.4.5
-beceriler:
-- Dinleme/İzleme Becerisi
-- Okuma Becerisi
-- Konuşma Becerisi
-- Yazma Becerisi
-- Bilgi Okuryazarlığı
-- Görsel Okuryazarlık
-- Kendine Uyarlama (Öz Yansıtma Becerisi)
-- İletişim Becerisi
-- Gözlemleme Becerisi
-- Çözümleme Becerisi
-unite:
-- ATATÜRK VE KAHRAMANLARIMIZ
-- BİLGİ HAZİNEMİZ
+anatema: [Saygı, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Açık Fikirlilik", Sorumluluk, "Soru Sorma"]
+kazanim: [H.1.1.1, H.1.1.2, H.1.2.1, H.1.2.3, H.1.2.4, H.1.3.2, H.1.3.3, H.1.3.7, H.1.4.2, H.1.4.5]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Görsel Okuryazarlık", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "İletişim Becerisi", "Gözlemleme Becerisi", "Çözümleme Becerisi"]
+unite: ["ATATÜRK VE KAHRAMANLARIMIZ", "BİLGİ HAZİNEMİZ"]
+
+# Social Media Attributes
 youtube:
+
+# For adding excerpt add <!--more--> and break the line
 ---
 Gizemli Ormanda Matematik Macerasına Hazır mısınız?
 
