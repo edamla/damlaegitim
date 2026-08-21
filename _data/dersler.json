@@ -1,0 +1,82 @@
+{
+  "ilkokul": {
+    "grades": [1, 2, 3, 4],
+    "subjects": [
+      { "id": "turkce", "name": "Türkçe", "grades": [1, 2, 3, 4] },
+      { "id": "matematik", "name": "Matematik", "grades": [1, 2, 3, 4] },
+      { "id": "hayat-bilgisi", "name": "Hayat Bilgisi", "grades": [1, 2, 3] },
+      { "id": "fen-bilimleri", "name": "Fen Bilimleri", "grades": [3, 4] },
+      { "id": "sosyal-bilgiler", "name": "Sosyal Bilgiler", "grades": [4] },
+      { "id": "yabanci-dil-ingilizce", "name": "Yabancı Dil (İngilizce)", "grades": [2, 3, 4] },
+      { "id": "din-kulturu", "name": "Din Kültürü ve Ahlak Bilgisi", "grades": [4] },
+      { "id": "gorsel-sanatlar", "name": "Görsel Sanatlar", "grades": [1, 2, 3, 4] },
+      { "id": "muzik", "name": "Müzik", "grades": [1, 2, 3, 4] },
+      { "id": "beden-egitimi-oyun", "name": "Beden Eğitimi ve Oyun", "grades": [1, 2, 3, 4] },
+      { "id": "trafik-guvenligi", "name": "Trafik Güvenliği", "grades": [4] },
+      { "id": "insan-haklari", "name": "İnsan Hakları, Yurttaşlık ve Demokrasi", "grades": [4] }
+    ]
+  },
+  "ortaokul": {
+    "grades": [5, 6, 7, 8],
+    "subjects": [
+      { "id": "turkce", "name": "Türkçe", "grades": [5, 6, 7, 8] },
+      { "id": "matematik", "name": "Matematik", "grades": [5, 6, 7, 8] },
+      { "id": "fen-bilimleri", "name": "Fen Bilimleri", "grades": [5, 6, 7, 8] },
+      { "id": "sosyal-bilgiler", "name": "Sosyal Bilgiler", "grades": [5, 6, 7] },
+      { "id": "inkilap", "name": "T.C. İnkılap Tarihi ve Atatürkçülük", "grades": [8] },
+      { "id": "yabanci-dil-ingilizce", "name": "Yabancı Dil (İngilizce)", "grades": [5, 6, 7, 8] },
+      { "id": "din-kulturu", "name": "Din Kültürü ve Ahlak Bilgisi", "grades": [5, 6, 7, 8] },
+      { "id": "gorsel-sanatlar", "name": "Görsel Sanatlar", "grades": [5, 6, 7, 8] },
+      { "id": "muzik", "name": "Müzik", "grades": [5, 6, 7, 8] },
+      { "id": "beden-egitimi-spor", "name": "Beden Eğitimi ve Spor", "grades": [5, 6, 7, 8] },
+      { "id": "bilisim-teknolojileri", "name": "Bilişim Teknolojileri ve Yazılım", "grades": [5, 6] },
+      { "id": "teknoloji-tasarim", "name": "Teknoloji ve Tasarım", "grades": [7, 8] },
+      { "id": "rehberlik-kariyer", "name": "Rehberlik ve Kariyer Planlama", "grades": [8] }
+    ]
+  },
+  "map": [
+    {
+      "level": "both",
+      "ders": "Türkçe",
+      "slug": ["turkce-foy", "pisa-turkce", "cankurtaran-turkce", "parag-dilbil", "yeni-nesil-paragraf"],
+      "patterns": ["turkce", "türkçe", "paragraf", "dilbilgisi", "dil bilgisi"]
+    },
+    {
+      "level": "both",
+      "ders": "Matematik",
+      "slug": ["matematik-foy", "pisa-mat", "cankurtaran-mat", "cilgin-problemler"],
+      "patterns": ["matematik", "problemler", "pisa mat"]
+    },
+    {
+      "level": "both",
+      "ders": "Fen Bilimleri",
+      "slug": ["fen-foy", "cankurtaran-fen"],
+      "patterns": ["fen bilimleri", "fen-foy"]
+    },
+    {
+      "level": "ortaokul",
+      "ders": "T.C. İnkılap Tarihi ve Atatürkçülük",
+      "slug": ["inkilap-foy"],
+      "patterns": ["inkilap", "inkılap", "ataturkculuk", "atatürkçülük"]
+    },
+    {
+      "level": "both",
+      "ders": "Din Kültürü ve Ahlak Bilgisi",
+      "slug": ["din-foy", "din-kulturu"],
+      "patterns": ["din kulturu", "din kültürü"]
+    },
+    {
+      "level": "both",
+      "ders": "Sosyal Bilgiler",
+      "patterns": ["sosyal bilgiler"]
+    },
+    {
+      "level": "ilkokul",
+      "ders": "Hayat Bilgisi",
+      "patterns": ["hayat bilgisi"]
+    }
+  ],
+  "exclude": {
+    "patterns": ["tum dersler", "egitim seti", "tatil", "odevlerim", "dikkat zeka", "montessori", "okul oncesi"]
+  }
+}

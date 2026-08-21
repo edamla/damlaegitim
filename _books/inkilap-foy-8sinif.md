@@ -19,6 +19,7 @@ damlaurl: ""
 # anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: education
 grades: [8]
+ders: "T.C. İnkılap Tarihi ve Atatürkçülük"
 tags: []
 anatema: []
 kazanim: []

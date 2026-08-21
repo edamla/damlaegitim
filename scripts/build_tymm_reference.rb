@@ -3,12 +3,11 @@
 
 require 'csv'
 require 'json'
-require 'yaml'
 require 'pathname'
 require_relative 'curriculum_lib'
 
 ROOT = CurriculumLib::ROOT
-OUTPUT_YML = ROOT.join('_data', 'tymm.yml')
+OUTPUT_JSON = ROOT.join('_data', 'tymm.json')
 OUTPUT_CSV = ROOT.join('docs', 'tymmreferans.csv')
 OUTPUT_CSV_ILKOKUL = ROOT.join('docs', 'tymm-ilkokul-referans.csv')
 OUTPUT_CSV_ORTAOKUL = ROOT.join('docs', 'tymm-ortaokul-referans.csv')
@@ -140,15 +139,15 @@ def main
     grades[g] = build_grade_data(charts_by_grade[g])
   end
 
-  OUTPUT_YML.dirname.mkpath
-  OUTPUT_YML.write({ 'grades' => grades }.to_yaml)
+  OUTPUT_JSON.dirname.mkpath
+  OUTPUT_JSON.write(JSON.pretty_generate({ 'grades' => grades }) + "\n")
 
   csv_rows = build_csv_rows_from_charts(charts_by_grade)
   write_csv(OUTPUT_CSV, csv_rows)
   write_csv(OUTPUT_CSV_ILKOKUL, csv_rows.select { |row| row[0] == 'İlkokul' })
   write_csv(OUTPUT_CSV_ORTAOKUL, csv_rows.select { |row| row[0] == 'Ortaokul' })
 
-  puts "Yazıldı: #{OUTPUT_YML} (#{grades.size} sınıf)"
+  puts "Yazıldı: #{OUTPUT_JSON} (#{grades.size} sınıf)"
   puts "Yazıldı: #{OUTPUT_CSV} (#{csv_rows.size} satır)"
   puts "Yazıldı: #{OUTPUT_CSV_ILKOKUL} (#{csv_rows.count { |r| r[0] == 'İlkokul' }} satır)"
   puts "Yazıldı: #{OUTPUT_CSV_ORTAOKUL} (#{csv_rows.count { |r| r[0] == 'Ortaokul' }} satır)"

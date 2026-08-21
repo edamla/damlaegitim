@@ -114,12 +114,8 @@ module CurriculumLib
     m ? m[1] : nil
   end
 
-  def load_tymm_yml
-    YAML.load_file(ROOT.join('_data', 'tymm.yml'))
-  end
-
-  def load_oykumatik_yml
-    YAML.load_file(ROOT.join('_data', 'oykumatik-kazanimlari.yml'))
+  def load_tymm
+    JSON.parse(ROOT.join('_data', 'tymm.json').read)
   end
 
   def story_books

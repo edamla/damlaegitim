@@ -134,7 +134,7 @@ ROOT = CurriculumLib::ROOT
 REPORT = ROOT.join('docs', 'curriculum-mapping-report.csv')
 
 def main
-  tymm = CurriculumLib.load_tymm_yml
+  tymm = CurriculumLib.load_tymm
   report_rows = []
 
   CurriculumLib.story_books.each do |book|

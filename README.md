@@ -204,8 +204,9 @@ bundle exec jekyll build
 | `[scripts/check_fonts.sh](scripts/check_fonts.sh)`                               | `install.sh` içinden          | Font boyut uyarı raporu                                                                                                                            |
 | `[scripts/normalize_book_frontmatter.rb](scripts/normalize_book_frontmatter.rb)` | Manuel                        | Kitap front matter sıralama; `preview_link`, `examlink`, `damlaurl` korunur; eski `review_link`/`previewpage`/`damlayayinevi` taşınır veya silinir |
 | `[scripts/ogretmen-submit.gs](scripts/ogretmen-submit.gs)`                     | Workspace     | Öğretmen wizard backend; e-tablo Apps Script’ine yapıştırılır — [project.md](project.md#öğretmen-talep-formu-wizard) |
-| `[scripts/build_tymm_reference.rb](scripts/build_tymm_reference.rb)`             | Manuel                        | `docs/tymm-*` API JSON → `_data/tymm.yml` + `docs/tymmreferans.csv`                                                                                |
-| `[scripts/build_oykumatik_reference.rb](scripts/build_oykumatik_reference.rb)`   | Manuel                        | Öykümatik xlsx → `_data/oykumatik-kazanimlari.yml` + `docs/oykumatikkazanimlar.csv`                                                                |
+| `[scripts/build_tymm_reference.rb](scripts/build_tymm_reference.rb)`             | Manuel                        | `docs/tymm-*` API JSON → `_data/tymm.json` + `docs/tymmreferans.csv`                                                                                |
+| `[scripts/fetch_turkiyeadres.py](scripts/fetch_turkiyeadres.py)`                 | Manuel                        | [TurkiyeAPI v2](https://docs.turkiyeapi.dev/tr/) → `_data/turkiye_adres.json` (il / ilçe / mahalle / köy)                                          |
+| `[scripts/fetch_okullar.py](scripts/fetch_okullar.py)`                           | Manuel                        | MEB Okullar AJAX → `_data/okullar.json` + `assets/data/okullar.json` (wizard okul listesi)                                                      |
 
 
 Windows Git Bash'te sıfırdan kurulum: `sh install.sh` → geliştirme: `sh start.sh`.
@@ -215,7 +216,7 @@ Windows Git Bash'te sıfırdan kurulum: `sh install.sh` → geliştirme: `sh sta
 ```
 _books/          Ürünler (kitap / eğitim seti)
 _catalogs/       Kataloglar
-_data/           Jekyll data (webp_manifest.yml — otomatik)
+_data/           Jekyll data (webp_manifest.yml, turkiye_adres.json, okullar.json, …)
 _pages/          Statik sayfalar + search-index.json
 _layouts/        HTML şablonları
 _includes/       Ortak bileşenler (menü, kart, filtre, arama, ai-seo-crawler)
@@ -286,7 +287,7 @@ unite: ["Oyun Dünyası", "Değerlerimizle Varız"]
 
 Hikaye kitaplarında `unite`, `anatema`, `beceriler`, `kazanim` ve `tags` [`book-hero-meta.html`](_includes/book-hero-meta.html) ile başlık altında gösterilir. Eğitim setlerinde Maarif uyum tablosu gövdede markdown tablo olarak yer alır.
 
-`tags` serbest etiket (`empati`, `Dedektiflik`). `kazanim` yalnızca Öykümatik kod dizisi (`H.1.2.1`); sitede `_data/oykumatik-kazanimlari.yml` ile metne çözülür. `preview_link` doluysa İncele butonu görünür. `examlink` doluysa ve `_config.yml` içinde `examlink: true` ise HDS butonu görünür. `damlaurl` doluysa **Satın Al**, boşsa **Bilgi** (tedarik popup).
+`tags` serbest etiket (`empati`, `Dedektiflik`). `kazanim` yalnızca Öykümatik kod dizisi (`H.1.2.1`); sitede kod olarak gösterilir. `preview_link` doluysa İncele butonu görünür. `examlink` doluysa ve `_config.yml` içinde `examlink: true` ise HDS butonu görünür. `damlaurl` doluysa **Satın Al**, boşsa **Bilgi** (tedarik popup).
 
 1. Kapak görselini `assets/images/ean/{ean}.jpg` olarak ekleyin (jpg/png optimize edin; `.webp` `sh start.sh` ile otomatik üretilir)
 2. `sh scripts/check_images.sh` ile boyut kontrolü yapın (veya `sh start.sh` — hook olarak çalışır)

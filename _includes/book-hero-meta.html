@@ -86,13 +86,8 @@
             <div class="book-curriculum__scroll" tabindex="0" role="region" aria-label="Öykümatik kazanım kodu listesi">
             <ul class="book-curriculum__chips" role="list">
               {% for code in hb.kazanim %}
-              {% assign kazanim_entry = site.data.oykumatik_kazanimlari.by_code[code] %}
-              {% assign kazanim_label = code %}
-              {% if kazanim_entry and kazanim_entry.label %}
-                {% assign kazanim_label = kazanim_entry.label %}
-              {% endif %}
               <li>
-                <span class="book-curriculum__chip book-curriculum__chip--kazanim" title="{{ kazanim_label }}" aria-label="Öykümatik kazanım kodu {{ code }}: {{ kazanim_label }}">{{ code }}</span>
+                <span class="book-curriculum__chip book-curriculum__chip--kazanim" aria-label="Öykümatik kazanım kodu {{ code }}">{{ code }}</span>
               </li>
               {% endfor %}
             </ul>

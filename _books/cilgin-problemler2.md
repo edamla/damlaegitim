@@ -19,6 +19,7 @@ damlaurl: ""
 # anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: education
 grades: [2]
+ders: Matematik
 tags: []
 anatema: []
 kazanim: []

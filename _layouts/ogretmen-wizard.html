@@ -93,7 +93,10 @@ window.owOnRecaptchaReady = function() {
   var STEP_LABELS = ['Sınıf', 'Okuma Listesi', 'Eğitim Kitapları', 'Liste', 'İletişim', 'Gönder'];
   var catalog = [];
   var tymmData = {};
-  var ilIlceData = {};
+  var adresIlIlce = { iller: [] };
+  var okullarData = null;
+  var okullarFetchPromise = null;
+  var OKULLAR_URL = {{ site.baseurl | append: '/assets/data/okullar.json' | jsonify }};
   var citySelectInitialized = false;
   var state = {
     step: 1,
@@ -501,28 +504,125 @@ window.owOnRecaptchaReady = function() {
     return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
   }
 
+  function findIl(kodOrName) {
+    if (!kodOrName || !adresIlIlce.iller.length) return null;
+    var key = String(kodOrName);
+    for (var i = 0; i < adresIlIlce.iller.length; i++) {
+      var il = adresIlIlce.iller[i];
+      if (String(il.kod) === key || il.ad === key) return il;
+    }
+    return null;
+  }
+
+  function findIlce(il, kodOrName) {
+    if (!il || !kodOrName) return null;
+    var key = String(kodOrName);
+    for (var j = 0; j < il.ilceler.length; j++) {
+      var ilce = il.ilceler[j];
+      if (String(ilce.kod) === key || ilce.ad === key) return ilce;
+    }
+    return null;
+  }
+
+  function selectedOptionMeta(selectEl) {
+    if (!selectEl || selectEl.selectedIndex < 0) return { kod: '', ad: '' };
+    var opt = selectEl.options[selectEl.selectedIndex];
+    return {
+      kod: (opt && opt.value) || '',
+      ad: (opt && (opt.dataset.ad || opt.textContent)) || ''
+    };
+  }
+
+  function loadOkullarData() {
+    if (okullarData) return Promise.resolve(okullarData);
+    if (okullarFetchPromise) return okullarFetchPromise;
+    okullarFetchPromise = fetch(OKULLAR_URL)
+      .then(function(res) {
+        if (!res.ok) throw new Error('okullar.json yüklenemedi');
+        return res.json();
+      })
+      .then(function(data) {
+        okullarData = data || {};
+        return okullarData;
+      })
+      .catch(function(err) {
+        console.log('Okul listesi yüklenemedi:', err);
+        okullarData = { iller: {} };
+        return okullarData;
+      });
+    return okullarFetchPromise;
+  }
+
+  function populateSchoolList(ilKod, ilceKod, selectedSchool) {
+    var schoolInput = document.getElementById('ow-school');
+    var datalist = document.getElementById('ow-school-list');
+    var hint = document.getElementById('ow-school-hint');
+    if (!schoolInput || !datalist) return;
+
+    datalist.innerHTML = '';
+    if (!ilKod || !ilceKod) {
+      schoolInput.placeholder = 'Önce il ve ilçe seçin';
+      if (hint) hint.textContent = 'İl ve ilçe seçildiğinde MEB kurum listesi yüklenir. Listede yoksa okul adını elle yazabilirsiniz.';
+      return;
+    }
+
+    schoolInput.placeholder = 'Okul arayın veya yazın…';
+    if (hint) hint.textContent = 'Kurum listesi yükleniyor…';
+
+    loadOkullarData().then(function(data) {
+      datalist.innerHTML = '';
+      var ilNode = data.iller && data.iller[String(ilKod)];
+      var ilceNode = ilNode && ilNode.ilceler && ilNode.ilceler[String(ilceKod)];
+      var kurumlar = (ilceNode && ilceNode.kurumlar) || [];
+      kurumlar.slice().sort(function(a, b) {
+        return (a.ad || '').localeCompare(b.ad || '', 'tr');
+      }).forEach(function(kurum) {
+        if (!kurum.ad) return;
+        var opt = document.createElement('option');
+        opt.value = kurum.ad;
+        datalist.appendChild(opt);
+      });
+      if (hint) {
+        if (kurumlar.length) {
+          hint.textContent = kurumlar.length + ' kurum listelendi. Listede yoksa okul adını elle yazabilirsiniz.';
+        } else {
+          hint.textContent = 'Bu ilçe için kayıtlı kurum bulunamadı; okul adını elle yazın.';
+        }
+      }
+      if (selectedSchool) schoolInput.value = selectedSchool;
+    });
+  }
+
   function readContactForm() {
+    var citySel = document.getElementById('ow-city');
+    var districtSel = document.getElementById('ow-district');
+    var cityMeta = selectedOptionMeta(citySel);
+    var districtMeta = selectedOptionMeta(districtSel);
     return {
       firstName: document.getElementById('ow-first-name').value.trim(),
       lastName: document.getElementById('ow-last-name').value.trim(),
-      city: document.getElementById('ow-city').value.trim(),
-      district: document.getElementById('ow-district').value.trim(),
+      city: cityMeta.ad.trim(),
+      cityKod: cityMeta.kod.trim(),
+      district: districtMeta.ad.trim(),
+      districtKod: districtMeta.kod.trim(),
       phone: document.getElementById('ow-phone').value.trim(),
       email: document.getElementById('ow-email').value.trim(),
       school: document.getElementById('ow-school').value.trim()
     };
   }
 
-  function populateDistrictSelect(city, selectedDistrict) {
+  function populateDistrictSelect(ilKod, selectedIlce) {
     var districtSel = document.getElementById('ow-district');
     if (!districtSel) return;
     districtSel.innerHTML = '';
-    if (!city || !ilIlceData[city]) {
+    var il = findIl(ilKod);
+    if (!ilKod || !il) {
       districtSel.disabled = true;
       var emptyOpt = document.createElement('option');
       emptyOpt.value = '';
       emptyOpt.textContent = 'Önce il seçin';
       districtSel.appendChild(emptyOpt);
+      populateSchoolList('', '', '');
       return;
     }
     districtSel.disabled = false;
@@ -530,25 +630,45 @@ window.owOnRecaptchaReady = function() {
     placeholder.value = '';
     placeholder.textContent = 'İlçe seçin';
     districtSel.appendChild(placeholder);
-    ilIlceData[city].forEach(function(name) {
+    il.ilceler.slice().sort(function(a, b) {
+      return a.ad.localeCompare(b.ad, 'tr');
+    }).forEach(function(ilce) {
       var opt = document.createElement('option');
-      opt.value = name;
-      opt.textContent = name;
+      opt.value = String(ilce.kod);
+      opt.dataset.ad = ilce.ad;
+      opt.textContent = ilce.ad;
       districtSel.appendChild(opt);
     });
-    if (selectedDistrict && ilIlceData[city].indexOf(selectedDistrict) !== -1) {
-      districtSel.value = selectedDistrict;
+    var ilce = findIlce(il, selectedIlce);
+    if (ilce) {
+      districtSel.value = String(ilce.kod);
+      populateSchoolList(String(il.kod), String(ilce.kod), state.contact && state.contact.school);
+    } else {
+      populateSchoolList(String(il.kod), '', '');
     }
   }
 
-  function ensureCityOption(citySel, city) {
-    if (!city || !citySel) return;
-    for (var i = 0; i < citySel.options.length; i++) {
-      if (citySel.options[i].value === city) return;
+  function ensureCityOption(citySel, kodOrName) {
+    if (!kodOrName || !citySel) return;
+    var il = findIl(kodOrName);
+    if (il) {
+      for (var i = 0; i < citySel.options.length; i++) {
+        if (citySel.options[i].value === String(il.kod)) return;
+      }
+      var opt = document.createElement('option');
+      opt.value = String(il.kod);
+      opt.dataset.ad = il.ad;
+      opt.textContent = il.ad;
+      citySel.appendChild(opt);
+      return;
+    }
+    for (var j = 0; j < citySel.options.length; j++) {
+      if (citySel.options[j].value === kodOrName) return;
     }
     var legacy = document.createElement('option');
-    legacy.value = city;
-    legacy.textContent = city;
+    legacy.value = kodOrName;
+    legacy.dataset.ad = kodOrName;
+    legacy.textContent = kodOrName;
     citySel.appendChild(legacy);
   }
 
@@ -558,34 +678,62 @@ window.owOnRecaptchaReady = function() {
     if (!citySel || !districtSel) return;
 
     if (!citySelectInitialized) {
-      Object.keys(ilIlceData).sort(function(a, b) {
-        return a.localeCompare(b, 'tr');
-      }).forEach(function(city) {
+      adresIlIlce.iller.slice().sort(function(a, b) {
+        return a.ad.localeCompare(b.ad, 'tr');
+      }).forEach(function(il) {
         var opt = document.createElement('option');
-        opt.value = city;
-        opt.textContent = city;
+        opt.value = String(il.kod);
+        opt.dataset.ad = il.ad;
+        opt.textContent = il.ad;
         citySel.appendChild(opt);
       });
       citySel.addEventListener('change', function() {
         populateDistrictSelect(citySel.value, '');
+        var schoolInput = document.getElementById('ow-school');
+        if (schoolInput) schoolInput.value = '';
         state.contact = readContactForm();
         state.contact.district = '';
+        state.contact.districtKod = '';
+        state.contact.school = '';
         saveState();
       });
       districtSel.addEventListener('change', function() {
+        var ilKod = citySel.value;
+        var ilceKod = districtSel.value;
+        var schoolInput = document.getElementById('ow-school');
+        if (schoolInput) schoolInput.value = '';
+        populateSchoolList(ilKod, ilceKod, '');
         state.contact = readContactForm();
+        state.contact.school = '';
         saveState();
       });
+      var schoolInput = document.getElementById('ow-school');
+      if (schoolInput) {
+        schoolInput.addEventListener('change', function() {
+          state.contact = readContactForm();
+          saveState();
+        });
+        schoolInput.addEventListener('input', function() {
+          state.contact = readContactForm();
+          saveState();
+        });
+      }
       citySelectInitialized = true;
     }
 
-    var savedCity = (state.contact && state.contact.city) || citySel.value;
+    var saved = state.contact || {};
+    var savedCity = saved.cityKod || saved.city || citySel.value;
     if (savedCity) {
       ensureCityOption(citySel, savedCity);
-      citySel.value = savedCity;
-      populateDistrictSelect(savedCity, state.contact && state.contact.district);
+      var il = findIl(savedCity);
+      citySel.value = il ? String(il.kod) : savedCity;
+      populateDistrictSelect(citySel.value, saved.districtKod || saved.district);
+      if (saved.school) {
+        populateSchoolList(citySel.value, districtSel.value, saved.school);
+      }
     } else {
       populateDistrictSelect('', '');
+      populateSchoolList('', '', '');
     }
   }
 
@@ -595,7 +743,6 @@ window.owOnRecaptchaReady = function() {
     if (c.lastName) document.getElementById('ow-last-name').value = c.lastName;
     if (c.phone) document.getElementById('ow-phone').value = c.phone;
     if (c.email) document.getElementById('ow-email').value = c.email;
-    if (c.school) document.getElementById('ow-school').value = c.school;
     initCityDistrictSelects();
   }
 
@@ -758,9 +905,9 @@ window.owOnRecaptchaReady = function() {
     if (tymmEl) {
       try { tymmData = JSON.parse(tymmEl.textContent); } catch (e) { tymmData = {}; }
     }
-    var ilIlceEl = document.getElementById('ogretmen-il-ilce');
-    if (ilIlceEl) {
-      try { ilIlceData = JSON.parse(ilIlceEl.textContent); } catch (e) { ilIlceData = {}; }
+    var adresEl = document.getElementById('ogretmen-adres-il-ilce');
+    if (adresEl) {
+      try { adresIlIlce = JSON.parse(adresEl.textContent); } catch (e) { adresIlIlce = { iller: [] }; }
     }
     loadState();
     bindClearListHandlers();

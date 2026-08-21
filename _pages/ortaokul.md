@@ -12,8 +12,8 @@ footer_show: true
     <p class="lead text-muted">Sınıf ve ders bazında Damla Okul yayınları. LGS hazırlık ve okuma kültürü tek vitrinde.</p>
   </header>
 
-  {% assign dersler = "Türkçe,Matematik,Fen Bilimleri,İnkılap,Sosyal Bilgiler,Din Kültürü ve Ahlak Bilgisi,Genel" | split: "," %}
-  {% assign siniflar = "5,6,7,8" | split: "," %}
+  {% assign siniflar = site.data.dersler.ortaokul.grades %}
+  {% assign ortaokul_subjects = site.data.dersler.ortaokul.subjects %}
 
   <div class="table-responsive">
     <table class="table table-bordered align-middle">
@@ -26,17 +26,42 @@ footer_show: true
         </tr>
       </thead>
       <tbody>
-        {% for ders in dersler %}
+        {% for subject in ortaokul_subjects %}
+        {% assign ders = subject.name %}
+        {% assign ders_books = site.books | where_exp: "b", "b.ders == ders" | where_exp: "b", "b.categories contains 'Ortaokul'" %}
+        {% if ders_books.size > 0 %}
         <tr>
           <th scope="row">{{ ders }}</th>
           {% for sinif in siniflar %}
           {% assign sinif_num = sinif | plus: 0 %}
-          {% assign cell_books = site.books | where_exp: "b", "b.grades contains sinif_num" %}
-          {% if ders == "Genel" %}
-            {% assign cell_books = cell_books | where_exp: "b", "b.categories contains 'Ortaokul'" %}
+          {% unless subject.grades contains sinif_num %}
+          <td class="text-muted">—</td>
           {% else %}
-            {% assign cell_books = cell_books | where_exp: "b", "b.categories contains ders" %}
-          {% endif %}
+          {% assign cell_books = site.books | where_exp: "b", "b.grades contains sinif_num" | where_exp: "b", "b.ders == ders" %}
+          <td>
+            {% if cell_books.size > 0 %}
+            <ul class="list-unstyled small mb-0">
+              {% for book in cell_books limit: 4 %}
+              <li><a href="{{ site.baseurl }}{{ book.url }}">{{ book.title }}</a></li>
+              {% endfor %}
+              {% if cell_books.size > 4 %}
+              <li class="text-muted">+{{ cell_books.size | minus: 4 }} ürün</li>
+              {% endif %}
+            </ul>
+            {% else %}
+            <span class="text-muted">—</span>
+            {% endif %}
+          </td>
+          {% endunless %}
+          {% endfor %}
+        </tr>
+        {% endif %}
+        {% endfor %}
+        <tr>
+          <th scope="row">Genel</th>
+          {% for sinif in siniflar %}
+          {% assign sinif_num = sinif | plus: 0 %}
+          {% assign cell_books = site.books | where_exp: "b", "b.grades contains sinif_num" | where_exp: "b", "b.categories contains 'Ortaokul'" %}
           <td>
             {% if cell_books.size > 0 %}
             <ul class="list-unstyled small mb-0">
@@ -53,7 +78,6 @@ footer_show: true
           </td>
           {% endfor %}
         </tr>
-        {% endfor %}
       </tbody>
     </table>
   </div>

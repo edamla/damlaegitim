@@ -12,7 +12,7 @@ HEADER_KEYS = %w[layout title description categories].freeze
 STANDARD_KEYS = %w[ean languages page size publish-number cover examlink preview_link damlaurl].freeze
 OPTIONAL_STANDARD_KEYS = %w[original-name original-language].freeze
 BOOK_DETAIL_KEYS = %w[paper authors illustrators].freeze
-FILTERABLE_KEYS = %w[genre grades tags anatema kazanim beceriler unite].freeze
+FILTERABLE_KEYS = %w[genre grades ders tags anatema kazanim beceriler unite].freeze
 
 def parse_frontmatter(content)
   match = content.match(/\A---\r?\n(.*?)\r?\n---\r?\n(.*)\z/m)
@@ -45,6 +45,8 @@ def normalize_data(data)
   data['damlaurl'] = data.delete('damlayayinevi') if data.key?('damlayayinevi')
   data['damlaurl'] = '' if data['damlaurl'].nil?
   data['youtube'] = '' if data['youtube'].nil?
+  data.delete('ders') if data['genre'] != 'education'
+  data.delete('ders') if data['ders'].is_a?(String) && data['ders'].strip.empty?
 
   data
 end
@@ -120,6 +122,8 @@ def build_frontmatter(data)
   lines << '# Spesific Filterable Attributes'
   lines << '# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri'
   FILTERABLE_KEYS.each do |key|
+    next if key == 'ders' && (data[key].nil? || data[key].to_s.empty?)
+
     lines << "#{key}: #{yaml_value(data[key], key: key)}"
   end
 

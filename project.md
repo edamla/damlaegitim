@@ -97,7 +97,9 @@ damlaegitim/
 │       ├── ean/                  # Kitap kapak görselleri (webp otomatik üretilebilir)
 │       └── favicon/
 ├── _data/
-│   └── webp_manifest.yml         # Otomatik: mevcut .webp listesi (generate_webp.sh)
+│   ├── webp_manifest.yml         # Otomatik: mevcut .webp listesi (generate_webp.sh)
+│   ├── turkiye_adres.json        # İl / ilçe / mahalle / köy (scripts/fetch_turkiyeadres.py)
+│   └── okullar.json              # MEB kurum listesi (+ assets/data/okullar.json kopyası)
 ├── scripts/
 │   ├── install_image_tools.sh    # WebP/ImageMagick kurulumu (install.sh; winget/brew/apt)
 │   ├── generate_webp.sh          # jpg/png → .webp + manifest güncelleme (start.sh hook)
@@ -107,6 +109,8 @@ damlaegitim/
 │   ├── subset_font.sh            # Tüm OTF/TTF → WOFF2 subset (install.sh)
 │   ├── normalize_book_frontmatter.rb   # Kitap front matter sıralama/normalize (`preview_link`, `examlink`, `damlaurl`; eski alan migrasyonu)
 │   ├── ogretmen-submit.gs              # Öğretmen wizard → Sheets + mail (Workspace’te dağıtılır; repo referans kopyası)
+│   ├── fetch_turkiyeadres.py           # TurkiyeAPI v2 → `_data/turkiye_adres.json`
+│   └── fetch_okullar.py                # MEB Okullar → `_data/okullar.json`
 ├── index.html            # Anasayfa
 ├── Gemfile               # github-pages + webrick (canlı GitHub Pages ile aynı stack)
 ├── CNAME                 # damlaokul.com
@@ -190,8 +194,9 @@ flowchart LR
 | `_includes/ogretmen-wizard/step-*.html` | 6 adım UI |
 | `assets/css/ogretmen-wizard.css` | Wizard stilleri ([design.md](design.md#14-öğretmen-talep-formu-wizard)) |
 | `assets/js/book-filter.js` | TYMM filtreleri |
-| `_data/turkiye_il_ilce.json` | İl / ilçe select |
-| `_data/tymm.yml` | Hikaye filtre sıralaması |
+| `_data/turkiye_adres.json` | İl / ilçe / mahalle / köy referansı (`scripts/fetch_turkiyeadres.py`) |
+| `_data/okullar.json` | MEB kurum listesi; il/ilçe kodları `turkiye_adres.json` ile (`scripts/fetch_okullar.py`) |
+| `_data/tymm.json` | Hikaye filtre sıralaması |
 | `scripts/ogretmen-submit.gs` | Backend referansı (Workspace’te dağıtılır) |
 
 ### Yapılandırma (`_config.yml`)
