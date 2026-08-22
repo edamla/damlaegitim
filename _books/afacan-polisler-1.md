@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Afacan Polisler-1"
-description: "Fikriye Ana ne olur yapma!” diye yalvaran minik çocuğun sesi, olayların fitilini miz Bilgin’in hemen dikkatini çeker. Çünkü hiçbir çocuk öz annesine…"
+description: "Dört afacan gencin, sokaktaki masum bir Olaya müdahale etmesiyle başlayan ve polis akademisine uzanan nefes kesici serüveni başlıyor!""
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -21,7 +21,7 @@ authors: ["Yavuz Ali Bilge"]
 # anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-tags: [dedektiflik, adalet, ekip-ruhu, macera]
+tags: [Adalet Arayışı, Gençlerin Gücü, Disiplin ve Kurallar, Ekip Ruhu, Meslek Bilinci, Empati]
 anatema: [Merak, "Gerçeği Arama", Muhakeme, Analitiklik, "Soru Sorma", Çalışkanlık, Dürüstlük, Özgürlük, Sabır, Saygı, Sorumluluk, Bağımsızlık]
 kazanim: [H.1.2.2, H.1.3.3, H.1.3.5, H.1.3.8, H.3.2.1, H.3.3.3, H.4.2.1, H.4.2.2, H.4.2.4, H.4.3.1]
 beceriler: ["Eleştirel Düşünme Becerisi", "Problem Çözme Becerisi", "Çıkarım Yapma Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi"]

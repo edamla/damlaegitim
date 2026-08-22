@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""MEB Okullar ve Diğer Kurumlar → _data/okullar.json"""
+"""MEB Okullar ve Diğer Kurumlar → docs/data/okullar.json"""
 
 from __future__ import annotations
 
@@ -20,10 +20,15 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
+_SCRIPT_DIR = Path(__file__).resolve().parent
+if str(_SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPT_DIR))
+
+from data_paths import CANONICAL, REF_TURKIYE_ADRES
+
 ROOT = Path(__file__).resolve().parents[1]
-ADRES_PATH = ROOT / "_data" / "turkiye_adres.json"
-OUTPUT_PATH = ROOT / "_data" / "okullar.json"
-ASSETS_OUTPUT_PATH = ROOT / "assets" / "data" / "okullar.json"
+ADRES_PATH = CANONICAL["turkiye_adres"]
+OUTPUT_PATH = CANONICAL["okullar"]
 BAKANLIK_IL_KOD = "99"
 
 INDEX_URL = "https://www.meb.gov.tr/baglantilar/okullar/index.php"
@@ -515,7 +520,7 @@ def fetch_index_html() -> str:
 
 
 def main(argv: Optional[Iterable[str]] = None) -> int:
-    parser = argparse.ArgumentParser(description="MEB okul/kurum listesini _data/okullar.json olarak üretir")
+    parser = argparse.ArgumentParser(description="MEB okul/kurum listesini docs/data/okullar.json olarak üretir")
     parser.add_argument("--il", help="Yalnızca bu il kodu (ör. 1 veya 34)")
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH)
     args = parser.parse_args(list(argv) if argv is not None else None)
@@ -581,7 +586,7 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
 
     payload = {
         "kaynak": INDEX_URL,
-        "referans": "_data/turkiye_adres.json",
+        "referans": REF_TURKIYE_ADRES,
         "guncelleme": date.today().isoformat(),
         "sayi": count,
         "iller": sort_iller(hierarchy),
@@ -589,12 +594,9 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(payload, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     print(f"Yazıldı: {args.output} ({count} kurum, {len(payload['iller'])} il)")
-    ASSETS_OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    ASSETS_OUTPUT_PATH.write_text(
-        json.dumps(payload, ensure_ascii=False, separators=(",", ":")),
-        encoding="utf-8",
-    )
-    print(f"Kopyalandı: {ASSETS_OUTPUT_PATH}")
+    from sync_site_data import sync
+
+    sync()
     return 0 if count else 1
 
 

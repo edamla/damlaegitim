@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Cingöz Kafeste"
-description: "İyiliksever ve kibar hırsızımız Cingöz Recai, bu kez köşeye sıkışıyor! Zekâsı ve göz, Başkomiser Mehmed Rıza’nın kurduğu ustaca bir tuzağın içine, yani…"
+description: "Kurnazlığı ve zekâsıyla polisi peşinden sürükleyen kibar hırsız Cingöz Recai'nin akllalmaz maceraları!"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -21,11 +21,11 @@ authors: ["Peyami Safa"]
 # anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Zekâ Çatışması,Yanılsama,Özgüven,Zaaflar,Adalet,Ortak Düşman]
 anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
 kazanim: [H.1.2.2, H.1.2.3, H.1.2.4, H.2.2.1, H.2.2.2, H.3.2.1, H.4.2.1, H.4.2.2, H.4.2.3, H.4.2.4]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
-unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
+unite: ["DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

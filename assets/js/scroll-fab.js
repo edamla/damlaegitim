@@ -3,8 +3,6 @@
   if (!btn) return;
 
   var icon = btn.querySelector('.scroll-fab__icon');
-  var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var scrollBehavior = reducedMotion ? 'auto' : 'smooth';
   var mode = 'down';
 
   function isScrollable() {
@@ -29,24 +27,18 @@
     if (mode === 'up') {
       icon.classList.remove('fa-chevron-down');
       icon.classList.add('fa-chevron-up');
-      btn.setAttribute('aria-label', 'Yukarı çık');
+      btn.setAttribute('aria-label', 'Sayfa başına git');
     } else {
       icon.classList.remove('fa-chevron-up');
       icon.classList.add('fa-chevron-down');
-      btn.setAttribute('aria-label', 'Aşağı in');
+      btn.setAttribute('aria-label', 'Sayfa sonuna git');
     }
   }
 
   function onClick() {
-    if (mode === 'up') {
-      window.scrollTo({ top: 0, behavior: scrollBehavior });
-      return;
-    }
-
-    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
     var maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-    var target = Math.min(scrollY + window.innerHeight * 0.85, maxScroll);
-    window.scrollTo({ top: target, behavior: scrollBehavior });
+    var target = mode === 'up' ? 0 : maxScroll;
+    window.scrollTo({ top: target, behavior: 'auto' });
   }
 
   btn.addEventListener('click', onClick);

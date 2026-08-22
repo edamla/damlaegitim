@@ -1,0 +1,4387 @@
+{
+  "meta": {
+    "kaynak": "https://docs.turkiyeapi.dev/tr/",
+    "guncelleme": "2026-08-21",
+    "referans": "docs/data/turkiye_adres.json"
+  },
+  "iller": [
+    {
+      "kod": 1,
+      "ad": "Adana",
+      "ilceler": [
+        {
+          "kod": 1757,
+          "ad": "Aladağ"
+        },
+        {
+          "kod": 1219,
+          "ad": "Ceyhan"
+        },
+        {
+          "kod": 1329,
+          "ad": "Feke"
+        },
+        {
+          "kod": 1806,
+          "ad": "İmamoğlu"
+        },
+        {
+          "kod": 1437,
+          "ad": "Karaisalı"
+        },
+        {
+          "kod": 1443,
+          "ad": "Karataş"
+        },
+        {
+          "kod": 1486,
+          "ad": "Kozan"
+        },
+        {
+          "kod": 1580,
+          "ad": "Pozantı"
+        },
+        {
+          "kod": 1588,
+          "ad": "Saimbeyli"
+        },
+        {
+          "kod": 2032,
+          "ad": "Sarıçam"
+        },
+        {
+          "kod": 1104,
+          "ad": "Seyhan"
+        },
+        {
+          "kod": 1687,
+          "ad": "Tufanbeyli"
+        },
+        {
+          "kod": 1734,
+          "ad": "Yumurtalık"
+        },
+        {
+          "kod": 1748,
+          "ad": "Yüreğir"
+        },
+        {
+          "kod": 2033,
+          "ad": "Çukurova"
+        }
+      ]
+    },
+    {
+      "kod": 2,
+      "ad": "Adıyaman",
+      "ilceler": [
+        {
+          "kod": 1182,
+          "ad": "Besni"
+        },
+        {
+          "kod": 1347,
+          "ad": "Gerger"
+        },
+        {
+          "kod": 1354,
+          "ad": "Gölbaşı"
+        },
+        {
+          "kod": 1425,
+          "ad": "Kahta"
+        },
+        {
+          "kod": 1105,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1592,
+          "ad": "Samsat"
+        },
+        {
+          "kod": 1985,
+          "ad": "Sincik"
+        },
+        {
+          "kod": 1989,
+          "ad": "Tut"
+        },
+        {
+          "kod": 1246,
+          "ad": "Çelikhan"
+        }
+      ]
+    },
+    {
+      "kod": 3,
+      "ad": "Afyonkarahisar",
+      "ilceler": [
+        {
+          "kod": 1773,
+          "ad": "Bayat"
+        },
+        {
+          "kod": 1771,
+          "ad": "Başmakçı"
+        },
+        {
+          "kod": 1200,
+          "ad": "Bolvadin"
+        },
+        {
+          "kod": 1267,
+          "ad": "Dazkırı"
+        },
+        {
+          "kod": 1281,
+          "ad": "Dinar"
+        },
+        {
+          "kod": 1306,
+          "ad": "Emirdağ"
+        },
+        {
+          "kod": 1923,
+          "ad": "Evciler"
+        },
+        {
+          "kod": 1944,
+          "ad": "Hocalar"
+        },
+        {
+          "kod": 1404,
+          "ad": "İhsaniye"
+        },
+        {
+          "kod": 1809,
+          "ad": "İscehisar"
+        },
+        {
+          "kod": 1961,
+          "ad": "Kızılören"
+        },
+        {
+          "kod": 1108,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1594,
+          "ad": "Sandıklı"
+        },
+        {
+          "kod": 1626,
+          "ad": "Sinanpaşa"
+        },
+        {
+          "kod": 1639,
+          "ad": "Sultandağı"
+        },
+        {
+          "kod": 1239,
+          "ad": "Çay"
+        },
+        {
+          "kod": 1906,
+          "ad": "Çobanlar"
+        },
+        {
+          "kod": 1664,
+          "ad": "Şuhut"
+        }
+      ]
+    },
+    {
+      "kod": 4,
+      "ad": "Ağrı",
+      "ilceler": [
+        {
+          "kod": 1283,
+          "ad": "Diyadin"
+        },
+        {
+          "kod": 1287,
+          "ad": "Doğubayazıt"
+        },
+        {
+          "kod": 1301,
+          "ad": "Eleşkirt"
+        },
+        {
+          "kod": 1379,
+          "ad": "Hamur"
+        },
+        {
+          "kod": 1111,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1568,
+          "ad": "Patnos"
+        },
+        {
+          "kod": 1667,
+          "ad": "Taşlıçay"
+        },
+        {
+          "kod": 1691,
+          "ad": "Tutak"
+        }
+      ]
+    },
+    {
+      "kod": 5,
+      "ad": "Amasya",
+      "ilceler": [
+        {
+          "kod": 1363,
+          "ad": "Göynücek"
+        },
+        {
+          "kod": 1368,
+          "ad": "Gümüşhacıköy"
+        },
+        {
+          "kod": 1938,
+          "ad": "Hamamözü"
+        },
+        {
+          "kod": 1134,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1524,
+          "ad": "Merzifon"
+        },
+        {
+          "kod": 1641,
+          "ad": "Suluova"
+        },
+        {
+          "kod": 1668,
+          "ad": "Taşova"
+        }
+      ]
+    },
+    {
+      "kod": 6,
+      "ad": "Ankara",
+      "ilceler": [
+        {
+          "kod": 1872,
+          "ad": "Akyurt"
+        },
+        {
+          "kod": 1130,
+          "ad": "Altındağ"
+        },
+        {
+          "kod": 1157,
+          "ad": "Ayaş"
+        },
+        {
+          "kod": 1167,
+          "ad": "Bala"
+        },
+        {
+          "kod": 1187,
+          "ad": "Beypazarı"
+        },
+        {
+          "kod": 1302,
+          "ad": "Elmadağ"
+        },
+        {
+          "kod": 1922,
+          "ad": "Etimesgut"
+        },
+        {
+          "kod": 1924,
+          "ad": "Evren"
+        },
+        {
+          "kod": 1744,
+          "ad": "Gölbaşı"
+        },
+        {
+          "kod": 1365,
+          "ad": "Güdül"
+        },
+        {
+          "kod": 1387,
+          "ad": "Haymana"
+        },
+        {
+          "kod": 1815,
+          "ad": "Kahramankazan"
+        },
+        {
+          "kod": 1427,
+          "ad": "Kalecik"
+        },
+        {
+          "kod": 1745,
+          "ad": "Keçiören"
+        },
+        {
+          "kod": 1473,
+          "ad": "Kızılcahamam"
+        },
+        {
+          "kod": 1746,
+          "ad": "Mamak"
+        },
+        {
+          "kod": 1539,
+          "ad": "Nallıhan"
+        },
+        {
+          "kod": 1578,
+          "ad": "Polatlı"
+        },
+        {
+          "kod": 2034,
+          "ad": "Pursaklar"
+        },
+        {
+          "kod": 1747,
+          "ad": "Sincan"
+        },
+        {
+          "kod": 1723,
+          "ad": "Yenimahalle"
+        },
+        {
+          "kod": 1227,
+          "ad": "Çamlıdere"
+        },
+        {
+          "kod": 1231,
+          "ad": "Çankaya"
+        },
+        {
+          "kod": 1260,
+          "ad": "Çubuk"
+        },
+        {
+          "kod": 1658,
+          "ad": "Şereflikoçhisar"
+        }
+      ]
+    },
+    {
+      "kod": 7,
+      "ad": "Antalya",
+      "ilceler": [
+        {
+          "kod": 1121,
+          "ad": "Akseki"
+        },
+        {
+          "kod": 2035,
+          "ad": "Aksu"
+        },
+        {
+          "kod": 1126,
+          "ad": "Alanya"
+        },
+        {
+          "kod": 1811,
+          "ad": "Demre"
+        },
+        {
+          "kod": 2036,
+          "ad": "Döşemealtı"
+        },
+        {
+          "kod": 1303,
+          "ad": "Elmalı"
+        },
+        {
+          "kod": 1333,
+          "ad": "Finike"
+        },
+        {
+          "kod": 1337,
+          "ad": "Gazipaşa"
+        },
+        {
+          "kod": 1370,
+          "ad": "Gündoğmuş"
+        },
+        {
+          "kod": 1946,
+          "ad": "İbradı"
+        },
+        {
+          "kod": 1451,
+          "ad": "Kaş"
+        },
+        {
+          "kod": 1959,
+          "ad": "Kemer"
+        },
+        {
+          "kod": 2037,
+          "ad": "Kepez"
+        },
+        {
+          "kod": 2038,
+          "ad": "Konyaaltı"
+        },
+        {
+          "kod": 1483,
+          "ad": "Korkuteli"
+        },
+        {
+          "kod": 1492,
+          "ad": "Kumluca"
+        },
+        {
+          "kod": 1512,
+          "ad": "Manavgat"
+        },
+        {
+          "kod": 2039,
+          "ad": "Muratpaşa"
+        },
+        {
+          "kod": 1616,
+          "ad": "Serik"
+        }
+      ]
+    },
+    {
+      "kod": 8,
+      "ad": "Artvin",
+      "ilceler": [
+        {
+          "kod": 1145,
+          "ad": "Ardanuç"
+        },
+        {
+          "kod": 1147,
+          "ad": "Arhavi"
+        },
+        {
+          "kod": 1202,
+          "ad": "Borçka"
+        },
+        {
+          "kod": 1395,
+          "ad": "Hopa"
+        },
+        {
+          "kod": 2105,
+          "ad": "Kemalpaşa"
+        },
+        {
+          "kod": 1152,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1828,
+          "ad": "Murgul"
+        },
+        {
+          "kod": 1736,
+          "ad": "Yusufeli"
+        },
+        {
+          "kod": 1653,
+          "ad": "Şavşat"
+        }
+      ]
+    },
+    {
+      "kod": 9,
+      "ad": "Aydın",
+      "ilceler": [
+        {
+          "kod": 1206,
+          "ad": "Bozdoğan"
+        },
+        {
+          "kod": 1781,
+          "ad": "Buharkent"
+        },
+        {
+          "kod": 2000,
+          "ad": "Didim"
+        },
+        {
+          "kod": 2076,
+          "ad": "Efeler"
+        },
+        {
+          "kod": 1348,
+          "ad": "Germencik"
+        },
+        {
+          "kod": 1807,
+          "ad": "İncirliova"
+        },
+        {
+          "kod": 1435,
+          "ad": "Karacasu"
+        },
+        {
+          "kod": 1957,
+          "ad": "Karpuzlu"
+        },
+        {
+          "kod": 1479,
+          "ad": "Koçarlı"
+        },
+        {
+          "kod": 1498,
+          "ad": "Kuyucak"
+        },
+        {
+          "kod": 1497,
+          "ad": "Kuşadası"
+        },
+        {
+          "kod": 1968,
+          "ad": "Köşk"
+        },
+        {
+          "kod": 1542,
+          "ad": "Nazilli"
+        },
+        {
+          "kod": 1640,
+          "ad": "Sultanhisar"
+        },
+        {
+          "kod": 1637,
+          "ad": "Söke"
+        },
+        {
+          "kod": 1724,
+          "ad": "Yenipazar"
+        },
+        {
+          "kod": 1256,
+          "ad": "Çine"
+        }
+      ]
+    },
+    {
+      "kod": 10,
+      "ad": "Balıkesir",
+      "ilceler": [
+        {
+          "kod": 2077,
+          "ad": "Altıeylül"
+        },
+        {
+          "kod": 1161,
+          "ad": "Ayvalık"
+        },
+        {
+          "kod": 1169,
+          "ad": "Balya"
+        },
+        {
+          "kod": 1171,
+          "ad": "Bandırma"
+        },
+        {
+          "kod": 1191,
+          "ad": "Bigadiç"
+        },
+        {
+          "kod": 1216,
+          "ad": "Burhaniye"
+        },
+        {
+          "kod": 1291,
+          "ad": "Dursunbey"
+        },
+        {
+          "kod": 1294,
+          "ad": "Edremit"
+        },
+        {
+          "kod": 1310,
+          "ad": "Erdek"
+        },
+        {
+          "kod": 1928,
+          "ad": "Gömeç"
+        },
+        {
+          "kod": 1360,
+          "ad": "Gönen"
+        },
+        {
+          "kod": 1384,
+          "ad": "Havran"
+        },
+        {
+          "kod": 1418,
+          "ad": "İvrindi"
+        },
+        {
+          "kod": 2078,
+          "ad": "Karesi"
+        },
+        {
+          "kod": 1462,
+          "ad": "Kepsut"
+        },
+        {
+          "kod": 1514,
+          "ad": "Manyas"
+        },
+        {
+          "kod": 1824,
+          "ad": "Marmara"
+        },
+        {
+          "kod": 1608,
+          "ad": "Savaştepe"
+        },
+        {
+          "kod": 1644,
+          "ad": "Susurluk"
+        },
+        {
+          "kod": 1619,
+          "ad": "Sındırgı"
+        }
+      ]
+    },
+    {
+      "kod": 11,
+      "ad": "Bilecik",
+      "ilceler": [
+        {
+          "kod": 1210,
+          "ad": "Bozüyük"
+        },
+        {
+          "kod": 1359,
+          "ad": "Gölpazarı"
+        },
+        {
+          "kod": 1948,
+          "ad": "İnhisar"
+        },
+        {
+          "kod": 1192,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1559,
+          "ad": "Osmaneli"
+        },
+        {
+          "kod": 1571,
+          "ad": "Pazaryeri"
+        },
+        {
+          "kod": 1636,
+          "ad": "Söğüt"
+        },
+        {
+          "kod": 1857,
+          "ad": "Yenipazar"
+        }
+      ]
+    },
+    {
+      "kod": 12,
+      "ad": "Bingöl",
+      "ilceler": [
+        {
+          "kod": 1750,
+          "ad": "Adaklı"
+        },
+        {
+          "kod": 1344,
+          "ad": "Genç"
+        },
+        {
+          "kod": 1446,
+          "ad": "Karlıova"
+        },
+        {
+          "kod": 1475,
+          "ad": "Kiğı"
+        },
+        {
+          "kod": 1193,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1633,
+          "ad": "Solhan"
+        },
+        {
+          "kod": 1855,
+          "ad": "Yayladere"
+        },
+        {
+          "kod": 1996,
+          "ad": "Yedisu"
+        }
+      ]
+    },
+    {
+      "kod": 13,
+      "ad": "Bitlis",
+      "ilceler": [
+        {
+          "kod": 1106,
+          "ad": "Adilcevaz"
+        },
+        {
+          "kod": 1112,
+          "ad": "Ahlat"
+        },
+        {
+          "kod": 1798,
+          "ad": "Güroymak"
+        },
+        {
+          "kod": 1394,
+          "ad": "Hizan"
+        },
+        {
+          "kod": 1196,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1537,
+          "ad": "Mutki"
+        },
+        {
+          "kod": 1669,
+          "ad": "Tatvan"
+        }
+      ]
+    },
+    {
+      "kod": 14,
+      "ad": "Bolu",
+      "ilceler": [
+        {
+          "kod": 1916,
+          "ad": "Dörtdivan"
+        },
+        {
+          "kod": 1346,
+          "ad": "Gerede"
+        },
+        {
+          "kod": 1364,
+          "ad": "Göynük"
+        },
+        {
+          "kod": 1466,
+          "ad": "Kıbrıscık"
+        },
+        {
+          "kod": 1522,
+          "ad": "Mengen"
+        },
+        {
+          "kod": 1199,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1531,
+          "ad": "Mudurnu"
+        },
+        {
+          "kod": 1610,
+          "ad": "Seben"
+        },
+        {
+          "kod": 1997,
+          "ad": "Yeniçağa"
+        }
+      ]
+    },
+    {
+      "kod": 15,
+      "ad": "Burdur",
+      "ilceler": [
+        {
+          "kod": 1874,
+          "ad": "Altınyayla"
+        },
+        {
+          "kod": 1109,
+          "ad": "Ağlasun"
+        },
+        {
+          "kod": 1211,
+          "ad": "Bucak"
+        },
+        {
+          "kod": 1357,
+          "ad": "Gölhisar"
+        },
+        {
+          "kod": 1813,
+          "ad": "Karamanlı"
+        },
+        {
+          "kod": 1816,
+          "ad": "Kemer"
+        },
+        {
+          "kod": 1215,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1672,
+          "ad": "Tefenni"
+        },
+        {
+          "kod": 1728,
+          "ad": "Yeşilova"
+        },
+        {
+          "kod": 1899,
+          "ad": "Çavdır"
+        },
+        {
+          "kod": 1903,
+          "ad": "Çeltikçi"
+        }
+      ]
+    },
+    {
+      "kod": 16,
+      "ad": "Bursa",
+      "ilceler": [
+        {
+          "kod": 1783,
+          "ad": "Büyükorhan"
+        },
+        {
+          "kod": 1343,
+          "ad": "Gemlik"
+        },
+        {
+          "kod": 1935,
+          "ad": "Gürsu"
+        },
+        {
+          "kod": 1799,
+          "ad": "Harmancık"
+        },
+        {
+          "kod": 1411,
+          "ad": "İnegöl"
+        },
+        {
+          "kod": 1420,
+          "ad": "İznik"
+        },
+        {
+          "kod": 1434,
+          "ad": "Karacabey"
+        },
+        {
+          "kod": 1457,
+          "ad": "Keles"
+        },
+        {
+          "kod": 1960,
+          "ad": "Kestel"
+        },
+        {
+          "kod": 1530,
+          "ad": "Mudanya"
+        },
+        {
+          "kod": 1535,
+          "ad": "Mustafakemalpaşa"
+        },
+        {
+          "kod": 1829,
+          "ad": "Nilüfer"
+        },
+        {
+          "kod": 1553,
+          "ad": "Orhaneli"
+        },
+        {
+          "kod": 1554,
+          "ad": "Orhangazi"
+        },
+        {
+          "kod": 1832,
+          "ad": "Osmangazi"
+        },
+        {
+          "kod": 1725,
+          "ad": "Yenişehir"
+        },
+        {
+          "kod": 1859,
+          "ad": "Yıldırım"
+        }
+      ]
+    },
+    {
+      "kod": 17,
+      "ad": "Çanakkale",
+      "ilceler": [
+        {
+          "kod": 1160,
+          "ad": "Ayvacık"
+        },
+        {
+          "kod": 1180,
+          "ad": "Bayramiç"
+        },
+        {
+          "kod": 1190,
+          "ad": "Biga"
+        },
+        {
+          "kod": 1205,
+          "ad": "Bozcaada"
+        },
+        {
+          "kod": 1293,
+          "ad": "Eceabat"
+        },
+        {
+          "kod": 1326,
+          "ad": "Ezine"
+        },
+        {
+          "kod": 1340,
+          "ad": "Gelibolu"
+        },
+        {
+          "kod": 1408,
+          "ad": "Gökçeada"
+        },
+        {
+          "kod": 1503,
+          "ad": "Lapseki"
+        },
+        {
+          "kod": 1230,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1722,
+          "ad": "Yenice"
+        },
+        {
+          "kod": 1229,
+          "ad": "Çan"
+        }
+      ]
+    },
+    {
+      "kod": 18,
+      "ad": "Çankırı",
+      "ilceler": [
+        {
+          "kod": 1765,
+          "ad": "Atkaracalar"
+        },
+        {
+          "kod": 1885,
+          "ad": "Bayramören"
+        },
+        {
+          "kod": 1300,
+          "ad": "Eldivan"
+        },
+        {
+          "kod": 1399,
+          "ad": "Ilgaz"
+        },
+        {
+          "kod": 1963,
+          "ad": "Korgun"
+        },
+        {
+          "kod": 1494,
+          "ad": "Kurşunlu"
+        },
+        {
+          "kod": 1817,
+          "ad": "Kızılırmak"
+        },
+        {
+          "kod": 1232,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1555,
+          "ad": "Orta"
+        },
+        {
+          "kod": 1718,
+          "ad": "Yapraklı"
+        },
+        {
+          "kod": 1248,
+          "ad": "Çerkeş"
+        },
+        {
+          "kod": 1649,
+          "ad": "Şabanözü"
+        }
+      ]
+    },
+    {
+      "kod": 19,
+      "ad": "Çorum",
+      "ilceler": [
+        {
+          "kod": 1124,
+          "ad": "Alaca"
+        },
+        {
+          "kod": 1177,
+          "ad": "Bayat"
+        },
+        {
+          "kod": 1778,
+          "ad": "Boğazkale"
+        },
+        {
+          "kod": 1911,
+          "ad": "Dodurga"
+        },
+        {
+          "kod": 1414,
+          "ad": "İskilip"
+        },
+        {
+          "kod": 1445,
+          "ad": "Kargı"
+        },
+        {
+          "kod": 1972,
+          "ad": "Laçin"
+        },
+        {
+          "kod": 1520,
+          "ad": "Mecitözü"
+        },
+        {
+          "kod": 1259,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1556,
+          "ad": "Ortaköy"
+        },
+        {
+          "kod": 1558,
+          "ad": "Osmancık"
+        },
+        {
+          "kod": 1976,
+          "ad": "Oğuzlar"
+        },
+        {
+          "kod": 1642,
+          "ad": "Sungurlu"
+        },
+        {
+          "kod": 1850,
+          "ad": "Uğurludağ"
+        }
+      ]
+    },
+    {
+      "kod": 20,
+      "ad": "Denizli",
+      "ilceler": [
+        {
+          "kod": 1102,
+          "ad": "Acıpayam"
+        },
+        {
+          "kod": 1769,
+          "ad": "Babadağ"
+        },
+        {
+          "kod": 1881,
+          "ad": "Baklan"
+        },
+        {
+          "kod": 1774,
+          "ad": "Bekilli"
+        },
+        {
+          "kod": 1888,
+          "ad": "Beyağaç"
+        },
+        {
+          "kod": 1889,
+          "ad": "Bozkurt"
+        },
+        {
+          "kod": 1214,
+          "ad": "Buldan"
+        },
+        {
+          "kod": 1371,
+          "ad": "Güney"
+        },
+        {
+          "kod": 1803,
+          "ad": "Honaz"
+        },
+        {
+          "kod": 1426,
+          "ad": "Kale"
+        },
+        {
+          "kod": 2079,
+          "ad": "Merkezefendi"
+        },
+        {
+          "kod": 1871,
+          "ad": "Pamukkale"
+        },
+        {
+          "kod": 1597,
+          "ad": "Sarayköy"
+        },
+        {
+          "kod": 1840,
+          "ad": "Serinhisar"
+        },
+        {
+          "kod": 1670,
+          "ad": "Tavas"
+        },
+        {
+          "kod": 1224,
+          "ad": "Çal"
+        },
+        {
+          "kod": 1226,
+          "ad": "Çameli"
+        },
+        {
+          "kod": 1233,
+          "ad": "Çardak"
+        },
+        {
+          "kod": 1257,
+          "ad": "Çivril"
+        }
+      ]
+    },
+    {
+      "kod": 21,
+      "ad": "Diyarbakır",
+      "ilceler": [
+        {
+          "kod": 2040,
+          "ad": "Bağlar"
+        },
+        {
+          "kod": 1195,
+          "ad": "Bismil"
+        },
+        {
+          "kod": 1278,
+          "ad": "Dicle"
+        },
+        {
+          "kod": 1315,
+          "ad": "Ergani"
+        },
+        {
+          "kod": 1791,
+          "ad": "Eğil"
+        },
+        {
+          "kod": 1381,
+          "ad": "Hani"
+        },
+        {
+          "kod": 1389,
+          "ad": "Hazro"
+        },
+        {
+          "kod": 2041,
+          "ad": "Kayapınar"
+        },
+        {
+          "kod": 1962,
+          "ad": "Kocaköy"
+        },
+        {
+          "kod": 1490,
+          "ad": "Kulp"
+        },
+        {
+          "kod": 1504,
+          "ad": "Lice"
+        },
+        {
+          "kod": 1624,
+          "ad": "Silvan"
+        },
+        {
+          "kod": 2042,
+          "ad": "Sur"
+        },
+        {
+          "kod": 2043,
+          "ad": "Yenişehir"
+        },
+        {
+          "kod": 1249,
+          "ad": "Çermik"
+        },
+        {
+          "kod": 1263,
+          "ad": "Çüngüş"
+        },
+        {
+          "kod": 1253,
+          "ad": "Çınar"
+        }
+      ]
+    },
+    {
+      "kod": 22,
+      "ad": "Edirne",
+      "ilceler": [
+        {
+          "kod": 1307,
+          "ad": "Enez"
+        },
+        {
+          "kod": 1385,
+          "ad": "Havsa"
+        },
+        {
+          "kod": 1412,
+          "ad": "İpsala"
+        },
+        {
+          "kod": 1464,
+          "ad": "Keşan"
+        },
+        {
+          "kod": 1502,
+          "ad": "Lalapaşa"
+        },
+        {
+          "kod": 1523,
+          "ad": "Meriç"
+        },
+        {
+          "kod": 1295,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1988,
+          "ad": "Süloğlu"
+        },
+        {
+          "kod": 1705,
+          "ad": "Uzunköprü"
+        }
+      ]
+    },
+    {
+      "kod": 23,
+      "ad": "Elazığ",
+      "ilceler": [
+        {
+          "kod": 1873,
+          "ad": "Alacakaya"
+        },
+        {
+          "kod": 1762,
+          "ad": "Arıcak"
+        },
+        {
+          "kod": 1110,
+          "ad": "Ağın"
+        },
+        {
+          "kod": 1173,
+          "ad": "Baskil"
+        },
+        {
+          "kod": 1438,
+          "ad": "Karakoçan"
+        },
+        {
+          "kod": 1455,
+          "ad": "Keban"
+        },
+        {
+          "kod": 1820,
+          "ad": "Kovancılar"
+        },
+        {
+          "kod": 1506,
+          "ad": "Maden"
+        },
+        {
+          "kod": 1298,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1566,
+          "ad": "Palu"
+        },
+        {
+          "kod": 1631,
+          "ad": "Sivrice"
+        }
+      ]
+    },
+    {
+      "kod": 24,
+      "ad": "Erzincan",
+      "ilceler": [
+        {
+          "kod": 1406,
+          "ad": "İliç"
+        },
+        {
+          "kod": 1459,
+          "ad": "Kemah"
+        },
+        {
+          "kod": 1460,
+          "ad": "Kemaliye"
+        },
+        {
+          "kod": 1318,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1977,
+          "ad": "Otlukbeli"
+        },
+        {
+          "kod": 1583,
+          "ad": "Refahiye"
+        },
+        {
+          "kod": 1675,
+          "ad": "Tercan"
+        },
+        {
+          "kod": 1243,
+          "ad": "Çayırlı"
+        },
+        {
+          "kod": 1853,
+          "ad": "Üzümlü"
+        }
+      ]
+    },
+    {
+      "kod": 25,
+      "ad": "Erzurum",
+      "ilceler": [
+        {
+          "kod": 1945,
+          "ad": "Aziziye"
+        },
+        {
+          "kod": 1153,
+          "ad": "Aşkale"
+        },
+        {
+          "kod": 1396,
+          "ad": "Horasan"
+        },
+        {
+          "kod": 1392,
+          "ad": "Hınıs"
+        },
+        {
+          "kod": 1416,
+          "ad": "İspir"
+        },
+        {
+          "kod": 1444,
+          "ad": "Karayazı"
+        },
+        {
+          "kod": 1812,
+          "ad": "Karaçoban"
+        },
+        {
+          "kod": 1967,
+          "ad": "Köprüköy"
+        },
+        {
+          "kod": 1540,
+          "ad": "Narman"
+        },
+        {
+          "kod": 1550,
+          "ad": "Oltu"
+        },
+        {
+          "kod": 1551,
+          "ad": "Olur"
+        },
+        {
+          "kod": 2044,
+          "ad": "Palandöken"
+        },
+        {
+          "kod": 1567,
+          "ad": "Pasinler"
+        },
+        {
+          "kod": 1865,
+          "ad": "Pazaryolu"
+        },
+        {
+          "kod": 1674,
+          "ad": "Tekman"
+        },
+        {
+          "kod": 1683,
+          "ad": "Tortum"
+        },
+        {
+          "kod": 1851,
+          "ad": "Uzundere"
+        },
+        {
+          "kod": 2045,
+          "ad": "Yakutiye"
+        },
+        {
+          "kod": 1235,
+          "ad": "Çat"
+        },
+        {
+          "kod": 1657,
+          "ad": "Şenkaya"
+        }
+      ]
+    },
+    {
+      "kod": 26,
+      "ad": "Eskişehir",
+      "ilceler": [
+        {
+          "kod": 1759,
+          "ad": "Alpu"
+        },
+        {
+          "kod": 1777,
+          "ad": "Beylikova"
+        },
+        {
+          "kod": 1934,
+          "ad": "Günyüzü"
+        },
+        {
+          "kod": 1939,
+          "ad": "Han"
+        },
+        {
+          "kod": 1808,
+          "ad": "İnönü"
+        },
+        {
+          "kod": 1508,
+          "ad": "Mahmudiye"
+        },
+        {
+          "kod": 1973,
+          "ad": "Mihalgazi"
+        },
+        {
+          "kod": 1527,
+          "ad": "Mihalıççık"
+        },
+        {
+          "kod": 2046,
+          "ad": "Odunpazarı"
+        },
+        {
+          "kod": 1599,
+          "ad": "Sarıcakaya"
+        },
+        {
+          "kod": 1618,
+          "ad": "Seyitgazi"
+        },
+        {
+          "kod": 1632,
+          "ad": "Sivrihisar"
+        },
+        {
+          "kod": 2047,
+          "ad": "Tepebaşı"
+        },
+        {
+          "kod": 1255,
+          "ad": "Çifteler"
+        }
+      ]
+    },
+    {
+      "kod": 27,
+      "ad": "Gaziantep",
+      "ilceler": [
+        {
+          "kod": 1139,
+          "ad": "Araban"
+        },
+        {
+          "kod": 1415,
+          "ad": "İslahiye"
+        },
+        {
+          "kod": 1956,
+          "ad": "Karkamış"
+        },
+        {
+          "kod": 1546,
+          "ad": "Nizip"
+        },
+        {
+          "kod": 1974,
+          "ad": "Nurdağı"
+        },
+        {
+          "kod": 1549,
+          "ad": "Oğuzeli"
+        },
+        {
+          "kod": 1720,
+          "ad": "Yavuzeli"
+        },
+        {
+          "kod": 1841,
+          "ad": "Şahinbey"
+        },
+        {
+          "kod": 1844,
+          "ad": "Şehitkamil"
+        }
+      ]
+    },
+    {
+      "kod": 28,
+      "ad": "Giresun",
+      "ilceler": [
+        {
+          "kod": 1133,
+          "ad": "Alucra"
+        },
+        {
+          "kod": 1212,
+          "ad": "Bulancak"
+        },
+        {
+          "kod": 1272,
+          "ad": "Dereli"
+        },
+        {
+          "kod": 1912,
+          "ad": "Doğankent"
+        },
+        {
+          "kod": 1320,
+          "ad": "Espiye"
+        },
+        {
+          "kod": 1324,
+          "ad": "Eynesil"
+        },
+        {
+          "kod": 1361,
+          "ad": "Görele"
+        },
+        {
+          "kod": 1930,
+          "ad": "Güce"
+        },
+        {
+          "kod": 1465,
+          "ad": "Keşap"
+        },
+        {
+          "kod": 1352,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1837,
+          "ad": "Piraziz"
+        },
+        {
+          "kod": 1678,
+          "ad": "Tirebolu"
+        },
+        {
+          "kod": 1854,
+          "ad": "Yağlıdere"
+        },
+        {
+          "kod": 1893,
+          "ad": "Çamoluk"
+        },
+        {
+          "kod": 1894,
+          "ad": "Çanakçı"
+        },
+        {
+          "kod": 1654,
+          "ad": "Şebinkarahisar"
+        }
+      ]
+    },
+    {
+      "kod": 29,
+      "ad": "Gümüşhane",
+      "ilceler": [
+        {
+          "kod": 1458,
+          "ad": "Kelkit"
+        },
+        {
+          "kod": 1822,
+          "ad": "Köse"
+        },
+        {
+          "kod": 1971,
+          "ad": "Kürtün"
+        },
+        {
+          "kod": 1369,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1684,
+          "ad": "Torul"
+        },
+        {
+          "kod": 1660,
+          "ad": "Şiran"
+        }
+      ]
+    },
+    {
+      "kod": 30,
+      "ad": "Hakkari",
+      "ilceler": [
+        {
+          "kod": 2107,
+          "ad": "Derecik"
+        },
+        {
+          "kod": 1377,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1737,
+          "ad": "Yüksekova"
+        },
+        {
+          "kod": 1261,
+          "ad": "Çukurca"
+        },
+        {
+          "kod": 1656,
+          "ad": "Şemdinli"
+        }
+      ]
+    },
+    {
+      "kod": 31,
+      "ad": "Hatay",
+      "ilceler": [
+        {
+          "kod": 1131,
+          "ad": "Altınözü"
+        },
+        {
+          "kod": 2080,
+          "ad": "Antakya"
+        },
+        {
+          "kod": 2081,
+          "ad": "Arsuz"
+        },
+        {
+          "kod": 1887,
+          "ad": "Belen"
+        },
+        {
+          "kod": 2082,
+          "ad": "Defne"
+        },
+        {
+          "kod": 1289,
+          "ad": "Dörtyol"
+        },
+        {
+          "kod": 1792,
+          "ad": "Erzin"
+        },
+        {
+          "kod": 1382,
+          "ad": "Hassa"
+        },
+        {
+          "kod": 1413,
+          "ad": "İskenderun"
+        },
+        {
+          "kod": 1970,
+          "ad": "Kumlu"
+        },
+        {
+          "kod": 1468,
+          "ad": "Kırıkhan"
+        },
+        {
+          "kod": 2083,
+          "ad": "Payas"
+        },
+        {
+          "kod": 1585,
+          "ad": "Reyhanlı"
+        },
+        {
+          "kod": 1591,
+          "ad": "Samandağ"
+        },
+        {
+          "kod": 1721,
+          "ad": "Yayladağı"
+        }
+      ]
+    },
+    {
+      "kod": 32,
+      "ad": "Isparta",
+      "ilceler": [
+        {
+          "kod": 1755,
+          "ad": "Aksu"
+        },
+        {
+          "kod": 1154,
+          "ad": "Atabey"
+        },
+        {
+          "kod": 1297,
+          "ad": "Eğirdir"
+        },
+        {
+          "kod": 1341,
+          "ad": "Gelendost"
+        },
+        {
+          "kod": 1929,
+          "ad": "Gönen"
+        },
+        {
+          "kod": 1456,
+          "ad": "Keçiborlu"
+        },
+        {
+          "kod": 1401,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1615,
+          "ad": "Senirkent"
+        },
+        {
+          "kod": 1648,
+          "ad": "Sütçüler"
+        },
+        {
+          "kod": 1699,
+          "ad": "Uluborlu"
+        },
+        {
+          "kod": 1717,
+          "ad": "Yalvaç"
+        },
+        {
+          "kod": 2001,
+          "ad": "Yenişarbademli"
+        },
+        {
+          "kod": 1651,
+          "ad": "Şarkikaraağaç"
+        }
+      ]
+    },
+    {
+      "kod": 33,
+      "ad": "Mersin",
+      "ilceler": [
+        {
+          "kod": 2064,
+          "ad": "Akdeniz"
+        },
+        {
+          "kod": 1135,
+          "ad": "Anamur"
+        },
+        {
+          "kod": 1766,
+          "ad": "Aydıncık"
+        },
+        {
+          "kod": 1779,
+          "ad": "Bozyazı"
+        },
+        {
+          "kod": 1311,
+          "ad": "Erdemli"
+        },
+        {
+          "kod": 1366,
+          "ad": "Gülnar"
+        },
+        {
+          "kod": 2065,
+          "ad": "Mezitli"
+        },
+        {
+          "kod": 1536,
+          "ad": "Mut"
+        },
+        {
+          "kod": 1621,
+          "ad": "Silifke"
+        },
+        {
+          "kod": 1665,
+          "ad": "Tarsus"
+        },
+        {
+          "kod": 2066,
+          "ad": "Toroslar"
+        },
+        {
+          "kod": 2067,
+          "ad": "Yenişehir"
+        },
+        {
+          "kod": 1892,
+          "ad": "Çamlıyayla"
+        }
+      ]
+    },
+    {
+      "kod": 34,
+      "ad": "İstanbul",
+      "ilceler": [
+        {
+          "kod": 1103,
+          "ad": "Adalar"
+        },
+        {
+          "kod": 2048,
+          "ad": "Arnavutköy"
+        },
+        {
+          "kod": 2049,
+          "ad": "Ataşehir"
+        },
+        {
+          "kod": 2003,
+          "ad": "Avcılar"
+        },
+        {
+          "kod": 2005,
+          "ad": "Bahçelievler"
+        },
+        {
+          "kod": 1166,
+          "ad": "Bakırköy"
+        },
+        {
+          "kod": 1886,
+          "ad": "Bayrampaşa"
+        },
+        {
+          "kod": 2004,
+          "ad": "Bağcılar"
+        },
+        {
+          "kod": 2050,
+          "ad": "Başakşehir"
+        },
+        {
+          "kod": 1185,
+          "ad": "Beykoz"
+        },
+        {
+          "kod": 2051,
+          "ad": "Beylikdüzü"
+        },
+        {
+          "kod": 1186,
+          "ad": "Beyoğlu"
+        },
+        {
+          "kod": 1183,
+          "ad": "Beşiktaş"
+        },
+        {
+          "kod": 1782,
+          "ad": "Büyükçekmece"
+        },
+        {
+          "kod": 2016,
+          "ad": "Esenler"
+        },
+        {
+          "kod": 2053,
+          "ad": "Esenyurt"
+        },
+        {
+          "kod": 1325,
+          "ad": "Eyüpsultan"
+        },
+        {
+          "kod": 1327,
+          "ad": "Fatih"
+        },
+        {
+          "kod": 1336,
+          "ad": "Gaziosmanpaşa"
+        },
+        {
+          "kod": 2010,
+          "ad": "Güngören"
+        },
+        {
+          "kod": 1421,
+          "ad": "Kadıköy"
+        },
+        {
+          "kod": 1449,
+          "ad": "Kartal"
+        },
+        {
+          "kod": 1810,
+          "ad": "Kağıthane"
+        },
+        {
+          "kod": 1823,
+          "ad": "Küçükçekmece"
+        },
+        {
+          "kod": 2012,
+          "ad": "Maltepe"
+        },
+        {
+          "kod": 1835,
+          "ad": "Pendik"
+        },
+        {
+          "kod": 2054,
+          "ad": "Sancaktepe"
+        },
+        {
+          "kod": 1604,
+          "ad": "Sarıyer"
+        },
+        {
+          "kod": 1622,
+          "ad": "Silivri"
+        },
+        {
+          "kod": 2014,
+          "ad": "Sultanbeyli"
+        },
+        {
+          "kod": 2055,
+          "ad": "Sultangazi"
+        },
+        {
+          "kod": 2015,
+          "ad": "Tuzla"
+        },
+        {
+          "kod": 1739,
+          "ad": "Zeytinburnu"
+        },
+        {
+          "kod": 1237,
+          "ad": "Çatalca"
+        },
+        {
+          "kod": 2052,
+          "ad": "Çekmeköy"
+        },
+        {
+          "kod": 1852,
+          "ad": "Ümraniye"
+        },
+        {
+          "kod": 1708,
+          "ad": "Üsküdar"
+        },
+        {
+          "kod": 1659,
+          "ad": "Şile"
+        },
+        {
+          "kod": 1663,
+          "ad": "Şişli"
+        }
+      ]
+    },
+    {
+      "kod": 35,
+      "ad": "İzmir",
+      "ilceler": [
+        {
+          "kod": 1128,
+          "ad": "Aliağa"
+        },
+        {
+          "kod": 2006,
+          "ad": "Balçova"
+        },
+        {
+          "kod": 2056,
+          "ad": "Bayraklı"
+        },
+        {
+          "kod": 1178,
+          "ad": "Bayındır"
+        },
+        {
+          "kod": 1181,
+          "ad": "Bergama"
+        },
+        {
+          "kod": 1776,
+          "ad": "Beydağ"
+        },
+        {
+          "kod": 1203,
+          "ad": "Bornova"
+        },
+        {
+          "kod": 1780,
+          "ad": "Buca"
+        },
+        {
+          "kod": 1280,
+          "ad": "Dikili"
+        },
+        {
+          "kod": 1334,
+          "ad": "Foça"
+        },
+        {
+          "kod": 2009,
+          "ad": "Gaziemir"
+        },
+        {
+          "kod": 2018,
+          "ad": "Güzelbahçe"
+        },
+        {
+          "kod": 2057,
+          "ad": "Karabağlar"
+        },
+        {
+          "kod": 1432,
+          "ad": "Karaburun"
+        },
+        {
+          "kod": 1448,
+          "ad": "Karşıyaka"
+        },
+        {
+          "kod": 1461,
+          "ad": "Kemalpaşa"
+        },
+        {
+          "kod": 1477,
+          "ad": "Kiraz"
+        },
+        {
+          "kod": 1819,
+          "ad": "Konak"
+        },
+        {
+          "kod": 1467,
+          "ad": "Kınık"
+        },
+        {
+          "kod": 1826,
+          "ad": "Menderes"
+        },
+        {
+          "kod": 1521,
+          "ad": "Menemen"
+        },
+        {
+          "kod": 2013,
+          "ad": "Narlıdere"
+        },
+        {
+          "kod": 1611,
+          "ad": "Seferihisar"
+        },
+        {
+          "kod": 1612,
+          "ad": "Selçuk"
+        },
+        {
+          "kod": 1677,
+          "ad": "Tire"
+        },
+        {
+          "kod": 1682,
+          "ad": "Torbalı"
+        },
+        {
+          "kod": 1703,
+          "ad": "Urla"
+        },
+        {
+          "kod": 1251,
+          "ad": "Çeşme"
+        },
+        {
+          "kod": 2007,
+          "ad": "Çiğli"
+        },
+        {
+          "kod": 1563,
+          "ad": "Ödemiş"
+        }
+      ]
+    },
+    {
+      "kod": 36,
+      "ad": "Kars",
+      "ilceler": [
+        {
+          "kod": 1756,
+          "ad": "Akyaka"
+        },
+        {
+          "kod": 1149,
+          "ad": "Arpaçay"
+        },
+        {
+          "kod": 1279,
+          "ad": "Digor"
+        },
+        {
+          "kod": 1424,
+          "ad": "Kağızman"
+        },
+        {
+          "kod": 1447,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1601,
+          "ad": "Sarıkamış"
+        },
+        {
+          "kod": 1614,
+          "ad": "Selim"
+        },
+        {
+          "kod": 1645,
+          "ad": "Susuz"
+        }
+      ]
+    },
+    {
+      "kod": 37,
+      "ad": "Kastamonu",
+      "ilceler": [
+        {
+          "kod": 1101,
+          "ad": "Abana"
+        },
+        {
+          "kod": 1140,
+          "ad": "Araç"
+        },
+        {
+          "kod": 1162,
+          "ad": "Azdavay"
+        },
+        {
+          "kod": 1867,
+          "ad": "Ağlı"
+        },
+        {
+          "kod": 1208,
+          "ad": "Bozkurt"
+        },
+        {
+          "kod": 1221,
+          "ad": "Cide"
+        },
+        {
+          "kod": 1264,
+          "ad": "Daday"
+        },
+        {
+          "kod": 1277,
+          "ad": "Devrekani"
+        },
+        {
+          "kod": 1915,
+          "ad": "Doğanyurt"
+        },
+        {
+          "kod": 1940,
+          "ad": "Hanönü"
+        },
+        {
+          "kod": 1805,
+          "ad": "İhsangazi"
+        },
+        {
+          "kod": 1410,
+          "ad": "İnebolu"
+        },
+        {
+          "kod": 1499,
+          "ad": "Küre"
+        },
+        {
+          "kod": 1450,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1836,
+          "ad": "Pınarbaşı"
+        },
+        {
+          "kod": 1984,
+          "ad": "Seydiler"
+        },
+        {
+          "kod": 1666,
+          "ad": "Taşköprü"
+        },
+        {
+          "kod": 1685,
+          "ad": "Tosya"
+        },
+        {
+          "kod": 1238,
+          "ad": "Çatalzeytin"
+        },
+        {
+          "kod": 1845,
+          "ad": "Şenpazar"
+        }
+      ]
+    },
+    {
+      "kod": 38,
+      "ad": "Kayseri",
+      "ilceler": [
+        {
+          "kod": 1752,
+          "ad": "Akkışla"
+        },
+        {
+          "kod": 1218,
+          "ad": "Bünyan"
+        },
+        {
+          "kod": 1275,
+          "ad": "Develi"
+        },
+        {
+          "kod": 1330,
+          "ad": "Felahiye"
+        },
+        {
+          "kod": 1936,
+          "ad": "Hacılar"
+        },
+        {
+          "kod": 1409,
+          "ad": "İncesu"
+        },
+        {
+          "kod": 1863,
+          "ad": "Kocasinan"
+        },
+        {
+          "kod": 1864,
+          "ad": "Melikgazi"
+        },
+        {
+          "kod": 1576,
+          "ad": "Pınarbaşı"
+        },
+        {
+          "kod": 1603,
+          "ad": "Sarıoğlan"
+        },
+        {
+          "kod": 1605,
+          "ad": "Sarız"
+        },
+        {
+          "kod": 1846,
+          "ad": "Talas"
+        },
+        {
+          "kod": 1680,
+          "ad": "Tomarza"
+        },
+        {
+          "kod": 1715,
+          "ad": "Yahyalı"
+        },
+        {
+          "kod": 1727,
+          "ad": "Yeşilhisar"
+        },
+        {
+          "kod": 1978,
+          "ad": "Özvatan"
+        }
+      ]
+    },
+    {
+      "kod": 39,
+      "ad": "Kırklareli",
+      "ilceler": [
+        {
+          "kod": 1163,
+          "ad": "Babaeski"
+        },
+        {
+          "kod": 1270,
+          "ad": "Demirköy"
+        },
+        {
+          "kod": 1480,
+          "ad": "Kofçaz"
+        },
+        {
+          "kod": 1505,
+          "ad": "Lüleburgaz"
+        },
+        {
+          "kod": 1471,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1572,
+          "ad": "Pehlivanköy"
+        },
+        {
+          "kod": 1577,
+          "ad": "Pınarhisar"
+        },
+        {
+          "kod": 1714,
+          "ad": "Vize"
+        }
+      ]
+    },
+    {
+      "kod": 40,
+      "ad": "Kırşehir",
+      "ilceler": [
+        {
+          "kod": 1754,
+          "ad": "Akpınar"
+        },
+        {
+          "kod": 1869,
+          "ad": "Akçakent"
+        },
+        {
+          "kod": 1890,
+          "ad": "Boztepe"
+        },
+        {
+          "kod": 1429,
+          "ad": "Kaman"
+        },
+        {
+          "kod": 1472,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1529,
+          "ad": "Mucur"
+        },
+        {
+          "kod": 1254,
+          "ad": "Çiçekdağı"
+        }
+      ]
+    },
+    {
+      "kod": 41,
+      "ad": "Kocaeli",
+      "ilceler": [
+        {
+          "kod": 2058,
+          "ad": "Başiskele"
+        },
+        {
+          "kod": 2060,
+          "ad": "Darıca"
+        },
+        {
+          "kod": 2030,
+          "ad": "Derince"
+        },
+        {
+          "kod": 2061,
+          "ad": "Dilovası"
+        },
+        {
+          "kod": 1338,
+          "ad": "Gebze"
+        },
+        {
+          "kod": 1355,
+          "ad": "Gölcük"
+        },
+        {
+          "kod": 2062,
+          "ad": "İzmit"
+        },
+        {
+          "kod": 1430,
+          "ad": "Kandıra"
+        },
+        {
+          "kod": 1440,
+          "ad": "Karamürsel"
+        },
+        {
+          "kod": 2063,
+          "ad": "Kartepe"
+        },
+        {
+          "kod": 1821,
+          "ad": "Körfez"
+        },
+        {
+          "kod": 2059,
+          "ad": "Çayırova"
+        }
+      ]
+    },
+    {
+      "kod": 42,
+      "ad": "Konya",
+      "ilceler": [
+        {
+          "kod": 1868,
+          "ad": "Ahırlı"
+        },
+        {
+          "kod": 1753,
+          "ad": "Akören"
+        },
+        {
+          "kod": 1122,
+          "ad": "Akşehir"
+        },
+        {
+          "kod": 1760,
+          "ad": "Altınekin"
+        },
+        {
+          "kod": 1188,
+          "ad": "Beyşehir"
+        },
+        {
+          "kod": 1207,
+          "ad": "Bozkır"
+        },
+        {
+          "kod": 1222,
+          "ad": "Cihanbeyli"
+        },
+        {
+          "kod": 1907,
+          "ad": "Derbent"
+        },
+        {
+          "kod": 1789,
+          "ad": "Derebucak"
+        },
+        {
+          "kod": 1285,
+          "ad": "Doğanhisar"
+        },
+        {
+          "kod": 1920,
+          "ad": "Emirgazi"
+        },
+        {
+          "kod": 1312,
+          "ad": "Ereğli"
+        },
+        {
+          "kod": 1933,
+          "ad": "Güneysınır"
+        },
+        {
+          "kod": 1375,
+          "ad": "Hadim"
+        },
+        {
+          "kod": 1937,
+          "ad": "Halkapınar"
+        },
+        {
+          "kod": 1804,
+          "ad": "Hüyük"
+        },
+        {
+          "kod": 1400,
+          "ad": "Ilgın"
+        },
+        {
+          "kod": 1422,
+          "ad": "Kadınhanı"
+        },
+        {
+          "kod": 1441,
+          "ad": "Karapınar"
+        },
+        {
+          "kod": 1814,
+          "ad": "Karatay"
+        },
+        {
+          "kod": 1491,
+          "ad": "Kulu"
+        },
+        {
+          "kod": 1827,
+          "ad": "Meram"
+        },
+        {
+          "kod": 1598,
+          "ad": "Sarayönü"
+        },
+        {
+          "kod": 1839,
+          "ad": "Selçuklu"
+        },
+        {
+          "kod": 1617,
+          "ad": "Seydişehir"
+        },
+        {
+          "kod": 1848,
+          "ad": "Taşkent"
+        },
+        {
+          "kod": 1990,
+          "ad": "Tuzlukçu"
+        },
+        {
+          "kod": 1994,
+          "ad": "Yalıhüyük"
+        },
+        {
+          "kod": 1735,
+          "ad": "Yunak"
+        },
+        {
+          "kod": 1902,
+          "ad": "Çeltik"
+        },
+        {
+          "kod": 1262,
+          "ad": "Çumra"
+        }
+      ]
+    },
+    {
+      "kod": 43,
+      "ad": "Kütahya",
+      "ilceler": [
+        {
+          "kod": 1132,
+          "ad": "Altıntaş"
+        },
+        {
+          "kod": 1764,
+          "ad": "Aslanapa"
+        },
+        {
+          "kod": 1288,
+          "ad": "Domaniç"
+        },
+        {
+          "kod": 1790,
+          "ad": "Dumlupınar"
+        },
+        {
+          "kod": 1304,
+          "ad": "Emet"
+        },
+        {
+          "kod": 1339,
+          "ad": "Gediz"
+        },
+        {
+          "kod": 1802,
+          "ad": "Hisarcık"
+        },
+        {
+          "kod": 1500,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1979,
+          "ad": "Pazarlar"
+        },
+        {
+          "kod": 1625,
+          "ad": "Simav"
+        },
+        {
+          "kod": 1671,
+          "ad": "Tavşanlı"
+        },
+        {
+          "kod": 1898,
+          "ad": "Çavdarhisar"
+        },
+        {
+          "kod": 1843,
+          "ad": "Şaphane"
+        }
+      ]
+    },
+    {
+      "kod": 44,
+      "ad": "Malatya",
+      "ilceler": [
+        {
+          "kod": 1114,
+          "ad": "Akçadağ"
+        },
+        {
+          "kod": 1143,
+          "ad": "Arapgir"
+        },
+        {
+          "kod": 1148,
+          "ad": "Arguvan"
+        },
+        {
+          "kod": 1772,
+          "ad": "Battalgazi"
+        },
+        {
+          "kod": 1265,
+          "ad": "Darende"
+        },
+        {
+          "kod": 1914,
+          "ad": "Doğanyol"
+        },
+        {
+          "kod": 1286,
+          "ad": "Doğanşehir"
+        },
+        {
+          "kod": 1390,
+          "ad": "Hekimhan"
+        },
+        {
+          "kod": 1953,
+          "ad": "Kale"
+        },
+        {
+          "kod": 1969,
+          "ad": "Kuluncak"
+        },
+        {
+          "kod": 1582,
+          "ad": "Pütürge"
+        },
+        {
+          "kod": 1995,
+          "ad": "Yazıhan"
+        },
+        {
+          "kod": 1729,
+          "ad": "Yeşilyurt"
+        }
+      ]
+    },
+    {
+      "kod": 45,
+      "ad": "Manisa",
+      "ilceler": [
+        {
+          "kod": 1751,
+          "ad": "Ahmetli"
+        },
+        {
+          "kod": 1118,
+          "ad": "Akhisar"
+        },
+        {
+          "kod": 1127,
+          "ad": "Alaşehir"
+        },
+        {
+          "kod": 1269,
+          "ad": "Demirci"
+        },
+        {
+          "kod": 1793,
+          "ad": "Gölmarmara"
+        },
+        {
+          "kod": 1362,
+          "ad": "Gördes"
+        },
+        {
+          "kod": 1489,
+          "ad": "Kula"
+        },
+        {
+          "kod": 1965,
+          "ad": "Köprübaşı"
+        },
+        {
+          "kod": 1470,
+          "ad": "Kırkağaç"
+        },
+        {
+          "kod": 1590,
+          "ad": "Salihli"
+        },
+        {
+          "kod": 1606,
+          "ad": "Saruhanlı"
+        },
+        {
+          "kod": 1600,
+          "ad": "Sarıgöl"
+        },
+        {
+          "kod": 1613,
+          "ad": "Selendi"
+        },
+        {
+          "kod": 1634,
+          "ad": "Soma"
+        },
+        {
+          "kod": 1689,
+          "ad": "Turgutlu"
+        },
+        {
+          "kod": 2087,
+          "ad": "Yunusemre"
+        },
+        {
+          "kod": 2086,
+          "ad": "Şehzadeler"
+        }
+      ]
+    },
+    {
+      "kod": 46,
+      "ad": "Kahramanmaraş",
+      "ilceler": [
+        {
+          "kod": 1107,
+          "ad": "Afşin"
+        },
+        {
+          "kod": 1136,
+          "ad": "Andırın"
+        },
+        {
+          "kod": 2084,
+          "ad": "Dulkadiroğlu"
+        },
+        {
+          "kod": 1919,
+          "ad": "Ekinözü"
+        },
+        {
+          "kod": 1299,
+          "ad": "Elbistan"
+        },
+        {
+          "kod": 1353,
+          "ad": "Göksun"
+        },
+        {
+          "kod": 1975,
+          "ad": "Nurhak"
+        },
+        {
+          "kod": 2085,
+          "ad": "Onikişubat"
+        },
+        {
+          "kod": 1570,
+          "ad": "Pazarcık"
+        },
+        {
+          "kod": 1694,
+          "ad": "Türkoğlu"
+        },
+        {
+          "kod": 1785,
+          "ad": "Çağlayancerit"
+        }
+      ]
+    },
+    {
+      "kod": 47,
+      "ad": "Mardin",
+      "ilceler": [
+        {
+          "kod": 2088,
+          "ad": "Artuklu"
+        },
+        {
+          "kod": 1787,
+          "ad": "Dargeçit"
+        },
+        {
+          "kod": 1273,
+          "ad": "Derik"
+        },
+        {
+          "kod": 1474,
+          "ad": "Kızıltepe"
+        },
+        {
+          "kod": 1519,
+          "ad": "Mazıdağı"
+        },
+        {
+          "kod": 1526,
+          "ad": "Midyat"
+        },
+        {
+          "kod": 1547,
+          "ad": "Nusaybin"
+        },
+        {
+          "kod": 1609,
+          "ad": "Savur"
+        },
+        {
+          "kod": 2002,
+          "ad": "Yeşilli"
+        },
+        {
+          "kod": 1564,
+          "ad": "Ömerli"
+        }
+      ]
+    },
+    {
+      "kod": 48,
+      "ad": "Muğla",
+      "ilceler": [
+        {
+          "kod": 1197,
+          "ad": "Bodrum"
+        },
+        {
+          "kod": 1742,
+          "ad": "Dalaman"
+        },
+        {
+          "kod": 1266,
+          "ad": "Datça"
+        },
+        {
+          "kod": 1331,
+          "ad": "Fethiye"
+        },
+        {
+          "kod": 1958,
+          "ad": "Kavaklıdere"
+        },
+        {
+          "kod": 1488,
+          "ad": "Köyceğiz"
+        },
+        {
+          "kod": 1517,
+          "ad": "Marmaris"
+        },
+        {
+          "kod": 2089,
+          "ad": "Menteşe"
+        },
+        {
+          "kod": 1528,
+          "ad": "Milas"
+        },
+        {
+          "kod": 1831,
+          "ad": "Ortaca"
+        },
+        {
+          "kod": 2090,
+          "ad": "Seydikemer"
+        },
+        {
+          "kod": 1695,
+          "ad": "Ula"
+        },
+        {
+          "kod": 1719,
+          "ad": "Yatağan"
+        }
+      ]
+    },
+    {
+      "kod": 49,
+      "ad": "Muş",
+      "ilceler": [
+        {
+          "kod": 1213,
+          "ad": "Bulanık"
+        },
+        {
+          "kod": 1801,
+          "ad": "Hasköy"
+        },
+        {
+          "kod": 1964,
+          "ad": "Korkut"
+        },
+        {
+          "kod": 1510,
+          "ad": "Malazgirt"
+        },
+        {
+          "kod": 1534,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1711,
+          "ad": "Varto"
+        }
+      ]
+    },
+    {
+      "kod": 50,
+      "ad": "Nevşehir",
+      "ilceler": [
+        {
+          "kod": 1749,
+          "ad": "Acıgöl"
+        },
+        {
+          "kod": 1155,
+          "ad": "Avanos"
+        },
+        {
+          "kod": 1274,
+          "ad": "Derinkuyu"
+        },
+        {
+          "kod": 1367,
+          "ad": "Gülşehir"
+        },
+        {
+          "kod": 1374,
+          "ad": "Hacıbektaş"
+        },
+        {
+          "kod": 1485,
+          "ad": "Kozaklı"
+        },
+        {
+          "kod": 1543,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1707,
+          "ad": "Ürgüp"
+        }
+      ]
+    },
+    {
+      "kod": 51,
+      "ad": "Niğde",
+      "ilceler": [
+        {
+          "kod": 1876,
+          "ad": "Altunhisar"
+        },
+        {
+          "kod": 1201,
+          "ad": "Bor"
+        },
+        {
+          "kod": 1544,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1700,
+          "ad": "Ulukışla"
+        },
+        {
+          "kod": 1225,
+          "ad": "Çamardı"
+        },
+        {
+          "kod": 1904,
+          "ad": "Çiftlik"
+        }
+      ]
+    },
+    {
+      "kod": 52,
+      "ad": "Ordu",
+      "ilceler": [
+        {
+          "kod": 1119,
+          "ad": "Akkuş"
+        },
+        {
+          "kod": 2103,
+          "ad": "Altınordu"
+        },
+        {
+          "kod": 1158,
+          "ad": "Aybastı"
+        },
+        {
+          "kod": 1328,
+          "ad": "Fatsa"
+        },
+        {
+          "kod": 1358,
+          "ad": "Gölköy"
+        },
+        {
+          "kod": 1795,
+          "ad": "Gülyalı"
+        },
+        {
+          "kod": 1797,
+          "ad": "Gürgentepe"
+        },
+        {
+          "kod": 1947,
+          "ad": "İkizce"
+        },
+        {
+          "kod": 1950,
+          "ad": "Kabadüz"
+        },
+        {
+          "kod": 1951,
+          "ad": "Kabataş"
+        },
+        {
+          "kod": 1482,
+          "ad": "Korgan"
+        },
+        {
+          "kod": 1493,
+          "ad": "Kumru"
+        },
+        {
+          "kod": 1525,
+          "ad": "Mesudiye"
+        },
+        {
+          "kod": 1573,
+          "ad": "Perşembe"
+        },
+        {
+          "kod": 1696,
+          "ad": "Ulubey"
+        },
+        {
+          "kod": 1891,
+          "ad": "Çamaş"
+        },
+        {
+          "kod": 1897,
+          "ad": "Çatalpınar"
+        },
+        {
+          "kod": 1900,
+          "ad": "Çaybaşı"
+        },
+        {
+          "kod": 1706,
+          "ad": "Ünye"
+        }
+      ]
+    },
+    {
+      "kod": 53,
+      "ad": "Rize",
+      "ilceler": [
+        {
+          "kod": 1146,
+          "ad": "Ardeşen"
+        },
+        {
+          "kod": 1908,
+          "ad": "Derepazarı"
+        },
+        {
+          "kod": 1332,
+          "ad": "Fındıklı"
+        },
+        {
+          "kod": 1796,
+          "ad": "Güneysu"
+        },
+        {
+          "kod": 1943,
+          "ad": "Hemşin"
+        },
+        {
+          "kod": 1405,
+          "ad": "İkizdere"
+        },
+        {
+          "kod": 1949,
+          "ad": "İyidere"
+        },
+        {
+          "kod": 1428,
+          "ad": "Kalkandere"
+        },
+        {
+          "kod": 1586,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1569,
+          "ad": "Pazar"
+        },
+        {
+          "kod": 1228,
+          "ad": "Çamlıhemşin"
+        },
+        {
+          "kod": 1241,
+          "ad": "Çayeli"
+        }
+      ]
+    },
+    {
+      "kod": 54,
+      "ad": "Sakarya",
+      "ilceler": [
+        {
+          "kod": 2068,
+          "ad": "Adapazarı"
+        },
+        {
+          "kod": 1123,
+          "ad": "Akyazı"
+        },
+        {
+          "kod": 2069,
+          "ad": "Arifiye"
+        },
+        {
+          "kod": 2070,
+          "ad": "Erenler"
+        },
+        {
+          "kod": 1925,
+          "ad": "Ferizli"
+        },
+        {
+          "kod": 1351,
+          "ad": "Geyve"
+        },
+        {
+          "kod": 1391,
+          "ad": "Hendek"
+        },
+        {
+          "kod": 1955,
+          "ad": "Karapürçek"
+        },
+        {
+          "kod": 1442,
+          "ad": "Karasu"
+        },
+        {
+          "kod": 1453,
+          "ad": "Kaynarca"
+        },
+        {
+          "kod": 1818,
+          "ad": "Kocaali"
+        },
+        {
+          "kod": 1833,
+          "ad": "Pamukova"
+        },
+        {
+          "kod": 1595,
+          "ad": "Sapanca"
+        },
+        {
+          "kod": 2071,
+          "ad": "Serdivan"
+        },
+        {
+          "kod": 1986,
+          "ad": "Söğütlü"
+        },
+        {
+          "kod": 1847,
+          "ad": "Taraklı"
+        }
+      ]
+    },
+    {
+      "kod": 55,
+      "ad": "Samsun",
+      "ilceler": [
+        {
+          "kod": 1830,
+          "ad": "19 Mayıs"
+        },
+        {
+          "kod": 1125,
+          "ad": "Alaçam"
+        },
+        {
+          "kod": 1763,
+          "ad": "Asarcık"
+        },
+        {
+          "kod": 2072,
+          "ad": "Atakum"
+        },
+        {
+          "kod": 1879,
+          "ad": "Ayvacık"
+        },
+        {
+          "kod": 1164,
+          "ad": "Bafra"
+        },
+        {
+          "kod": 2073,
+          "ad": "Canik"
+        },
+        {
+          "kod": 1386,
+          "ad": "Havza"
+        },
+        {
+          "kod": 2074,
+          "ad": "İlkadım"
+        },
+        {
+          "kod": 1452,
+          "ad": "Kavak"
+        },
+        {
+          "kod": 1501,
+          "ad": "Ladik"
+        },
+        {
+          "kod": 1838,
+          "ad": "Salıpazarı"
+        },
+        {
+          "kod": 1849,
+          "ad": "Tekkeköy"
+        },
+        {
+          "kod": 1676,
+          "ad": "Terme"
+        },
+        {
+          "kod": 1712,
+          "ad": "Vezirköprü"
+        },
+        {
+          "kod": 1993,
+          "ad": "Yakakent"
+        },
+        {
+          "kod": 1234,
+          "ad": "Çarşamba"
+        }
+      ]
+    },
+    {
+      "kod": 56,
+      "ad": "Siirt",
+      "ilceler": [
+        {
+          "kod": 1179,
+          "ad": "Baykan"
+        },
+        {
+          "kod": 1317,
+          "ad": "Eruh"
+        },
+        {
+          "kod": 1495,
+          "ad": "Kurtalan"
+        },
+        {
+          "kod": 1620,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1575,
+          "ad": "Pervari"
+        },
+        {
+          "kod": 1878,
+          "ad": "Tillo"
+        },
+        {
+          "kod": 1662,
+          "ad": "Şirvan"
+        }
+      ]
+    },
+    {
+      "kod": 57,
+      "ad": "Sinop",
+      "ilceler": [
+        {
+          "kod": 1156,
+          "ad": "Ayancık"
+        },
+        {
+          "kod": 1204,
+          "ad": "Boyabat"
+        },
+        {
+          "kod": 1910,
+          "ad": "Dikmen"
+        },
+        {
+          "kod": 1290,
+          "ad": "Durağan"
+        },
+        {
+          "kod": 1314,
+          "ad": "Erfelek"
+        },
+        {
+          "kod": 1349,
+          "ad": "Gerze"
+        },
+        {
+          "kod": 1627,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1981,
+          "ad": "Saraydüzü"
+        },
+        {
+          "kod": 1693,
+          "ad": "Türkeli"
+        }
+      ]
+    },
+    {
+      "kod": 58,
+      "ad": "Sivas",
+      "ilceler": [
+        {
+          "kod": 1870,
+          "ad": "Akıncılar"
+        },
+        {
+          "kod": 1875,
+          "ad": "Altınyayla"
+        },
+        {
+          "kod": 1282,
+          "ad": "Divriği"
+        },
+        {
+          "kod": 1913,
+          "ad": "Doğanşar"
+        },
+        {
+          "kod": 1342,
+          "ad": "Gemerek"
+        },
+        {
+          "kod": 1927,
+          "ad": "Gölova"
+        },
+        {
+          "kod": 1373,
+          "ad": "Gürün"
+        },
+        {
+          "kod": 1376,
+          "ad": "Hafik"
+        },
+        {
+          "kod": 1407,
+          "ad": "İmranlı"
+        },
+        {
+          "kod": 1431,
+          "ad": "Kangal"
+        },
+        {
+          "kod": 1484,
+          "ad": "Koyulhisar"
+        },
+        {
+          "kod": 1628,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1646,
+          "ad": "Suşehri"
+        },
+        {
+          "kod": 1991,
+          "ad": "Ulaş"
+        },
+        {
+          "kod": 1731,
+          "ad": "Yıldızeli"
+        },
+        {
+          "kod": 1738,
+          "ad": "Zara"
+        },
+        {
+          "kod": 1650,
+          "ad": "Şarkışla"
+        }
+      ]
+    },
+    {
+      "kod": 59,
+      "ad": "Tekirdağ",
+      "ilceler": [
+        {
+          "kod": 2094,
+          "ad": "Ergene"
+        },
+        {
+          "kod": 1388,
+          "ad": "Hayrabolu"
+        },
+        {
+          "kod": 2095,
+          "ad": "Kapaklı"
+        },
+        {
+          "kod": 1511,
+          "ad": "Malkara"
+        },
+        {
+          "kod": 1825,
+          "ad": "Marmaraereğlisi"
+        },
+        {
+          "kod": 1538,
+          "ad": "Muratlı"
+        },
+        {
+          "kod": 1596,
+          "ad": "Saray"
+        },
+        {
+          "kod": 2096,
+          "ad": "Süleymanpaşa"
+        },
+        {
+          "kod": 1250,
+          "ad": "Çerkezköy"
+        },
+        {
+          "kod": 1258,
+          "ad": "Çorlu"
+        },
+        {
+          "kod": 1652,
+          "ad": "Şarköy"
+        }
+      ]
+    },
+    {
+      "kod": 60,
+      "ad": "Tokat",
+      "ilceler": [
+        {
+          "kod": 1129,
+          "ad": "Almus"
+        },
+        {
+          "kod": 1151,
+          "ad": "Artova"
+        },
+        {
+          "kod": 1883,
+          "ad": "Başçiftlik"
+        },
+        {
+          "kod": 1308,
+          "ad": "Erbaa"
+        },
+        {
+          "kod": 1679,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1545,
+          "ad": "Niksar"
+        },
+        {
+          "kod": 1834,
+          "ad": "Pazar"
+        },
+        {
+          "kod": 1584,
+          "ad": "Reşadiye"
+        },
+        {
+          "kod": 1987,
+          "ad": "Sulusaray"
+        },
+        {
+          "kod": 1690,
+          "ad": "Turhal"
+        },
+        {
+          "kod": 1858,
+          "ad": "Yeşilyurt"
+        },
+        {
+          "kod": 1740,
+          "ad": "Zile"
+        }
+      ]
+    },
+    {
+      "kod": 61,
+      "ad": "Trabzon",
+      "ilceler": [
+        {
+          "kod": 1113,
+          "ad": "Akçaabat"
+        },
+        {
+          "kod": 1141,
+          "ad": "Araklı"
+        },
+        {
+          "kod": 1150,
+          "ad": "Arsin"
+        },
+        {
+          "kod": 1775,
+          "ad": "Beşikdüzü"
+        },
+        {
+          "kod": 1909,
+          "ad": "Dernekpazarı"
+        },
+        {
+          "kod": 1917,
+          "ad": "Düzköy"
+        },
+        {
+          "kod": 1942,
+          "ad": "Hayrat"
+        },
+        {
+          "kod": 1966,
+          "ad": "Köprübaşı"
+        },
+        {
+          "kod": 1507,
+          "ad": "Maçka"
+        },
+        {
+          "kod": 1548,
+          "ad": "Of"
+        },
+        {
+          "kod": 2097,
+          "ad": "Ortahisar"
+        },
+        {
+          "kod": 1647,
+          "ad": "Sürmene"
+        },
+        {
+          "kod": 1681,
+          "ad": "Tonya"
+        },
+        {
+          "kod": 1709,
+          "ad": "Vakfıkebir"
+        },
+        {
+          "kod": 1732,
+          "ad": "Yomra"
+        },
+        {
+          "kod": 1896,
+          "ad": "Çarşıbaşı"
+        },
+        {
+          "kod": 1244,
+          "ad": "Çaykara"
+        },
+        {
+          "kod": 1842,
+          "ad": "Şalpazarı"
+        }
+      ]
+    },
+    {
+      "kod": 62,
+      "ad": "Tunceli",
+      "ilceler": [
+        {
+          "kod": 1397,
+          "ad": "Hozat"
+        },
+        {
+          "kod": 1518,
+          "ad": "Mazgirt"
+        },
+        {
+          "kod": 1688,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1541,
+          "ad": "Nazımiye"
+        },
+        {
+          "kod": 1562,
+          "ad": "Ovacık"
+        },
+        {
+          "kod": 1574,
+          "ad": "Pertek"
+        },
+        {
+          "kod": 1581,
+          "ad": "Pülümür"
+        },
+        {
+          "kod": 1247,
+          "ad": "Çemişgezek"
+        }
+      ]
+    },
+    {
+      "kod": 63,
+      "ad": "Şanlıurfa",
+      "ilceler": [
+        {
+          "kod": 1115,
+          "ad": "Akçakale"
+        },
+        {
+          "kod": 1194,
+          "ad": "Birecik"
+        },
+        {
+          "kod": 1209,
+          "ad": "Bozova"
+        },
+        {
+          "kod": 1220,
+          "ad": "Ceylanpınar"
+        },
+        {
+          "kod": 2091,
+          "ad": "Eyyübiye"
+        },
+        {
+          "kod": 1378,
+          "ad": "Halfeti"
+        },
+        {
+          "kod": 2092,
+          "ad": "Haliliye"
+        },
+        {
+          "kod": 1800,
+          "ad": "Harran"
+        },
+        {
+          "kod": 1393,
+          "ad": "Hilvan"
+        },
+        {
+          "kod": 2093,
+          "ad": "Karaköprü"
+        },
+        {
+          "kod": 1630,
+          "ad": "Siverek"
+        },
+        {
+          "kod": 1643,
+          "ad": "Suruç"
+        },
+        {
+          "kod": 1713,
+          "ad": "Viranşehir"
+        }
+      ]
+    },
+    {
+      "kod": 64,
+      "ad": "Uşak",
+      "ilceler": [
+        {
+          "kod": 1170,
+          "ad": "Banaz"
+        },
+        {
+          "kod": 1323,
+          "ad": "Eşme"
+        },
+        {
+          "kod": 1436,
+          "ad": "Karahallı"
+        },
+        {
+          "kod": 1704,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1629,
+          "ad": "Sivaslı"
+        },
+        {
+          "kod": 1697,
+          "ad": "Ulubey"
+        }
+      ]
+    },
+    {
+      "kod": 65,
+      "ad": "Van",
+      "ilceler": [
+        {
+          "kod": 1770,
+          "ad": "Bahçesaray"
+        },
+        {
+          "kod": 1175,
+          "ad": "Başkale"
+        },
+        {
+          "kod": 1918,
+          "ad": "Edremit"
+        },
+        {
+          "kod": 1309,
+          "ad": "Erciş"
+        },
+        {
+          "kod": 1350,
+          "ad": "Gevaş"
+        },
+        {
+          "kod": 1372,
+          "ad": "Gürpınar"
+        },
+        {
+          "kod": 2098,
+          "ad": "İpekyolu"
+        },
+        {
+          "kod": 1533,
+          "ad": "Muradiye"
+        },
+        {
+          "kod": 1980,
+          "ad": "Saray"
+        },
+        {
+          "kod": 2099,
+          "ad": "Tuşba"
+        },
+        {
+          "kod": 1786,
+          "ad": "Çaldıran"
+        },
+        {
+          "kod": 1236,
+          "ad": "Çatak"
+        },
+        {
+          "kod": 1565,
+          "ad": "Özalp"
+        }
+      ]
+    },
+    {
+      "kod": 66,
+      "ad": "Yozgat",
+      "ilceler": [
+        {
+          "kod": 1117,
+          "ad": "Akdağmadeni"
+        },
+        {
+          "kod": 1877,
+          "ad": "Aydıncık"
+        },
+        {
+          "kod": 1198,
+          "ad": "Boğazlıyan"
+        },
+        {
+          "kod": 1952,
+          "ad": "Kadışehri"
+        },
+        {
+          "kod": 1733,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1982,
+          "ad": "Saraykent"
+        },
+        {
+          "kod": 1602,
+          "ad": "Sarıkaya"
+        },
+        {
+          "kod": 1635,
+          "ad": "Sorgun"
+        },
+        {
+          "kod": 1998,
+          "ad": "Yenifakılı"
+        },
+        {
+          "kod": 1726,
+          "ad": "Yerköy"
+        },
+        {
+          "kod": 1895,
+          "ad": "Çandır"
+        },
+        {
+          "kod": 1242,
+          "ad": "Çayıralan"
+        },
+        {
+          "kod": 1245,
+          "ad": "Çekerek"
+        },
+        {
+          "kod": 1655,
+          "ad": "Şefaatli"
+        }
+      ]
+    },
+    {
+      "kod": 67,
+      "ad": "Zonguldak",
+      "ilceler": [
+        {
+          "kod": 1758,
+          "ad": "Alaplı"
+        },
+        {
+          "kod": 1276,
+          "ad": "Devrek"
+        },
+        {
+          "kod": 1313,
+          "ad": "Ereğli"
+        },
+        {
+          "kod": 1926,
+          "ad": "Gökçebey"
+        },
+        {
+          "kod": 2100,
+          "ad": "Kilimli"
+        },
+        {
+          "kod": 2101,
+          "ad": "Kozlu"
+        },
+        {
+          "kod": 1741,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1240,
+          "ad": "Çaycuma"
+        }
+      ]
+    },
+    {
+      "kod": 68,
+      "ad": "Aksaray",
+      "ilceler": [
+        {
+          "kod": 1860,
+          "ad": "Ağaçören"
+        },
+        {
+          "kod": 1921,
+          "ad": "Eskil"
+        },
+        {
+          "kod": 1932,
+          "ad": "Gülağaç"
+        },
+        {
+          "kod": 1861,
+          "ad": "Güzelyurt"
+        },
+        {
+          "kod": 1120,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1557,
+          "ad": "Ortaköy"
+        },
+        {
+          "kod": 1866,
+          "ad": "Sarıyahşi"
+        },
+        {
+          "kod": 2106,
+          "ad": "Sultanhanı"
+        }
+      ]
+    },
+    {
+      "kod": 69,
+      "ad": "Bayburt",
+      "ilceler": [
+        {
+          "kod": 1767,
+          "ad": "Aydıntepe"
+        },
+        {
+          "kod": 1788,
+          "ad": "Demirözü"
+        },
+        {
+          "kod": 1176,
+          "ad": "Merkez"
+        }
+      ]
+    },
+    {
+      "kod": 70,
+      "ad": "Karaman",
+      "ilceler": [
+        {
+          "kod": 1768,
+          "ad": "Ayrancı"
+        },
+        {
+          "kod": 1884,
+          "ad": "Başyayla"
+        },
+        {
+          "kod": 1316,
+          "ad": "Ermenek"
+        },
+        {
+          "kod": 1862,
+          "ad": "Kazımkarabekir"
+        },
+        {
+          "kod": 1439,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1983,
+          "ad": "Sarıveliler"
+        }
+      ]
+    },
+    {
+      "kod": 71,
+      "ad": "Kırıkkale",
+      "ilceler": [
+        {
+          "kod": 1880,
+          "ad": "Bahşılı"
+        },
+        {
+          "kod": 1882,
+          "ad": "Balışeyh"
+        },
+        {
+          "kod": 1268,
+          "ad": "Delice"
+        },
+        {
+          "kod": 1954,
+          "ad": "Karakeçili"
+        },
+        {
+          "kod": 1463,
+          "ad": "Keskin"
+        },
+        {
+          "kod": 1469,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1638,
+          "ad": "Sulakyurt"
+        },
+        {
+          "kod": 1992,
+          "ad": "Yahşihan"
+        },
+        {
+          "kod": 1901,
+          "ad": "Çelebi"
+        }
+      ]
+    },
+    {
+      "kod": 72,
+      "ad": "Batman",
+      "ilceler": [
+        {
+          "kod": 1184,
+          "ad": "Beşiri"
+        },
+        {
+          "kod": 1345,
+          "ad": "Gercüş"
+        },
+        {
+          "kod": 1941,
+          "ad": "Hasankeyf"
+        },
+        {
+          "kod": 1487,
+          "ad": "Kozluk"
+        },
+        {
+          "kod": 1174,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1607,
+          "ad": "Sason"
+        }
+      ]
+    },
+    {
+      "kod": 73,
+      "ad": "Şırnak",
+      "ilceler": [
+        {
+          "kod": 1189,
+          "ad": "Beytüşşebap"
+        },
+        {
+          "kod": 1223,
+          "ad": "Cizre"
+        },
+        {
+          "kod": 1931,
+          "ad": "Güçlükonak"
+        },
+        {
+          "kod": 1403,
+          "ad": "İdil"
+        },
+        {
+          "kod": 1661,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1623,
+          "ad": "Silopi"
+        },
+        {
+          "kod": 1698,
+          "ad": "Uludere"
+        }
+      ]
+    },
+    {
+      "kod": 74,
+      "ad": "Bartın",
+      "ilceler": [
+        {
+          "kod": 1761,
+          "ad": "Amasra"
+        },
+        {
+          "kod": 1496,
+          "ad": "Kurucaşile"
+        },
+        {
+          "kod": 1172,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1701,
+          "ad": "Ulus"
+        }
+      ]
+    },
+    {
+      "kod": 75,
+      "ad": "Ardahan",
+      "ilceler": [
+        {
+          "kod": 2008,
+          "ad": "Damal"
+        },
+        {
+          "kod": 1356,
+          "ad": "Göle"
+        },
+        {
+          "kod": 1380,
+          "ad": "Hanak"
+        },
+        {
+          "kod": 1144,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1579,
+          "ad": "Posof"
+        },
+        {
+          "kod": 1252,
+          "ad": "Çıldır"
+        }
+      ]
+    },
+    {
+      "kod": 76,
+      "ad": "Iğdır",
+      "ilceler": [
+        {
+          "kod": 1142,
+          "ad": "Aralık"
+        },
+        {
+          "kod": 2011,
+          "ad": "Karakoyunlu"
+        },
+        {
+          "kod": 1398,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1692,
+          "ad": "Tuzluca"
+        }
+      ]
+    },
+    {
+      "kod": 77,
+      "ad": "Yalova",
+      "ilceler": [
+        {
+          "kod": 2019,
+          "ad": "Altınova"
+        },
+        {
+          "kod": 2020,
+          "ad": "Armutlu"
+        },
+        {
+          "kod": 1716,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 2026,
+          "ad": "Termal"
+        },
+        {
+          "kod": 2022,
+          "ad": "Çiftlikköy"
+        },
+        {
+          "kod": 2021,
+          "ad": "Çınarcık"
+        }
+      ]
+    },
+    {
+      "kod": 78,
+      "ad": "Karabük",
+      "ilceler": [
+        {
+          "kod": 1296,
+          "ad": "Eflani"
+        },
+        {
+          "kod": 1321,
+          "ad": "Eskipazar"
+        },
+        {
+          "kod": 1433,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1561,
+          "ad": "Ovacık"
+        },
+        {
+          "kod": 1587,
+          "ad": "Safranbolu"
+        },
+        {
+          "kod": 1856,
+          "ad": "Yenice"
+        }
+      ]
+    },
+    {
+      "kod": 79,
+      "ad": "Kilis",
+      "ilceler": [
+        {
+          "kod": 2023,
+          "ad": "Elbeyli"
+        },
+        {
+          "kod": 1476,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 2024,
+          "ad": "Musabeyli"
+        },
+        {
+          "kod": 2025,
+          "ad": "Polateli"
+        }
+      ]
+    },
+    {
+      "kod": 80,
+      "ad": "Osmaniye",
+      "ilceler": [
+        {
+          "kod": 1165,
+          "ad": "Bahçe"
+        },
+        {
+          "kod": 1743,
+          "ad": "Düziçi"
+        },
+        {
+          "kod": 2027,
+          "ad": "Hasanbeyli"
+        },
+        {
+          "kod": 1423,
+          "ad": "Kadirli"
+        },
+        {
+          "kod": 1560,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 2028,
+          "ad": "Sumbas"
+        },
+        {
+          "kod": 2029,
+          "ad": "Toprakkale"
+        }
+      ]
+    },
+    {
+      "kod": 81,
+      "ad": "Düzce",
+      "ilceler": [
+        {
+          "kod": 1116,
+          "ad": "Akçakoca"
+        },
+        {
+          "kod": 1784,
+          "ad": "Cumayeri"
+        },
+        {
+          "kod": 1794,
+          "ad": "Gölyaka"
+        },
+        {
+          "kod": 2017,
+          "ad": "Gümüşova"
+        },
+        {
+          "kod": 2031,
+          "ad": "Kaynaşlı"
+        },
+        {
+          "kod": 1292,
+          "ad": "Merkez"
+        },
+        {
+          "kod": 1730,
+          "ad": "Yığılca"
+        },
+        {
+          "kod": 1905,
+          "ad": "Çilimli"
+        }
+      ]
+    }
+  ]
+}

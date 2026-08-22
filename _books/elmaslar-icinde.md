@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Elmaslar İçinde"
-description: "Cingöz Recai’nin gözü bu kez paha biçilemez elmaslarda! Sıradan hırsızlıklarla hırsızımız, İstanbul’un en gösterişli mekânlarında kusursuz bir kaçış…"
+description: "Adam şen de... Ben artık cesaret ve korku kelimelerinin ne manaya geldiklerini bilmiyorum."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -21,11 +21,11 @@ authors: ["Peyami Safa"]
 # anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Akıl Oyunları,Kılık Değiştirme,Ezelî Rekabet,Kaçış Planları,Soğukkanlılık,Ekip Çalışması]
 anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
 kazanim: [H.1.2.1, H.1.2.2, H.1.2.3, H.1.2.4, H.2.2.1, H.2.2.2, H.3.2.1, H.4.2.1, H.4.2.2, H.4.2.4]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
-unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
+unite: ["DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

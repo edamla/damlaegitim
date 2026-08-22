@@ -1,6 +1,6 @@
 #!/bin/bash
 # Eksik .webp dosyalarını jpg/png kaynaklarından üretir; _data/webp_manifest.yml yazar.
-
+echo "-- WebP üretimi yapılıyor... --"
 set -uo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"

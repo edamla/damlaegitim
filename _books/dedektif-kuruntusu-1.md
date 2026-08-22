@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Dedektif Kuruntusu-1"
-description: "Okulun “belalı kızı” olarak bilinen Fatma, resim atölyesindeki en önemli tablonun bu kez durum farklıdır; çünkü okulun en zeki çocuğu Ali Bozkurt,…"
+description: "Okulun en belalı kızı ile en zeki çocuğu bir araya gelirse ne olur? Karşınızda her kapıyı açan yeni ikili: Dedektif Kuruntusu!"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -25,7 +25,7 @@ tags: []
 anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
 kazanim: [H.1.3.2, H.1.3.5, H.2.3.3, H.3.3.1, H.3.3.3, H.4.2.1, H.4.2.2, H.4.2.3, H.4.2.4, H.4.3.1]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
-unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
+unite: ["DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

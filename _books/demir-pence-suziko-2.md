@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Demir Pençe Suziko-2"
-description: "Alper, Oğuz ve Caner’in gizemli ajanlarla dolu macera dolu yolculuğu, Afrika’nın zekâlı robot dostları Suziko ile birlikte kendilerini bu kez akla hayale…"
+description: "Bir yapay zekâ robotu ve üç cesur gencin, dünyanın en soğuk kıtasına uzanan nefes keşen YOİCUİLlğü!"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -21,11 +21,11 @@ authors: ["Sara Gürbüz Özeren"]
 # anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Fedakârlık,Çevre Bilinci,Keşif Merakı,Yapay Zekâ,Cesaret,Mücadele]
 anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
 kazanim: [H.2.3.3, H.2.3.4, H.3.3.3, H.4.2.1, H.4.2.2, H.4.2.3, H.4.2.4, H.4.3.1, H.4.4.1, H.4.4.2]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
-unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
+unite: ["DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

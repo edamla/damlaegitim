@@ -44,5 +44,5 @@
       </div>
     </div>
   </form>
-  <script type="application/json" id="ogretmen-adres-il-ilce">{"iller":[{% for il in site.data.turkiye_adres.iller %}{"kod":{{ il.kod }},"ad":{{ il.ad | jsonify }},"ilceler":[{% for ilce in il.ilceler %}{"kod":{{ ilce.kod }},"ad":{{ ilce.ad | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]}{% unless forloop.last %},{% endunless %}{% endfor %}]}</script>
+  <script type="application/json" id="ogretmen-adres-il-ilce">{"iller":[{% for il in site.data.turkiye_adres_il_ilce.iller %}{"kod":{{ il.kod }},"ad":{{ il.ad | jsonify }},"ilceler":[{% for ilce in il.ilceler %}{"kod":{{ ilce.kod }},"ad":{{ ilce.ad | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]}{% unless forloop.last %},{% endunless %}{% endfor %}]}</script>
 </div>

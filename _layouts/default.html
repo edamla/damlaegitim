@@ -161,7 +161,9 @@
         {{ content }}
     </main>
 
+    {% unless page.ghost %}
     {% include ai-seo-crawler.html %}
+    {% endunless %}
 
     <script defer src="{{site.baseurl}}/assets/js/bootstrap.bundle.min.js"></script>
     <script defer src="{{site.baseurl}}/assets/js/nav.js"></script>

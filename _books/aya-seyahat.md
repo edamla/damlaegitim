@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Ay’a Seyahat"
+description: "İmkânsız denileni başarmak İçin dev bir merminin İçine hapsolup uzayın  karanlığına atılan üç cesur yürek ve akılalmaz bir yolculuk!"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -20,11 +21,11 @@ authors: ["Jules Verne"]
 # anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Bilim Tutkusu,Dayanışma,Pratik Zekâ,Sınırları Aşmak,Dostluk,Doğayla Mücadele]
 anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
 kazanim: [H.1.2.2, H.1.2.4, H.2.2.1, H.2.2.2, H.2.4.1, H.3.2.1, H.4.2.1, H.4.2.2, H.4.2.3, H.4.2.4]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
-unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
+unite: [ "DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

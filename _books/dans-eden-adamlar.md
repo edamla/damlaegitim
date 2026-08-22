@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Dans Eden Adamlar"
-description: "Birbiri ardına çizilmiş, çöp adamları andıran masum figürler aslında ne anlama gelen ve sadece “Dans Eden Adamlar” adı verilen gizemli şifrelerle dolu…"
+description: "Görünürdeki en kusursuz deliller bile, zekice kurgulanmış bir intikam planının sahte parçalarıdır."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -21,11 +21,11 @@ authors: ["Sir Arthur Conan Doyle"]
 # anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Karanlık İzler,Hırs ve Bedel,Yanıltıcı Deliller,İntikam ve Kin,Kriptoloji,Masumiyetin İspatı]
 anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
 kazanim: [H.1.3.5, H.1.3.7, H.1.3.8, H.2.3.1, H.2.3.2, H.2.3.3, H.3.3.2, H.3.3.3, H.4.3.1, H.4.4.1]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
-unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
+unite: ["DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

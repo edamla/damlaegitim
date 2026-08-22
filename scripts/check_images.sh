@@ -1,6 +1,6 @@
 #!/bin/bash
 # Büyük görsel dosyalarını raporlar; dosyalara dokunmaz.
-
+echo "-- Resimleri kontrol ediliyor... --"
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"

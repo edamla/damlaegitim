@@ -1,11 +1,12 @@
 # Damla Okul — Proje Mimarisi
 
-> **Dokümantasyon:** Bu projenin belgeleri üç dosyada toplanmıştır; mimari, kurulum veya UI değişikliklerinde ilgili belgeleri birlikte güncelleyin:
+> **Dokümantasyon:** Bu projenin belgeleri dört dosyada toplanmıştır; ilgili değişiklikte o dosyayı güncelleyin:
 > - [README.md](README.md) — Genel bakış, kurulum ve hızlı başlangıç
 > - [project.md](project.md) — Teknik mimari ve geliştirme kuralları *(bu dosya)*
 > - [design.md](design.md) — Stil, tasarım sistemi ve UI bileşenleri
+> - [getdata.md](getdata.md) — Dış veri çekimi (TurkiyeAPI, MEB okullar / okul detay)
 
-Bu belge, [damlaokul.com](https://damlaokul.com) (Damla Okul) statik sitesinin teknik yapısını, dosya organizasyonunu ve geliştirme kurallarını açıklar. Stil, renk, tipografi ve bileşen tasarımı için [design.md](design.md) dosyasına bakın.
+Bu belge, [damlaokul.com](https://damlaokul.com) (Damla Okul) statik sitesinin teknik yapısını, dosya organizasyonunu ve geliştirme kurallarını açıklar. Stil için [design.md](design.md); TurkiyeAPI ve MEB JSON’ları için [getdata.md](getdata.md).
 
 ## Genel Bakış
 
@@ -62,6 +63,10 @@ Stil dosyaları ve sorumluluk ayrımı [design.md](design.md) dosyasında ayrın
 ```
 damlaegitim/
 ├── _config.yml           # Site ayarları, koleksiyonlar, plugin’ler
+├── README.md             # Kurulum
+├── project.md            # Mimari (bu belge)
+├── design.md             # Tasarım sistemi
+├── getdata.md            # Dış veri çekimi (TurkiyeAPI, MEB)
 ├── _books/               # Ürünler (kitap / eğitim seti) — ~187 kayıt
 ├── _catalogs/            # PDF/flipbook kataloglar
 ├── _slides/              # Anasayfa slider verisi (output: false)
@@ -98,24 +103,40 @@ damlaegitim/
 │       └── favicon/
 ├── _data/
 │   ├── webp_manifest.yml         # Otomatik: mevcut .webp listesi (generate_webp.sh)
-│   ├── turkiye_adres.json        # İl / ilçe / mahalle / köy (scripts/fetch_turkiyeadres.py)
-│   └── okullar.json              # MEB kurum listesi (+ assets/data/okullar.json kopyası)
+│   ├── turkiye_adres_il_ilce.json # İl / ilçe (wizard; sync_site_data.py türetir)
+│   ├── tymm.json, dersler.json     # …
+├── docs/
+│   └── data/                       # Kanonik fetch JSON (gitignore; getdata.md)
+│       ├── turkiye_adres.json
+│       ├── turkiye_geodata.json
+│       ├── okullar.json
+│       ├── okullar_detay.json
+│       └── reference/              # TurkiyeAPI / HDX vendor snapshot
+├── assets/
+│   └── data/
+│       ├── okullar.json            # Wizard fetch (sync; gitignore)
+│       ├── geodata/                # Harita sınır parçaları (sync; gitignore)
+│       └── okullar-harita/         # Okul listesi + detay il parçaları (sync; gitignore)
 ├── scripts/
 │   ├── install_image_tools.sh    # WebP/ImageMagick kurulumu (install.sh; winget/brew/apt)
 │   ├── generate_webp.sh          # jpg/png → .webp + manifest güncelleme (start.sh hook)
+│   ├── sync_site_data.py         # docs/data → site türetilmiş dosyalar (start.sh hook)
 │   ├── refresh_image_paths.sh    # Windows winget PATH düzeltmesi (dahili)
 │   ├── check_images.sh           # Büyük görsel uyarı raporu (start.sh hook)
 │   ├── check_fonts.sh            # Font / WOFF2 uyarı raporu (install.sh)
 │   ├── subset_font.sh            # Tüm OTF/TTF → WOFF2 subset (install.sh)
 │   ├── normalize_book_frontmatter.rb   # Kitap front matter sıralama/normalize (`preview_link`, `examlink`, `damlaurl`; eski alan migrasyonu)
 │   ├── ogretmen-submit.gs              # Öğretmen wizard → Sheets + mail (Workspace’te dağıtılır; repo referans kopyası)
-│   ├── fetch_turkiyeadres.py           # TurkiyeAPI v2 → `_data/turkiye_adres.json`
-│   └── fetch_okullar.py                # MEB Okullar → `_data/okullar.json`
+│   ├── fetch_turkiyeadres.py           # → docs/data/turkiye_adres.json (getdata.md)
+│   ├── fetch_okullar.py                # → docs/data/okullar.json kamu (getdata.md)
+│   ├── fetch_ozel_okullar.py           # → okullar.json özel birleştirme (getdata.md)
+│   ├── fetch_okuldetay.py              # → docs/data/okullar_detay.json (getdata.md)
+│   └── sync_site_data.py               # → site türetilmiş dosyalar (getdata.md)
 ├── index.html            # Anasayfa
 ├── Gemfile               # github-pages + webrick (canlı GitHub Pages ile aynı stack)
 ├── CNAME                 # damlaokul.com
 ├── install.sh            # İlk kurulum: bundle, fonttools, WOFF2, görsel araçları, jekyll build
-├── start.sh              # Geliştirme: check_images + generate_webp hook + jekyll serve
+├── start.sh              # Geliştirme: check_images + generate_webp + sync_site_data hook + jekyll serve
 └── _site/                # Build çıktısı (gitignore)
 ```
 
@@ -194,8 +215,11 @@ flowchart LR
 | `_includes/ogretmen-wizard/step-*.html` | 6 adım UI |
 | `assets/css/ogretmen-wizard.css` | Wizard stilleri ([design.md](design.md#14-öğretmen-talep-formu-wizard)) |
 | `assets/js/book-filter.js` | TYMM filtreleri |
-| `_data/turkiye_adres.json` | İl / ilçe / mahalle / köy referansı (`scripts/fetch_turkiyeadres.py`) |
-| `_data/okullar.json` | MEB kurum listesi; il/ilçe kodları `turkiye_adres.json` ile (`scripts/fetch_okullar.py`) |
+| `_data/turkiye_adres_il_ilce.json` | İl / ilçe wizard embed; `sync_site_data.py` türetir — [getdata.md](getdata.md) |
+| `docs/data/okullar.json` | MEB kamu + OOKGM özel kurum listesi (kanonik) — [getdata.md](getdata.md) |
+| `assets/data/okullar.json` | Wizard `fetch`; sync ile üretilir, git’te yok — [getdata.md](getdata.md) |
+| `docs/data/okullar_detay.json` | Okul meta monolit (`kurum_kodu`); sync ile `assets/data/okullar-harita/` il parçalarına bölünür — [getdata.md](getdata.md) |
+| `assets/data/okullar-harita/` | Harita sayfası lazy fetch; sync türetilmiş — [getdata.md](getdata.md) |
 | `_data/tymm.json` | Hikaye filtre sıralaması |
 | `scripts/ogretmen-submit.gs` | Backend referansı (Workspace’te dağıtılır) |
 
@@ -365,7 +389,7 @@ sh scripts/subset_font.sh           # Tüm OTF/TTF → WOFF2 subset (fontawesome
 | Ruby / bundle | `bundle install` | `Gemfile.lock` kontrolü |
 | Fontlar | `subset_font.sh`, `check_fonts.sh` | — |
 | Görsel araçları | `install_image_tools.sh` (winget/brew/apt) | — |
-| Görsel hook'ları | — | `check_images.sh`, `generate_webp.sh` |
+| Görsel hook'ları | — | `check_images.sh`, `generate_webp.sh`, `sync_site_data.py` |
 | Jekyll | `jekyll build` (doğrulama) | `jekyll serve` |
 | `_data/webp_manifest.yml` | Yoksa oluşturur | `generate_webp.sh` günceller |
 
@@ -828,11 +852,11 @@ Sıra: Ruby/Bundler kontrolü → `bundle install` → Python `fonttools` → `s
 
 ```bash
 # Geliştirme sunucusu (hook'lar: görsel kontrol + webp üretimi)
-sh start.sh            # check_images.sh + generate_webp.sh + jekyll serve
+sh start.sh            # check_images.sh + generate_webp.sh + sync_site_data.py + jekyll serve
 # → http://localhost:4000
 ```
 
-`start.sh` önce `refresh_image_paths.sh` ile Windows PATH'ini düzeltir; ardından `check_images.sh` ve `generate_webp.sh` hook'larını çalıştırır.
+`start.sh` önce `refresh_image_paths.sh` ile Windows PATH'ini düzeltir; ardından `check_images.sh`, `generate_webp.sh` ve `sync_site_data.py` hook'larını çalıştırır.
 
 ### Canlıya alma
 
@@ -880,6 +904,7 @@ GitHub Pages, push sonrası kaynak branch’ten Jekyll build alır. **CI/CD veya
 | `google.com/recaptcha` | Form gönderiminde bot koruması (v2) |
 | Google Analytics | `G-PR1C1WGQB6` (`site.google_analytics`; yalnızca production) |
 | Cloudflare | DNS (şu an proxy kapalı — gri bulut) |
+| TurkiyeAPI / MEB | Adres ve okul JSON üretimi — [getdata.md](getdata.md) |
 
 Font Awesome artık yerel olarak `assets/fonts/fontawesome/` altından servis edilir; harici CDN kullanılmaz.
 

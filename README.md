@@ -1,10 +1,11 @@
 # Damla Okul
 
-> **Dokümantasyon:** Bu projenin belgeleri üç dosyada toplanmıştır; mimari, kurulum veya UI değişikliklerinde ilgili belgeleri birlikte güncelleyin:
+> **Dokümantasyon:** Bu projenin belgeleri dört dosyada toplanmıştır; ilgili değişiklikte o dosyayı güncelleyin:
 >
 > - [README.md](README.md) — Genel bakış, kurulum ve hızlı başlangıç *(bu dosya)*
 > - [project.md](project.md) — Teknik mimari ve geliştirme kuralları
 > - [design.md](design.md) — Stil, tasarım sistemi ve UI bileşenleri
+> - [getdata.md](getdata.md) — Dış veri çekimi (TurkiyeAPI, MEB okullar / okul detay)
 
 [damlaokul.com](https://damlaokul.com) — Damla Yayınevi’nin okul yayınları ve eğitim materyallerini tanıtan statik web sitesi.
 
@@ -158,7 +159,8 @@ sh start.sh
 
 1. Büyük görselleri raporlar (`check_images.sh`)
 2. Eksik WebP üretir (`generate_webp.sh`)
-3. `bundle exec jekyll serve`
+3. Site verisini senkronize eder (`sync_site_data.py` — `docs/data` → `_data` / `assets/data`)
+4. `bundle exec jekyll serve`
 
 Tarayıcıda [http://localhost:4000](http://localhost:4000) adresini açın.
 
@@ -195,7 +197,7 @@ bundle exec jekyll build
 | Script                                                                           | Ne zaman                      | Görev                                                                                                                                              |
 | -------------------------------------------------------------------------------- | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `[install.sh](install.sh)`                                                       | İlk kez (`git clone` sonrası) | Ruby gems, fonttools, WOFF2 subset, görsel araçları (winget), `jekyll build` doğrulama — **hook yok**                                              |
-| `[start.sh](start.sh)`                                                           | Her geliştirme oturumu        | `check_images` + `generate_webp` hook'ları + `jekyll serve`                                                                                        |
+| `[start.sh](start.sh)`                                                           | Her geliştirme oturumu        | `check_images` + `generate_webp` + `sync_site_data` hook'ları + `jekyll serve`                                                                                        |
 | `[scripts/install_image_tools.sh](scripts/install_image_tools.sh)`               | `install.sh` içinden          | Windows: winget ImageMagick + libwebp; macOS: brew; Linux: apt                                                                                     |
 | `[scripts/generate_webp.sh](scripts/generate_webp.sh)`                           | `start.sh` içinden            | `ean/` ve `slides/` için eksik `.webp` üretir; `_data/webp_manifest.yml` günceller                                                                 |
 | `[scripts/refresh_image_paths.sh](scripts/refresh_image_paths.sh)`               | Dahili                        | Windows'ta winget kurulum yollarını PATH'e ekler                                                                                                   |
@@ -205,8 +207,11 @@ bundle exec jekyll build
 | `[scripts/normalize_book_frontmatter.rb](scripts/normalize_book_frontmatter.rb)` | Manuel                        | Kitap front matter sıralama; `preview_link`, `examlink`, `damlaurl` korunur; eski `review_link`/`previewpage`/`damlayayinevi` taşınır veya silinir |
 | `[scripts/ogretmen-submit.gs](scripts/ogretmen-submit.gs)`                     | Workspace     | Öğretmen wizard backend; e-tablo Apps Script’ine yapıştırılır — [project.md](project.md#öğretmen-talep-formu-wizard) |
 | `[scripts/build_tymm_reference.rb](scripts/build_tymm_reference.rb)`             | Manuel                        | `docs/tymm-*` API JSON → `_data/tymm.json` + `docs/tymmreferans.csv`                                                                                |
-| `[scripts/fetch_turkiyeadres.py](scripts/fetch_turkiyeadres.py)`                 | Manuel                        | [TurkiyeAPI v2](https://docs.turkiyeapi.dev/tr/) → `_data/turkiye_adres.json` (il / ilçe / mahalle / köy)                                          |
-| `[scripts/fetch_okullar.py](scripts/fetch_okullar.py)`                           | Manuel                        | MEB Okullar AJAX → `_data/okullar.json` + `assets/data/okullar.json` (wizard okul listesi)                                                      |
+| `[scripts/fetch_turkiyeadres.py](scripts/fetch_turkiyeadres.py)`                 | Manuel                        | TurkiyeAPI → `docs/data/turkiye_adres.json` + sync — [getdata.md](getdata.md)                                                                                 |
+| `[scripts/fetch_okullar.py](scripts/fetch_okullar.py)`                           | Manuel                        | MEB kamu kurum listesi → `docs/data/okullar.json` + sync → `assets/data/` — [getdata.md](getdata.md)                                               |
+| `[scripts/fetch_ozel_okullar.py](scripts/fetch_ozel_okullar.py)`                 | Manuel                        | OOKGM özel okullar → aynı `okullar.json` (`ozel: true`) — [getdata.md](getdata.md)                                                                  |
+| `[scripts/fetch_okuldetay.py](scripts/fetch_okuldetay.py)`                       | Manuel                        | MEB tema siteleri → `docs/data/okullar_detay.json` (`--resume`); bitişte sync — [getdata.md](getdata.md)                                                              |
+| `[scripts/sync_site_data.py](scripts/sync_site_data.py)`                         | `start.sh` + fetch bitişi     | `docs/data` → `_data/turkiye_adres_il_ilce.json` + `assets/data/*` (okullar, geodata, okullar-harita il parçaları); eski `_data` büyük JSON kalıntılarını siler — [getdata.md](getdata.md)                                            |
 
 
 Windows Git Bash'te sıfırdan kurulum: `sh install.sh` → geliştirme: `sh start.sh`.
@@ -216,7 +221,7 @@ Windows Git Bash'te sıfırdan kurulum: `sh install.sh` → geliştirme: `sh sta
 ```
 _books/          Ürünler (kitap / eğitim seti)
 _catalogs/       Kataloglar
-_data/           Jekyll data (webp_manifest.yml, turkiye_adres.json, okullar.json, …)
+_data/           Jekyll data (webp_manifest.yml; turkiye_adres_il_ilce.json → getdata.md)
 _pages/          Statik sayfalar + search-index.json
 _layouts/        HTML şablonları
 _includes/       Ortak bileşenler (menü, kart, filtre, arama, ai-seo-crawler)
@@ -227,10 +232,11 @@ assets/images/   Görseller, slider ve kapaklar (jpg/png; .webp otomatik üretil
 scripts/         Kurulum ve geliştirme araç script'leri (yukarıdaki tablo)
 install.sh       İlk kurulum
 start.sh         Geliştirme sunucusu + hook'lar
+getdata.md       Dış veri çekimi (TurkiyeAPI, MEB)
 index.html       Anasayfa
 ```
 
-Detaylı mimari için [project.md](project.md), stil ve tasarım için [design.md](design.md) dosyasına bakın.
+Detaylı mimari için [project.md](project.md), stil için [design.md](design.md), TurkiyeAPI/MEB JSON’ları için [getdata.md](getdata.md).
 
 ## SEO ve AI Crawler
 

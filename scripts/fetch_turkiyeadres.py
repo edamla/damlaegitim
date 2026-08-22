@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""TurkiyeAPI v2 → _data/turkiye_adres.json (il → ilçe → mahalle / köy)"""
+"""TurkiyeAPI v2 → docs/data/turkiye_adres.json (il → ilçe → mahalle / köy)"""
 
 from __future__ import annotations
 
@@ -15,9 +15,15 @@ from datetime import date
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
+_SCRIPT_DIR = Path(__file__).resolve().parent
+if str(_SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(_SCRIPT_DIR))
+
+from data_paths import CANONICAL, VENDOR_TURKIYEAPI
+
 ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_PATH = ROOT / "_data" / "turkiye_adres.json"
-VENDOR_DIR = ROOT / "_data" / "reference" / "turkiyeapi"
+OUTPUT_PATH = CANONICAL["turkiye_adres"]
+VENDOR_DIR = VENDOR_TURKIYEAPI
 
 API_BASE = "https://api.turkiyeapi.dev/v2"
 DATASETS = ("provinces.json", "districts.json", "neighborhoods.json", "villages.json")
@@ -183,7 +189,7 @@ def validate(
 
 def main(argv: Optional[List[str]] = None) -> int:
     parser = argparse.ArgumentParser(
-        description="TurkiyeAPI v2 idari adres verisini _data/turkiye_adres.json olarak üretir"
+        description="TurkiyeAPI v2 idari adres verisini docs/data/turkiye_adres.json olarak üretir"
     )
     parser.add_argument("--output", type=Path, default=OUTPUT_PATH)
     parser.add_argument(
@@ -192,7 +198,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         nargs="?",
         const=VENDOR_DIR,
         default=None,
-        help="Ham dataset dosyalarını kaydet (_data/reference/turkiyeapi)",
+        help="Ham dataset dosyalarını kaydet (docs/data/reference/turkiyeapi)",
     )
     parser.add_argument(
         "--from-vendor",
@@ -250,6 +256,9 @@ def main(argv: Optional[List[str]] = None) -> int:
         encoding="utf-8",
     )
     print(f"Yazıldı: {args.output}")
+    from sync_site_data import sync
+
+    sync()
     return 0
 
 

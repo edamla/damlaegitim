@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Sherlock Holmes İstanbul’da"
-description: "Polisiye dünyasının iki büyük efsanesi İstanbul sokaklarında karşı karşıya geliyor! Cingöz Recai’yi durdurmak için bu kez İngiltere’nin en iyi zihni,…"
+description: "Dünyaca ünlü İngiliz hafiyesi Sherlock Holmes ve Türk polisinin korkulu rüyası, faka basmaz hırsız Cingöz Recai, İstanbul sokaklarında akllalmaz bir zekâ  savaşına tutuşuyor!"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -21,11 +21,11 @@ authors: ["Peyami Safa"]
 # anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Zekâ Çatışması,Soğukkanlılık,Özgüven,Suç ve Deha,Adalet,Şehir ve Gizem]
 anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
 kazanim: [H.2.2.1, H.2.2.2, H.2.3.1, H.2.3.2, H.2.3.3, H.2.3.5, H.3.2.1, H.4.2.1, H.4.2.2, H.4.2.4]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
-unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
+unite: ["DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

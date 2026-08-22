@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Demir Pençe Suziko-5"
-description: "Kıtalararası casusluk oyununun yeni ve en vahşi durağı: Okyanusya! Afrika, egzotik doğasıyla büyüleyen Avustralya ve Polinezya adalarında buluyor. Kan-…"
+description: "Kangurular, Aborjinler ve ölümcül sırlar... Yapay zekânın gücünü korumak İçin dünyanın öbür ucunda verilen amansız bir hayatta kalma mücadelesi!"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -21,11 +21,11 @@ authors: ["Sara Gürbüz Özeren"]
 # anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Sadakat ve Dostluk,Coğrafi Keşif,Zorluklarla Mücadele,Hayvan Hakları,Adalet Arayışı,Memleket Özlemi]
 anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
 kazanim: [H.2.2.1, H.2.2.2, H.2.3.3, H.3.2.1, H.3.3.3, H.4.2.1, H.4.2.2, H.4.2.3, H.4.2.4, H.4.3.1]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
-unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
+unite: ["DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:
