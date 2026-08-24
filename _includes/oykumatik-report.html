@@ -1,0 +1,45 @@
+{% comment %}
+  Öykümatik demo örnek rapor özeti.
+  Parametreler (include ile): correct, total, net, percent, rows (opsiyonel HTML satırları)
+{% endcomment %}
+{% assign r_correct = include.correct | default: 4 %}
+{% assign r_total = include.total | default: 6 %}
+{% assign r_net = include.net | default: 3.5 %}
+{% assign r_percent = include.percent | default: 67 %}
+
+<div class="oyk-demo-report card border-0 shadow-sm">
+  <div class="card-body">
+    <h3 class="h5">Örnek sınıf raporu</h3>
+    <p>
+      <strong>Doğru:</strong> {{ r_correct }} / {{ r_total }}
+      &nbsp; <strong>Net:</strong> {{ r_net }}
+      &nbsp; <strong>Başarı:</strong> {{ r_percent }}%
+    </p>
+    {% if include.rows %}
+    <table class="table table-sm">
+      <thead>
+        <tr><th>Boyut</th><th>Doğru</th><th>Yüzde</th></tr>
+      </thead>
+      <tbody>
+        {{ include.rows }}
+      </tbody>
+    </table>
+    {% else %}
+    <table class="table table-sm">
+      <thead>
+        <tr><th>Boyut</th><th>Doğru</th><th>Yüzde</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1D — Bilgi</td><td>2/2</td><td>100%</td></tr>
+        <tr><td>2D — Kavrama</td><td>1/2</td><td>50%</td></tr>
+        <tr><td>3D — Uygulama</td><td>1/1</td><td>100%</td></tr>
+        <tr><td>4D — Analiz</td><td>0/1</td><td>0%</td></tr>
+      </tbody>
+    </table>
+    {% endif %}
+    <p class="small text-muted mb-0">
+      Bu demo, Dedektif Kuruntusu pilot sorularıyla Öykümatik rapor özetini gösterir.
+      Tam platform için <a href="{{ site.baseurl }}/oykumatikle-tanisin">Öykümatik</a> sayfasına bakın.
+    </p>
+  </div>
+</div>

@@ -16,7 +16,10 @@ sitemap: false
     "grades": {{ book.grades | join: ', ' | jsonify }},
     "ean": {{ book.ean | append: '' | jsonify }},
     "genre": {% if book.genre == 'education' %}"Eğitim"{% elsif book.genre == 'story' %}"Hikaye"{% else %}{{ book.genre | jsonify }}{% endif %},
-    "anatemalar": {{ book.anatemalar | join: ', ' | jsonify }},
+    "anatema": {{ book.anatema | join: ', ' | jsonify }},
+    "kazanim": {{ book.kazanim | join: ', ' | jsonify }},
+    "beceriler": {{ book.beceriler | join: ', ' | jsonify }},
+    "unite": {{ book.unite | join: ', ' | jsonify }},
     "tags": {{ book.tags | join: ', ' | jsonify }},
     "body": {{ book.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | jsonify }}{% assign counter = counter | plus: 1 %}
   }{% unless forloop.last %},{% endunless %}{% endfor %}]

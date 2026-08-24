@@ -1,26 +1,31 @@
 ---
 layout: book
 title:  "Engel Tanımayanlar (10 Kitap)"
-categories: ["Çocuk", Hikaye]
-tags: []
+categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
-ean: 8697911223974
-languages: ["Türkçe"]
+ean: 9786051745374
+languages: [Türkçe]
 page: "Her Biri 80"
-size: "14x20 cm"
+size: "13,5x19,5 cm"
 publish-number: 4
 cover: "Karton Kapak"
 examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/engel-tanimayanlar.pdf"
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223974/index.html"
 damlaurl: ""
 paper: "1. Hamur"
+authors: ["Sara Gürbüz Özeren"]
+illustrators: ["Erhan Acar"]
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [4]
-kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
-anatemalar: ["Engelsiz Yaşam", "Toplumsal Duyarlılık", Empati, "Azim ve Mücadele", "Farkındalık"]
+tags: ["Başarının Anahtarı", "Hayal Kurma", Engelli, Yaşam, Empati, İnanç]
+anatema: [Empati, Duyarlılık, Merhamet, Çalışkanlık, Saygı, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine İnanma (Öz Yeterlilik)", "Kendine Güvenme (Öz Güven)", Girişkenlik]
+kazanim: [H.1.2.1, H.1.2.3, H.1.2.4, H.1.4.1, H.1.4.5, H.2.2.1, H.2.2.2, H.3.2.1, H.4.2.1, H.4.2.2]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Görsel Okuryazarlık", "İletişim Becerisi", "Sosyal Farkındalık Becerisi", "Özetleme Becerisi", "Çözümleme Becerisi"]
+unite: ["DOĞA VE İNSAN", "KENDİMİZİ GELİŞTİRİYORUZ", KÜTÜPHANEMİZ, "Mi̇llî MÜCADELE VE ATATÜRK"]
 
 # Social Media Attributes
 youtube:
@@ -33,4 +38,10 @@ başına onu mutlu etmeye yeter, çünkü hayalleri âdeta kanatlanır! Yaptığ
 Geçirdiği kaza sonrasında hayata dört elle sarılır Volkan.
 En büyük destekçisi biricikannesidir. “Engel Tanımayanlar” serisi ile Volkan’ın inatla yeni hayallere kanat çırpmasını, yaptığı her işi bir başarı hikâyesine dönüştürmesini okuyacaksınız.
 
-<!--more--> 
+**TEMALAR:** Engellilere Empati, Başarı Ruhu, Psikolojik Motivasyon, Gezi, Macera
+
+**KAZANIMLAR:** Engelli Bireylere Yönelik Empati Geliştirmek, Diğergamlık (Özgecilik) ve Dayanışma Değerlerini İçselleştirmek, Zorluklar Karşısında Pes Etmemeyi ve Başarı Ruhunu Kavramak, Sözcük Dağarcığını Yeni Kelimelerle Zenginleştirmek
+
+**ETİKETLER:** Başarının Anahtarı, Hayal Kurma, Engelli, Yaşam, Empati, İnanç
+
+<!--more-->

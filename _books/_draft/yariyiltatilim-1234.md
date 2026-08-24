@@ -2,7 +2,7 @@
 layout: previewbook
 title:  "Haftalık Yarı Yıl Tatilim | 1-2-3-4.Sınıf"
 description: "1–4. sınıflar için haftalık yarı yıl tatil kitabı; tatil süresince düzenli çalışma alışkanlığı kazandırır."
-categories: [Religion]
+categories: ["Eğitim", "İlkokul"]
 tags: []
 
 # Standart Book Attributes

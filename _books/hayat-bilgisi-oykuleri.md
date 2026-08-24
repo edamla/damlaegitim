@@ -1,26 +1,31 @@
 ---
 layout: book
 title:  "Hayat Bilgisi Öyküleri (10 Kitap)"
-categories: ["Çocuk", Hikaye]
-tags: []
+categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
-ean: 8697911223004
-languages: ["Türkçe"]
+ean: 9786254112676
+languages: [Türkçe]
 page: "Her Biri 48"
-size: "14x20 cm"
+size: "13,5x19,5 cm"
 publish-number: 3005
 cover: "Karton Kapak"
 examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/hayat-bilgisi-oykuleri-y.pdf"
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223004/index.html"
 damlaurl: ""
 paper: "1. Hamur"
+authors: ["Seda Bilgin"]
+illustrators: ["Ahmet Demirtaş"]
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [2]
-kavramlar: [""]
-anatemalar: ["Sosyal Yaşam Kuralları", "Çevre Bilinci", "Sağlık ve Güvenlik", "Toplumsal Duyarlılık", "Görgü Kuralları"]
+tags: [Araştırma, Kariyer, Gözlem, İletişim, Sağlık, Beslenme, "Zaman Yönetimi"]
+anatema: [Saygı, Sorumluluk, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", "Gerçeği Arama", Estetik, Muhakeme, Odaklanma, Yaratıcılık]
+kazanim: [H.1.1.1, H.1.1.2, H.1.2.1, H.1.2.3, H.1.3.2, H.1.4.2, H.2.1.2, H.3.4.1, H.4.1.1]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "İletişim Becerisi"]
+unite: ["ATATÜRK VE ÇOCUK", "DEĞERLERİMİZLE VARIZ"]
 
 # Social Media Attributes
 youtube:
@@ -32,4 +37,10 @@ Kerem ve arkadaşlarının her günü birbirinden eğlenceli, birbirinden mace
 Haydi, öyleyse sen de katıl onlara. Eğlenerek öğrenmenin tadını çıkar. Hayat Bilgisi konularının, hayatın akışında eğlenceli ve maceralı bir şekilde işlendiği bu kitabı elinden düşüremeyecek ve bir solukta okuyup bitireceksin.
 Haydi ne duruyorsun, okumaya başlasana...
 
-<!--more--> 
+**TEMALAR:** Okulumuzda Hayat, Evimizde Hayat, Sağlıklı Hayat, Güvenli Hayat
+
+**KAZANIMLAR:** Araştırma, Gözlem ve İletişim Becerisi Kazanmak, Bilgi ve İletişim Teknolojilerini Kullanmak, Değişim ve Sürekliliği Algılamak, Doğayı, Sağlığı ve Kendini Korumak, Sorun Çözme ve Karar Verme Yeteneği Geliştirmek, Millî ve Kültürel Değerleri Tanımak
+
+**ETİKETLER:** Araştırma, Kariyer, Gözlem, İletişim, Sağlık, Beslenme, Zaman Yöne
+
+<!--more-->

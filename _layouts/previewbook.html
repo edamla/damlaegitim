@@ -29,7 +29,8 @@ layout: default
 {% assign book = page %}
 
 <div class="container-lg pt-4 pb-4">
-  <article class="article-post">
+  {% include book-hero-meta.html book=book %}
+  <article class="article-post maarif-content">
     {% include book-minimal-content.html %}
   </article>
 

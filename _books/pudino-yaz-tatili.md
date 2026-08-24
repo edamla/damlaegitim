@@ -2,12 +2,11 @@
 layout: previewbook
 title:  "Pudino ile Yaz Tatili"
 description: "Okul öncesi Pudino karakteriyle hazırlanan yaz tatili kitabı; eğlenceli etkinliklerle yaz döneminde öğrenmeyi sürdürür."
-categories: [Religion]
-tags: []
+categories: [Eğitim, "Okul Öncesi"]
 
 # Standart Book Attributes
 ean: pudino-yaz-tatili
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 608
 size: "13,5x21 cm"
 publish-number: ""
@@ -17,10 +16,14 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/pudino-yaz-tatil
 damlaurl: ""
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: education
 grades: [0]
-kavramlar: []
-anatemalar: []
+tags: []
+anatema: []
+kazanim: []
+beceriler: []
+unite: []
 
 # Social Media Attributes
 youtube:

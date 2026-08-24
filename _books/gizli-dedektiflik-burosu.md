@@ -1,26 +1,31 @@
 ---
 layout: book
 title:  "Gizli Dedektiflik Bürosu (10 Kitap)"
-categories: ["Çocuk", Hikaye]
-tags: []
+categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
-ean: 8697911223080
-languages: ["Türkçe"]
+ean: 9786053833413
+languages: [Türkçe]
 page: "Her Biri 80"
-size: "14x20 cm"
+size: "13,5x19,5 cm"
 publish-number: 1463
 cover: "Karton Kapak"
 examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/gizli-dedektiflik-y.pdf"
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223080/index.html"
 damlaurl: ""
 paper: "1. Hamur"
+authors: ["Esra Avgören"]
+illustrators: ["Gökhan Kalafat"]
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [4]
-kavramlar: [""]
-anatemalar: ["Akıl Yürütme", "Problem Çözme", "Takım Ruhu", "Gizem ve Macera", "Analitik Düşünme"]
+tags: [Arkadaşlık, Yardımseverlik, Cesaret, "Vurdumduymaz Olmamak", "Takım Ruhu", "Planlı Çalışma"]
+anatema: [Dostluk, Empati, Cesaret, "Azim ve Kararlılık", "Kendine Güvenme (Öz Güven)", Merhamet, Sorumluluk, Çalışkanlık, Mahremiyet, Saygı, Merak, Girişkenlik]
+kazanim: [H.1.2.1, H.1.2.3, H.1.2.4, H.1.3.5, H.1.3.7, H.2.2.1, H.2.2.2, H.3.2.1, H.4.2.1, H.4.2.2]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "İletişim Becerisi", "Sosyal Farkındalık Becerisi", "Özetleme Becerisi"]
+unite: ["KENDİMİZİ GELİŞTİRİYORUZ", "DOĞA VE İNSAN", "Mi̇llî MÜCADELE VE ATATÜRK", "GEÇMİŞTEN GELECEĞE MİRASIMIZ"]
 
 # Social Media Attributes
 youtube:
@@ -30,18 +35,6 @@ youtube:
 Gizli Dedektiflik Bürosu, müthiş kurgusu ile okuyucuları kitabın içerisine çekip, onları bir dedektif gibi ipuçları toplamaya, analizler yapıp tahminler yürütmeye ve olayı çözüme kavuşturmaya davet ediyor.
 
 Heyecanın yüksek düzeyde seyrettiği kitaplarda okuyucu, bir yandan kitap okumanın keyfini çıkarırken, bir yandan da süper dedektif olmak için sebep-sonuç ilişkisine dayalı tahminler yaparak analitik zekâsını geliştiriyor.
-
-**TEMALAR**
-
-• Toplumsal Duyarlılık, Kişisel Gelişim, Birey ve Toplum, Sosyal Kontrol, Macera, Sorumlu Davranma
-
-**KAZANIMLAR**
-
-• Analitik Düşünme, Araştırma Ruhu, Ekip Çalışması, Parçadan Bütüne Gitme Becerisi
-
-**ETİKETLER**
-
-• Arkadaşlık, Yardımseverlik, Cesaret, Vurdumduymaz Olmamak, Takım Ruhu, Planlı Çalışma
 
 Gizli Dedektiflik Bürosu serisi daha önce denenmemiş bir kurguda hazırlandığından, okuyucuları kitabın içerisine alıp her birisini bir dedektif gibi ipuçlarını toplamaya, analizler yapıp tahminler yürütmeye ve olayı çözüme kavuşturmaya teşvik etmektedir.
 Her bir okuyucu kitap okumanın keyfini alırken aynı zamanda zekâsını geliştiren pratikler yapacak, kendisini sınayacak, erdemli olma yolunda değerlendirmeler yapacaktır.
@@ -68,4 +61,10 @@ Her bir okuyucu kitap okumanın keyfini alırken aynı zamanda zekâsını geli�
 
 10- Arabayı kim Çaldı?
 
-<!--more--> 
+**TEMALAR:** Toplumsal Duyarlılık, Kişisel Gelişim, Birey ve Toplum, Sosyal Kontrol
+
+**KAZANIMLAR:** Analitik Düşünme Becerisi Geliştirmek, Sebep-Sonuç İlişkisi Kurarak
+
+**ETİKETLER:** Arkadaşlık, Yardımseverlik, Cesaret, Vurdumduymaz Olmamak, Takım Ruhu, Planlı Çalışma
+
+<!--more-->

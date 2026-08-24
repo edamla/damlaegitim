@@ -1,16 +1,16 @@
 ---
 layout: book
 title:  "Dünya’nın Merkezine Yolculuk"
-categories: [Ortaokul]
-tags: []
+description: "Eksantrik ve inatçı bilim insanı Profesör Lidenbrock, eski bir parşömen kâğıdının Şifre, İzlanda’daki sönmüş bir yanardağın kraterinden Dünya’nın…"
+categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
 ean: 9786057288769
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: "160 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288769/index.html"
 damlaurl: ""
@@ -18,10 +18,14 @@ paper: "Kitap Kağıdı"
 authors: ["Jules Verne"]
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-kavramlar: ["Yeraltı okyanuslarından devasa mantar ormanlarına tarih öncesi canavarlardan dev insanlara Bilimin cesaretin ve sınırların zorlandığı bir Jules Verne klasiği"]
-anatemalar: ["Bilimsel İnatçılık", "Doğanın Gizemi", "Keşif Ruhu", "Korku ve Cesaret", Sadakat, "Tarih Öncesi Yaşam"]
+tags: []
+anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
+kazanim: [H.1.2.1, H.1.2.2, H.1.2.3, H.1.2.4, H.1.3.8, H.2.2.1, H.2.2.2, H.2.3.3, H.2.3.4, H.4.2.1]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
+unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

@@ -1,0 +1,66 @@
+{% assign rl_grade = include.grade | default: nil %}
+{% assign rl_theme = include.theme_tag | default: "" | strip %}
+{% assign rl_title = include.title | default: "Okuma listesi" %}
+{% assign rl_intro = include.intro | default: "" %}
+
+{% assign rl_books = site.books | where_exp: "b", "b.genre == 'story'" %}
+{% if rl_grade != nil and rl_grade != "" %}
+  {% assign rl_grade_num = rl_grade | plus: 0 %}
+  {% assign rl_books = rl_books | where_exp: "b", "b.grades contains rl_grade_num" %}
+{% endif %}
+{% if rl_theme != "" %}
+  {% assign rl_filtered = "" | split: "" %}
+  {% for book in rl_books %}
+    {% if book.unite contains rl_theme or book.anatema contains rl_theme or book.tags contains rl_theme %}
+      {% assign rl_filtered = rl_filtered | push: book %}
+    {% endif %}
+  {% endfor %}
+  {% assign rl_books = rl_filtered %}
+{% endif %}
+
+{% if rl_grade != nil and rl_grade != "" %}
+  {% assign rl_list_id = 'sinif-' | append: rl_grade %}
+{% elsif rl_theme != "" %}
+  {% assign rl_list_id = rl_theme | slugify %}
+{% else %}
+  {% assign rl_list_id = 'genel' %}
+{% endif %}
+
+<section class="reading-list" aria-labelledby="reading-list-{{ rl_list_id }}">
+  <h2 id="reading-list-{{ rl_list_id }}" class="reading-list__title">{{ rl_title }}</h2>
+  {% if rl_intro != "" %}
+  <p class="reading-list__intro text-muted">{{ rl_intro }}</p>
+  {% endif %}
+  {% if rl_books.size > 0 %}
+  <div class="reading-list__grid row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+    {% for book in rl_books %}
+    <div class="col">
+      {% include book-card.html book=book %}
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="text-muted">Bu kriterlere uygun kitap henüz listelenmedi.</p>
+  {% endif %}
+</section>
+
+{% if rl_books.size > 0 %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": {{ rl_title | jsonify }},
+  "numberOfItems": {{ rl_books.size }},
+  "itemListElement": [
+    {% for book in rl_books %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "url": "{{ site.url }}{{ site.baseurl }}{{ book.url }}",
+      "name": {{ book.title | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}

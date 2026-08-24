@@ -1,11 +1,12 @@
 # Damla Okul — Proje Mimarisi
 
-> **Dokümantasyon:** Bu projenin belgeleri üç dosyada toplanmıştır; mimari, kurulum veya UI değişikliklerinde ilgili belgeleri birlikte güncelleyin:
+> **Dokümantasyon:** Bu projenin belgeleri dört dosyada toplanmıştır; ilgili değişiklikte o dosyayı güncelleyin:
 > - [README.md](README.md) — Genel bakış, kurulum ve hızlı başlangıç
 > - [project.md](project.md) — Teknik mimari ve geliştirme kuralları *(bu dosya)*
 > - [design.md](design.md) — Stil, tasarım sistemi ve UI bileşenleri
+> - [getdata.md](getdata.md) — Dış veri çekimi (TurkiyeAPI, MEB okullar / okul detay)
 
-Bu belge, [damlaokul.com](https://damlaokul.com) (Damla Okul) statik sitesinin teknik yapısını, dosya organizasyonunu ve geliştirme kurallarını açıklar. Stil, renk, tipografi ve bileşen tasarımı için [design.md](design.md) dosyasına bakın.
+Bu belge, [damlaokul.com](https://damlaokul.com) (Damla Okul) statik sitesinin teknik yapısını, dosya organizasyonunu ve geliştirme kurallarını açıklar. Stil için [design.md](design.md); TurkiyeAPI ve MEB JSON’ları için [getdata.md](getdata.md).
 
 ## Genel Bakış
 
@@ -62,6 +63,10 @@ Stil dosyaları ve sorumluluk ayrımı [design.md](design.md) dosyasında ayrın
 ```
 damlaegitim/
 ├── _config.yml           # Site ayarları, koleksiyonlar, plugin’ler
+├── README.md             # Kurulum
+├── project.md            # Mimari (bu belge)
+├── design.md             # Tasarım sistemi
+├── getdata.md            # Dış veri çekimi (TurkiyeAPI, MEB)
 ├── _books/               # Ürünler (kitap / eğitim seti) — ~187 kayıt
 ├── _catalogs/            # PDF/flipbook kataloglar
 ├── _slides/              # Anasayfa slider verisi (output: false)
@@ -75,6 +80,7 @@ damlaegitim/
 │   │   ├── fontawesome-all.min.css
 │   │   ├── theme.css
 │   │   ├── app.css
+│   │   ├── ogretmen-wizard.css   # Öğretmen talep formu (/ogretmen)
 │   │   ├── spotlight.css
 │   │   ├── tiny-slider.css
 │   │   └── buyout.css            # Kullanılmıyor (legacy; layout’ta yüklenmez)
@@ -87,7 +93,7 @@ damlaegitim/
 │   ├── js/
 │   │   ├── bootstrap.bundle.min.js
 │   │   ├── nav.js                # Navbar scroll (vanilla JS)
-│   │   ├── book-filter.js        # Sınıf/tür filtreleme (yalnızca / ve /urunler)
+│   │   ├── book-filter.js        # Sınıf/tür filtreleme (/ , /urunler, /ogretmen wizard)
 │   │   ├── lunr.js               # Arama (lazy-load; açılınca yüklenir)
 │   │   ├── tiny-slider.js        # Anasayfa slider
 │   │   └── theme.js              # Eski (jQuery) — kullanılmıyor
@@ -96,20 +102,41 @@ damlaegitim/
 │       ├── ean/                  # Kitap kapak görselleri (webp otomatik üretilebilir)
 │       └── favicon/
 ├── _data/
-│   └── webp_manifest.yml         # Otomatik: mevcut .webp listesi (generate_webp.sh)
+│   ├── webp_manifest.yml         # Otomatik: mevcut .webp listesi (generate_webp.sh)
+│   ├── turkiye_adres_il_ilce.json # İl / ilçe (wizard; sync_site_data.py türetir)
+│   ├── tymm.json, dersler.json     # …
+├── docs/
+│   └── data/                       # Kanonik fetch JSON (gitignore; getdata.md)
+│       ├── turkiye_adres.json
+│       ├── turkiye_geodata.json
+│       ├── okullar.json
+│       ├── okullar_detay.json
+│       └── reference/              # TurkiyeAPI / HDX vendor snapshot
+├── assets/
+│   └── data/
+│       ├── okullar.json            # Wizard fetch (sync; gitignore)
+│       ├── geodata/                # Harita sınır parçaları (sync; gitignore)
+│       └── okullar-harita/         # Okul listesi + detay il parçaları (sync; gitignore)
 ├── scripts/
 │   ├── install_image_tools.sh    # WebP/ImageMagick kurulumu (install.sh; winget/brew/apt)
 │   ├── generate_webp.sh          # jpg/png → .webp + manifest güncelleme (start.sh hook)
+│   ├── sync_site_data.py         # docs/data → site türetilmiş dosyalar (start.sh hook)
 │   ├── refresh_image_paths.sh    # Windows winget PATH düzeltmesi (dahili)
 │   ├── check_images.sh           # Büyük görsel uyarı raporu (start.sh hook)
 │   ├── check_fonts.sh            # Font / WOFF2 uyarı raporu (install.sh)
 │   ├── subset_font.sh            # Tüm OTF/TTF → WOFF2 subset (install.sh)
 │   ├── normalize_book_frontmatter.rb   # Kitap front matter sıralama/normalize (`preview_link`, `examlink`, `damlaurl`; eski alan migrasyonu)
+│   ├── ogretmen-submit.gs              # Öğretmen wizard → Sheets + mail (Workspace’te dağıtılır; repo referans kopyası)
+│   ├── fetch_turkiyeadres.py           # → docs/data/turkiye_adres.json (getdata.md)
+│   ├── fetch_okullar.py                # → docs/data/okullar.json kamu (getdata.md)
+│   ├── fetch_ozel_okullar.py           # → okullar.json özel birleştirme (getdata.md)
+│   ├── fetch_okuldetay.py              # → docs/data/okullar_detay.json (getdata.md)
+│   └── sync_site_data.py               # → site türetilmiş dosyalar (getdata.md)
 ├── index.html            # Anasayfa
 ├── Gemfile               # github-pages + webrick (canlı GitHub Pages ile aynı stack)
 ├── CNAME                 # damlaokul.com
 ├── install.sh            # İlk kurulum: bundle, fonttools, WOFF2, görsel araçları, jekyll build
-├── start.sh              # Geliştirme: check_images + generate_webp hook + jekyll serve
+├── start.sh              # Geliştirme: check_images + generate_webp + sync_site_data hook + jekyll serve
 └── _site/                # Build çıktısı (gitignore)
 ```
 
@@ -141,8 +168,103 @@ damlaegitim/
 | `catalog.html` | Katalog detay + iframe görüntüleyici |
 | `post.html` | Blog yazısı |
 | `person.html` / `illustrator.html` / `translator.html` | Kişi profilleri |
+| `ogretmen-wizard.html` | 6 adımlı öğretmen talep formu (`/ogretmen`) |
 
 Tüm layout’lar `layout: default` zinciri üzerinden `default.html`’i extend eder.
+
+---
+
+## Öğretmen talep formu (wizard)
+
+**URL:** `/ogretmen` — **Durum:** Canlı (Jekyll → Apps Script → Sheets + e-posta)
+
+Öğretmenler sınıf seçer, hikaye ve eğitim kitaplarından liste oluşturur, iletişim bilgilerini girer ve talebi gönderir. Statik sitede backend yok; gönderim **Google Apps Script** web uygulamasına `fetch` POST ile yapılır.
+
+```mermaid
+flowchart LR
+  Browser["Tarayıcı /ogretmen"]
+  GAS["Apps Script doPost"]
+  Sheet["Sheets Talepler"]
+  Mail["MailApp"]
+  Captcha["reCAPTCHA siteverify"]
+  Browser -->|"POST JSON"| GAS
+  GAS --> Captcha
+  GAS --> Sheet
+  GAS --> Mail
+```
+
+### Sihirbaz adımları
+
+| # | Adım | İçerik |
+|---|------|--------|
+| 1 | Sınıf | Okul öncesi – 8. sınıf |
+| 2 | Okuma listesi | Hikaye; ünite / anatema / beceri filtreleri |
+| 3 | Eğitim kitapları | Eğitim setleri; arama |
+| 4 | Liste | Seçilen ürünler; okuma + eğitim grupları |
+| 5 | İletişim | Ad, soyad, il, ilçe, telefon, e-posta, okul |
+| 6 | Gönder | Özet, reCAPTCHA v2, gönder |
+
+**State:** `localStorage` → `damlaokul:ogretmen-wizard` (`version: 3`). Sınıf değişince liste ve filtreler sıfırlanır. Katalog build’de `site.books` JSON; listeye eklenen kitap katalogdan çıkar.
+
+### Dosyalar
+
+| Dosya | Görev |
+|-------|-------|
+| `_pages/ogretmen.html` | Permalink, SEO, footer |
+| `_layouts/ogretmen-wizard.html` | Adımlar, state, katalog JSON, submit |
+| `_includes/ogretmen-wizard/step-*.html` | 6 adım UI |
+| `assets/css/ogretmen-wizard.css` | Wizard stilleri ([design.md](design.md#14-öğretmen-talep-formu-wizard)) |
+| `assets/js/book-filter.js` | TYMM filtreleri |
+| `_data/turkiye_adres_il_ilce.json` | İl / ilçe wizard embed; `sync_site_data.py` türetir — [getdata.md](getdata.md) |
+| `docs/data/okullar.json` | MEB kamu + OOKGM özel kurum listesi (kanonik) — [getdata.md](getdata.md) |
+| `assets/data/okullar.json` | Wizard `fetch`; sync ile üretilir, git’te yok — [getdata.md](getdata.md) |
+| `docs/data/okullar_detay.json` | Okul meta monolit (`kurum_kodu`); sync ile `assets/data/okullar-harita/` il parçalarına bölünür — [getdata.md](getdata.md) |
+| `assets/data/okullar-harita/` | Harita sayfası lazy fetch; sync türetilmiş — [getdata.md](getdata.md) |
+| `_data/tymm.json` | Hikaye filtre sıralaması |
+| `scripts/ogretmen-submit.gs` | Backend referansı (Workspace’te dağıtılır) |
+
+### Yapılandırma (`_config.yml`)
+
+```yaml
+ogretmen_submit_url: "https://script.google.com/macros/s/…/exec"
+ogretmen_recaptcha_site_key: "…"   # v2 site key (herkese açık)
+```
+
+Gizli anahtar config’e **yazılmaz** — Apps Script Script Properties → `RECAPTCHA_SECRET`.
+
+### Gönderim akışı
+
+1. `buildSheetRow()` → JSON (`talep_id`, iletişim, ürünler, `filtre_*`, `recaptcha_token`, `urunler[]`)
+2. `POST`, `Content-Type: text/plain;charset=utf-8`
+3. Yanıt `{ ok: true }` → başarı ekranı; `localStorage` temizlenir
+4. Hata → öğretmene genel mesaj; ayrıntı `console.log('Gönderim hatası:', …)`
+
+### Google Workspace kurulumu
+
+1. Shared Drive’da **Öğretmen Talepleri** e-tablosu; Apps Script e-tabloya bağlı
+2. `scripts/ogretmen-submit.gs` içeriğini editöre yapıştır
+3. Script properties: `NOTIFY_EMAIL` (virgülle alıcılar), `RECAPTCHA_SECRET` (gizli anahtar)
+4. **`izinleriAl`** fonksiyonunu editörden çalıştır → UrlFetchApp izni ver
+5. Web app deploy: **Execute as Me**, **Anyone**; kod değişince **New version**
+6. `/exec` URL → `ogretmen_submit_url`; siteyi yeniden deploy et
+
+**Sheet sayfaları** (ilk POST’ta oluşur): `Talepler`, `Talep_Urunleri`. Form `filtre_unite` / `filtre_anatema` / `filtre_beceriler` de gönderir; Sheet başlıklarına isteğe bağlı eklenir.
+
+Tarayıcıda `/exec` URL’sini GET ile açmak `doGet not found` döner — normal (`doPost` only).
+
+Mail hatası Sheet kaydını iptal etmez.
+
+### Sorun giderme
+
+| Console / belirti | Çözüm |
+|-------------------|--------|
+| `UrlFetchApp… izniniz yok` | `izinleriAl` + izin ver + yeni sürüm deploy |
+| `invalid-input-secret` | `RECAPTCHA_SECRET` = gizli anahtar (site key değil) |
+| `missing_token` | reCAPTCHA yeniden işaretle |
+| Sheet var, mail yok | `NOTIFY_EMAIL` / MailApp kotası |
+| Eski davranış | Deploy → New version |
+
+Yerel test: `sh start.sh` → `http://localhost:4000/ogretmen` (reCAPTCHA admin’de `localhost` tanımlı olmalı).
 
 ---
 
@@ -173,7 +295,7 @@ Tüm layout’lar `layout: default` zinciri üzerinden `default.html`’i extend
 |-------|---------|-------|
 | `bootstrap.bundle.min.js` | `defer`, tüm sayfalar | Collapse, dropdown, modal |
 | `nav.js` | `defer`, tüm sayfalar | Sticky navbar yüksekliği (`--nav-height`), scroll gölgesi |
-| `book-filter.js` | `defer`, yalnızca `/` ve `/urunler` | Sınıf/tür filtreleme + hash URL senkronizasyonu |
+| `book-filter.js` | `defer`, `/`, `/urunler`, `/ogretmen` | Sınıf/tür filtreleme + hash URL; wizard’da TYMM filtreleri |
 | `lunr.js` | **Lazy** — arama açılınca | Spotlight kitap araması (client-side indeks) |
 | `tiny-slider.js` | Anasayfa (`slider.html`) | Slider + lazyload |
 
@@ -267,7 +389,7 @@ sh scripts/subset_font.sh           # Tüm OTF/TTF → WOFF2 subset (fontawesome
 | Ruby / bundle | `bundle install` | `Gemfile.lock` kontrolü |
 | Fontlar | `subset_font.sh`, `check_fonts.sh` | — |
 | Görsel araçları | `install_image_tools.sh` (winget/brew/apt) | — |
-| Görsel hook'ları | — | `check_images.sh`, `generate_webp.sh` |
+| Görsel hook'ları | — | `check_images.sh`, `generate_webp.sh`, `sync_site_data.py` |
 | Jekyll | `jekyll build` (doğrulama) | `jekyll serve` |
 | `_data/webp_manifest.yml` | Yoksa oluşturur | `generate_webp.sh` günceller |
 
@@ -290,21 +412,45 @@ Yapı, responsive davranış ve görsel stiller [design.md — Site Navbar](desi
 
 Ürün detay layout’u `book-page` sınıfı ile işaretlenir. Etiket stilleri, prose düzeni ve popup görünümü [design.md — Kitap Detay](design.md#6-kitap-detay-book-page) bölümünde tanımlıdır.
 
-### Üst alan etiketleri
+### Üst alan (hero meta)
 
-| Alan (front matter) | Görünüm |
-|---------------------|---------|
-| `anatemalar` | `#etiket` (yeşil pill) |
-| `kavramlar` | Kısa slug/kavram → `@etiket` (turuncu pill); uzun özet cümlesi → `.book-detail__tagline` (italik alıntı) |
+Hikaye kitaplarında (`genre: story`) müfredat bilgisi başlık altında [`book-hero-meta.html`](_includes/book-hero-meta.html) içindeki `.book-curriculum` paneli ile gösterilir. Panel iki bölümden oluşur:
 
-`kavramlar` her kitabın front matter’ında tanımlanır. Layout, metin uzunluğu ve biçimine göre pill veya alıntı seçer:
+**Türkiye Yüzyılı Maarif Modeli**
 
-| Koşul | Görünüm |
-|-------|---------|
-| Tire içerir ve boşluk yok (`sozel-dilsel`) | `@etiket` pill |
-| ≤ 18 karakter | `@etiket` pill |
-| Boşluklu ve ≤ 28 karakter | `@etiket` pill |
-| Diğer (uzun özet cümlesi) | `.book-detail__tagline` alıntı |
+| UI etiketi | Front matter | Görünüm |
+|------------|--------------|---------|
+| Ünitesi: | `unite` | Dolu yeşil chip; yatay scroll şeridi |
+| Anateması: | `anatema` | Outline chip; yatay scroll şeridi |
+| Becerileri: | `beceriler` | Düz chip listesi; yatay scroll şeridi |
+
+**Türkiye'de İlk ve Tek Damla Hikaye Kazanım Sistemi**
+
+| UI etiketi | Front matter | Görünüm |
+|------------|--------------|---------|
+| Öykümatik Kazanım Kodu: | `kazanim` | Kod chip'leri; `title` ile kazanım metni; yatay scroll |
+
+**Etiketler** (panel altında)
+
+| UI etiketi | Front matter | Görünüm |
+|------------|--------------|---------|
+| (etiket) | `tags` | Turuncu pill |
+
+Mobilde müfredat satırları dikey (etiket üstte, chip şeridi altta tam genişlik); sağ kenarda fade ve chevron kaydırma ipucu verir.
+
+Görünür metinde `#` / `@` öneki kullanılmaz. Müfredat ve etiket alanlarının tamamı boşsa hero meta bloğu render edilmez.
+
+Eğitim setlerinde (`genre: education`) müfredat kanıtı gövdedeki **Maarif uyum tablosu** (markdown tablo, `.maarif-content` stili) ile sunulur; ayrıntı [`maarif-modeli`](/maarif-modeli).
+
+### Filtre bloğu sırası (`# Spesific Filterable Attributes`)
+
+`genre` → `grades` → `tags` → `anatema` → `kazanim` → `beceriler` → `unite`
+
+`tags` üst bölümde (`categories` yanında) tutulmaz; [`normalize_book_frontmatter.rb`](scripts/normalize_book_frontmatter.rb) aynı sırayı yazar.
+
+### Eski üst alan notu (kaldırıldı)
+
+Önceden `anatemalar` ve `kavramlar` yan kolondaki «Öğretmen için» kutusundaydı; TYMM revizyonuyla `unite`, `anatema`, `beceriler` ve `kazanim` hero başlık altında gösterilir.
 
 ### Aksiyon butonları ve popup
 
@@ -343,7 +489,7 @@ Navbar üzerinden kitap araması yapılır. macOS Spotlight benzeri tam ekran mo
 
 ### İndeks kapsamı
 
-`site.books` koleksiyonu; alanlar: `title`, `ean`, `authors`, `categories`, `grades`, `genre`, `anatemalar`, `tags`, `body`. Kapak görseli indekste `assets/images/ean/{ean}.webp` (yoksa `.jpg`) kullanılır.
+`site.books` koleksiyonu; alanlar: `title`, `ean`, `authors`, `categories`, `grades`, `genre`, `unite`, `anatema`, `kazanim`, `beceriler`, `tags`, `body`. Kapak görseli indekste `assets/images/ean/{ean}.webp` (yoksa `.jpg`) kullanılır.
 
 4+ haneli tamamen sayısal aramalarda `ean` alanında doğrudan eşleştirme yapılır; diğer sorgularda Lunr wildcard araması kullanılır.
 
@@ -455,8 +601,10 @@ title: "Deyim Öyküleri 5 Kitap"
 grades: [3]
 genre: story          # education | story
 tags: []
-anatemalar: ["Değerler Eğitimi", "Macera", "Gizem"]   # yeşil # etiketler
-kavramlar: ["Dil Bilim", "Milli Kültür"]   # kısa → @pill; uzun cümle → özet alıntı
+anatema: [Saygı, Empati]
+kazanim: [H.1.2.1, H.3.3.3]
+beceriler: [Okuma Becerisi, "Problem Çözme Becerisi"]
+unite: ["Oyun Dünyası"]
 categories: ["Çocuk", "Hikaye"]
 ean: 9786053832874
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832874/index.html"
@@ -505,7 +653,7 @@ HDS PDF linkleri kitap front matter’ındaki tam `examlink` URL’si ile tanım
 |------|-------|
 | `scripts/normalize_book_frontmatter.rb` | Front matter sıralar; `preview_link`, `examlink`, `damlaurl` Standart Book Attributes altında korunur; `review_link` → `preview_link`, `previewpage` silinir |
 
-Front matter anahtar sırası (betik): `layout`, `title`, `categories`, `tags` → `ean`, `languages`, `page`, `size`, `publish-number`, `cover`, `examlink`, `preview_link`, `damlaurl` → `genre`, `grades`, `kavramlar`, `anatemalar` → diğer alanlar.
+Front matter anahtar sırası (betik): `layout`, `title`, `description`, `categories` → `ean`, … → `# Spesific Filterable Attributes`: `genre`, `grades`, `tags`, `anatema`, `kazanim`, `beceriler`, `unite` → diğer alanlar.
 
 Yeni kitap eklerken `preview_link` doğrudan front matter’a yazılır; özel path gerekmezse `https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/{ean}/index.html` varsayılan desenidir.
 
@@ -590,7 +738,7 @@ GitHub Pages uyumlu (özel Ruby plugin yok). Webmaster doğrulama DNS seviyesind
 | `_includes/book-seo-description.html` | Kitap meta description metni üretimi |
 | `_includes/book-seo-tags.html` | Kitap `<meta>` / Open Graph / Twitter (`twitter:description`) |
 | `_includes/book-minimal-content.html` | İnce gövdeli kitaplara görünür SEO paragrafı |
-| `_includes/related-books.html` | İlgili ürünler: aynı `grades`+`genre`, `anatemalar`/`categories` kesişimi |
+| `_includes/related-books.html` | İlgili ürünler: aynı `grades`+`genre` |
 | `_includes/structured-data-book.html` | `Product` + `Book` + `BreadcrumbList` JSON-LD |
 | `_includes/structured-data-site.html` | `Organization` JSON-LD; `WebSite` + `SearchAction` (`/?q=`) |
 | `_includes/search-lunr.html` | Spotlight arama; site geneli `?q=` init ve URL senkronu |
@@ -704,11 +852,11 @@ Sıra: Ruby/Bundler kontrolü → `bundle install` → Python `fonttools` → `s
 
 ```bash
 # Geliştirme sunucusu (hook'lar: görsel kontrol + webp üretimi)
-sh start.sh            # check_images.sh + generate_webp.sh + jekyll serve
+sh start.sh            # check_images.sh + generate_webp.sh + sync_site_data.py + jekyll serve
 # → http://localhost:4000
 ```
 
-`start.sh` önce `refresh_image_paths.sh` ile Windows PATH'ini düzeltir; ardından `check_images.sh` ve `generate_webp.sh` hook'larını çalıştırır.
+`start.sh` önce `refresh_image_paths.sh` ile Windows PATH'ini düzeltir; ardından `check_images.sh`, `generate_webp.sh` ve `sync_site_data.py` hook'larını çalıştırır.
 
 ### Canlıya alma
 
@@ -752,8 +900,11 @@ GitHub Pages, push sonrası kaynak branch’ten Jekyll build alır. **CI/CD veya
 |--------|----------|
 | `cdn.e-damla.com.tr` | Kitap `preview_link` ön izleme sayfaları; `examlink` HDS PDF’leri |
 | `feeds.behold.so` | Instagram carousel JSON feed |
+| `script.google.com` | Öğretmen talep formu Apps Script web app (`ogretmen_submit_url`) |
+| `google.com/recaptcha` | Form gönderiminde bot koruması (v2) |
 | Google Analytics | `G-PR1C1WGQB6` (`site.google_analytics`; yalnızca production) |
 | Cloudflare | DNS (şu an proxy kapalı — gri bulut) |
+| TurkiyeAPI / MEB | Adres ve okul JSON üretimi — [getdata.md](getdata.md) |
 
 Font Awesome artık yerel olarak `assets/fonts/fontawesome/` altından servis edilir; harici CDN kullanılmaz.
 

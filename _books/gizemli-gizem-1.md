@@ -1,17 +1,16 @@
 ---
 layout: book
 title:  "Gizemli Gizem-1"
-description: "Gizemli Gizem serisinin ilk kitabı; sürükleyici hikaye ile okuma motivasyonu sağlar."
-categories: [Ortaokul]
-tags: []
+description: "Yerinde duramayan, kıpır kıpır bir kızın tekerlekli ev hayaliyle başlayan eğlenceli koşusu!"
+categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
 ean: 9786051748818
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: "160 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786051748818/index.html"
 damlaurl: ""
@@ -19,10 +18,14 @@ paper: "Kitap Kağıdı"
 authors: ["Nehir Aydın Gökduman"]
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-kavramlar: ["Yerinde duramayan kıpır kıpır bir kızın tekerlekli ev hayaliyle başlayan eğlenceli koşusu"]
-anatemalar: ["Hayal Gücü", Sorumluluk, Empati, "Kardeşlik", "Yardımlaşma", "İletişim"]
+tags: [Hayal Gücü,Sorumluluk,Empati,Kardeşlik,Yardımlaşma,İletişim]
+anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
+kazanim: [H.1.2.1, H.1.2.2, H.1.2.4, H.2.2.1, H.2.2.2, H.3.2.1, H.4.2.1, H.4.2.2, H.4.2.3, H.4.2.4]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
+unite: ["DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

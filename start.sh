@@ -30,4 +30,18 @@ if [ -f "scripts/generate_webp.sh" ]; then
   echo ""
 fi
 
+# Site veri senkronu (docs/data → _data / assets/data)
+if [ -f "scripts/sync_site_data.py" ]; then
+  echo ">>> Site veri senkronu (docs/data → _data / assets/data)"
+  python3 scripts/sync_site_data.py 2>/dev/null || python scripts/sync_site_data.py 2>/dev/null || \
+    echo "Uyarı: sync_site_data atlandı (Python veya docs/data eksik)."
+  echo ""
+fi
+
+# Jekyll öncesi: sync sırasında IDE/paralel işlem _data kalıntısını geri yazabilir
+if [ -f "scripts/sync_site_data.py" ]; then
+  python3 scripts/sync_site_data.py --cleanup-only 2>/dev/null || \
+    python scripts/sync_site_data.py --cleanup-only 2>/dev/null || true
+fi
+
 bundle exec jekyll serve

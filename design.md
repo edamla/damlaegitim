@@ -1,11 +1,12 @@
 # Damla Okul — Tasarım Sistemi ve UI Mimarisi
 
-> **Dokümantasyon:** Bu projenin belgeleri üç dosyada toplanmıştır; mimari, kurulum veya UI değişikliklerinde ilgili belgeleri birlikte güncelleyin:
+> **Dokümantasyon:** Bu projenin belgeleri dört dosyada toplanmıştır; ilgili değişiklikte o dosyayı güncelleyin:
 > - [README.md](README.md) — Genel bakış, kurulum ve hızlı başlangıç
 > - [project.md](project.md) — Teknik mimari ve geliştirme kuralları
 > - [design.md](design.md) — Stil, tasarım sistemi ve UI bileşenleri *(bu dosya)*
+> - [getdata.md](getdata.md) — Dış veri çekimi (TurkiyeAPI, MEB okullar / okul detay)
 
-Bu belge [damlaokul.com](https://damlaokul.com) sitesinin görsel kimliğini, CSS mimarisini, bileşen kütüphanesini ve tasarım tercihlerini tanımlar. Teknik build/deploy bilgisi için [project.md](project.md); kurulum için [README.md](README.md) dosyasına bakın.
+Bu belge [damlaokul.com](https://damlaokul.com) sitesinin görsel kimliğini, CSS mimarisini, bileşen kütüphanesini ve tasarım tercihlerini tanımlar. Teknik build/deploy için [project.md](project.md); kurulum için [README.md](README.md); dış veri JSON’ları için [getdata.md](getdata.md).
 
 ---
 
@@ -38,6 +39,8 @@ Bu belge [damlaokul.com](https://damlaokul.com) sitesinin görsel kimliğini, CS
 │  spotlight.css            Arama modal (async, tüm sayfalar) │
 ├─────────────────────────────────────────────────────────────┤
 │  tiny-slider.css          Anasayfa slider (yalnızca /)      │
+├─────────────────────────────────────────────────────────────┤
+│  ogretmen-wizard.css      Öğretmen talep formu (/ogretmen)  │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -80,6 +83,8 @@ Tüm token'lar `theme.css` → `:root` bloğunda tanımlıdır. Bileşenlerde m�
 | `--color-border` | `#dee2e6` | Kart kenarlıkları, navbar alt çizgi |
 | `--color-surface` | `#fafafa` | Sayfa arka planı (`body`) |
 | `--color-footer-bg` | `#25272a` | Footer koyu zemin |
+| `--color-accent-concept` | `#9a6500` | Kavram pill metni, tagline border (WCAG AA) |
+| `--color-accent-concept-muted` | `#fdf6e8` | Kavram pill arka planı |
 
 **Bootstrap eşlemesi** (`app.css`):
 
@@ -96,9 +101,9 @@ Tüm token'lar `theme.css` → `:root` bloğunda tanımlıdır. Bileşenlerde m�
 
 | Bağlam | Renk | Class / seçici |
 |--------|------|----------------|
-| Konu etiketleri (`#`) | `--color-primary` | `.book-detail__tags .tag` |
-| Kavram etiketleri (`@`) | `#c88400` (turuncu) | `.book-detail__concepts .concept` |
-| Kavram özeti (alıntı) | `#c88400` sol border | `.book-detail__tagline` |
+| Konu etiketleri | `--color-primary` | `.book-curriculum__chip--unite`, `.book-card__theme` |
+| Etiket pill | `--color-accent-concept` | `.book-detail__tags .tag` |
+| Kavram özeti (alıntı) | `--color-accent-concept` sol border | `.book-detail__tagline` |
 | Grade nav ikonları | Sınıfa göre (aşağıda) | `.grade-nav-item[data-grade="N"] .grade-nav-icons` |
 | Spotlight metin | `#1d1d1f` / `#86868b` | Apple-inspired nötr gri tonları |
 | Satın Al butonu | Bootstrap `text-success` | `.js-book-action` + `fa-shopping-cart` |
@@ -123,7 +128,7 @@ Tüm token'lar `theme.css` → `:root` bloğunda tanımlıdır. Bileşenlerde m�
 | `--nav-height` | `4rem` (dinamik) | Fixed navbar yüksekliği; `nav.js` ile güncellenir |
 | `--container-max` | `1280px` | Geniş ekran container sınırı |
 | `--book-card-media-height` | `220px` (mobil: `160px`) | Kitap kartı kapak alanı |
-| `--book-card-info-height` | `3rem` (mobil: `2.75rem`) | Kitap kartı başlık alanı |
+| `--book-card-info-height` | `7rem` (mobil: `6.25rem`) | Kitap kartı başlık + yazar + tema alanı |
 
 ### Geçişler
 
@@ -297,10 +302,13 @@ BEM yapısı:
 │   ├── .book-card__media
 │   │   └── .book-card__cover (object-fit: contain)
 │   └── .book-card__info
-│       └── .book-card__title (line-clamp: 2)
+│       ├── .book-card__title (line-clamp: 2)
+│       ├── .book-card__author (isteğe bağlı)
+│       └── .book-card__theme (outline pill, ilk anatema)
 ```
 
 - Sabit toplam yükseklik — grid hizası bozulmaz
+- Tema pill: beyaz zemin, ince border, yeşil metin (`--color-primary`); kart altına `margin-top: auto`
 - Hover: hafif gölge + kapak `scale(1.02)`
 - Grid: `.listbooks-home.row` — mobil 2, masaüstü 4 sütun CSS Grid
 
@@ -316,14 +324,24 @@ BEM yapısı:
 | Bölüm | Class | Not |
 |-------|-------|-----|
 | Kapak | `.book img` | `drop-shadow` |
-| Başlık | `.article-headline.display-4` | Mobilde ortalı |
-| Konu etiketleri | `.book-detail__tags .tag` | `#etiket`, yeşil, pill |
-| Kavram / özet | `.book-detail__kavramlar` | Kısa slug → `@etiket` (turuncu pill); uzun cümle → `.book-detail__tagline` (alıntı). Heuristik: tireli boşluksuz slug, ≤18 karakter veya boşluklu ≤28 karakter → pill; aksi halde alıntı |
+| Başlık | `.article-headline.display-4` | `margin-bottom: var(--space-6)`; mobilde ortalı |
+| Hero meta | `.book-detail__hero-meta` | Yalnızca `genre: story`; boşsa render edilmez |
+| Müfredat paneli | `.book-curriculum` | İki bölüm: TYMM + Öykümatik; alt satırlarda label + yatay scroll şeridi |
+| TYMM bölüm başlığı | `.book-curriculum__heading` | «Türkiye Yüzyılı Maarif Modeli»; altında Ünitesi / Anateması / Becerileri |
+| Öykümatik bölüm başlığı | `.book-curriculum__heading` | «Türkiye'de İlk ve Tek Damla Hikaye Kazanım Sistemi»; altında Öykümatik Kazanım Kodu |
+| TYMM ünite | `.book-curriculum__chip--unite` | Dolu yeşil chip; tek satır, `overflow-x: auto` |
+| TYMM anatema | `.book-curriculum__chip--anatema` | Outline yeşil chip; tek satır scroll |
+| TYMM beceriler | `.book-curriculum__chip--beceri` | Outline chip; düz liste, tek satır scroll |
+| Kazanım kodları | `.book-curriculum__chip--kazanim` | Monospace kod chip; `title` ile kazanım metni |
+| Scroll ipucu | `.book-curriculum__scroll::after` | Sağ kenar fade + chevron; mobilde label üstte, tam genişlik scroll |
+| Etiketler | `.book-detail__tags .tag` | Panel altında turuncu pill |
+| Aksiyonlar | `.book-detail__actions .js-book-action` | Outline `btn-sm`, `fa-sm` ikon, `min-height: 2.25rem` |
 | Metadata | `.book-meta__item` | Flex: ikon + metin |
 | Açıklama | `.prose--display` | Markdown gövdesi |
-| Aksiyonlar | `.js-book-action` | `damlaurl` dolu → Satın Al (iframe); boş → Bilgi (tedarik popup); İncele → `preview_link`; HDS → `examlink` |
 
-**Dosya:** `_layouts/book.html`
+Hero sırası: başlık → müfredat paneli (`.book-curriculum`) → etiketler → aksiyonlar. Panel iki bölümden oluşur: **Türkiye Yüzyılı Maarif Modeli** (Ünitesi, Anateması, Becerileri) ve **Türkiye'de İlk ve Tek Damla Hikaye Kazanım Sistemi** (Öykümatik Kazanım Kodu). Mobilde satırlar dikey; chip şeritleri sağ fade ve chevron ile kaydırılabilir olduğunu gösterir.
+
+**Dosyalar:** `_layouts/book.html`, `_includes/book-hero-meta.html`
 
 ### 7. Hero Slider (`.slider`)
 
@@ -509,6 +527,34 @@ Navbar, footer ve ana içerik koyu tema desteklemez.
 
 ---
 
+## 14. Öğretmen talep formu (wizard)
+
+**URL:** `/ogretmen` — Teknik kurulum: [project.md — Öğretmen talep formu](project.md#öğretmen-talep-formu-wizard)
+
+Sayfa özel CSS yükler (`ogretmen-wizard.css`); Bootstrap grid + marka token’ları ile uyumludur.
+
+### Bileşenler
+
+| Sınıf / öğe | Görev |
+|-------------|-------|
+| `.ogretmen-wizard` | Kök sarmalayıcı |
+| `.ogretmen-wizard__progress` | 6 noktalı adım göstergesi |
+| `.ogretmen-wizard__step-dot.is-active` | Aktif adım |
+| `.ogretmen-wizard__panel` | Adım içeriği (`hidden` ile geçiş) |
+| `.ogretmen-wizard__catalog` | Kitap grid (max 4 sütun mobil uyumlu) |
+| `.ogretmen-wizard__list-row` | Seçilen kitap satırı (thumbnail + başlık) |
+| `.ogretmen-wizard__status.is-error` / `.is-success` | Gönderim durumu |
+| `.ogretmen-wizard__success` | Başarı ekranı |
+
+### UX notları
+
+- Liste kutusu ekleme animasyonu; katalogdan eklenen kitap kaldırılır
+- Adım 4: Okuma listesi ve eğitim listesi ayrı gruplar
+- Mobil: filtreler ve katalog tek sütuna düşer; dokunma hedefleri yeterli padding
+- Hata mesajları öğretmene genel; teknik ayrıntı yalnızca tarayıcı konsolunda
+
+---
+
 ## Yeni Stil Ekleme Rehberi
 
 ### Kalıcı bileşen
@@ -558,6 +604,7 @@ Navbar, footer ve ana içerik koyu tema desteklemez.
 | Ana stil | `assets/css/theme.css` |
 | Bootstrap override | `assets/css/app.css` |
 | Arama UI | `assets/css/spotlight.css` |
+| Öğretmen wizard | `assets/css/ogretmen-wizard.css` |
 | Kök şablon | `_layouts/default.html` |
 | Navbar JS | `assets/js/nav.js` |
 | Font subset | `scripts/subset_font.sh` |

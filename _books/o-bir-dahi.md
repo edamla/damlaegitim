@@ -1,26 +1,31 @@
 ---
 layout: book
 title:  "O BİR DAHİ (10 KİTAP)"
-categories: ["Öykümatik"]
-tags: []
+categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
 ean: 8697911223516
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: "Her Biri 80"
-size: "14x20 cm"
+size: "13,5x19,5 cm"
 publish-number: 3269
 cover: "Karton Kapak"
 examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/o-bir-dahi-y.pdf"
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223516/index.html"
 damlaurl: ""
 paper: "1. Hamur"
+authors: ["Seda Bilgin"]
+illustrators: ["Ahmet Demirtaş"]
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [4]
-kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
-anatemalar: [Biyografi, "İlham Veren Hayatlar", "Azim ve Kararlılık", "Bilimsel Keşifler", "Başarı Hikayeleri"]
+tags: []
+anatema: [Çalışkanlık, Saygı, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine İnanma (Öz Yeterlilik)", "Kendine Güvenme (Öz Güven)", Empati, Girişkenlik, "Gerçeği Arama", Sistematiklik]
+kazanim: [H.1.2.1, H.1.2.3, H.1.2.4, H.1.3.5, H.2.2.1, H.2.2.2, H.2.3.1, H.3.2.1, H.4.2.1, H.4.2.2]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Görsel Okuryazarlık", "İletişim Becerisi", "Sosyal Farkındalık Becerisi", "Özetleme Becerisi", "Çözümleme Becerisi"]
+unite: ["DOĞA VE İNSAN"]
 
 # Social Media Attributes
 youtube:
@@ -43,4 +48,9 @@ Wilhelm Rontgen’in X ışınlarını keşfi,
 Bu kitap, genç zihinlerinizin bilime olan merakını artıracak ve belki de ileride siz de dünyaya değerli katkılarda bulunacaksınız.
 Haydi, bilimin heyecan verici yolculuğuna başlayalım!
 <!-- <img style="height: 50vh" src="/assets/images/ean/8697911223851-1.jpg" alt="">
-<!--more--> 
+
+**TEMALAR:** Merak, Hayal Gücü, Keşif, Yenilik, Teknoloji, Mühendislik, Cesaret, Bilimsel
+
+**KAZANIMLAR:** Farklı Kültürlerden Gelen Bilim İnsanlarını ve İnsanlığa Katkılarını Tanımak, Bilime Merak Duyma ve Araştırma Tutkusu Geliştirmek, Azim ve Çalışkanlığın Başarıya Götürdüğünü Kavramak, Problem Çözme, Yaratıcı Düşünme ve Sorgulama Becerisi Kazanmak, Kendi Potansiyelini Keşfederek Evrensel Bir Bakış Açısı Geliştirmek, ALBERT EINSTEIN, Ödevin Olmadığı Gezegen, GRAHAM BELL, Sı nıfa Gelen Yeni Arkadaş, EL CEZERİ, Macit ve Kurbağa
+
+<!--more-->

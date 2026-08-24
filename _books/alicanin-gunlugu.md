@@ -1,26 +1,31 @@
 ---
 layout: book
 title:  "Alican'ın Günlüğü (10 Kitap)"
-categories: ["Öykümatik"]
-tags: []
+categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
-ean: 8697911223028
-languages: ["Türkçe"]
+ean: 9786053831303
+languages: [Türkçe]
 page: "Her Biri 48"
-size: "14x20 cm"
+size: "13,5x19,5 cm"
 publish-number: 1355
 cover: "Karton Kapak"
 examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/alican-y.pdf"
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223028/index.html"
 damlaurl: ""
 paper: "1. Hamur"
+authors: ["Nehi̇r Aydın Gökduman"]
+illustrators: ["Mustafa Kocabaş"]
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [2]
-kavramlar: [gorsel-uzamsal, sosyal, doga]
-anatemalar: ["Kişisel Gelişim", "Okul ve Aile Hayatı", Mizah, "Arkadaşlık", "Özfarkındalık"]
+tags: [Macera, Yardımseverlik, "Aile Büyüklerine Saygı", Günlük]
+anatema: [Saygı, Merak, "Gerçeği Arama", "Aile Bütünlüğü", Sevgi, Merhamet, Dostluk, Sorumluluk, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Estetik, Oyunseverlik]
+kazanim: [H.1.1.1, H.1.1.2, H.1.2.1, H.1.2.3, H.1.3.2, H.1.4.2, H.2.1.2, H.3.4.1, H.4.1.1]
+beceriler: ["Okuma Becerisi", "Dinleme/İzleme Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "İletişim Becerisi"]
+unite: ["ATATÜRK VE ÇOCUK", "DOĞADA NELER Oluyor?", "OKUMA SERÜVENİMİZ", "KÜLTÜR HAZİNEMİZ"]
 
 # Social Media Attributes
 youtube:
@@ -50,5 +55,23 @@ Macera dolu kitaplarda; yardımlaşma, hayvan sevgisi, dayanışma, araştırma,
 9- Kaplanlar Dondurma Yemez<br>
 10- Çiko Nerede?
 
+**TEMALAR:** Hikâyelerle Değerler Eğitimi, Macera, Dostluk, Kardeşlik, Cesaret
 
-<!--more--> 
+**KAZANIMLAR:** Topluma ve Büyüklere Saygılı Bireyler Kazandırmak, Sözünde Durmanın Önemini Kavratmak, Yalan Söylemenin Sakıncalarını Öğretmek, Alay Etmenin Kötü Bir Davranış Olduğunu Göstermek, Olumlu Davranışlar Geliştirmek
+
+**ETİKETLER:** Macera, Yardımseverlik, Aile Büyüklerine Saygı, Günlük
+
+Setin İçerdiği Hikayeler**
+
+1- Bir Köpeğim Olsun <br>
+2- Eyvah Koyboldum!<br>
+3- Maceralı Piknik<br>
+4- Kediler de Okula Gider<br>
+5- Hırsız Geliyorum Demez<br>
+6- Bir Daha Resim Yapmayacağım<br>
+7- Uzun Kuyruklu Uçurtmam<br>
+8- Minik Kuş Fıstık<br>
+9- Kaplanlar Dondurma Yemez<br>
+10- Çiko Nerede?
+
+<!--more-->

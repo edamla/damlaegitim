@@ -1,26 +1,31 @@
 ---
 layout: book
 title:  "İstiklal Marşı Yazdıran Kahramanlar (10 Kitap)"
-categories: ["Çocuk", Hikaye]
-tags: []
+categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
 ean: 9786254112560
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: "Her Biri 64"
-size: "14x20 cm"
+size: "13,5x19,5 cm"
 publish-number: 2972
 cover: "Karton Kapak"
 examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/istiklal-marsi-yazdiran-y.pdf"
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254112560/index.html"
 damlaurl: ""
-paper: "1. Hamur"
+paper: "Kitap Kağıdı"
+authors: ["Sara Gürbüz Özeren"]
+illustrators: ["Erhan Acar"]
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [3, 4]
-kavramlar: [""]
-anatemalar: ["Milli Mücadele", "Vatan Sevgisi", "Bağımsızlık", "Tarih Bilinci", "Kahramanlık"]
+tags: [Gazilik, Şehitlik, Vatanseverlik, Tarih, Kültür, Medeniyet, Bayrak, "Kültür Birliği", Mücadele, "Cihad Şuuru", Kahramanlık, Gençlik, Asker, Ordu, Cesaret, Millet]
+anatema: [Sevgi, Cesaret, "Azim ve Kararlılık", "Kendine Güvenme (Öz Güven)", Vatanseverlik, Saygı, Özgürlük, Estetik, Sorumluluk, Merak, Empati, Girişkenlik]
+kazanim: [H.1.2.1, H.1.2.3, H.1.2.4, H.2.2.1, H.2.2.2, H.2.3.1, H.3.2.1, H.3.3.2, H.4.2.1, H.4.2.2]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Görsel Okuryazarlık", "İletişim Becerisi", "İş Birliği Becerisi", "Sorumlu Karar Verme Becerisi", "Özetleme Becerisi", "Çözümleme Becerisi"]
+unite: ["Mi̇llî MÜCADELE VE ATATÜRK", KÜTÜPHANEMİZ, "DOĞA VE İNSAN", "DOĞAYI TANIYORUZ"]
 
 # Social Media Attributes
 youtube:
@@ -54,4 +59,23 @@ Mehmet Âkif Ersoy
 9- Köprülülü Hamdi Bey<br>
 10- Erzurumlu Gül Hanım
 
-<!--more--> 
+**TEMALAR:** Vatanseverlik, Tarih, Kültür, Kurtuluş Mücadelesi
+
+**KAZANIMLAR:** Millî Mücadele Dönemini ve Kahramanlarını Tanımak, Vatan Sev gisi ve Bağımsızlık Bilincini İçselleştirmek, İstiklâl Marşı’nın Yazılış Sürecini ve Anlamını Kavramak, Cesaret, Fedakârlık ve Dayanışma Gibi Millî Değerleri Özümsemek
+
+**ETİKETLER:** Gazilik, Şehitlik, Vatanseverlik, Tarih, Kültür, Medeniyet, Bayrak, Kültür Birliği, Mücadele, Cihad Şuuru, Kahramanlık, Gençlik, Asker, Ordu, Cesaret, Millet
+
+Setin İçerdiği Hikayeler**
+
+1- İlk Kurşun <br>
+2- Topkapılı Cambaz Mehmet<br>
+3- Kara Fatma<br>
+4- Sütçü İmam<br>
+5- Şerife Bacı<br>
+6- Karboğazlı Hatice Bacı<br>
+7- Maraşlı Karayılan<br>
+8- İlk Çocuk Şehidimiz<br>
+9- Köprülülü Hamdi Bey<br>
+10- Erzurumlu Gül Hanım
+
+<!--more-->

@@ -1,26 +1,31 @@
 ---
 layout: book
 title:  "ETİK DEĞERLER EĞİTİM SETİ-1. SINIF (10 KİTAP)"
-categories: ["Öykümatik"]
-tags: []
+categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
-ean: 8697911223851
-languages: ["Türkçe"]
+ean: 9786053836483
+languages: [Türkçe]
 page: "Her Biri 16"
-size: "23,5x16,5 cm"
+size: "16,5x23,5 cm"
 publish-number: 1746
 cover: "Karton Kapak"
 examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/etik-degerler1-y.pdf"
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223851/index.html"
 damlaurl: ""
 paper: "1. Hamur"
+authors: ["Tuba Bozcan"]
+illustrators: ["İlknur Salman"]
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [1]
-kavramlar: [sozel-dilsel, mantiksal-matematiksel, icsel, doga]
-anatemalar: ["Dürüstlük", "Saygı ve Sevgi", "Yardımseverlik", "Paylaşmak", "Etik ve Ahlak"]
+tags: [Değerler, Masal, Eğitim, Alçakgönüllülük, Adalet, Çalışkanlık]
+anatema: [Saygı, Sorumluluk, Dürüstlük, Sevgi, Dostluk, Merhamet, Mütevazılık, Merak, Odaklanma, Sistematiklik, Estetik, Bağımsızlık]
+kazanim: [H.1.1.1, H.1.2.1, H.1.3.2, H.1.4.2, H.2.1.2, H.4.1.1]
+beceriler: ["Konuşma Becerisi", "Yazma Becerisi", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Dinleme/İzleme Becerisi", "Okuma Becerisi", "Görsel Okuryazarlık", "İletişim Becerisi", "Özetleme Becerisi", "Karşılaştırma Becerisi", "Çıkarım Yapma Becerisi"]
+unite: ["GÜZEL DAVRANIŞLARIMIZ", "YOL ARKADAŞIMIZ KİTAPLAR", "ATALARIMIZIN İZLERİ", "SORUMLULUKLARIMIZIN FARKINDAYIZ"]
 
 # Social Media Attributes
 youtube:
@@ -68,4 +73,33 @@ Etik Değerler Eğitim Seti-1. Sınıf Setin İçerdiği Kitaplar;
 10-Tutumlu Kız (Tutumlu Olmak)
 
 <!-- <img style="height: 50vh" src="/assets/images/ean/8697911223851-1.jpg" alt="">
-<!--more--> 
+
+**TEMALAR:** Değerler Eğitimi, Masal, Karakter Gelişimi
+
+**KAZANIMLAR:** Kıssadan Hisse Almak, Etik Değerleri Öğrenmek
+
+**ETİKETLER:** Değerler, Masal, Eğitim, Alçakgönüllülük, Adalet, Çalışkanlık
+
+Setin İçerdiği Kitaplar;
+
+1-Cesur Pembe Bulut (Öz Güven)
+
+2-Cömert Padişah (Cömert Olmak)
+
+3-Hakimin Adaleti (Adaletli Olmak)
+
+4-Yardımsever Tavuk (İyilik Yapmak)
+
+5-Büyük Ders (Nezaket Kuralları)
+
+6-Kral Cimbo (Dürüst Olmak)
+
+7-Komşumuz Macide Teyze (Komşu Hakkı)
+
+8-Mikroplar (Temiz Olmak)
+
+9-Papatyanın Sözü (Sözünde Durmak)
+
+10-Tutumlu Kız (Tutumlu Olmak)
+
+<!--more-->

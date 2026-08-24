@@ -8,21 +8,15 @@ assets:
   - assets/images/ean/8697911222731.webp
   - assets/images/ean/8697911222755.webp
   - assets/images/ean/8697911222779.webp
-  - assets/images/ean/8697911222991.webp
-  - assets/images/ean/8697911223004.webp
   - assets/images/ean/8697911223028.webp
   - assets/images/ean/8697911223042.webp
-  - assets/images/ean/8697911223066.webp
   - assets/images/ean/8697911223080.webp
   - assets/images/ean/8697911223240.webp
   - assets/images/ean/8697911223516.webp
-  - assets/images/ean/8697911223530.webp
+  - assets/images/ean/8697911223547.webp
   - assets/images/ean/8697911223752.webp
   - assets/images/ean/8697911223783.webp
-  - assets/images/ean/8697911223851.webp
-  - assets/images/ean/8697911223875.webp
   - assets/images/ean/8697911223899.webp
-  - assets/images/ean/8697911223943.webp
   - assets/images/ean/8697911223974.webp
   - assets/images/ean/869791122418.webp
   - assets/images/ean/9786051740317.webp
@@ -91,10 +85,12 @@ assets:
   - assets/images/ean/9786053836407.webp
   - assets/images/ean/9786053836414.webp
   - assets/images/ean/9786053836421.webp
+  - assets/images/ean/9786053836483.webp
   - assets/images/ean/9786053837176.webp
   - assets/images/ean/9786053837183.webp
   - assets/images/ean/9786053837190.webp
   - assets/images/ean/9786053837206.webp
+  - assets/images/ean/9786053837480.webp
   - assets/images/ean/9786053837787.webp
   - assets/images/ean/9786053837824.webp
   - assets/images/ean/9786053838135.webp
@@ -131,6 +127,7 @@ assets:
   - assets/images/ean/9786059656344.webp
   - assets/images/ean/9786059656702.webp
   - assets/images/ean/9786059656795.webp
+  - assets/images/ean/9786254110139.webp
   - assets/images/ean/9786254110344.webp
   - assets/images/ean/9786254110351.webp
   - assets/images/ean/9786254110368.webp
@@ -142,6 +139,8 @@ assets:
   - assets/images/ean/9786254112546.webp
   - assets/images/ean/9786254112553.webp
   - assets/images/ean/9786254112560.webp
+  - assets/images/ean/9786254112676.webp
+  - assets/images/ean/9786254112775.webp
   - assets/images/ean/9786254112867.webp
   - assets/images/ean/9786254113000.webp
   - assets/images/ean/9786254113017.webp
@@ -158,6 +157,7 @@ assets:
   - assets/images/ean/9786254113338.webp
   - assets/images/ean/9786254113826.webp
   - assets/images/ean/9786254114281.webp
+  - assets/images/ean/9786254114540.webp
   - assets/images/ean/9786254115042.webp
   - assets/images/ean/9786254115059.webp
   - assets/images/ean/9786254115066.webp
@@ -239,3 +239,17 @@ assets:
   - assets/images/slides/7m.webp
   - assets/images/slides/8.webp
   - assets/images/slides/8m.webp
+  - assets/images/damla-okul.webp
+  - assets/images/damlayayinevi-1974.webp
+  - assets/images/damlayayinevi-1990.webp
+  - assets/images/damlayayinevi-1997.webp
+  - assets/images/e-damla-2012.webp
+  - assets/images/genc-damla.webp
+  - assets/images/gencdamla2.webp
+  - assets/images/hikaye-mufredati.webp
+  - assets/images/humayun-yayinlari.webp
+  - assets/images/logo.webp
+  - assets/images/logo-bw.webp
+  - assets/images/mihrabad-yayinlari.webp
+  - assets/images/oykumatikle-tanisin.webp
+  - assets/images/oykumatik-surecleri.webp

@@ -2,12 +2,11 @@
 layout: previewbook
 title:  "Akıllı Damla Paragraf-Dilbilgisi 2.Sınıf Soru Bankası"
 description: "2. sınıf paragraf ve dil bilgisi soru bankası; temel okuma ve dil becerilerini kazanım odaklı alıştırmalarla destekler."
-categories: [Religion]
-tags: []
+categories: [Eğitim, İlkokul]
 
 # Standart Book Attributes
 ean: parag-dilbil2
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 128
 size: "13,5x21 cm"
 publish-number: ""
@@ -17,10 +16,15 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/parag-dilbil2/in
 damlaurl: ""
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: education
 grades: [2]
-kavramlar: []
-anatemalar: []
+ders: Türkçe
+tags: []
+anatema: []
+kazanim: []
+beceriler: []
+unite: []
 
 # Social Media Attributes
 youtube:

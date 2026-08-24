@@ -1,16 +1,16 @@
 ---
 layout: book
 title:  "Türkiye Şehir Öyküleri"
-categories: [Ortaokul]
-tags: []
+description: "Anadolu insanı, tarih boyunca yurt edindiği topraklara sadece yerleşmekle isimler vermiştir. Türkiye’nin dört bir yanındaki şehirlerin ardında yatan…"
+categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
 ean: 9786254116063
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: "176 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116063/index.html"
 damlaurl: ""
@@ -18,10 +18,14 @@ paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-kavramlar: ["Anadolu insanı yerleştiği topraklara gönlünce isimler koymuş kimi bir olaydan kimi ise bir güzelden yadigâr kalmıştır"]
-anatemalar: ["Kahramanlık", "Vatan Sevgisi", "Doğa ve İnsan", "İyilik ve Yardımlaşma", "Direniş ve Özgürlük", "Kara Sevda"]
+tags: []
+anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
+kazanim: [H.1.2.1, H.1.2.2, H.1.2.3, H.1.2.4, H.2.2.1, H.2.2.2, H.3.2.1, H.4.2.1, H.4.2.2, H.4.2.4]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
+unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

@@ -1,16 +1,16 @@
 ---
 layout: book
 title:  "Tolya Bekçisi"
-categories: [Ortaokul]
-tags: []
+description: "Birbirinden tamamen habersiz seçilmiş üç cesur genç ve iki fantastik dünya ara- aniden çıkan korkunç bir yangının ortasında kendini “nefislerin” karanlık…"
+categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
 ean: 9786053839606
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: "144 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053839606/index.html"
 damlaurl: ""
@@ -18,10 +18,14 @@ paper: "Kitap Kağıdı"
 authors: ["Esra Avgören"]
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-kavramlar: ["İki dünya arasındaki kapının mührü çatladığında karanlığı durduracak tek şey Tolya Bekçisinin cesaretidir"]
-anatemalar: [Sorumluluk, "İnancın Gücü", Cesaret, "Nefis Mücadelesi", "Doğa Sevgisi", "Kendini Keşfetme"]
+tags: []
+anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
+kazanim: [H.1.3.6, H.1.3.7, H.2.2.1, H.2.2.2, H.2.3.1, H.2.3.2, H.2.3.3, H.2.3.5, H.3.3.3, H.4.3.1]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
+unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

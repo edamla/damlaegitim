@@ -1,16 +1,16 @@
 ---
 layout: book
 title:  "Orinoko Nehri"
-categories: [Ortaokul]
-tags: []
+description: "Güney Amerika’nın kalbinde, bilinmezliklerle dolu devasa Orinoko Nehri’nin vahşi Çavuş Martial ile birlikte, yıllar önce bu ıssız topraklarda kaybolan…"
+categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
 ean: 9786259895260
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: "160 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895260/index.html"
 damlaurl: ""
@@ -18,10 +18,14 @@ paper: "Kitap Kağıdı"
 authors: ["Jules Verne"]
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-kavramlar: ["Orinoko Nehrinin gizemli sularında bilimsel merak ile evlat sevgisinin kesiştiği tehlike ve dostluk dolu unutulmaz bir serüven"]
-anatemalar: ["Aile Sevgisi", "Gizem ve Sırlar", Dostluk, "Keşif Tutkusu", "Doğa ile Mücadele", "Fedakârlık"]
+tags: []
+anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
+kazanim: [H.1.3.2, H.1.3.5, H.1.3.7, H.1.3.8, H.2.3.1, H.2.3.2, H.2.3.3, H.3.3.2, H.3.3.3, H.4.3.1]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
+unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

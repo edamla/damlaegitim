@@ -1,16 +1,16 @@
 ---
 layout: book
-title:  "Kaşağı"
-categories: [Ortaokul]
-tags: []
+title:  Kaşağı
+description: "Atlara ve ahıra büyük bir ilgi duyan genç bir çocuğun, çok sevdiği o yepyeni bir sırra dönüşür. Kırılan kaşağının suçunu masum küçük kardeşi Hasan’ın…"
+categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
 ean: 9786259895222
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: "100 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786259895222/index.html"
 damlaurl: ""
@@ -18,10 +18,14 @@ paper: "Kitap Kağıdı"
 authors: ["Ömer Seyfettin"]
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-kavramlar: ["Bir çocuğun söylediği küçük bir yalanın masum bir kardeşin ölümüne ve ömür boyu sürecek derin bir vicdan azabına dönüşmesinin yürek burkan hikâyesi"]
-anatemalar: ["vicdan azabı", "toplumsal çöküş", istismar, "zeka ve liderlik", "ahlaki çöküş", "milli uyanış"]
+tags: []
+anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
+kazanim: [H.1.2.1, H.1.2.2, H.1.2.4, H.2.2.1, H.2.2.2, H.3.2.1, H.4.2.1, H.4.2.2, H.4.2.3, H.4.2.4]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
+unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

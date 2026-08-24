@@ -1,16 +1,16 @@
 ---
 layout: book
 title:  "Gizemli Gizem-3"
-categories: [Ortaokul]
-tags: []
+description: "Sıradan bir Kapadokya tatili, gökyüzüne süzülen bir balonla nasıl nefes kesici bir serüvene dönüşebilir?"
+categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
 ean: 9786254115059
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: "160 sayfa"
 size: "13,5x21 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254115059/index.html"
 damlaurl: ""
@@ -18,10 +18,14 @@ paper: "Kitap Kağıdı"
 authors: ["Nehir Aydın Gökduman"]
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-kavramlar: ["Sıradan bir Kapadokya tatili gökyüzüne süzülen bir balonla nasıl nefes kesici bir serüvene dönüşebilir"]
-anatemalar: [Sorumluluk, "Gerçeklik ve Yanılsama", "Tarih Bilinci", "Açgözlülük", "Dayanışma ve Arkadaşlık", "Cesaret ve Korku"]
+tags: [Sorumluluk,Gerçeklik ve Yanılsama,Tarih Bilinci,Açgözlülük,Dayanışma ve Arkadaşlık,Cesaret ve Korku]
+anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
+kazanim: [H.2.2.1, H.2.2.2, H.2.3.1, H.2.3.2, H.2.3.3, H.2.3.4, H.2.3.5, H.3.3.1, H.3.3.2, H.3.3.3]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
+unite: ["DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

@@ -1,0 +1,634 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" crossorigin="">
+<link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" crossorigin="">
+
+<style>
+.okullar-harita {
+  --oh-primary: #03a87c;
+  --oh-border: #dee2e6;
+  --oh-panel-bg: #fff;
+  --oh-muted: #6c757d;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 120px);
+  min-height: 480px;
+  margin: 0 -12px;
+}
+.okullar-harita__toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid var(--oh-border);
+  background: var(--oh-panel-bg);
+}
+.okullar-harita__toolbar select,
+.okullar-harita__toolbar input[type="search"] {
+  min-width: 120px;
+  max-width: 200px;
+}
+.okullar-harita__stats {
+  margin-left: auto;
+  font-size: 0.875rem;
+  color: var(--oh-muted);
+  white-space: nowrap;
+}
+.okullar-harita__body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+.okullar-harita__sidebar {
+  width: 340px;
+  max-width: 42vw;
+  border-right: 1px solid var(--oh-border);
+  display: flex;
+  flex-direction: column;
+  background: var(--oh-panel-bg);
+  min-height: 0;
+}
+.okullar-harita__detail {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--oh-border);
+  font-size: 0.875rem;
+  max-height: 40%;
+  overflow-y: auto;
+  display: none;
+}
+.okullar-harita__detail.is-open { display: block; }
+.okullar-harita__detail h3 { font-size: 1rem; margin: 0 0 0.5rem; }
+.okullar-harita__detail dl { margin: 0; }
+.okullar-harita__detail dt { font-weight: 600; margin-top: 0.35rem; }
+.okullar-harita__detail dd { margin: 0; }
+.okullar-harita__list-wrap {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+.okullar-harita__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.okullar-harita__list li {
+  border-bottom: 1px solid var(--oh-border);
+}
+.okullar-harita__list button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+.okullar-harita__list button:hover,
+.okullar-harita__list button.is-active {
+  background: rgba(3, 168, 124, 0.08);
+}
+.okullar-harita__list .school-tur {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--oh-muted);
+}
+.okullar-harita__map {
+  flex: 1;
+  min-width: 0;
+  min-height: 280px;
+}
+.okullar-harita__status {
+  padding: 0.75rem;
+  color: var(--oh-muted);
+  font-size: 0.875rem;
+}
+.okullar-harita__attribution {
+  font-size: 0.7rem;
+  color: var(--oh-muted);
+  padding: 0.25rem 0.5rem;
+  border-top: 1px solid var(--oh-border);
+}
+.okullar-harita__loading {
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-size: 0.9rem;
+}
+.okullar-harita__loading.is-busy { display: flex; }
+.okullar-harita__map-wrap { position: relative; flex: 1; min-width: 0; display: flex; flex-direction: column; }
+@media (max-width: 767px) {
+  .okullar-harita { height: auto; min-height: 0; }
+  .okullar-harita__body { flex-direction: column; }
+  .okullar-harita__sidebar { width: 100%; max-width: none; max-height: 40vh; border-right: 0; border-bottom: 1px solid var(--oh-border); }
+  .okullar-harita__map { min-height: 50vh; }
+  .okullar-harita__stats { margin-left: 0; width: 100%; }
+}
+</style>
+
+<div class="okullar-harita" id="okullar-harita-app">
+  <div class="okullar-harita__toolbar" role="search">
+    <select class="form-select form-select-sm" id="oh-filter-il" aria-label="İl">
+      <option value="">Tüm iller</option>
+    </select>
+    <select class="form-select form-select-sm" id="oh-filter-ilce" aria-label="İlçe" disabled>
+      <option value="">Tüm ilçeler</option>
+    </select>
+    <select class="form-select form-select-sm" id="oh-filter-tur" aria-label="Tür">
+      <option value="">Tüm türler</option>
+    </select>
+    <input class="form-control form-control-sm" type="search" id="oh-filter-ara" placeholder="Okul ara…" aria-label="Okul ara">
+    <span class="okullar-harita__stats" id="oh-stats" aria-live="polite"></span>
+  </div>
+  <div class="okullar-harita__body">
+    <aside class="okullar-harita__sidebar" aria-label="Okul listesi">
+      <div class="okullar-harita__detail" id="oh-detail" aria-live="polite"></div>
+      <div class="okullar-harita__list-wrap">
+        <p class="okullar-harita__status" id="oh-list-hint">Haritadan il veya ilçe seçin.</p>
+        <ul class="okullar-harita__list" id="oh-school-list" hidden></ul>
+      </div>
+    </aside>
+    <div class="okullar-harita__map-wrap">
+      <div class="okullar-harita__loading" id="oh-loading" aria-hidden="true">Yükleniyor…</div>
+      <div class="okullar-harita__map" id="oh-map" role="application" aria-label="Türkiye okul haritası"></div>
+      <p class="okullar-harita__attribution mb-0">
+        © <a href="https://www.openstreetmap.org/copyright" rel="noopener noreferrer">OpenStreetMap</a>
+        · Sınır verisi <a href="https://data.humdata.org/dataset/cod-ab-tur" rel="noopener noreferrer">HDX COD-AB</a> (CC BY-IGO)
+      </p>
+    </div>
+  </div>
+</div>
+
+<script type="application/json" id="okullar-adres-il-ilce">{"iller":[{% for il in site.data.turkiye_adres_il_ilce.iller %}{"kod":{{ il.kod }},"ad":{{ il.ad | jsonify }},"ilceler":[{% for ilce in il.ilceler %}{"kod":{{ ilce.kod }},"ad":{{ ilce.ad | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]}{% unless forloop.last %},{% endunless %}{% endfor %}]}</script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js" crossorigin=""></script>
+<script>
+(function () {
+  'use strict';
+
+  var BASE = {{ site.baseurl | jsonify }};
+  var GEO_INDEX = BASE + '/assets/data/geodata/index.json';
+  var GEO_IL = function (k) { return BASE + '/assets/data/geodata/il/' + k + '.json'; };
+  var OKULLAR_IL = function (k) { return BASE + '/assets/data/okullar-harita/' + k + '.json'; };
+  var META_URL = BASE + '/assets/data/okullar-harita/meta.json';
+
+  var adresData = JSON.parse(document.getElementById('okullar-adres-il-ilce').textContent);
+  var ilByKod = {};
+  (adresData.iller || []).forEach(function (il) {
+    ilByKod[String(il.kod)] = il;
+  });
+
+  var state = {
+    geoIndex: null,
+    meta: null,
+    ilGeo: null,
+    ilOkullar: null,
+    selectedIl: '',
+    selectedIlce: '',
+    selectedKurum: null,
+    filtered: [],
+    map: null,
+    layerIl: null,
+    layerIlce: null,
+    cluster: null,
+    markers: []
+  };
+
+  var el = {
+    il: document.getElementById('oh-filter-il'),
+    ilce: document.getElementById('oh-filter-ilce'),
+    tur: document.getElementById('oh-filter-tur'),
+    ara: document.getElementById('oh-filter-ara'),
+    stats: document.getElementById('oh-stats'),
+    list: document.getElementById('oh-school-list'),
+    hint: document.getElementById('oh-list-hint'),
+    detail: document.getElementById('oh-detail'),
+    loading: document.getElementById('oh-loading')
+  };
+
+  function setBusy(on) {
+    el.loading.classList.toggle('is-busy', !!on);
+    el.loading.setAttribute('aria-hidden', on ? 'false' : 'true');
+  }
+
+  function fetchJson(url) {
+    return fetch(url).then(function (r) {
+      if (!r.ok) throw new Error(url + ' yüklenemedi');
+      return r.json();
+    });
+  }
+
+  function colorForCount(n, max) {
+    if (!n) return '#e9ecef';
+    var t = Math.min(1, n / (max || 1));
+    var r = Math.round(230 - t * 120);
+    var g = Math.round(245 - t * 80);
+    var b = Math.round(235 - t * 100);
+    return 'rgb(' + r + ',' + g + ',' + b + ')';
+  }
+
+  function maxOkulSayisi(iller) {
+    var m = 0;
+    (iller || []).forEach(function (il) { if (il.okul_sayisi > m) m = il.okul_sayisi; });
+    return m || 1;
+  }
+
+  function styleIl(feature, max) {
+    var n = feature.properties.okul_sayisi || 0;
+    return {
+      fillColor: colorForCount(n, max),
+      weight: 1,
+      opacity: 0.9,
+      color: '#495057',
+      fillOpacity: 0.65
+    };
+  }
+
+  function bindLayer(layer, props, onClick) {
+    var label = props.ad + (props.okul_sayisi != null ? ' — ' + props.okul_sayisi + ' okul' : '');
+    layer.bindTooltip(label, { sticky: true });
+    layer.on('click', function (e) {
+      L.DomEvent.stopPropagation(e);
+      if (onClick) onClick(props);
+    });
+  }
+
+  function clearIlceLayer() {
+    if (state.layerIlce) {
+      state.map.removeLayer(state.layerIlce);
+      state.layerIlce = null;
+    }
+  }
+
+  function clearMarkers() {
+    if (state.cluster) {
+      state.map.removeLayer(state.cluster);
+      state.cluster = null;
+    }
+    state.markers = [];
+  }
+
+  function updateUrl() {
+    var p = new URLSearchParams();
+    if (state.selectedIl) p.set('il', state.selectedIl);
+    if (state.selectedIlce) p.set('ilce', state.selectedIlce);
+    if (state.selectedKurum) {
+      var k = state.selectedKurum.kurum_kodu || state.selectedKurum.ad;
+      if (k) p.set('kurum', k);
+    }
+    var qs = p.toString();
+    var path = window.location.pathname;
+    history.replaceState(null, '', qs ? path + '?' + qs : path);
+  }
+
+  function readUrl() {
+    var p = new URLSearchParams(window.location.search);
+    return {
+      il: p.get('il') || '',
+      ilce: p.get('ilce') || '',
+      kurum: p.get('kurum') || ''
+    };
+  }
+
+  function populateIlSelect() {
+    el.il.innerHTML = '<option value="">Tüm iller</option>';
+    (adresData.iller || []).forEach(function (il) {
+      var o = document.createElement('option');
+      o.value = String(il.kod);
+      o.textContent = il.ad;
+      el.il.appendChild(o);
+    });
+  }
+
+  function populateIlceSelect(ilKod) {
+    el.ilce.innerHTML = '<option value="">Tüm ilçeler</option>';
+    el.ilce.disabled = !ilKod;
+    if (!ilKod) return;
+    var il = ilByKod[ilKod];
+    if (!il) return;
+    (il.ilceler || []).forEach(function (ic) {
+      var o = document.createElement('option');
+      o.value = String(ic.kod);
+      o.textContent = ic.ad;
+      el.ilce.appendChild(o);
+    });
+  }
+
+  function populateTurSelect() {
+    el.tur.innerHTML = '<option value="">Tüm türler</option>';
+    (state.meta && state.meta.turler || []).forEach(function (t) {
+      var o = document.createElement('option');
+      o.value = t;
+      o.textContent = t;
+      el.tur.appendChild(o);
+    });
+  }
+
+  function updateStats() {
+    var parts = [];
+    if (state.meta) parts.push((state.meta.sayi || 0).toLocaleString('tr-TR') + ' okul');
+    if (state.filtered.length) parts.push(state.filtered.length.toLocaleString('tr-TR') + ' listede');
+    el.stats.textContent = parts.join(' · ');
+  }
+
+  function applyFilters() {
+    var tur = el.tur.value;
+    var q = (el.ara.value || '').trim().toLocaleLowerCase('tr-TR');
+    var list = state.ilOkullar ? state.ilOkullar.kurumlar || [] : [];
+    state.filtered = list.filter(function (k) {
+      if (state.selectedIlce && String(k.ilce_kod) !== String(state.selectedIlce)) return false;
+      if (tur && k.tur !== tur) return false;
+      if (q && (k.ad || '').toLocaleLowerCase('tr-TR').indexOf(q) === -1) return false;
+      return true;
+    });
+    renderList();
+    renderMarkers();
+    updateStats();
+  }
+
+  function renderList() {
+    el.list.innerHTML = '';
+    if (!state.ilOkullar) {
+      el.list.hidden = true;
+      el.hint.hidden = false;
+      el.hint.textContent = 'Haritadan il veya ilçe seçin.';
+      return;
+    }
+    if (!state.filtered.length) {
+      el.list.hidden = true;
+      el.hint.hidden = false;
+      el.hint.textContent = 'Bu filtrede okul bulunamadı.';
+      return;
+    }
+    el.hint.hidden = true;
+    el.list.hidden = false;
+    var frag = document.createDocumentFragment();
+    state.filtered.slice(0, 500).forEach(function (k, idx) {
+      var li = document.createElement('li');
+      var btn = document.createElement('button');
+      btn.type = 'button';
+      btn.innerHTML = '<strong>' + escapeHtml(k.ad || '') + '</strong><span class="school-tur">' +
+        escapeHtml((k.ilce_ad || '') + (k.tur ? ' · ' + k.tur : '')) + '</span>';
+      btn.dataset.idx = String(idx);
+      if (state.selectedKurum === k) btn.classList.add('is-active');
+      btn.addEventListener('click', function () { selectSchool(k); });
+      li.appendChild(btn);
+      frag.appendChild(li);
+    });
+    el.list.appendChild(frag);
+    if (state.filtered.length > 500) {
+      var more = document.createElement('li');
+      more.className = 'okullar-harita__status';
+      more.textContent = '… ve ' + (state.filtered.length - 500) + ' okul daha (aramayı daraltın)';
+      el.list.appendChild(more);
+    }
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function renderDetail(k) {
+    if (!k) {
+      el.detail.classList.remove('is-open');
+      el.detail.innerHTML = '';
+      return;
+    }
+    el.detail.classList.add('is-open');
+    var html = '<h3>' + escapeHtml(k.ad || '') + '</h3><dl>';
+    function row(label, val) {
+      if (val == null || val === '') return;
+      html += '<dt>' + escapeHtml(label) + '</dt><dd>' + escapeHtml(String(val)) + '</dd>';
+    }
+    row('Tür', k.tur);
+    row('İlçe', k.ilce_ad);
+    row('Müdür', k.mudur);
+    row('Öğrenci', k.ogrenci_sayisi);
+    row('Öğretmen', k.ogretmen_sayisi);
+    row('Telefon', k.telefon);
+    row('Adres', k.adres);
+    if (k.web) html += '<dt>Web</dt><dd><a href="' + escapeHtml(k.web) + '" rel="noopener noreferrer" target="_blank">MEB sitesi</a></dd>';
+    if (k.harita_url) html += '<dt>Harita</dt><dd><a href="' + escapeHtml(k.harita_url) + '" rel="noopener noreferrer" target="_blank">Google Maps</a></dd>';
+    html += '</dl>';
+    el.detail.innerHTML = html;
+  }
+
+  function selectSchool(k) {
+    state.selectedKurum = k;
+    renderDetail(k);
+    renderList();
+    updateUrl();
+    if (k.enlem != null && k.boylam != null && state.map) {
+      state.map.setView([k.enlem, k.boylam], Math.max(state.map.getZoom(), 14));
+    }
+  }
+
+  function renderMarkers() {
+    clearMarkers();
+    if (!state.map) return;
+    var group = L.markerClusterGroup({ maxClusterRadius: 50 });
+    state.filtered.forEach(function (k) {
+      if (k.enlem == null || k.boylam == null) return;
+      var m = L.marker([k.enlem, k.boylam]);
+      m.bindPopup('<strong>' + escapeHtml(k.ad || '') + '</strong>');
+      m.on('click', function () { selectSchool(k); });
+      group.addLayer(m);
+      state.markers.push(m);
+    });
+    if (group.getLayers().length) {
+      state.cluster = group;
+      state.map.addLayer(group);
+    }
+  }
+
+  function drawCountryView() {
+    clearIlceLayer();
+    clearMarkers();
+    state.ilGeo = null;
+    state.ilOkullar = null;
+    state.selectedIlce = '';
+    populateIlceSelect(state.selectedIl);
+    el.ilce.value = '';
+    applyFilters();
+    renderDetail(null);
+
+    if (state.layerIl) state.map.removeLayer(state.layerIl);
+    var max = maxOkulSayisi(state.geoIndex.iller);
+    var features = (state.geoIndex.iller || []).map(function (il) {
+      return {
+        type: 'Feature',
+        properties: { kod: String(il.kod), ad: il.ad, okul_sayisi: il.okul_sayisi || 0 },
+        geometry: il.geometry
+      };
+    });
+    state.layerIl = L.geoJSON({ type: 'FeatureCollection', features: features }, {
+      style: function (f) { return styleIl(f, max); },
+      onEachFeature: function (f, layer) {
+        bindLayer(layer, f.properties, function (p) { selectIl(p.kod, true); });
+      }
+    }).addTo(state.map);
+
+    var bbox = state.geoIndex.ulke && state.geoIndex.ulke.bbox;
+    if (bbox && bbox.length === 4) {
+      state.map.fitBounds([[bbox[1], bbox[0]], [bbox[3], bbox[2]]]);
+    }
+  }
+
+  function selectIl(ilKod, fromMap) {
+    state.selectedIl = String(ilKod);
+    if (!fromMap) el.il.value = state.selectedIl;
+    populateIlceSelect(state.selectedIl);
+    el.ilce.value = '';
+    state.selectedIlce = '';
+    setBusy(true);
+    return Promise.all([
+      fetchJson(GEO_IL(state.selectedIl)),
+      fetchJson(OKULLAR_IL(state.selectedIl))
+    ]).then(function (res) {
+      state.ilGeo = res[0];
+      state.ilOkullar = res[1];
+      drawIlView();
+      applyFilters();
+      updateUrl();
+    }).catch(function (err) {
+      console.error(err);
+      el.hint.textContent = 'Veri yüklenemedi. sync_site_data.py çalıştırın.';
+    }).finally(function () { setBusy(false); });
+  }
+
+  function drawIlView() {
+    clearIlceLayer();
+    clearMarkers();
+    if (state.layerIl) {
+      state.map.removeLayer(state.layerIl);
+      state.layerIl = null;
+    }
+    if (!state.ilGeo) return;
+
+    var ilceObj = state.ilGeo.ilceler || {};
+    var max = 0;
+    Object.keys(ilceObj).forEach(function (k) {
+      if ((ilceObj[k].okul_sayisi || 0) > max) max = ilceObj[k].okul_sayisi;
+    });
+    if (!max) max = 1;
+
+    var features = Object.keys(ilceObj).map(function (k) {
+      var ic = ilceObj[k];
+      return {
+        type: 'Feature',
+        properties: {
+          kod: String(ic.kod || k),
+          ad: ic.ad,
+          okul_sayisi: ic.okul_sayisi || 0
+        },
+        geometry: ic.geometry
+      };
+    });
+
+    state.layerIlce = L.geoJSON({ type: 'FeatureCollection', features: features }, {
+      style: function (f) { return styleIl(f, max); },
+      onEachFeature: function (f, layer) {
+        bindLayer(layer, f.properties, function (p) {
+          state.selectedIlce = p.kod;
+          el.ilce.value = p.kod;
+          applyFilters();
+          updateUrl();
+          if (layer.getBounds) state.map.fitBounds(layer.getBounds(), { padding: [20, 20] });
+        });
+      }
+    }).addTo(state.map);
+
+    if (state.ilGeo.bbox && state.ilGeo.bbox.length === 4) {
+      var b = state.ilGeo.bbox;
+      state.map.fitBounds([[b[1], b[0]], [b[3], b[2]]]);
+    }
+  }
+
+  function initMap() {
+    state.map = L.map('oh-map', { zoomControl: true });
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap',
+      maxZoom: 19
+    }).addTo(state.map);
+    state.map.on('click', function () {
+      if (!state.selectedIl) return;
+    });
+  }
+
+  function findKurumByKey(key) {
+    if (!state.ilOkullar || !key) return null;
+    return (state.ilOkullar.kurumlar || []).find(function (k) {
+      return String(k.kurum_kodu) === key || k.ad === key;
+    }) || null;
+  }
+
+  function boot() {
+    populateIlSelect();
+    initMap();
+    setBusy(true);
+    Promise.all([fetchJson(GEO_INDEX), fetchJson(META_URL)]).then(function (res) {
+      state.geoIndex = res[0];
+      state.meta = res[1];
+      populateTurSelect();
+      updateStats();
+      drawCountryView();
+
+      var url = readUrl();
+      if (url.il) {
+        selectIl(url.il, false).then(function () {
+          if (url.ilce) {
+            state.selectedIlce = url.ilce;
+            el.ilce.value = url.ilce;
+            applyFilters();
+          }
+          if (url.kurum) {
+            var k = findKurumByKey(url.kurum);
+            if (k) selectSchool(k);
+          }
+        });
+      }
+    }).catch(function (err) {
+      console.error(err);
+      el.hint.textContent = 'Harita verisi yüklenemedi. docs/data + sync_site_data.py gerekli.';
+    }).finally(function () { setBusy(false); });
+  }
+
+  el.il.addEventListener('change', function () {
+    if (!el.il.value) {
+      state.selectedIl = '';
+      state.selectedIlce = '';
+      populateIlceSelect('');
+      drawCountryView();
+      updateUrl();
+      return;
+    }
+    selectIl(el.il.value, false);
+  });
+
+  el.ilce.addEventListener('change', function () {
+    state.selectedIlce = el.ilce.value;
+    applyFilters();
+    updateUrl();
+  });
+
+  el.tur.addEventListener('change', applyFilters);
+  el.ara.addEventListener('input', function () {
+    clearTimeout(el.ara._t);
+    el.ara._t = setTimeout(applyFilters, 200);
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+})();
+</script>

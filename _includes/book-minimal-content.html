@@ -52,10 +52,16 @@
   </p>
   {% endif %}
 
-  {% if b.anatemalar and b.anatemalar.size > 0 %}
+  {% if b.unite and b.unite.size > 0 %}
   <p>
-    <strong>Temalar ve konu başlıkları:</strong>
-    {% for subject in b.anatemalar %}{{ subject }}{% unless forloop.last %}, {% endunless %}{% endfor %}.
+    <strong>TYMM üniteleri:</strong>
+    {% for subject in b.unite %}{{ subject }}{% unless forloop.last %}, {% endunless %}{% endfor %}.
+    Bu {{ genre_label_cap | downcase }} kitabı, öğrencilerin okuma kültürünü güçlendirmeyi ve ders kazanımlarını desteklemeyi hedefler.
+  </p>
+  {% elsif b.anatema and b.anatema.size > 0 %}
+  <p>
+    <strong>Temalar ve değerler:</strong>
+    {% for subject in b.anatema %}{{ subject }}{% unless forloop.last %}, {% endunless %}{% endfor %}.
     Bu {{ genre_label_cap | downcase }} kitabı, öğrencilerin okuma kültürünü güçlendirmeyi ve ders kazanımlarını desteklemeyi hedefler.
   </p>
   {% elsif b.tags and b.tags.size > 0 %}
@@ -65,13 +71,13 @@
   </p>
   {% endif %}
 
-  {% if b.kavramlar and b.kavramlar.size > 0 %}
+  {% if b.beceriler and b.beceriler.size > 0 %}
   <p>
-    <strong>Beceri ve kavram alanları:</strong>
-    {% for concept_key in b.kavramlar %}
-      {% assign concept_val = concept_key | strip %}
-      {% unless concept_val == '' %}
-        {{ concept_val }}{% unless forloop.last %}, {% endunless %}
+    <strong>Beceri alanları:</strong>
+    {% for beceri in b.beceriler %}
+      {% assign beceri_val = beceri | strip %}
+      {% unless beceri_val == '' %}
+        {{ beceri_val }}{% unless forloop.last %}, {% endunless %}
       {% endunless %}
     {% endfor %}.
   </p>

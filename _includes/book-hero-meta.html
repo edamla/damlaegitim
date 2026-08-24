@@ -1,0 +1,115 @@
+{% assign hb = include.book | default: page %}
+{% assign hb_genre = hb.genre | strip %}
+{% if hb_genre == 'story' %}
+  {% assign hb_has_unite = false %}
+  {% if hb.unite and hb.unite.size > 0 %}{% assign hb_has_unite = true %}{% endif %}
+  {% assign hb_has_anatema = false %}
+  {% if hb.anatema and hb.anatema.size > 0 %}{% assign hb_has_anatema = true %}{% endif %}
+  {% assign hb_has_beceriler = false %}
+  {% if hb.beceriler and hb.beceriler.size > 0 %}{% assign hb_has_beceriler = true %}{% endif %}
+  {% assign hb_has_kazanim = false %}
+  {% if hb.kazanim and hb.kazanim.size > 0 %}{% assign hb_has_kazanim = true %}{% endif %}
+  {% assign hb_has_tags = false %}
+  {% if hb.tags and hb.tags.size > 0 %}{% assign hb_has_tags = true %}{% endif %}
+  {% if hb_has_unite or hb_has_anatema or hb_has_beceriler or hb_has_kazanim or hb_has_tags %}
+  <div class="book-detail__hero-meta">
+    {% if hb_has_unite or hb_has_anatema or hb_has_beceriler or hb_has_kazanim %}
+    <div class="book-curriculum" role="group" aria-label="Müfredat bilgileri">
+      {% if hb_has_unite or hb_has_anatema or hb_has_beceriler %}
+      <section class="book-curriculum__section book-curriculum__section--tymm" aria-labelledby="curriculum-tymm-heading">
+        <h3 class="book-curriculum__heading" id="curriculum-tymm-heading">
+          Türkiye Yüzyılı Maarif Modeli
+        </h3>
+
+        {% if hb_has_unite %}
+        <div class="book-curriculum__row book-curriculum__row--unite">
+          <span class="book-curriculum__label">Ünitesi:</span>
+          <div class="book-curriculum__scroll-wrap">
+            <div class="book-curriculum__scroll" tabindex="0" role="region" aria-label="Türkiye Yüzyılı Maarif Modeli ünite listesi">
+            <ul class="book-curriculum__chips" role="list">
+              {% for tema in hb.unite %}
+              <li>
+                <span class="book-curriculum__chip book-curriculum__chip--unite" aria-label="Türkiye Yüzyılı Maarif Modeli ünitesi: {{ tema }}">{{ tema }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if hb_has_anatema %}
+        <div class="book-curriculum__row book-curriculum__row--anatema">
+          <span class="book-curriculum__label">Anateması:</span>
+          <div class="book-curriculum__scroll-wrap">
+            <div class="book-curriculum__scroll" tabindex="0" role="region" aria-label="Türkiye Yüzyılı Maarif Modeli anatema listesi">
+            <ul class="book-curriculum__chips" role="list">
+              {% for tema in hb.anatema %}
+              <li>
+                <span class="book-curriculum__chip book-curriculum__chip--anatema" aria-label="Türkiye Yüzyılı Maarif Modeli anateması: {{ tema }}">{{ tema }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if hb_has_beceriler %}
+        <div class="book-curriculum__row book-curriculum__row--beceriler">
+          <span class="book-curriculum__label">Becerileri:</span>
+          <div class="book-curriculum__scroll-wrap">
+            <div class="book-curriculum__scroll" tabindex="0" role="region" aria-label="Türkiye Yüzyılı Maarif Modeli beceri listesi">
+            <ul class="book-curriculum__chips" role="list">
+              {% for beceri in hb.beceriler %}
+              <li>
+                <span class="book-curriculum__chip book-curriculum__chip--beceri" aria-label="Türkiye Yüzyılı Maarif Modeli becerileri: {{ beceri }}">{{ beceri }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      </section>
+      {% endif %}
+
+      {% if hb_has_kazanim %}
+      <section class="book-curriculum__section book-curriculum__section--oykumatik" aria-labelledby="curriculum-oykumatik-heading">
+        <h3 class="book-curriculum__heading" id="curriculum-oykumatik-heading">
+          Türkiye'de İlk ve Tek Damla Hikaye Kazanım Sistemi
+        </h3>
+
+        <div class="book-curriculum__row book-curriculum__row--kazanim">
+          <span class="book-curriculum__label">Öykümatik Kazanım Kodu:</span>
+          <div class="book-curriculum__scroll-wrap">
+            <div class="book-curriculum__scroll" tabindex="0" role="region" aria-label="Öykümatik kazanım kodu listesi">
+            <ul class="book-curriculum__chips" role="list">
+              {% for code in hb.kazanim %}
+              <li>
+                <span class="book-curriculum__chip book-curriculum__chip--kazanim" aria-label="Öykümatik kazanım kodu {{ code }}">{{ code }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% if hb_has_tags %}
+    <div class="book-detail__tags">
+      <ul class="book-detail__pill-list" role="list">
+        {% for tag in hb.tags %}
+        <li>
+          <span class="tag" aria-label="Etiket: {{ tag }}">{{ tag }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+{% endif %}

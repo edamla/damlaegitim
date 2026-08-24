@@ -1,0 +1,48 @@
+<div class="ogretmen-wizard__panel" data-step="5" id="ow-step-5">
+  <h2 class="h4 mb-3">5. İletişim bilgileri</h2>
+  <form class="ogretmen-wizard__form" id="ow-contact-form">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label class="form-label" for="ow-first-name">Ad *</label>
+        <input class="form-control" type="text" id="ow-first-name" required autocomplete="given-name">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="ow-last-name">Soyad *</label>
+        <input class="form-control" type="text" id="ow-last-name" required autocomplete="family-name">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="ow-city">İl *</label>
+        <select class="form-select" id="ow-city" required autocomplete="address-level1">
+          <option value="">İl seçin</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="ow-district">İlçe *</label>
+        <select class="form-select" id="ow-district" required autocomplete="address-level2" disabled>
+          <option value="">Önce il seçin</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="ow-phone">Telefon *</label>
+        <input class="form-control" type="tel" id="ow-phone" required autocomplete="tel" inputmode="numeric"
+          pattern="0?5[0-9]{9}"
+          maxlength="11"
+          title="5xxXXXxxXX şeklinde giriniz!">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="ow-email">E-posta *</label>
+        <input class="form-control" type="email" id="ow-email" required autocomplete="email"
+          pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+          title="Geçerli bir e-posta adresi giriniz (ör. ad@okul.edu.tr).">
+      </div>
+      <div class="col-12">
+        <label class="form-label" for="ow-school">Okul adı *</label>
+        <input class="form-control" type="text" id="ow-school" list="ow-school-list" required
+          autocomplete="organization" placeholder="İl ve ilçe seçtikten sonra listeden seçin veya yazın">
+        <datalist id="ow-school-list"></datalist>
+        <div class="form-text" id="ow-school-hint">İl ve ilçe seçildiğinde MEB kurum listesi yüklenir. Listede yoksa okul adını elle yazabilirsiniz.</div>
+      </div>
+    </div>
+  </form>
+  <script type="application/json" id="ogretmen-adres-il-ilce">{"iller":[{% for il in site.data.turkiye_adres_il_ilce.iller %}{"kod":{{ il.kod }},"ad":{{ il.ad | jsonify }},"ilceler":[{% for ilce in il.ilceler %}{"kod":{{ ilce.kod }},"ad":{{ ilce.ad | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]}{% unless forloop.last %},{% endunless %}{% endfor %}]}</script>
+</div>

@@ -1,16 +1,16 @@
 ---
 layout: book
 title:  "Kızıl Soruşturma"
-categories: [Ortaokul]
-tags: []
+description: "Eski bir ordu doktoru olan John Watson, Londra’da uygun fiyatlı bir daire ararken, mes ile tanışır. Baker Sokağı 221B’de başlayan bu tarihî ev…"
+categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
 ean: 9786057288707
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: "160 sayfa"
-size: "12,5x19,5 cm"
+size: "12,3x19,2 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786057288707/index.html"
 damlaurl: ""
@@ -18,10 +18,14 @@ paper: "Kitap Kağıdı"
 authors: ["Sir Arthur Conan Doyle"]
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-kavramlar: ["Londra’nın sisli sokaklarından Amerikanın ıssız çöllerine uzanan yıllarca sabırla ilmek ilmek örülmüş bir intikamın hikâyesi"]
-anatemalar: ["adalet arayışı", "aşk ve trajedi", "kader inancı", fanatizm, "geçmişin kaçınılmazlığı", "tarihi sırlar"]
+tags: []
+anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
+kazanim: [H.2.2.1, H.2.2.2, H.2.3.1, H.2.3.2, H.2.3.3, H.2.3.4, H.3.2.1, H.4.2.1, H.4.2.2, H.4.2.4]
+beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
+unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

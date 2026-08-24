@@ -2,12 +2,11 @@
 layout: previewbook
 title:  "Montessori Eğitim Seti"
 description: "Montessori yaklaşımıyla hazırlanmış okul öncesi eğitim seti."
-categories: ["İlkokul"]
-tags: []
+categories: [Eğitim, "Okul Öncesi"]
 
 # Standart Book Attributes
 ean: 8697911222755
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 881
 size: "13,5x21 cm"
 publish-number: ""
@@ -17,10 +16,14 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/8697911222755-1/ind
 damlaurl: ""
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: education
 grades: [0]
-kavramlar: []
-anatemalar: []
+tags: []
+anatema: []
+kazanim: []
+beceriler: []
+unite: []
 
 # Social Media Attributes
 youtube:

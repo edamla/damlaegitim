@@ -1,16 +1,16 @@
 ---
 layout: book
 title:  "Çevreci Karıncalar"
-categories: [Ortaokul]
-tags: []
+description: "Şehrin gri duvarları arasına sıkışmış ruhların, doğanın sessiz kahramanlarıyla yeniden kucaklaşma hikayesi."
+categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
 ean: 9786053830498
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: "160 sayfa"
 size: "12,5x18,5 cm"
 publish-number: ""
-cover: ""
+cover: "Karton Kapak"
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053830498/index.html"
 damlaurl: ""
@@ -18,10 +18,14 @@ paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: story
 grades: [5, 6, 7, 8]
-kavramlar: ["Şehrin gri duvarları arasına sıkışmış ruhların doğanın sessiz kahramanlarıyla yeniden kucaklaşma hikâyesi"]
-anatemalar: ["Çevre Bilinci", "Dayanışma", "Gözlem ve Yeni Keşifler", "Bilimsel Merak", "Hayatta Kalma", "Üretkenlik ve Emeğin Değeri"]
+tags: [Çevre Bilinci,Dayanışma, Gözlem ve Yeni Keşifler, Bilimsel Merak,Hayatta Kalma, Üretkenlik ve Emeğin Değeri]
+anatema: [Duyarlılık, Estetik, Merak, "Sağlıklı Yaşam", Saygı, Sorumluluk, Temizlik, Bağımsızlık, "Azim ve Kararlılık", "Kendine İnanma (Öz Yeterlilik)", "Kendine Güvenme (Öz Güven)", Girişkenlik]
+kazanim: [H.1.2.1, H.1.2.2, H.1.2.3, H.1.2.4, H.1.3.2, H.1.3.5, H.3.2.1, H.3.3.1, H.3.3.2, H.3.3.3]
+beceriler: ["Gözlemleme Becerisi", "Bilgi Toplama Becerisi", "Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Veri Okuryazarlığı"]
+unite: ["SAĞLIKLI YAŞIYORUM", "İLETİŞİM VE SOSYAL İLİŞKİLER", "DOĞA VE İNSAN"]
 
 # Social Media Attributes
 youtube:

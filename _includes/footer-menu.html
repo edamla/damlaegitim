@@ -1,49 +1,89 @@
-{% assign footer_pages = site.pages | where_exp: "item", "item.footer_show == true" | sort: "footer_order" %}
-{% assign catalogs_page = site.pages | where: "permalink", "/kataloglar" | first %}
-
 <footer class="site-footer border-top text-white small">
   <div class="container">
     <div class="row site-footer__columns">
-      <div class="col-12 col-md-4 site-footer__col">
-        <h3 class="site-footer__heading">Ürünler</h3>
+      <div class="col-12 col-sm-6 col-md-4 col-lg site-footer__col">
+        <h3 class="site-footer__heading">Okulöncesi</h3>
         <ul class="site-footer__list">
-          <li><a class="site-footer__link" href="{{ site.baseurl }}/urunler#egitim">Eğitim Kitapları</a></li>
-          <li><a class="site-footer__link" href="{{ site.baseurl }}/urunler#hikaye">Hikaye Kitapları</a></li>
-          {% if catalogs_page %}
-          <li><a class="site-footer__link" href="{{ site.baseurl }}{{ catalogs_page.url }}">{{ catalogs_page.title }}</a></li>
-          {% endif %}
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/urunler#okul-oncesi">Tüm Yayınlar</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/urunler#okul-oncesi/egitim">Eğitim Kitapları</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/urunler#okul-oncesi/hikaye">Hikaye Kitapları</a></li>
         </ul>
       </div>
 
-      <div class="col-12 col-md-4 site-footer__col">
-        <h3 class="site-footer__heading">Önemli Bilgiler</h3>
+      <div class="col-12 col-sm-6 col-md-4 col-lg site-footer__col">
+        <h3 class="site-footer__heading">İlkokul</h3>
         <ul class="site-footer__list">
-          {% for page in footer_pages %}
-          <li><a class="site-footer__link" href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
-          {% endfor %}
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/siniflar/1-sinif">1. Sınıf Yayınları</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/okuma-listeleri/1-sinif">1. Sınıf Okuma Listesi</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/siniflar/2-sinif">2. Sınıf Yayınları</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/okuma-listeleri/2-sinif">2. Sınıf Okuma Listesi</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/siniflar/3-sinif">3. Sınıf Yayınları</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/okuma-listeleri/3-sinif">3. Sınıf Okuma Listesi</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/siniflar/4-sinif">4. Sınıf Yayınları</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/okuma-listeleri/4-sinif">4. Sınıf Okuma Listesi</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/kataloglar/ilkokul-katalogu">İlkokul Çocuk Edebiyatı Kataloğu</a></li>
         </ul>
       </div>
 
-      <div class="col-12 col-md-4 site-footer__col">
+      <div class="col-12 col-sm-6 col-md-4 col-lg site-footer__col">
+        <h3 class="site-footer__heading">Ortaokul</h3>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/ortaokul">Ortaokul Yayınları</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/siniflar/5-sinif">5. Sınıf Yayınları</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/siniflar/6-sinif">6. Sınıf Yayınları</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/siniflar/7-sinif">7. Sınıf Yayınları</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/siniflar/8-sinif">8. Sınıf Yayınları</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/kataloglar/ortaokul-katalog2027">Ortaokul Kataloğu 2027</a></li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg site-footer__col">
+        <h3 class="site-footer__heading">Öğretmen</h3>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/ogretmen">Öğretmen Örnek Kitap Talep Formu</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/urunler">Ürünler</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/okuma-listeleri">Okuma Listeleri</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/okuma-listeleri/degerler">Değerler Eğitimi Okuma Listesi</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/okuma-listeleri/okuma-kulturu">Okuma Kültürü Listesi</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/maarif-modeli">Maarif Modeli</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/okumaatolyesi">TYMM Okuma Atölyesi</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/olcme-degerlendirme">Ölçme ve Değerlendirme</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/hikaye-mufredati">Hikâye Müfredatı</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/oykumatikle-tanisin">Öykümatikle Tanışın</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/oykumatik/demo">Öykümatik Demo</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/kitapla-buyuyen-siniflar">Kitapla Büyüyen Sınıflar</a></li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg site-footer__col">
+        <h3 class="site-footer__heading">Kurumsal</h3>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/">Anasayfa</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/hakkimizda">Hakkımızda</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/iletisim">İletişim</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/kataloglar">Yayın Katalogları</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/yazarlar">Yazarlar</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/teklif">Okul Programı Teklif Talebi</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/sss">Sıkça Sorulan Sorular</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/urun-inceleme-linkleri">Ürün İnceleme Linkleri</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/gizlilik-ve-kvkk">Gizlilik Politikası</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/categories.html">Kategoriler</a></li>
+          <li><a class="site-footer__link" href="{{ site.baseurl }}/tags.html">Etiketler</a></li>
+        </ul>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-6 col-lg site-footer__col">
         <h3 class="site-footer__heading">Adres &amp; İletişim</h3>
+        <div class="site-footer__brand mb-3">
+          <img class="site-footer__logo" src="{{ site.baseurl }}/assets/images/logo-bw.png" alt="{{ site.name }}">
+        </div>
         {% include contact-info.html mode='footer' %}
         <ul class="site-footer__social list-inline mb-0">
           {% include menu-socialmedia.html %}
         </ul>
-      </div>
-    </div>
-
-    <div class="site-footer__bottom">
-      <div class="row justify-content-center">
-        <span class="navbar-brand me-2 mb-0 text-center">
-          <img class="site-footer__logo" src="{{ site.baseurl }}/assets/images/logo-bw.png" alt="{{ site.name }}">
-        </span>
-      </div>
-      <br>
-      <div class="row align-items-center justify-content-center">
-        <div class="text-center">
-          <span>Copyright © <script>document.write(new Date().getFullYear())</script> Damla Yayınevi</span>
-        </div>
+        <p class="site-footer__copyright mb-0 mt-3">
+          Copyright © <script>document.write(new Date().getFullYear())</script> Damla Yayınevi
+        </p>
       </div>
     </div>
   </div>

@@ -2,12 +2,11 @@
 layout: previewbook
 title:  "Gün Gün Bahar Tatilim | 1-2-3-4.Sınıf"
 description: "1–4. sınıflar için bahar ara tatil çalışma kitabı; günlük planlı etkinliklerle tatilde kazanım kaybını önler."
-categories: [Religion]
-tags: []
+categories: [Eğitim, İlkokul]
 
 # Standart Book Attributes
 ean: bahar-ara-tatil-2026
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 608
 size: "13,5x21 cm"
 publish-number: ""
@@ -17,10 +16,14 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/bahar-ara-tatil-
 damlaurl: ""
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: education
 grades: [1, 2, 3, 4]
-kavramlar: []
-anatemalar: []
+tags: []
+anatema: []
+kazanim: []
+beceriler: []
+unite: []
 
 # Social Media Attributes
 youtube:

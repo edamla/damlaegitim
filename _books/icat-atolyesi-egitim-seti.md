@@ -2,12 +2,11 @@
 layout: previewbook
 title:  "İcat Atölyesi Eğitim Seti"
 description: "Yaratıcılık ve icat atölyesi temalı eğitim seti; STEM becerilerini destekler."
-categories: [Religion]
-tags: []
+categories: [Eğitim, "Okul Öncesi"]
 
 # Standart Book Attributes
 ean: 8697911222779
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: 608
 size: "13,5x21 cm"
 publish-number: ""
@@ -17,10 +16,14 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/9786059656795-1/ind
 damlaurl: ""
 
 # Spesific Filterable Attributes
+# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
 genre: education
 grades: [0]
-kavramlar: []
-anatemalar: []
+tags: []
+anatema: []
+kazanim: []
+beceriler: []
+unite: []
 
 # Social Media Attributes
 youtube:
