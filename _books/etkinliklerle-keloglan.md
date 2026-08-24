@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Etkinliklerle Keloğlan ile Devler"
+title:  "Etkinliklerle Keloğlan ile Devler (6 Kitap)"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes

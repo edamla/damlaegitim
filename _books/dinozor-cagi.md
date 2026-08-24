@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Dinozor Çağı"
+title:  "Dinozor Çağı (10 Kitap)"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes

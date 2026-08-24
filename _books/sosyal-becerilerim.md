@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Sosyal Becerilerim"
+title:  "Sosyal Becerilerim Serisi (10 Kitap)"
 description: "Okul sıralarıyla yeni tanışan çocuklarımızın, toplum içinde kendilerini doğru ifade edebilen ve mutlu bireyler olarak yetişmesi her şeyden önemlidir!…"
 categories: [Hikaye, İlkokul]
 

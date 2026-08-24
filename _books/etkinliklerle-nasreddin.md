@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Etkinliklerle Nasrettin Hoca"
+title:  "Etkinliklerle Nasrettin Hoca (6 Kitap)"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes

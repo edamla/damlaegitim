@@ -4,7 +4,7 @@ title:  "Gizli Dedektiflik Bürosu (10 Kitap)"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
-ean: 9786053833413
+ean: 8697911223080
 languages: [Türkçe]
 page: "Her Biri 80"
 size: "13,5x19,5 cm"

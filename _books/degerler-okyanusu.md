@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Değerler Okyanusu"
+title:  "Değerler Okyanusu (10 Kitap)"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes

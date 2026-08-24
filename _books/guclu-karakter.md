@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Güçlü Karakter Serisi"
+title:  "Güçlü Karakter Serisi (10 Kitap)"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes

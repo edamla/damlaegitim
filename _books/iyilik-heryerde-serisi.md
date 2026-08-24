@@ -1,6 +1,6 @@
 ---
 layout: previewbook
-title:  "İyilik Heryerde Serisi"
+title:  "İyilik Heryerde Serisi (10 Kitap)"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
