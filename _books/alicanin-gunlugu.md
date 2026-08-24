@@ -4,7 +4,7 @@ title:  "Alican'ın Günlüğü (10 Kitap)"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
-ean: 9786053831303
+ean: 8697911223028
 languages: [Türkçe]
 page: "Her Biri 48"
 size: "13,5x19,5 cm"

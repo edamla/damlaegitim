@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Evliya Çelebi’nin Maceraları"
+title:  "Evliya Çelebi’nin Maceraları (10 Kitap)"
 description: "Dünya tarihinin en büyük seyyahlarından Evliya Çelebi’nin rehberliğinde Asya, Avrupa ve Afrika kıtalarına uzanan benzersiz bir tarih ve coğrafya…"
 categories: [Hikaye, İlkokul]
 

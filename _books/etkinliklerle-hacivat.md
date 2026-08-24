@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Etkinliklerle Hacivat Karagöz"
+title:  "Etkinliklerle Hacivat Karagöz (10 Kitap)"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes

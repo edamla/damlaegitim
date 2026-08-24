@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Cicim Masallarım"
+title:  "Cicim Masallarım (10 Kitap)"
 description: "Nesilden nesile aktarılan ve dünyanın dört bir yanında çocukların kalbinde taht kuran klasik masallar, “Cicim Masallarım” setini 1. sınıf öğrencileriyle…"
 categories: [Hikaye, İlkokul]
 
