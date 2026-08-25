@@ -327,9 +327,9 @@ BEM yapısı:
 | Başlık | `.article-headline.display-4` | `margin-bottom: var(--space-6)`; mobilde ortalı |
 | Hero meta | `.book-detail__hero-meta` | Yalnızca `genre: story`; boşsa render edilmez |
 | Müfredat paneli | `.book-curriculum` | İki bölüm: TYMM + Öykümatik; alt satırlarda label + yatay scroll şeridi |
-| TYMM bölüm başlığı | `.book-curriculum__heading` | «Türkiye Yüzyılı Maarif Modeli»; altında Ünitesi / Anateması / Becerileri |
+| TYMM bölüm başlığı | `.book-curriculum__heading` | «Türkiye Yüzyılı Maarif Modeli»; altında Erdemler / Değerler, Anateması, Becerileri |
 | Öykümatik bölüm başlığı | `.book-curriculum__heading` | «Türkiye'de İlk ve Tek Damla Hikaye Kazanım Sistemi»; altında Öykümatik Kazanım Kodu |
-| TYMM ünite | `.book-curriculum__chip--unite` | Dolu yeşil chip; tek satır, `overflow-x: auto` |
+| TYMM değer | `.book-curriculum__chip--degerler` | Outline yeşil chip; tek satır, `overflow-x: auto` |
 | TYMM anatema | `.book-curriculum__chip--anatema` | Outline yeşil chip; tek satır scroll |
 | TYMM beceriler | `.book-curriculum__chip--beceri` | Outline chip; düz liste, tek satır scroll |
 | Kazanım kodları | `.book-curriculum__chip--kazanim` | Monospace kod chip; `title` ile kazanım metni |
@@ -339,7 +339,7 @@ BEM yapısı:
 | Metadata | `.book-meta__item` | Flex: ikon + metin |
 | Açıklama | `.prose--display` | Markdown gövdesi |
 
-Hero sırası: başlık → müfredat paneli (`.book-curriculum`) → etiketler → aksiyonlar. Panel iki bölümden oluşur: **Türkiye Yüzyılı Maarif Modeli** (Ünitesi, Anateması, Becerileri) ve **Türkiye'de İlk ve Tek Damla Hikaye Kazanım Sistemi** (Öykümatik Kazanım Kodu). Mobilde satırlar dikey; chip şeritleri sağ fade ve chevron ile kaydırılabilir olduğunu gösterir.
+Hero sırası: başlık → müfredat paneli (`.book-curriculum`) → etiketler → aksiyonlar. Panel iki bölümden oluşur: **Türkiye Yüzyılı Maarif Modeli** (Erdemler / Değerler, Anateması, Becerileri) ve **Türkiye'de İlk ve Tek Damla Hikaye Kazanım Sistemi** (Öykümatik Kazanım Kodu). Mobilde satırlar dikey; chip şeritleri sağ fade ve chevron ile kaydırılabilir olduğunu gösterir.
 
 **Dosyalar:** `_layouts/book.html`, `_includes/book-hero-meta.html`
 

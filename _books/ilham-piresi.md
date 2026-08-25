@@ -18,10 +18,11 @@ paper: "Kitap Kağıdı"
 authors: ["Nur Dombaycı"]
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [3, 4]
 tags: ["Çocuk Edebiyatı", "Kendini Keşfetme", İlham, Yaratıcılık, Farklılıklar, Özgüven, "Hayvanlar Âlemi", Yazarlık, Mizah]
+degerler: [Sorumluluk, Estetik, Dostluk, Duyarlılık, Özgürlük, Saygı]
 anatema: [Duyarlılık, Estetik, Merak, Dostluk, Dürüstlük, Özgürlük, Saygı, Sorumluluk, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Soru Sorma"]
 kazanim: [H.2.2.1, H.2.2.2, H.2.3.1, H.3.2.1, H.3.3.1, H.3.3.2, H.3.4.1, H.3.4.2, H.4.2.1, H.4.2.2]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "İletişim Becerisi", "Sosyal Farkındalık Becerisi", "Sınıflandırma Becerisi", "Bilgi Toplama Becerisi"]

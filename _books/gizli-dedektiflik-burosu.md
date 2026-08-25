@@ -18,10 +18,11 @@ authors: ["Esra Avgören"]
 illustrators: ["Gökhan Kalafat"]
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [4]
 tags: [Arkadaşlık, Yardımseverlik, Cesaret, "Vurdumduymaz Olmamak", "Takım Ruhu", "Planlı Çalışma"]
+degerler: [Yardımseverlik, Dostluk, Saygı, Merhamet, Sorumluluk, Mahremiyet]
 anatema: [Dostluk, Empati, Cesaret, "Azim ve Kararlılık", "Kendine Güvenme (Öz Güven)", Merhamet, Sorumluluk, Çalışkanlık, Mahremiyet, Saygı, Merak, Girişkenlik]
 kazanim: [H.1.2.1, H.1.2.3, H.1.2.4, H.1.3.5, H.1.3.7, H.2.2.1, H.2.2.2, H.3.2.1, H.4.2.1, H.4.2.2]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "İletişim Becerisi", "Sosyal Farkındalık Becerisi", "Özetleme Becerisi"]

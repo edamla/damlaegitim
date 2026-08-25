@@ -51,6 +51,7 @@ EONER_KADIN_URL = (
     "https://raw.githubusercontent.com/eoner/ADNKSVerileri/master/"
     "{year}_ilce_kadin_yas_combined.csv"
 )
+EONER_YEARS = (2014, 2013)
 
 BANDS_0_14 = ("0-4", "5-9", "10-14")
 BAND_15_17 = "15-17"
@@ -366,6 +367,16 @@ def merge_band_pair(erkek: Dict[Tuple[str, str], Dict[str, int]], kadin: Dict[Tu
 
 
 def find_vendor_files(vendor_dir: Path, yil: int) -> Tuple[str, List[Path]]:
+    hit = try_find_vendor_files(vendor_dir, yil)
+    if hit is None:
+        raise FileNotFoundError(
+            f"TÜİK vendor dosyası bulunamadı ({vendor_dir}, yıl={yil}). "
+            f"Beklenen: adnks_il_ilce_yas_{yil}.csv veya erkek+kadin CSV çifti."
+        )
+    return hit
+
+
+def try_find_vendor_files(vendor_dir: Path, yil: int) -> Optional[Tuple[str, List[Path]]]:
     tidy = vendor_dir / f"adnks_il_ilce_yas_{yil}.csv"
     if tidy.is_file():
         return "tidy", [tidy]
@@ -381,9 +392,42 @@ def find_vendor_files(vendor_dir: Path, yil: int) -> Tuple[str, List[Path]]:
     kadin = next((p for p in kadin_names if p.is_file()), None)
     if erkek and kadin:
         return "band_pair", [erkek, kadin]
-    raise FileNotFoundError(
-        f"TÜİK vendor dosyası bulunamadı ({vendor_dir}, yıl={yil}). "
-        f"Beklenen: {tidy.name} veya erkek+kadin CSV çifti."
+    return None
+
+
+def ensure_vendor(vendor_dir: Path, preferred_yil: int) -> int:
+    """İstenen yıl yoksa eoner/ADNKSVerileri (2014→2013) otomatik indirir."""
+    hit = try_find_vendor_files(vendor_dir, preferred_yil)
+    if hit:
+        return preferred_yil
+    candidates = [preferred_yil, *EONER_YEARS]
+    seen: Set[int] = set()
+    for yil in candidates:
+        if yil in seen:
+            continue
+        seen.add(yil)
+        hit = try_find_vendor_files(vendor_dir, yil)
+        if hit:
+            if yil != preferred_yil:
+                print(
+                    f"  [INFO] {preferred_yil} vendor yok; mevcut {yil} kullanılıyor",
+                    file=sys.stderr,
+                )
+            return yil
+        if yil not in EONER_YEARS:
+            continue
+        bootstrap_vendor(vendor_dir, yil)
+        hit = try_find_vendor_files(vendor_dir, yil)
+        if hit:
+            if yil != preferred_yil:
+                print(
+                    f"  [INFO] {preferred_yil} vendor yok; eoner {yil} indirildi",
+                    file=sys.stderr,
+                )
+            return yil
+    raise RuntimeError(
+        f"TÜİK vendor otomatik hazırlanamadı ({vendor_dir}). "
+        f"Manuel: adnks_il_ilce_yas_{preferred_yil}.csv"
     )
 
 
@@ -446,6 +490,19 @@ def fetch_toplam_nufus(vendor_dir: Optional[Path]) -> Tuple[Dict[int, int], Dict
     except RuntimeError:
         pass
     return il_nufus, ilce_nufus, dataset_version, last_updated
+
+
+def count_missing_ilceler(
+    cocuk_map: Dict[Tuple[int, int], Dict[str, Any]],
+    adres: Dict[str, Any],
+) -> int:
+    missing = 0
+    for il in adres.get("iller") or []:
+        il_kod = int(il["kod"])
+        for ilce in il.get("ilceler") or []:
+            if (il_kod, int(ilce["kod"])) not in cocuk_map:
+                missing += 1
+    return missing
 
 
 def impute_missing_ilceler(
@@ -660,12 +717,22 @@ def main(argv: Optional[List[str]] = None) -> int:
     parser.add_argument(
         "--bootstrap-vendor",
         action="store_true",
-        help="eoner/ADNKSVerileri GitHub'dan vendor CSV indir (yalnızca 2013–2014)",
+        help=argparse.SUPPRESS,
+    )
+    parser.add_argument(
+        "--no-auto-vendor",
+        action="store_true",
+        help="Vendor dosyası yoksa otomatik indirme yapma (varsayılan: açık)",
     )
     parser.add_argument(
         "--impute-new-ilce",
         action="store_true",
-        help="Vendor'da olmayan yeni ilçeler için il içi kardeş oran ile çocuk nüfus tahmini",
+        help=argparse.SUPPRESS,
+    )
+    parser.add_argument(
+        "--no-impute",
+        action="store_true",
+        help="Eksik/yeni ilçeler için otomatik tahmin yapma",
     )
     args = parser.parse_args(argv)
 
@@ -677,9 +744,11 @@ def main(argv: Optional[List[str]] = None) -> int:
     vendor_dir.mkdir(parents=True, exist_ok=True)
 
     if args.bootstrap_vendor:
-        if vendor_yil not in (2013, 2014):
+        if vendor_yil not in EONER_YEARS:
             raise SystemExit("--bootstrap-vendor yalnızca 2013 veya 2014 için desteklenir")
         bootstrap_vendor(vendor_dir, vendor_yil)
+    elif not args.no_auto_vendor:
+        vendor_yil = ensure_vendor(vendor_dir, vendor_yil)
 
     print("TurkiyeAPI toplam nüfus…")
     il_nufus, ilce_nufus, dataset_version, last_updated = fetch_toplam_nufus(args.turkiyeapi_vendor)
@@ -689,9 +758,19 @@ def main(argv: Optional[List[str]] = None) -> int:
     if unmatched:
         print(f"  [WARN] eşleşmeyen vendor satırı: {len(unmatched)}", file=sys.stderr)
 
+    adres_data = json.loads(ADRES_PATH.read_text(encoding="utf-8"))
     imputed: List[Dict[str, Any]] = []
-    if args.impute_new_ilce:
-        adres_data = json.loads(ADRES_PATH.read_text(encoding="utf-8"))
+    missing_ilce = count_missing_ilceler(cocuk_map, adres_data)
+    should_impute = (
+        not args.no_impute
+        and (args.impute_new_ilce or missing_ilce > 0 or vendor_yil != args.yil)
+    )
+    if should_impute:
+        if missing_ilce > 0 or vendor_yil != args.yil:
+            print(
+                f"  ilçe çocuk tahmini (eksik={missing_ilce}, vendor_yil={vendor_yil})…",
+                file=sys.stderr,
+            )
         cocuk_map, imputed = impute_missing_ilceler(cocuk_map, il_nufus, ilce_nufus, adres_data)
         if imputed:
             print(f"  impute edilen ilçe: {len(imputed)}", file=sys.stderr)

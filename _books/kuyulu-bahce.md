@@ -18,10 +18,11 @@ paper: "Kitap Kağıdı"
 authors: ["Kemalettin Tuğcu"]
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: [Emek ve Çalışma, Ön Yargılar, Eğitim ve Aydınlanma, Karşılıksız İyilik, Vefa, Su ve Hayat]
+tags: ["Emek ve Çalışma", "Ön Yargılar", "Eğitim ve Aydınlanma", "Karşılıksız İyilik", Vefa, "Su ve Hayat"]
+degerler: [Vatanseverlik, Saygı, Özgürlük, Sevgi, Sorumluluk, "Aile Bütünlüğü"]
 anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
 kazanim: [H.1.2.1, H.1.2.2, H.1.2.3, H.1.2.4, H.2.2.1, H.2.2.2, H.4.2.1, H.4.2.2, H.4.2.3, H.4.2.4]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]

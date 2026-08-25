@@ -5,7 +5,7 @@
 > - [README.md](README.md) — Genel bakış, kurulum ve hızlı başlangıç *(bu dosya)*
 > - [project.md](project.md) — Teknik mimari ve geliştirme kuralları
 > - [design.md](design.md) — Stil, tasarım sistemi ve UI bileşenleri
-> - [getdata.md](getdata.md) — Dış veri çekimi (TurkiyeAPI, MEB okullar / okul detay)
+> - [getdata.md](getdata.md) — Dış veri çekimi (TurkiyeAPI, MEB okullar / okul detay, nüfus)
 
 [damlaokul.com](https://damlaokul.com) — Damla Yayınevi’nin okul yayınları ve eğitim materyallerini tanıtan statik web sitesi.
 
@@ -14,7 +14,7 @@ Yeni Maarif Modeline uygun eğitim setleri, hikaye kitapları ve kataloglar tek 
 ## Özellikler
 
 - **Ürün kataloğu** — Sınıf ve tür (Eğitim / Hikaye) bazlı filtreleme, paylaşılabilir hash URL’leri
-- **Kitap detay sayfaları** — Kapak, metadata, TYMM alanları (`unite`, `anatema`, `beceriler`) ve Öykümatik `kazanim` kodları, `preview_link` ile önizleme (İncele), `examlink` ile HDS PDF, `damlaurl` doluysa Satın Al / boşsa Bilgi (tedarik popup)
+- **Kitap detay sayfaları** — Kapak, metadata, TYMM alanları (`degerler`, `anatema`, `beceriler`) ve Öykümatik `kazanim` kodları, `preview_link` ile önizleme (İncele), `examlink` ile HDS PDF, `damlaurl` doluysa Satın Al / boşsa Bilgi (tedarik popup)
 - **Ürün inceleme linkleri** — `/urun-inceleme-linkleri` sayfasında tüm `preview_link` dolu kitaplar; arama, kopyala ve WhatsApp paylaşımı
 - **Kataloglar** — Html / PDF katalog görüntüleme
 - **Anasayfa slider** — Kampanya ve duyuru görselleri
@@ -279,10 +279,11 @@ examlink: ""
 damlaurl: ""
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [3, 4]
 tags: [empati, dedektiflik]
+degerler: [Saygı, Dürüstlük, Sorumluluk, Adalet]
 anatema: [Saygı, Empati, Merak]
 kazanim: [H.1.2.1, H.3.3.3]
 beceriler: [Okuma Becerisi, "Problem Çözme Becerisi"]
@@ -291,7 +292,7 @@ unite: ["Oyun Dünyası", "Değerlerimizle Varız"]
 Ürün açıklaması buraya...
 ```
 
-Hikaye kitaplarında `unite`, `anatema`, `beceriler`, `kazanim` ve `tags` [`book-hero-meta.html`](_includes/book-hero-meta.html) ile başlık altında gösterilir. Eğitim setlerinde Maarif uyum tablosu gövdede markdown tablo olarak yer alır.
+Hikaye kitaplarında `degerler`, `anatema`, `beceriler`, `kazanim` ve `tags` [`book-hero-meta.html`](_includes/book-hero-meta.html) ile başlık altında gösterilir (`unite` story kitaplarda UI'da gösterilmez). Eğitim setlerinde Maarif uyum tablosu gövdede markdown tablo olarak yer alır.
 
 `tags` serbest etiket (`empati`, `Dedektiflik`). `kazanim` yalnızca Öykümatik kod dizisi (`H.1.2.1`); sitede kod olarak gösterilir. `preview_link` doluysa İncele butonu görünür. `examlink` doluysa ve `_config.yml` içinde `examlink: true` ise HDS butonu görünür. `damlaurl` doluysa **Satın Al**, boşsa **Bilgi** (tedarik popup).
 

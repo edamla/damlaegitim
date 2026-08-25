@@ -18,10 +18,11 @@ authors: ["Sara Gürbüz Özeren"]
 illustrators: ["Melike Tan"]
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [1]
 tags: ["Gölge Oyunu", Karagöz, Hacivat, Değerler, Okuma, Yazma, Mizah, "Hayvan Sevgisi", Arkadaşlık, Dostluk, Yardımlaşma, Sevgi, Saygı, "Misafire Hürmet", "Çizgi Film"]
+degerler: [Sevgi, Dostluk, Saygı, Merhamet, Estetik, Duyarlılık]
 anatema: [Saygı, Sorumluluk, Dürüstlük, Sevgi, Dostluk, Empati, Duyarlılık, Estetik, Merak, Odaklanma, Merhamet, Sistematiklik]
 kazanim: [H.1.1.1, H.1.2.1, H.1.3.2, H.1.4.2, H.2.1.2, H.4.1.1]
 beceriler: ["Okuma Becerisi", "Dinleme/İzleme Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Görsel Okuryazarlık", "İletişim Becerisi", "Karşılaştırma Becerisi", "Mevcut Bilgiye/Veriye Dayalı Tahmin Etme Becerisi", "Muhakeme (Akıl Yürütme) Becerisi"]

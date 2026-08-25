@@ -1,0 +1,133 @@
+{
+  "kaynak": "https://tymm.meb.gov.tr/beceriler/erdem-deger-eylem-cercevesi",
+  "baslik": "Erdem-Değer-Eylem Çerçevesi — Değerler",
+  "guncelleme": "2026-08-25",
+  "cati_degerler": ["Adalet", "Saygı", "Sorumluluk"],
+  "alanlar": {
+    "kisisel": ["Tasarruf", "Sabır", "Mahremiyet", "Mütevazılık", "Sağlıklı Yaşam", "Çalışkanlık"],
+    "aile_ve_sosyal": ["Sevgi", "Dostluk", "Özgürlük", "Dürüstlük", "Vatanseverlik", "Yardımseverlik", "Aile Bütünlüğü"],
+    "fiziksel_cevre": ["Temizlik", "Duyarlılık", "Estetik", "Merhamet"]
+  },
+  "degerler": [
+    {
+      "kod": "D1",
+      "ad": "Adalet",
+      "cati": true,
+      "aciklama": "Hak ve özgürlükleri, eşitliği, etik davranmayı, hakkaniyeti, ön yargısızlığı, ölçülülüğü ve liyakati kapsar."
+    },
+    {
+      "kod": "D2",
+      "ad": "Aile Bütünlüğü",
+      "alan": "aile_ve_sosyal",
+      "aciklama": "Aile içi iletişim ve iş birliğini güçlendirmeyi, ailede sorumlulukları yerine getirmeyi, aileyle vakit geçirmeyi; saygı, sevgi ve güvene dayalı ilişkiler kurmayı kapsar."
+    },
+    {
+      "kod": "D3",
+      "ad": "Çalışkanlık",
+      "alan": "kisisel",
+      "aciklama": "Disiplinli, planlı ve istikrarlı olmayı; bilimselliğe önem vermeyi, iç motivasyon ve öz denetim sahibi olmayı, hayat boyu öğrenmeyi, görev ve sorumluluk üstlenmeyi kapsar."
+    },
+    {
+      "kod": "D4",
+      "ad": "Dostluk",
+      "alan": "aile_ve_sosyal",
+      "aciklama": "Sosyal ilişkilerde duyarlılık göstermeyi dayanışma içinde olmayı; etkili iletişimle sevgi, saygı ve güvene dayalı ilişkiler kurmayı; nitelikli vakit geçirmeyi ve evrensel bağ kurmayı kapsar."
+    },
+    {
+      "kod": "D5",
+      "ad": "Duyarlılık",
+      "alan": "fiziksel_cevre",
+      "aciklama": "Kendisine, içinde yaşadığı topluma, kültürel zenginliklere, tüm varlıklara değer vermeyi; sürdürülebilirliği önemsemeyi ve afetlere karşı hazırlıklı olmayı kapsar."
+    },
+    {
+      "kod": "D6",
+      "ad": "Dürüstlük",
+      "alan": "aile_ve_sosyal",
+      "aciklama": "Söz ve davranışlarında tutarlı, doğru ve güvenilir olmayı kapsar."
+    },
+    {
+      "kod": "D7",
+      "ad": "Estetik",
+      "alan": "fiziksel_cevre",
+      "aciklama": "Sanatsal bakış açısı kazanmayı, sanatsal ve kültürel varlığı koruyup zenginleştirmeyi, doğal güzelliklerin ve çevrenin korunması ile ilgili duyarlı olmayı ve sorumluluk üstlenmeyi, estetik aracılığıyla özgün üretkenliği ve ruhsal gelişimi desteklemeyi, sanatı hayatın bir parçası hâline getirmeyi kapsar."
+    },
+    {
+      "kod": "D8",
+      "ad": "Mahremiyet",
+      "alan": "kisisel",
+      "aciklama": "Kendisinin, ailesinin ve başkalarının kişisel alanını ve bilgilerini korumayı; başkalarının özgürlüklerini ihlal etmemeyi, kişisel sınırlarına saygı duymayı ve millî ve manevi değerlerde mahremiyetin sınırlarını kapsar."
+    },
+    {
+      "kod": "D9",
+      "ad": "Merhamet",
+      "alan": "fiziksel_cevre",
+      "aciklama": "İnsanlara ve diğer canlılara karşı vicdanlı, şefkatli, sevgi dolu, duyarlı ve sorumlu olmayı kapsar."
+    },
+    {
+      "kod": "D10",
+      "ad": "Mütevazılık",
+      "alan": "kisisel",
+      "aciklama": "Kendini bilmeyi; gösterişten ve kibirden uzak, sade, sabırlı, saygılı, duyarlı ve yapıcı olmayı kapsar."
+    },
+    {
+      "kod": "D11",
+      "ad": "Özgürlük",
+      "alan": "aile_ve_sosyal",
+      "aciklama": "Cesur, girişimci ve kararlı olmayı; özgürlüklerini kullanırken kişisel ve toplumsal haklara saygı göstermeyi kapsar."
+    },
+    {
+      "kod": "D12",
+      "ad": "Sabır",
+      "alan": "kisisel",
+      "aciklama": "Olumlu bakış açısına olmayı, zor ve kötü durumlara karşı dayanmayı, istikrarlı davranmayı, süreci yönetmeyi, sorumlulukları yerine getirmeyi; duygu, düşünce ve eylemleri kontrol etmeyi kapsar."
+    },
+    {
+      "kod": "D13",
+      "ad": "Sağlıklı Yaşam",
+      "alan": "kisisel",
+      "aciklama": "Yeterli, dengeli ve sağlıklı beslenmeyi; sosyal ve sportif etkinliklere katılmayı, bağımlılıktan kaçınmayı, bağımlılıkla mücadele etmeyi ve insan sağlığını önemsemeyi kapsar."
+    },
+    {
+      "kod": "D14",
+      "ad": "Saygı",
+      "cati": true,
+      "aciklama": "Nazik olmayı, ilkeli davranmayı, empati ve etkili iletişim kurmayı, sağlıklı yaşamayı; kendisine, çevresine, millî ve manevi değerlere önem vermeyi kapsar."
+    },
+    {
+      "kod": "D15",
+      "ad": "Sevgi",
+      "alan": "aile_ve_sosyal",
+      "aciklama": "Ailesine, dostlarına ve ülkesine karşı vefalı, dürüst, sadık ve özverili olmayı; barışçıl bakış açısına sahip olmayı; misafirperverliği, doğaya ve bütün canlılara karşı merhametli davranmayı kapsar."
+    },
+    {
+      "kod": "D16",
+      "ad": "Sorumluluk",
+      "cati": true,
+      "aciklama": "Kendisine ve çevresine karşı görevlerini tam ve zamanında yerine getirmeyi; duygu, düşünce ve eylemlerinin sonucunu kabul etmeyi kapsar."
+    },
+    {
+      "kod": "D17",
+      "ad": "Tasarruf",
+      "alan": "kisisel",
+      "aciklama": "Maddi kaynakları planlı ve kontrollü harcamayı, israftan kaçınmayı, tutumlu olmayı, birikim yapmayı, sahip olduklarının değerini bilmeyi ve bilinçli tüketici olmayı kapsar."
+    },
+    {
+      "kod": "D18",
+      "ad": "Temizlik",
+      "alan": "fiziksel_cevre",
+      "aciklama": "Kişisel temizlik ve bakıma dikkat ederek kendisine ve topluma saygı duymayı, yaşadığı ortamın ve çevrenin temizliğine önem vererek toplumdaki genel yaşam kalitesine ve sürdürülebilirliğe katkıda bulunmayı kapsar."
+    },
+    {
+      "kod": "D19",
+      "ad": "Vatanseverlik",
+      "alan": "aile_ve_sosyal",
+      "aciklama": "Millî, manevi, insani, kültürel değerleri ve ülke varlıklarını korumayı, sevmeyi ve onlara saygı duymayı; bağımsızlığa önem vermeyi, ülkesi için sorumluluk almayı kapsar."
+    },
+    {
+      "kod": "D20",
+      "ad": "Yardımseverlik",
+      "alan": "aile_ve_sosyal",
+      "aciklama": "İnsanlara ve canlılara duyarlı olmayı, onları sevmeyi, onlara merhamet etmeyi, cömertliği, dayanışmayı, fedakârlık yapmayı, iyiliksever olmayı kapsar."
+    }
+  ]
+}

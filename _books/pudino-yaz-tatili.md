@@ -16,10 +16,11 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/pudino-yaz-tatil
 damlaurl: ""
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: education
 grades: [0]
 tags: []
+degerler: []
 anatema: []
 kazanim: []
 beceriler: []

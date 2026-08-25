@@ -41,6 +41,10 @@ var BookFilter = (function() {
     return matchesFieldList(book, 'anatema', anatema);
   }
 
+  function matchesDegerler(book, degerler) {
+    return matchesFieldList(book, 'degerler', degerler);
+  }
+
   function matchesUnite(book, unite) {
     return matchesFieldList(book, 'unite', unite);
   }
@@ -71,7 +75,7 @@ var BookFilter = (function() {
         matchesCategories(book, criteria.categories) &&
         matchesTags(book, criteria.tags) &&
         matchesAnatema(book, criteria.anatema) &&
-        matchesUnite(book, criteria.unite) &&
+        matchesDegerler(book, criteria.degerler) &&
         matchesBeceriler(book, criteria.beceriler) &&
         matchesKazanim(book, criteria.kazanim) &&
         matchesSearch(book, criteria.q);
@@ -139,16 +143,16 @@ var BookFilter = (function() {
 
   function collectStoryValues(catalog, grade) {
     var books = collectStoryBooks(catalog, grade);
-    var unites = {};
+    var degerler = {};
     var anatema = {};
     var beceriler = {};
     books.forEach(function(book) {
-      arr(book.unite).forEach(function(u) { if (u) unites[u] = true; });
+      arr(book.degerler).forEach(function(d) { if (d) degerler[d] = true; });
       arr(book.anatema).forEach(function(a) { if (a) anatema[a] = true; });
       arr(book.beceriler).forEach(function(b) { if (b) beceriler[b] = true; });
     });
     return {
-      unites: Object.keys(unites),
+      degerler: Object.keys(degerler),
       anatema: Object.keys(anatema),
       beceriler: Object.keys(beceriler)
     };
@@ -182,18 +186,14 @@ var BookFilter = (function() {
     return null;
   }
 
-  function storyFilterOptions(catalog, grade, tymmData, selectedUnite) {
+  function storyFilterOptions(catalog, grade, degerOrder, selectedDegerler) {
     var values = collectStoryValues(catalog, grade);
-    var tymmIndex = buildGradeTymmIndex(tymmData, grade);
-    var unites = values.unites.slice().sort(function(a, b) {
-      var diff = findUniteIndex(a, tymmIndex) - findUniteIndex(b, tymmIndex);
-      return diff !== 0 ? diff : a.localeCompare(b, 'tr');
-    });
+    var degerler = sortByOrderList(values.degerler, degerOrder || []);
 
     var baseBooks = collectStoryBooks(catalog, grade);
-    if (selectedUnite) {
+    if (selectedDegerler) {
       baseBooks = baseBooks.filter(function(book) {
-        return arr(book.unite).indexOf(selectedUnite) !== -1;
+        return arr(book.degerler).indexOf(selectedDegerler) !== -1;
       });
     }
 
@@ -204,53 +204,31 @@ var BookFilter = (function() {
       arr(book.beceriler).forEach(function(b) { if (b) becerilerSet[b] = true; });
     });
 
-    var anatemas = Object.keys(anatemaSet);
-    var becerilers = Object.keys(becerilerSet);
-    var uniteEntry = getTymmUniteEntry(selectedUnite, tymmIndex);
+    var anatemas = Object.keys(anatemaSet).sort(function(a, b) { return a.localeCompare(b, 'tr'); });
+    var becerilers = Object.keys(becerilerSet).sort(function(a, b) { return a.localeCompare(b, 'tr'); });
 
-    if (uniteEntry && uniteEntry.anatema.length) {
-      anatemas = sortByOrderList(anatemas, uniteEntry.anatema);
-    } else if (tymmIndex.hasTymm) {
-      var allAnatema = [];
-      tymmIndex.uniteLabels.forEach(function(label) {
-        var entry = getTymmUniteEntry(label, tymmIndex);
-        if (entry) allAnatema = allAnatema.concat(entry.anatema);
-      });
-      anatemas = sortByOrderList(anatemas, allAnatema);
-    } else {
-      anatemas.sort(function(a, b) { return a.localeCompare(b, 'tr'); });
-    }
-
-    if (uniteEntry && uniteEntry.beceriler.length) {
-      becerilers = sortByOrderList(becerilers, uniteEntry.beceriler);
-    } else if (tymmIndex.hasTymm) {
-      var allBeceriler = [];
-      tymmIndex.uniteLabels.forEach(function(label) {
-        var entry = getTymmUniteEntry(label, tymmIndex);
-        if (entry) allBeceriler = allBeceriler.concat(entry.beceriler);
-      });
-      becerilers = sortByOrderList(becerilers, allBeceriler);
-    } else {
-      becerilers.sort(function(a, b) { return a.localeCompare(b, 'tr'); });
-    }
-
-    return { unites: unites, anatema: anatemas, beceriler: becerilers };
+    return { degerler: degerler, anatema: anatemas, beceriler: becerilers };
   }
 
-  function getPrimaryUniteSortKey(book, tymmIndex) {
-    var unites = arr(book.unite);
-    if (unites.length === 0) return 9999;
+  function getPrimaryDegerSortKey(book, degerOrder) {
+    var degerler = arr(book.degerler);
+    if (degerler.length === 0) return 9999;
+    var orderMap = {};
+    (degerOrder || []).forEach(function(v, idx) {
+      orderMap[normLabel(v)] = idx;
+    });
     var minIdx = 9999;
-    unites.forEach(function(u) {
-      var idx = findUniteIndex(u, tymmIndex);
+    degerler.forEach(function(d) {
+      var idx = orderMap[normLabel(d)];
+      if (idx == null) idx = 9999;
       if (idx < minIdx) minIdx = idx;
     });
     return minIdx;
   }
 
-  function getPrimaryUniteLabel(book) {
-    var unites = arr(book.unite);
-    return unites.length ? unites[0] : '';
+  function getPrimaryDegerlerLabel(book) {
+    var degerler = arr(book.degerler).slice(0, 3);
+    return degerler.length ? degerler.join(', ') : '';
   }
 
   function getPrimaryAnatemaLabel(book) {
@@ -258,14 +236,13 @@ var BookFilter = (function() {
     return anatemas.length ? anatemas.join(', ') : '';
   }
 
-  function sortStoryCatalog(books, grade, tymmData) {
-    var tymmIndex = buildGradeTymmIndex(tymmData, grade);
+  function sortStoryCatalog(books, degerOrder) {
     return (books || []).slice().sort(function(a, b) {
-      var ua = getPrimaryUniteSortKey(a, tymmIndex);
-      var ub = getPrimaryUniteSortKey(b, tymmIndex);
-      if (ua !== ub) return ua - ub;
-      var la = getPrimaryUniteLabel(a);
-      var lb = getPrimaryUniteLabel(b);
+      var da = getPrimaryDegerSortKey(a, degerOrder);
+      var db = getPrimaryDegerSortKey(b, degerOrder);
+      if (da !== db) return da - db;
+      var la = getPrimaryDegerlerLabel(a);
+      var lb = getPrimaryDegerlerLabel(b);
       if (la !== lb) return la.localeCompare(lb, 'tr');
       return (a.title || '').localeCompare(b.title || '', 'tr');
     });
@@ -277,6 +254,7 @@ var BookFilter = (function() {
     matchesCategories: matchesCategories,
     matchesTags: matchesTags,
     matchesAnatema: matchesAnatema,
+    matchesDegerler: matchesDegerler,
     matchesUnite: matchesUnite,
     matchesBeceriler: matchesBeceriler,
     matchesKazanim: matchesKazanim,
@@ -287,7 +265,7 @@ var BookFilter = (function() {
     collectStoryValues: collectStoryValues,
     storyFilterOptions: storyFilterOptions,
     sortStoryCatalog: sortStoryCatalog,
-    getPrimaryUniteLabel: getPrimaryUniteLabel,
+    getPrimaryDegerlerLabel: getPrimaryDegerlerLabel,
     getPrimaryAnatemaLabel: getPrimaryAnatemaLabel
   };
 })();

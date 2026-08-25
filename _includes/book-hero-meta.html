@@ -1,8 +1,8 @@
 {% assign hb = include.book | default: page %}
 {% assign hb_genre = hb.genre | strip %}
 {% if hb_genre == 'story' %}
-  {% assign hb_has_unite = false %}
-  {% if hb.unite and hb.unite.size > 0 %}{% assign hb_has_unite = true %}{% endif %}
+  {% assign hb_has_degerler = false %}
+  {% if hb.degerler and hb.degerler.size > 0 %}{% assign hb_has_degerler = true %}{% endif %}
   {% assign hb_has_anatema = false %}
   {% if hb.anatema and hb.anatema.size > 0 %}{% assign hb_has_anatema = true %}{% endif %}
   {% assign hb_has_beceriler = false %}
@@ -11,25 +11,25 @@
   {% if hb.kazanim and hb.kazanim.size > 0 %}{% assign hb_has_kazanim = true %}{% endif %}
   {% assign hb_has_tags = false %}
   {% if hb.tags and hb.tags.size > 0 %}{% assign hb_has_tags = true %}{% endif %}
-  {% if hb_has_unite or hb_has_anatema or hb_has_beceriler or hb_has_kazanim or hb_has_tags %}
+  {% if hb_has_degerler or hb_has_anatema or hb_has_beceriler or hb_has_kazanim or hb_has_tags %}
   <div class="book-detail__hero-meta">
-    {% if hb_has_unite or hb_has_anatema or hb_has_beceriler or hb_has_kazanim %}
+    {% if hb_has_degerler or hb_has_anatema or hb_has_beceriler or hb_has_kazanim %}
     <div class="book-curriculum" role="group" aria-label="Müfredat bilgileri">
-      {% if hb_has_unite or hb_has_anatema or hb_has_beceriler %}
+      {% if hb_has_degerler or hb_has_anatema or hb_has_beceriler %}
       <section class="book-curriculum__section book-curriculum__section--tymm" aria-labelledby="curriculum-tymm-heading">
         <h3 class="book-curriculum__heading" id="curriculum-tymm-heading">
           Türkiye Yüzyılı Maarif Modeli
         </h3>
 
-        {% if hb_has_unite %}
-        <div class="book-curriculum__row book-curriculum__row--unite">
-          <span class="book-curriculum__label">Ünitesi:</span>
+        {% if hb_has_degerler %}
+        <div class="book-curriculum__row book-curriculum__row--degerler">
+          <span class="book-curriculum__label">Erdemler / Değerler:</span>
           <div class="book-curriculum__scroll-wrap">
-            <div class="book-curriculum__scroll" tabindex="0" role="region" aria-label="Türkiye Yüzyılı Maarif Modeli ünite listesi">
+            <div class="book-curriculum__scroll" tabindex="0" role="region" aria-label="Türkiye Yüzyılı Maarif Modeli erdem ve değer listesi">
             <ul class="book-curriculum__chips" role="list">
-              {% for tema in hb.unite %}
+              {% for deger in hb.degerler %}
               <li>
-                <span class="book-curriculum__chip book-curriculum__chip--unite" aria-label="Türkiye Yüzyılı Maarif Modeli ünitesi: {{ tema }}">{{ tema }}</span>
+                <span class="book-curriculum__chip book-curriculum__chip--degerler" aria-label="Türkiye Yüzyılı Maarif Modeli erdem ve değeri: {{ deger }}">{{ deger }}</span>
               </li>
               {% endfor %}
             </ul>

@@ -18,10 +18,11 @@ authors: ["Sara Gürbüz Özeren"]
 illustrators: ["Murat Tanhu"]
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [2]
 tags: [Masal, "Zaman Makinesi", "Masal Makinesi", "Değerler Eğitimi", "Yeni Kelime", "Yeni Deyim", Macera, Keşif, Gizem, Efsane]
+degerler: [Sorumluluk, Sevgi, Dostluk, Saygı, Dürüstlük, Estetik]
 anatema: [Saygı, Sorumluluk, Dürüstlük, Sevgi, Dostluk, Merak, "Gerçeği Arama", Muhakeme, Analitiklik, "Soru Sorma", Estetik, Bağımsızlık]
 kazanim: [H.1.1.1, H.1.1.2, H.1.2.1, H.1.2.3, H.1.3.2, H.1.4.2, H.2.1.2, H.3.4.1, H.4.1.1]
 beceriler: ["Eleştirel Düşünme Becerisi", "Problem Çözme Becerisi", "Çıkarım Yapma Becerisi", "Okuma Becerisi", "Dinleme/İzleme Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık"]

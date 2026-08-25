@@ -16,11 +16,12 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/parag-dilbil2/in
 damlaurl: ""
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: education
 grades: [2]
 ders: Türkçe
 tags: []
+degerler: []
 anatema: []
 kazanim: []
 beceriler: []

@@ -18,10 +18,11 @@ authors: ["Sara Gürbüz Özeren"]
 illustrators: ["Erhan Acar"]
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [4]
 tags: ["Başarının Anahtarı", "Hayal Kurma", Engelli, Yaşam, Empati, İnanç]
+degerler: [Saygı, Merhamet, Çalışkanlık, Vatanseverlik, "Sağlıklı Yaşam", Duyarlılık]
 anatema: [Empati, Duyarlılık, Merhamet, Çalışkanlık, Saygı, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine İnanma (Öz Yeterlilik)", "Kendine Güvenme (Öz Güven)", Girişkenlik]
 kazanim: [H.1.2.1, H.1.2.3, H.1.2.4, H.1.4.1, H.1.4.5, H.2.2.1, H.2.2.2, H.3.2.1, H.4.2.1, H.4.2.2]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Görsel Okuryazarlık", "İletişim Becerisi", "Sosyal Farkındalık Becerisi", "Özetleme Becerisi", "Çözümleme Becerisi"]

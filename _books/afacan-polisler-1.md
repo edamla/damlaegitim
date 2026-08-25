@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Afacan Polisler-1"
-description: "Dört afacan gencin, sokaktaki masum bir Olaya müdahale etmesiyle başlayan ve polis akademisine uzanan nefes kesici serüveni başlıyor!""
+description: "Dört afacan gencin, sokaktaki masum bir Olaya müdahale etmesiyle başlayan ve polis akademisine uzanan nefes kesici serüveni başlıyor!"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -18,10 +18,11 @@ paper: "Kitap Kağıdı"
 authors: ["Yavuz Ali Bilge"]
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: [Adalet Arayışı, Gençlerin Gücü, Disiplin ve Kurallar, Ekip Ruhu, Meslek Bilinci, Empati]
+tags: ["Adalet Arayışı", "Gençlerin Gücü", "Disiplin ve Kurallar", "Ekip Ruhu", "Meslek Bilinci", Empati]
+degerler: [Saygı, Adalet, Sorumluluk, Çalışkanlık, Dürüstlük, Sabır]
 anatema: [Merak, "Gerçeği Arama", Muhakeme, Analitiklik, "Soru Sorma", Çalışkanlık, Dürüstlük, Özgürlük, Sabır, Saygı, Sorumluluk, Bağımsızlık]
 kazanim: [H.1.2.2, H.1.3.3, H.1.3.5, H.1.3.8, H.3.2.1, H.3.3.3, H.4.2.1, H.4.2.2, H.4.2.4, H.4.3.1]
 beceriler: ["Eleştirel Düşünme Becerisi", "Problem Çözme Becerisi", "Çıkarım Yapma Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi"]

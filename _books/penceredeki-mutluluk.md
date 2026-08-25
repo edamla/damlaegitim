@@ -19,10 +19,11 @@ authors: ["Onur Ömer Düzgün"]
 illustrators: ["Aslıhan Akı Çelik"]
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [3, 4]
 tags: [Korku, Cesaret, Özgüven, Arkadaşlık, Dayanışma]
+degerler: [Saygı, Dostluk, Vatanseverlik, Adalet, Mahremiyet, Çalışkanlık]
 anatema: [Dostluk, Empati, Cesaret, "Azim ve Kararlılık", "Kendine Güvenme (Öz Güven)", Adalet, Çalışkanlık, Mahremiyet, Saygı, Vatanseverlik, Merak, Girişkenlik]
 kazanim: [H.1.2.1, H.1.2.3, H.1.2.4, H.1.3.1, H.1.3.2, H.1.3.3, H.1.3.4, H.1.3.5, H.4.2.1, H.4.2.2]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Kendini Düzenleme (Öz Düzenleme Becerisi)", "İletişim Becerisi"]

@@ -3554,6 +3554,18 @@ div.a2a_full_footer {display:none;}
 
 
 
+.book-curriculum__chip--degerler {
+
+  background: #fff;
+
+  color: #2d6a4f;
+
+  border: 1px solid rgba(45, 106, 79, 0.45);
+
+}
+
+
+
 .book-curriculum__chip--anatema {
 
   background: #fff;

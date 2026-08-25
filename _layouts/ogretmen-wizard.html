@@ -62,12 +62,14 @@ layout: default
   "anatema": {{ book.anatema | jsonify }},
   "kazanim": {{ book.kazanim | jsonify }},
   "beceriler": {{ book.beceriler | jsonify }},
-  "unite": {{ book.unite | jsonify }},
+  "degerler": {{ book.degerler | jsonify }},
   "url": {{ book.url | jsonify }},
   "cover": {{ book_cover | jsonify }}
 }{% unless forloop.last %},{% endunless %}
 {% endfor %}
 ]</script>
+
+<script type="application/json" id="ogretmen-degerler">{{ site.data.tymm_degerler.degerler | map: 'ad' | jsonify }}</script>
 
 <script type="application/json" id="ogretmen-tymm">{{ site.data.tymm | jsonify }}</script>
 
@@ -93,6 +95,7 @@ window.owOnRecaptchaReady = function() {
   var STEP_LABELS = ['Sınıf', 'Okuma Listesi', 'Eğitim Kitapları', 'Liste', 'İletişim', 'Gönder'];
   var catalog = [];
   var tymmData = {};
+  var degerOrder = [];
   var adresIlIlce = { iller: [] };
   var okullarData = null;
   var okullarFetchPromise = null;
@@ -103,8 +106,8 @@ window.owOnRecaptchaReady = function() {
     grade: null,
     list: [],
     contact: {},
-    filters: { storyQ: '', educationQ: '', storyUnite: '', storyAnatema: '', storyBeceriler: '' },
-    version: 3
+    filters: { storyQ: '', educationQ: '', storyDegerler: '', storyAnatema: '', storyBeceriler: '' },
+    version: 4
   };
 
   function loadState() {
@@ -112,7 +115,7 @@ window.owOnRecaptchaReady = function() {
       var raw = localStorage.getItem(STORAGE_KEY);
       if (!raw) return;
       var saved = JSON.parse(raw);
-      if (saved.version !== 3) {
+      if (saved.version !== 4) {
         if (!saved.version || saved.version < 2) {
           if (saved.step >= 3) saved.step += 1;
           if (saved.filters && saved.filters.q) {
@@ -123,14 +126,14 @@ window.owOnRecaptchaReady = function() {
         saved.filters = saved.filters || {};
         saved.filters.storyQ = saved.filters.storyQ || '';
         saved.filters.educationQ = saved.filters.educationQ || '';
-        saved.filters.storyUnite = saved.filters.storyUnite || '';
+        saved.filters.storyDegerler = saved.filters.storyDegerler || saved.filters.storyUnite || '';
         saved.filters.storyAnatema = saved.filters.storyAnatema || '';
         saved.filters.storyBeceriler = saved.filters.storyBeceriler || '';
-        saved.version = 3;
+        saved.version = 4;
       }
       Object.assign(state, saved);
       if (!state.filters) {
-        state.filters = { storyQ: '', educationQ: '', storyUnite: '', storyAnatema: '', storyBeceriler: '' };
+        state.filters = { storyQ: '', educationQ: '', storyDegerler: '', storyAnatema: '', storyBeceriler: '' };
       }
       if (!hasGrade() && state.step > 1) {
         state.step = 1;
@@ -215,7 +218,7 @@ window.owOnRecaptchaReady = function() {
       q: genre === 'story' ? (state.filters.storyQ || '') : (state.filters.educationQ || '')
     };
     if (genre === 'story') {
-      criteria.unite = state.filters.storyUnite ? [state.filters.storyUnite] : [];
+      criteria.degerler = state.filters.storyDegerler ? [state.filters.storyDegerler] : [];
       criteria.anatema = state.filters.storyAnatema ? [state.filters.storyAnatema] : [];
       criteria.beceriler = state.filters.storyBeceriler ? [state.filters.storyBeceriler] : [];
     }
@@ -236,19 +239,19 @@ window.owOnRecaptchaReady = function() {
     if (!window.BookFilter) return;
     syncGradeFromDom();
     if (!hasGrade()) {
-      fillSelect('ow-filter-unite', [], '', 'Önce sınıf seçin', true);
+      fillSelect('ow-filter-degerler', [], '', 'Önce sınıf seçin', true);
       fillSelect('ow-filter-anatema', [], '', 'Önce sınıf seçin', true);
       fillSelect('ow-filter-beceriler', [], '', 'Önce sınıf seçin', true);
       return;
     }
 
     var grade = state.grade;
-    var opts = BookFilter.storyFilterOptions(catalog, grade, tymmData, state.filters.storyUnite || '');
-    if (state.filters.storyUnite && opts.unites.indexOf(state.filters.storyUnite) === -1) {
-      state.filters.storyUnite = '';
+    var opts = BookFilter.storyFilterOptions(catalog, grade, degerOrder, state.filters.storyDegerler || '');
+    if (state.filters.storyDegerler && opts.degerler.indexOf(state.filters.storyDegerler) === -1) {
+      state.filters.storyDegerler = '';
       state.filters.storyAnatema = '';
       state.filters.storyBeceriler = '';
-      opts = BookFilter.storyFilterOptions(catalog, grade, tymmData, '');
+      opts = BookFilter.storyFilterOptions(catalog, grade, degerOrder, '');
     }
     if (state.filters.storyAnatema && opts.anatema.indexOf(state.filters.storyAnatema) === -1) {
       state.filters.storyAnatema = '';
@@ -257,7 +260,7 @@ window.owOnRecaptchaReady = function() {
       state.filters.storyBeceriler = '';
     }
 
-    fillSelect('ow-filter-unite', opts.unites, state.filters.storyUnite, 'Tüm üniteler', false);
+    fillSelect('ow-filter-degerler', opts.degerler, state.filters.storyDegerler, 'Tüm değerler', false);
     fillSelect('ow-filter-anatema', opts.anatema, state.filters.storyAnatema, 'Tüm anatema', false);
     fillSelect('ow-filter-beceriler', opts.beceriler, state.filters.storyBeceriler, 'Tüm beceriler', false);
   }
@@ -273,14 +276,14 @@ window.owOnRecaptchaReady = function() {
       return !state.list.some(function(i) { return i.slug === book.slug; });
     });
     if (genre === 'story') {
-      filtered = BookFilter.sortStoryCatalog(filtered, state.grade, tymmData);
+      filtered = BookFilter.sortStoryCatalog(filtered, degerOrder);
     }
     el.innerHTML = filtered.map(function(book) {
       var cover = book.cover ? ('{{ site.baseurl }}/' + book.cover) : '';
-      var anatemaLabel = genre === 'story' ? BookFilter.getPrimaryAnatemaLabel(book) : '';
+      var previewLabel = genre === 'story' ? BookFilter.getPrimaryDegerlerLabel(book) : '';
       return '<article class="ogretmen-wizard__product">' +
         (cover ? '<img src="' + cover + '" alt="" loading="lazy" width="80" height="120">' : '') +
-        (anatemaLabel ? '<small class="ogretmen-wizard__product-unite">' + escapeHtml(anatemaLabel) + '</small>' : '') +
+        (previewLabel ? '<small class="ogretmen-wizard__product-unite">' + escapeHtml(previewLabel) + '</small>' : '') +
         '<div class="ogretmen-wizard__product-title">' + escapeHtml(book.title) + '</div>' +
         '<button type="button" class="btn btn-sm btn-outline-primary" data-add-slug="' + escapeHtml(book.slug) + '">Listeye ekle</button>' +
         '</article>';
@@ -769,7 +772,7 @@ window.owOnRecaptchaReady = function() {
       filtre_tur: [story > 0 ? 'hikaye' : '', education > 0 ? 'egitim' : ''].filter(Boolean).join('+'),
       filtre_kategori: '',
       filtre_tags: '',
-      filtre_unite: state.filters.storyUnite || '',
+      filtre_degerler: state.filters.storyDegerler || '',
       filtre_anatema: state.filters.storyAnatema || '',
       filtre_anatemalar: state.filters.storyAnatema || '',
       filtre_beceriler: state.filters.storyBeceriler || '',
@@ -905,6 +908,10 @@ window.owOnRecaptchaReady = function() {
     if (tymmEl) {
       try { tymmData = JSON.parse(tymmEl.textContent); } catch (e) { tymmData = {}; }
     }
+    var degerEl = document.getElementById('ogretmen-degerler');
+    if (degerEl) {
+      try { degerOrder = JSON.parse(degerEl.textContent); } catch (e) { degerOrder = []; }
+    }
     var adresEl = document.getElementById('ogretmen-adres-il-ilce');
     if (adresEl) {
       try { adresIlIlce = JSON.parse(adresEl.textContent); } catch (e) { adresIlIlce = { iller: [] }; }
@@ -933,7 +940,7 @@ window.owOnRecaptchaReady = function() {
           state.filters.storyQ = '';
           state.filters.educationQ = '';
         }
-        state.filters.storyUnite = '';
+        state.filters.storyDegerler = '';
         state.filters.storyAnatema = '';
         state.filters.storyBeceriler = '';
         saveState();
@@ -998,10 +1005,10 @@ window.owOnRecaptchaReady = function() {
       });
     }
 
-    var filterUnite = document.getElementById('ow-filter-unite');
-    if (filterUnite) {
-      filterUnite.addEventListener('change', function(e) {
-        state.filters.storyUnite = e.target.value;
+    var filterDegerler = document.getElementById('ow-filter-degerler');
+    if (filterDegerler) {
+      filterDegerler.addEventListener('change', function(e) {
+        state.filters.storyDegerler = e.target.value;
         state.filters.storyAnatema = '';
         state.filters.storyBeceriler = '';
         saveState();

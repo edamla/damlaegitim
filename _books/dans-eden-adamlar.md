@@ -18,10 +18,11 @@ paper: "Kitap Kağıdı"
 authors: ["Sir Arthur Conan Doyle"]
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: [Karanlık İzler,Hırs ve Bedel,Yanıltıcı Deliller,İntikam ve Kin,Kriptoloji,Masumiyetin İspatı]
+tags: ["Karanlık İzler", "Hırs ve Bedel", "Yanıltıcı Deliller", "İntikam ve Kin", Kriptoloji, "Masumiyetin İspatı"]
+degerler: [Özgürlük, Vatanseverlik, Sorumluluk, Saygı, Sevgi, Dostluk]
 anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
 kazanim: [H.1.3.5, H.1.3.7, H.1.3.8, H.2.3.1, H.2.3.2, H.2.3.3, H.3.3.2, H.3.3.3, H.4.3.1, H.4.4.1]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]

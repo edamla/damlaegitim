@@ -18,10 +18,11 @@ paper: "Kitap Kağıdı"
 authors: ["Necati Akbaba"]
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: [Keşif Tutkusu,Dayanışma,Adalet ve İsyan,Tedbirin Gücü,Umut,Gerçeklik Algısı]
+tags: ["Keşif Tutkusu", Dayanışma, "Adalet ve İsyan", "Tedbirin Gücü", Umut, "Gerçeklik Algısı"]
+degerler: [Özgürlük, Sorumluluk, Adalet, Saygı, Sevgi, Vatanseverlik]
 anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
 kazanim: [H.1.3.1, H.1.3.2, H.1.3.4, H.1.3.5, H.1.3.8, H.1.3.9, H.4.2.1, H.4.2.2, H.4.2.4, H.4.3.1]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]

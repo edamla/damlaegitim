@@ -18,10 +18,11 @@ authors: ["Tuba Bozcan"]
 illustrators: ["İlknur Salman"]
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [1]
 tags: [Değerler, Masal, Eğitim, Alçakgönüllülük, Adalet, Çalışkanlık]
+degerler: [Çalışkanlık, Saygı, Adalet, Dostluk, Merhamet, Estetik]
 anatema: [Saygı, Sorumluluk, Dürüstlük, Sevgi, Dostluk, Merhamet, Mütevazılık, Merak, Odaklanma, Sistematiklik, Estetik, Bağımsızlık]
 kazanim: [H.1.1.1, H.1.2.1, H.1.3.2, H.1.4.2, H.2.1.2, H.4.1.1]
 beceriler: ["Konuşma Becerisi", "Yazma Becerisi", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Dinleme/İzleme Becerisi", "Okuma Becerisi", "Görsel Okuryazarlık", "İletişim Becerisi", "Özetleme Becerisi", "Karşılaştırma Becerisi", "Çıkarım Yapma Becerisi"]

@@ -17,10 +17,11 @@ authors: ["Nehir Aydın Gökduman"]
 illustrators: ["Ramila Aliyeva"]
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [1, 2]
 tags: [Empati, İyilik, Mutluluk, "Doğa Sevgisi", "Aile Bağları", Şefkat, Fedakârlık, Arkadaşlık, Yardımlaşma, "Anne Sevgisi", "Duyguları İfade Etmek", Komşuluk, Cesaret, Paylaşmak]
+degerler: [Sevgi, Dostluk, Saygı, Merhamet, "Aile Bütünlüğü", Estetik]
 anatema: [Sevgi, Dostluk, Empati, Cesaret, "Azim ve Kararlılık", "Kendine Güvenme (Öz Güven)", Duyarlılık, Merhamet, Estetik, Merak, "Aile Bütünlüğü", Saygı]
 kazanim: [H.1.1.1, H.1.1.2, H.1.2.1, H.1.2.3, H.1.3.2, H.1.4.2, H.2.1.2, H.3.4.1, H.4.1.1]
 beceriler: ["Gözlemleme Becerisi", "Bilgi Toplama Becerisi", "Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kendini Düzenleme (Öz Düzenleme Becerisi)"]

@@ -18,14 +18,15 @@ paper: "Kitap Kağıdı"
 authors: ["Necati Akbaba"]
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: [Bilimsel Yaklaşım,Adalet ve Güvenlik,Gizem ve Keşif,Hayatta Kalma,Takım Çalışması,Cesaret]
+tags: ["Bilimsel Yaklaşım", "Adalet ve Güvenlik", "Gizem ve Keşif", "Hayatta Kalma", "Takım Çalışması", Cesaret]
+degerler: [Sorumluluk, Özgürlük, Adalet, Vatanseverlik, Sevgi, Saygı]
 anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
 kazanim: [H.1.3.4, H.1.3.5, H.2.3.1, H.2.3.2, H.2.3.3, H.2.3.4, H.3.3.1, H.3.3.2, H.3.3.3, H.4.3.1]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
-unite: [ "DUYGULARIMI TANIYORUM"]
+unite: ["DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

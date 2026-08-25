@@ -18,10 +18,11 @@ authors: ["Sara Gürbüz Özeren"]
 illustrators: ["Ebru Diril"]
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [2]
 tags: [Doktor, pilot, aşçı, stilist, terzi, "ziraat mühendisi", yazar, mimar, asker, avukat, "bilim insanı", hemşire, hostes]
+degerler: [Sorumluluk, Saygı, Sevgi, Dostluk, Vatanseverlik, Özgürlük]
 anatema: [Sevgi, Saygı, Sorumluluk, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Odaklanma, "Gerçeği Arama"]
 kazanim: [H.1.1.1, H.1.1.2, H.1.2.1, H.1.2.3, H.1.3.2, H.1.4.2, H.2.1.2, H.3.4.1, H.4.1.1]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Kendini Düzenleme (Öz Düzenleme Becerisi)", "İletişim Becerisi"]

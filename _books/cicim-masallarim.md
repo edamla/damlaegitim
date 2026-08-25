@@ -19,10 +19,11 @@ authors: []
 illustrators: ["Alaaddin Barışkan"]
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [1]
 tags: [Doğruluk, Tevazu, Arkadaşlık, Sevgi, Saygı, "Sözünde Durmak", Hayvan]
+degerler: [Saygı, Sevgi, Dostluk, Estetik, Duyarlılık, Sorumluluk]
 anatema: [Saygı, Sevgi, Dostluk, Empati, Duyarlılık, Estetik, Merak, Bağımsızlık, Odaklanma, Sistematiklik, Sorumluluk, "Kendine Güvenme (Öz Güven)"]
 kazanim: [H.1.1.1, H.1.2.1, H.1.3.2, H.1.4.2, H.2.1.2, H.4.1.1]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Görsel Okuryazarlık", "İletişim Becerisi", "Karşılaştırma Becerisi", "Mevcut Bilgiye/Veriye Dayalı Tahmin Etme Becerisi", "Yapılandırma Becerisi", "Muhakeme (Akıl Yürütme) Becerisi"]

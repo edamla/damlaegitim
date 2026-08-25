@@ -18,10 +18,11 @@ authors: ["Fatma Çağdaş"]
 illustrators: ["Süleyman Özkonuk"]
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [3]
 tags: [Deyim, Öykü, Macera, Sevgi, Saygı, "Dayanış- Damla Yayınevi Damla Yayınevi 16"]
+degerler: [Saygı, Sevgi, Dostluk, Vatanseverlik, Sorumluluk, Dürüstlük]
 anatema: [Saygı, Sevgi, Merak, "Gerçeği Arama", Sorumluluk, Vatanseverlik, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Soru Sorma", Dostluk, Dürüstlük]
 kazanim: [H.1.1.2, H.1.2.1, H.1.2.3, H.1.2.4, H.2.1.2, H.3.1.1, H.3.4.1, H.4.1.1, H.4.1.2, H.4.1.3]
 beceriler: ["Okuma Becerisi", "Dinleme/İzleme Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Görsel Okuryazarlık", "İletişim Becerisi", "Çözümleme Becerisi", "Sınıflandırma Becerisi", "Bilgi Toplama Becerisi", "Karşılaştırma Becerisi"]

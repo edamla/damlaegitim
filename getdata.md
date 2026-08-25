@@ -2,7 +2,7 @@
 
 > **Dokümantasyon:** Kurulum [README.md](README.md), mimari [project.md](project.md), tasarım [design.md](design.md). **Bu dosya** TurkiyeAPI, MEB, OOKGM ve HDX kaynaklı JSON’ların tek takip belgesidir; script veya şema değişince burayı güncelleyin.
 
-Öğretmen talep formu (`/ogretmen`) ve okul meta verisi, sitede durağan JSON olarak tutulur. Üretim **beş Python 3 fetch script’i** + **bir sync script** ile yapılır (yalnızca standart kütüphane; `pip` yok). Fetch script’leri `install.sh` / `start.sh` içinde otomatik çalışmaz; [`scripts/sync_site_data.py`](scripts/sync_site_data.py) yalnızca `start.sh` hook’unda tetiklenir (`docs/data` → site dosyaları).
+Öğretmen talep formu (`/ogretmen`) ve okul meta verisi, sitede durağan JSON olarak tutulur. Üretim **altı Python 3 fetch script’i** + **bir sync script** ile yapılır (yalnızca standart kütüphane; `pip` yok). Fetch script’leri `install.sh` / `start.sh` içinde otomatik çalışmaz; [`scripts/sync_site_data.py`](scripts/sync_site_data.py) yalnızca `start.sh` hook’unda tetiklenir (`docs/data` → site dosyaları).
 
 | Script | Kanonik çıktı (`docs/data/`) | Site türetilmiş | Yaklaşık boyut | Tüketici |
 |--------|------------------------------|-----------------|----------------|----------|
@@ -33,6 +33,9 @@ flowchart LR
   mebSiteler["meb.k12.tr tema sayfaları"] --> detay
   geodata --> sync
   detay --> sync
+  api --> pop["docs/data/population.json"]
+  eoner["eoner/ADNKSVerileri GitHub"] --> pop
+  adres --> pop
   slim --> wizardIl["/ogretmen il-ilçe"]
   assets --> wizardOkul["/ogretmen okul adı"]
   geoOut --> okullarPage["/okullar harita"]
@@ -449,7 +452,8 @@ Wizard mimarisi: [project.md — Öğretmen talep formu](project.md#öğretmen-t
 4. `python scripts/fetch_ozel_okullar.py` — OOKGM özel okulları mevcut `docs/data/okullar.json` içine birleştirir; sync assets kopyasını yazar.
 5. `python scripts/fetch_okuldetay.py` — yeni veya eksik detay. Bitişte sync harita il parçalarını günceller. Önceki kamu adımı `web`/`kurum_kodu` değiştirdiyse `--force` veya ilgili `--kurum-kodu`.
 6. `python scripts/sync_site_data.py` — harita parçaları dahil tüm site türetilmiş dosyalar (`start.sh` bunu da çağırır).
-7. Bu belgedeki tarih/sayı notunu gerekirse güncelleyin; şema değiştiyse örnek JSON’u da.
+7. `python scripts/fetch_population.py` — isteğe bağlı; `turkiye_adres.json` önkoşul. Site sync’e dahil değil.
+8. Bu belgedeki tarih/sayı notunu gerekirse güncelleyin; şema değiştiyse örnek JSON’u da.
 
 Tek il denemesi çıktıyı kısmi yapmasın diye `fetch_okullar.py --il` üretim dosyasına yazılmamalıdır. `fetch_ozel_okullar.py --il` diğer illeri silmez ama testte yine `--output` kullanın. Detay için `--il` / `--limit` güvenlidir (resume diğer illeri silmez).
 
@@ -457,35 +461,68 @@ Tek il denemesi çıktıyı kısmi yapmasın diye `fetch_okullar.py --il` üreti
 
 ## 6. Nüfus verisi (`fetch_population.py`)
 
-İl ve ilçe düzeyinde toplam nüfus (TurkiyeAPI / TÜİK MEDAS) ile çocuk nüfusu 0–14 ve 0–17 (TÜİK ADNKS yaş tablosu, vendor CSV).
+İl ve ilçe düzeyinde **toplam nüfus** (TurkiyeAPI / TÜİK MEDAS) ile **çocuk nüfusu** 0–14 ve 0–17 (TÜİK ADNKS yaş tablosu).
 
 ### Kaynak
 
-| Katman | Kaynak | Erişim |
-|--------|--------|--------|
-| Toplam nüfus | [TurkiyeAPI v2](https://api.turkiyeapi.dev/v2) `population` | Otomatik (`provinces.json`, `districts.json`) |
-| Çocuk 0–14 / 0–17 | TÜİK ADNKS il/ilçe yaş-cinsiyet | Vendor CSV (`docs/data/reference/tuik/`) |
+| Katman | Kaynak | Otomatik? | Güncellik |
+|--------|--------|-----------|-----------|
+| Toplam nüfus (`nufus`) | [TurkiyeAPI v2](https://api.turkiyeapi.dev/v2) `population` — `provinces.json`, `districts.json` | Evet | Güncel (meta `datasetVersion`, `lastUpdated`) |
+| Çocuk 0–14 / 0–17 (`cocuk_*`) | TÜİK ADNKS il/ilçe yaş tablosu | Kısmen | Varsayılan: [eoner/ADNKSVerileri](https://github.com/eoner/ADNKSVerileri) **2014** |
+| Yeni ilçeler (vendor’da yok) | İl içi kardeş oran tahmini | Evet | Tahmini |
 
-TÜİK’in NIP / veriportali arayüzleri halka açık REST API sunmaz; çocuk nüfusu için tabloyu indirip vendor klasörüne koyun. Ayrıntı: [`docs/data/reference/tuik/README.md`](docs/data/reference/tuik/README.md).
+TÜİK’in NIP / veriportali / MEDAS arayüzleri halka açık REST API sunmaz; 2024 il/ilçe yaş-cinsiyet tablosu programatik indirilemez. Daha güncel çocuk verisi için vendor CSV’yi manuel yerleştirin — ayrıntı: [`docs/data/reference/tuik/README.md`](docs/data/reference/tuik/README.md).
 
 ### Önkoşul
 
 `docs/data/turkiye_adres.json` (il/ilçe kod eşlemesi).
 
-### Komut
+### Komut (üretim)
 
 ```bash
-# Üretim: güncel TÜİK vendor CSV ile
-python scripts/fetch_population.py --yil 2024
-
-# TurkiyeAPI snapshot (isteğe bağlı)
-python scripts/fetch_population.py --turkiyeapi-vendor docs/data/reference/turkiyeapi
-
-# Geliştirme: eoner 2014 bootstrap + yeni ilçe imputasyonu
-python scripts/fetch_population.py --bootstrap-vendor --vendor-yil 2014 --yil 2024 --impute-new-ilce
+python scripts/fetch_population.py
 ```
 
-`sync_site_data.py` çağrılmaz (geodata gibi).
+Bayrak gerekmez. Varsayılan akış:
+
+1. TurkiyeAPI’den güncel il/ilçe toplam nüfus
+2. `docs/data/reference/tuik/` altında hedef yıl vendor yoksa → eoner 2014 erkek+kadın bant CSV indirme
+3. Vendor yılı hedeften eskiyse veya vendor’da olmayan ilçe varsa → il içi kardeş oran ile `cocuk_*` tahmini
+4. `docs/data/population.json` yazımı; 81 il / 973 ilçe doğrulaması
+
+`sync_site_data.py` çağrılmaz; çıktı yalnızca kanonik `docs/data/population.json`.
+
+### CLI
+
+| Bayrak | Varsayılan | Açıklama |
+|--------|------------|----------|
+| `--yil` | `2024` | Meta `yil` (hedef ADNKS yılı) |
+| `--vendor-yil` | `--yil` ile aynı | Vendor dosya yılı; yoksa 2014’e düşer |
+| `--tuik-vendor` | `docs/data/reference/tuik` | Vendor CSV klasörü |
+| `--turkiyeapi-vendor` | *(canlı API)* | Snapshot: `docs/data/reference/turkiyeapi` |
+| `--no-auto-vendor` | kapalı | Vendor yoksa otomatik indirme yapma |
+| `--no-impute` | kapalı | Eksik/yeni ilçe tahminini kapat |
+| `--output` | `docs/data/population.json` | Çıktı yolu |
+
+İsteğe bağlı örnekler:
+
+```bash
+# Çevrimdışı / tekrarlanabilir toplam nüfus
+python scripts/fetch_population.py --turkiyeapi-vendor docs/data/reference/turkiyeapi
+
+# Manuel TÜİK vendor (adnks_il_ilce_yas_2024.csv) yerleştirildiyse
+python scripts/fetch_population.py --yil 2024 --no-impute
+```
+
+### Otomatik modda elde edilen veriler
+
+| Düzey | Alanlar | Not |
+|-------|---------|-----|
+| `turkiye` | `nufus`, `cocuk_0_14`, `cocuk_0_17` | Ülke toplamı |
+| `iller.{plaka}` | `kod`, `ad`, `nufus`, `cocuk_0_14`, `cocuk_0_17`, `ilceler` | 81 il |
+| `iller.*.ilceler.{id}` | `kod`, `ad`, `nufus`, `cocuk_0_14`, `cocuk_0_17` | 973 ilçe (TurkiyeAPI ilçe ID) |
+
+**Gelmeyenler:** tek tek yaş (`yas: 0,1,2…`), cinsiyet kırılımı, mahalle/köy, 2024 ADNKS çocuk oranları (vendor 2014 ise).
 
 ### Şema (`population.json`)
 
@@ -498,34 +535,38 @@ python scripts/fetch_population.py --bootstrap-vendor --vendor-yil 2014 --yil 20
     },
     "referans": "docs/data/turkiye_adres.json",
     "yil": 2024,
-    "vendor_yil": 2024,
-    "vendor_mode": "tidy",
+    "vendor_yil": 2014,
+    "vendor_mode": "band_pair",
     "datasetVersion": "2025",
-    "guncelleme": "YYYY-MM-DD",
+    "lastUpdated": "2026-05-21",
+    "guncelleme": "2026-08-22",
     "tanimlar": {
       "cocuk_0_14": "ADNKS yaş bağımlılık oranı çocuk tanımı (0–14)",
       "cocuk_0_17": "BM / İstatistiklerle Çocuk tanımı (0–17)"
-    }
+    },
+    "impute_edilen_ilceler": [
+      {"il_kod": 8, "ilce_kod": 2105, "ilce_ad": "Kemalpaşa", "yontem": "il_ici_kardes_oran"}
+    ]
   },
   "turkiye": {
-    "nufus": 85664944,
-    "cocuk_0_14": 17900000,
-    "cocuk_0_17": 24500000
+    "nufus": 86092168,
+    "cocuk_0_14": 18876256,
+    "cocuk_0_17": 22790506
   },
   "iller": {
     "34": {
       "kod": 34,
       "ad": "İstanbul",
-      "nufus": 15701702,
-      "cocuk_0_14": 3280000,
-      "cocuk_0_17": 4500000,
+      "nufus": 15754053,
+      "cocuk_0_14": 3284512,
+      "cocuk_0_17": 3946410,
       "ilceler": {
         "1103": {
           "kod": 1103,
           "ad": "Adalar",
           "nufus": 17489,
-          "cocuk_0_14": 2100,
-          "cocuk_0_17": 2800
+          "cocuk_0_14": 1964,
+          "cocuk_0_17": 2698
         }
       }
     }
@@ -534,8 +575,9 @@ python scripts/fetch_population.py --bootstrap-vendor --vendor-yil 2014 --yil 20
 ```
 
 - İl anahtarı: plaka string (`"34"`). İlçe anahtarı: TurkiyeAPI ID (`"1103"`).
-- `nufus` = TurkiyeAPI; `cocuk_*` = TÜİK vendor.
+- `nufus` = TurkiyeAPI; `cocuk_*` = TÜİK vendor (+ gerekirse impute).
 - Doğrulama: 81 il, 973 ilçe; her kayıtta `cocuk_0_14 <= cocuk_0_17 <= nufus`.
+- `vendor_yil` < `yil` ise çocuk oranları eski ADNKS yılına aittir; toplam nüfus güncel kalır.
 
 ---
 
@@ -550,6 +592,7 @@ python scripts/fetch_population.py --bootstrap-vendor --vendor-yil 2014 --yil 20
 - **Mahalle sınırı:** `turkiye_geodata.json` yalnızca ülke/il/ilçe içerir; mahalle poligonu ülke genelinde yok.
 - **OOKGM sayacı:** “N adet kurum bulundu” ile tablo satır sayısı uyuşmayabilir; tablo kaynak kabul edilir.
 - **Özel kurum kodu:** 2026’da okul bazında açık MEB/ÖSYM kod listesi yok; özel kayıtlarda `kurum_kodu` / `web` yazılmaz.
+- **Nüfus çocuk verisi:** Otomatik modda çocuk sayıları eoner 2014 ADNKS yaş yapısından türetilir; toplam nüfus TurkiyeAPI ile günceldir. TÜİK 2024 il/ilçe yaş tablosu API ile alınamaz; güncel üretim için vendor CSV gerekir (`docs/data/reference/tuik/`).
 
 ---
 
@@ -563,5 +606,5 @@ python scripts/fetch_ozel_okullar.py
 python scripts/sync_site_data.py
 python scripts/fetch_okuldetay.py --il 1 --limit 20
 python scripts/fetch_okuldetay.py
-python scripts/fetch_population.py --yil 2024
+python scripts/fetch_population.py
 ```

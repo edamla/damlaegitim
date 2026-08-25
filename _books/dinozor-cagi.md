@@ -18,10 +18,11 @@ authors: [Komisyon]
 illustrators: ["Amit Sharma"]
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [1]
 tags: [Tarih, Doğa, "Dinozor Çağı", Hikâye, Dostluk, Yardımlaşma, "Arkadaş Canlısı Olma", Kibarlık, Kabalık, "Cana yakınlık", "Değerler Eğitimi"]
+degerler: [Dostluk, Merhamet, Sorumluluk, Özgürlük, Saygı, Estetik]
 anatema: [Saygı, Sorumluluk, Dürüstlük, Sevgi, Dostluk, Empati, Duyarlılık, Estetik, Merak, Vatanseverlik, Özgürlük, Merhamet]
 kazanim: [H.1.1.1, H.1.2.1, H.1.3.2, H.1.4.2, H.2.1.2, H.4.1.1]
 beceriler: ["Konuşma Becerisi", "Yazma Becerisi", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Gözlemleme Becerisi", "Bilgi Toplama Becerisi", "Dinleme/İzleme Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kendini Düzenleme (Öz Düzenleme Becerisi)"]

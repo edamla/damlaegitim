@@ -18,10 +18,11 @@ paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 
 # Spesific Filterable Attributes
-# anatema: TYMM Eğilimler ve Değerler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri
+# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: [Coğrafi Keşifler, Tarih Bilinci, Cesaret, Sorumluluk, Doğa Olayları, Coğrafya, Bilimsel Merak]
+tags: ["Coğrafi Keşifler", "Tarih Bilinci", Cesaret, Sorumluluk, "Doğa Olayları", Coğrafya, "Bilimsel Merak"]
+degerler: [Sorumluluk, Özgürlük, Estetik, Vatanseverlik, Çalışkanlık, Saygı]
 anatema: [Cesaret, "Azim ve Kararlılık", "Kendine Güvenme (Öz Güven)", Çalışkanlık, Estetik, Özgürlük, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine İnanma (Öz Yeterlilik)", Girişkenlik]
 kazanim: [H.1.2.1, H.1.2.2, H.1.2.3, H.1.2.4, H.1.3.8, H.2.2.1, H.2.2.2, H.2.3.3, H.4.2.1, H.4.2.2]
 beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
