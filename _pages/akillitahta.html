@@ -1,0 +1,418 @@
+---
+title: "Akıllı Tahta İndirme"
+description: "Eğitim setleri için akıllı tahta içerik indirme bağlantıları. Sınıf filtresiyle Windows, Pardus ve macOS kurulum dosyalarına erişin."
+layout: page
+permalink: "/akillitahta"
+comments: false
+footer_show: true
+footer_order: 16
+show_title: false
+---
+
+<style>
+.akillitahta-page {
+  width: 100%;
+  max-width: 44rem;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+
+.akillitahta-page__header {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  padding: 0.25rem 0;
+}
+
+.akillitahta-page__header h1 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.akillitahta-page__header p {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+  margin: 0;
+  line-height: 1.45;
+}
+
+.akillitahta-page__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.akillitahta-page__filter {
+  border: 1px solid var(--color-border);
+  background: #fff;
+  color: var(--color-text);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.4rem 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+  font-family: var(--font-sans);
+}
+
+.akillitahta-page__filter:hover {
+  border-color: rgba(3, 168, 124, 0.45);
+  color: var(--color-primary-dark);
+}
+
+.akillitahta-page__filter.is-active {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+
+.akillitahta-page__search {
+  margin-bottom: 1.25rem;
+}
+
+.akillitahta-page__search-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  background: #fff;
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  outline: none;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.akillitahta-page__search-input:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(3, 168, 124, 0.15);
+}
+
+.akillitahta-page__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.akillitahta-page__card {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 0.875rem;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.akillitahta-page__card:hover {
+  border-color: rgba(3, 168, 124, 0.35);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.akillitahta-page__body {
+  display: flex;
+  align-items: stretch;
+  gap: 0.875rem;
+}
+
+.akillitahta-page__media {
+  flex: 0 0 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.375rem;
+  background: var(--color-surface);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  text-decoration: none;
+  min-height: 6.75rem;
+}
+
+.akillitahta-page__media:hover {
+  border-color: rgba(3, 168, 124, 0.4);
+}
+
+.akillitahta-page__thumb {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.akillitahta-page__thumb picture,
+.akillitahta-page__thumb img {
+  display: block;
+  width: 100%;
+  max-height: 6.25rem;
+  object-fit: contain;
+}
+
+.akillitahta-page__content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.akillitahta-page__badge {
+  display: inline-block;
+  align-self: flex-start;
+  background: rgba(3, 168, 124, 0.12);
+  color: var(--color-primary-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  line-height: 1.3;
+}
+
+.akillitahta-page__title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+  line-height: 1.35;
+  margin: 0;
+}
+
+.akillitahta-page__title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.akillitahta-page__title a:hover {
+  color: var(--color-primary);
+}
+
+.akillitahta-page__actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.375rem;
+  margin-top: 0.375rem;
+}
+
+.akillitahta-page__actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  font-weight: 600;
+  font-size: 0.78rem;
+  padding: 0.45rem 0.5rem;
+  border-radius: 8px;
+  white-space: nowrap;
+}
+
+.akillitahta-page__actions .btn i {
+  font-size: 0.85em;
+}
+
+.akillitahta-page__pending {
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  margin: 0.25rem 0 0;
+  line-height: 1.35;
+}
+
+.akillitahta-page__empty {
+  text-align: center;
+  color: var(--color-muted);
+  padding: 2rem 1rem;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 380px) {
+  .akillitahta-page__body {
+    gap: 0.625rem;
+  }
+
+  .akillitahta-page__media {
+    flex: 0 0 4.5rem;
+    min-height: 5.5rem;
+  }
+
+  .akillitahta-page__actions .btn span {
+    display: none;
+  }
+
+  .akillitahta-page__actions .btn {
+    padding: 0.5rem;
+  }
+}
+</style>
+
+<div class="akillitahta-page">
+  <div class="akillitahta-page__header">
+    <h1>Akıllı Tahta İçerik İndirme</h1>
+    <p>Eğitim setlerinin akıllı tahta uygulamasını indirin. Windows, Pardus veya macOS sürümünü seçin.</p>
+  </div>
+
+  <div class="akillitahta-page__filters" id="akillitahtaGradeFilters" role="group" aria-label="Sınıf filtresi">
+    <button type="button" class="akillitahta-page__filter is-active" data-grade="all">Tümü</button>
+    <button type="button" class="akillitahta-page__filter" data-grade="0">Okul Öncesi</button>
+    <button type="button" class="akillitahta-page__filter" data-grade="1">1. Sınıf</button>
+    <button type="button" class="akillitahta-page__filter" data-grade="2">2. Sınıf</button>
+    <button type="button" class="akillitahta-page__filter" data-grade="3">3. Sınıf</button>
+    <button type="button" class="akillitahta-page__filter" data-grade="4">4. Sınıf</button>
+    <button type="button" class="akillitahta-page__filter" data-grade="5">5. Sınıf</button>
+    <button type="button" class="akillitahta-page__filter" data-grade="6">6. Sınıf</button>
+    <button type="button" class="akillitahta-page__filter" data-grade="7">7. Sınıf</button>
+    <button type="button" class="akillitahta-page__filter" data-grade="8">8. Sınıf</button>
+  </div>
+
+  <div class="akillitahta-page__search">
+    <input
+      type="search"
+      id="akillitahtaSearch"
+      class="akillitahta-page__search-input"
+      placeholder="Ürün adı veya sınıf ara..."
+      autocomplete="off"
+    >
+  </div>
+
+  <div class="akillitahta-page__list" id="akillitahtaList">
+    {% assign education_books = site.books | where_exp: "b", "b.genre == 'education'" | sort: "title" %}
+
+    {% for book in education_books %}
+      {% capture grade_badge %}
+        {% if book.grades.size == 1 and book.grades[0] == 0 %}
+          Okul Öncesi
+        {% elsif book.grades.size == 1 %}
+          {{ book.grades[0] }}. Sınıf
+        {% else %}
+          {{ book.grades | join: "-" }}. Sınıf
+        {% endif %}
+      {% endcapture %}
+      {% assign grade_badge = grade_badge | strip %}
+
+      {% assign at_exe = '' %}
+      {% assign at_deb = '' %}
+      {% assign at_appimage = '' %}
+      {% assign at_dmg = '' %}
+      {% assign book_has_download = false %}
+      {% if book.akillitahta %}
+        {% assign at_exe = book.akillitahta.exe | default: '' | strip %}
+        {% assign at_deb = book.akillitahta.deb | default: '' | strip %}
+        {% assign at_appimage = book.akillitahta.appimage | default: '' | strip %}
+        {% assign at_dmg = book.akillitahta.dmg | default: '' | strip %}
+        {% if at_exe != '' or at_deb != '' or at_appimage != '' or at_dmg != '' %}
+          {% assign book_has_download = true %}
+        {% endif %}
+      {% endif %}
+
+      <article
+        class="akillitahta-page__card"
+        data-title="{{ book.title }}"
+        data-grade="{{ grade_badge }}"
+        data-grades="{{ book.grades | join: ',' }}"
+      >
+        <div class="akillitahta-page__body">
+          {% if book.ean %}
+          <a
+            class="akillitahta-page__media"
+            href="{{ site.baseurl }}{{ book.url }}"
+            aria-label="{{ book.title }} kitap sayfası"
+          >
+            <div class="akillitahta-page__thumb">
+              {% assign eanimage_class = "akillitahta-page__cover" %}
+              {% include eanimage.html book=book width="88" height="112" loading="lazy" decoding="async" fetchpriority="low" %}
+            </div>
+          </a>
+          {% endif %}
+          <div class="akillitahta-page__content">
+            <span class="akillitahta-page__badge">{{ grade_badge }}</span>
+            <h2 class="akillitahta-page__title">
+              <a href="{{ site.baseurl }}{{ book.url }}">{{ book.title }}</a>
+            </h2>
+            <div class="akillitahta-page__actions">
+              {% if book_has_download %}
+              <button
+                type="button"
+                class="btn btn-primary btn-sm js-book-action"
+                data-popup-type="akillitahta"
+                data-popup-title="Akıllı Tahta İndir"
+                data-at-exe="{{ at_exe }}"
+                data-at-deb="{{ at_deb }}"
+                data-at-appimage="{{ at_appimage }}"
+                data-at-dmg="{{ at_dmg }}"
+              >
+                <i class="fas fa-chalkboard" aria-hidden="true"></i>
+                <span>Akıllı Tahta İndir</span>
+              </button>
+              {% else %}
+              <p class="akillitahta-page__pending">İndirme bağlantısı yakında eklenecek.</p>
+              {% endif %}
+              <a
+                href="{{ site.baseurl }}{{ book.url }}"
+                class="btn btn-outline-primary btn-sm"
+              >
+                <i class="fas fa-book" aria-hidden="true"></i>
+                <span>Kitaba git</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </article>
+    {% endfor %}
+
+    <p class="akillitahta-page__empty" id="akillitahtaEmpty" hidden>Sonuç bulunamadı.</p>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var searchInput = document.getElementById('akillitahtaSearch');
+  var cards = document.querySelectorAll('.akillitahta-page__card');
+  var emptyMsg = document.getElementById('akillitahtaEmpty');
+  var filterButtons = document.querySelectorAll('.akillitahta-page__filter');
+  var activeGrade = 'all';
+
+  function normalizeTr(text) {
+    return (text || '').toLocaleLowerCase('tr-TR').trim();
+  }
+
+  function cardMatchesGrade(card) {
+    if (activeGrade === 'all') return true;
+    var grades = (card.getAttribute('data-grades') || '').split(',').map(function (g) { return g.trim(); });
+    return grades.indexOf(activeGrade) !== -1;
+  }
+
+  function applyFilters() {
+    var filter = normalizeTr(searchInput ? searchInput.value : '');
+    var visible = 0;
+
+    cards.forEach(function (card) {
+      var title = normalizeTr(card.getAttribute('data-title'));
+      var gradeLabel = normalizeTr(card.getAttribute('data-grade'));
+      var textMatch = !filter || title.indexOf(filter) !== -1 || gradeLabel.indexOf(filter) !== -1;
+      var gradeMatch = cardMatchesGrade(card);
+      var show = textMatch && gradeMatch;
+      card.style.display = show ? 'block' : 'none';
+      if (show) visible += 1;
+    });
+
+    if (emptyMsg) {
+      emptyMsg.hidden = visible > 0;
+    }
+  }
+
+  filterButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      activeGrade = button.getAttribute('data-grade') || 'all';
+      filterButtons.forEach(function (btn) {
+        btn.classList.toggle('is-active', btn === button);
+      });
+      applyFilters();
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', applyFilters);
+  }
+});
+</script>
+
+{% include popup.html %}
