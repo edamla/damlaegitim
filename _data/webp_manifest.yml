@@ -40,6 +40,7 @@ assets:
   - assets/images/ean/9786051743011.webp
   - assets/images/ean/9786051743035.webp
   - assets/images/ean/9786051743523.webp
+  - assets/images/ean/9786051744155.webp
   - assets/images/ean/9786051744179.webp
   - assets/images/ean/9786051744193.webp
   - assets/images/ean/9786051744551.webp
@@ -57,6 +58,7 @@ assets:
   - assets/images/ean/9786051748047.webp
   - assets/images/ean/9786051748122.webp
   - assets/images/ean/9786051748139.webp
+  - assets/images/ean/9786051748146.webp
   - assets/images/ean/9786051748207.webp
   - assets/images/ean/9786051748368.webp
   - assets/images/ean/9786051748610.webp
@@ -164,6 +166,8 @@ assets:
   - assets/images/ean/9786254113314.webp
   - assets/images/ean/9786254113321.webp
   - assets/images/ean/9786254113338.webp
+  - assets/images/ean/9786254113345.webp
+  - assets/images/ean/9786254113673.webp
   - assets/images/ean/9786254113826.webp
   - assets/images/ean/9786254114281.webp
   - assets/images/ean/9786254114540.webp
@@ -214,8 +218,10 @@ assets:
   - assets/images/ean/cilgin-problemler.webp
   - assets/images/ean/duygularimi-kesfediyorum.webp
   - assets/images/ean/edes2.webp
+  - assets/images/ean/gizemli-sis.webp
   - assets/images/ean/ilkokul-katalogu-2025.webp
   - assets/images/ean/ilkokulkatalogu-2027.webp
+  - assets/images/ean/kitabüs.webp
   - assets/images/ean/nisan-tatilim.webp
   - assets/images/ean/okul-oncesi-2025.webp
   - assets/images/ean/ortaokul-katalogu.webp
@@ -223,8 +229,12 @@ assets:
   - assets/images/ean/parag-dilbil2.webp
   - assets/images/ean/parag-dilbil3.webp
   - assets/images/ean/parag-dilbil4.webp
+  - assets/images/ean/penceredeki.webp
   - assets/images/ean/pudino-yaz-tatili.webp
+  - assets/images/ean/sevimli-cana.webp
   - assets/images/ean/tum-dersler-234.webp
+  - assets/images/ean/ucan-kitap.webp
+  - assets/images/ean/uzaydaki-muz.webp
   - assets/images/ean/yariyiltatilim-1234.webp
   - assets/images/ean/yariyiltatilkitabim.webp
   - assets/images/ean/yaz-tatil-1sınıf.webp
