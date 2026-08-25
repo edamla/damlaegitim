@@ -12,6 +12,7 @@ permalink: /llms/ana-sayfalar.txt
 - [Kataloglar]({{ site.url }}{{ site.baseurl }}/kataloglar): Damla Okul yayın katalogları (PDF/HTML).
 - [Kitapla Büyüyen Sınıflar]({{ site.url }}{{ site.baseurl }}/kitapla-buyuyen-siniflar): Sosyal sorumluluk projesi: sınıflara kitap ulaştırma.
 - [Ölçme ve Değerlendirme]({{ site.url }}{{ site.baseurl }}/olcme-degerlendirme): 4 Boyutlu Ölçme-Değerlendirme Sistemi ve Akıllı Optik Sistemi.
+- [Akıllı Tahta İndirme]({{ site.url }}{{ site.baseurl }}/akillitahta): Eğitim setleri akıllı tahta uygulama indirme; sınıf filtresi, Windows / Pardus / macOS.
 - [Öykümatikle Tanışın]({{ site.url }}{{ site.baseurl }}/oykumatikle-tanisin): Hikâye Ölçme ve Değerlendirme Sistemi (Öykümatik) tanıtımı; 4 katmanlı beceri temelli hikâye müfredatı ve interaktif demo.
 - [Maarif Modeli]({{ site.url }}{{ site.baseurl }}/maarif-modeli): Eğitim setlerinde kazanım tablosu açıklaması.
 - [TYMM Okuma Atölyesi]({{ site.url }}{{ site.baseurl }}/okumaatolyesi): Maarif Modeli Okuma Atölyesi tanımı, uygulama adımları; Damla okuma listeleri, Hikâye Müfredatı ve Öykümatik bağlantıları.
