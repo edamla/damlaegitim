@@ -30,6 +30,7 @@ layout: default
 
 <div class="container-lg pt-4 pb-4">
   {% include book-hero-meta.html book=book %}
+  {% include book-detail-actions.html book=book %}
   <article class="article-post maarif-content">
     {% include book-minimal-content.html %}
   </article>
@@ -46,4 +47,5 @@ layout: default
 </div>
 
 {% include related-books.html %}
+{% include popup.html %}
 {% include structured-data-book.html %}

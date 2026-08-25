@@ -127,6 +127,16 @@ def build_frontmatter(data)
     lines << "#{key}: #{yaml_value(data[key], key: key)}"
   end
 
+  if data['genre'] == 'education'
+    at = data['akillitahta']
+    at = { 'exe' => '', 'deb' => '', 'appimage' => '', 'dmg' => '' } unless at.is_a?(Hash)
+    lines << 'akillitahta:'
+    %w[exe deb appimage dmg].each do |key|
+      val = at[key].nil? ? '' : at[key].to_s
+      lines << "  #{key}: #{yaml_value(val, key: key)}"
+    end
+  end
+
   lines << ''
   lines << '# Social Media Attributes'
   if data['youtube'].nil? || data['youtube'].to_s.empty?

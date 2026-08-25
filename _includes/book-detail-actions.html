@@ -1,0 +1,50 @@
+{% assign ba = include.book | default: page %}
+{% assign book_youtube = ba.youtube | strip %}
+{% assign book_has_youtube = false %}
+{% if book_youtube != '' and book_youtube contains 'http' %}{% assign book_has_youtube = true %}{% endif %}
+{% assign book_has_buy = false %}
+{% if ba.damlaurl != nil and ba.damlaurl != '' %}{% assign book_has_buy = true %}{% endif %}
+{% assign book_has_preview = false %}
+{% if ba.preview_link != nil and ba.preview_link != '' %}{% assign book_has_preview = true %}{% endif %}
+{% assign book_has_exam = false %}
+{% if site.examlink and ba.examlink != nil and ba.examlink != '' %}{% assign book_has_exam = true %}{% endif %}
+{% assign book_has_info = false %}
+{% unless book_has_buy %}{% assign book_has_info = true %}{% endunless %}
+
+{% assign book_has_akillitahta = false %}
+{% assign ba_genre = ba.genre | strip %}
+{% if ba_genre == 'education' and ba.akillitahta %}
+  {% assign at_exe = ba.akillitahta.exe | default: '' | strip %}
+  {% assign at_deb = ba.akillitahta.deb | default: '' | strip %}
+  {% assign at_appimage = ba.akillitahta.appimage | default: '' | strip %}
+  {% assign at_dmg = ba.akillitahta.dmg | default: '' | strip %}
+  {% if at_exe != '' or at_deb != '' or at_appimage != '' or at_dmg != '' %}
+    {% assign book_has_akillitahta = true %}
+  {% endif %}
+{% endif %}
+
+{% if book_has_youtube or book_has_buy or book_has_info or book_has_preview or book_has_exam or book_has_akillitahta %}
+<div class="book-detail__actions d-flex flex-wrap gap-2">
+  {% if book_has_youtube %}
+  <a class="sscroll btn btn-outline-danger btn-sm js-book-action" target="_blank" href="{{ book_youtube }}" data-popup-type="youtube" data-popup-title="Tanıtım"><i class="fab fa-youtube fa-sm" aria-hidden="true"></i><span>Tanıtım</span></a>
+  {% endif %}
+
+  {% if book_has_buy %}
+  <a class="sscroll btn btn-outline-success btn-sm js-book-action" href="#" data-popup-type="iframe" data-popup-url="{{ ba.damlaurl }}" data-popup-title="Satın Al"><i class="fas fa-shopping-cart fa-sm" aria-hidden="true"></i><span>Satın Al</span></a>
+  {% elsif book_has_info %}
+  <a class="sscroll btn btn-outline-secondary btn-sm js-book-action" href="#" data-popup-type="info" data-popup-title="Ürün Tedarik Bilgisi"><i class="fas fa-info-circle fa-sm" aria-hidden="true"></i><span>Bilgi</span></a>
+  {% endif %}
+
+  {% if book_has_preview %}
+  <a class="sscroll btn btn-outline-secondary btn-sm js-book-action" target="_blank" href="{{ ba.preview_link }}" data-popup-type="iframe" data-popup-title="İncele"><i class="fas fa-search fa-sm" aria-hidden="true"></i><span>İncele</span></a>
+  {% endif %}
+
+  {% if book_has_exam %}
+  <a class="sscroll btn btn-outline-danger btn-sm js-book-action" target="_blank" href="{{ ba.examlink }}" data-popup-type="iframe" data-popup-title="HDS"><i class="fas fa-pen fa-sm" aria-hidden="true"></i><span>HDS</span></a>
+  {% endif %}
+
+  {% if book_has_akillitahta %}
+  <a class="sscroll btn btn-outline-primary btn-sm js-book-action" href="#" data-popup-type="akillitahta" data-popup-title="Akıllı Tahta İndir" data-at-exe="{{ at_exe }}" data-at-deb="{{ at_deb }}" data-at-appimage="{{ at_appimage }}" data-at-dmg="{{ at_dmg }}"><i class="fas fa-chalkboard fa-sm" aria-hidden="true"></i><span>Akıllı Tahta İndir</span></a>
+  {% endif %}
+</div>
+{% endif %}

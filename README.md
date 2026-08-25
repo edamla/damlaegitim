@@ -294,9 +294,20 @@ unite: ["Oyun Dünyası", "Değerlerimizle Varız"]
 Ürün açıklaması buraya...
 ```
 
+Eğitim setlerinde (`genre: education`) `akillitahta` bloğu ekleyin; en az bir URL doluysa **Akıllı Tahta İndir** butonu görünür:
+
+```yaml
+genre: education
+akillitahta:
+  exe: ""
+  deb: ""
+  appimage: ""
+  dmg: ""
+```
+
 Hikaye kitaplarında `degerler`, `anatema`, `beceriler`, `kazanim` ve `tags` [`book-hero-meta.html`](_includes/book-hero-meta.html) ile başlık altında gösterilir (`unite` story kitaplarda UI'da gösterilmez). Eğitim setlerinde Maarif uyum tablosu gövdede markdown tablo olarak yer alır.
 
-`tags` serbest etiket (`empati`, `Dedektiflik`). `kazanim` yalnızca Öykümatik kod dizisi (`H.1.2.1`); sitede kod olarak gösterilir. `preview_link` doluysa İncele butonu görünür. `examlink` doluysa ve `_config.yml` içinde `examlink: true` ise HDS butonu görünür. `damlaurl` doluysa **Satın Al**, boşsa **Bilgi** (tedarik popup).
+`tags` serbest etiket (`empati`, `Dedektiflik`). `kazanim` yalnızca Öykümatik kod dizisi (`H.1.2.1`); sitede kod olarak gösterilir. `preview_link` doluysa İncele butonu görünür. `examlink` doluysa ve `_config.yml` içinde `examlink: true` ise HDS butonu görünür. `damlaurl` doluysa **Satın Al**, boşsa **Bilgi** (tedarik popup). `genre: education` kitaplarda `akillitahta` (`exe`, `deb`, `appimage`, `dmg`) en az bir URL doluysa **Akıllı Tahta İndir** popup’u açılır; popup’ta Windows / Pardus / macOS etiketleri gösterilir.
 
 1. Kapak görselini `assets/images/ean/{ean}.jpg` olarak ekleyin (jpg/png optimize edin; `.webp` `sh start.sh` ile otomatik üretilir)
 2. `sh scripts/check_images.sh` ile boyut kontrolü yapın (veya `sh start.sh` — hook olarak çalışır)
@@ -477,7 +488,7 @@ Navbar’daki arama kutusu veya `Ctrl+K` / `⌘K` ile kitap araması açılır. 
 
 ## Kitap Detay Popup’ları
 
-Tanıtım (YouTube), Satın Al / Bilgi, İncele ve HDS butonları `[_includes/popup.html](_includes/popup.html)` ile açılır. `damlaurl` doluysa **Satın Al** ürün sayfasını iframe’de açar; boşsa **Bilgi** tedarik popup’unu gösterir. HDS yalnızca `_config.yml` içinde `examlink: true` ve kitap `examlink` doluysa görünür. İncele yalnızca `preview_link` dolu kitaplarda görünür. Tedarik popup’u iPhone koyu temada okunabilir metin renklerine sahiptir.
+Tanıtım (YouTube), Satın Al / Bilgi, İncele, HDS ve Akıllı Tahta İndir butonları `[_includes/popup.html](_includes/popup.html)` ile açılır (`[_includes/book-detail-actions.html](_includes/book-detail-actions.html)`). `damlaurl` doluysa **Satın Al** ürün sayfasını iframe’de açar; boşsa **Bilgi** tedarik popup’unu gösterir. HDS yalnızca `_config.yml` içinde `examlink: true` ve kitap `examlink` doluysa görünür. İncele yalnızca `preview_link` dolu kitaplarda görünür. **Akıllı Tahta İndir** yalnızca `genre: education` ve `akillitahta` altında en az bir dolu URL (`exe`, `deb`, `appimage`, `dmg`) varsa görünür. Tedarik popup’u iPhone koyu temada okunabilir metin renklerine sahiptir.
 
 ## Footer
 

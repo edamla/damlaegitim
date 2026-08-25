@@ -461,7 +461,7 @@ Eğitim setlerinde (`genre: education`) müfredat kanıtı gövdedeki **Maarif u
 
 ### Aksiyon butonları ve popup
 
-Tanıtım (YouTube), Satın Al / Bilgi, İncele ve HDS butonları `.js-book-action` ile [`popup.html`](_includes/popup.html) üzerinden açılır:
+Tanıtım (YouTube), Satın Al / Bilgi, İncele, HDS ve Akıllı Tahta İndir butonları `.js-book-action` ile [`popup.html`](_includes/popup.html) üzerinden açılır ([`book-detail-actions.html`](_includes/book-detail-actions.html)):
 
 | Buton | Koşul | Davranış |
 |-------|-------|----------|
@@ -470,14 +470,16 @@ Tanıtım (YouTube), Satın Al / Bilgi, İncele ve HDS butonları `.js-book-acti
 | Bilgi | `damlaurl` boş | Tedarik bilgisi modal |
 | İncele | `preview_link` dolu | iframe popup (ön izleme) |
 | HDS | `examlink` dolu | iframe popup (PDF) |
+| Akıllı Tahta İndir | `genre: education` + `akillitahta` en az bir URL dolu | Platform seçim popup (indirme) |
 
 | `data-popup-type` | Davranış |
 |-------------------|----------|
 | `info` | Tedarik bilgisi modal (mobil + masaüstü) |
 | `iframe` | Tam ekran iframe (Satın Al, İncele, HDS) |
 | `youtube` | YouTube embed |
+| `akillitahta` | Platform seçimi: `exe` → Windows (.exe), `deb` → Pardus (.deb), `appimage` → Pardus (.AppImage), `dmg` → macOS (.dmg) |
 
-Masaüstünde iframe/youtube popup; mobilde yeni sekme. `info` popup’u `prefers-color-scheme: dark` destekler.
+Masaüstünde iframe/youtube popup; mobilde yeni sekme. `info` ve `akillitahta` her zaman popup. `info` popup’u `prefers-color-scheme: dark` destekler.
 
 ---
 
