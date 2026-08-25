@@ -2,15 +2,20 @@
 # frozen_string_literal: true
 
 require 'csv'
+require 'date'
 require 'json'
 require 'pathname'
 require_relative 'curriculum_lib'
 
 ROOT = CurriculumLib::ROOT
+DOCS_TYMM = ROOT.join('docs', 'data', 'tymm')
+INPUT_ILKOKUL = DOCS_TYMM.join('ilkokul-turkce', 'api-response.json')
+INPUT_ORTAOKUL = DOCS_TYMM.join('ortaokul-turkce', 'api-response.json')
+INPUT_CERCEVELER = DOCS_TYMM.join('cerceveler.json')
 OUTPUT_JSON = ROOT.join('_data', 'tymm.json')
-OUTPUT_CSV = ROOT.join('docs', 'tymmreferans.csv')
-OUTPUT_CSV_ILKOKUL = ROOT.join('docs', 'tymm-ilkokul-referans.csv')
-OUTPUT_CSV_ORTAOKUL = ROOT.join('docs', 'tymm-ortaokul-referans.csv')
+OUTPUT_CSV = DOCS_TYMM.join('tymmreferans.csv')
+OUTPUT_CSV_ILKOKUL = DOCS_TYMM.join('tymm-ilkokul-referans.csv')
+OUTPUT_CSV_ORTAOKUL = DOCS_TYMM.join('tymm-ortaokul-referans.csv')
 
 SKIP_POINT_LABELS = [
   /Öğrenme Kanıtları/i
@@ -19,12 +24,6 @@ SKIP_POINT_LABELS = [
 CURRICULUM_POINT_LABELS = (
   [CurriculumLib::DEGERLER_LABEL, CurriculumLib::EGILIMLER_LABEL] + CurriculumLib::BECERI_LABELS
 ).freeze
-
-COMPONENT_TYPES = {
-  'degerler' => 'deger',
-  'egilimler' => 'egilim',
-  'beceriler' => 'beceri'
-}.freeze
 
 CSV_HEADERS = %w[kademe sinif unite bilesen etiket].freeze
 
@@ -118,11 +117,36 @@ def write_csv(path, rows)
   end
 end
 
+def load_cerceveler(path)
+  raise "Çerçeve kaynağı bulunamadı: #{path}" unless path.file?
+
+  data = JSON.parse(path.read)
+  %w[degerler beceriler egilimler].each do |section|
+    raise "cerceveler.json eksik bölüm: #{section}" unless data[section]
+  end
+
+  data.slice('degerler', 'beceriler', 'egilimler')
+end
+
+def build_meta(grades)
+  {
+    'kaynak_mufredat' => 'https://tymm.meb.gov.tr/ogretim-programlari/ders/',
+    'kaynak_degerler' => 'https://tymm.meb.gov.tr/beceriler/erdem-deger-eylem-cercevesi',
+    'kaynak_egilimler' => 'https://tymm.meb.gov.tr/beceriler/egilimler',
+    'kaynak_cerceveler' => 'docs/data/tymm/cerceveler.json',
+    'referans_ham' => 'docs/data/tymm/',
+    'guncelleme' => Date.today.iso8601,
+    'ders' => 'turkce',
+    'siniflar' => grades.keys.sort_by(&:to_i)
+  }
+end
+
 def main
   charts_by_grade = {}
 
-  [ROOT.join('docs', 'tymm-ilkokul-turkce', 'api-response.json'),
-   ROOT.join('docs', 'tymm-ortaokul-turkce', 'api-response.json')].each do |path|
+  [INPUT_ILKOKUL, INPUT_ORTAOKUL].each do |path|
+    raise "Dosya bulunamadı: #{path}" unless path.file?
+
     data = JSON.parse(path.read)
     data['stackedChart'].each do |chart|
       grade = CurriculumLib.grade_from_chart_name(chart['name'])
@@ -132,6 +156,8 @@ def main
     end
   end
 
+  raise "Çerçeve kaynağı bulunamadı: #{INPUT_CERCEVELER}" unless INPUT_CERCEVELER.file?
+
   grades = {}
   ('1'..'8').each do |g|
     next unless charts_by_grade[g]
@@ -139,15 +165,24 @@ def main
     grades[g] = build_grade_data(charts_by_grade[g])
   end
 
+  payload = {
+    'meta' => build_meta(grades),
+    'cerceveler' => load_cerceveler(INPUT_CERCEVELER),
+    'grades' => grades
+  }
+
   OUTPUT_JSON.dirname.mkpath
-  OUTPUT_JSON.write(JSON.pretty_generate({ 'grades' => grades }) + "\n")
+  OUTPUT_JSON.write(JSON.pretty_generate(payload) + "\n")
 
   csv_rows = build_csv_rows_from_charts(charts_by_grade)
   write_csv(OUTPUT_CSV, csv_rows)
   write_csv(OUTPUT_CSV_ILKOKUL, csv_rows.select { |row| row[0] == 'İlkokul' })
   write_csv(OUTPUT_CSV_ORTAOKUL, csv_rows.select { |row| row[0] == 'Ortaokul' })
 
-  puts "Yazıldı: #{OUTPUT_JSON} (#{grades.size} sınıf)"
+  deger_count = payload.dig('cerceveler', 'degerler', 'degerler')&.size || 0
+  beceri_count = payload.dig('cerceveler', 'beceriler')&.size || 0
+  egilim_grup = payload.dig('cerceveler', 'egilimler', 'gruplar')&.size || 0
+  puts "Yazıldı: #{OUTPUT_JSON} (#{grades.size} sınıf, cerceveler: #{deger_count} değer, #{beceri_count} beceri çerçevesi, #{egilim_grup} eğilim grubu)"
   puts "Yazıldı: #{OUTPUT_CSV} (#{csv_rows.size} satır)"
   puts "Yazıldı: #{OUTPUT_CSV_ILKOKUL} (#{csv_rows.count { |r| r[0] == 'İlkokul' }} satır)"
   puts "Yazıldı: #{OUTPUT_CSV_ORTAOKUL} (#{csv_rows.count { |r| r[0] == 'Ortaokul' }} satır)"

@@ -18,15 +18,16 @@ paper: "Kitap Kağıdı"
 authors: ["Kemalettin Tuğcu"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
 tags: ["Ön Yargıların Yıkılması", "Dürüstlük ve Onurlu Yaşam", "Alın Teri ve Dürüst Kazanç", "Gerçek Sevgi ve Vefa", "Eğitimin Önemi", "Vicdan Muhasebesi"]
-degerler: [Sevgi, Vatanseverlik, Saygı, Özgürlük, Dürüstlük, Sorumluluk]
-anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
+degerler: [Sorumluluk, Saygı, Sevgi, Dürüstlük, Özgürlük, Vatanseverlik]
+anatema: ["Merak ve Keşif", "Kültür ve Tarih", "Toplum ve Birlikte Yaşam"]
+egilimler: [Bağımsızlık, Odaklanma, Sorumluluk, Merak, Girişkenlik, "Kendine Güvenme (Öz Güven)"]
 kazanim: [H.1.2.2, H.1.2.3, H.1.2.4, H.2.2.1, H.2.2.2, H.3.2.1, H.4.2.1, H.4.2.2, H.4.2.3, H.4.2.4]
-beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
-unite: ["DUYGULARIMI TANIYORUM"]
+beceriler: ["Kendini Tanıma (Öz Farkındalık Becerisi)", "İletişim Becerisi", "Kendini Düzenleme (Öz Düzenleme Becerisi)", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "Yansıtma Becerisi", "Bilgi İşlemsel Düşünme Becerisi"]
+unite: ["BAĞIMSIZLIK YOLU", "VATAN SEVGİSİ", "HAK VE SORUMLULUKLAR", "SANAT VE ESTETİK"]
 
 # Social Media Attributes
 youtube:

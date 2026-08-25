@@ -19,15 +19,16 @@ authors: ["Nur Dombaycı"]
 illustrators: ["Nur Dombaycı"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3, 4]
 tags: [dostluk, iletişim, "teknoloji bağımlılığı", "birlikte hareket etme ve iş birliği", "hayvan sevgisi", "toplumsal paylaşım", farkındalık, mücadele, götürmüştü, "Kimileri gelirken şeyler de oluyordu", "O artık bir evdi! kimileri gidiyor", "günler eskiyerek geçiyordu", "Nasıl mı? Şoför koltuğunda birkaç ay önce Geçmişte yaşadığı güzel günleri", "teybinden yük- tanıştığı tekir kedi yaşıyordu da ondan", "selen neşeli", "şen şakrak müzikleri", "teybinden yük- tanıştığı tekir kedi yaşıyordu da ondan. selen neşeli", "anne lütfen bu kedilere de yer yapalım. Burada yaşamaya devam etsinler", "dedi. Bir saat sonra hepsi yeniden geldi. Elleri kolları kovalarla", torbalarla, "kutularla doluydu.Neler olup Anneleri hâlinden memnun bir şekilde", "kedileriniz bile oldu", "oynayıp mikrop kapacaklardı"]
-degerler: [Dostluk, Sevgi, Merhamet, Sorumluluk, Saygı, Estetik]
-anatema: [Sevgi, Dostluk, Empati, Duyarlılık, Estetik, Merak, Merhamet, Sorumluluk, Dürüstlük, Özgürlük, Saygı, Bağımsızlık]
+degerler: [Dostluk, Sorumluluk, Saygı, Dürüstlük, Özgürlük, Sevgi]
+anatema: [Empati, Macera, İletişim]
+egilimler: [Merak, Empati, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Gerçeği Arama"]
 kazanim: [H.1.2.1, H.1.2.3, H.1.2.4, H.2.2.1, H.2.2.2, H.2.3.1, H.3.2.1, H.4.1.1, H.4.2.1, H.4.2.2]
-beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "İletişim Becerisi", "Sosyal Farkındalık Becerisi", "Sınıflandırma Becerisi", "Bilgi Toplama Becerisi"]
-unite: ["DEMOKRATİK YAŞAM", "Mi̇llî MÜCADELE VE ATATÜRK", "BİLİM VE TEKNOLOJİ", "DOĞA VE İNSAN"]
+beceriler: ["Bilgi İşlemsel Düşünme Becerisi", "İletişim Becerisi", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Sosyal Farkındalık Becerisi", "Gözleme Dayalı Tahmin Etme", "Gözleme Dayalı Tahmin Etme Becerisi"]
+unite: ["Bilim Ve Teknoloji", "Doğa Ve İnsan", "Bilim Yolculuğu", "Demokratik Yaşam"]
 
 # Social Media Attributes
 youtube:

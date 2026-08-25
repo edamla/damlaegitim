@@ -2,11 +2,10 @@
 layout: book
 title:  "Dedektif Kuruntusu-3"
 categories: [Ortaokul]
-tags: []
 
 # Standart Book Attributes
 ean: 9786051740317
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: "112 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
@@ -18,10 +17,16 @@ paper: "Kitap Kağıdı"
 authors: ["Esra Avgören"]
 
 # Spesific Filterable Attributes
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-kavramlar: ["Gerçekler mi daha tehlikelidir yoksa zihnimizin bize oynadığı oyunlar mı"]
-anatemalar: ["Gerçeklik ve Yanılsama", "Güven ve İhanet", "Geçmişle Yüzleşme", "Aşırı Şüphe", "Yalnızlık", "Takıntı"]
+tags: []
+degerler: [Sorumluluk, Sevgi, Saygı, Özgürlük, Vatanseverlik, Merhamet]
+anatema: ["Okul ve Eğitim", "Okuma ve Öğrenme", "Yolculuk ve Gezi"]
+egilimler: [Merak, Muhakeme, "Soru Sorma", Sistematiklik, "Kendine Güvenme (Öz Güven)", Girişkenlik]
+kazanim: []
+beceriler: ["İletişim Becerisi", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Bilgi İşlemsel Düşünme Becerisi", "İş Birliği Becerisi", "Sosyal Farkındalık Becerisi", "Kendine Uyarlama (Öz Yansıtma Becerisi)"]
+unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

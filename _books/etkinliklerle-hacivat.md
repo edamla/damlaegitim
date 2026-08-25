@@ -18,15 +18,16 @@ authors: ["Sara Gürbüz Özeren"]
 illustrators: ["Melike Tan"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1]
 tags: ["Gölge Oyunu", Karagöz, Hacivat, Değerler, Okuma, Yazma, Mizah, "Hayvan Sevgisi", Arkadaşlık, Dostluk, Yardımlaşma, Sevgi, Saygı, "Misafire Hürmet", "Çizgi Film"]
-degerler: [Sevgi, Dostluk, Saygı, Merhamet, Estetik, Duyarlılık]
-anatema: [Saygı, Sorumluluk, Dürüstlük, Sevgi, Dostluk, Empati, Duyarlılık, Estetik, Merak, Odaklanma, Merhamet, Sistematiklik]
+degerler: [Saygı, Sevgi, Dostluk, Sorumluluk, Estetik, Merhamet]
+anatema: [Değerler, Arkadaşlık, "Okuma ve Öğrenme"]
+egilimler: [Merak, Odaklanma, Sistematiklik, Empati, Bağımsızlık, Muhakeme]
 kazanim: [H.1.1.1, H.1.2.1, H.1.3.2, H.1.4.2, H.2.1.2, H.4.1.1]
-beceriler: ["Okuma Becerisi", "Dinleme/İzleme Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Görsel Okuryazarlık", "İletişim Becerisi", "Karşılaştırma Becerisi", "Mevcut Bilgiye/Veriye Dayalı Tahmin Etme Becerisi", "Muhakeme (Akıl Yürütme) Becerisi"]
-unite: ["YOL ARKADAŞIMIZ KİTAPLAR", "GÜZEL DAVRANIŞLARIMIZ", "ÇEVREMİZDEKİ YAŞAM", "ATALARIMIZIN İZLERİ"]
+beceriler: ["İletişim Becerisi", Yazma, Okuma, "Müziksel Yazma Becerisi", "Bilgi İşlemsel Düşünme Becerisi", "Gözleme Dayalı Tahmin Etme"]
+unite: ["Güzel Davranışlarımız", "Yol Arkadaşımız Kitaplar", "Çevremizdeki Yaşam", "Atalarımızın İzleri"]
 
 # Social Media Attributes
 youtube:

@@ -18,15 +18,16 @@ authors: ["Sara Gürbüz Özeren"]
 illustrators: ["Erhan Acar"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [4]
 tags: ["Başarının Anahtarı", "Hayal Kurma", Engelli, Yaşam, Empati, İnanç]
-degerler: [Saygı, Merhamet, Çalışkanlık, Vatanseverlik, "Sağlıklı Yaşam", Duyarlılık]
-anatema: [Empati, Duyarlılık, Merhamet, Çalışkanlık, Saygı, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine İnanma (Öz Yeterlilik)", "Kendine Güvenme (Öz Güven)", Girişkenlik]
+degerler: [Sorumluluk, "Sağlıklı Yaşam", Saygı, Çalışkanlık, Estetik, Dostluk]
+anatema: [Empati, "Sürdürülebilir Yaşam", "Güvenli Yaşam"]
+egilimler: [Empati, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Kendine İnanma (Öz Yeterlilik)"]
 kazanim: [H.1.2.1, H.1.2.3, H.1.2.4, H.1.4.1, H.1.4.5, H.2.2.1, H.2.2.2, H.3.2.1, H.4.2.1, H.4.2.2]
-beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Görsel Okuryazarlık", "İletişim Becerisi", "Sosyal Farkındalık Becerisi", "Özetleme Becerisi", "Çözümleme Becerisi"]
-unite: ["DOĞA VE İNSAN", "KENDİMİZİ GELİŞTİRİYORUZ", KÜTÜPHANEMİZ, "Mi̇llî MÜCADELE VE ATATÜRK"]
+beceriler: ["Bilgi İşlemsel Düşünme Becerisi", "İletişim Becerisi", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "İletişim Kurma ve Paylaşma", "İş Birliği Becerisi"]
+unite: ["Doğa Ve İnsan", "Demokratik Yaşam"]
 
 # Social Media Attributes
 youtube:

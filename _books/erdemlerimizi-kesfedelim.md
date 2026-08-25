@@ -18,15 +18,16 @@ authors: ["Sara Gürbüz Özeren"]
 illustrators: ["Sernur Işık"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [2]
 tags: ["Doğru Karar Vermek", "Haksızlık Yapmamak", "Yalan Söylememek", "Yeteneklerini Keşfetmek", "Fedakâr Olmak", "Vefalı Olmak", Sorumluluk, "Söz Dinlemek", Paylaşmak, "Hasta Ziyareti", Cesaret, Yardımseverlik, Fedakârlık, Dürüstlük, Kanaatkârlık, "Doğayı Korumak"]
-degerler: [Sorumluluk, Yardımseverlik, Estetik, Merhamet, Dürüstlük, Dostluk]
-anatema: [Cesaret, "Azim ve Kararlılık", "Kendine Güvenme (Öz Güven)", Duyarlılık, Estetik, Merak, Merhamet, Dostluk, Sorumluluk, Saygı, Bağımsızlık, Oyunseverlik]
+degerler: [Saygı, Sorumluluk, Yardımseverlik, Dürüstlük, Duyarlılık, Estetik]
+anatema: [Doğa, "Karar Verme", "Cesaret ve Korkular"]
+egilimler: [Sorumluluk, Merak, "Kendine Güvenme (Öz Güven)", Bağımsızlık, Oyunseverlik, Empati]
 kazanim: [H.1.1.1, H.1.1.2, H.1.2.1, H.1.2.3, H.1.3.2, H.1.4.2, H.2.1.2, H.3.4.1, H.4.1.1]
-beceriler: ["Gözlemleme Becerisi", "Bilgi Toplama Becerisi", "Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kendini Düzenleme (Öz Düzenleme Becerisi)"]
-unite: ["DOĞADA NELER Oluyor?", "DEĞERLERİMİZLE VARIZ", "YETENEKLERİMİZİ TANIYORUZ", "ATATÜRK VE ÇOCUK"]
+beceriler: ["İletişim Becerisi", "Bilgi İşlemsel Düşünme Becerisi", "Kendini Tanıma (Öz Farkındalık Becerisi)", "İş Birliği Becerisi", "Kendini Düzenleme (Öz Düzenleme Becerisi)", "Bilgi Toplama Becerisi"]
+unite: ["Doğada Neler Oluyor?", "Yeteneklerimizi Tanıyoruz", "Atatürk Ve Çocuk"]
 
 # Social Media Attributes
 youtube:

@@ -18,15 +18,16 @@ authors: ["Fatma Çağdaş"]
 illustrators: ["Süleyman Özkonuk"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3]
 tags: [Deyim, Öykü, Macera, Sevgi, Saygı, "Dayanış- Damla Yayınevi Damla Yayınevi 16"]
-degerler: [Saygı, Sevgi, Dostluk, Vatanseverlik, Sorumluluk, Dürüstlük]
-anatema: [Saygı, Sevgi, Merak, "Gerçeği Arama", Sorumluluk, Vatanseverlik, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Soru Sorma", Dostluk, Dürüstlük]
+degerler: [Saygı, Sevgi, Vatanseverlik, Sorumluluk, Özgürlük, Dostluk]
+anatema: [Macera, Gizem, "Okuma ve Öğrenme"]
+egilimler: [Merak, Bağımsızlık, Girişkenlik, "Kendine Güvenme (Öz Güven)", "Soru Sorma", Sorumluluk]
 kazanim: [H.1.1.2, H.1.2.1, H.1.2.3, H.1.2.4, H.2.1.2, H.3.1.1, H.3.4.1, H.4.1.1, H.4.1.2, H.4.1.3]
-beceriler: ["Okuma Becerisi", "Dinleme/İzleme Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Görsel Okuryazarlık", "İletişim Becerisi", "Çözümleme Becerisi", "Sınıflandırma Becerisi", "Bilgi Toplama Becerisi", "Karşılaştırma Becerisi"]
-unite: ["BİLGİ HAZİNEMİZ", "BİLİM YOLCULUĞU", "DEĞERLERİMİZLE YAŞIYORUZ", "DOĞAYI TANIYORUZ"]
+beceriler: ["Bilgi İşlemsel Düşünme Becerisi", "İletişim Becerisi", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "Yansıtma Becerisi", "İletişim Kurma ve Paylaşma", "İş Birliği Becerisi"]
+unite: ["Atatürk Ve Kahramanlarımız", "Bilgi Hazinemiz"]
 
 # Social Media Attributes
 youtube:

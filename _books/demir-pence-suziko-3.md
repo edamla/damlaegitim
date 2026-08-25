@@ -18,15 +18,16 @@ paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
 tags: ["Yapay Zekâ", Vatanseverlik, "Tarih Bilinci", Dayanışma, Macera, "Kültürel Keşif"]
-degerler: [Vatanseverlik, Özgürlük, Sorumluluk, Saygı, Sevgi, Dostluk]
-anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
+degerler: [Vatanseverlik, Saygı, Sorumluluk, Özgürlük, Dostluk, Dürüstlük]
+anatema: [Dayanışma, Macera, Gizem]
+egilimler: [Merak, Bağımsızlık, Muhakeme, Sorumluluk, "Soru Sorma", "Gerçeği Arama"]
 kazanim: [H.2.2.1, H.2.2.2, H.2.3.1, H.2.3.2, H.2.3.3, H.2.3.4, H.3.2.1, H.3.3.1, H.3.3.2, H.3.3.3]
-beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
-unite: ["DUYGULARIMI TANIYORUM"]
+beceriler: ["Kendini Tanıma (Öz Farkındalık Becerisi)", "İletişim Becerisi", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "Kendini Düzenleme (Öz Düzenleme Becerisi)", "Yansıtma Becerisi", "İş Birliği Becerisi"]
+unite: ["BAĞIMSIZLIK YOLU", "FARKLI DÜNYALAR", "AKADEMİK DÜŞÜNME DÜNYASI", "OYUN DÜNYASI"]
 
 # Social Media Attributes
 youtube:

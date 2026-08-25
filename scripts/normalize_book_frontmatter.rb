@@ -12,7 +12,7 @@ HEADER_KEYS = %w[layout title description categories].freeze
 STANDARD_KEYS = %w[ean languages page size publish-number cover examlink preview_link damlaurl].freeze
 OPTIONAL_STANDARD_KEYS = %w[original-name original-language].freeze
 BOOK_DETAIL_KEYS = %w[paper authors illustrators].freeze
-FILTERABLE_KEYS = %w[genre grades ders tags degerler anatema kazanim beceriler unite].freeze
+FILTERABLE_KEYS = %w[genre grades ders tags degerler anatema egilimler kazanim beceriler unite].freeze
 
 def parse_frontmatter(content)
   match = content.match(/\A---\r?\n(.*?)\r?\n---\r?\n(.*)\z/m)
@@ -30,7 +30,7 @@ def normalize_data(data)
   data['languages'] = ['Türkçe'] if data['languages'].nil? || (data['languages'].is_a?(Array) && data['languages'].empty?)
   data['publish-number'] = '' if data['publish-number'].nil?
   data['cover'] = '' if data['cover'].nil?
-  %w[degerler anatema kazanim beceriler unite tags].each do |key|
+  %w[degerler anatema egilimler kazanim beceriler unite tags].each do |key|
     data[key] = [] if data[key].nil?
   end
   %w[kavramlar anatemalar concepts subjects].each { |key| data.delete(key) }
@@ -120,7 +120,7 @@ def build_frontmatter(data)
 
   lines << ''
   lines << '# Spesific Filterable Attributes'
-  lines << '# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)'
+  lines << '# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)'
   FILTERABLE_KEYS.each do |key|
     next if key == 'ders' && (data[key].nil? || data[key].to_s.empty?)
 

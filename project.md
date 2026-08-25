@@ -104,13 +104,15 @@ damlaegitim/
 ├── _data/
 │   ├── webp_manifest.yml         # Otomatik: mevcut .webp listesi (generate_webp.sh)
 │   ├── turkiye_adres_il_ilce.json # İl / ilçe (wizard; sync_site_data.py türetir)
-│   ├── tymm.json, dersler.json     # …
-├── docs/
-│   └── data/                       # Kanonik fetch JSON (gitignore; getdata.md)
+│   ├── tymm.json                 # TYMM müfredat + Erdem-Değer çerçevesi (build_tymm_reference.rb)
+│   ├── dersler.json              # …
+├── docs/                           # Yerel kaynak (gitignore + Jekyll exclude)
+│   └── data/                       # Kanonik fetch JSON (getdata.md)
 │       ├── turkiye_adres.json
 │       ├── turkiye_geodata.json
 │       ├── okullar.json
 │       ├── okullar_detay.json
+│       ├── tymm/                   # TYMM ham API, PDF, referans CSV
 │       └── reference/              # TurkiyeAPI / HDX vendor snapshot
 ├── assets/
 │   └── data/
@@ -126,6 +128,8 @@ damlaegitim/
 │   ├── check_fonts.sh            # Font / WOFF2 uyarı raporu (install.sh)
 │   ├── subset_font.sh            # Tüm OTF/TTF → WOFF2 subset (install.sh)
 │   ├── normalize_book_frontmatter.rb   # Kitap front matter sıralama/normalize (`preview_link`, `examlink`, `damlaurl`; eski alan migrasyonu)
+│   ├── map_story_metadata.rb           # Story kitap: anatema, degerler, egilimler, beceriler, unite (orchestrator)
+│   ├── curriculum_lib.rb               # TYMM/anatema sözlük yardımcıları (map_story_*)
 │   ├── ogretmen-submit.gs              # Öğretmen wizard → Sheets + mail (Workspace’te dağıtılır; repo referans kopyası)
 │   ├── fetch_turkiyeadres.py           # → docs/data/turkiye_adres.json (getdata.md)
 │   ├── fetch_okullar.py                # → docs/data/okullar.json kamu (getdata.md)
@@ -153,7 +157,7 @@ damlaegitim/
 | Sayfalar | `_pages/` | `/:title/` | `page` | Evet |
 | Yazılar | `_posts/` | varsayılan | `post` | Evet |
 
-`_pages` klasörü `_config.yml` içinde `include: ["_pages"]` ile Jekyll kaynaklarına dahil edilir.
+`_pages` klasörü `_config.yml` içinde `include: ["_pages"]` ile Jekyll kaynaklarına dahil edilir. `docs/` klasörü gitignore ve `_config.yml` `exclude` listesindedir; Jekyll build çıktısına girmez.
 
 ---
 
@@ -199,13 +203,13 @@ flowchart LR
 | # | Adım | İçerik |
 |---|------|--------|
 | 1 | Sınıf | Okul öncesi – 8. sınıf |
-| 2 | Okuma listesi | Hikaye; değer / anatema / beceri filtreleri |
+| 2 | Okuma listesi | Hikaye; anatema → değer → eğilim → beceri filtreleri (kademeli) |
 | 3 | Eğitim kitapları | Eğitim setleri; arama |
 | 4 | Liste | Seçilen ürünler; okuma + eğitim grupları |
 | 5 | İletişim | Ad, soyad, il, ilçe, telefon, e-posta, okul |
 | 6 | Gönder | Özet, reCAPTCHA v2, gönder |
 
-**State:** `localStorage` → `damlaokul:ogretmen-wizard` (`version: 4`). Sınıf değişince liste ve filtreler sıfırlanır. Katalog build’de `site.books` JSON; listeye eklenen kitap katalogdan çıkar.
+**State:** `localStorage` → `damlaokul:ogretmen-wizard` (`version: 5`). Sınıf değişince liste ve filtreler sıfırlanır. Katalog build’de `site.books` JSON; listeye eklenen kitap katalogdan çıkar.
 
 ### Dosyalar
 
@@ -222,7 +226,7 @@ flowchart LR
 | `docs/data/okullar_detay.json` | Okul meta monolit (`kurum_kodu`); sync ile `assets/data/okullar-harita/` il parçalarına bölünür — [getdata.md](getdata.md) |
 | `docs/data/population.json` | İl/ilçe nüfus ve çocuk sayıları (TurkiyeAPI + TÜİK ADNKS vendor); site sync yok — [getdata.md](getdata.md) |
 | `assets/data/okullar-harita/` | Harita sayfası lazy fetch; sync türetilmiş — [getdata.md](getdata.md) |
-| `_data/tymm.json` | Hikaye filtre sıralaması |
+| `_data/tymm.json` | Hikâye filtre sıralaması; Erdem-Değer çerçevesi (D1–D20); öğretmen sihirbazı değer listesi |
 | `scripts/ogretmen-submit.gs` | Backend referansı (Workspace’te dağıtılır) |
 
 ### Yapılandırma (`_config.yml`)
@@ -250,7 +254,7 @@ Gizli anahtar config’e **yazılmaz** — Apps Script Script Properties → `RE
 5. Web app deploy: **Execute as Me**, **Anyone**; kod değişince **New version**
 6. `/exec` URL → `ogretmen_submit_url`; siteyi yeniden deploy et
 
-**Sheet sayfaları** (ilk POST’ta oluşur): `Talepler`, `Talep_Urunleri`. Form `filtre_degerler` / `filtre_anatema` / `filtre_beceriler` de gönderir; Sheet başlıklarına isteğe bağlı eklenir.
+**Sheet sayfaları** (ilk POST’ta oluşur): `Talepler`, `Talep_Urunleri`. Form `filtre_anatema` / `filtre_degerler` / `filtre_egilimler` / `filtre_beceriler` de gönderir; Sheet başlıklarına isteğe bağlı eklenir.
 
 Tarayıcıda `/exec` URL’sini GET ile açmak `doGet not found` döner — normal (`doPost` only).
 
@@ -422,9 +426,10 @@ Hikaye kitaplarında (`genre: story`) müfredat bilgisi başlık altında [`book
 
 | UI etiketi | Front matter | Görünüm |
 |------------|--------------|---------|
+| Anatemalar: | `anatema` | Outline chip; yatay scroll şeridi |
 | Erdemler / Değerler: | `degerler` | Outline yeşil chip; yatay scroll şeridi |
-| Anateması: | `anatema` | Outline chip; yatay scroll şeridi |
-| Becerileri: | `beceriler` | Düz chip listesi; yatay scroll şeridi |
+| Eğilimler: | `egilimler` | Outline chip; yatay scroll şeridi |
+| Beceriler: | `beceriler` | Düz chip listesi; yatay scroll şeridi |
 
 **Türkiye'de İlk ve Tek Damla Hikaye Kazanım Sistemi**
 
@@ -446,13 +451,13 @@ Eğitim setlerinde (`genre: education`) müfredat kanıtı gövdedeki **Maarif u
 
 ### Filtre bloğu sırası (`# Spesific Filterable Attributes`)
 
-`genre` → `grades` → `tags` → `degerler` → `anatema` → `kazanim` → `beceriler` → `unite`
+`genre` → `grades` → `tags` → `degerler` → `anatema` → `egilimler` → `kazanim` → `beceriler` → `unite`
 
 `tags` üst bölümde (`categories` yanında) tutulmaz; [`normalize_book_frontmatter.rb`](scripts/normalize_book_frontmatter.rb) aynı sırayı yazar.
 
 ### Eski üst alan notu (kaldırıldı)
 
-Önceden `anatemalar` ve `kavramlar` yan kolondaki «Öğretmen için» kutusundaydı; TYMM revizyonuyla `degerler`, `anatema`, `beceriler` ve `kazanim` hero başlık altında gösterilir (`unite` story kitaplarda UI/filtre dışı).
+Önceden `anatemalar` ve `kavramlar` yan kolondaki «Öğretmen için» kutusundaydı; TYMM revizyonuyla `degerler`, `anatema`, `egilimler`, `beceriler` ve `kazanim` hero başlık altında gösterilir (`unite` story kitaplarda UI/filtre dışı).
 
 ### Aksiyon butonları ve popup
 
@@ -491,7 +496,7 @@ Navbar üzerinden kitap araması yapılır. macOS Spotlight benzeri tam ekran mo
 
 ### İndeks kapsamı
 
-`site.books` koleksiyonu; alanlar: `title`, `ean`, `authors`, `categories`, `grades`, `genre`, `degerler`, `anatema`, `kazanim`, `beceriler`, `tags`, `body`. Kapak görseli indekste `assets/images/ean/{ean}.webp` (yoksa `.jpg`) kullanılır.
+`site.books` koleksiyonu; alanlar: `title`, `ean`, `authors`, `categories`, `grades`, `genre`, `degerler`, `anatema`, `egilimler`, `kazanim`, `beceriler`, `tags`, `body`. Kapak görseli indekste `assets/images/ean/{ean}.webp` (yoksa `.jpg`) kullanılır.
 
 4+ haneli tamamen sayısal aramalarda `ean` alanında doğrudan eşleştirme yapılır; diğer sorgularda Lunr wildcard araması kullanılır.
 
@@ -655,7 +660,7 @@ HDS PDF linkleri kitap front matter’ındaki tam `examlink` URL’si ile tanım
 |------|-------|
 | `scripts/normalize_book_frontmatter.rb` | Front matter sıralar; `preview_link`, `examlink`, `damlaurl` Standart Book Attributes altında korunur; `review_link` → `preview_link`, `previewpage` silinir |
 
-Front matter anahtar sırası (betik): `layout`, `title`, `description`, `categories` → `ean`, … → `# Spesific Filterable Attributes`: `genre`, `grades`, `tags`, `degerler`, `anatema`, `kazanim`, `beceriler`, `unite` → diğer alanlar.
+Front matter anahtar sırası (betik): `layout`, `title`, `description`, `categories` → `ean`, … → `# Spesific Filterable Attributes`: `genre`, `grades`, `tags`, `degerler`, `anatema`, `egilimler`, `kazanim`, `beceriler`, `unite` → diğer alanlar.
 
 Yeni kitap eklerken `preview_link` doğrudan front matter’a yazılır; özel path gerekmezse `https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/{ean}/index.html` varsayılan desenidir.
 

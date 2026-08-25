@@ -17,6 +17,8 @@ sitemap: false
     "ean": {{ book.ean | append: '' | jsonify }},
     "genre": {% if book.genre == 'education' %}"Eğitim"{% elsif book.genre == 'story' %}"Hikaye"{% else %}{{ book.genre | jsonify }}{% endif %},
     "anatema": {{ book.anatema | join: ', ' | jsonify }},
+    "degerler": {{ book.degerler | join: ', ' | jsonify }},
+    "egilimler": {{ book.egilimler | join: ', ' | jsonify }},
     "kazanim": {{ book.kazanim | join: ', ' | jsonify }},
     "beceriler": {{ book.beceriler | join: ', ' | jsonify }},
     "unite": {{ book.unite | join: ', ' | jsonify }},

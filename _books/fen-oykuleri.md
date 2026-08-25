@@ -18,15 +18,16 @@ authors: ["Necati Akbaba"]
 illustrators: ["Gökhan Gülkan"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3]
 tags: []
-degerler: [Vatanseverlik, Saygı, Sorumluluk, Temizlik, Merhamet, Sevgi]
-anatema: [Saygı, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Açık Fikirlilik", Sorumluluk, "Soru Sorma"]
+degerler: [Saygı, Sorumluluk, Vatanseverlik, Temizlik, Sevgi, Merhamet]
+anatema: ["Merak ve Keşif", Macera, Doğa]
+egilimler: [Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Soru Sorma", "Açık Fikirlilik"]
 kazanim: [H.1.2.1, H.1.2.3, H.1.2.4, H.1.3.2, H.1.3.3, H.1.3.7, H.1.4.2, H.1.4.5, H.3.4.1, H.4.1.1]
-beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Görsel Okuryazarlık", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "İletişim Becerisi", "Gözlemleme Becerisi", "Çözümleme Becerisi"]
-unite: ["ATATÜRK VE KAHRAMANLARIMIZ", "BİLGİ HAZİNEMİZ"]
+beceriler: ["Bilgi İşlemsel Düşünme Becerisi", "İletişim Becerisi", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "Yansıtma Becerisi", "Bilgiyi Kullanarak Eleştirel Düşünme", "Bilimsel Çıkarım Yapma Becerisi"]
+unite: ["Atatürk Ve Kahramanlarımız", "Bilgi Hazinemiz"]
 
 # Social Media Attributes
 youtube:

@@ -18,15 +18,16 @@ authors: ["Esra Avgören"]
 illustrators: ["Gökhan Kalafat"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [4]
 tags: [Arkadaşlık, Yardımseverlik, Cesaret, "Vurdumduymaz Olmamak", "Takım Ruhu", "Planlı Çalışma"]
-degerler: [Yardımseverlik, Dostluk, Saygı, Merhamet, Sorumluluk, Mahremiyet]
-anatema: [Dostluk, Empati, Cesaret, "Azim ve Kararlılık", "Kendine Güvenme (Öz Güven)", Merhamet, Sorumluluk, Çalışkanlık, Mahremiyet, Saygı, Merak, Girişkenlik]
+degerler: [Yardımseverlik, Sorumluluk, Saygı, Çalışkanlık, Dostluk, Vatanseverlik]
+anatema: [Arkadaşlık, "Cesaret ve Korkular", Empati]
+egilimler: [Empati, "Kendine Güvenme (Öz Güven)", Merak, Girişkenlik, Bağımsızlık, "Kendine İnanma (Öz Yeterlilik)"]
 kazanim: [H.1.2.1, H.1.2.3, H.1.2.4, H.1.3.5, H.1.3.7, H.2.2.1, H.2.2.2, H.3.2.1, H.4.2.1, H.4.2.2]
-beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "İletişim Becerisi", "Sosyal Farkındalık Becerisi", "Özetleme Becerisi"]
-unite: ["KENDİMİZİ GELİŞTİRİYORUZ", "DOĞA VE İNSAN", "Mi̇llî MÜCADELE VE ATATÜRK", "GEÇMİŞTEN GELECEĞE MİRASIMIZ"]
+beceriler: ["Bilgi İşlemsel Düşünme Becerisi", "İletişim Becerisi", "Veri ile Çalışma ve Veriye Dayalı Karar Verme Becerisi", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "İş Birliği Becerisi", "Gözleme Dayalı Tahmin Etme"]
+unite: ["Doğa Ve İnsan", "Bilim Ve Teknoloji", "Millî Mücadele Ve Atatürk"]
 
 # Social Media Attributes
 youtube:

@@ -891,6 +891,21 @@ def summarize(kurumlar: Dict[str, Any]) -> str:
     )
 
 
+def reject_legacy_data_paths(*paths: Path) -> None:
+    """_data/*.json Jekyll site.data'ya girer; büyük okul JSON'ları build'i kırar."""
+    for path in paths:
+        resolved = path.resolve()
+        data_dir = (ROOT / "_data").resolve()
+        try:
+            resolved.relative_to(data_dir)
+        except ValueError:
+            continue
+        raise SystemExit(
+            f"Hata: {path} _data altına yazılamaz. "
+            f"Kullanın: {CANONICAL['okullar_detay']} (veya --output docs/data/okullar_detay.json)"
+        )
+
+
 def main(argv: Optional[Iterable[str]] = None) -> int:
     parser = argparse.ArgumentParser(
         description="MEB okul sitelerinden detay meta verisini docs/data/okullar_detay.json olarak üretir"
@@ -913,6 +928,8 @@ def main(argv: Optional[Iterable[str]] = None) -> int:
         help="Mevcut okullar_detay.json kayıtlarından gereksiz alanları ağ çekmeden temizle",
     )
     args = parser.parse_args(list(argv) if argv is not None else None)
+
+    reject_legacy_data_paths(args.output, args.okullar)
 
     if args.prune:
         payload = load_existing(args.output)

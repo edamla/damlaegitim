@@ -19,15 +19,16 @@ authors: ["Necati Akbaba"]
 illustrators: ["Gökhan Gülkan"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3]
 tags: [Teknoloji, Bilim, Eğitim, İcad, "İyi ve Kötü", "Bilimsel Düşünce", Gelecek, Geçmiş, Macera, "Dünya Kültürü", "Bilim Kurgu", "Takım Çalışması"]
-degerler: [Sorumluluk, Saygı, Vatanseverlik, Çalışkanlık, Dostluk, Özgürlük]
-anatema: [Merak, "Gerçeği Arama", Çalışkanlık, Saygı, Sorumluluk, Vatanseverlik, "Kendine İnanma (Öz Yeterlilik)", "Kendine Güvenme (Öz Güven)", Girişkenlik, "Soru Sorma", Bağımsızlık, "Açık Fikirlilik"]
+degerler: [Sorumluluk, Saygı, Vatanseverlik, Dürüstlük, Dostluk, Çalışkanlık]
+anatema: ["Bilim Kurgu", "Bilim ve Teknoloji", Macera]
+egilimler: [Merak, Girişkenlik, "Kendine Güvenme (Öz Güven)", "Soru Sorma", Bağımsızlık, "Açık Fikirlilik"]
 kazanim: [H.1.2.1, H.1.2.3, H.1.2.4, H.1.3.2, H.1.3.3, H.1.3.7, H.1.4.2, H.1.4.5, H.2.1.2, H.3.4.1]
-beceriler: ["Okuma Becerisi", "Dinleme/İzleme Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kendini Tanıma (Öz Farkındalık Becerisi)", "İletişim Becerisi", "Sosyal Farkındalık Becerisi"]
-unite: ["HAK VE SORUMLULUKLARIMIZ", "ATATÜRK VE KAHRAMANLARIMIZ", "DEĞERLERİMİZLE YAŞIYORUZ", "DOĞAYI TANIYORUZ"]
+beceriler: ["Bilgi İşlemsel Düşünme Becerisi", "İletişim Becerisi", "Matematiksel Araç ve Teknoloji İle Çalışma Becerisi", "Bilimsel Çıkarım Yapma Becerisi", "Bilimsel Veriye Dayalı Tahmin Becerisi", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
+unite: ["Bilim Yolculuğu", "Hak Ve Sorumluluklarımız", "Atatürk Ve Kahramanlarımız"]
 
 # Social Media Attributes
 youtube:

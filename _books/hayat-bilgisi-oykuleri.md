@@ -18,15 +18,16 @@ authors: ["Seda Bilgin"]
 illustrators: ["Ahmet Demirtaş"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [2]
 tags: [Araştırma, Kariyer, Gözlem, İletişim, Sağlık, Beslenme, "Zaman Yönetimi"]
-degerler: [Saygı, Estetik, Sorumluluk, "Sağlıklı Yaşam", Dostluk, Vatanseverlik]
-anatema: [Saygı, Sorumluluk, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", "Gerçeği Arama", Estetik, Muhakeme, Odaklanma, Yaratıcılık]
+degerler: ["Sağlıklı Yaşam", Sorumluluk, Saygı, Estetik, Dostluk, Özgürlük]
+anatema: [İletişim, "Okuma ve Öğrenme", "Güvenli Yaşam"]
+egilimler: [Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", "Gerçeği Arama", Odaklanma, Sorumluluk]
 kazanim: [H.1.1.1, H.1.1.2, H.1.2.1, H.1.2.3, H.1.3.2, H.1.4.2, H.2.1.2, H.3.4.1, H.4.1.1]
-beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "İletişim Becerisi"]
-unite: ["ATATÜRK VE ÇOCUK", "DEĞERLERİMİZLE VARIZ"]
+beceriler: ["İletişim Becerisi", "Gözleme Dayalı Tahmin Etme", "Gözleme Dayalı Tahmin Etme Becerisi", "İletişim Kurma ve Paylaşma", "Bilgi İşlemsel Düşünme Becerisi", "Görsel İletişim Uygulamaları Oluşturma"]
+unite: ["Atatürk Ve Çocuk", "Değerlerimizle Varız"]
 
 # Social Media Attributes
 youtube:

@@ -2,11 +2,10 @@
 layout: book
 title:  "Dedektif Kuruntusu-2"
 categories: [Ortaokul]
-tags: []
 
 # Standart Book Attributes
 ean: 9786051746029
-languages: ["Türkçe"]
+languages: [Türkçe]
 page: "112 sayfa"
 size: "13,5x19,5 cm"
 publish-number: ""
@@ -18,10 +17,16 @@ paper: "Kitap Kağıdı"
 authors: ["Esra Avgören"]
 
 # Spesific Filterable Attributes
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-kavramlar: ["Yarım ısırılmış bir kaşar peyniri kayıp bir ön diş ve çilek kokusu Sahi bu diş izleri kimin"]
-anatemalar: ["Dayanışma", "Analitik Düşünme", "Öz Güven", "Sosyal Farkındalık", "Öfke Kontrolü", Adalet]
+tags: []
+degerler: [Sorumluluk, Sevgi, Saygı, Özgürlük, Duyarlılık, Vatanseverlik]
+anatema: [Gizem, Macera, "Spor ve Hareket"]
+egilimler: [Muhakeme, "Kendine Güvenme (Öz Güven)", "Soru Sorma", Merak, Sistematiklik, Yaratıcılık]
+kazanim: []
+beceriler: ["Kendini Tanıma (Öz Farkındalık Becerisi)", "İletişim Becerisi", "Bilgi İşlemsel Düşünme Becerisi", "İş Birliği Becerisi", "Sosyal Farkındalık Becerisi", "Kendini Düzenleme (Öz Düzenleme Becerisi)"]
+unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
 
 # Social Media Attributes
 youtube:

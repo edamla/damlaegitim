@@ -16,12 +16,13 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254116476/in
 damlaurl: ""
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: education
 grades: [2]
 tags: []
 degerler: []
 anatema: []
+egilimler: []
 kazanim: []
 beceriler: []
 unite: []

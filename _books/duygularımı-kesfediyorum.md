@@ -18,15 +18,16 @@ authors: [Komisyon]
 illustrators: ["Amit Sharma"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1, 2]
 tags: ["Sosyal ve Duygusal Gelişim", Empati, "Arkadaşlık ve İletişim Becerisi", "Yardımlaşma ve Duyarlı Olma", "Akran Zorbalığı", "Saygı ve İç Farkındalık", "Korkuyu Yenme", Cesaret, "Öz Güven ve Farklılıkları Anlamak", "Duygularla Tanışma ve Anlamlandırma AKRAN Becerisi Kazandırır: Her bir kitap", Korku, kıskançlık, öfke, "pişmanlık gibi yoğun duyguların yanında dostluk", paylaşma]
-degerler: [Dostluk, Saygı, Merhamet, Sorumluluk, Estetik, Duyarlılık]
-anatema: [Saygı, Dostluk, Empati, Cesaret, "Azim ve Kararlılık", "Kendine Güvenme (Öz Güven)", Duyarlılık, Merhamet, Merak, Odaklanma, Sorumluluk, Estetik]
+degerler: [Saygı, Dostluk, Sorumluluk, Estetik, "Sağlıklı Yaşam", Sabır]
+anatema: [Duygular, Empati, "Cesaret ve Korkular"]
+egilimler: [Empati, Merak, "Kendine Güvenme (Öz Güven)", Bağımsızlık, Odaklanma, "Soru Sorma"]
 kazanim: [H.1.1.1, H.1.1.2, H.1.2.1, H.1.2.3, H.1.3.2, H.1.4.2, H.2.1.2, H.3.4.1, H.4.1.1]
-beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Görsel Okuryazarlık", "İletişim Becerisi", "Karşılaştırma Becerisi", "Mevcut Bilgiye/Veriye Dayalı Tahmin Etme Becerisi", "Muhakeme (Akıl Yürütme) Becerisi", "Sentezleme Becerisi"]
-unite: ["YOL ARKADAŞIMIZ KİTAPLAR", "OKUMA SERÜVENİMİZ", "ATATÜRK VE ÇOCUK", "YETENEKLERİMİZİ TANIYORUZ"]
+beceriler: ["İletişim Becerisi", "Bilgi İşlemsel Düşünme Becerisi", "İletişim Kurma ve Paylaşma", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Gözleme Dayalı Tahmin Etme Becerisi", "Mevcut Bilgiye/Veriye Dayalı Tahmin Etme Becerisi"]
+unite: ["Yeteneklerimizi Keşfediyoruz", "Yol Arkadaşımız Kitaplar", "Okuma Serüvenimiz", "Yeteneklerimizi Tanıyoruz"]
 
 # Social Media Attributes
 youtube:

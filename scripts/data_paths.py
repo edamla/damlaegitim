@@ -8,6 +8,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS_DATA = ROOT / "docs" / "data"
+DOCS_TYMM = DOCS_DATA / "tymm"
+DOCS_TYMM_BECERILER = DOCS_TYMM / "beceriler"
 
 CANONICAL = {
     "turkiye_adres": DOCS_DATA / "turkiye_adres.json",
@@ -15,6 +17,9 @@ CANONICAL = {
     "okullar": DOCS_DATA / "okullar.json",
     "okullar_detay": DOCS_DATA / "okullar_detay.json",
     "population": DOCS_DATA / "population.json",
+    "tymm_cerceveler": DOCS_TYMM / "cerceveler.json",
+    "tymm_ilkokul_api": DOCS_TYMM / "ilkokul-turkce" / "api-response.json",
+    "tymm_ortaokul_api": DOCS_TYMM / "ortaokul-turkce" / "api-response.json",
 }
 
 VENDOR_TURKIYEAPI = DOCS_DATA / "reference" / "turkiyeapi"
@@ -26,9 +31,11 @@ SITE = {
     "okullar": ROOT / "assets" / "data" / "okullar.json",
     "geodata_dir": ROOT / "assets" / "data" / "geodata",
     "okullar_harita_dir": ROOT / "assets" / "data" / "okullar-harita",
+    "tymm": ROOT / "_data" / "tymm.json",
 }
 
 # JSON meta alanlarında kullanılan repo-kök göreli yollar
 REF_TURKIYE_ADRES = "docs/data/turkiye_adres.json"
 REF_OKULLAR = "docs/data/okullar.json"
 REF_POPULATION = "docs/data/population.json"
+REF_TYMM_HAM = "docs/data/tymm/"

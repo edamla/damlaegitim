@@ -31,6 +31,12 @@
       {% if b.anatema and b.anatema.size > 0 %}
         Anatema alanları: {% for subject in b.anatema %}{{ subject }}{% unless forloop.last %}, {% endunless %}{% endfor %}.
       {% endif %}
+      {% if b.degerler and b.degerler.size > 0 %}
+        Erdem ve değer alanları: {% for deger in b.degerler %}{{ deger }}{% unless forloop.last %}, {% endunless %}{% endfor %}.
+      {% endif %}
+      {% if b.egilimler and b.egilimler.size > 0 %}
+        Eğilim alanları: {% for egilim in b.egilimler %}{{ egilim }}{% unless forloop.last %}, {% endunless %}{% endfor %}.
+      {% endif %}
       {% if b.beceriler and b.beceriler.size > 0 %}
         Beceri alanları:
         {% for beceri in b.beceriler %}

@@ -19,15 +19,16 @@ authors: []
 illustrators: ["Alaaddin Barışkan"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1]
 tags: [Doğruluk, Tevazu, Arkadaşlık, Sevgi, Saygı, "Sözünde Durmak", Hayvan]
-degerler: [Saygı, Sevgi, Dostluk, Estetik, Duyarlılık, Sorumluluk]
-anatema: [Saygı, Sevgi, Dostluk, Empati, Duyarlılık, Estetik, Merak, Bağımsızlık, Odaklanma, Sistematiklik, Sorumluluk, "Kendine Güvenme (Öz Güven)"]
+degerler: [Saygı, Sevgi, Dostluk, Estetik, Sorumluluk, Merhamet]
+anatema: [Arkadaşlık, Hayvanlar, Empati]
+egilimler: [Merak, Empati, Bağımsızlık, Odaklanma, Sistematiklik, "Kendine Güvenme (Öz Güven)"]
 kazanim: [H.1.1.1, H.1.2.1, H.1.3.2, H.1.4.2, H.2.1.2, H.4.1.1]
-beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Görsel Okuryazarlık", "İletişim Becerisi", "Karşılaştırma Becerisi", "Mevcut Bilgiye/Veriye Dayalı Tahmin Etme Becerisi", "Yapılandırma Becerisi", "Muhakeme (Akıl Yürütme) Becerisi"]
-unite: ["ÇEVREMİZDEKİ YAŞAM", "YOL ARKADAŞIMIZ KİTAPLAR", "ATALARIMIZIN İZLERİ", "SORUMLULUKLARIMIZIN FARKINDAYIZ"]
+beceriler: ["İletişim Becerisi", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Bilgi İşlemsel Düşünme Becerisi", "İletişim Kurma ve Paylaşma", "Doğa ve Canlıları Tasarımla İlişkilendirebilme/Esinlenme Becerisi", "İş Birliği Becerisi"]
+unite: ["Çevremizdeki Yaşam", "Atalarımızın İzleri"]
 
 # Social Media Attributes
 youtube:

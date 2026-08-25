@@ -118,6 +118,14 @@ module CurriculumLib
     JSON.parse(ROOT.join('_data', 'tymm.json').read)
   end
 
+  def load_degerler_cercevesi
+    data = load_tymm
+    cerceve = data.dig('cerceveler', 'degerler')
+    raise 'cerceveler.degerler bulunamadı — python scripts/fetch_tymm.py --cerceveler && ruby scripts/build_tymm_reference.rb' unless cerceve
+
+    cerceve
+  end
+
   def story_books
     BOOKS_DIR.glob('*.md').sort.filter_map do |path|
       fm, body = parse_frontmatter(path.read)
@@ -145,5 +153,112 @@ module CurriculumLib
     return 0.0 if sa.empty? || sb.empty?
 
     (sa & sb).size.to_f / [sa.size, sb.size].min
+  end
+
+  def exact_label_match?(value, label)
+    norm_v = normalize_tr(value)
+    norm_a = normalize_tr(label)
+    return true if norm_v == norm_a
+    return true if norm_v.include?(norm_a) || norm_a.include?(norm_v)
+
+    false
+  end
+
+  def build_story_corpus(book, extra_fields: [])
+    fm = book[:fm]
+    body = book[:body].to_s
+    temalar = body[/\*{0,2}TEMALAR\*{0,2}\s*:.*$/i]
+    parts = [
+      fm['title'],
+      fm['description'],
+      Array(fm['tags']).join(' '),
+      Array(fm['categories']).join(' '),
+      temalar,
+      strip_labeled_blocks(body)
+    ]
+    extra_fields.each do |field|
+      parts << Array(fm[field]).join(' ')
+    end
+    parts.compact.join(' ')
+  end
+
+  def load_anatemalar
+    data = JSON.parse(ROOT.join('_data', 'anatemalar.json').read)
+    list = data['anatemalar']
+    raise 'anatemalar.json listesi boş' unless list.is_a?(Array) && list.any?
+
+    list
+  end
+
+  def flatten_egilimler(tymm = nil)
+    tymm ||= load_tymm
+    gruplar = tymm.dig('cerceveler', 'egilimler', 'gruplar') || []
+    gruplar.flat_map { |g| (g['alt_kavramlar'] || []).map { |a| a['ad'] } }.compact.uniq
+  end
+
+  def flatten_beceriler(tymm = nil)
+    tymm ||= load_tymm
+    frameworks = tymm.dig('cerceveler', 'beceriler') || {}
+    names = []
+    frameworks.each_value do |framework|
+      (framework['gruplar'] || []).each do |grup|
+        (grup['alt_kavramlar'] || []).each do |alt|
+          names << alt['ad'] if alt['ad']
+        end
+      end
+    end
+    names.uniq
+  end
+
+  def load_deger_adlari(tymm = nil)
+    tymm ||= load_tymm
+    (tymm.dig('cerceveler', 'degerler', 'degerler') || []).map { |d| d['ad'] }
+  end
+
+  def merge_grade_unites(tymm, grades)
+    unites = []
+    Array(grades).map(&:to_s).each do |grade|
+      grade_data = tymm.dig('grades', grade)
+      next unless grade_data
+
+      unites.concat(grade_data['unites'] || [])
+    end
+    unites
+  end
+
+  def score_candidates(corpus, fm, candidates, keyword_hints:, label_boost: nil)
+    scored = candidates.map do |label|
+      score = 0.0
+      title_tags = [fm['title'], *Array(fm['tags'])].compact.join(' ')
+
+      Array(fm['tags']).each { |v| score += 10 if exact_label_match?(v, label) }
+      Array(fm['categories']).each { |v| score += 6 if exact_label_match?(v, label) }
+      score += 8 if exact_label_match?(title_tags, label)
+      score += overlap_score(corpus, label) * 5
+
+      keyword_hints.each do |pattern, values|
+        score += 4 if values.include?(label) && corpus.match?(pattern)
+      end
+
+      label_boost&.call(label, score) || score
+    end
+    candidates.zip(scored).sort_by { |_, s| -s }
+  end
+
+  def pick_top_labels(corpus, fm, candidates, keyword_hints:, max:, label_boost: nil, fallback: [])
+    ranked = score_candidates(corpus, fm, candidates, keyword_hints: keyword_hints, label_boost: label_boost)
+    picked = ranked.select { |_, s| s.positive? }.first(max)&.map(&:first) || []
+    return picked if picked.any?
+
+    (fallback & candidates).first(max)
+  end
+
+  def write_frontmatter_fields(path, updates)
+    content = path.read
+    fm, body = parse_frontmatter(content)
+    updates.each { |key, value| fm[key] = value }
+    yaml = YAML.dump(fm)
+    yaml = yaml.sub(/\A---\n/, '')
+    path.write("---\n#{yaml}---\n#{body}")
   end
 end

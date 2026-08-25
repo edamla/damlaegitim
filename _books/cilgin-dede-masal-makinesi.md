@@ -18,15 +18,16 @@ authors: ["Sara Gürbüz Özeren"]
 illustrators: ["Murat Tanhu"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [2]
 tags: [Masal, "Zaman Makinesi", "Masal Makinesi", "Değerler Eğitimi", "Yeni Kelime", "Yeni Deyim", Macera, Keşif, Gizem, Efsane]
-degerler: [Sorumluluk, Sevgi, Dostluk, Saygı, Dürüstlük, Estetik]
-anatema: [Saygı, Sorumluluk, Dürüstlük, Sevgi, Dostluk, Merak, "Gerçeği Arama", Muhakeme, Analitiklik, "Soru Sorma", Estetik, Bağımsızlık]
+degerler: [Sorumluluk, Saygı, Sevgi, Özgürlük, Dürüstlük, Estetik]
+anatema: [Gizem, Macera, Değerler]
+egilimler: [Merak, Muhakeme, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Yaratıcılık, Odaklanma]
 kazanim: [H.1.1.1, H.1.1.2, H.1.2.1, H.1.2.3, H.1.3.2, H.1.4.2, H.2.1.2, H.3.4.1, H.4.1.1]
-beceriler: ["Eleştirel Düşünme Becerisi", "Problem Çözme Becerisi", "Çıkarım Yapma Becerisi", "Okuma Becerisi", "Dinleme/İzleme Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık"]
-unite: ["DEĞERLERİMİZLE VARIZ", "ATATÜRK VE ÇOCUK", "OKUMA SERÜVENİMİZ", "KÜLTÜR HAZİNEMİZ"]
+beceriler: ["Kendini Tanıma (Öz Farkındalık Becerisi)", "İletişim Becerisi", "Bilgi İşlemsel Düşünme Becerisi", "Kendini Düzenleme (Öz Düzenleme Becerisi)", "Gözleme Dayalı Tahmin Etme", "Mevcut Bilgiye/Veriye Dayalı Tahmin Etme Becerisi"]
+unite: ["Değerlerimizle Varız"]
 
 # Social Media Attributes
 youtube: "https://www.youtube.com/watch?v=xAUgoaDYLQc"

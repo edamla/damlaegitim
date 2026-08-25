@@ -18,15 +18,16 @@ paper: "Kitap Kağıdı"
 authors: ["Nur Dombaycı"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
 tags: ["Sağlıklı Beslenme", "Ekip Çalışması", "Geleneksel Miras", Birlik, "Tüketim Karşıtlığı", Keşif]
-degerler: [Özgürlük, Sorumluluk, Saygı, Vatanseverlik, Sevgi, Dostluk]
-anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
+degerler: [Saygı, Sorumluluk, Dostluk, Vatanseverlik, Özgürlük, Dürüstlük]
+anatema: ["Toplum ve Birlikte Yaşam", "Merak ve Keşif", Arkadaşlık]
+egilimler: [Merak, Bağımsızlık, Muhakeme, Sorumluluk, "Soru Sorma", "Gerçeği Arama"]
 kazanim: [H.1.3.2, H.1.3.5, H.2.3.1, H.2.3.2, H.2.3.3, H.2.3.4, H.2.3.5, H.3.3.2, H.3.3.3, H.4.3.1]
-beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
-unite: ["DUYGULARIMI TANIYORUM"]
+beceriler: ["Kendini Tanıma (Öz Farkındalık Becerisi)", "İletişim Becerisi", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "Kendini Düzenleme (Öz Düzenleme Becerisi)", "Yansıtma Becerisi", "İş Birliği Becerisi"]
+unite: ["AKADEMİK DÜŞÜNME DÜNYASI", "FARKLI DÜNYALAR", "OYUN DÜNYASI", "BAĞIMSIZLIK YOLU"]
 
 # Social Media Attributes
 youtube:

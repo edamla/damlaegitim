@@ -18,15 +18,16 @@ authors: ["Nehi̇r Aydın Gökduman"]
 illustrators: ["Mustafa Kocabaş"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [2]
 tags: [Macera, Yardımseverlik, "Aile Büyüklerine Saygı", Günlük]
-degerler: [Saygı, Dostluk, Sorumluluk, Yardımseverlik, Merhamet, Sevgi]
-anatema: [Saygı, Merak, "Gerçeği Arama", "Aile Bütünlüğü", Sevgi, Merhamet, Dostluk, Sorumluluk, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Estetik, Oyunseverlik]
+degerler: [Saygı, Estetik, Yardımseverlik, "Aile Bütünlüğü", Dostluk, Sorumluluk]
+anatema: [Macera, Empati, Dayanışma]
+egilimler: [Merak, Empati, "Kendine Güvenme (Öz Güven)", Bağımsızlık, Muhakeme, Odaklanma]
 kazanim: [H.1.1.1, H.1.1.2, H.1.2.1, H.1.2.3, H.1.3.2, H.1.4.2, H.2.1.2, H.3.4.1, H.4.1.1]
-beceriler: ["Okuma Becerisi", "Dinleme/İzleme Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "İletişim Becerisi"]
-unite: ["ATATÜRK VE ÇOCUK", "DOĞADA NELER Oluyor?", "OKUMA SERÜVENİMİZ", "KÜLTÜR HAZİNEMİZ"]
+beceriler: ["Kendini Tanıma (Öz Farkındalık Becerisi)", "İletişim Becerisi", "Kendini Düzenleme (Öz Düzenleme Becerisi)", "Bilgi İşlemsel Düşünme Becerisi", "Gözleme Dayalı Tahmin Etme", "Gözleme Dayalı Tahmin Etme Becerisi"]
+unite: ["Değerlerimizle Varız"]
 
 # Social Media Attributes
 youtube:

@@ -19,15 +19,16 @@ authors: ["Amit Sharma"]
 illustrators: ["Amit Sharma"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1]
 tags: [Sosyal, Beceri, Değerler, Birey, Toplum, Sorumluluk, İletişim, "Olumlu Kişilik", Karakter, Kıskanmamak, Paylaşmak, Özgüven, Dürüstlük, "Gruba Katılım", Arkadaşlık, "Büyüklerin Sözünü Dinleme"]
-degerler: [Dürüstlük, Sorumluluk, Dostluk, Saygı, Merhamet, Sevgi]
-anatema: [Saygı, Sorumluluk, Dürüstlük, Sevgi, Dostluk, Empati, Merhamet, Mütevazılık, Merak, Odaklanma, Sistematiklik, Estetik]
+degerler: [Sorumluluk, Estetik, Dürüstlük, Saygı, Mütevazılık, Merhamet]
+anatema: [Değerler, İletişim, Özgüven]
+egilimler: [Sorumluluk, Merak, Empati, Bağımsızlık, Odaklanma, "Kendine Güvenme (Öz Güven)"]
 kazanim: [H.1.1.1, H.1.2.1, H.1.3.2, H.1.4.2, H.2.1.2, H.4.1.1]
-beceriler: ["Konuşma Becerisi", "Yazma Becerisi", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Dinleme/İzleme Becerisi", "Okuma Becerisi", "Görsel Okuryazarlık", "İletişim Becerisi", "Özetleme Becerisi", "Karşılaştırma Becerisi", "Çıkarım Yapma Becerisi"]
-unite: ["GÜZEL DAVRANIŞLARIMIZ", "YOL ARKADAŞIMIZ KİTAPLAR", "ATALARIMIZIN İZLERİ", "SORUMLULUKLARIMIZIN FARKINDAYIZ"]
+beceriler: ["İletişim Becerisi", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Bilgi İşlemsel Düşünme Becerisi", "Sosyal Farkındalık Becerisi", "Kendini Düzenleme (Öz Düzenleme Becerisi)", "Gözleme Dayalı Tahmin Etme Becerisi"]
+unite: ["Güzel Davranışlarımız", "Yeteneklerimizi Keşfediyoruz", "Atalarımızın İzleri"]
 
 # Social Media Attributes
 youtube:

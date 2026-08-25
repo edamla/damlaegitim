@@ -17,15 +17,16 @@ authors: ["Nehir Aydın Gökduman"]
 illustrators: ["Ramila Aliyeva"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1, 2]
 tags: [Empati, İyilik, Mutluluk, "Doğa Sevgisi", "Aile Bağları", Şefkat, Fedakârlık, Arkadaşlık, Yardımlaşma, "Anne Sevgisi", "Duyguları İfade Etmek", Komşuluk, Cesaret, Paylaşmak]
-degerler: [Sevgi, Dostluk, Saygı, Merhamet, "Aile Bütünlüğü", Estetik]
-anatema: [Sevgi, Dostluk, Empati, Cesaret, "Azim ve Kararlılık", "Kendine Güvenme (Öz Güven)", Duyarlılık, Merhamet, Estetik, Merak, "Aile Bütünlüğü", Saygı]
+degerler: [Sevgi, Saygı, Sorumluluk, Duyarlılık, Estetik, Yardımseverlik]
+anatema: [Empati, Arkadaşlık, Doğa]
+egilimler: [Empati, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Sistematiklik, "Gerçeği Arama"]
 kazanim: [H.1.1.1, H.1.1.2, H.1.2.1, H.1.2.3, H.1.3.2, H.1.4.2, H.2.1.2, H.3.4.1, H.4.1.1]
-beceriler: ["Gözlemleme Becerisi", "Bilgi Toplama Becerisi", "Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kendini Düzenleme (Öz Düzenleme Becerisi)"]
-unite: ["DOĞADA NELER Oluyor?", "ATALARIMIZIN İZLERİ", "DEĞERLERİMİZLE VARIZ", "ATATÜRK VE ÇOCUK"]
+beceriler: ["İletişim Becerisi", "Bilgi İşlemsel Düşünme Becerisi", "İş Birliği Becerisi", "Kendini Tanıma (Öz Farkındalık Becerisi)", "İletişim Kurma ve Paylaşma", "Doğa ve Canlıları Tasarımla İlişkilendirebilme/Esinlenme Becerisi"]
+unite: ["Çevremizdeki Yaşam", "Doğada Neler Oluyor?", "Atatürk Ve Çocuk", "Atalarımızın İzleri"]
 
 # Social Media Attributes
 youtube:

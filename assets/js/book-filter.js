@@ -57,6 +57,39 @@ var BookFilter = (function() {
     });
   }
 
+  function matchesEgilimler(book, egilimler) {
+    return matchesFieldList(book, 'egilimler', egilimler);
+  }
+
+  function filterStoryBooks(catalog, grade, filters) {
+    filters = filters || {};
+    var books = collectStoryBooks(catalog, grade);
+    if (filters.anatema) {
+      books = books.filter(function(book) {
+        return arr(book.anatema).indexOf(filters.anatema) !== -1;
+      });
+    }
+    if (filters.degerler) {
+      books = books.filter(function(book) {
+        return arr(book.degerler).indexOf(filters.degerler) !== -1;
+      });
+    }
+    if (filters.egilimler) {
+      books = books.filter(function(book) {
+        return arr(book.egilimler).indexOf(filters.egilimler) !== -1;
+      });
+    }
+    return books;
+  }
+
+  function collectFieldValues(books, field) {
+    var values = {};
+    books.forEach(function(book) {
+      arr(book[field]).forEach(function(v) { if (v) values[v] = true; });
+    });
+    return Object.keys(values);
+  }
+
   function matchesKazanim(book, kazanim) {
     return matchesFieldList(book, 'kazanim', kazanim);
   }
@@ -76,6 +109,7 @@ var BookFilter = (function() {
         matchesTags(book, criteria.tags) &&
         matchesAnatema(book, criteria.anatema) &&
         matchesDegerler(book, criteria.degerler) &&
+        matchesEgilimler(book, criteria.egilimler) &&
         matchesBeceriler(book, criteria.beceriler) &&
         matchesKazanim(book, criteria.kazanim) &&
         matchesSearch(book, criteria.q);
@@ -186,28 +220,31 @@ var BookFilter = (function() {
     return null;
   }
 
-  function storyFilterOptions(catalog, grade, degerOrder, selectedDegerler) {
-    var values = collectStoryValues(catalog, grade);
-    var degerler = sortByOrderList(values.degerler, degerOrder || []);
-
+  function storyFilterOptions(catalog, grade, degerOrder, filters) {
+    filters = filters || {};
     var baseBooks = collectStoryBooks(catalog, grade);
-    if (selectedDegerler) {
-      baseBooks = baseBooks.filter(function(book) {
-        return arr(book.degerler).indexOf(selectedDegerler) !== -1;
-      });
-    }
+    var anatemalar = collectFieldValues(baseBooks, 'anatema')
+      .sort(function(a, b) { return a.localeCompare(b, 'tr'); });
 
-    var anatemaSet = {};
-    var becerilerSet = {};
-    baseBooks.forEach(function(book) {
-      arr(book.anatema).forEach(function(a) { if (a) anatemaSet[a] = true; });
-      arr(book.beceriler).forEach(function(b) { if (b) becerilerSet[b] = true; });
+    var degerBooks = filterStoryBooks(catalog, grade, { anatema: filters.anatema });
+    var degerler = sortByOrderList(collectFieldValues(degerBooks, 'degerler'), degerOrder || []);
+
+    var egilimBooks = filterStoryBooks(catalog, grade, {
+      anatema: filters.anatema,
+      degerler: filters.degerler
     });
+    var egilimler = collectFieldValues(egilimBooks, 'egilimler')
+      .sort(function(a, b) { return a.localeCompare(b, 'tr'); });
 
-    var anatemas = Object.keys(anatemaSet).sort(function(a, b) { return a.localeCompare(b, 'tr'); });
-    var becerilers = Object.keys(becerilerSet).sort(function(a, b) { return a.localeCompare(b, 'tr'); });
+    var beceriBooks = filterStoryBooks(catalog, grade, {
+      anatema: filters.anatema,
+      degerler: filters.degerler,
+      egilimler: filters.egilimler
+    });
+    var becerilers = collectFieldValues(beceriBooks, 'beceriler')
+      .sort(function(a, b) { return a.localeCompare(b, 'tr'); });
 
-    return { degerler: degerler, anatema: anatemas, beceriler: becerilers };
+    return { anatema: anatemalar, degerler: degerler, egilimler: egilimler, beceriler: becerilers };
   }
 
   function getPrimaryDegerSortKey(book, degerOrder) {
@@ -255,6 +292,7 @@ var BookFilter = (function() {
     matchesTags: matchesTags,
     matchesAnatema: matchesAnatema,
     matchesDegerler: matchesDegerler,
+    matchesEgilimler: matchesEgilimler,
     matchesUnite: matchesUnite,
     matchesBeceriler: matchesBeceriler,
     matchesKazanim: matchesKazanim,

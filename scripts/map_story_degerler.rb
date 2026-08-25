@@ -3,22 +3,12 @@
 
 require 'json'
 require 'csv'
-require 'yaml'
 require_relative 'curriculum_lib'
-
-def write_frontmatter_fields(path, updates)
-  content = path.read
-  fm, body = CurriculumLib.parse_frontmatter(content)
-  updates.each { |key, value| fm[key] = value }
-  yaml = YAML.dump(fm)
-  yaml = yaml.sub(/\A---\n/, '')
-  path.write("---\n#{yaml}---\n#{body}")
-end
 
 module MapStoryDegerler
   module_function
 
-  DEGERLER_PATH = CurriculumLib::ROOT.join('docs', 'TYMM', 'tymm-degerler.json').freeze
+  CERCEVELER_PATH = CurriculumLib::ROOT.join('docs', 'data', 'tymm', 'cerceveler.json').freeze
   MAX_DEGER = 6
 
   KEYWORD_HINTS = {
@@ -47,17 +37,27 @@ module MapStoryDegerler
 
   FALLBACK = %w[Saygı Sorumluluk Sevgi].freeze
 
-  def load_degerler
-  data = JSON.parse(DEGERLER_PATH.read)
-  degerler = data['degerler'].map do |d|
-    {
-      ad: d['ad'],
-      kod: d['kod'],
-      aciklama: d['aciklama'],
-      keywords: keyword_tokens(d['ad'], d['aciklama'])
-    }
+  def load_degerler_source
+    if CERCEVELER_PATH.file?
+      data = JSON.parse(CERCEVELER_PATH.read)
+      { 'degerler' => data.dig('degerler', 'degerler') }
+    else
+      cerceve = CurriculumLib.load_degerler_cercevesi
+      { 'degerler' => cerceve['degerler'] }
+    end
   end
-  [degerler, data['degerler'].map { |d| d['ad'] }]
+
+  def load_degerler
+    data = load_degerler_source
+    degerler = data['degerler'].map do |d|
+      {
+        ad: d['ad'],
+        kod: d['kod'],
+        aciklama: d['aciklama'],
+        keywords: keyword_tokens(d['ad'], d['aciklama'])
+      }
+    end
+    [degerler, data['degerler'].map { |d| d['ad'] }]
   end
 
   def keyword_tokens(ad, aciklama)
@@ -65,40 +65,15 @@ module MapStoryDegerler
     tokens.reject { |t| t.length < 4 }
   end
 
-  def build_corpus(book)
-    fm = book[:fm]
-    body = book[:body].to_s
-    temalar = body[/\*{0,2}TEMALAR\*{0,2}\s*:.*$/i]
-    parts = [
-      fm['title'],
-      fm['description'],
-      Array(fm['tags']).join(' '),
-      Array(fm['anatema']).join(' '),
-      Array(fm['categories']).join(' '),
-      temalar,
-      CurriculumLib.strip_labeled_blocks(body)
-    ]
-    parts.compact.join(' ')
-  end
-
-  def exact_match?(value, ad)
-    norm_v = CurriculumLib.normalize_tr(value)
-    norm_a = CurriculumLib.normalize_tr(ad)
-    return true if norm_v == norm_a
-    return true if norm_v.include?(norm_a) || norm_a.include?(norm_v)
-
-    false
-  end
-
   def score_deger(deger, corpus, fm)
     ad = deger[:ad]
     score = 0.0
     title_tags = [fm['title'], *Array(fm['tags'])].compact.join(' ')
 
-    Array(fm['anatema']).each { |v| score += 10 if exact_match?(v, ad) }
-    Array(fm['tags']).each { |v| score += 10 if exact_match?(v, ad) }
+    Array(fm['tags']).each { |v| score += 10 if CurriculumLib.exact_label_match?(v, ad) }
+    Array(fm['anatema']).each { |v| score += 8 if CurriculumLib.exact_label_match?(v, ad) }
 
-    score += 5 if exact_match?(title_tags, ad)
+    score += 5 if CurriculumLib.exact_label_match?(title_tags, ad)
     score += 5 if CurriculumLib.normalize_tr(fm['title'].to_s).include?(CurriculumLib.normalize_tr(ad))
 
     deger[:keywords].each do |kw|
@@ -113,11 +88,17 @@ module MapStoryDegerler
     score
   end
 
-  def pick_degerler(book, degerler)
+  def pick_degerler(book, degerler, picked_unites: [])
     fm = book[:fm]
-    corpus = build_corpus(book)
+    corpus = CurriculumLib.build_story_corpus(book, extra_fields: %w[tags anatema])
     scored = degerler.map do |deger|
-      [deger[:ad], score_deger(deger, corpus, fm)]
+      score = score_deger(deger, corpus, fm)
+      picked_unites.each do |unite|
+        (unite['degerler'] || []).each do |item|
+          score += 6 if CurriculumLib.exact_label_match?(item, deger[:ad])
+        end
+      end
+      [deger[:ad], score]
     end
     picked = scored.select { |_, s| s.positive? }
                    .sort_by { |_, s| -s }
@@ -126,37 +107,12 @@ module MapStoryDegerler
 
     return picked if picked.any?
 
-    from_meta = (Array(fm['anatema']) + Array(fm['tags'])).uniq
-    official = degerler.map { |d| d[:ad] }
-    fallback = from_meta.select { |v| official.any? { |ad| exact_match?(v, ad) } }
-    fallback = FALLBACK if fallback.empty?
-    fallback.first(MAX_DEGER)
+    FALLBACK.first(MAX_DEGER)
   end
 
-  def map_book(book, degerler)
-    { 'degerler' => pick_degerler(book, degerler) }
+  def map_book(book, degerler, picked_unites: [])
+    {
+      'degerler' => pick_degerler(book, degerler, picked_unites: picked_unites)
+    }
   end
 end
-
-ROOT = CurriculumLib::ROOT
-REPORT = ROOT.join('docs', 'degerler-mapping-report.csv')
-
-def main
-  degerler, _official_order = MapStoryDegerler.load_degerler
-  report_rows = []
-
-  CurriculumLib.story_books.each do |book|
-    fields = MapStoryDegerler.map_book(book, degerler)
-    write_frontmatter_fields(book[:path], fields)
-    scores = fields['degerler'].join('; ')
-    report_rows << [book[:path].basename.to_s, fields['degerler'].size, scores]
-    puts "  #{book[:path].basename} → degerler:#{fields['degerler'].size} [#{scores}]"
-  end
-
-  CSV.open(REPORT, 'w', write_headers: true, headers: %w[file count degerler]) do |csv|
-    report_rows.each { |row| csv << row }
-  end
-  puts "Rapor: #{REPORT}"
-end
-
-main if $PROGRAM_NAME == __FILE__

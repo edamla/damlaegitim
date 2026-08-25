@@ -18,15 +18,16 @@ authors: ["Sara Gürbüz Özeren"]
 illustrators: ["Süleyman Özkonuk"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [4]
 tags: ["Zaman Makinesi", Uygarlıklar, Geçmiş, Gelecek, Mayalar, "Mısır Uygarlığı", "Çin Seddi", "Atlantis Medeniyeti", Fetih, Keşif, Mitoloji, Efsane, Bilim, Tarih]
-degerler: [Özgürlük, Sorumluluk, Saygı, Vatanseverlik, Çalışkanlık, "Aile Bütünlüğü"]
-anatema: [Merak, "Gerçeği Arama", Muhakeme, Analitiklik, "Soru Sorma", Vatanseverlik, Saygı, Özgürlük, Çalışkanlık, Sorumluluk, Bağımsızlık, "Kendine İnanma (Öz Yeterlilik)"]
+degerler: [Sorumluluk, Saygı, Dostluk, Vatanseverlik, Özgürlük, Çalışkanlık]
+anatema: ["Merak ve Keşif", "Bilim ve Teknoloji", "Gelecek ve Yenilik"]
+egilimler: [Merak, "Gerçeği Arama", Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Kendine İnanma (Öz Yeterlilik)"]
 kazanim: [H.1.2.1, H.1.2.3, H.1.2.4, H.1.3.5, H.2.2.1, H.2.2.2, H.2.3.1, H.3.2.1, H.4.2.1, H.4.2.2]
-beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Görsel Okuryazarlık", "İletişim Becerisi", "Sosyal Farkındalık Becerisi", "Özetleme Becerisi", "Çözümleme Becerisi"]
-unite: ["DOĞA VE İNSAN", KÜTÜPHANEMİZ, "BİLİM VE TEKNOLOJİ", "GEÇMİŞTEN GELECEĞE MİRASIMIZ"]
+beceriler: ["Bilgi İşlemsel Düşünme Becerisi", "İletişim Becerisi", "Tarihsel Sorun Analizi ve Karar Verme Becerisi", "Bilimsel Veriye Dayalı Tahmin Becerisi", "Bilimsel Çıkarım Yapma Becerisi", "Bilimsel Sorgulama Becerisi"]
+unite: ["Bilim Ve Teknoloji", "Doğa Ve İnsan"]
 
 # Social Media Attributes
 youtube:

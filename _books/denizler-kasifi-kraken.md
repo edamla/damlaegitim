@@ -18,15 +18,16 @@ paper: "Kitap Kağıdı"
 authors: ["Necati Akbaba"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
 tags: ["Bilimsel Etik ve Kötüye Kullanım", "Denizlerin Gizemi ve Keşif", "Kararlılık ve Analitik Zekâ", "Cesaret ve Özveri", "Teknolojinin Gücü", "Ekip Çalışması ve Sadakat"]
-degerler: [Sorumluluk, Özgürlük, Saygı, Vatanseverlik, Sevgi, Dostluk]
-anatema: [Özgürlük, Saygı, Sevgi, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Güven", Muhakeme, Odaklanma]
+degerler: [Sorumluluk, Saygı, Sevgi, Dostluk, Merhamet, Duyarlılık]
+anatema: [Gizem, "Merak ve Keşif", "Bilim ve Teknoloji"]
+egilimler: [Merak, Odaklanma, Muhakeme, Sorumluluk, Bağımsızlık, Girişkenlik]
 kazanim: [H.1.2.1, H.1.2.2, H.1.2.4, H.2.2.1, H.2.2.2, H.3.2.1, H.4.2.1, H.4.2.2, H.4.2.3, H.4.2.4]
-beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kültür Okuryazarlıği", "Veri Okuryazarlığı", "Kendini Tanıma (Öz Farkındalık Becerisi)"]
-unite: ["Atatürk’ü TANIMAK", "DUYGULARIMI TANIYORUM"]
+beceriler: ["Kendini Tanıma (Öz Farkındalık Becerisi)", "İletişim Becerisi", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "Kendini Düzenleme (Öz Düzenleme Becerisi)", "Bilgi İşlemsel Düşünme Becerisi", "Sosyal Farkındalık Becerisi"]
+unite: ["DOĞA VE İNSAN", "BİLİM VE TEKNOLOJİ", "İLETİŞİM VE SOSYAL İLİŞKİLER"]
 
 # Social Media Attributes
 youtube:

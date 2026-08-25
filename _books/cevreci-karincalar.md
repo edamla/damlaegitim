@@ -18,15 +18,16 @@ paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
 tags: ["Çevre Bilinci", Dayanışma, "Gözlem ve Yeni Keşifler", "Bilimsel Merak", "Hayatta Kalma", "Üretkenlik ve Emeğin Değeri"]
-degerler: [Sorumluluk, Saygı, Estetik, Temizlik, "Sağlıklı Yaşam", Duyarlılık]
-anatema: [Duyarlılık, Estetik, Merak, "Sağlıklı Yaşam", Saygı, Sorumluluk, Temizlik, Bağımsızlık, "Azim ve Kararlılık", "Kendine İnanma (Öz Yeterlilik)", "Kendine Güvenme (Öz Güven)", Girişkenlik]
+degerler: [Sorumluluk, Sevgi, Saygı, Duyarlılık, Dostluk, "Aile Bütünlüğü"]
+anatema: [Dayanışma, "Çevre Bilinci", Empati]
+egilimler: [Merak, Bağımsızlık, Girişkenlik, Sorumluluk, Odaklanma, "Gerçeği Arama"]
 kazanim: [H.1.2.1, H.1.2.2, H.1.2.3, H.1.2.4, H.1.3.2, H.1.3.5, H.3.2.1, H.3.3.1, H.3.3.2, H.3.3.3]
-beceriler: ["Gözlemleme Becerisi", "Bilgi Toplama Becerisi", "Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Veri Okuryazarlığı"]
-unite: ["SAĞLIKLI YAŞIYORUM", "İLETİŞİM VE SOSYAL İLİŞKİLER", "DOĞA VE İNSAN"]
+beceriler: ["Kendini Tanıma (Öz Farkındalık Becerisi)", "İletişim Becerisi", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "Kendini Düzenleme (Öz Düzenleme Becerisi)", "Bilgi İşlemsel Düşünme Becerisi", "Sosyal Farkındalık Becerisi"]
+unite: ["DOĞA VE İNSAN", "İLETİŞİM VE SOSYAL İLİŞKİLER"]
 
 # Social Media Attributes
 youtube:

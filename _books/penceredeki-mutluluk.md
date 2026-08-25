@@ -19,15 +19,16 @@ authors: ["Onur Ömer Düzgün"]
 illustrators: ["Aslıhan Akı Çelik"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3, 4]
 tags: [Korku, Cesaret, Özgüven, Arkadaşlık, Dayanışma]
-degerler: [Saygı, Dostluk, Vatanseverlik, Adalet, Mahremiyet, Çalışkanlık]
-anatema: [Dostluk, Empati, Cesaret, "Azim ve Kararlılık", "Kendine Güvenme (Öz Güven)", Adalet, Çalışkanlık, Mahremiyet, Saygı, Vatanseverlik, Merak, Girişkenlik]
+degerler: [Saygı, Sorumluluk, Vatanseverlik, Dostluk, Çalışkanlık, Sevgi]
+anatema: [Dayanışma, Arkadaşlık, "Cesaret ve Korkular"]
+egilimler: [Merak, "Kendine Güvenme (Öz Güven)", Girişkenlik, Empati, Bağımsızlık, "Kendine İnanma (Öz Yeterlilik)"]
 kazanim: [H.1.2.1, H.1.2.3, H.1.2.4, H.1.3.1, H.1.3.2, H.1.3.3, H.1.3.4, H.1.3.5, H.4.2.1, H.4.2.2]
-beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Dijital Okuryazarlık", "Görsel Okuryazarlık", "Kendini Tanıma (Öz Farkındalık Becerisi)", "Kendini Düzenleme (Öz Düzenleme Becerisi)", "İletişim Becerisi"]
-unite: [KÜTÜPHANEMİZ, "KENDİMİZİ GELİŞTİRİYORUZ", "DOĞA VE İNSAN", "GEÇMİŞTEN GELECEĞE MİRASIMIZ"]
+beceriler: ["Bilgi İşlemsel Düşünme Becerisi", "İletişim Becerisi", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "Yansıtma Becerisi", "Gözleme Dayalı Tahmin Etme Becerisi", "Gözleme Dayalı Tahmin Etme"]
+unite: ["Doğa Ve İnsan", "Bilim Ve Teknoloji", "Hak Ve Sorumluluklarımız", "Atatürk Ve Kahramanlarımız"]
 
 # Social Media Attributes
 youtube:

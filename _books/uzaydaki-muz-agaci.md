@@ -19,15 +19,16 @@ authors: ["Nehir Aydın Gökduman"]
 illustrators: ["Melike Tan"]
 
 # Spesific Filterable Attributes
-# degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
+# anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3, 4]
 tags: []
-degerler: [Saygı, Vatanseverlik, Sorumluluk, Çalışkanlık, Dostluk, Sevgi]
-anatema: [Çalışkanlık, Saygı, Sorumluluk, Vatanseverlik, Merak, Bağımsızlık, "Kendine İnanma (Öz Yeterlilik)", "Kendine Güvenme (Öz Güven)", Empati, Girişkenlik, "Gerçeği Arama", Sistematiklik]
+degerler: [Dostluk, Sorumluluk, Saygı, Sevgi, Vatanseverlik, Çalışkanlık]
+anatema: [Empati, İletişim, "Merak ve Keşif"]
+egilimler: [Empati, Merak, "Gerçeği Arama", Bağımsızlık, Sistematiklik, "Kendine Güvenme (Öz Güven)"]
 kazanim: [H.1.2.1, H.1.2.3, H.1.2.4, H.2.2.1, H.2.2.2, H.3.1.1, H.3.2.1, H.4.1.1, H.4.2.1, H.4.2.2]
-beceriler: ["Dinleme/İzleme Becerisi", "Okuma Becerisi", "Konuşma Becerisi", "Yazma Becerisi", "Bilgi Okuryazarlığı", "Görsel Okuryazarlık", "İletişim Becerisi", "Sosyal Farkındalık Becerisi", "Özetleme Becerisi", "Çözümleme Becerisi"]
-unite: ["DOĞA VE İNSAN"]
+beceriler: ["İletişim Becerisi", "Bilgi İşlemsel Düşünme Becerisi", "Kendini Tanıma (Öz Farkındalık Becerisi)", "İletişim Kurma ve Paylaşma", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "Görsel İletişim Uygulamaları Oluşturma"]
+unite: ["Doğa Ve İnsan"]
 
 # Social Media Attributes
 youtube:

@@ -2,7 +2,7 @@
 
 > **Dokümantasyon:** Kurulum [README.md](README.md), mimari [project.md](project.md), tasarım [design.md](design.md). **Bu dosya** TurkiyeAPI, MEB, OOKGM ve HDX kaynaklı JSON’ların tek takip belgesidir; script veya şema değişince burayı güncelleyin.
 
-Öğretmen talep formu (`/ogretmen`) ve okul meta verisi, sitede durağan JSON olarak tutulur. Üretim **altı Python 3 fetch script’i** + **bir sync script** ile yapılır (yalnızca standart kütüphane; `pip` yok). Fetch script’leri `install.sh` / `start.sh` içinde otomatik çalışmaz; [`scripts/sync_site_data.py`](scripts/sync_site_data.py) yalnızca `start.sh` hook’unda tetiklenir (`docs/data` → site dosyaları).
+Öğretmen talep formu (`/ogretmen`) ve okul meta verisi, sitede durağan JSON olarak tutulur. Üretim **yedi Python 3 fetch script’i** + **bir sync script** + **bir Ruby build script** ile yapılır (yalnızca standart kütüphane; `pip` yok). Fetch script’leri `install.sh` / `start.sh` içinde otomatik çalışmaz; [`scripts/sync_site_data.py`](scripts/sync_site_data.py) yalnızca `start.sh` hook’unda tetiklenir (`docs/data` → site dosyaları). TYMM işlenmiş çıktısı (`_data/tymm.json`) doğrudan `build_tymm_reference.rb` ile üretilir; sync’e dahil değildir.
 
 | Script | Kanonik çıktı (`docs/data/`) | Site türetilmiş | Yaklaşık boyut | Tüketici |
 |--------|------------------------------|-----------------|----------------|----------|
@@ -12,6 +12,7 @@
 | [`scripts/fetch_ozel_okullar.py`](scripts/fetch_ozel_okullar.py) | Aynı `okullar.json` (`ozel: true`) | sync | kamu dosyasına ek | Wizard datalist; detay script’i atlar |
 | [`scripts/fetch_okuldetay.py`](scripts/fetch_okuldetay.py) | `okullar_detay.json` (monolit) | `assets/data/okullar-harita/{il_kod}.json` (sync) | ~90 MB → il parçaları | `/okullar` harita detay + koordinat |
 | [`scripts/fetch_population.py`](scripts/fetch_population.py) | `population.json` | — (sync yok) | ~300 KB | (ileride harita / analiz) |
+| [`scripts/fetch_tymm.py`](scripts/fetch_tymm.py) | `tymm/*/api-response.json` + `tymm/cerceveler.json` | `_data/tymm.json` (`build_tymm_reference.rb`) | ~100 KB ham → ~100 KB işlenmiş | Öğretmen sihirbazı; hikâye müfredat eşlemesi |
 | [`scripts/sync_site_data.py`](scripts/sync_site_data.py) | — | `turkiye_adres_il_ilce` + `assets/data/*` | türetilmiş | `start.sh`; fetch script’leri bitişte de çağırır |
 
 Sıra zorunlu: adres → (isteğe bağlı geodata) → kamu kurum listesi → özel birleştirme → kurum detayı. Nüfus (`fetch_population.py`) bağımsız; `turkiye_adres.json` önkoşul.
@@ -36,6 +37,11 @@ flowchart LR
   api --> pop["docs/data/population.json"]
   eoner["eoner/ADNKSVerileri GitHub"] --> pop
   adres --> pop
+  tymmApi["tymm.meb.gov.tr Chart API"] --> tymmRaw["docs/data/tymm/*/api-response.json"]
+  tymmDeger["TYMM çerçeveleri"] --> tymmHam["docs/data/tymm/cerceveler.json"]
+  tymmRaw --> tymmBuild["build_tymm_reference.rb"]
+  tymmHam --> tymmBuild
+  tymmBuild --> tymmSite["_data/tymm.json"]
   slim --> wizardIl["/ogretmen il-ilçe"]
   assets --> wizardOkul["/ogretmen okul adı"]
   geoOut --> okullarPage["/okullar harita"]
@@ -49,7 +55,7 @@ flowchart LR
 - Çalıştırma: repo kökünden `python scripts/<script>.py` (Windows Git Bash veya sistem Python 3).
 - Ağ: nazik tarama — gecikme, 4 deneme, üstel bekleme. Toplu tarama saatler sürebilir.
 - JSON: UTF-8, `ensure_ascii=False`. Adres dosyası girintili; `okullar` / `okullar_detay` / `turkiye_geodata` sıkışık (`separators=(",", ":")`).
-- **Kanonik dosyalar** `docs/data/` altında (gitignore: `/docs`). Büyük JSON’lar git’te **tutulmaz**; site için `sync_site_data.py` veya `start.sh` kullanın.
+- **Kanonik dosyalar** `docs/data/` altında (gitignore: `/docs`; Jekyll `_config.yml` `exclude`). Büyük JSON’lar git’te **tutulmaz**; site için `sync_site_data.py` veya `start.sh` kullanın.
 - `_data/turkiye_adres_il_ilce.json` (~80 KB) git’te kalır; clone sonrası il/ilçe wizard sync olmadan çalışır.
 - **`_data/okullar_detay.json` kullanılmaz.** Eski mimariden kalan kopya Jekyll build’ini kırar; `sync_site_data.py` başında ve sonunda otomatik silinir; `start.sh` Jekyll öncesi `--cleanup-only` tekrar çağırır (IDE’de açık dosya veya paralel fetch geri yazabilir).
 - `--il` kamu script’inde plaka / TurkiyeAPI `kod` (`1` Adana, `34` İstanbul); OOKGM script’inde il adı veya plaka (`ANKARA` / `6`). MEB Bakanlık kaydı il kodu `99` yalnızca kamu listesinde vardır.
@@ -342,7 +348,151 @@ Kayıt alanları (hepsi her okulda yok; boş anahtar yazılmaz):
 
 ---
 
-## 4. Harita sınır verisi (`fetch_geodata.py`)
+## 4. TYMM müfredat verisi (`fetch_tymm.py` + `build_tymm_reference.rb`)
+
+[MEB TYMM](https://tymm.meb.gov.tr/) verisi `_data/tymm.json` içinde **iki katmandan** oluşur; ikisi de aynı build çıktısındadır:
+
+| Katman | MEB kaynağı | `tymm.json` alanı | Ne içerir |
+|--------|-------------|-------------------|-----------|
+| **Çerçeveler** (resmi sözlük) | `/beceriler/*` accordion sayfaları | `cerceveler` | Kodlu tam ağaç: D1→D1.1→D1.1.1, E1→E1.1, KB2→KB2.1→KB2.1.SB1… |
+| **Müfredat** (ünite etiketleri) | Ders programı grafik API | `grades` | Sınıf → ünite → `degerler` / `egilimler` / `beceriler` **düz etiket listeleri** |
+
+**Önkoşul:** yok (okul fetch zincirinden bağımsız).
+
+### A. Çerçeveler — Değerler, Beceriler, Eğilimler (tam ağaç)
+
+Tek komutla üç resmi çerçeve `docs/data/tymm/cerceveler.json` dosyasına yazılır; `build_tymm_reference.rb` bunu `cerceveler` altına kopyalar.
+
+| Bölüm | Kaynak | Hiyerarşi |
+|-------|--------|-----------|
+| `degerler` | [Erdem-Değer-Eylem](https://tymm.meb.gov.tr/beceriler/erdem-deger-eylem-cercevesi) | D1… → D1.1… → D1.1.1… (20 değer, 70 alt, 405 süreç) |
+| `beceriler` | 5 beceri sayfası (tablo) | KB/SDB/OB/MAB… → alt → *.SB* |
+| `egilimler` | [Eğilimler](https://tymm.meb.gov.tr/beceriler/egilimler) | E1… → E1.1… (3 grup, 21 eğilim) |
+
+Beceri alt anahtarları (`cerceveler.beceriler`):
+
+| Anahtar | Slug | Kaynak |
+|---------|------|--------|
+| `kavramsal` | `kavramsal-beceriler` | [Kavramsal Beceriler](https://tymm.meb.gov.tr/beceriler/kavramsal-beceriler) |
+| `alan` | `alan-becerileri` | [Alan Becerileri](https://tymm.meb.gov.tr/beceriler/alan-becerileri) |
+| `sosyal_duygusal` | `sosyal-duygusal-ogrenme-becerileri` | [Sosyal-Duygusal Öğrenme](https://tymm.meb.gov.tr/beceriler/sosyal-duygusal-ogrenme-becerileri) |
+| `sosyal_bilimler` | `sosyal-bilimler-alan-becerileri` | [Sosyal Bilimler Alan Becerileri](https://tymm.meb.gov.tr/beceriler/sosyal-bilimler-alan-becerileri) |
+| `okuryazarlik` | `okuryazarlik-becerileri` | [Okuryazarlık Becerileri](https://tymm.meb.gov.tr/beceriler/okuryazarlik-becerileri) |
+
+### B. Müfredat — ders programı sayfalarından ünite bileşenleri
+
+Ders programı sayfalarındaki **Beceri Dağılımı** grafiği `Chart/GetStackCharts` API üzerinden çekilir. Grafikteki her tema (ünite) için **Değerler**, **Eğilimler** ve **Beceriler** sütunları ayrıştırılıp `grades.{sinif}.unites[]` altına düz liste olarak yazılır (kod veya alt ağaç yok; yalnızca etiket adları).
+
+| Ders programı sayfası | API slug | Sınıflar | Durum |
+|----------------------|----------|----------|-------|
+| [İlkokul Türkçe](https://tymm.meb.gov.tr/ogretim-programlari/ders/ilkokul-turkce-dersi) | `ilkokul-turkce-dersi` | 1–4 | ✅ çekiliyor |
+| [Ortaokul Türkçe](https://tymm.meb.gov.tr/ogretim-programlari/ders/ortaokul-turkce-dersi) | `ortaokul-turkce-dersi` | 5–8 | ✅ çekiliyor |
+| [Türk Dili ve Edebiyatı](https://tymm.meb.gov.tr/ogretim-programlari/ders/turk-dili-ve-edebiyati-dersi) | `turk-dili-ve-edebiyati-dersi` | Hazırlık, 9–12 | ❌ henüz dahil değil |
+
+API uç noktası: `GET https://tymm.meb.gov.tr/Chart/GetStackCharts?url={slug}`
+
+Ham yanıt `stackedChart[]` içinde HTML gömülü tema listeleri taşır; `build_tymm_reference.rb` bunları ünite / etiket yapısına dönüştürür. Etiketler `cerceveler` sözlüğündeki adlarla örtüşür (ör. ünitede `"Merak"` → `cerceveler.egilimler` içinde `E1.1`); ancak müfredat katmanı kod içermez.
+
+### Komut
+
+```bash
+# Tam güncelleme (önerilen)
+python scripts/fetch_tymm.py --cerceveler          # cerceveler.json (değerler + beceriler + eğilimler ağaçları)
+python scripts/fetch_tymm.py                       # ilkokul + ortaokul müfredat API
+ruby scripts/build_tymm_reference.rb               # → _data/tymm.json
+
+# Parçalı
+python scripts/fetch_tymm.py --only ilkokul-turkce
+python scripts/fetch_tymm.py --from-vendor         # ağsız doğrulama
+```
+
+Ham dosyalar (`docs/data/tymm/`, gitignore):
+
+| Dosya | Komut | İçerik |
+|-------|-------|--------|
+| `cerceveler.json` | `--cerceveler` | Resmi çerçeve ağaçları (3 grup) |
+| `ilkokul-turkce/api-response.json` | varsayılan fetch | 1–4. sınıf grafik ham verisi |
+| `ortaokul-turkce/api-response.json` | varsayılan fetch | 5–8. sınıf grafik ham verisi |
+
+Site çıktısı: **`_data/tymm.json`** (tek dosya; `cerceveler` + `grades` + `meta`). `build_tymm_reference.rb` ayrıca `docs/data/tymm/tymmreferans.csv` üretir.
+
+### Şema (`_data/tymm.json`)
+
+```json
+{
+  "meta": {
+    "kaynak_mufredat": "https://tymm.meb.gov.tr/ogretim-programlari/ders/",
+    "kaynak_degerler": "https://tymm.meb.gov.tr/beceriler/erdem-deger-eylem-cercevesi",
+    "referans_ham": "docs/data/tymm/",
+    "guncelleme": "YYYY-MM-DD",
+    "ders": "turkce",
+    "siniflar": ["1", "2", "3", "4", "5", "6", "7", "8"]
+  },
+  "cerceveler": {
+    "degerler": {
+      "baslik": "Erdem-Değer-Eylem Çerçevesi — Değerler",
+      "degerler": [{ "kod": "D1", "ad": "Adalet", "alt_kavramlar": [{ "kod": "D1.1", "surec_bilesenleri": [{ "kod": "D1.1.1" }] }] }]
+    },
+    "beceriler": {
+      "kavramsal": { "gruplar": [{ "kod": "KB2", "alt_kavramlar": [{ "kod": "KB2.1", "surec_bilesenleri": [{ "kod": "KB2.1.SB1" }] }] }] }
+    },
+    "egilimler": {
+      "gruplar": [{ "kod": "E1", "alt_kavramlar": [{ "kod": "E1.1", "ad": "Merak" }] }]
+    }
+  },
+  "grades": {
+    "1": {
+      "grade": "1",
+      "unites": [{
+        "label": "GÜZEL DAVRANIŞLARIMIZ",
+        "degerler": ["Merhamet", "Saygı"],
+        "egilimler": ["Merak"],
+        "beceriler": ["Okuma Becerisi"]
+      }]
+    }
+  }
+}
+```
+
+| Alan | Not |
+|------|-----|
+| `cerceveler.degerler` | Resmi D1–D20 tam ağacı; kitap `degerler` alanı bu kümeden seçilir |
+| `cerceveler.degerler.degerler[].alt_kavramlar[].surec_bilesenleri` | D1.1.1… süreç bileşenleri |
+| `cerceveler.beceriler.*` | 5 beceri çerçevesi (kavramsal, alan, sosyal_duygusal, sosyal_bilimler, okuryazarlik) |
+| `cerceveler.egilimler` | E1–E3 grupları; `alt_kavramlar` = E1.1 Merak, E2.3 Girişkenlik… |
+| `grades.*.unites[].degerler` | [İlkokul/Ortaokul Türkçe](https://tymm.meb.gov.tr/ogretim-programlari/ders/ilkokul-turkce-dersi) programındaki ünite değer etiketleri (düz liste) |
+| `grades.*.unites[].egilimler` | Aynı ünitelerdeki eğilim etiketleri (müfredat etiketi; `map_story_egilimler` ünite ipucu olarak kullanır) |
+| `grades.*.unites[].beceriler` | Aynı ünitelerdeki beceri etiketleri (alan + okuryazarlık + SDÖ + kavramsal birleşik) |
+
+`cerceveler` = resmi referans ağaçları (`/beceriler/*`). `grades` = ders programı grafiklerinden ünite başına etiket listeleri. İkisi farklı amaçla kullanılır; adlar örtüşse de yapı aynı değildir.
+
+### Hikâye kitap front matter (`genre: story`)
+
+| Alan | Kaynak | Limit | Not |
+|------|--------|-------|-----|
+| `anatema` | [`_data/anatemalar.json`](_data/anatemalar.json) | 3 | Editoryal tema (Macera, Doğa, Empati…) |
+| `degerler` | `cerceveler.degerler` | 6 | Erdem-Değer çerçevesi yaprak adları |
+| `egilimler` | `cerceveler.egilimler` | 6 | E1.1 Merak, E2.3 Girişkenlik… |
+| `beceriler` | `cerceveler.beceriler.*` | 6 | 5 beceri çerçevesi yaprak adları |
+| `unite` | `grades.*.unites` | — | Ünite etiketleri; UI ve sihirbaz filtre dışı |
+| `kazanim` | Öykümatik | — | Ayrı hero bölümünde gösterilir |
+
+Toplu eşleme (tüm story kitaplar):
+
+```bash
+python scripts/fetch_tymm.py --cerceveler   # gerekirse
+ruby scripts/build_tymm_reference.rb
+ruby scripts/map_story_metadata.rb          # anatema + degerler + egilimler + beceriler + unite
+ruby scripts/normalize_book_frontmatter.rb  # şema sırası ve varsayılanlar
+```
+
+Rapor: `docs/story-metadata-report.csv`. Orchestrator: [`scripts/map_story_metadata.rb`](scripts/map_story_metadata.rb); yardımcılar: [`scripts/curriculum_lib.rb`](scripts/curriculum_lib.rb).
+
+`_data/tymm.json` git'te tutulur (~100 KB); clone sonrası sihirbaz ve eşleme script'leri sync olmadan çalışır. Ham `docs/data/tymm/` gitignore'dadır (`/docs`).
+
+---
+
+## 5. Harita sınır verisi (`fetch_geodata.py`)
 
 [HDX COD-AB](https://data.humdata.org/dataset/cod-ab-tur) — Harita Genel Müdürlüğü kaynaklı ülke (ADM0), il (ADM1, 81) ve ilçe (ADM2, 973) sınır poligonları. Koordinat noktaları (okul vb.) bu dosyada **yoktur**; harita uygulaması sınır overlay ile `okullar_detay` noktalarını ayrı katmanda birleştirir.
 
@@ -437,6 +587,8 @@ Harita katmanları: OSM taban + `ulke`/`iller`/`ilceler` poligon overlay + `okul
 | `assets/data/okullar-harita/` | Aynı sayfa — `meta.json` + `{il_kod}.json` lazy fetch; okul listesi, detay ve koordinatlı marker. `sync_site_data.py` monolit `okullar_detay.json` + `okullar.json` birleşimini il parçalarına böler. |
 | `docs/data/okullar_detay.json` | Kanonik monolit; tarayıcıya ve Jekyll `site.data`'ya girmez. |
 | `docs/data/turkiye_geodata.json` | Kanonik; tarayıcıya doğrudan gitmez. |
+| `_data/tymm.json` | [`_layouts/ogretmen-wizard.html`](_layouts/ogretmen-wizard.html) — `cerceveler` + `grades`; [`scripts/map_story_metadata.rb`](scripts/map_story_metadata.rb) ve alt modüller. |
+| `docs/data/tymm/` | Ham API JSON, PDF, referans CSV; gitignore. |
 
 **`/okullar` hayalet sayfa:** menü, footer, `llms.txt` ve sitemap dışı; `robots: noindex, nofollow`; `ghost: true` → `ai-seo-crawler` yok. Yalnızca doğrudan URL ile erişilir.
 
@@ -452,8 +604,9 @@ Wizard mimarisi: [project.md — Öğretmen talep formu](project.md#öğretmen-t
 4. `python scripts/fetch_ozel_okullar.py` — OOKGM özel okulları mevcut `docs/data/okullar.json` içine birleştirir; sync assets kopyasını yazar.
 5. `python scripts/fetch_okuldetay.py` — yeni veya eksik detay. Bitişte sync harita il parçalarını günceller. Önceki kamu adımı `web`/`kurum_kodu` değiştirdiyse `--force` veya ilgili `--kurum-kodu`.
 6. `python scripts/sync_site_data.py` — harita parçaları dahil tüm site türetilmiş dosyalar (`start.sh` bunu da çağırır).
-7. `python scripts/fetch_population.py` — isteğe bağlı; `turkiye_adres.json` önkoşul. Site sync’e dahil değil.
-8. Bu belgedeki tarih/sayı notunu gerekirse güncelleyin; şema değiştiyse örnek JSON’u da.
+7. `python scripts/fetch_population.py` — isteğe bağlı; `turkiye_adres.json` önkoşul. Site sync'e dahil değil.
+8. `python scripts/fetch_tymm.py` (+ isteğe bağlı `--cerceveler` / `--degerler`) ve `ruby scripts/build_tymm_reference.rb` — müfredat veya çerçeve güncellendiğinde. Ardından `ruby scripts/map_story_metadata.rb` ile story kitap front matter yenilenir.
+9. Bu belgedeki tarih/sayı notunu gerekirse güncelleyin; şema değiştiyse örnek JSON'u da.
 
 Tek il denemesi çıktıyı kısmi yapmasın diye `fetch_okullar.py --il` üretim dosyasına yazılmamalıdır. `fetch_ozel_okullar.py --il` diğer illeri silmez ama testte yine `--output` kullanın. Detay için `--il` / `--limit` güvenlidir (resume diğer illeri silmez).
 
@@ -593,6 +746,7 @@ python scripts/fetch_population.py --yil 2024 --no-impute
 - **OOKGM sayacı:** “N adet kurum bulundu” ile tablo satır sayısı uyuşmayabilir; tablo kaynak kabul edilir.
 - **Özel kurum kodu:** 2026’da okul bazında açık MEB/ÖSYM kod listesi yok; özel kayıtlarda `kurum_kodu` / `web` yazılmaz.
 - **Nüfus çocuk verisi:** Otomatik modda çocuk sayıları eoner 2014 ADNKS yaş yapısından türetilir; toplam nüfus TurkiyeAPI ile günceldir. TÜİK 2024 il/ilçe yaş tablosu API ile alınamaz; güncel üretim için vendor CSV gerekir (`docs/data/reference/tuik/`).
+- **TYMM API:** Chart uç noktası bazen POST ile 500 döner; `fetch_tymm.py` GET `?url=` kullanır. Kapsam: ilkokul + ortaokul Türkçe (1–8); [TDE lise programı](https://tymm.meb.gov.tr/ogretim-programlari/ders/turk-dili-ve-edebiyati-dersi) henüz çekilmiyor. `cerceveler` = `/beceriler/*` tam ağaç; `grades` = ders programı ünite etiketleri (bkz. §4).
 
 ---
 
@@ -607,4 +761,6 @@ python scripts/sync_site_data.py
 python scripts/fetch_okuldetay.py --il 1 --limit 20
 python scripts/fetch_okuldetay.py
 python scripts/fetch_population.py
+python scripts/fetch_tymm.py --degerler
+ruby scripts/build_tymm_reference.rb
 ```
