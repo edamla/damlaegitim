@@ -21,7 +21,7 @@ authors: ["Necati Akbaba"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: ["Cesaret ve Macera", Dayanışma, Sorumluluk, "Kültürel Miras", "İyilik ve Kötülük", "Şifre Çözme"]
+tags: ["Cesaret ve Macera", Dayanışma, "Kültürel Miras", "İyilik ve Kötülük", "Şifre Çözme"]
 degerler: [Sorumluluk, Saygı, Vatanseverlik, Özgürlük, Dostluk, Dürüstlük]
 anatema: [Dayanışma, Macera, "Kültürel Miras"]
 egilimler: [Sorumluluk, Merak, Bağımsızlık, Muhakeme, "Soru Sorma", "Gerçeği Arama"]

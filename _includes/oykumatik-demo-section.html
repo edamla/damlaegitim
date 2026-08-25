@@ -1,0 +1,18 @@
+<section id="oykumatik-demo" class="mt-5 pt-4 border-top" aria-labelledby="oykumatik-demo-heading">
+  <h2 class="h4 mb-2" id="oykumatik-demo-heading">Öykümatik demo</h2>
+  <p class="text-muted mb-4">Aşağıdaki örnek soruları çözün; Öykümatik tarzı sınıf raporu özetini görün.</p>
+
+  <div id="oykumatik-demo-root"></div>
+
+  <div class="mt-5">
+    <h3 class="h5 text-muted">Statik örnek rapor (referans)</h3>
+    {% include oykumatik-report.html embedded=true %}
+  </div>
+</section>
+
+<script defer src="{{ site.baseurl }}/assets/js/oykumatik-demo.js?v={{ site.time | date: '%s' }}"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  if (window.OykumatikDemo) OykumatikDemo.init('oykumatik-demo-root');
+});
+</script>

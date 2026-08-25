@@ -7,14 +7,12 @@ permalink: "/titles"
 
 <div class="container">
     <h4 class="fw-bold spanborder"><span>Yeni Ürünler</span></h4>
-    {% assign bookarray = "" | split: ',' %}
-    {% assign sortedarray = "" | split: ',' %}
+    <div class="row row-cols-2 row-cols-md-4 g-3 mb-4">
     {% assign sortedarray = site.books | sort: "publisher" | reverse %}
     {% for book in sortedarray limit:10 %}
-        {% assign bookarray = bookarray | push: book %}
+        <div class="col">{% include book-card.html book=book %}</div>
     {% endfor %}
-    {% assign books = bookarray %}
-    {% include product-slider.html %}
+    </div>
 
     <style>
         .btn-group {

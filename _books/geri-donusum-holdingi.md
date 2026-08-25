@@ -21,7 +21,7 @@ authors: ["Sara Gürbüz Özeren"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: [İnovasyon, Kararlılık, "Sabır ve Mücadele", "Kültürel Miras", "Çevre Bilinci", Sürdürülebilirlik, "Öz Güven"]
+tags: [İnovasyon, Kararlılık, "Sabır ve Mücadele", "Kültürel Miras", "Çevre Bilinci", Sürdürülebilirlik]
 degerler: [Sorumluluk, Saygı, Sabır, Özgürlük, Temizlik, Duyarlılık]
 anatema: ["Kültürel Miras", "Çevre Bilinci", "Okul ve Eğitim"]
 egilimler: [Merak, Bağımsızlık, Sorumluluk, Muhakeme, "Kendine Güvenme (Öz Güven)", Odaklanma]

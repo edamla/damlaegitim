@@ -21,7 +21,7 @@ illustrators: ["Gökhan Kalafat"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [4]
-tags: [Arkadaşlık, Yardımseverlik, Cesaret, "Vurdumduymaz Olmamak", "Takım Ruhu", "Planlı Çalışma"]
+tags: [Arkadaşlık, Cesaret, "Vurdumduymaz Olmamak", "Takım Ruhu", "Planlı Çalışma"]
 degerler: [Yardımseverlik, Sorumluluk, Saygı, Çalışkanlık, Dostluk, Vatanseverlik]
 anatema: [Arkadaşlık, "Cesaret ve Korkular", Empati]
 egilimler: [Empati, "Kendine Güvenme (Öz Güven)", Merak, Girişkenlik, Bağımsızlık, "Kendine İnanma (Öz Yeterlilik)"]

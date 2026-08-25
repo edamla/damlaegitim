@@ -21,7 +21,7 @@ authors: ["Nur Dombaycı"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: ["Bilimsel Merak", Kardeşlik, "Aile Sevgisi", Sabır, Sorumluluk, "Hayal Gücü"]
+tags: ["Bilimsel Merak", Kardeşlik, "Aile Sevgisi", "Hayal Gücü"]
 degerler: [Sorumluluk, Sabır, Sevgi, Saygı, "Aile Bütünlüğü", Merhamet]
 anatema: ["Hayal Gücü", "Kültür ve Tarih", "Merak ve Keşif"]
 egilimler: [Merak, Sorumluluk, Odaklanma, Muhakeme, Bağımsızlık, "Kendine Güvenme (Öz Güven)"]

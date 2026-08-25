@@ -22,7 +22,7 @@ illustrators: ["Ahmet Demirtaş"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3, 4]
-tags: [Ahlak, "Alçak Gönüllülük", Azim, Cömertlik, Dayanışma, Dostluk, Dürüstlük, Güven, İyilikseverlik, Kardeşlik, Merhamet, Paylaşma, Sabır, Sadakat, Saygı, Sevgi]
+tags: [Ahlak, "Alçak Gönüllülük", Azim, Cömertlik, Dayanışma, İyilikseverlik, Kardeşlik, Paylaşma, Sadakat]
 degerler: [Saygı, Dostluk, Merhamet, Sevgi, Sorumluluk, Dürüstlük]
 anatema: [Dayanışma, "Paylaşma ve Yardımlaşma", "Azim ve Başarı"]
 egilimler: [Empati, Merak, "Kendine Güvenme (Öz Güven)", Bağımsızlık, "Azim ve Kararlılık", Sorumluluk]

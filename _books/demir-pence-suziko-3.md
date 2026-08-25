@@ -21,7 +21,7 @@ authors: ["Sara Gürbüz Özeren"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: ["Yapay Zekâ", Vatanseverlik, "Tarih Bilinci", Dayanışma, Macera, "Kültürel Keşif"]
+tags: ["Yapay Zekâ", "Tarih Bilinci", Dayanışma, Macera, "Kültürel Keşif"]
 degerler: [Vatanseverlik, Saygı, Sorumluluk, Özgürlük, Dostluk, Dürüstlük]
 anatema: [Dayanışma, Macera, Gizem]
 egilimler: [Merak, Bağımsızlık, Muhakeme, Sorumluluk, "Soru Sorma", "Gerçeği Arama"]

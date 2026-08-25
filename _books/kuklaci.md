@@ -21,7 +21,7 @@ authors: ["Kemalettin Tuğcu"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: ["Çocuk Sevgisi", "Kuşak Çatışması", "Kültürel Miras", Empati, "Sanatın Gücü", Yardımlaşma]
+tags: ["Çocuk Sevgisi", "Kuşak Çatışması", "Kültürel Miras", "Sanatın Gücü", Yardımlaşma]
 degerler: [Sevgi, Dostluk, Saygı, Mahremiyet, Sorumluluk, "Aile Bütünlüğü"]
 anatema: [Empati, "Kültürel Miras", "Paylaşma ve Yardımlaşma"]
 egilimler: [Empati, Sorumluluk, Odaklanma, Bağımsızlık, Merak, Girişkenlik]

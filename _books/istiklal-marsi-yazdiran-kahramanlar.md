@@ -21,7 +21,7 @@ illustrators: ["Erhan Acar"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3, 4]
-tags: [Gazilik, Şehitlik, Vatanseverlik, Tarih, Kültür, Medeniyet, Bayrak, "Kültür Birliği", Mücadele, "Cihad Şuuru", Kahramanlık, Gençlik, Asker, Ordu, Cesaret, Millet]
+tags: [Gazilik, Şehitlik, Tarih, Kültür, Medeniyet, Bayrak, "Kültür Birliği", Mücadele, "Cihad Şuuru", Kahramanlık, Gençlik, Asker, Ordu, Cesaret, Millet]
 degerler: [Vatanseverlik, Saygı, Sorumluluk, Sevgi, Çalışkanlık, Dostluk]
 anatema: ["Kültür ve Tarih", "Cesaret ve Korkular", "Kültürel Miras"]
 egilimler: [Merak, "Kendine Güvenme (Öz Güven)", Girişkenlik, Empati, "Kendine İnanma (Öz Yeterlilik)", Bağımsızlık]

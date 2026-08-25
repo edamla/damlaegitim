@@ -21,7 +21,7 @@ authors: ["Sara Gürbüz Özeren"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: ["Okuma Kültürü", "Korsanla Mücadele", Cesaret, "Telif Hakları", "Arkadaşlık ve Dayanışma", Dürüstlük]
+tags: ["Okuma Kültürü", "Korsanla Mücadele", Cesaret, "Telif Hakları", "Arkadaşlık ve Dayanışma"]
 degerler: [Sorumluluk, Saygı, Özgürlük, Dürüstlük, Adalet, Estetik]
 anatema: [Dayanışma, Arkadaşlık, "Cesaret ve Korkular"]
 egilimler: [Merak, Odaklanma, Muhakeme, "Kendine Güvenme (Öz Güven)", Sorumluluk, Bağımsızlık]

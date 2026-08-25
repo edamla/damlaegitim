@@ -1,9 +1,0 @@
-{% if book.ean %}
-<div class="col-6 col-md-3">
-	<a href="{{site.baseurl}}/{{book.url}}">
-	<h2 class="mb-1 h4 fw-bold">{{ book.title }}</h2>
-	{% assign eanimage_class = "w-100" %}
-	{% include eanimage.html book=book %}
-	</a>
-</div>
-{% endif %}

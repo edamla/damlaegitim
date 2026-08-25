@@ -1,0 +1,65 @@
+---
+layout: default
+---
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/curriculum-browse.css?v={{ site.time | date: '%s' }}">
+
+<div class="container curriculum-browse"
+     data-curriculum-field="{{ page.curriculum_field }}"
+     data-chip-class="{{ page.curriculum_chip_class | default: page.curriculum_field }}"
+     data-empty-hint="{{ page.curriculum_empty_hint | default: 'Bir seçim yapın' }}"
+     data-baseurl="{{ site.baseurl }}">
+
+  <header class="curriculum-browse__header">
+    <h1 class="curriculum-browse__title">{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="curriculum-browse__lead text-muted">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <nav class="curriculum-browse__tabs" aria-label="Müfredat keşif sayfaları">
+    <a class="curriculum-browse__tab{% if page.curriculum_field == 'anatema' %} is-active{% endif %}" href="{{ site.baseurl }}/anatemalar"{% if page.curriculum_field == 'anatema' %} aria-current="page"{% endif %}>Anatemalar</a>
+    <a class="curriculum-browse__tab{% if page.curriculum_field == 'degerler' %} is-active{% endif %}" href="{{ site.baseurl }}/degerler"{% if page.curriculum_field == 'degerler' %} aria-current="page"{% endif %}>Değerler</a>
+    <a class="curriculum-browse__tab{% if page.curriculum_field == 'egilimler' %} is-active{% endif %}" href="{{ site.baseurl }}/egilimler"{% if page.curriculum_field == 'egilimler' %} aria-current="page"{% endif %}>Eğilimler</a>
+    <a class="curriculum-browse__tab{% if page.curriculum_field == 'beceriler' %} is-active{% endif %}" href="{{ site.baseurl }}/beceriler"{% if page.curriculum_field == 'beceriler' %} aria-current="page"{% endif %}>Beceriler</a>
+  </nav>
+
+  <section class="curriculum-browse__grades" aria-labelledby="curriculum-grade-heading">
+    <h2 class="curriculum-browse__section-title" id="curriculum-grade-heading">Sınıf seçin</h2>
+    <div class="curriculum-browse__grade-grid" id="curriculum-grade-grid" role="group" aria-label="Sınıf seçimi">
+      {% for g in (1..8) %}
+      <button type="button" class="curriculum-browse__grade-btn" data-grade="{{ g }}">{{ g }}. Sınıf</button>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="curriculum-browse__filters" aria-labelledby="curriculum-chip-heading">
+    <h2 class="curriculum-browse__section-title" id="curriculum-chip-heading">{{ page.curriculum_filter_heading | default: 'Konu seçin' }}</h2>
+    {% if page.curriculum_field == 'beceriler' %}
+    <div class="curriculum-browse__search-wrap">
+      <input type="search" class="form-control curriculum-browse__search" id="curriculum-chip-search" placeholder="Beceri ara…" aria-label="Beceri ara">
+    </div>
+    {% endif %}
+    <div class="curriculum-browse__chips-wrap">
+      <div class="curriculum-browse__chips" id="curriculum-chips" role="group" aria-label="{{ page.curriculum_filter_heading | default: 'Konu seçin' }}"></div>
+    </div>
+  </section>
+
+  <section class="curriculum-browse__results" aria-labelledby="curriculum-results-heading">
+    <h2 class="curriculum-browse__section-title visually-hidden" id="curriculum-results-heading">Kitaplar</h2>
+    <p class="curriculum-browse__status text-muted" id="curriculum-status" aria-live="polite"></p>
+    <div class="row gap-y listbooks-home" id="curriculum-results"></div>
+  </section>
+
+  {% if content != '' %}
+  <div class="curriculum-browse__content page-content">
+    {{ content }}
+  </div>
+  {% endif %}
+</div>
+
+<script type="application/json" id="curriculum-catalog">{% include curriculum-catalog.json.liquid %}</script>
+<script type="application/json" id="curriculum-label-order">{% include curriculum-label-order.json.liquid field=page.curriculum_field %}</script>
+<script type="application/json" id="curriculum-deger-order">{{ site.data.tymm.cerceveler.degerler.degerler | map: 'ad' | jsonify }}</script>
+
+<script defer src="{{ site.baseurl }}/assets/js/book-filter.js?v={{ site.time | date: '%s' }}"></script>
+<script defer src="{{ site.baseurl }}/assets/js/curriculum-browse.js?v={{ site.time | date: '%s' }}"></script>

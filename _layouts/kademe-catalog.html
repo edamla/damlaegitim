@@ -1,0 +1,46 @@
+---
+layout: default
+---
+{% include kademe-seo.html data_only=true %}
+<div class="container py-4">
+  <nav class="sinif-landing__breadcrumb mb-3" aria-label="Sayfa yolu">
+    <ol class="breadcrumb mb-0 small">
+      <li class="breadcrumb-item"><a href="{{ site.baseurl }}/">Anasayfa</a></li>
+      <li class="breadcrumb-item"><a href="{{ site.baseurl }}/urunler">Ürünler</a></li>
+      <li class="breadcrumb-item active" aria-current="page">{{ kademe_heading }}</li>
+    </ol>
+  </nav>
+
+  <header class="mb-4">
+    <h1 class="display-5">{{ page.title }}</h1>
+    <p class="lead text-muted">
+      {{ page.title }} ({{ kademe_range_label }}): Yeni Maarif Modeli uyumlu
+      {% if kademe_education_count > 0 %}<strong>{{ kademe_education_count }} eğitim seti</strong>{% endif %}{% if kademe_education_count > 0 and kademe_story_count > 0 %} ve {% endif %}{% if kademe_story_count > 0 %}<strong>{{ kademe_story_count }} hikaye kitabı</strong>{% endif %}.
+      Sınıf ve tür seçerek listeleyin; <a href="{{ site.baseurl }}/urunler">tüm kataloğu</a> da inceleyebilirsiniz.
+    </p>
+  </header>
+
+  {% if page.kademe != 'okul-oncesi' %}
+  <nav class="sinif-landing__quick-nav d-flex flex-wrap gap-2 mb-4" aria-label="{{ kademe_heading }} sınıf vitrinleri">
+    {% for g in kademe_grade_list %}
+    <a class="btn btn-outline-primary btn-sm" href="{{ site.baseurl }}/siniflar/{{ g }}-sinif">{{ g }}. sınıf yayınları</a>
+    {% endfor %}
+    {% if page.kademe == 'ilkokul' %}
+    <a class="btn btn-outline-secondary btn-sm" href="{{ site.baseurl }}/kataloglar/ilkokul-katalogu">İlkokul kataloğu</a>
+    {% elsif page.kademe == 'ortaokul' %}
+    <a class="btn btn-outline-secondary btn-sm" href="{{ site.baseurl }}/kataloglar/ortaokul-katalogu">Ortaokul kataloğu</a>
+    {% endif %}
+  </nav>
+  {% else %}
+  <nav class="sinif-landing__quick-nav d-flex flex-wrap gap-2 mb-4" aria-label="Okul öncesi bağlantılar">
+    <a class="btn btn-outline-primary btn-sm" href="{{ site.baseurl }}/siniflar/okul-oncesi">Sınıf vitrini</a>
+  </nav>
+  {% endif %}
+
+  <div id="books-section" data-kademe-grades="{{ kademe_grades_csv }}">
+    {% include book-grade-nav.html grades=kademe_grades_csv %}
+    {% include book-home-groups.html %}
+  </div>
+
+  {% include sinif-pages-nav.html %}
+</div>

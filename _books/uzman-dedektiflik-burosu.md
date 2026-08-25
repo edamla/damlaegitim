@@ -21,7 +21,7 @@ authors: ["Esra Avgören"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: [Dayanışma, Dürüstlük, "Çevre Bilinci", "Akıl Yürütme", Sorumluluk, Soğukkanlılık]
+tags: [Dayanışma, "Çevre Bilinci", Soğukkanlılık]
 degerler: [Sorumluluk, Dürüstlük, Saygı, Özgürlük, Temizlik, Vatanseverlik]
 anatema: [Dayanışma, "Çevre Bilinci", Macera]
 egilimler: [Sorumluluk, Merak, Bağımsızlık, Odaklanma, Muhakeme, "Kendine Güvenme (Öz Güven)"]

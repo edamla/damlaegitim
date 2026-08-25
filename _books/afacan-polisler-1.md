@@ -21,7 +21,7 @@ authors: ["Yavuz Ali Bilge"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: ["Adalet Arayışı", "Gençlerin Gücü", "Disiplin ve Kurallar", "Ekip Ruhu", "Meslek Bilinci", Empati]
+tags: ["Adalet Arayışı", "Gençlerin Gücü", "Disiplin ve Kurallar", "Ekip Ruhu", "Meslek Bilinci"]
 degerler: [Sorumluluk, Saygı, Sevgi, Adalet, Dostluk, "Aile Bütünlüğü"]
 anatema: [Empati, Arkadaşlık, "Problem Çözme"]
 egilimler: [Empati, Sorumluluk, Bağımsızlık, Muhakeme, Merak, "Gerçeği Arama"]

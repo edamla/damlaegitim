@@ -21,7 +21,7 @@ authors: ["Peyami Safa"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: ["İyilik ve Kötülük", Cesaret, "Sosyal Dayanışma", Zekâ, Sorumluluk, "Aile Bağları ve Vefa"]
+tags: ["İyilik ve Kötülük", Cesaret, "Sosyal Dayanışma", Zekâ, "Aile Bağları ve Vefa"]
 degerler: [Sorumluluk, Saygı, Sevgi, Dostluk, "Aile Bütünlüğü", Merhamet]
 anatema: [Dayanışma, "Cesaret ve Korkular", Empati]
 egilimler: [Sorumluluk, Merak, Odaklanma, Muhakeme, Bağımsızlık, Empati]

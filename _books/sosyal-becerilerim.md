@@ -22,7 +22,7 @@ illustrators: ["Amit Sharma"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1]
-tags: [Sosyal, Beceri, Değerler, Birey, Toplum, Sorumluluk, İletişim, "Olumlu Kişilik", Karakter, Kıskanmamak, Paylaşmak, Özgüven, Dürüstlük, "Gruba Katılım", Arkadaşlık, "Büyüklerin Sözünü Dinleme"]
+tags: [Sosyal, Beceri, Değerler, Birey, Toplum, İletişim, "Olumlu Kişilik", Karakter, Kıskanmamak, Paylaşmak, "Gruba Katılım", Arkadaşlık, "Büyüklerin Sözünü Dinleme"]
 degerler: [Sorumluluk, Estetik, Dürüstlük, Saygı, Mütevazılık, Merhamet]
 anatema: [Değerler, İletişim, Özgüven]
 egilimler: [Sorumluluk, Merak, Empati, Bağımsızlık, Odaklanma, "Kendine Güvenme (Öz Güven)"]

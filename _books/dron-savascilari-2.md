@@ -21,7 +21,7 @@ authors: ["Necati Akbaba"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: [İnovasyon, "Takım Çalışması", Sorumluluk, "Araştırma Merakı", Rekabet, "Adalet Arayışı"]
+tags: [İnovasyon, "Takım Çalışması", "Araştırma Merakı", Rekabet, "Adalet Arayışı"]
 degerler: [Sorumluluk, Adalet, Saygı, Sevgi, Duyarlılık, Dostluk]
 anatema: ["Merak ve Keşif", "Kültür ve Tarih", "Okuma ve Öğrenme"]
 egilimler: [Merak, Sorumluluk, Bağımsızlık, Muhakeme, Odaklanma, Girişkenlik]

@@ -21,7 +21,7 @@ authors: ["Nehir Aydın Gökduman"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: ["Hak Arama", Yaratıcılık, "İnisiyatif Alma", Dayanışma, Sorumluluk, "Gerçeklik Algısı"]
+tags: ["Hak Arama", "İnisiyatif Alma", Dayanışma, "Gerçeklik Algısı"]
 degerler: [Sorumluluk, Saygı, Özgürlük, Duyarlılık, Sevgi, Mahremiyet]
 anatema: [Dayanışma, Gizem, "Sanat ve Yaratıcılık"]
 egilimler: [Sorumluluk, Merak, Yaratıcılık, Bağımsızlık, Muhakeme, Odaklanma]

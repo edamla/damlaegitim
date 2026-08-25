@@ -46,6 +46,10 @@
         {% assign book_seo_description = book_seo_description | strip | truncate: 155, "…" %}
       {% endunless %}
       {% include book-seo-tags.html %}
+    {% elsif page.layout == 'sinif-landing' %}
+      {% include sinif-seo.html %}
+    {% elsif page.layout == 'kademe-catalog' %}
+      {% include kademe-seo.html %}
     {% else %}
       {% seo %}
     {% endif %}
@@ -175,7 +179,7 @@
 
     {% include tracking-footer.html %}
 
-    {% if page.url == "/" or page.url contains '/urunler' %}
+    {% if page.url == "/" or page.url contains '/urunler' or page.layout == 'kademe-catalog' %}
     <script defer src="{{ site.baseurl }}/assets/js/book-filter.js?v={{ site.time | date: '%s' }}"></script>
     {% endif %}
 

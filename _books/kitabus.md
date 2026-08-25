@@ -22,7 +22,7 @@ illustrators: ["Nur Dombaycı"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3, 4]
-tags: [dostluk, iletişim, "teknoloji bağımlılığı", "birlikte hareket etme ve iş birliği", "hayvan sevgisi", "toplumsal paylaşım", farkındalık, mücadele, götürmüştü, "Kimileri gelirken şeyler de oluyordu", "O artık bir evdi! kimileri gidiyor", "günler eskiyerek geçiyordu", "Nasıl mı? Şoför koltuğunda birkaç ay önce Geçmişte yaşadığı güzel günleri", "teybinden yük- tanıştığı tekir kedi yaşıyordu da ondan", "selen neşeli", "şen şakrak müzikleri", "teybinden yük- tanıştığı tekir kedi yaşıyordu da ondan. selen neşeli", "anne lütfen bu kedilere de yer yapalım. Burada yaşamaya devam etsinler", "dedi. Bir saat sonra hepsi yeniden geldi. Elleri kolları kovalarla", torbalarla, "kutularla doluydu.Neler olup Anneleri hâlinden memnun bir şekilde", "kedileriniz bile oldu", "oynayıp mikrop kapacaklardı"]
+tags: [iletişim, "teknoloji bağımlılığı", "birlikte hareket etme ve iş birliği", "hayvan sevgisi", "toplumsal paylaşım", farkındalık, mücadele]
 degerler: [Dostluk, Sorumluluk, Saygı, Dürüstlük, Özgürlük, Sevgi]
 anatema: [Empati, Macera, İletişim]
 egilimler: [Merak, Empati, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Gerçeği Arama"]

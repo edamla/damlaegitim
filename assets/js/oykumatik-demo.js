@@ -114,7 +114,7 @@
       '<p><strong>Doğru:</strong> ' + results.correct + ' / ' + results.total +
       ' &nbsp; <strong>Net:</strong> ' + net + ' &nbsp; <strong>Başarı:</strong> ' + pct + '%</p>' +
       '<table class="table table-sm"><thead><tr><th>Boyut</th><th>Doğru</th><th>Yüzde</th></tr></thead><tbody>' + rows + '</tbody></table>' +
-      '<p class="small text-muted mb-0">Bu demo, Dedektif Kuruntusu pilot sorularıyla Öykümatik rapor özetini gösterir. Tam platform için <a href="/oykumatikle-tanisin">Öykümatik</a> sayfasına bakın.</p>' +
+      '<p class="small text-muted mb-0">Bu demo, Dedektif Kuruntusu pilot sorularıyla Öykümatik rapor özetini gösterir.</p>' +
       '</div></div>';
     el.hidden = false;
     el.scrollIntoView({ behavior: 'smooth', block: 'start' });

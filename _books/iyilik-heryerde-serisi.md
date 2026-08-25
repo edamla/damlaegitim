@@ -20,7 +20,7 @@ illustrators: ["Ramila Aliyeva"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1, 2]
-tags: [Empati, İyilik, Mutluluk, "Doğa Sevgisi", "Aile Bağları", Şefkat, Fedakârlık, Arkadaşlık, Yardımlaşma, "Anne Sevgisi", "Duyguları İfade Etmek", Komşuluk, Cesaret, Paylaşmak]
+tags: [İyilik, Mutluluk, "Doğa Sevgisi", "Aile Bağları", Şefkat, Fedakârlık, Arkadaşlık, Yardımlaşma, "Anne Sevgisi", "Duyguları İfade Etmek", Komşuluk, Cesaret, Paylaşmak]
 degerler: [Sevgi, Saygı, Sorumluluk, Duyarlılık, Estetik, Yardımseverlik]
 anatema: [Empati, Arkadaşlık, Doğa]
 egilimler: [Empati, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Sistematiklik, "Gerçeği Arama"]

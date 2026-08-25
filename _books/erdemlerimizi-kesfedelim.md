@@ -21,7 +21,7 @@ illustrators: ["Sernur Işık"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [2]
-tags: ["Doğru Karar Vermek", "Haksızlık Yapmamak", "Yalan Söylememek", "Yeteneklerini Keşfetmek", "Fedakâr Olmak", "Vefalı Olmak", Sorumluluk, "Söz Dinlemek", Paylaşmak, "Hasta Ziyareti", Cesaret, Yardımseverlik, Fedakârlık, Dürüstlük, Kanaatkârlık, "Doğayı Korumak"]
+tags: ["Doğru Karar Vermek", "Haksızlık Yapmamak", "Yalan Söylememek", "Yeteneklerini Keşfetmek", "Fedakâr Olmak", "Vefalı Olmak", "Söz Dinlemek", Paylaşmak, "Hasta Ziyareti", Cesaret, Fedakârlık, Kanaatkârlık, "Doğayı Korumak"]
 degerler: [Saygı, Sorumluluk, Yardımseverlik, Dürüstlük, Duyarlılık, Estetik]
 anatema: [Doğa, "Karar Verme", "Cesaret ve Korkular"]
 egilimler: [Sorumluluk, Merak, "Kendine Güvenme (Öz Güven)", Bağımsızlık, Oyunseverlik, Empati]

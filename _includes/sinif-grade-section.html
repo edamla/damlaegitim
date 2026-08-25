@@ -1,0 +1,38 @@
+{% comment %}
+  Tek sınıf vitrin bölümü.
+  Kullanım: {% include sinif-grade-section.html grade=5 %}
+            {% include sinif-grade-section.html grade=page.grade landing=true %}
+{% endcomment %}
+{% include sinif-grade-data.html grade=include.grade %}
+<section class="mb-5 sinif-grade-section" aria-labelledby="{% if include.landing %}sinif-egitim-heading{% else %}sinif-{{ grade_num }}-heading{% endif %}">
+  {% unless include.landing %}
+  <div class="d-flex flex-wrap align-items-baseline justify-content-between gap-2 mb-3">
+    <h2 class="h3 mb-0" id="sinif-{{ grade_num }}-heading">
+      <a href="{{ site.baseurl }}/siniflar/{{ grade_slug }}">{{ grade_label }} yayınları</a>
+    </h2>
+    <a class="small" href="{{ site.baseurl }}/siniflar/{{ grade_slug }}">Tümünü gör →</a>
+  </div>
+  {% endunless %}
+
+  {% if education_books.size > 0 %}
+  <h2 class="{% if include.landing %}h3{% else %}h5 text-muted{% endif %} mb-{% if include.landing %}3{% else %}2{% endif %}" id="sinif-egitim-heading">Eğitim setleri</h2>
+  <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 mb-4">
+    {% for book in education_books %}
+    <div class="col">{% include book-card.html book=book %}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if story_books.size > 0 %}
+  <h2 class="{% if include.landing %}h3{% else %}h5 text-muted{% endif %} mb-3" id="sinif-hikaye-heading">Hikaye kitapları</h2>
+  <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+    {% for book in story_books %}
+    <div class="col">{% include book-card.html book=book %}</div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  {% if grade_books.size == 0 %}
+  <p class="text-muted mb-0">Bu sınıf için henüz listelenen ürün bulunmuyor.</p>
+  {% endif %}
+</section>

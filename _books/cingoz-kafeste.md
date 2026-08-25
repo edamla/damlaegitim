@@ -21,7 +21,7 @@ authors: ["Peyami Safa"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: ["Zekâ Çatışması", Yanılsama, Özgüven, Zaaflar, Adalet, "Ortak Düşman"]
+tags: ["Zekâ Çatışması", Yanılsama, Zaaflar, "Ortak Düşman"]
 degerler: [Adalet, Sorumluluk, Özgürlük, Vatanseverlik, Saygı, Sevgi]
 anatema: [Özgüven, "Okuma ve Öğrenme", "Merak ve Keşif"]
 egilimler: [Merak, Bağımsızlık, Sorumluluk, Odaklanma, "Kendine Güvenme (Öz Güven)", Muhakeme]

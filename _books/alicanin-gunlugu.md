@@ -21,7 +21,7 @@ illustrators: ["Mustafa Kocabaş"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [2]
-tags: [Macera, Yardımseverlik, "Aile Büyüklerine Saygı", Günlük]
+tags: [Macera, "Aile Büyüklerine Saygı", Günlük]
 degerler: [Saygı, Estetik, Yardımseverlik, "Aile Bütünlüğü", Dostluk, Sorumluluk]
 anatema: [Macera, Empati, Dayanışma]
 egilimler: [Merak, Empati, "Kendine Güvenme (Öz Güven)", Bağımsızlık, Muhakeme, Odaklanma]

@@ -21,7 +21,7 @@ illustrators: ["Amit Sharma"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1, 2]
-tags: ["Sosyal ve Duygusal Gelişim", Empati, "Arkadaşlık ve İletişim Becerisi", "Yardımlaşma ve Duyarlı Olma", "Akran Zorbalığı", "Saygı ve İç Farkındalık", "Korkuyu Yenme", Cesaret, "Öz Güven ve Farklılıkları Anlamak", "Duygularla Tanışma ve Anlamlandırma AKRAN Becerisi Kazandırır: Her bir kitap", Korku, kıskançlık, öfke, "pişmanlık gibi yoğun duyguların yanında dostluk", paylaşma]
+tags: ["Sosyal ve Duygusal Gelişim", "Arkadaşlık ve İletişim Becerisi", "Yardımlaşma ve Duyarlı Olma", "Akran Zorbalığı", "Saygı ve İç Farkındalık", "Korkuyu Yenme", Cesaret, "Öz Güven ve Farklılıkları Anlamak", Korku, kıskançlık, öfke, paylaşma]
 degerler: [Saygı, Dostluk, Sorumluluk, Estetik, "Sağlıklı Yaşam", Sabır]
 anatema: [Duygular, Empati, "Cesaret ve Korkular"]
 egilimler: [Empati, Merak, "Kendine Güvenme (Öz Güven)", Bağımsızlık, Odaklanma, "Soru Sorma"]

@@ -54,10 +54,6 @@ Sınıf ve tema bazlı [okuma listelerimiz](/okuma-listeleri), öğretmenin TYMM
 - [2. Sınıf Okuma Listesi](/okuma-listeleri/2-sinif)
 - [3. Sınıf Okuma Listesi](/okuma-listeleri/3-sinif)
 - [4. Sınıf Okuma Listesi](/okuma-listeleri/4-sinif)
-- [5. Sınıf Okuma Listesi](/okuma-listeleri/5-sinif)
-- [6. Sınıf Okuma Listesi](/okuma-listeleri/6-sinif)
-- [7. Sınıf Okuma Listesi](/okuma-listeleri/7-sinif)
-- [8. Sınıf Okuma Listesi](/okuma-listeleri/8-sinif)
 
 
 
@@ -71,8 +67,7 @@ Türkiye’de ilk ve tek **Damla Yayın Kurulu Hikâye Müfredatı**, okuduğunu
 
 **Okuma Atölyesi Süreç Değerlendirme Sistemi (Öykümatik)**, öğrencinin okuduğunu anlama düzeyini kazanım bazında ölçer ve öğretmene somut veri sunar. Hangi kazanımda destek gerektiği netleşir; sınıf içi planlama kolaylaşır.
 
-- [Öykümatikle Tanışın](/oykumatikle-tanisin)
-- [Öykümatik demo](/oykumatik/demo)
+- [Öykümatikle Tanışın ve demo](/oykumatikle-tanisin#oykumatik-demo)
 - [Ölçme ve Değerlendirme](/olcme-degerlendirme)
 
 ## Öğretmenler için

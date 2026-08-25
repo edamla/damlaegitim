@@ -1,0 +1,195 @@
+.curriculum-browse {
+  padding-bottom: var(--space-8, 3rem);
+}
+
+.curriculum-browse__header {
+  margin-bottom: var(--space-5, 1.5rem);
+}
+
+.curriculum-browse__title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.curriculum-browse__lead {
+  max-width: 42rem;
+  margin-bottom: 0;
+}
+
+.curriculum-browse__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: var(--space-6, 2rem);
+  padding-bottom: var(--space-4, 1rem);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.curriculum-browse__tab {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 0.9rem;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text, #212529);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.curriculum-browse__tab:hover {
+  border-color: var(--color-primary, #03a87c);
+  color: var(--color-primary, #03a87c);
+}
+
+.curriculum-browse__tab.is-active {
+  background: var(--color-primary, #03a87c);
+  border-color: var(--color-primary, #03a87c);
+  color: #fff;
+}
+
+.curriculum-browse__section-title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-muted, #6c757d);
+  margin-bottom: 0.75rem;
+}
+
+.curriculum-browse__grades {
+  margin-bottom: var(--space-5, 1.5rem);
+}
+
+.curriculum-browse__grade-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.curriculum-browse__grade-btn {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.curriculum-browse__grade-btn:hover {
+  border-color: var(--color-primary, #03a87c);
+  color: var(--color-primary, #03a87c);
+}
+
+.curriculum-browse__grade-btn.is-selected {
+  background: var(--color-primary, #03a87c);
+  border-color: var(--color-primary, #03a87c);
+  color: #fff;
+}
+
+.curriculum-browse__filters {
+  margin-bottom: var(--space-5, 1.5rem);
+}
+
+.curriculum-browse__search-wrap {
+  max-width: 20rem;
+  margin-bottom: 0.75rem;
+}
+
+.curriculum-browse__chips-wrap {
+  position: relative;
+}
+
+.curriculum-browse__chips-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 2rem;
+  pointer-events: none;
+  background: linear-gradient(to left, #fff, transparent);
+}
+
+.curriculum-browse__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-height: 12rem;
+  overflow-y: auto;
+  padding: 0.125rem 0.25rem 0.125rem 0;
+}
+
+.curriculum-browse__chip {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.curriculum-browse__chip:hover {
+  box-shadow: 0 0 0 2px rgba(3, 168, 124, 0.2);
+}
+
+.curriculum-browse__chip.is-active.book-curriculum__chip--anatema,
+.curriculum-browse__chip.is-active.book-curriculum__chip--degerler,
+.curriculum-browse__chip.is-active.book-curriculum__chip--egilimler,
+.curriculum-browse__chip.is-active.book-curriculum__chip--beceri {
+  background: var(--color-primary, #03a87c);
+  color: #fff;
+  border-color: var(--color-primary, #03a87c);
+}
+
+.curriculum-browse__status {
+  margin-bottom: 1rem;
+  min-height: 1.5rem;
+}
+
+.curriculum-browse__results .listbooks-home-item {
+  margin-bottom: 1.5rem;
+}
+
+.curriculum-browse__content {
+  margin-top: var(--space-6, 2rem);
+  padding-top: var(--space-4, 1rem);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+@media (max-width: 575.98px) {
+  .curriculum-browse__chips {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-height: none;
+    padding-bottom: 0.25rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .curriculum-browse__grade-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .curriculum-browse__grade-btn {
+    padding: 0.4rem 0.35rem;
+    font-size: 0.8125rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .curriculum-browse__tab,
+  .curriculum-browse__grade-btn {
+    background: #1e1e1e;
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #f1f1f1;
+  }
+
+  .curriculum-browse__chips-wrap::after {
+    background: linear-gradient(to left, var(--bs-body-bg, #121212), transparent);
+  }
+}

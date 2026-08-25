@@ -21,7 +21,7 @@ illustrators: ["Amit Sharma"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1]
-tags: ["Değerler Eğitimi", "Klasik Masallar", "Uykudan Önce", "Değerlerimizi Masallarla Öğrenmek", "Erdemli Bireyler Olmak", Dünya, Doğruluk, Tevazu, Arkadaşlık, Sevgi, Saygı, "Sözünde Durmak", Hayvan]
+tags: ["Değerler Eğitimi", "Klasik Masallar", "Uykudan Önce", "Değerlerimizi Masallarla Öğrenmek", "Erdemli Bireyler Olmak", Dünya, Doğruluk, Tevazu, Arkadaşlık, "Sözünde Durmak", Hayvan]
 degerler: [Saygı, Sevgi, Dürüstlük, Dostluk, Merhamet, Sorumluluk]
 anatema: [Değerler, Arkadaşlık, Hayvanlar]
 egilimler: [Merak, Empati, Odaklanma, Bağımsızlık, Sistematiklik, Muhakeme]

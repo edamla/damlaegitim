@@ -359,8 +359,16 @@ function filterBooksByGradesAndGenres(bookSelector, gradeCheckboxSelector, genre
 }
 
 function filterHomeBooksNav(bookSelector, sectionSelector, activeGrade, activeGenre) {
+    var kademeGrades = getKademeGrades();
     document.querySelectorAll(bookSelector).forEach(function(book) {
-        var gradeFound = activeGrade === null || bookMatchesGrades(book, [activeGrade]);
+        var gradeFound;
+        if (activeGrade !== null) {
+            gradeFound = bookMatchesGrades(book, [activeGrade]);
+        } else if (kademeGrades.length > 0) {
+            gradeFound = bookMatchesGrades(book, kademeGrades);
+        } else {
+            gradeFound = true;
+        }
         var genreFound = activeGenre === null || book.dataset.genre === activeGenre;
         book.style.display = (gradeFound && genreFound) ? '' : 'none';
     });
@@ -396,6 +404,27 @@ function filterBooksByGradesGenresAndMore(bookSelector, gradeCheckboxSelector, g
 var homeFilterState = { grade: null, genre: null };
 var homeFiltersInitialized = false;
 var syncingFromHash = false;
+
+function getKademeGrades() {
+    var section = document.getElementById('books-section');
+    if (!section || !section.dataset.kademeGrades) {
+        return [];
+    }
+    return section.dataset.kademeGrades.split(',').map(function(g) {
+        return g.trim();
+    }).filter(Boolean);
+}
+
+function initKademeGradeNav() {
+    var kademeGrades = getKademeGrades();
+    if (kademeGrades.length === 0) {
+        return;
+    }
+    document.querySelectorAll('.grade-nav-item').forEach(function(item) {
+        var grade = item.dataset.grade;
+        item.style.display = kademeGrades.indexOf(grade) !== -1 ? '' : 'none';
+    });
+}
 
 var GRADE_TO_SLUG = {
     '0': 'okul-oncesi',
@@ -629,6 +658,13 @@ function applyFilterFromHash() {
 
     syncingFromHash = true;
     var parsed = parseFilterHash();
+    var kademeGrades = getKademeGrades();
+
+    if (parsed !== null && parsed.grade !== null && kademeGrades.length > 0) {
+        if (kademeGrades.indexOf(parsed.grade) === -1) {
+            parsed = null;
+        }
+    }
 
     if (parsed === null) {
         applyFilterState(null, null, { updateHash: false, scrollToResults: false });
@@ -690,6 +726,7 @@ function initHomeBookFilters() {
     }
 
     window.addEventListener('hashchange', applyFilterFromHash);
+    initKademeGradeNav();
     applyFilterFromHash();
 }
 

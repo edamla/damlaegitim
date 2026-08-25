@@ -1,0 +1,31 @@
+{% assign field = include.field %}
+{% if field == 'anatema' %}
+{{ site.data.anatemalar.anatemalar | jsonify }}
+{% elsif field == 'degerler' %}
+{{ site.data.tymm.cerceveler.degerler.degerler | map: 'ad' | jsonify }}
+{% elsif field == 'egilimler' %}
+[
+{% assign eg_first = true %}
+{% for grup in site.data.tymm.cerceveler.egilimler.gruplar %}
+{% for alt in grup.alt_kavramlar %}
+{% unless eg_first %},{% endunless %}{{ alt.ad | jsonify }}
+{% assign eg_first = false %}
+{% endfor %}
+{% endfor %}
+]
+{% elsif field == 'beceriler' %}
+[
+{% assign bc_first = true %}
+{% for fw_pair in site.data.tymm.cerceveler.beceriler %}
+{% assign fw = fw_pair[1] %}
+{% for grup in fw.gruplar %}
+{% for alt in grup.alt_kavramlar %}
+{% unless bc_first %},{% endunless %}{{ alt.ad | jsonify }}
+{% assign bc_first = false %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+]
+{% else %}
+[]
+{% endif %}

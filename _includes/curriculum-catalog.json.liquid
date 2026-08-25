@@ -1,0 +1,35 @@
+[
+{% assign story_books = site.books | where: 'genre', 'story' %}
+{% for book in story_books %}
+{% assign book_slug = book.url | split: '/' | last | remove: '.html' %}
+{% assign book_cover = book.image %}
+{% if book.ean %}
+{% assign cover_jpg = 'assets/images/ean/' | append: book.ean | append: '.jpg' %}
+{% assign cover_webp = 'assets/images/ean/' | append: book.ean | append: '.webp' %}
+{% assign cover_jpg_rel = '/' | append: cover_jpg %}
+{% assign cover_webp_rel = '/' | append: cover_webp %}
+{% for static_file in site.static_files %}
+{% if static_file.path == cover_webp_rel %}{% assign book_cover = cover_webp %}{% endif %}
+{% if static_file.path == cover_jpg_rel and book_cover == book.image %}{% assign book_cover = cover_jpg %}{% endif %}
+{% endfor %}
+{% endif %}
+{% capture author_names %}{% for author_slug in book.authors %}{% assign siteauthor = site.data.authors | where: "key", author_slug | first %}{% if siteauthor %}{{ siteauthor.title }}{% else %}{{ author_slug }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}{% endcapture %}
+{
+  "slug": {{ book_slug | jsonify }},
+  "title": {{ book.title | jsonify }},
+  "ean": {{ book.ean | append: '' | jsonify }},
+  "genre": {{ book.genre | jsonify }},
+  "grades": {{ book.grades | jsonify }},
+  "categories": {{ book.categories | jsonify }},
+  "tags": {{ book.tags | jsonify }},
+  "anatema": {{ book.anatema | jsonify }},
+  "egilimler": {{ book.egilimler | jsonify }},
+  "kazanim": {{ book.kazanim | jsonify }},
+  "beceriler": {{ book.beceriler | jsonify }},
+  "degerler": {{ book.degerler | jsonify }},
+  "url": {{ book.url | jsonify }},
+  "cover": {{ book_cover | jsonify }},
+  "authors": {{ author_names | strip | jsonify }}
+}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]

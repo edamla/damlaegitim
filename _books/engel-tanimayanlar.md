@@ -21,7 +21,7 @@ illustrators: ["Erhan Acar"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [4]
-tags: ["Başarının Anahtarı", "Hayal Kurma", Engelli, Yaşam, Empati, İnanç]
+tags: ["Başarının Anahtarı", "Hayal Kurma", Engelli, Yaşam, İnanç]
 degerler: [Sorumluluk, "Sağlıklı Yaşam", Saygı, Çalışkanlık, Estetik, Dostluk]
 anatema: [Empati, "Sürdürülebilir Yaşam", "Güvenli Yaşam"]
 egilimler: [Empati, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Kendine İnanma (Öz Yeterlilik)"]

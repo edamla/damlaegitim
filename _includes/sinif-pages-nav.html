@@ -1,0 +1,12 @@
+{% comment %}
+  Sınıf vitrin sayfalarına iç bağlantı — SEO ve keşif için.
+{% endcomment %}
+<nav class="sinif-pages-nav mt-5 pt-4 border-top" aria-labelledby="sinif-pages-nav-heading">
+  <h2 class="h6 text-muted" id="sinif-pages-nav-heading">Diğer sınıf yayınları</h2>
+  <ul class="list-inline mb-0 small">
+    <li class="list-inline-item"><a href="{{ site.baseurl }}/siniflar/okul-oncesi">Okul öncesi</a></li>
+    {% for g in (1..8) %}
+    <li class="list-inline-item"><a href="{{ site.baseurl }}/siniflar/{{ g }}-sinif">{{ g }}. sınıf</a></li>
+    {% endfor %}
+  </ul>
+</nav>

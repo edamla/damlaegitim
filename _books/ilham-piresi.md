@@ -21,7 +21,7 @@ authors: ["Nur Dombaycı"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3, 4]
-tags: ["Çocuk Edebiyatı", "Kendini Keşfetme", İlham, Yaratıcılık, Farklılıklar, Özgüven, "Hayvanlar Âlemi", Yazarlık, Mizah]
+tags: ["Çocuk Edebiyatı", "Kendini Keşfetme", İlham, Farklılıklar, "Hayvanlar Âlemi", Yazarlık, Mizah]
 degerler: [Sorumluluk, Dürüstlük, Saygı, Özgürlük, Estetik, Dostluk]
 anatema: [Özgüven, Hayvanlar, "Farklılıklar ve Hoşgörü"]
 egilimler: [Merak, Yaratıcılık, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, Empati]

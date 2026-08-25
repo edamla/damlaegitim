@@ -21,7 +21,7 @@ illustrators: ["İlknur Salman"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1]
-tags: [Değerler, Masal, Eğitim, Alçakgönüllülük, Adalet, Çalışkanlık]
+tags: [Değerler, Masal, Eğitim, Alçakgönüllülük]
 degerler: [Çalışkanlık, Adalet, Sorumluluk, Sevgi, Mütevazılık, Saygı]
 anatema: [Değerler, "Okul ve Eğitim", Empati]
 egilimler: [Merak, Empati, Bağımsızlık, Odaklanma, Sistematiklik, Sorumluluk]

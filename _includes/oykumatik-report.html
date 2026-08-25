@@ -39,7 +39,9 @@
     {% endif %}
     <p class="small text-muted mb-0">
       Bu demo, Dedektif Kuruntusu pilot sorularıyla Öykümatik rapor özetini gösterir.
+      {% unless include.embedded %}
       Tam platform için <a href="{{ site.baseurl }}/oykumatikle-tanisin">Öykümatik</a> sayfasına bakın.
+      {% endunless %}
     </p>
   </div>
 </div>

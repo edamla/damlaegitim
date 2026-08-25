@@ -21,7 +21,7 @@ illustrators: ["Süleyman Özkonuk"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3]
-tags: [Deyim, Öykü, Macera, Sevgi, Saygı, "Dayanış- Damla Yayınevi Damla Yayınevi 16"]
+tags: [Deyim, Öykü, Macera]
 degerler: [Saygı, Sevgi, Vatanseverlik, Sorumluluk, Özgürlük, Dostluk]
 anatema: [Macera, Gizem, "Okuma ve Öğrenme"]
 egilimler: [Merak, Bağımsızlık, Girişkenlik, "Kendine Güvenme (Öz Güven)", "Soru Sorma", Sorumluluk]

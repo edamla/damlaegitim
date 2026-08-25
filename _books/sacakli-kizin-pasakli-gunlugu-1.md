@@ -21,7 +21,7 @@ authors: ["Nur Dombaycı"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: [Özgünlük, Dostluk, Empati, Affetmek, "Kişisel Gelişim", Büyümek]
+tags: [Özgünlük, Affetmek, "Kişisel Gelişim", Büyümek]
 degerler: [Dostluk, Sevgi, Sorumluluk, Saygı, Mahremiyet, Duyarlılık]
 anatema: [Empati, "Kişisel Gelişim", "Kültür ve Tarih"]
 egilimler: [Empati, Merak, Sorumluluk, Odaklanma, Bağımsızlık, Girişkenlik]

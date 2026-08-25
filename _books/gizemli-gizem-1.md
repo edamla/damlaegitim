@@ -21,7 +21,7 @@ authors: ["Nehir Aydın Gökduman"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: ["Hayal Gücü", Sorumluluk, Empati, Kardeşlik, Yardımlaşma, İletişim]
+tags: ["Hayal Gücü", Kardeşlik, Yardımlaşma, İletişim]
 degerler: [Sorumluluk, Saygı, Dostluk, Duyarlılık, Sevgi, Mahremiyet]
 anatema: [Empati, "Hayal Gücü", İletişim]
 egilimler: [Empati, Sorumluluk, Muhakeme, Odaklanma, Bağımsızlık, Merak]

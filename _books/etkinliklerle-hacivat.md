@@ -21,7 +21,7 @@ illustrators: ["Melike Tan"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1]
-tags: ["Gölge Oyunu", Karagöz, Hacivat, Değerler, Okuma, Yazma, Mizah, "Hayvan Sevgisi", Arkadaşlık, Dostluk, Yardımlaşma, Sevgi, Saygı, "Misafire Hürmet", "Çizgi Film"]
+tags: ["Gölge Oyunu", Karagöz, Hacivat, Değerler, Mizah, "Hayvan Sevgisi", Arkadaşlık, Yardımlaşma, "Misafire Hürmet", "Çizgi Film"]
 degerler: [Saygı, Sevgi, Dostluk, Sorumluluk, Estetik, Merhamet]
 anatema: [Değerler, Arkadaşlık, "Okuma ve Öğrenme"]
 egilimler: [Merak, Odaklanma, Sistematiklik, Empati, Bağımsızlık, Muhakeme]

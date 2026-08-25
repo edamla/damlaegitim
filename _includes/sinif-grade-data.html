@@ -1,0 +1,28 @@
+{% comment %}
+  Sınıf düzeyi kitap listeleri ve URL değişkenleri.
+  Kullanım: {% include sinif-grade-data.html %} (page.grade)
+            {% include sinif-grade-data.html grade=5 %}
+{% endcomment %}
+{% if include.grade != nil and include.grade != '' %}
+  {% assign grade_num = include.grade | plus: 0 %}
+{% else %}
+  {% assign grade_num = page.grade | plus: 0 %}
+{% endif %}
+{% if grade_num == 0 %}
+  {% assign grade_label = "Okul Öncesi" %}
+  {% assign grade_slug = "okul-oncesi" %}
+  {% assign grade_title_suffix = "Okul Öncesi Yayınları" %}
+{% else %}
+  {% assign grade_label = grade_num | append: ". Sınıf" %}
+  {% assign grade_slug = grade_num | append: "-sinif" %}
+  {% assign grade_title_suffix = grade_label | append: " Yayınları" %}
+{% endif %}
+{% assign grade_books = site.books | where_exp: "b", "b.grades contains grade_num" %}
+{% assign story_books = grade_books | where_exp: "b", "b.genre == 'story'" %}
+{% assign education_books = grade_books | where_exp: "b", "b.genre == 'education'" %}
+{% if include.grade == nil or include.grade == '' %}
+  {% assign grade_page_url = site.url | append: site.baseurl | append: page.url %}
+  {% assign grade_catalog_hash = site.baseurl | append: '/urunler#' | append: grade_slug %}
+  {% assign grade_catalog_egitim_url = site.baseurl | append: '/urunler#' | append: grade_slug | append: '/egitim' %}
+  {% assign grade_catalog_hikaye_url = site.baseurl | append: '/urunler#' | append: grade_slug | append: '/hikaye' %}
+{% endif %}

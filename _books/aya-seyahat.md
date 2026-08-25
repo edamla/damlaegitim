@@ -21,7 +21,7 @@ authors: ["Jules Verne"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: ["Bilim Tutkusu", Dayanışma, "Pratik Zekâ", "Sınırları Aşmak", Dostluk, "Doğayla Mücadele"]
+tags: ["Bilim Tutkusu", Dayanışma, "Pratik Zekâ", "Sınırları Aşmak", "Doğayla Mücadele"]
 degerler: [Dostluk, Sorumluluk, Saygı, Özgürlük, Temizlik, Çalışkanlık]
 anatema: [Dayanışma, Doğa, "Merak ve Keşif"]
 egilimler: [Merak, Bağımsızlık, Odaklanma, Sorumluluk, "Kendine Güvenme (Öz Güven)", Girişkenlik]

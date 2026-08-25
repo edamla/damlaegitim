@@ -1,8 +1,11 @@
 ---
 title: "Öykümatikle Tanışın"
-description: "Damla Yayın Kurulu tarafından geliştirilen 4 Katmanlı Beceri Temelli Hikâye Müfredatı ve Öykümatik ölçme-değerlendirme sistemi."
+description: "Damla Yayın Kurulu tarafından geliştirilen 4 Katmanlı Beceri Temelli Hikâye Müfredatı, Öykümatik ölçme-değerlendirme sistemi ve interaktif demo."
 layout: page
 permalink: "/oykumatikle-tanisin"
+redirect_from:
+  - /oykumatik/demo
+  - /oykumatik/demo.html
 image: "/assets/images/oykumatikle-tanisin.png"
 comments: false
 footer_show: true
@@ -37,4 +40,4 @@ detaylı olarak sunulmaktadır.
 
 [Hikâye Müfredatı]({{ site.baseurl }}/hikaye-mufredati) sayfasında kazanım kodlama yapısını inceleyebilirsiniz.
 
-<p class="mt-4"><a href="{{ site.baseurl }}/oykumatik/demo" class="btn btn-primary">Öykümatik demo raporunu dene</a></p>
+{% include oykumatik-demo-section.html %}

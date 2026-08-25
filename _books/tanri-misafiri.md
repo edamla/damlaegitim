@@ -21,7 +21,7 @@ authors: ["Kemalettin Tuğcu"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: [Yoksulluk, Merhamet, Dürüstlük, "Ön Yargı", "Aile ve Şefkat", "Minnet ve Vefa"]
+tags: [Yoksulluk, "Ön Yargı", "Aile ve Şefkat", "Minnet ve Vefa"]
 degerler: [Sorumluluk, Merhamet, Saygı, Özgürlük, Dürüstlük, Sevgi]
 anatema: ["Kültür ve Tarih", "Okuma ve Öğrenme", "Merak ve Keşif"]
 egilimler: [Sorumluluk, Bağımsızlık, Odaklanma, Muhakeme, Merak, Girişkenlik]

@@ -21,7 +21,7 @@ authors: ["Sara Gürbüz Özeren"]
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: ["Trafik Bilinci", "Ekip Ruhu", "Görev Bilinci", Sorumluluk, "Toplumsal Duyarlılık", "Akran Zorbalığı"]
+tags: ["Trafik Bilinci", "Ekip Ruhu", "Görev Bilinci", "Toplumsal Duyarlılık", "Akran Zorbalığı"]
 degerler: [Sorumluluk, Mahremiyet, Saygı, Duyarlılık, Dostluk, Sevgi]
 anatema: [Empati, "Okuma ve Öğrenme", Arkadaşlık]
 egilimler: [Sorumluluk, Empati, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Merak, Girişkenlik]
