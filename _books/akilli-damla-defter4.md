@@ -19,8 +19,8 @@ damlaurl: ""
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: education
 akillitahta:
-  exe: ""
-  deb: ""
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-tumdef4/win/edamla-tumdef4-Setup-Latest.exe"
+  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-tumdef4/linux/edamla-tumdef4-Setup-Latest.deb"
   appimage: ""
   dmg: ""
 

@@ -19,9 +19,9 @@ damlaurl: ""
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: education
 akillitahta:
-  exe: ""
-  deb: ""
-  appimage: ""
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-3/win/edamla-cilgin-problemler-3-Setup-Latest.exe"
+  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-3/linux/edamla-cilgin-problemler-3-Setup-Latest.deb"
+  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-3/linux/edamla-cilgin-problemler-3-Setup-Latest.AppImage"
   dmg: ""
 
 grades: [3]
