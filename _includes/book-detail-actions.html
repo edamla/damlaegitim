@@ -23,27 +23,54 @@
   {% endif %}
 {% endif %}
 
-{% if book_has_youtube or book_has_buy or book_has_info or book_has_preview or book_has_exam or book_has_akillitahta %}
+{% assign actions_only = include.only | default: '' | strip %}
+{% assign filter_actions = false %}
+{% if actions_only != '' %}{% assign filter_actions = true %}{% endif %}
+
+{% assign show_youtube = book_has_youtube %}
+{% assign show_buy = book_has_buy %}
+{% assign show_info = book_has_info %}
+{% assign show_preview = book_has_preview %}
+{% assign show_exam = book_has_exam %}
+{% assign show_akillitahta = book_has_akillitahta %}
+
+{% if filter_actions %}
+  {% assign show_youtube = false %}
+  {% assign show_buy = false %}
+  {% assign show_info = false %}
+  {% assign show_preview = false %}
+  {% assign show_exam = false %}
+  {% assign show_akillitahta = false %}
+
+  {% if actions_only contains 'youtube' and book_has_youtube %}{% assign show_youtube = true %}{% endif %}
+  {% if actions_only contains 'buy' and book_has_buy %}{% assign show_buy = true %}{% endif %}
+  {% if actions_only contains 'info' %}{% assign show_info = true %}{% endif %}
+  {% if actions_only contains 'preview' and book_has_preview %}{% assign show_preview = true %}{% endif %}
+  {% if actions_only contains 'exam' and book_has_exam %}{% assign show_exam = true %}{% endif %}
+  {% if actions_only contains 'akillitahta' and book_has_akillitahta %}{% assign show_akillitahta = true %}{% endif %}
+{% endif %}
+
+{% if show_youtube or show_buy or show_info or show_preview or show_exam or show_akillitahta %}
 <div class="book-detail__actions d-flex flex-wrap gap-2">
-  {% if book_has_youtube %}
+  {% if show_youtube %}
   <a class="sscroll btn btn-outline-danger btn-sm js-book-action" target="_blank" href="{{ book_youtube }}" data-popup-type="youtube" data-popup-title="Tanıtım"><i class="fab fa-youtube fa-sm" aria-hidden="true"></i><span>Tanıtım</span></a>
   {% endif %}
 
-  {% if book_has_buy %}
+  {% if show_buy %}
   <a class="sscroll btn btn-outline-success btn-sm js-book-action" href="#" data-popup-type="iframe" data-popup-url="{{ ba.damlaurl }}" data-popup-title="Satın Al"><i class="fas fa-shopping-cart fa-sm" aria-hidden="true"></i><span>Satın Al</span></a>
-  {% elsif book_has_info %}
+  {% elsif show_info %}
   <a class="sscroll btn btn-outline-secondary btn-sm js-book-action" href="#" data-popup-type="info" data-popup-title="Ürün Tedarik Bilgisi"><i class="fas fa-info-circle fa-sm" aria-hidden="true"></i><span>Bilgi</span></a>
   {% endif %}
 
-  {% if book_has_preview %}
+  {% if show_preview %}
   <a class="sscroll btn btn-outline-secondary btn-sm js-book-action" target="_blank" href="{{ ba.preview_link }}" data-popup-type="iframe" data-popup-title="İncele"><i class="fas fa-search fa-sm" aria-hidden="true"></i><span>İncele</span></a>
   {% endif %}
 
-  {% if book_has_exam %}
+  {% if show_exam %}
   <a class="sscroll btn btn-outline-danger btn-sm js-book-action" target="_blank" href="{{ ba.examlink }}" data-popup-type="iframe" data-popup-title="HDS"><i class="fas fa-pen fa-sm" aria-hidden="true"></i><span>HDS</span></a>
   {% endif %}
 
-  {% if book_has_akillitahta %}
+  {% if show_akillitahta %}
   <a class="sscroll btn btn-outline-primary btn-sm js-book-action" href="#" data-popup-type="akillitahta" data-popup-title="Akıllı Tahta İndir" data-at-exe="{{ at_exe }}" data-at-deb="{{ at_deb }}" data-at-appimage="{{ at_appimage }}" data-at-dmg="{{ at_dmg }}"><i class="fas fa-chalkboard fa-sm" aria-hidden="true"></i><span>Akıllı Tahta İndir</span></a>
   {% endif %}
 </div>
