@@ -16,16 +16,11 @@ preview_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/9786059656702-1/ind
 damlaurl: ""
 original-name: "Hikayelerle 33 Hadis Işıltısı"
 original-language: Turkish
+oncelik: 0  # 0: En Öncelikli 9: En az öncelikli
 
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: education
-akillitahta:
-  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-ponponpinpin/win/edamla-ponponpinpin-Setup-Latest.exe"
-  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-ponponpinpin/linux/edamla-ponponpinpin-Setup-Latest.deb"
-  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-ponponpinpin/linux/edamla-ponponpinpin-Setup-Latest.AppImage"
-  dmg: ""
-
 grades: [0]
 tags: []
 degerler: []
@@ -34,6 +29,11 @@ egilimler: []
 kazanim: []
 beceriler: []
 unite: []
+akillitahta:
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-ponponpinpin/win/edamla-ponponpinpin-Setup-Latest.exe"
+  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-ponponpinpin/linux/edamla-ponponpinpin-Setup-Latest.deb"
+  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-ponponpinpin/linux/edamla-ponponpinpin-Setup-Latest.AppImage"
+  dmg: ""
 
 # Social Media Attributes
 youtube:

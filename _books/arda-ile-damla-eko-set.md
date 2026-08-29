@@ -13,16 +13,11 @@ cover: ""
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223899/index.html"
 damlaurl: ""
+oncelik: 0 # 0: En Öncelikli 9: En az öncelikli
 
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: education
-akillitahta:
-  exe: ""
-  deb: ""
-  appimage: ""
-  dmg: ""
-
 grades: [1]
 tags: []
 degerler: []
@@ -31,6 +26,11 @@ egilimler: []
 kazanim: []
 beceriler: []
 unite: []
+akillitahta:
+  exe: ""
+  deb: ""
+  appimage: ""
+  dmg: ""
 
 # Social Media Attributes
 youtube:

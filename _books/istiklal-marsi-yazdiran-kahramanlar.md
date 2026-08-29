@@ -16,6 +16,7 @@ damlaurl: ""
 paper: "Kitap Kağıdı"
 authors: ["Sara Gürbüz Özeren"]
 illustrators: ["Erhan Acar"]
+oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)

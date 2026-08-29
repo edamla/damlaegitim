@@ -14,16 +14,11 @@ cover: ""
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/cilgin-problemler/books/3/index.html"
 damlaurl: ""
+oncelik: 0  # 0: En Öncelikli 9: En az öncelikli
 
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: education
-akillitahta:
-  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-4/win/edamla-cilgin-problemler-4-Setup-Latest.exe"
-  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-4/linux/edamla-cilgin-problemler-4-Setup-Latest.deb"
-  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-4/linux/edamla-cilgin-problemler-4-Setup-Latest.AppImage"
-  dmg: ""
-
 grades: [4]
 ders: Matematik
 tags: []
@@ -33,6 +28,11 @@ egilimler: []
 kazanim: []
 beceriler: []
 unite: []
+akillitahta:
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-4/win/edamla-cilgin-problemler-4-Setup-Latest.exe"
+  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-4/linux/edamla-cilgin-problemler-4-Setup-Latest.deb"
+  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-4/linux/edamla-cilgin-problemler-4-Setup-Latest.AppImage"
+  dmg: ""
 
 # Social Media Attributes
 youtube:

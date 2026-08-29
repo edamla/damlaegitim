@@ -279,6 +279,7 @@ ean: 9786053832874
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786053832874/index.html"
 examlink: ""
 damlaurl: ""
+oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 
 # Spesific Filterable Attributes
 # degerler: TYMM Erdem-Değer çerçevesi (max 6) | anatema: TYMM Eğilimler | kazanim: Öykümatik kod (H.k.b.n) | beceriler: TYMM Beceriler | unite: TYMM üniteleri (story UI/filtre dışı)
@@ -304,6 +305,8 @@ akillitahta:
   appimage: ""
   dmg: ""
 ```
+
+`oncelik` ürün listesinin **birincil** sırasıdır: `0` en üstte, `9` en sonda. Aynı `oncelik` değerindeki kitaplar kendi içinde sınıfa göre küçükten büyüğe, sonra başlığa göre alfabetik dizilir. Alfabetik sıralama birincil değildir. `/urunler`, anasayfa ve kademe katalogları bu sırayı kullanır. Alan yoksa `9` kabul edilir.
 
 Hikaye kitaplarında `degerler`, `anatema`, `beceriler`, `kazanim` ve `tags` [`book-hero-meta.html`](_includes/book-hero-meta.html) ile başlık altında gösterilir (`unite` story kitaplarda UI'da gösterilmez). Eğitim setlerinde Maarif uyum tablosu gövdede markdown tablo olarak yer alır.
 

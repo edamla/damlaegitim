@@ -1,28 +1,56 @@
 {% assign genre_order = "education,story" | split: "," %}
 {% assign genre_labels = "Eğitim,Hikaye" | split: "," %}
-{% assign groupbooks = site.books | group_by: "authors" | sort: "name" %}
 
 {% for genre_key in genre_order %}
     {% assign genre_index = forloop.index0 %}
     <section class="book-genre-group" data-genre="{{ genre_key }}">
         <h3 class="book-genre-heading">{{ genre_labels[genre_index] }}</h3>
         <div class="row gap-y listbooks-home">
-            {% for author in groupbooks %}
-                {% assign books = author.items | sort: "url" %}
-                {% for book in books %}
-                    {% if book.genre == genre_key %}
+            {% assign books = site.books | where: "genre", genre_key %}
+            {% assign book_sort_keys = "" %}
+            {% for book in books %}
+                {% assign min_grade = 99 %}
+                {% for g in book.grades %}
+                    {% assign g_int = g | plus: 0 %}
+                    {% if g_int < min_grade %}
+                        {% assign min_grade = g_int %}
+                    {% endif %}
+                {% endfor %}
+                {% comment %}
+                  Birincil sıra oncelik (0 en üst, 9 en alt).
+                  Aynı oncelik içinde min sınıf küçükten büyüğe, sonra başlık.
+                  0 boş/nil sayılmaz (Liquid 0 == "" tuzağı).
+                {% endcomment %}
+                {% assign oncelik_json = book.oncelik | jsonify %}
+                {% if oncelik_json == 'null' %}
+                    {% assign oncelik_val = 9 %}
+                {% else %}
+                    {% assign oncelik_val = book.oncelik | plus: 0 %}
+                {% endif %}
+                {% assign oncelik_pad = oncelik_val | prepend: '00' | slice: -2, 2 %}
+                {% assign grade_pad = min_grade | prepend: '00' | slice: -2, 2 %}
+                {% capture sort_key %}{{ oncelik_pad }}::{{ grade_pad }}::{{ book.title | downcase }}::{{ book.url }}{% endcapture %}
+                {% assign book_sort_keys = book_sort_keys | append: sort_key | append: "§" %}
+            {% endfor %}
+            {% assign sorted_keys = book_sort_keys | split: "§" | sort %}
+            {% for sort_key in sorted_keys %}
+                {% if sort_key != "" %}
+                    {% assign book_url = sort_key | split: "::" | last %}
+                    {% assign book = books | where: "url", book_url | first %}
+                    {% if book %}
                         {% assign cat = "" %}
                         {% for category in book.categories %}
                             {% assign cat = cat | append: "cat-" | append: category | append: " " %}
                         {% endfor %}
                         {% capture extra_classes %}genre-{{ book.genre }} publisher-{{ book.publisher }} {{ cat | downcase }}{% endcapture %}
                         <div class="col-12 col-sm-6 col-lg-3 listbooks-home-item {{ extra_classes }}"
+                             data-oncelik="{{ book.oncelik }}"
                              data-grades="{{ book.grades | join: ',' }}"
                              data-genre="{{ book.genre }}">
                             {% include book-card.html %}
                         </div>
                     {% endif %}
-                {% endfor %}
+                {% endif %}
             {% endfor %}
         </div>
     </section>

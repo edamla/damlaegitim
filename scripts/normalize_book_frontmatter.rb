@@ -11,7 +11,7 @@ EXAMLINK_PREFIX = 'https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/'.freeze
 HEADER_KEYS = %w[layout title description categories].freeze
 STANDARD_KEYS = %w[ean languages page size publish-number cover examlink preview_link damlaurl].freeze
 OPTIONAL_STANDARD_KEYS = %w[original-name original-language].freeze
-BOOK_DETAIL_KEYS = %w[paper authors illustrators].freeze
+BOOK_DETAIL_KEYS = %w[paper authors illustrators oncelik].freeze
 FILTERABLE_KEYS = %w[genre grades ders tags degerler anatema egilimler kazanim beceriler unite].freeze
 
 def parse_frontmatter(content)
@@ -47,6 +47,11 @@ def normalize_data(data)
   data['youtube'] = '' if data['youtube'].nil?
   data.delete('ders') if data['genre'] != 'education'
   data.delete('ders') if data['ders'].is_a?(String) && data['ders'].strip.empty?
+  if data['oncelik'].nil? || (data['oncelik'].is_a?(String) && data['oncelik'].strip.empty?)
+    data['oncelik'] = 9
+  else
+    data['oncelik'] = Integer(data['oncelik'])
+  end
 
   data
 end
@@ -115,7 +120,9 @@ def build_frontmatter(data)
   BOOK_DETAIL_KEYS.each do |key|
     next unless data.key?(key)
 
-    lines << "#{key}: #{yaml_value(data[key], key: key)}"
+    line = "#{key}: #{yaml_value(data[key], key: key)}"
+    line += '  # 0: En Öncelikli 9: En az öncelikli' if key == 'oncelik'
+    lines << line
   end
 
   lines << ''

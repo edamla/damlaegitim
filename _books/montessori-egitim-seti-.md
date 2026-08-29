@@ -14,16 +14,11 @@ cover: ""
 examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/damlaegitim/8697911222755-1/index.html"
 damlaurl: ""
+oncelik: 0  # 0: En Öncelikli 9: En az öncelikli
 
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: education
-akillitahta:
-  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-minikdamla/win/edamla-minikdamla-Setup-Latest.exe"
-  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-minikdamla/linux/edamla-minikdamla-Setup-Latest.deb"
-  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-minikdamla/linux/edamla-minikdamla-Setup-Latest.AppImage"
-  dmg: ""
-
 grades: [0]
 tags: []
 degerler: []
@@ -32,6 +27,11 @@ egilimler: []
 kazanim: []
 beceriler: []
 unite: []
+akillitahta:
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-minikdamla/win/edamla-minikdamla-Setup-Latest.exe"
+  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-minikdamla/linux/edamla-minikdamla-Setup-Latest.deb"
+  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-minikdamla/linux/edamla-minikdamla-Setup-Latest.AppImage"
+  dmg: ""
 
 # Social Media Attributes
 youtube:
