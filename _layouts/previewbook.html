@@ -2,33 +2,52 @@
 layout: default
 ---
 <style>
+  .layout-previewbook .site-content {
+    margin-top: 0;
+  }
+  .previewbook-shell {
+    padding-top: 0;
+  }
   iframe {
     border: 0;
+    display: block;
   }
   .Grid {
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
   }
   .Grid-cell {
-    flex: 3;
-    height: 100%;
+    flex: 1 1 100%;
     width: 100%;
   }
   .Demo {
     background: #212121;
     transition: background-color 0.3s ease;
-    height: 100vh;
+    height: min(60vh, 520px);
+    min-height: 320px;
+    overflow: hidden;
   }
-  .Demo:after {
-    content: "";
-    display: block;
+  .Demo iframe {
+    width: 100%;
+    height: 100%;
+  }
+  @media (min-width: 768px) {
+    .Demo {
+      height: min(85vh, 900px);
+      min-height: 560px;
+    }
+  }
+  @media (min-width: 992px) {
+    .Demo {
+      height: 100vh;
+      min-height: 640px;
+    }
   }
 </style>
 
 {% assign book = page %}
 
-<div class="container-lg pt-4 pb-4">
+<div class="container-lg pb-4 previewbook-shell">
   {% include book-hero-meta.html book=book %}
   {% include book-detail-actions.html book=book only="info,akillitahta" %}
   <article class="article-post maarif-content">
@@ -38,7 +57,7 @@ layout: default
   <div class="Grid-cell">
     <div class="Demo content">
       {% if book.preview_link != nil and book.preview_link != '' %}
-      <iframe id="iframe" src="{{ book.preview_link }}" name="fbook" width="100%" height="100%" title="{{ book.title }} — ön okuma"></iframe>
+      <iframe id="iframe" src="{{ book.preview_link }}" name="fbook" title="{{ book.title }} — ön okuma"></iframe>
       {% else %}
       <p class="p-4 text-muted">Ön izleme şu anda kullanılamıyor.</p>
       {% endif %}

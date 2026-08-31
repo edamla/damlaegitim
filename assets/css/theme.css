@@ -3734,6 +3734,14 @@ div.a2a_full_footer {display:none;}
 
 
 
+.book-detail__actions {
+
+  margin-bottom: var(--space-6);
+
+}
+
+
+
 .book-detail__actions .btn {
 
   display: inline-flex;
