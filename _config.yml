@@ -142,4 +142,5 @@ exclude:
   - Gruntfile.js
   - Gruntfile.coffee
   - node_modules
+  - .cursor
   - docs
