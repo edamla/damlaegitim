@@ -1,5 +1,5 @@
 ---
-layout: previewbook
+layout: book
 title:  "İyilik Heryerde Serisi (10 Kitap)"
 categories: [Hikaye, İlkokul]
 
