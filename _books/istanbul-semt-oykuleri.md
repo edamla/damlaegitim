@@ -45,5 +45,4 @@ kuşaktan kuşağa aktarılan İstanbul efsanelerini gün yüzüne çıkarıyor.
 okudukça, her gün yürüdüğünüz sokakların ardındaki o efsanevi geçmişi keşfe-
 decek ve dünyanın incisi İstanbul’u bambaşka bir yönüyle tanıyacaksınız.
 
-
 <!--more-->

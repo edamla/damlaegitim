@@ -43,5 +43,4 @@ Haksızlıklarla yaralanmış yüreklerin, doğanın vahşi ama şefkatli kucağ
 iyileştiğine tanık olacağınızKartalın Yuvası; direncin, sadakatin ve hayata yeniden
 tutunmanın çarpıcı bir destanı.
 
-
 <!--more-->

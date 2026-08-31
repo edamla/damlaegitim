@@ -62,23 +62,4 @@ Mehmet Âkif Ersoy
 9- Köprülülü Hamdi Bey<br>
 10- Erzurumlu Gül Hanım
 
-**TEMALAR:** Vatanseverlik, Tarih, Kültür, Kurtuluş Mücadelesi
-
-**KAZANIMLAR:** Millî Mücadele Dönemini ve Kahramanlarını Tanımak, Vatan Sev gisi ve Bağımsızlık Bilincini İçselleştirmek, İstiklâl Marşı’nın Yazılış Sürecini ve Anlamını Kavramak, Cesaret, Fedakârlık ve Dayanışma Gibi Millî Değerleri Özümsemek
-
-**ETİKETLER:** Gazilik, Şehitlik, Vatanseverlik, Tarih, Kültür, Medeniyet, Bayrak, Kültür Birliği, Mücadele, Cihad Şuuru, Kahramanlık, Gençlik, Asker, Ordu, Cesaret, Millet
-
-Setin İçerdiği Hikayeler**
-
-1- İlk Kurşun <br>
-2- Topkapılı Cambaz Mehmet<br>
-3- Kara Fatma<br>
-4- Sütçü İmam<br>
-5- Şerife Bacı<br>
-6- Karboğazlı Hatice Bacı<br>
-7- Maraşlı Karayılan<br>
-8- İlk Çocuk Şehidimiz<br>
-9- Köprülülü Hamdi Bey<br>
-10- Erzurumlu Gül Hanım
-
 <!--more-->

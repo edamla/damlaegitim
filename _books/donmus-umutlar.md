@@ -45,5 +45,4 @@ umutlarını, liyakatsizliğin acı bedelini ve Mehmetçiğin vatan uğruna dona
 verirken bile taviz vermediği o yüce fedakârlığı yürekleri sızlatan bir gerçekçilikle
 anlatıyor.
 
-
 <!--more-->

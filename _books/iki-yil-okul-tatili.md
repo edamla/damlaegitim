@@ -46,5 +46,4 @@ Jules Verne’in çocukların dayanışma, disiplin ve cesaretle nasıl birer ka
 dönüştüğünü anlattığı bu unutulmaz klasik, okurları nefes kesen bir hayatta kalma
 serüvenine davet ediyor.
 
-
 <!--more-->

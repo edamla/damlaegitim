@@ -45,5 +45,4 @@ dayanışmayı ve bir milletin küllerinden yeniden doğuşunu duygu yüklü bir
 okurlara sunuyor. Ay yıldızlı al bayrağın göklerde özgürce dalgalanması için
 ödenen o büyük bedelin unutulmaz panoraması.
 
-
 <!--more-->

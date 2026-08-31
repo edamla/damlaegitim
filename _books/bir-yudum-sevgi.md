@@ -35,7 +35,6 @@ youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
-
 Aynur ve Seher, büyük bir depremle hayatları altüst olan ve evleri başlarına
 yıkılan iki küçük kız kardeş... Acımasız felaket sadece evlerini değil, tüm aileyi
 birbirinden koparır ve iki kardeşi farklı çocuk yuvalarına savurur. Ancak kader,
@@ -44,6 +43,5 @@ bu iki yalnız yüreği günün birinde aynı çatı altında yeniden bir araya 
 lığına hasret kalan minik yüreklerin sessiz feryatlarına tanık olacaksınız.
 Sara Gürbüz Özeren, çaresizliğin ve yoksulluğun ortasında bile sevginin iyileştirici
 gücünü yürek burkan, umut dolu bir dille kaleme alıyor.
-
 
 <!--more-->

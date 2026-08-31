@@ -45,5 +45,4 @@ gözler önüne seriyor.
 İnsanın varoluşsal krizini, görev bilincinin eziciliğini ve “özgürlük” yanılsamasını
 bir böcek kabuğunun altından anlatan unutulmaz bir klasik.
 
-
 <!--more-->

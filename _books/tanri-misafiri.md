@@ -43,5 +43,4 @@ iyiliğin ve sarsılmaz bir imanın yeşerttiği mucizeler silsilesi başlar.
 Tanrı Misafiri, dış görünüşün ardındaki asıl zenginliği ve merhametin açamayacağı
 hiçbir kapı olmadığını anlatan sarsıcı bir başyapıt.
 
-
 <!--more-->

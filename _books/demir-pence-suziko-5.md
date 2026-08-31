@@ -45,5 +45,4 @@ kullanarak bu amansız takipten kurtulmak zorundadır.
 Yapay zekânın sırlarını korumak için verilen bu büyük mücadele, serinin en
 heyecanlı ayağını oluşturuyor.
 
-
 <!--more-->

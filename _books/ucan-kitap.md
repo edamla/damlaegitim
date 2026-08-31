@@ -38,8 +38,4 @@ youtube:
 ---
 Günümüzün en büyük pedagojik sorunlarından biri olan “ekran bağımlılığına” karşı çocuklarımıza kitap okuma sevgisini aşılamaya ne dersiniz? “Uçan Kitap”, tüm zamanını bilgisayar ekranı karşısında geçiren ve yalnızlaşan Kaan’ın, aniden kanatlanan “Masal Kitabım” ile yaşadığı sürpriz dolu macerayı konu alıyor. “Psikolojik Danışman Onaylı” olarak hazırlanan bu eğlenceli serüven; öğrencilere ekran süresini kontrol etmenin, akran ilişkilerini güçlendirmenin ve kitapların o gizemli dünyasına adım atmanın önemini vurguluyor. Masal Ülkesi’ndeki Bilguslarla tanışan Kaan’ın bu uyanış hikâyesi, sınıflarınızda kitap okuma alışkanlığını desteklemek için eşsiz bir rehber olacak!
 
-**TEMALAR:** Ekran Bağımlılığı, İletişim ve Dostluk, Kütüp, Para Biriktirme, Hayal Gücü
-
-**KAZANIMLAR:** Ekran Süresini Doğru Belirleme ve Dijital Detoks Becerisi Kazanmak
-
 <!--more-->

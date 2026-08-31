@@ -44,5 +44,4 @@ yüzündeki kadim İrus Uygarlığı’nın gizemleriyle karşılaşır.
 Okurken sizi farklı boyutlara götürecek bu eser; gezegenler arası sırların, zorlu
 fedakârlıkların ve inanılmaz keşiflerin destansı bir öyküsünü sunuyor.
 
-
 <!--more-->

@@ -37,10 +37,4 @@ youtube:
 ---
 Kocaman bir okyanus... İçinde çeşit çeşit deniz canlıları... Kimisi tembel, kimisi çalışkan, kimisi hiç gülmüyor, kimisi çok neşeli... Yaşadıkları bir sürü maceranın içinde palyaço balığı gülmeyi, kırmızı ıstakoz çalışkanlığı, mürekkepbalığı farklılığını kabullenmeyi, renk değiştiren ahtapot kibar olmayı, sevimli denizanası arkadaşlığı, denizatı kendisiyle barışık olmayı, denizayısı yardımseverliği, küçük deniz yıldızı sabırlı olmayı, neşeli istiridye paylaşmayı, yengeç kardeşler affetmeyi öğreniyor. Değerler Okyanusu Serisi, sizleri bu sevimli deniz canlılarıyla birlikte maceradan maceraya koşmaya ve değerlerimizi öğrenmeye davet ediyor. 1- Haydi Saklambaç Oynayalım 2- Cesur Denizanası 3- Ben Kimim? 4- Gülmeyen Balık 5- Bir Yıldız Gördüm 6- Doğum Günüm 7- Somurtkan Ahtapot 8- Kalemizi Kim Yıktı 9- Tembel Istakoz 10- Neden Bu Kadar Büyüğüm?
 
-**TEMALAR:** Değerler Eğitimi, Klasik Masallar, Uykudan Önce
-
-**KAZANIMLAR:** Değerlerimizi Masallarla Öğrenmek, Erdemli Bireyler Olmak, Dünya
-
-**ETİKETLER:** Değerler Eğitimi, Klasik Masallar, Uykudan Önce, Değerlerimizi Masallarla Öğrenmek, Erdemli Bireyler Olmak, Dünya, Doğruluk, Tevazu, Arkadaşlık, Sevgi, Saygı, Sözünde Durmak, Hayvan
-
 <!--more-->

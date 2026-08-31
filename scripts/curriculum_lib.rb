@@ -43,12 +43,193 @@ module CurriculumLib
     [fm.transform_keys(&:to_s), match[2]]
   end
 
+  LEGACY_LABELS = %w[TEMALAR KAZANIMLAR ETİKETLER].freeze
+  LEGACY_LABEL_ALT = LEGACY_LABELS.join('|').freeze
+  SET_HEADING_PATTERN = /
+    (?:
+      \*{0,2}Setin\s+İçerdiği\s+(?:Kitaplar|Hikayeler)(?:\*{1,2})?[ \t]*[:;]?(?:\*{1,2})?
+      |[^\n]*Setin\s+İçerdiği\s+(?:Kitaplar|Hikayeler)[^\n]*
+    )
+  /ix.freeze
+
   def strip_labeled_blocks(body)
     text = body.to_s.dup
-    %w[TEMALAR KAZANIMLAR ETİKETLER].each do |label|
-      text.gsub!(/\*{0,2}#{label}\*{0,2}\s*:.*?(?=\n\*{0,2}[A-ZÇĞİÖŞÜ]|\z)/mi, "\n")
+    text = strip_legacy_html_comments(text)
+    text = strip_inline_metadata_chain(text)
+
+    5.times do
+      before = text
+      LEGACY_LABELS.each { |label| text = strip_single_label_block(text, label) }
+      break if text == before
     end
-    text.gsub(/\n{3,}/, "\n\n").strip
+
+    normalize_body_whitespace(text)
+  end
+
+  def strip_legacy_html_comments(body)
+    body.to_s.gsub(/<!--.*?-->/m) do |comment|
+      comment.match?(/TEMALAR|KAZANIMLAR|ETİKETLER/i) ? '' : comment
+    end
+  end
+
+  def strip_inline_metadata_chain(body)
+    body.to_s.gsub(
+      /\s+\*{0,2}TEMALAR\*{0,2}\s*[:;]?\s*(?:•\s*)?.*?\*{0,2}ETİKETLER\*{0,2}\s*[:;]?\s*(?:•\s*)?.*?(?=\s+(?:\*{0,2})?Setin\s+İçerdiği\b)/mi,
+      ''
+    )
+  end
+
+  def strip_single_label_block(text, label)
+    others = (LEGACY_LABELS - [label]).join('|')
+    stop_line = /
+      \s*\*{0,2}(?:#{others})\*{0,2}\s*[:;]?
+      |\s*\*{0,2}Setin\s+İçerdiği\b
+      |\s*Setin\s+İçerdiği\b
+      |\s*KİTAPLAR\s*;
+    /ix
+
+    pattern = /
+      (?:^|\n)
+      \s*\*{0,2}#{label}\*{0,2}\s*[:;]?\s*
+      (?:
+        [^\n]*
+        (?:
+          \n
+          (?!#{stop_line})
+          (?:
+            -\s+[^\n]+
+            |[^\n]+
+          )
+        )*
+      )?
+    /mix
+
+    text.gsub(pattern, "\n")
+  end
+
+  def normalize_body_whitespace(text)
+    text.to_s
+        .gsub(/[ \t]+\n/, "\n")
+        .gsub(/\n{3,}/, "\n\n")
+        .strip
+  end
+
+  def extract_set_section_items(section_text)
+    section_text.to_s
+                .gsub(/<br\s*\/?>/i, "\n")
+                .scan(/\d+[\-\.]\s*([^\n<]+)/)
+                .map { |m| normalize_tr(m[0]) }
+                .reject(&:empty?)
+  end
+
+  def set_section_quality(section_text)
+    score = 0
+    score += 10 if section_text.match?(/\*\*Setin\s+İçerdiği/i)
+    score -= 8 if section_text.match?(/\A[^\n*]*Setin\s+İçerdiği[^*]*\*\*/i)
+    score += section_text.count("\n")
+    score -= section_text.scan(/<br>/i).size
+    score
+  end
+
+  def dedupe_set_sections(body)
+    text = dedupe_structured_set_sections(body)
+    dedupe_inline_set_lines(text)
+  end
+
+  def dedupe_structured_set_sections(body)
+    text = body.to_s.dup
+    pattern = /
+      (?:^|\n)
+      #{SET_HEADING_PATTERN.source}
+      (?:
+        \n\s*
+        (?:
+          \d+[\-\.]\s*[^\n]+(?:<br>)?
+          |-\s+[^\n]+
+        )
+      )*
+    /mix
+
+    sections = []
+    text.to_enum(:scan, pattern).each do
+      match = Regexp.last_match
+      sections << { start: match.begin(0), end: match.end(0), text: match[0], items: extract_set_section_items(match[0]) }
+    end
+    return text if sections.size < 2
+
+    groups = sections.group_by { |s| s[:items].join('|') }
+    remove_ranges = []
+    groups.each_value do |group|
+      next if group.size < 2
+      next if group.first[:items].empty?
+
+      keeper = group.max_by { |s| set_section_quality(s[:text]) }
+      group.each do |section|
+        next if section.equal?(keeper)
+
+        remove_ranges << [section[:start], section[:end]]
+      end
+    end
+
+    return text if remove_ranges.empty?
+
+    remove_ranges.sort_by! { |start, _| -start }
+    remove_ranges.each do |start, finish|
+      text[start...finish] = ''
+    end
+
+    normalize_body_whitespace(text)
+  end
+
+  def dedupe_inline_set_lines(body)
+    text = body.to_s.dup
+    fingerprints = {}
+    ranges_to_remove = []
+
+    text.to_enum(:scan, /Setin\s+İçerdiği\s+(?:Kitaplar|Hikayeler)[^\n]*/i).each do
+      match = Regexp.last_match
+      segment = match[0]
+      items = extract_set_section_items(segment)
+      next if items.empty?
+
+      key = items.join('|')
+      range = (match.begin(0)...match.end(0))
+      if fingerprints.key?(key)
+        prev = fingerprints[key]
+        keep_range = better_set_range(prev[:range], prev[:text], range, segment)
+        remove_range = keep_range == range ? prev[:range] : range
+        ranges_to_remove << remove_range
+        next if keep_range == range
+
+        fingerprints[key] = { range: range, text: segment }
+      else
+        fingerprints[key] = { range: range, text: segment }
+      end
+    end
+
+    ranges_to_remove.sort_by { |r| -r.begin }.uniq.each do |range|
+      text[range] = ''
+    end
+
+    normalize_body_whitespace(text)
+  end
+
+  def better_set_range(range_a, text_a, range_b, text_b)
+    score_a = inline_set_quality(text_a, range_a)
+    score_b = inline_set_quality(text_b, range_b)
+    score_b > score_a ? range_b : range_a
+  end
+
+  def inline_set_quality(segment, range)
+    score = set_section_quality(segment)
+    score += 5 if segment.match?(/\A\*{2}Setin/i)
+    score -= 3 if segment.match?(/\A[^\n*]*Setin[^\n]*\*\*\s*\z/)
+    score -= 2 if range && range.begin.positive? && !segment.match?(/\A\n/)
+    score
+  end
+
+  def clean_book_body(body)
+    dedupe_set_sections(strip_labeled_blocks(body))
   end
 
   def titleize_unite(name)
@@ -251,6 +432,16 @@ module CurriculumLib
     return picked if picked.any?
 
     (fallback & candidates).first(max)
+  end
+
+  def write_book_body(path, cleaned_body)
+    content = path.read
+    match = content.match(/\A(---\r?\n.*?\r?\n---\r?\n)(.*)\z/m)
+    raise "Frontmatter bulunamadı: #{path}" unless match
+
+    body = cleaned_body
+    body += "\n" unless body.end_with?("\n")
+    path.write("#{match[1]}#{body}")
   end
 
   def write_frontmatter_fields(path, updates)

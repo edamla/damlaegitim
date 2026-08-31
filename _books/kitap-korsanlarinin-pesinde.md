@@ -43,5 +43,4 @@ cıların peşine düşerek adeta usta birer dedektife dönüşürler.
 Adaleti sağlamak için atıldıkları bu tehlikeli ama onurlu yolculuk; dostluğun,
 kararlılığın ve dürüstlüğün en güzel örneklerini okurlara sunuyor.
 
-
 <!--more-->

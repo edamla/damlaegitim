@@ -44,5 +44,4 @@ peşlerindeki karanlık casuslar her zamankinden çok daha kararlıdır. Üsteli
 zalanan Suziko’nun aslında hangi devlet adına çalıştığına dair büyük sırlar yavaş
 yavaş gün yüzüne çıkarken, bu zorlu kaçış serüveni tüm sınırları zorlayacaktır.
 
-
 <!--more-->

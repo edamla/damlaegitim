@@ -41,10 +41,4 @@ başına onu mutlu etmeye yeter, çünkü hayalleri âdeta kanatlanır! Yaptığ
 Geçirdiği kaza sonrasında hayata dört elle sarılır Volkan.
 En büyük destekçisi biricikannesidir. “Engel Tanımayanlar” serisi ile Volkan’ın inatla yeni hayallere kanat çırpmasını, yaptığı her işi bir başarı hikâyesine dönüştürmesini okuyacaksınız.
 
-**TEMALAR:** Engellilere Empati, Başarı Ruhu, Psikolojik Motivasyon, Gezi, Macera
-
-**KAZANIMLAR:** Engelli Bireylere Yönelik Empati Geliştirmek, Diğergamlık (Özgecilik) ve Dayanışma Değerlerini İçselleştirmek, Zorluklar Karşısında Pes Etmemeyi ve Başarı Ruhunu Kavramak, Sözcük Dağarcığını Yeni Kelimelerle Zenginleştirmek
-
-**ETİKETLER:** Başarının Anahtarı, Hayal Kurma, Engelli, Yaşam, Empati, İnanç
-
 <!--more-->

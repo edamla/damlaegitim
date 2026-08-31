@@ -45,5 +45,4 @@ taht odasında şanlı bir eyleme dönüştüğünde ortaya çıkacaktır.
 Ömer Seyfettin’in kaleminden, devletin onurunu her şeyin üstünde tutan gerçek
 bir vatanseverlik ve asalet destanı!
 
-
 <!--more-->

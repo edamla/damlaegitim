@@ -46,5 +46,4 @@ bile şaşırtan o gizemli kişi nihayet ortaya çıkmak üzeredir.
 Çevre bilinci ile siber güvenliğin harmanlandığı bu zekâ dolu macerada, Afacanlar
 bir kez daha adaleti sağlamaya kararlı.
 
-
 <!--more-->

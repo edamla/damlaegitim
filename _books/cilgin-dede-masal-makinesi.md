@@ -35,45 +35,18 @@ youtube: "https://www.youtube.com/watch?v=xAUgoaDYLQc"
 
 # For adding excerpt add <!--more--> and break the line
 ---
-Çılgın Dedemin Masal Makinesi Masallar Diyarına Yolculuk Rengârenk, rüya gibi bir makine ile masallar diyarına uçmaya hazır mısınız? Zaman makinesinin mucidi Çılgın Dede, bizleri yine unutmadı ve Masal Makinesi'ni icat etti. Sevimli kahramanlarımız Yiğit ile Cemre, çok sevdiğimiz masal kahramanlarının diyarına uçarak eğlenceli bir macera yaşıyorlar. Haydi masal makinesine binelim, devler ülkesinden geçip Kafdağı’na çıkalım. Zümrüdüanka'nın kanatlarına tutunup Keloğlan'ın ülkesine uçalım. Yiğit ile Cemre'yi bu heyecanlı maceralarında yalnız bırakmayalım. 
-
-
-**KAZANIMLAR:**  
-- Zaman Boyutunu Kavramak
-- Masallarla Değelerimizi Öğrenmek
-- Olumlu Davranış Geliştirmek
-- Yeni Kelimeler Öğrenme
-- Yeni Deyim Öğrenme
-
+Çılgın Dedemin Masal Makinesi Masallar Diyarına Yolculuk Rengârenk, rüya gibi bir makine ile masallar diyarına uçmaya hazır mısınız? Zaman makinesinin mucidi Çılgın Dede, bizleri yine unutmadı ve Masal Makinesi'ni icat etti. Sevimli kahramanlarımız Yiğit ile Cemre, çok sevdiğimiz masal kahramanlarının diyarına uçarak eğlenceli bir macera yaşıyorlar. Haydi masal makinesine binelim, devler ülkesinden geçip Kafdağı’na çıkalım. Zümrüdüanka'nın kanatlarına tutunup Keloğlan'ın ülkesine uçalım. Yiğit ile Cemre'yi bu heyecanlı maceralarında yalnız bırakmayalım.
 
 **Setin İçerdiği Kitaplar:**
-1. Masal Makinesinin İcadı 
-2. Keloğlan'ın Ülkesinde 
+1. Masal Makinesinin İcadı
+2. Keloğlan'ın Ülkesinde
 3. Kırk Haramilere Karşı
-4. Kafdağı'nda 
-5. Kuyruksuz Tilki 
-6. İplikçi Kız 
-7. Yatalak Oğlan 
-8. Akıllı Leylek 
-9. Huylu Huyundan Vazgeçmez 
-10. Masal Ülkesinde Şenlik Var
-
-**TEMALAR:** Masallarla Değerler Eğitimi, Zaman Makinesi, Macera, Gizem, Keşif
-
-**KAZANIMLAR:** Zaman Boyutunu Kavramak, Masallarla Değerlerimizi Öğrenmek, Olumlu Davranışlar Geliştirmek, Yeni Kelimeler Öğrenmek, Yeni Deyimler Öğrenmek
-
-**ETİKETLER:** Masal, Zaman Makinesi, Masal Makinesi, Değerler Eğitimi, Yeni Kelime, Yeni Deyim, Macera, Keşif, Gizem, Efsane
-
-Setin İçerdiği Kitaplar:**
-1. Masal Makinesinin İcadı 
-2. Keloğlan'ın Ülkesinde 
-3. Kırk Haramilere Karşı
-4. Kafdağı'nda 
-5. Kuyruksuz Tilki 
-6. İplikçi Kız 
-7. Yatalak Oğlan 
-8. Akıllı Leylek 
-9. Huylu Huyundan Vazgeçmez 
+4. Kafdağı'nda
+5. Kuyruksuz Tilki
+6. İplikçi Kız
+7. Yatalak Oğlan
+8. Akıllı Leylek
+9. Huylu Huyundan Vazgeçmez
 10. Masal Ülkesinde Şenlik Var
 
 <!--more-->

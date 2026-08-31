@@ -112,9 +112,9 @@ Tüm token'lar `theme.css` → `:root` bloğunda tanımlıdır. Bileşenlerde m�
 
 | Token | Font ailesi | Kullanım |
 |-------|-------------|----------|
-| `--font-nav` | Geometric Sans | Navbar menü linkleri |
+| `--font-nav` | KoHo | Navbar menü linkleri |
 | `--font-display` | Punta (Light, 300) | Sınıf filtresi, tür başlıkları, footer başlıkları, bölüm başlıkları |
-| `--font-sans` | Raykjavik | Genel site metni, `body`, kitap açıklamaları |
+| `--font-sans` | KoHo | Genel site metni, `body`, kitap açıklamaları |
 | `--font-serif` | `var(--font-sans)` | Kitap kartı başlıkları (şu an sans ile aynı) |
 
 ### Boşluk ve boyut
@@ -145,27 +145,26 @@ Tüm token'lar `theme.css` → `:root` bloğunda tanımlıdır. Bileşenlerde m�
 
 | Font | Kaynak | Servis edilen | CSS `@font-face` |
 |------|--------|---------------|------------------|
-| Geometric Sans | `assets/fonts/geometric-sans/geometric.woff2` | WOFF2 | `theme.css` başı |
+| KoHo | `assets/fonts/Koho/KoHo-{Regular,Medium,Bold,Italic}.ttf` | WOFF2 subset (~14–15 KB / ağırlık) | `theme.css` başı |
 | Punta Light | `assets/fonts/punta/Punta-Light.woff2` | WOFF2 | `theme.css` başı |
-| Raykjavik Rounded | `assets/fonts/raykjavik/reykjavik-rounded-regular.woff2` | WOFF2 (~26 KB subset) | `theme.css` başı |
 | Font Awesome 5.15.4 | `assets/fonts/fontawesome/*.woff2` | Yerel tam paket | `fontawesome-all.min.css` |
 
-Tüm `@font-face` tanımlarında `font-display: swap` kullanılır. Raykjavik `default.html` head'de preload edilir.
+Tüm `@font-face` tanımlarında `font-display: swap` kullanılır. KoHo Regular `default.html` head'de preload edilir.
 
 ### Font atama haritası
 
 | Alan | Font | Boyut / ağırlık |
 |------|------|-----------------|
-| `body` | Raykjavik | Varsayılan |
-| Navbar `.nav-link` (ana menü) | Geometric Sans | `0.93rem`, bold |
+| `body` | KoHo | Regular (400), varsayılan |
+| Navbar `.nav-link` (ana menü) | KoHo | `0.93rem`, Bold (700) |
 | `.grade-nav-label` | Punta | `clamp(0.95rem, 1.4vw, 1.15rem)`, 600 |
 | `.book-genre-heading` | Punta | `1.1rem`, 700 |
 | `.site-footer__heading` | Punta | `0.85rem`, 700, uppercase, `letter-spacing: 0.04em` |
-| `.book-card__title` | Raykjavik (serif token) | `1rem`, 2 satır clamp |
-| `.article-headline` (kitap detay) | Raykjavik | `3.2rem` (`.display-4` ile), mobilde ortalı |
-| `.book-detail__tagline` (kavram özeti) | Raykjavik | İtalik alıntı, turuncu sol border |
-| `.prose--display` (ürün açıklaması) | Raykjavik | `0.95rem`, `line-height: 1.15`, `#5c636a` |
-| `article` (blog) | Raykjavik | `1.1rem`, `line-height: 1.86` |
+| `.book-card__title` | KoHo (serif token) | `1rem`, 2 satır clamp |
+| `.article-headline` (kitap detay) | KoHo | `3.2rem` (`.display-4` ile), mobilde ortalı |
+| `.book-detail__tagline` (kavram özeti) | KoHo Italic | İtalik alıntı, turuncu sol border |
+| `.prose--display` (ürün açıklaması) | KoHo | `0.95rem`, `line-height: 1.15`, `#5c636a` |
+| `article` (blog) | KoHo | `1.1rem`, `line-height: 1.86` |
 
 ### Prose stilleri
 

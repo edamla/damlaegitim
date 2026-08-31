@@ -45,5 +45,4 @@ cak? Dünyalıların hayatı Zoyalılara mı, yoksa esrarengiz Mayatalılara mı
 Zaman makinesi Ertuğrul’un rotasını takip edin ve Mavi Gezegen’den uzaklara,
 yıldızların arasındaki bu unutulmaz kaçış macerasına katılın!
 
-
 <!--more-->

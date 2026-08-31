@@ -45,5 +45,4 @@ rüyasının peşine düşüyoruz.
 İnancın, stratejinin ve askeri dehanın sınırlarını zorlayan bu eşsiz fethe, tarihin
 akışını değiştiren o anlara yakından şahit olun.
 
-
 <!--more-->

@@ -45,5 +45,4 @@ olaylar zinciri, sadece Gezegen-9’un değil, Dünya’nın da kaderini belirle
 İki dünya arasında kurulan köprüde, zekice kurgulanmış diyaloglarla örülü fan-
 tastik bir maceraya hazır olun!
 
-
 <!--more-->

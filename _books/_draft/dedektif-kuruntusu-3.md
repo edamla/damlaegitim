@@ -40,5 +40,4 @@ kesmeden önce, Fatma ve keskin zekâlı dostu Ali bu gizemi çözmek zorundadı
 olayı aydınlatmaya çalışırken zihinlerinin onlara oynadığı tehlikeli oyunlarla da
 yüzleşecektir.
 
-
 <!--more-->

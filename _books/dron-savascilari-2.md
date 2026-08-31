@@ -46,5 +46,4 @@ bulaşmışlardır!
 Dronların kıyasıya çarpıştığı bu aksiyon dolu operasyonda, gökyüzünün sessiz
 savaşçıları adaleti sağlamak için yeniden havalanıyor.
 
-
 <!--more-->

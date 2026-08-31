@@ -57,8 +57,4 @@ Gölü’ne mi! Tamam o zaman aç kitabın
 kapağını bin Ertuğrul’a seni istediğin yere
 ışınlasın...
 
-**TEMALAR:** Türkiye’nin Şehirleri, Tarihî ve Doğal Güzellikler, Kültürel Miras Alan
-
-**KAZANIMLAR:** Zaman ve mekân yolculuğu kurgusuyla hayal gücünü geliştirmek, Ülkemizin farklı şehirlerini, tarihî ve doğal güzelliklerini tanımak, Geçmiş, bugün ve gelecek arasında tarihsel bağlantı kurmak, Kültürel mirası ve doğal varlıkları korumanın değerini kavramak, Bilim ve teknolojinin sınır tanımayan gücünü fark etmek, Millî bilinci geliştirerek ülkesini ve tarihini sahiplenmek
-
 <!--more-->

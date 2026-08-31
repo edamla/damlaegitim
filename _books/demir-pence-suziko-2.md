@@ -45,5 +45,4 @@ zorundadırlar.
 Heyecandan soluğunuzu kesecek bu soğuk cehennemde, dostluğun ve fedakâr-
 lığın en sıcak hâline tanık olacaksınız.
 
-
 <!--more-->

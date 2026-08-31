@@ -45,5 +45,4 @@ Ekip ruhunun, dayanışmanın ve fedakârlığın ön plana çıktığı bu nefe
 serüvende, karanlık kâbusları rengârenk rüyalara dönüştürmek için savaşan
 kahramanların dünyasına adım atın.
 
-
 <!--more-->

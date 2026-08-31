@@ -46,5 +46,4 @@ Jules Verne’in kendi seyahat tecrübelerinden ilham alarak kaleme aldığı bu
 eşsiz eser, devasa bir geminin dar koridorlarında yaşanan büyük gerilimleri ve
 unutulmaz bir hayatta kalma mücadelesini anlatıyor.
 
-
 <!--more-->

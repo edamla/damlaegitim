@@ -62,12 +62,3 @@ Her kitabın sonunda yer alan mini sözlük ve öğretmen destekli etkinlik öne
 Bu seride her bir hikâye, çocukların iç dünyasında yeni bir pencere açıyor.
 
 Duygularla tanışmak, büyümenin en güzel adımı!
-<!-- <img style="height: 50vh" src="/assets/images/ean/8697911223851-1.jpg" alt="">
-
-**TEMALAR:** Empati ve Dostluk, Zorluklarla Yüzleşme ve Değişim, Kişisel Farkındalık ve Değerler, Korkuları Yenme ve Destek
-
-**KAZANIMLAR:** Kendi Duygularını Tanımak ve İfade Etmek, Duygusal Okuryazarlık
-
-**ETİKETLER:** Sosyal ve Duygusal Gelişim, Empati, Arkadaşlık ve İletişim Becerisi, Yardımlaşma ve Duyarlı Olma, Akran Zorbalığı, Saygı ve İç Farkındalık, Korkuyu Yenme, Cesaret, Öz Güven ve Farklılıkları Anlamak, Duygularla Tanışma ve Anlamlandırma AKRAN Becerisi Kazandırır: Her bir kitap, Korku, kıskançlık, öfke, pişmanlık gibi yoğun duyguların yanında dostluk, paylaşma
-
-<!--more-->

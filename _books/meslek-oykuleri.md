@@ -50,12 +50,3 @@ Hey, arkadaşım! Büyüyünce ne olacaksın? Ben doktor olacağım. Dur, dur! B
 • Değerler eğitimi: Özveri, çalışma disiplini, üretkenlik ve liderlik gibi değerler meslek tanıtımıyla birlikte işlenir.
 
 • Öykümatik Hikâye Ölçme ve Değerlendirme Sistemi: Her hikâye, mesleki bilgi ve okuduğunu anlama becerilerini geliştiren 20 soruluk hikâye değerlendirme testi ile desteklenir.
-<!-- <img style="height: 50vh" src="/assets/images/ean/8697911222991-1.jpg" alt="">
-
-**TEMALAR:** Toplumsal İş Bölümü ve Meslekler, Mesleklerin Günlük Yaşamdaki
-
-**KAZANIMLAR:** Çevresindeki Meslekleri ve Özelliklerini Tanımak, Toplumsal Yaşamda
-
-**ETİKETLER:** Doktor, pilot, aşçı, stilist, terzi, ziraat mühendisi, yazar, mimar, asker, avukat, bilim insanı, hemşire, hostes
-
-<!--more-->

@@ -44,5 +44,4 @@ Kararlılık ve azmin, genç beyinlerde nasıl bir mucize yarattığını anlata
 doğaya nefes olmak ve geleceğe umutla bakmak isteyen herkes için eşsiz bir
 rehber.
 
-
 <!--more-->

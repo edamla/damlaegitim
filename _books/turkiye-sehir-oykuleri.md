@@ -45,5 +45,4 @@ kulağa aktarılan masalsı efsanelerini ve acı tatlı hatıralarını bu kitap
 getiriyor. Ata yurdumuzun eşsiz kültürel zenginliğini ve şehirlerimizin doğuş öy-
 külerini keşfetmek isteyenler için benzersiz bir kültürel yolculuk zamanı!
 
-
 <!--more-->

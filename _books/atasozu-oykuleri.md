@@ -43,12 +43,6 @@ Bu seride toplam 5 adet eser bulunmaktadır.<br>
 4-Çam Sakızı Çoban Armağanı <br>
 5-Ürümesini Bilmeyen Köpek Sürüye Kurt Getirir
 
-**TEMALAR:** Millî Kültür, Dilbilim, Birey ve Toplum
-
-**KAZANIMLAR:** Yeni Atasözleri Öğrenmek, Kelime Hazinesini
-
-**ETİKETLER:** Atasözü, Öykü, Merak, Macera, Sevgi, Saygı, Dayanışma, Birey, Dilbilim, Tarih, Toplum
-
 1-Balık Baştan Kokar <br>
 2-Kel Başa Şimşir Tarak <br>
 3-Aç Ayı Oynamaz <br>

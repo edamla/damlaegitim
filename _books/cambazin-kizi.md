@@ -43,5 +43,4 @@ yollarının kesişmesi, her ikisi için de beklenmedik bir kurtuluşun kapısı
 aralayacaktır. Zekâ, şefkat ve masumiyetin, en katı yürekleri bile nasıl pamuk
 ipliğiyle hayata bağladığına tanık olacaksınız.
 
-
 <!--more-->

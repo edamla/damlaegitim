@@ -46,5 +46,4 @@ benliğine dönebilecek mi?
 Kuşak çatışmasını ve gençliğin o savrulgan heyecanını tüm gerçekliğiyle yansıtan
 sürükleyici bir gençlik romanı.
 
-
 <!--more-->

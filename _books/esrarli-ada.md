@@ -46,5 +46,4 @@ iyiliksever güç” kimdir?
 Jules Verne’in Kaptan Nemo efsanesini de içine katan bu sürükleyici başyapıtı,
 hayal gücünüzün sınırlarını zorlayacak.
 
-
 <!--more-->

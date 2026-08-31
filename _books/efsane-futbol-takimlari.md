@@ -44,5 +44,4 @@ karşısında aldığı efsanevi galibiyet!
 Sadece bir spor müsabakasını değil, bir milletin “Biz buradayız, ayaktayız!” haykı-
 rışını anlatan bu kitap; sporun birleştirici ve iyileştirici gücünü gözler önüne seriyor.
 
-
 <!--more-->

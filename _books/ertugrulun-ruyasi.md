@@ -35,7 +35,6 @@ youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
-
 Kayı Boyu’nun yiğit lideri Ertuğrul Gazi, Moğolların acımasız baskısına ve Bizans’ın
 bitmek bilmeyen tuzaklarına karşı obasını korumak için amansız bir mücadeleye
 girişir. Sadece birkaç yüz çadırla yurt edindiği Söğüt’te, adaleti ve hürriyeti temel
@@ -44,6 +43,5 @@ birbirine karıştığı bu destansı yolculukta, Ertuğrul’un gördüğü o k
 bir obanın değil, tüm dünyanın kaderini değiştirecektir.
 Cesaretin, sarsılmaz bir imanın ve kılıcın gölgesinde yeşeren tarihi bir diriliş
 destanına tanık olmaya hazır mısınız?
-
 
 <!--more-->

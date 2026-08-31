@@ -44,5 +44,4 @@ Küçük Su Damlasının Dünya Turu, suyun her hâline bürünerek yeryüzüne 
 veren bir damlanın gözünden, çevre kirliliğinin acımasızlığını ve ekolojik dengenin
 kırılganlığını anlatan büyüleyici bir masal.
 
-
 <!--more-->

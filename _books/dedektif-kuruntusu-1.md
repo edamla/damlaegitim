@@ -45,5 +45,4 @@ rüvene davet ediyor.
 Ön yargıları yıkan ve bilimsel düşünceyi eğlenceyle harmanlayan bu macerayı
 bir solukta okuyacaksınız.
 
-
 <!--more-->

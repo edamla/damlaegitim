@@ -43,5 +43,4 @@ kalplerini yeniden onarmaya çalışırlar.
 Güllü Bahçe, merhametin ve alın terinin, en verimsiz toprakları bile nasıl umut
 dolu bir yuvaya dönüştürebileceğini anlatan unutulmaz bir diriliş hikâyesi.
 
-
 <!--more-->

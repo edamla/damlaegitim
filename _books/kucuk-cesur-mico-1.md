@@ -44,5 +44,4 @@ Dalgalarla boğuşurken coğrafyanın ve tarihin canlı birer tanığına dönü
 Cesur Miço, rüzgârın fısıltısıyla büyüyen yüreklere unutulmaz bir dünya turu
 vadediyor.
 
-
 <!--more-->

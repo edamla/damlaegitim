@@ -44,5 +44,4 @@ Hırsız ile polis arasındaki o bitmek bilmeyen ezeli rekabetin mizah ve alayc�
 harmanlandığı bu eşsiz hikâyede, sırların ancak usta bir zekâyla çözülebileceğine
 şahit olacaksınız.
 
-
 <!--more-->

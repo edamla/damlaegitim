@@ -45,5 +45,4 @@ kucaklayan bir mucizeye dönüşür.
 Toprağın derinliklerinden fışkıran suyun etrafında filizlenenKuyulu Bahçe, insanın
 doğayla ve kendi özüyle barışma serüvenini eşsiz bir dille anlatıyor.
 
-
 <!--more-->

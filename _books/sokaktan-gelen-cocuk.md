@@ -44,5 +44,4 @@ kurnazlıklara rağmen dürüstlüğünden zerre taviz vermeyen Murat’ın hik�
 Sokaktan Gelen Çocuk, sokağa atılmış bir bedenin, kötülüklere teslim olmak
 yerine nasıl erdemli bir ruha dönüştüğünü anlatan ölümsüz bir başyapıt.
 
-
 <!--more-->

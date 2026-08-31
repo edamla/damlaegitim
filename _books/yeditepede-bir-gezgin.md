@@ -44,5 +44,4 @@ yaşayacaktır.
 Sara Gürbüz Özeren’in kaleminden, gurbet ile sılayı birbirine bağlayan, kültürel
 aidiyet ve kökleri keşfetme üzerine yazılmış sıcacık bir arayış hikâyesi.
 
-
 <!--more-->

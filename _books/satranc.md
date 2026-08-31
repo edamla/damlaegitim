@@ -44,5 +44,4 @@ Stefan Zweig’ın intiharından hemen önce tamamladığı, faşizmin insan zih
 yıkıcı etkilerini bir satranç tahtası üzerinden anlattığı bu eser, psikolojik
 gerilimi ve sarsıcı kurgusuyla unutulmaz bir başyapıt!
 
-
 <!--more-->

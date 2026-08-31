@@ -46,5 +46,4 @@ değil, şebekenin elindeki bilinmeyen teknolojilerle de yüzleşmek zorundadır
 Geliştirdikleri yepyeni keşif dronuyla sınırları zorlayan ekibimiz, bu karanlık sırrı
 aydınlatabilecek mi?
 
-
 <!--more-->

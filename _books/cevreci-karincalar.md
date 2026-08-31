@@ -43,5 +43,4 @@ Ateş böceklerinin rehberliğinde; komşuluğun, empatinin ve toprağa emek ver
 menin iyileştirici gücünü keşfedeceğiniz bu roman, doğanın sessiz ve minik
 kahramanlarına yazılmış dokunaklı bir mektup.
 
-
 <!--more-->

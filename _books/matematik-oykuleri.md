@@ -83,8 +83,4 @@ oluşan testler bulunmaktadır. Bu testler; boşluk doldurma, eşleştirme, doğ
 yaklaşımla sunulmuştur. Serimiz, matematiği sevdirmek ve daha iyi anlamak için ideal bir
 kaynaktır.
 
-**TEMALAR:** Doğal Sayılar ve Dört İşlem (Toplama, Çıkarma, Çarpma, Bölme)
-
-**KAZANIMLAR:** Matematiksel Kavramları Günlük Hayat Problemlerinde Kullanmak, Analitik ve Soyut Düşünme Becerisi Geliştirmek, Matematiğe Karşı Olumlu Tutum ve Sevgi Kazanmak, Okuduğunu Anlama ve Şifre Çözme Yeteneğini Geliştirmek, Matematik konularını daha kolay ve hızlı kavrayacak, li dünyasını keşfedecek, Matematiğin eğlenceli dünyasını keşfedecek, Hem maceradan maceraya koşacak hem de öğreneceksin
-
 <!--more-->

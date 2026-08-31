@@ -44,5 +44,4 @@ Hem sınıfınızdan bir arkadaşınız kadar tanıdık hem de sizi her sayfada 
 kadar neşeli bu eserde; aile içi iletişimin, empatinin ve sağlıklı yaşamın komik
 ama bir o kadar da düşündürücü yüzüyle tanışacaksınız.
 
-
 <!--more-->

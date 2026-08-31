@@ -45,5 +45,4 @@ Ailenin son varisi Sir Henry’yi korumak ve bu efsanenin ardındaki kan donduru
 gerçeği aydınlatmak, mantığın ve gözlemin efendisi Sherlock Holmes’e düşmektedir.
 Polisiye edebiyatının tartışmasız en büyük başyapıtlarından birine adım atın.
 
-
 <!--more-->

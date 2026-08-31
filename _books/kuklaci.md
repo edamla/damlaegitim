@@ -43,5 +43,4 @@ Kuklacı, kuşaklar arası görünmez uçurumların şefkatle, sabırla ve sanat
 tirici gücüyle nasıl kapanabileceğini gösteren, çocukların kalbine dokunacak
 unutulmaz bir klasik.
 
-
 <!--more-->

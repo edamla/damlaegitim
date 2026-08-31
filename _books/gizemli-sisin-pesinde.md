@@ -38,8 +38,4 @@ youtube:
 ---
 Doğanın gizemlerini çözmek, çocukların analitik düşünme becerilerini geliştirmenin en eğlenceli yoludur! “Gizemli Sisin Peşinde”, kasabaya yayılan gizemli bir sisin ve bu sisle birlikte mutsuzlaşan insanların sırrını çözmeye çalışan meraklı kızımız Lalin’in maceralarını konu alıyor. Ormanın derinliklerinde, sincapların ve “Kırpık” adlı gizemli hayvanın rehberliğinde doğanın şifrelerini çözen Lalin; okurlarımızı heyecan dolu bir dedektiflik oyununa davet ediyor. “Psikolojik Danışman Onaylı” olarak hazırlanan bu eser; 3. ve 4. sınıf öğrencilerimize doğa sevgisini, problem çözme yeteneğini ve takım çalışmasının önemini aşılayacak muazzam bir macera sunuyor.
 
-**TEMALAR:** Gizem ve Macera, Doğa Sevgisi, Problem Çözme, Merak Duygusu, Keşif, Yardımlaşma
-
-**KAZANIMLAR:** Karşılaşılan Problemleri Analitik Bir Yaklaşımla Çözümlemek, Doğaya ve Hayvanlara Karşı Duyarlılık Geliştirmek, Merak Duygusunu Araştırma ve Keşfetme Güdüsüne Dönüştürmek, Zorluklar Karşısında Cesaret ve Dayanışma Göstermek
-
 <!--more-->

@@ -34,10 +34,4 @@ youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
-**TEMALAR:** Birey ve Toplum, Mizah, Bilgi, Millî Kültür, Dil Bilimi, Fen Bilimleri
-
-**KAZANIMLAR:** Yeni Deyimler ve Atasözleri Öğrenmek, Okuma, Anlama ve Yorumlama
-
-**ETİKETLER:** Analitik Düşünme, Arkadaşlık, Takım Çalışması, Dayanışma, Eğitsel Düşünce, Çoklu Zekâ
-
 <!--more-->

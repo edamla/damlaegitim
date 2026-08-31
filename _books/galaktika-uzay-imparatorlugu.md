@@ -44,5 +44,4 @@ amansız haini durdurmak, Galaktika’nın cesur yöneticilerine ve ordusuna kal
 Galaktika, ihanetin, aklın ve destansı uzay savaşlarının nefes kesen öyküsünü
 sunuyor.
 
-
 <!--more-->

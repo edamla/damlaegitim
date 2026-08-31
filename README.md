@@ -39,7 +39,7 @@ Yeni Maarif Modeline uygun eğitim setleri, hikaye kitapları ve kataloglar tek 
 | CSS framework | Bootstrap 5.3 (tasarım sistemi: [design.md](design.md))                |
 | Özel stiller  | `theme.css` + `app.css` + `fontawesome-all.min.css`                    |
 | JavaScript    | Vanilla JS (filtre, navbar, arama) + Bootstrap bundle + Lunr.js (lazy) |
-| Fontlar       | Yerel: Geometric Sans, Punta, Raykjavik (WOFF2), Font Awesome 5.15.4   |
+| Fontlar       | Yerel: KoHo, Punta (WOFF2), Font Awesome 5.15.4   |
 | Yayın         | GitHub Pages                                                           |
 | İçerik        | Markdown + YAML front matter                                           |
 
@@ -228,7 +228,7 @@ _pages/          Statik sayfalar + search-index.json
 _layouts/        HTML şablonları
 _includes/       Ortak bileşenler (menü, kart, filtre, arama, ai-seo-crawler)
 assets/css/      Stiller (bootstrap, fontawesome, theme, app, spotlight)
-assets/fonts/    Yerel fontlar (geometric-sans, punta, raykjavik, fontawesome)
+assets/fonts/    Yerel fontlar (Koho, punta, fontawesome)
 assets/js/       Script'ler
 assets/images/   Görseller, slider ve kapaklar (jpg/png; .webp otomatik üretilebilir)
 scripts/         Kurulum ve geliştirme araç script'leri (yukarıdaki tablo)
@@ -374,7 +374,7 @@ Site hızı için uygulanan önlemler:
 | Arama           | Lunr lazy-load; indeks `/assets/search-index.json`                                         |
 | Scriptler       | Bootstrap `defer`; `book-filter.js` idle init (`requestIdleCallback`); tiny-slider defer   |
 | CSS             | `content-visibility` kitap grupları; `tiny-slider.css` anasayfa head'de                    |
-| Fontlar         | Font Awesome yerel; Raykjavik WOFF2 subset (~26 KB)                                        |
+| Fontlar         | Font Awesome yerel; KoHo WOFF2 subset (~14 KB / ağırlık)                                 |
 | Instagram       | Feed `IntersectionObserver` ile gecikmeli yüklenir                                         |
 
 

@@ -46,5 +46,4 @@ dünyayı yok edebilecek o muazzam enerji kaynağının sırrını çözmek, art
 Soluk soluğa okuyacağınız bu macera, gizem ve şifrelerle dolu sayfalarında
 sizleri bekliyor.
 
-
 <!--more-->

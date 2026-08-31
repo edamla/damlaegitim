@@ -45,5 +45,4 @@ ise en büyük umut ışığı oluyor.
 heyecan verici bir intikam öyküsünü değil; haksızlığa, yolsuzluğa ve yozlaşmış
 düzene karşı verilen onurlu bir direnişi anlatıyor.
 
-
 <!--more-->

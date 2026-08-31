@@ -43,5 +43,4 @@ kılık değiştirme oyunlarının birbirine karıştığı bu uluslararası ser
 Recai, Başkomiser Mehmed Rıza’yı atlatıp elmaslara ulaşabilecek mi?
 Sırların gölgesinde geçen bu nefes kesici macerayı elinizden bırakamayacaksınız.
 
-
 <!--more-->

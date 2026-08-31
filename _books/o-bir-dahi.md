@@ -50,10 +50,3 @@ Wilhelm Rontgen’in X ışınlarını keşfi,
 
 Bu kitap, genç zihinlerinizin bilime olan merakını artıracak ve belki de ileride siz de dünyaya değerli katkılarda bulunacaksınız.
 Haydi, bilimin heyecan verici yolculuğuna başlayalım!
-<!-- <img style="height: 50vh" src="/assets/images/ean/8697911223851-1.jpg" alt="">
-
-**TEMALAR:** Merak, Hayal Gücü, Keşif, Yenilik, Teknoloji, Mühendislik, Cesaret, Bilimsel
-
-**KAZANIMLAR:** Farklı Kültürlerden Gelen Bilim İnsanlarını ve İnsanlığa Katkılarını Tanımak, Bilime Merak Duyma ve Araştırma Tutkusu Geliştirmek, Azim ve Çalışkanlığın Başarıya Götürdüğünü Kavramak, Problem Çözme, Yaratıcı Düşünme ve Sorgulama Becerisi Kazanmak, Kendi Potansiyelini Keşfederek Evrensel Bir Bakış Açısı Geliştirmek, ALBERT EINSTEIN, Ödevin Olmadığı Gezegen, GRAHAM BELL, Sı nıfa Gelen Yeni Arkadaş, EL CEZERİ, Macit ve Kurbağa
-
-<!--more-->

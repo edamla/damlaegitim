@@ -43,5 +43,4 @@ düzene sokmak için zekâ dolu planlar geliştirirler.
 O Canavarı Yakala, sadece trafik kurallarını değil, toplumsal duyarlılığı ve yaşa-
 mın ne denli pamuk ipliğine bağlı olduğunu hatırlatan aksiyon dolu bir serüven.
 
-
 <!--more-->

@@ -45,5 +45,4 @@ işliyor. Hayatın bitmek bilmeyen koşuşturmacası içinde unuttuğumuz en tem
 değerleri bize yeniden hatırlatan bu öyküler, evrensel bir gerçeği kalplerimize
 kazıyor: İnsan sadece kendisi için ettiği endişeyle değil, sevgiyle yaşar.
 
-
 <!--more-->

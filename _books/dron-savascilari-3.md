@@ -46,5 +46,4 @@ savaşı bekliyor.
 Lazer silahlı dronların mağara karanlığında çarpıştığı bu yüksek teknolojili ope-
 rasyona katılmaya hazır olun!
 
-
 <!--more-->

@@ -45,5 +45,4 @@ sadece onlar değildir; gölgelerin ardında acımasız rakipler de vardır! Ge�
 tozlu raflarını aralayan bu eser, dostluğu, sadakati ve emanete sahip çıkmanın
 değerini nefes kesen bir gerilimle okurlara sunuyor.
 
-
 <!--more-->

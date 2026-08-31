@@ -45,5 +45,4 @@ Ancak Erol’un saf kalbi, Demir Bey’in sakladığı o büyük sırrı ve içi
 turmak için verdiği bu amansız mücadele, unutulmaz bir dayanışma destanına
 dönüşüyor.
 
-
 <!--more-->

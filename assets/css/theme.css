@@ -6,13 +6,61 @@
 
 @font-face {
 
-  font-family: "Geometric Sans";
+  font-family: "KoHo";
 
-  src: url("../fonts/geometric-sans/geometric.woff2") format("woff2");
+  src: url("../fonts/Koho/KoHo-Regular.woff2") format("woff2");
 
   font-weight: 400;
 
   font-style: normal;
+
+  font-display: swap;
+
+}
+
+
+
+@font-face {
+
+  font-family: "KoHo";
+
+  src: url("../fonts/Koho/KoHo-Medium.woff2") format("woff2");
+
+  font-weight: 500;
+
+  font-style: normal;
+
+  font-display: swap;
+
+}
+
+
+
+@font-face {
+
+  font-family: "KoHo";
+
+  src: url("../fonts/Koho/KoHo-Bold.woff2") format("woff2");
+
+  font-weight: 700;
+
+  font-style: normal;
+
+  font-display: swap;
+
+}
+
+
+
+@font-face {
+
+  font-family: "KoHo";
+
+  src: url("../fonts/Koho/KoHo-Italic.woff2") format("woff2");
+
+  font-weight: 400;
+
+  font-style: italic;
 
   font-display: swap;
 
@@ -27,22 +75,6 @@
   src: url("../fonts/punta/Punta-Light.woff2") format("woff2");
 
   font-weight: 300;
-
-  font-style: normal;
-
-  font-display: swap;
-
-}
-
-
-
-@font-face {
-
-  font-family: "Raykjavik";
-
-  src: url("../fonts/raykjavik/reykjavik-rounded-regular.woff2") format("woff2");
-
-  font-weight: 400;
 
   font-style: normal;
 
@@ -80,11 +112,11 @@
 
   --color-accent-concept-muted: #fdf6e8;
 
-  --font-nav: "Geometric Sans", system-ui, sans-serif;
+  --font-nav: "KoHo", system-ui, sans-serif;
 
   --font-display: "Punta", sans-serif;
 
-  --font-sans: "Raykjavik", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: "KoHo", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --font-serif: var(--font-sans);
 
@@ -1928,6 +1960,10 @@ div.a2a_full_footer {display:none;}
 
   font-family: var(--font-nav);
 
+  font-weight: 800;
+
+  font-synthesis: weight;
+
 }
 
 
@@ -3273,6 +3309,8 @@ div.a2a_full_footer {display:none;}
 .book-page .article-headline {
 
   margin: 0 0 var(--space-6);
+
+  font-weight: 500;
 
 }
 

@@ -35,7 +35,6 @@ youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
-
 Melih, ailesiyle birlikte şehirden uzakta, ıssız bir dağ evinde yaşamaktadır. Günle-
 rini yalnız geçirip arkadaşlarının yolunu gözlerken, ormanın derinliklerinde tüyler
 ürpertici bir sırrın varlığını keşfeder: Bir hayalet!
@@ -44,6 +43,5 @@ Arkadaşlarının gelmesiyle birlikte ailelerinden gizlice bu esrarengiz varlı�
 ortasında bulurlar. Bu gizemli gölge kimdir ve çocuklardan ne istemektedir?
 Dağdaki Hayalet, gerilimin ve merakın hiç düşmediği, arkadaşlığın gücüyle ay-
 dınlanan nefes kesici bir serüven sunuyor.
-
 
 <!--more-->

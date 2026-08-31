@@ -80,8 +80,4 @@ kullanarak çözer. Bu, çocuklara her problemin çözümünde mantıklı düş�
 gözlem yapma ve eldeki bilgileri kullanma alışkanlığı kazandırır. Kerem’in
 olaylara yaklaşımı, çocuklarda çözüm odaklı düşünme yeteneğini geliştirir
 
-**TEMALAR:** Gezegenimiz, Yer Kabuğu ve Dünya’mızın Hareketleri, Beş Duyumuz
-
-**KAZANIMLAR:** Bilimsel Süreçleri ve Yaşam Becerilerini Geliştirmek, Analitik ve Yenilikçi Düşünme Yeteneği Kazanmak, Karar Verme ve Problem Çözme Becerisini Kavramak, İletişim Kurma, Girişimcilik ve Takım Çalışması Yapmak
-
 <!--more-->

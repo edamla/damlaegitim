@@ -44,5 +44,4 @@ deniz fırtınalarına yelken açarlar.
 Natasha Farrant, savaşın yıkımına karşı dostluğun, hayvan sevgisinin ve cesaretin
 nasıl en büyük umut ışığına dönüştüğünü usta bir dille anlatıyor.
 
-
 <!--more-->

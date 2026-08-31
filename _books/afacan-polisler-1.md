@@ -44,5 +44,4 @@ Acaba Bilgin hislerinde haklı çıkıp büyük bir sırrı mı aydınlatacak, y
 afacan kendilerini boylarını aşan tehlikeli bir belanın tam ortasında mı bulacak?
 Adaletin peşinden koşan çocukların bu heyecan dolu ilk görevine tanıklık edin.
 
-
 <!--more-->

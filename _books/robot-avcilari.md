@@ -53,12 +53,3 @@ Neden Bu Seriyi Seçmelisiniz?
 geliştirir.
 • Heyecan, merak ve öğrenme bir arada.
 • Her kitapta değerlendirme testleriyle desteklenmiştir
-<!-- <img style="height: 50vh" src="/assets/images/ean/8697911223530-1.jpg" alt="">
-
-**TEMALAR:** Teknoloji, Birey ve Toplum, Zaman ve Mekân, Bilim, Macera, Robot
-
-**KAZANIMLAR:** Bilimsel Düşünme Becerisi Kazanmak, İcat Yapma ve Tasarım Yeteneğini Geliştirmek, Yapay Zekâ ve Gelecek Teknolojilerini Kavramak
-
-**ETİKETLER:** Teknoloji, Bilim, Eğitim, İcad, İyi ve Kötü, Bilimsel Düşünce, Gelecek, Geçmiş, Macera, Dünya Kültürü, Bilim Kurgu, Takım Çalışması
-
-<!--more-->

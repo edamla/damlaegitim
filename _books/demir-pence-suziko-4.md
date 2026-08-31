@@ -45,5 +45,4 @@ liğinde keşfedecekler.
 Kültür, tarih ve heyecan dolu bu macera, okurlara Avrupa kıtasının tüm güzel-
 liklerini yaşatmaya geliyor.
 
-
 <!--more-->

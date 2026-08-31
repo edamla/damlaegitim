@@ -40,10 +40,4 @@ Kerem ve arkadaşlarının her günü birbirinden eğlenceli, birbirinden mace
 Haydi, öyleyse sen de katıl onlara. Eğlenerek öğrenmenin tadını çıkar. Hayat Bilgisi konularının, hayatın akışında eğlenceli ve maceralı bir şekilde işlendiği bu kitabı elinden düşüremeyecek ve bir solukta okuyup bitireceksin.
 Haydi ne duruyorsun, okumaya başlasana...
 
-**TEMALAR:** Okulumuzda Hayat, Evimizde Hayat, Sağlıklı Hayat, Güvenli Hayat
-
-**KAZANIMLAR:** Araştırma, Gözlem ve İletişim Becerisi Kazanmak, Bilgi ve İletişim Teknolojilerini Kullanmak, Değişim ve Sürekliliği Algılamak, Doğayı, Sağlığı ve Kendini Korumak, Sorun Çözme ve Karar Verme Yeteneği Geliştirmek, Millî ve Kültürel Değerleri Tanımak
-
-**ETİKETLER:** Araştırma, Kariyer, Gözlem, İletişim, Sağlık, Beslenme, Zaman Yöne
-
 <!--more-->

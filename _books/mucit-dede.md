@@ -44,5 +44,4 @@ asla kopamazlar.
 Mucit Dede, kardeşlik bağlarını, paylaşmayı ve bilimsel düşünmeyi kahkaha dolu
 serüvenlerle harmanlayan sımsıcak bir aile hikâyesi.
 
-
 <!--more-->

@@ -46,5 +46,4 @@ yerin binlerce fersah altında hayatta kalmayı başarabilecek mi?
 Jules Verne’in kaleminden, okuru bilinmeyenin kalbine götüren destansı bir
 serüven!
 
-
 <!--more-->

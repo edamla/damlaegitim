@@ -61,10 +61,4 @@ Haksızlık Yapmamak - Dürüstlük - İyi yürekli olmak - Fedakârlık - Doğa
 
 10- Hayat Ağacı
 
-**TEMALAR:** Hikâyelerle Değerler Eğitimi, Erdemler ile Karakter Gelişimi, Özveri
-
-**KAZANIMLAR:** Olumlu Davranış Geliştirmek, Erdemleri Öğrenmek, Yeni Kelimeler Öğrenmek, Yeni Deyim ve Atasözü Öğrenmek
-
-**ETİKETLER:** Doğru Karar Vermek, Haksızlık Yapmamak, Yalan Söylememek, Yeteneklerini Keşfetmek, Fedakâr Olmak, Vefalı Olmak, Sorumluluk, Söz Dinlemek, Paylaşmak, Hasta Ziyareti, Cesaret, Yardımseverlik, Fedakârlık, Dürüstlük, Kanaatkârlık, Doğayı Korumak
-
 <!--more-->

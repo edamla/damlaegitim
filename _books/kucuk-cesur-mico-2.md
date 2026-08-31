@@ -44,5 +44,4 @@ içindeki vatan özlemiyle yüzleşecek.
 Küçük Cesur Miço, sadece dünyayı değil, kendi sınırlarını da keşfeden genç bir
 kalbin epik macerasını sunuyor.
 
-
 <!--more-->

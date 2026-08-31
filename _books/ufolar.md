@@ -44,5 +44,4 @@ gitmeye karar veren Ekrem; arkadaşlarıyla birlikte Kaz Dağları’nın etekle
 Uzayın derinliklerinde, insanın varoluşunu ve bilimsel sınırları sorgulatan bu
 yolculuğa çıkmaya hazır mısınız?
 
-
 <!--more-->

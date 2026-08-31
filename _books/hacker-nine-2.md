@@ -44,5 +44,4 @@ Zekâ ile kalp arasında amansız bir seçimin yapılacağı bu zorlu savaşta, 
 ramanlarımız zamanı geri alabilecek mi? Unutmayın, en büyük savaş insanın
 kendi zihniyle olanıdır.
 
-
 <!--more-->

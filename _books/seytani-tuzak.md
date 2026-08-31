@@ -44,5 +44,4 @@ Rıza’nın da dâhil olduğu bu ölümcül oyunu tersine çevirebilecek mi?
 Aldatmacaların ve illüzyonların birbirine girdiği, kimsenin göründüğü gibi olmadığı
 bu zekâ oyununda her sayfayı nefesinizi tutarak okuyacaksınız.
 
-
 <!--more-->

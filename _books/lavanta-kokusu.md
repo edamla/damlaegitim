@@ -35,7 +35,6 @@ youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
-
 Gülbeyaz, yılın altı ayı karla kaplı, zorlu şartların hüküm sürdüğü bir köyde ya-
 şam mücadelesi veren dokuz yaşında bir kız çocuğudur. Kızların okutulmadığı,
 hayallerin karların altına gömüldüğü bu köyde, onun kaderi de diğer kızlardan
@@ -45,6 +44,5 @@ zihniyetini değiştirmeye başlar.
 Sara Gürbüz Özeren, cehaletin ve yoksulluğun zincirlerini eğitimin gücüyle kıran
 bu ilham verici hikâyede; azmin, memleket sevdasının ve fedakârlığın dokunaklı
 bir tablosunu çiziyor.
-
 
 <!--more-->

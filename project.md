@@ -86,9 +86,10 @@ damlaegitim/
 │   │   └── buyout.css            # Kullanılmıyor (legacy; layout’ta yüklenmez)
 │   ├── fonts/
 │   │   ├── fontawesome/          # Font Awesome 5.15.4 webfonts (tam paket)
-│   │   ├── geometric-sans/
+│   │   ├── Koho/                 # KoHo (TTF + WOFF2 subset; gövde + navbar)
 │   │   ├── punta/
-│   │   ├── raykjavik/            # TTF (arşiv) + WOFF2 (servis edilen)
+│   │   ├── geometric-sans/     # CSS'te referans yok; repo'da kalır
+│   │   ├── raykjavik/            # CSS'te referans yok; repo'da kalır
 │   │   └── monolight/            # CSS'te referans yok; repo'da kalır
 │   ├── js/
 │   │   ├── bootstrap.bundle.min.js
@@ -351,8 +352,8 @@ Site hızı için uygulanan başlıca önlemler:
 ### Fontlar ve CSS
 
 - Font Awesome yerel (`assets/fonts/fontawesome/`), CDN kaldırıldı
-- Raykjavik WOFF2 subset (~26 KB); TTF repo'da kalır, servis edilmez
-- Raykjavik font preload (`default.html`)
+- KoHo WOFF2 subset (~14 KB / ağırlık; Regular, Medium, Bold, Italic); TTF repo'da kalır, servis edilmez
+- KoHo Regular font preload (`default.html`)
 - `spotlight.css` async yükleme (`media="print" onload`)
 - `.book-genre-group`: `content-visibility: auto` (below-fold paint maliyeti)
 

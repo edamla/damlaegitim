@@ -45,5 +45,4 @@ yeniden hayat buluyor.
 Edebiyatımızın kökleriyle bağ kurmak ve millî bilinci hissetmek isteyen her yaştan
 okur için başucu niteliğinde bir eser.
 
-
 <!--more-->

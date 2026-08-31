@@ -44,5 +44,4 @@ Anadolu’dan Sibirya’ya uzanan sürgün hayatların, Çanakkale Savaşı’nd
 yuttuğu efsanevi Norfolk Alayı ile kesiştiği bu eşsiz roman; tarihi gerçekleri fan-
 tastik bir kurguyla harmanlayarak okuru gizemli bir şifrenin peşinden sürüklüyor.
 
-
 <!--more-->

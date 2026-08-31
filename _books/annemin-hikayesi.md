@@ -43,5 +43,4 @@ yıllar süren ayrılıkların, dedikoduların ve yalnızlığın amansız sına
 Annemin Hikâyesi, sabrın, sadakatin ve toprağa kök salan vefanın dokunaklı
 hikâyesini okurların kalbine usulca bırakıyor.
 
-
-<!--more--> 
+<!--more-->

@@ -44,5 +44,4 @@ dolu okul hayatına davetlisiniz.
 Okulu sıradan bir yer olmaktan çıkarıp ilginç olaylar arenasına dönüştüren bu
 kitapta, Gizem’in cesur hak arama mücadelesine hayran kalacaksınız.
 
-
 <!--more-->

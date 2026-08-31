@@ -45,5 +45,4 @@ Dedektifimiz batıl inançları ve korkuyu bir kenara bırakıp, bu tüyler ürp
 “Sussex Vampiri” vakasının ardındaki trajik ve akılalmaz sırrı gün yüzüne çıkar-
 mak zorundadır.
 
-
 <!--more-->

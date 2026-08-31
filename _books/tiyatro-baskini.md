@@ -44,5 +44,4 @@ En zeki insanların bile nasıl aldanabileceğini kanıtlayan bu nefes kesici ma
 dikkat ve zekânın sınırlarını zorluyor. Sahne perdesi, ezeli rakiplerin eşsiz bir
 polisiye gerilimi için açılıyor!
 
-
 <!--more-->

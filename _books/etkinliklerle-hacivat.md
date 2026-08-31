@@ -35,14 +35,6 @@ youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
-Karagöz ile Hacivat, Türk kültürünün ayrılmaz bir parçasıdır. Çocukları anlayabileceği hikâyelerle desteklenerek rengârenk bir masal kitabı yapılmış. Türk kültür değerlerini içeren Nasrettin Hoca, Keloğlan ve Karagöz ile Hacivat gibi eserler çocuklarımızın belleklerinde mutlaka yer almalıdır. TEMALAR: • Gölge Oyunu, Karagöz, Hacivat, Değerler Eğitimi, Mizah KAZANIMLAR: • Okuma Yazmanın Önemini Kavramak, Hayvan Sevgisini Öğrenmek, Arkadaşlık ve Yardımlaşma, Misafire Saygılı Davranma ETİKETLER: • Gölge Oyunu, Karagöz, Hacivat, Değerler, Okuma, Yazma, Mizah, Hayvan Sevgisi, Arkadaşlık, Dostluk, Yardımlaşma, Sevgi, Saygı, Misafire Hürmet, Çizgi Film Setin İçerdiği Kitaplar: 1- Karagöz ile Hacivat Okuma Öğreniyor 2- Karagöz ile Hacivat Kırk Haramilere Karşı 3- Karagöz ile Hacivat Hamanda 4- Karagöz ile Hacivat Tanrı Misafiri 5- Karagöz ile Hacivat Ormanda 6- Karagöz ile Hacivat Üzüm Bağında
-
-**TEMALAR:** Gölge Oyunu, Karagöz, Hacivat, Değerler Eğitimi, Mizah
-
-**KAZANIMLAR:** Okuma ve Yazmanın Önemini Kavramak, Hayvan Sevgisini Öğren mek, Arkadaşlık ve Yardımlaşma Bilinci Kazanmak, Misafire Saygılı Davranmak
-
-**ETİKETLER:** Gölge Oyunu, Karagöz, Hacivat, Değerler, Okuma, Yazma, Mizah, Hayvan Sevgisi, Arkadaşlık, Dostluk, Yardımlaşma, Sevgi, Saygı, Misafire Hürmet, Çizgi Film
-
-Setin İçerdiği Kitaplar: 1- Karagöz ile Hacivat Okuma Öğreniyor 2- Karagöz ile Hacivat Kırk Haramilere Karşı 3- Karagöz ile Hacivat Hamanda 4- Karagöz ile Hacivat Tanrı Misafiri 5- Karagöz ile Hacivat Ormanda 6- Karagöz ile Hacivat Üzüm Bağında
+Karagöz ile Hacivat, Türk kültürünün ayrılmaz bir parçasıdır. Çocukları anlayabileceği hikâyelerle desteklenerek rengârenk bir masal kitabı yapılmış. Türk kültür değerlerini içeren Nasrettin Hoca, Keloğlan ve Karagöz ile Hacivat gibi eserler çocuklarımızın belleklerinde mutlaka yer almalıdır. Setin İçerdiği Kitaplar: 1- Karagöz ile Hacivat Okuma Öğreniyor 2- Karagöz ile Hacivat Kırk Haramilere Karşı 3- Karagöz ile Hacivat Hamanda 4- Karagöz ile Hacivat Tanrı Misafiri 5- Karagöz ile Hacivat Ormanda 6- Karagöz ile Hacivat Üzüm Bağında
 
 <!--more-->

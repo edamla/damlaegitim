@@ -43,5 +43,4 @@ Uçsuz bucaksız uzayın karanlığında “Robotlar Gezegeni” ile tanışan �
 arkadaş, eve dönmenin yollarını ararken esaretle, teknolojik tehlikelerle ve dost-
 luğun gerçek gücüyle yüzleşeceklerdir.
 
-
 <!--more-->

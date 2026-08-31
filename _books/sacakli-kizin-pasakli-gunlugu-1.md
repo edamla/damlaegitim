@@ -44,5 +44,4 @@ görünmenin güzelliği, hatalardan ders çıkarmanın erdemi ve arkadaşlığ�
 saf hâli mizahi bir dille okurlara sunuluyor. İlk bakışta haşarı görünse de Büş’ün
 günlüğü, içindeki sevgi dolu dünyayla kalbinizi ısıtacak.
 
-
 <!--more-->

@@ -44,5 +44,4 @@ kurduğu bağ, iki farklı dünyanın arasına çekilen görünmez duvarları y�
 Küçük Bey, gerçek
 zenginliğin kalpte saklı olduğunu fısıldayan sıcacık bir hikâye.
 
-
 <!--more-->

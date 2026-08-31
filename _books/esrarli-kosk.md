@@ -45,5 +45,4 @@ Adaleti kendi bildiği yoldan sağlayan iyiliksever hırsızımız, bu esrarengi
 caları çözmek için zekâsını bir “satranç” ustası gibi kullanmak zorunda.
 Gizem ve polisiye gerilimin zirve yaptığı bu hikâyeleri bir solukta okuyacaksınız.
 
-
 <!--more-->

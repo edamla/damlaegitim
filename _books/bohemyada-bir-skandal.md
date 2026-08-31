@@ -45,5 +45,4 @@ bir kadın olan Irene Adler durmaktadır.
 “Kadın zekâsının” Sherlock Holmes’ü bile köşeye sıkıştırdığı bu soluksuz maceraya
 ve serinin diğer dört çarpıcı hikâyesine hazır olun.
 
-
 <!--more-->

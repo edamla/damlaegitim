@@ -43,5 +43,4 @@ zorunda kalır.
 Karşılıksız sevginin ve fedakârlığın sınır tanımadığını, bir köpeğin saf ve merha-
 metli dünyasından okurlara sunan unutulmaz bir sadakat öyküsü.
 
-
 <!--more-->

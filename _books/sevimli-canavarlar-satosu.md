@@ -38,8 +38,4 @@ youtube:
 ---
 Çocukların korkularıyla yüzleşmesi hiç bu kadar eğlenceli olmamıştı! Mert’in hayatı, okuduğu gizemli bir kitapla altüst olur ve kendini “Sevimli Canavarlar Şatosu”nda bulur. Hayla, Devdev, Cödi ve Cangıl gibi tuhaf ama sevimli dostların yer aldığı bu fantastik evren, öğrencilere arkadaşlığın ve cesaretin gücünü gösteriyor. “Psikolojik Danışman Onaylı” olarak özenle hazırlanan bu sıcacık hikâye; 3. ve 4. sınıf öğrencilerimizin duygusal zekâlarını geliştirmeleri, korkularını anlamlandırmaları ve kitapların dönüştürücü gücünü keşfetmeleri için öğretmenlerimizin ve velilerimizin en büyük yardımcısı olacak. Çünkü bu şatoda korkulara değil, dostluğa yer var!
 
-**TEMALAR:** Duygusal Zekâ, Korkularla Yüzleşme, Cesaret, Arkadaşlık
-
-**KAZANIMLAR:** Korkularla Yüzleşme ve Duygu Yönetimi Becerisi Geliştirmek, Empati, Özgüven ve Cesaret Duygularını İçselleştirmek, Karşılaşılan Sorunlarda Problem Çözme ve Hayal Gücünü Etkili Kullanmak
-
 <!--more-->

@@ -37,10 +37,4 @@ youtube:
 ---
 Bir pire, pire gibi yaşamalıdır... Ama ya bir pire kuralları bozarsa? Ya kaşındırmak yerine ilham verirse? Ya minicik bir zıplayış, koca bir hikâyeyi başlatırsa? Küçük Pire’nin macerası kahkahalarla, sürprizlerle ve heyecanla dolu! Kediler çılgınca koşarken, yazarlar boş sayfaya bakarken, o minicik kahraman kendi özgün yolunu buluyor. Öğrencilerimize kalıpların dışına çıkmayı ve yaratıcılığı aşılayan bu eğlenceli kitap, okurları merakla sayfadan sayfaya zıplatacak. Çünkü bazen dünyayı değiştirecek en büyük noktayı, en küçük şeyler koyar!
 
-**TEMALAR:** Kendini Keşfetme, Özgünlük, Yaratıcılık, Beklentilere Karşı Çıkma, Özgüven, KALK, Küçük Boyut-Büyük Etki VE
-
-**KAZANIMLAR:** Kendine Has İlgi Alanları ve Yetenekleri Olduğunu Fark Etmek, Başkalarına Zarar Vermeden de Faydalı Olunabileceğini Kavramak, Kendi Doğrusunu Bulma ve Karar Verme Becerisini Geliştirmek, Küçük Adımların Dünyada Büyük Etkiler Yaratabileceğini Anlamak
-
-**ETİKETLER:** Çocuk Edebiyatı, Kendini Keşfetme, İlham, Yaratıcılık, Farklılıklar, Özgüven, Hayvanlar Âlemi, Yazarlık, Mizah
-
 <!--more-->

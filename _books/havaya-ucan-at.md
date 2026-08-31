@@ -44,5 +44,4 @@ aklın kibre karşı verdiği o kadim savaşı okurların kalbine nakşediyor.
 Havaya Uçan At, içindeki çocuğu ve macerayı hiç kaybetmeyenler için nefes
 kesici bir serüven.
 
-
 <!--more-->

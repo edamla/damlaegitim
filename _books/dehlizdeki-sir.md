@@ -44,5 +44,4 @@ Zekânın, cesaretin ve arkadaşlığın ön planda olduğu bu heyecan dolu mace
 suçluları adalete teslim etmek sandıkları kadar kolay olmayacaktır. Tek solukta
 okunacak bu serüven, sır perdesini aralamak için sizleri bekliyor.
 
-
 <!--more-->

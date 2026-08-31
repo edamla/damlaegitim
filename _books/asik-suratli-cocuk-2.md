@@ -44,5 +44,4 @@ istemsiz derin bir uykuya dalmıştır. Ailesini ve arkadaşlarını korumak iç
 madene girmesi gereken Mert ve ekibi; devasa böceklerin, sinsi tuzakların ve
 bol kahkahanın olduğu yepyeni bir gizemin kapılarını aralıyor.
 
-
 <!--more-->

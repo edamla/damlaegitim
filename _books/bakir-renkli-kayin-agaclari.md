@@ -45,5 +45,4 @@ doğru yola çıkan Holmes, masum görünüşlü bir ailenin arkasında yatan
 şeytani ve kusursuz planı açığa çıkarmak zorundadır. Suçun en zekice işlenmiş
 hâliyle yüzleşmeye hazır mısınız?
 
-
 <!--more-->

@@ -46,5 +46,4 @@ ağır vicdan yükünün hikâyesi...
 Ömer Seyfettin’in Türk edebiyatına kazandırdığı en sarsıcı, en unutulmaz eserlerinden
 biri.
 
-
 <!--more-->

@@ -45,5 +45,4 @@ sırlarını aydınlatabilecek mi?
 Jules Verne’i tüm dünyaya tanıtan bu ilk büyük şaheser, bitmek bilmeyen bir keşif
 tutkusunu ve gökyüzünde geçen soluksuz bir serüveni müjdeliyor.
 
-
 <!--more-->

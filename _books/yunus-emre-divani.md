@@ -45,5 +45,4 @@ yaptığı o büyük yolculuğu anlatıyor.
 Yunus’un çağları aşan hoşgörü felsefesiyle ruhunuzu dinlendirecek, asırlara
 meydan okuyan bir başucu eseri.
 
-
 <!--more-->

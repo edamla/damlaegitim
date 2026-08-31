@@ -44,5 +44,4 @@ Kaybolan Meslekleri Keşfedelim, teknolojinin unutturduğu sanat erbabını, ust
 larımızı ve o sıcacık mahalle kültürünü yeniden hatırlatmak için okurlara nostaljik
 bir köprü kuruyor.
 
-
 <!--more-->

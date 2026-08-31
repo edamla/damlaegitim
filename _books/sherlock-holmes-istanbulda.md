@@ -46,5 +46,4 @@ verici rekabetlerinden birine tanık olmaya çağırıyor.
 Peyami Safa’nın usta kalemiyle doğu ve batının kıyasıya zekâ çarpışmasına
 hazır olun!
 
-
 <!--more-->

@@ -44,5 +44,4 @@ yiyicilerin korkulu rüyası Cingöz Recai, etrafındaki çember giderek daralı
 Peyami Safa’nın sürükleyici kalemiyle hayat bulan bu soluksuz kedi-fare oyu-
 nunda, zekâ çatışmalarının ve ince planların tadına varacaksınız.
 
-
 <!--more-->

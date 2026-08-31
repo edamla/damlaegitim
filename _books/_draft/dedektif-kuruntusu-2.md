@@ -40,5 +40,4 @@ Haksızlığa karşı çıkan kahramanlarımız, masumiyetlerini kanıtlamak ve 
 suçluyu bulmak için kolları sıvar. Küçük dedektiflerin analitik düşünme yeteneklerini
 sınayan bu lezzetli ve gizemli macera, dostluğun gücünü bir kez daha kanıtlıyor.
 
-
 <!--more-->

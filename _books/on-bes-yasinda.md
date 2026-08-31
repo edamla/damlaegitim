@@ -46,5 +46,4 @@ köle tüccarlarının eline düşen Dick Sand ve Bayan Weldon, bu cehennemden
 kurtulmak için akılalmaz bir cesaret ve zekâ sınavı verecektir.
 Jules Verne’in kaleminden, erken büyümek zorunda kalan bir kahramanın destanı!
 
-
 <!--more-->

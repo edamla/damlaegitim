@@ -44,5 +44,4 @@ Bir Mikrobun Günlüğünden, sağlığımızın pamuk ipliğine bağlı görün
 ve insan iradesinin hastalıklarla olan mücadelesini gözler önüne seren eşsiz bir
 bilimkurgu-macera.
 
-
 <!--more-->

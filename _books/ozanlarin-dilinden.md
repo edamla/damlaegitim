@@ -45,5 +45,4 @@ halk ozanlarımızın hayatlarını, atışmalarını ve sönmeyen aşk ateşler
 buluşturuyor. Bağlamanın teline dokunup, o asırlık türkülerin hikâyeleriyle hem-
 dem olmaya davetlisiniz.
 
-
 <!--more-->

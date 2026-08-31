@@ -44,5 +44,4 @@ Türk edebiyatında esaret konusunu en çarpıcı ve gerçekçi hâliyle ele ala
 Sergüzeşt, hürriyetine kavuşmak için çırpınan masum bir kalbin destansı mücadelesini
 anlatıyor.
 
-
 <!--more-->

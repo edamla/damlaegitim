@@ -108,8 +108,45 @@ check_css_references() {
   done < <(grep -oE 'url\("\.\./fonts/[^"]+"\)' "$theme" | sed 's/url("\(.*\)")/\1/')
 }
 
+check_turkish_glyphs() {
+  if ! python -c "import fontTools" 2>/dev/null; then
+    add_warning "TÜRKÇE KONTROL|—|fonttools|fonttools yok — pip install fonttools"
+    return 0
+  fi
+
+  local theme="$ROOT/assets/css/theme.css"
+  local ref path rel missing
+
+  [ -f "$theme" ] || return 0
+
+  while IFS= read -r ref; do
+    [ -n "$ref" ] || continue
+    path="$ROOT/assets/css/../${ref#../}"
+    rel="${path#$ROOT/}"
+
+    missing=$(python - "$path" <<'PY'
+import sys
+from fontTools.ttLib import TTFont
+
+path = sys.argv[1]
+turkish = [0x0130, 0x0131, 0x011E, 0x011F, 0x015E, 0x015F,
+           0x00C7, 0x00E7, 0x00D6, 0x00F6, 0x00DC, 0x00FC]
+font = TTFont(path)
+cmap = font.getBestCmap() or {}
+missing = [hex(cp) for cp in turkish if cp not in cmap]
+print(",".join(missing))
+PY
+)
+
+    if [ -n "$missing" ]; then
+      add_warning "TÜRKÇE EKSİK|—|$rel|Eksik glifler: $missing"
+    fi
+  done < <(grep -oE 'url\("\.\./fonts/[^"]+\.woff2"\)' "$theme" | sed 's/url("\(.*\)")/\1/')
+}
+
 check_source_fonts
 check_css_references
+check_turkish_glyphs
 
 if [ "${#WARNINGS[@]}" -eq 0 ]; then
   echo "✓ Font uyarısı yok."

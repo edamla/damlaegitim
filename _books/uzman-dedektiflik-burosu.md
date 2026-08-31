@@ -44,5 +44,4 @@ izini sürerek gizemli ipuçlarını bir araya getiren ekibimiz, zekâ dolu bilm
 Adım adım artan gerilim ve şaşırtıcı keşiflerle örülü bu macera, okurları unutulmaz
 bir dedektiflik oyununa davet ediyor.
 
-
 <!--more-->

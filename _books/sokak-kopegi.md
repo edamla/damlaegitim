@@ -44,5 +44,4 @@ yeryüzündeki tüm canlılara duyulduğunda mucizeler yarattığını keşfedec
 Sokak Köpeği, umudun ve merhametin sokak aralarından yeşerdiği sımsıcak
 bir dostluk hikâyesi.
 
-
 <!--more-->

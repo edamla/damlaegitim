@@ -38,10 +38,4 @@ youtube:
 ---
 Okul sıralarıyla yeni tanışan çocuklarımızın, toplum içinde kendilerini doğru ifade edebilen ve mutlu bireyler olarak yetişmesi her şeyden önemlidir! “Sosyal Becerilerim” seti; 1. sınıf öğrencilerinin empati kurma, paylaşma, dürüstlük, öz güven ve gruba uyum sağlama gibi temel iletişim becerilerini geliştirmek amacıyla özenle hazırlandı. Çocukların doğrudan kendilerini karakterin yerine koyabilecekleri “Ben Paylaşırım”, “Ben Özelim” gibi 10 farklı hikâyeden oluşan bu seri; Maarif Modeli kazanımlarıyla tam uyumlu yapısıyla öğretmenlerin en büyük yardımcısı olacak. Çocuklarımızın olumlu kişilik özellikleri kazanırken eğlenerek okuyacakları, optik formlu değerlendirme kitapçığıyla da gelişimlerini pekiştirecekleri harika bir kılavuz!
 
-**TEMALAR:** Sosyal Beceri Eğitimi, Değerler Eğitimi ve Toplum
-
-**KAZANIMLAR:** Sosyal Beceri Kazanmak, Değerlerimizi Öğrenmek, Toplumsal Sorumluluklar Kazanmak, İletişim Becerisi Elde Etmek, Olumlu Kişilik Özellikleri Kazanmak
-
-**ETİKETLER:** Sosyal, Beceri, Değerler, Birey, Toplum, Sorumluluk, İletişim, Olumlu Kişilik, Karakter, Kıskanmamak, Paylaşmak, Özgüven, Dürüstlük, Gruba Katılım, Arkadaşlık, Büyüklerin Sözünü Dinleme
-
 <!--more-->

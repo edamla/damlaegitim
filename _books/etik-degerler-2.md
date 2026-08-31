@@ -43,18 +43,6 @@ Onları erdemli, yüksek ahlaklı, değerlerimizi bilen ve değerlerimize sahip 
 
 "Değerler Eğitimi" temel alınarak her hikayede bir değer işlenmiş, her hikayenin sonundaki "Etkinlikler"le verilmek istenen değerin pekiştirilmesi sağlanmıştır.
 
-TEMALAR;
-
-Değerler Eğitimi, Erdemler, Duygular, Doğa ve Evren, Oyun
-
-KAZANIMLAR;
-
-Yeni Kelimeler Öğrenme, Erdemleri Öğrenme, Dil Bilgisi
-
-ETİKETLER ;
-
-Yalan Söylememek, Adil Olmak, Cömert Olmak, Merhametli Olmak, Temiz Olmak, Cesur Olmak, Nazik Olmak, Sözünde Durmak, Affetmek, İyilik Bilmek
-
 KİTAPLAR;
 
 1- Çalışan Başarır
@@ -76,12 +64,5 @@ KİTAPLAR;
 9- Sultan Kız
 
 10- Temiz Çevre Savaşçıları
-<!-- <img style="height: 50vh" src="/assets/images/ean/8697911223974-1.jpg" alt="">
-
-**TEMALAR:** Değerler Eğitimi, Erdemler, Duygular, Doğa ve Evren, Oyun
-
-**KAZANIMLAR:** Sözcük Dağarcığını Geliştirmek, Temel Erdemleri Özümsemek, Dil
-
-**ETİKETLER:** Yalan Söylememek, Adil Olmak, Cömert Olmak, Merhametli Olmak
 
 <!--more-->

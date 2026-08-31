@@ -44,5 +44,4 @@ yerine seyahat edebilmek...
 bilmeyen enerjisine ve kıpır kıpır dünyasına ortak olurken, yüzünüzdeki tebessüm
 hiç eksik olmayacak.
 
-
 <!--more-->

@@ -44,5 +44,4 @@ rafyasında, âdeta bir sinema filminin tam ortasında bulur.
 Sırların, tehlikelerin ve unutulmaz anıların iç içe geçtiği bu macera, dostluğun ve
 cesaretin gücünü bir kez daha kanıtlıyor.
 
-
 <!--more-->

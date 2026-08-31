@@ -43,32 +43,7 @@ youtube:
 Telgrafın İcadından Elektriğin Keşfine,
 Geçmişin Derinliklerinden Geleceğin Gizemine Soluk Soluğa Okuyacağınız Macera Dolu BİLİM-KURGU KİTAPLARI
 
-**TEMALAR:** İcat ve Keşifler, Macera, Doğa ve Evren, Zaman ve Mekân, Dördüncü Boyut, Bilim Kurgu
-
-**KAZANIMLAR:** Yeni Kelimeler Öğrenme, Bilimsel Düşünce, Bilim Tarihi, Üstün Zekâ, Yetenek
-
-**ETİKETLER:** Tarih, Macera, İcat, Keşif, Bilim, Zaman, Mekân, Gelecek, Geçmiş, Mucitler, Kâşifler, Biyoğrafi
-
 **Setin İçerdiği Hikayeler**
-
-1- Büyük Sır <br>
-2- Susuzluk<br>
-3- Tekerleğin İcadı<br>
-4- Dinozor Çağı<br>
-5- Uzay Yolculuğu<br>
-6- Türkçe'nin Yolculuğu<br>
-7- İlk Uçan Adam<br>
-8- Telgrafın Bulunuşu<br>
-9- Elektriğin Keşfi<br>
-10- Geleceğin Doğasına yolculuk
-
-**TEMALAR:** İcat ve Keşifler, Macera, Doğa ve Evren, Zaman ve Mekân, Dördüncü
-
-**KAZANIMLAR:** Sözcük Dağarcığını Geliştirmek, Bilimsel Düşünme Becerisi Kazanmak, Bilim Tarihindeki Önemli İcat ve Keşifleri Öğrenmek, Kendi İlgi, Zekâ ve Yeteneklerini Fark Etmek
-
-**ETİKETLER:** Tarih, Macera, İcat, Keşif, Bilim, Zaman, Mekân, Gelecek, Geçmiş, Mucitler, Kâşifler, Biyografi
-
-Setin İçerdiği Hikayeler**
 
 1- Büyük Sır <br>
 2- Susuzluk<br>

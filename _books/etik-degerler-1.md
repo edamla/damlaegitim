@@ -39,21 +39,7 @@ youtube:
 
 Üzerlerine titrediğimiz, en değerli varlıklarımız...
 
-Onları erdemli, yüksek ahlaklı, değerlerimizi bilen ve sahip çıkan bireyler olarak yetiştirmek herkesin ortak amacı. Bunun da en önemli aracı hikâyeler. İşte “Etik Değerler Eğitim Seti” buradan yola çıkarak hazırlandı. “Değerler Eğitimi” temel alınarak her hikâyede bir değer işlendi. Her hikâyenin sonundaki “Etkinlikler”le verilmek istenilen değerin pekiştirilmesi sağlanmıştır.
-
-TEMALAR;
-
-Değerler Eğitimi, Erdemler, Duygular, Doğa ve Erdem, Oyun
-
-KAZANIMLAR;
-
-Yeni Kelimeler Öğrenme, Erdemleri Öğrenme, Dil Bilgisi
-
-ETİKETLER;
-
-Yalan Söylememek, Adil Olmak, Cömert Olmak, Merhametli Olmak, Temiz Olmak, Cesur Olmak, Nazik Olmak, Sözünde Durmak, Affetmek, İyilik Bilmek
-
-Etik Değerler Eğitim Seti-1. Sınıf Setin İçerdiği Kitaplar;
+Onları erdemli, yüksek ahlaklı, değerlerimizi bilen ve sahip çıkan bireyler olarak yetiştirmek herkesin ortak amacı. Bunun da en önemli aracı hikâyeler. İşte “Etik Değerler Eğitim Seti” buradan yola çıkarak hazırlandı. “Değerler Eğitimi” temel alınarak her hikâyede bir değer işlendi. Her hikâyenin sonundaki “Etkinlikler”le verilmek istenilen değerin pekiştirilmesi sağlanmıştır. Setin İçerdiği Kitaplar;
 
 1-Cesur Pembe Bulut (Öz Güven)
 
@@ -68,36 +54,6 @@ Etik Değerler Eğitim Seti-1. Sınıf Setin İçerdiği Kitaplar;
 6-Kral Cimbo (Dürüst Olmak)
 
 7-Komşumuz Macide Teyza (Komşu Hakkı)
-
-8-Mikroplar (Temiz Olmak)
-
-9-Papatyanın Sözü (Sözünde Durmak)
-
-10-Tutumlu Kız (Tutumlu Olmak)
-
-<!-- <img style="height: 50vh" src="/assets/images/ean/8697911223851-1.jpg" alt="">
-
-**TEMALAR:** Değerler Eğitimi, Masal, Karakter Gelişimi
-
-**KAZANIMLAR:** Kıssadan Hisse Almak, Etik Değerleri Öğrenmek
-
-**ETİKETLER:** Değerler, Masal, Eğitim, Alçakgönüllülük, Adalet, Çalışkanlık
-
-Setin İçerdiği Kitaplar;
-
-1-Cesur Pembe Bulut (Öz Güven)
-
-2-Cömert Padişah (Cömert Olmak)
-
-3-Hakimin Adaleti (Adaletli Olmak)
-
-4-Yardımsever Tavuk (İyilik Yapmak)
-
-5-Büyük Ders (Nezaket Kuralları)
-
-6-Kral Cimbo (Dürüst Olmak)
-
-7-Komşumuz Macide Teyze (Komşu Hakkı)
 
 8-Mikroplar (Temiz Olmak)
 

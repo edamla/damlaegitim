@@ -44,5 +44,4 @@ tehlikeli oyunlarla sınanacaktır.
 Mantık yürütmenin ve dayanışmanın hayatta kalmak için tek seçenek olduğu bu
 ölümcül labirentten, sadece en cesur olanlar çıkışı bulabilir.
 
-
 <!--more-->

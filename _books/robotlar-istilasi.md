@@ -44,5 +44,4 @@ umudu vardır: Robotların gizli üssüne sızıp ana bilgisayarı yok etmek.
 Evrenin kaderi, uzayın derinliklerinde kaybolan bu cesur dostların sarsılmaz
 iradesine bağlıdır.
 
-
 <!--more-->

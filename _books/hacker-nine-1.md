@@ -43,5 +43,4 @@ Nine durmaktadır! Emir’in zorlu şifreleri çözüp gerçek dünyaya dönmesi
 kolay olmayacaktır.
 Dijital ve gerçeklik arasındaki sınırın kalktığı bu soluksuz serüvende yerinizi alın.
 
-
 <!--more-->

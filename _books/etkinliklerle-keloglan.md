@@ -33,5 +33,5 @@ youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
-Türk kültürüne ait masalların en önemlilerinden biri Keloğlan masallarıdır. Keloğlan uyanık, pratik zekâlı, aldatmayan ama aldatılmayan yağız bir Anadolu çocuğudur. Her kitapta değişik bir hikâye ile hepinizi Keloğlan'ın büyüleyici ve renkli dünyasına çağırıyoruz. TEMALAR: • Anadolu Masalları, Türk Kültürü, Masallarla Değerler Eğitimi, Mizah KAZANIMLAR: • Aldanmamak ve Aldatmamak, Aklını Kullanmayı Öğrenmek, Empati Kurmak, Pratik Zekâlı Olmak ETİKETLER: • Değerler Eğitimi, Etik Kavramlar, Masal, Doğruluk, Tevazu, Arkadaşlık, Sevgi, Saygı, Sözünde Durmak, İyiliksever Olmak, Anne Sözü Dinlemek, Yalan Söylememek Setin İçerdiği Kitaplar: 1- Keloğlan ile Devler 2- Keloğlan ile Kardeşi 3- Keloğlan ile Değirmenci 4- Keloğlan ile Cüceler 5- Keloğlan ile Cambazlar 6- Keloğlan ile Padişahlar
-<!--more--> 
+Türk kültürüne ait masalların en önemlilerinden biri Keloğlan masallarıdır. Keloğlan uyanık, pratik zekâlı, aldatmayan ama aldatılmayan yağız bir Anadolu çocuğudur. Her kitapta değişik bir hikâye ile hepinizi Keloğlan'ın büyüleyici ve renkli dünyasına çağırıyoruz. Setin İçerdiği Kitaplar: 1- Keloğlan ile Devler 2- Keloğlan ile Kardeşi 3- Keloğlan ile Değirmenci 4- Keloğlan ile Cüceler 5- Keloğlan ile Cambazlar 6- Keloğlan ile Padişahlar
+<!--more-->

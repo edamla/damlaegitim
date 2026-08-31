@@ -44,5 +44,4 @@ için amansız bir zekâ savaşına tutuşur.
 düğüme yol açtığı bu karanlık cinayet dosyası, okurları son sayfaya kadar ters
 köşeye yatıracak kusursuz bir kurgu sunuyor.
 
-
 <!--more-->

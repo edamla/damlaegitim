@@ -35,7 +35,6 @@ youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
-
 1866 yılında dünya denizlerine korku salan gizemli bir deniz canavarının peşine
 düşen Profesör Aronnax, sadık hizmetkârı Conseil ve usta zıpkıncı Ned Land,
 kendilerini akılalmaz bir maceranın tam ortasında bulurlar! Karşılarındaki şey bir
@@ -46,6 +45,5 @@ dâhi ve esrarengiz Kaptan Nemo vardır.
 Kayıp kıta Atlantis’ten dev ahtapotlarla ölümcül savaşlara kadar uzanan bu
 soluksuz yolculukta, okyanusların büyüleyici ve acımasız dünyasını yeniden
 keşfedeceksiniz.
-
 
 <!--more-->

@@ -36,10 +36,4 @@ youtube:
 ---
 İyilik Heryerde serisi inceleme linki.
 
-**TEMALAR:** Doğa Sevgisi, Aile Bağları, Şefkat ve Korkularla Yüzleşme, Anlaşmazlıkların Çözümü ve Yardımlaşma, Sevginin İyileştirici Gücü ve Yardımseverlik
-
-**KAZANIMLAR:** Kendi İç Dünyasını Keşfetmek, Doğa Sevgisi ve Doğayla Bağ Kurmak, Aile Bağlarının ve Şefkatin Gücünü Anlamak, Komşuluk ve Paylaşma Duygusunu Kazanmak
-
-**ETİKETLER:** Empati, İyilik, Mutluluk, Doğa Sevgisi, Aile Bağları, Şefkat, Fedakârlık, Arkadaşlık, Yardımlaşma, Anne Sevgisi, Duyguları İfade Etmek, Komşuluk, Cesaret, Paylaşmak
-
 <!--more-->

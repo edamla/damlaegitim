@@ -45,5 +45,4 @@ Evlat sevgisinin sınır tanımayan gücünü bilimsel keşif ruhuyla harmanlaya
 Verne, okurlarını Venezuela’nın el değmemiş ormanlarında unutulmaz bir keşif
 gezisine çıkarıyor.
 
-
 <!--more-->

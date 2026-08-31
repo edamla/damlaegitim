@@ -46,5 +46,4 @@ en büyük mücadeleye atılırlar.
 Tüm gizemlerin gün ışığına çıkacağı, zekânın ve dostluğun sınanacağı bu büyük
 kapışmayı bir solukta okuyacaksınız.
 
-
 <!--more-->

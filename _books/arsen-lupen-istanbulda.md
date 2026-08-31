@@ -44,5 +44,4 @@ olduğu bu nefes kesen kovalamacada kimin dost, kimin düşman olduğunu tahmin
 etmek imkânsız.
 Türk ve dünya polisiyesinin zirvesini bir araya getiren bu eşsiz heyecana ortak olun.
 
-
 <!--more-->

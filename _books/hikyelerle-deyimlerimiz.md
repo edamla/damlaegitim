@@ -43,5 +43,4 @@ kalıpların doğuş hikâyelerini eğlenceli ve masalsı bir dille gün yüzün
 Kültür mirasımıza yapılan bu keyifli yolculukta kelimelerin gizemli dünyasını
 yeniden keşfedeceksiniz.
 
-
 <!--more-->

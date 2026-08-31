@@ -44,5 +44,4 @@ merhametiyle çevresindekilere ilham veren Büş’ün “İtirazım Var!” diy
 bu yeni serüven, tüm hislerin saçaklı saçlar gibi birbirine karıştığı bol kahkahalı
 bir yolculuk vadediyor.
 
-
 <!--more-->

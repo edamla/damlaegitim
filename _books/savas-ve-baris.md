@@ -47,5 +47,4 @@ yebildiğini gözler önüne seriyor.
 Aşkın, ihanetin, onurun ve varoluşun destanı olan Savaş ve Barış, edebiyat
 tarihinin tartışmasız en büyük zirvesi!
 
-
 <!--more-->

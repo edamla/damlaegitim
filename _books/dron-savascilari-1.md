@@ -45,5 +45,4 @@ mükemmelliğe ulaşmak için deneme uçuşlarına başlar. Ne var ki, gökyüz�
 bu sessiz denemeler gizemli “Dron Avcısı”nın radarına takıldığında, olaylar kim-
 senin beklemediği, tehlikeli bir teknoloji savaşına dönüşecektir.
 
-
 <!--more-->

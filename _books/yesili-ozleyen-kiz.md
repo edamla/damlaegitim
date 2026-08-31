@@ -43,5 +43,4 @@ yağmurlara duyulan derin hasreti anlatan bu eser; her şeye rağmen içimizde
 yeşermeyi bekleyen umudu haykırıyor.
 Yeşili Özleyen Kız, betonlaşan dünyamıza karşı güçlü ve masum bir uyanış çağrısı.
 
-
 <!--more-->

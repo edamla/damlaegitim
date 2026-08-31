@@ -45,5 +45,4 @@ mirasını da koruyacaktır.
 Tarih, gizem ve polisiye heyecanının kusursuz bir şekilde harmanlandığı bu serüven,
 yerel zekânın uluslararası çetelere karşı kazandığı destansı bir zaferi anlatıyor.
 
-
 <!--more-->

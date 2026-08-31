@@ -45,5 +45,4 @@ insanlığı kurtarabilecek tek güç Tolya Bekçisi’nin uyanışıdır.
 İyilik ve kötülüğün, gerçeklik ile fantastik âlemlerin iç içe geçtiği bu epik yolculukta
 nefesinizi tutacaksınız.
 
-
 <!--more-->

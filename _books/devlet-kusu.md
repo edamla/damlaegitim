@@ -44,5 +44,4 @@ o parıltılı dünya; aileyi kıskançlıkların, kurnazlıkların ve yepyeni s
 ortasına atacaktır.
 Yoklukla sınanan bir ailenin, varlıkla olan asıl imtihanı şimdi başlıyor.
 
-
 <!--more-->

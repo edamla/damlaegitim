@@ -64,10 +64,4 @@ Her bir okuyucu kitap okumanın keyfini alırken aynı zamanda zekâsını geli�
 
 10- Arabayı kim Çaldı?
 
-**TEMALAR:** Toplumsal Duyarlılık, Kişisel Gelişim, Birey ve Toplum, Sosyal Kontrol
-
-**KAZANIMLAR:** Analitik Düşünme Becerisi Geliştirmek, Sebep-Sonuç İlişkisi Kurarak
-
-**ETİKETLER:** Arkadaşlık, Yardımseverlik, Cesaret, Vurdumduymaz Olmamak, Takım Ruhu, Planlı Çalışma
-
 <!--more-->

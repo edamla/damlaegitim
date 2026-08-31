@@ -45,5 +45,4 @@ daralırken bile zekâsıyla bir adım önde olmayı başarabilecek mi? Akıl oy
 kusursuz yanılsamaların ve sadakatin ön planda olduğu bu eşsiz macera, polisiye
 edebiyatının zirvesini temsil ediyor.
 
-
 <!--more-->
