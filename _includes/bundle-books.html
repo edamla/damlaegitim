@@ -1,0 +1,31 @@
+{% comment %}
+  Paket eans listesini site.books üzerinden çözer.
+  mode=cover: yalnızca ilk eşleşen kitabı bundle_cover_book olarak atar (çıktı yok).
+  aksi halde her eşleşen kitap için bundle-item grid hücresi üretir.
+{% endcomment %}
+{% assign bundle = include.bundle | default: page %}
+{% assign bundle_cover_book = false %}
+
+{% for ean in bundle.eans %}
+  {% assign ean_s = ean | append: '' %}
+  {% assign matched_book = false %}
+  {% for book in site.books %}
+    {% assign book_ean_s = book.ean | append: '' %}
+    {% if book_ean_s == ean_s %}
+      {% assign matched_book = book %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+  {% if matched_book %}
+    {% unless bundle_cover_book %}
+      {% assign bundle_cover_book = matched_book %}
+    {% endunless %}
+    {% if include.mode == 'cover' %}
+      {% break %}
+    {% else %}
+    <div class="col-12 col-sm-6 col-lg-3 listbooks-home-item">
+      {% include bundle-item.html book=matched_book %}
+    </div>
+    {% endif %}
+  {% endif %}
+{% endfor %}

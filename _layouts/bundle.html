@@ -1,0 +1,51 @@
+---
+layout: default
+---
+{% include bundle-books.html bundle=page mode='cover' %}
+{% assign hero_cover_book = false %}
+{% if page.ean %}
+  {% assign hero_cover_book = page %}
+{% elsif bundle_cover_book %}
+  {% assign hero_cover_book = bundle_cover_book %}
+{% endif %}
+<div class="container">
+<div class="book-detail book-page mb-3 position-relative">
+        <div class="h-100 tofront">
+            <div class="row {% if hero_cover_book %} justify-content-between {% else %} justify-content-center {% endif %}">
+                {% if hero_cover_book %}
+                <div class="col-md-3 pe-2 align-self-center book">
+                    {% assign eanimage_class = "rounded" %}
+                    {% include eanimage.html book=hero_cover_book alt=page.title %}
+                </div>
+                {% endif %}
+
+                <div class="{% if hero_cover_book %} col-md-9 {% else %} col-md-8 {% endif %} pe-0 pe-md-4 pt-3 pb-3">
+                    <div class="align-items-center">
+                        <h1 class="display-4 article-headline">{{ page.title }}</h1>
+                        {% if page.grades and page.grades.size > 0 %}
+                        <p class="text-muted mb-3">{{ page.grades | join: ", " }}. sınıf paketi</p>
+                        {% endif %}
+                        {% include book-detail-actions.html book=page %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-lg pt-4 pb-4">
+    {% assign body_stripped = content | strip_html | strip %}
+    {% if body_stripped.size > 0 %}
+    <article class="article-post prose prose--display text-justify maarif-content mb-5">
+        {{ content }}
+    </article>
+    {% endif %}
+
+    <h2 class="fw-bold spanborder"><span>Paket içeriği</span></h2>
+    <div class="row gap-y listbooks-home bundle-items">
+        {% include bundle-books.html bundle=page %}
+    </div>
+</div>
+
+{% include popup.html %}
+{% include structured-data-bundle.html %}

@@ -3,31 +3,28 @@
   Liquid 4 uyumlu (continue/break kullanılmaz).
 {% endcomment %}
 {% assign book = include.book | default: page %}
-{% assign max_items = 4 %}
 {% assign related_count = 0 %}
 {% assign slider_slug = book.url | remove: '/urunler/' | remove: '/' | default: 'kitap' %}
 
 {% if book.genre and book.url %}
 {% capture related_items %}
 {% for b in site.books %}
-  {% if related_count < max_items %}
-    {% if b.url != book.url and b.genre == book.genre %}
-      {% assign grade_match = false %}
-      {% if book.grades.size == 0 %}
-        {% assign grade_match = true %}
-      {% else %}
-        {% for g in book.grades %}
-          {% if b.grades contains g %}
-            {% assign grade_match = true %}
-          {% endif %}
-        {% endfor %}
-      {% endif %}
-      {% if grade_match %}
-        <div class="item">
-          {% include book-card.html book=b %}
-        </div>
-        {% assign related_count = related_count | plus: 1 %}
-      {% endif %}
+  {% if b.url != book.url and b.genre == book.genre %}
+    {% assign grade_match = false %}
+    {% if book.grades.size == 0 %}
+      {% assign grade_match = true %}
+    {% else %}
+      {% for g in book.grades %}
+        {% if b.grades contains g %}
+          {% assign grade_match = true %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+    {% if grade_match %}
+      <div class="item">
+        {% include book-card.html book=b %}
+      </div>
+      {% assign related_count = related_count | plus: 1 %}
     {% endif %}
   {% endif %}
 {% endfor %}
@@ -61,6 +58,7 @@
       loop: false,
       autoplay: false,
       controls: true,
+      controlsText: ['<', '>'],
       controlsPosition: 'bottom',
       nav: false,
       gutter: 16,

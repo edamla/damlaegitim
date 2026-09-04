@@ -88,6 +88,19 @@ defaults:
     values:
       layout: catalog
 
+  # all bundles
+  - scope:
+      type: "bundles"
+      path: "_bundles"
+    values:
+      layout: bundle
+      type: product
+      lang: tr
+      image: assets/images/logo.png
+      sitemap:
+        priority: 0.8
+        changefreq: monthly
+
   # all slides
   - scope:
       type: "slides"
@@ -106,6 +119,8 @@ feed:
       path: "/urunler/feed.xml"
     catalogs:
       path: "/kataloglar/feed.xml"
+    bundles:
+      path: "/paketler/feed.xml"
 
 # excerpt
 excerpt_separator: <!--more-->
@@ -130,6 +145,9 @@ collections:
   catalogs:
     output: true
     permalink: /kataloglar/:title
+  bundles:
+    output: true
+    permalink: /paketler/:title
   slides: 
     output: false
     sort_by: order

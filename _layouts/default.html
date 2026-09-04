@@ -46,6 +46,26 @@
         {% assign book_seo_description = book_seo_description | strip | truncate: 155, "…" %}
       {% endunless %}
       {% include book-seo-tags.html %}
+    {% elsif page.url contains '/paketler/' %}
+      {% assign content_stripped = page.content | strip_html | strip_newlines | strip %}
+      {% if page.description and page.description != "" %}
+        {% assign book_seo_description = page.description | strip_newlines | truncate: 155, "…" %}
+      {% elsif page.excerpt and page.excerpt != "" %}
+        {% assign excerpt_stripped = page.excerpt | strip_html | strip_newlines | strip %}
+        {% if excerpt_stripped.size > 10 %}
+          {% assign book_seo_description = excerpt_stripped | truncate: 155, "…" %}
+        {% elsif content_stripped.size > 25 %}
+          {% assign book_seo_description = content_stripped | truncate: 155, "…" %}
+        {% endif %}
+      {% elsif content_stripped.size > 25 %}
+        {% assign book_seo_description = content_stripped | truncate: 155, "…" %}
+      {% endif %}
+      {% unless book_seo_description %}
+        {% assign grade_list = page.grades | join: ", " %}
+        {% capture book_seo_description %}{{ page.title }} —{% if grade_list != "" %} {{ grade_list }}. sınıf{% endif %} Damla Okul ürün paketi.{% endcapture %}
+        {% assign book_seo_description = book_seo_description | strip | truncate: 155, "…" %}
+      {% endunless %}
+      {% include bundle-seo-tags.html %}
     {% elsif page.layout == 'sinif-landing' %}
       {% include sinif-seo.html %}
     {% elsif page.layout == 'kademe-catalog' %}

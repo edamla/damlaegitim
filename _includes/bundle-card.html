@@ -1,0 +1,27 @@
+{% assign card = include.bundle | default: bundle %}
+{% assign cover_ean = card.ean %}
+{% assign cover_book = card %}
+{% unless cover_ean %}
+  {% include bundle-books.html bundle=card mode='cover' %}
+  {% if bundle_cover_book %}
+    {% assign cover_book = bundle_cover_book %}
+    {% assign cover_ean = bundle_cover_book.ean %}
+  {% endif %}
+{% endunless %}
+{% assign bundle_count = card.eans.size | default: 0 %}
+<article class="bundle-card">
+  <a class="bundle-card__link" href="{{ card.url }}">
+    <div class="bundle-card__media">
+      {% if cover_ean %}
+        {% assign eanimage_class = "bundle-card__cover cover-images" %}
+        {% include eanimage.html book=cover_book width="400" height="600" loading="lazy" fetchpriority="low" decoding="async" %}
+      {% endif %}
+    </div>
+    <div class="bundle-card__info">
+      <h3 class="bundle-card__title">{{ card.title }}</h3>
+      {% if bundle_count > 0 %}
+      <span class="bundle-card__count">{{ bundle_count }} ürün</span>
+      {% endif %}
+    </div>
+  </a>
+</article>

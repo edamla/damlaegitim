@@ -29,6 +29,10 @@
   background: var(--ow-accent);
 }
 
+.ogretmen-wizard__step-dot[hidden] {
+  display: none;
+}
+
 .ogretmen-wizard__panel {
   display: none;
   background: #fff;

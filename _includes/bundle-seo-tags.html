@@ -1,0 +1,52 @@
+{% comment %}
+  Paket detay sayfaları için SEO meta etiketleri.
+  Kapak: paket ean veya ilk üye kitabın ean kapağı (JPG).
+{% endcomment %}
+{% assign bundle_canonical = site.url | append: site.baseurl | append: page.url %}
+{% assign book_og_image_width = 400 %}
+{% assign book_og_image_height = 452 %}
+{% assign book_og_image_type = 'image/png' %}
+{% assign book_og_image = site.url | append: site.logo %}
+{% assign bundle_cover_ean = page.ean %}
+{% unless bundle_cover_ean %}
+  {% include bundle-books.html bundle=page mode='cover' %}
+  {% if bundle_cover_book %}
+    {% assign bundle_cover_ean = bundle_cover_book.ean %}
+  {% endif %}
+{% endunless %}
+{% if bundle_cover_ean and bundle_cover_ean != '' %}
+  {% assign book_cover_jpg = 'assets/images/ean/' | append: bundle_cover_ean | append: '.jpg' %}
+  {% assign book_cover_has_jpg = false %}
+  {% for static_file in site.static_files %}
+    {% if static_file.path contains book_cover_jpg %}
+      {% assign book_cover_has_jpg = true %}
+    {% endif %}
+  {% endfor %}
+  {% if book_cover_has_jpg %}
+    {% assign book_og_image = site.url | append: site.baseurl | append: '/' | append: book_cover_jpg %}
+    {% assign book_og_image_type = 'image/jpeg' %}
+  {% endif %}
+{% endif %}
+<title>{{ page.title }} | {{ site.name }}</title>
+<meta name="generator" content="Jekyll SEO (Damla Okul)" />
+<meta property="og:title" content="{{ page.title | xml_escape }}" />
+<meta property="og:locale" content="{{ site.locale | default: 'tr_TR' }}" />
+<meta name="description" content="{{ book_seo_description | xml_escape }}" />
+<meta property="og:description" content="{{ book_seo_description | xml_escape }}" />
+<link rel="canonical" href="{{ bundle_canonical }}" />
+<meta property="og:url" content="{{ bundle_canonical }}" />
+<meta property="og:site_name" content="{{ site.name | xml_escape }}" />
+<meta property="og:image" content="{{ book_og_image }}" />
+<meta property="og:image:secure_url" content="{{ book_og_image }}" />
+<meta property="og:image:type" content="{{ book_og_image_type }}" />
+<meta property="og:image:width" content="{{ book_og_image_width }}" />
+<meta property="og:image:height" content="{{ book_og_image_height }}" />
+<meta property="og:image:alt" content="{{ page.title | xml_escape }} — Damla Okul" />
+<meta property="og:type" content="product" />
+<meta name="twitter:card" content="{{ site.twitter.card | default: 'summary_large_image' }}" />
+<meta property="twitter:image" content="{{ book_og_image }}" />
+<meta property="twitter:title" content="{{ page.title | xml_escape }}" />
+<meta name="twitter:description" content="{{ book_seo_description | xml_escape }}" />
+{% if site.twitter.username %}
+<meta name="twitter:site" content="@{{ site.twitter.username | remove: '@' }}" />
+{% endif %}

@@ -24,5 +24,23 @@ sitemap: false
     "unite": {{ book.unite | join: ', ' | jsonify }},
     "tags": {{ book.tags | join: ', ' | jsonify }},
     "body": {{ book.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | jsonify }}{% assign counter = counter | plus: 1 %}
-  }{% unless forloop.last %},{% endunless %}{% endfor %}]
+  }{% unless forloop.last %},{% endunless %}{% endfor %}{% if site.bundles %}{% if site.bundles.size > 0 %}{% if site.books.size > 0 %},{% endif %}{% for bundle in site.bundles %}{% assign search_cover = bundle.image %}{% assign bundle_cover_ean = bundle.ean %}{% unless bundle_cover_ean %}{% for ean in bundle.eans %}{% assign ean_s = ean | append: '' %}{% for book in site.books %}{% assign book_ean_s = book.ean | append: '' %}{% if book_ean_s == ean_s %}{% assign bundle_cover_ean = book.ean %}{% break %}{% endif %}{% endfor %}{% if bundle_cover_ean %}{% break %}{% endif %}{% endfor %}{% endunless %}{% if bundle_cover_ean %}{% assign book_cover_jpg = 'assets/images/ean/' | append: bundle_cover_ean | append: '.jpg' %}{% assign book_cover_webp = 'assets/images/ean/' | append: bundle_cover_ean | append: '.webp' %}{% assign book_cover_has_jpg = false %}{% assign book_cover_has_webp = false %}{% assign book_cover_jpg_rel = '/' | append: book_cover_jpg %}{% assign book_cover_webp_rel = '/' | append: book_cover_webp %}{% for static_file in site.static_files %}{% if static_file.path == book_cover_jpg_rel %}{% assign book_cover_has_jpg = true %}{% endif %}{% if static_file.path == book_cover_webp_rel %}{% assign book_cover_has_webp = true %}{% endif %}{% endfor %}{% if book_cover_has_webp %}{% assign search_cover = book_cover_webp %}{% elsif book_cover_has_jpg %}{% assign search_cover = book_cover_jpg %}{% endif %}{% endif %}{
+    "id": {{ counter }},
+    "url": "{{ site.url }}{{ site.baseurl }}{{ bundle.url }}",
+    "title": {{ bundle.title | jsonify }},
+    "image": "{{ site.url }}{{ site.baseurl }}/{{ search_cover }}",
+    "authors": "",
+    "categories": "Paket",
+    "grades": {{ bundle.grades | join: ', ' | jsonify }},
+    "ean": {{ bundle.eans | join: ' ' | jsonify }},
+    "genre": "Paket",
+    "anatema": "",
+    "degerler": "",
+    "egilimler": "",
+    "kazanim": "",
+    "beceriler": "",
+    "unite": "",
+    "tags": "paket",
+    "body": {{ bundle.content | markdownify | replace: '.', '. ' | replace: '</h2>', ': ' | replace: '</h3>', ': ' | replace: '</h4>', ': ' | replace: '</p>', ' ' | strip_html | strip_newlines | replace: '  ', ' ' | jsonify }}{% assign counter = counter | plus: 1 %}
+  }{% unless forloop.last %},{% endunless %}{% endfor %}{% endif %}{% endif %}]
 }

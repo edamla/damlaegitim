@@ -166,30 +166,107 @@ window.owOnRecaptchaReady = function() {
     }
   }
 
+  function catalogHasProducts(genre) {
+    if (!window.BookFilter || !hasGrade()) return false;
+    return BookFilter.filterCatalog(catalog, { grade: state.grade, genre: genre }).length > 0;
+  }
+
+  function isStepAvailable(n) {
+    n = parseInt(n, 10);
+    if (n === 2) return !hasGrade() || catalogHasProducts('story');
+    if (n === 3) return !hasGrade() || catalogHasProducts('education');
+    return n >= 1 && n <= TOTAL_STEPS;
+  }
+
+  function visibleSteps() {
+    var steps = [];
+    for (var i = 1; i <= TOTAL_STEPS; i++) {
+      if (isStepAvailable(i)) steps.push(i);
+    }
+    return steps;
+  }
+
+  function nextVisibleStep(from) {
+    for (var i = from + 1; i <= TOTAL_STEPS; i++) {
+      if (isStepAvailable(i)) return i;
+    }
+    return null;
+  }
+
+  function prevVisibleStep(from) {
+    for (var i = from - 1; i >= 1; i--) {
+      if (isStepAvailable(i)) return i;
+    }
+    return null;
+  }
+
+  function resolveAvailableStep(n) {
+    n = parseInt(n, 10) || 1;
+    if (n < 1) n = 1;
+    if (n > TOTAL_STEPS) n = TOTAL_STEPS;
+    if (isStepAvailable(n)) return n;
+    return nextVisibleStep(n) || prevVisibleStep(n) || 1;
+  }
+
+  function hasCatalogSteps() {
+    return isStepAvailable(2) || isStepAvailable(3);
+  }
+
+  function updateVisibleStepNumbers() {
+    var vs = visibleSteps();
+    document.querySelectorAll('.ogretmen-wizard__panel').forEach(function(p) {
+      var step = parseInt(p.dataset.step, 10);
+      var visNum = vs.indexOf(step) + 1;
+      if (visNum < 1) return;
+      var prefix = visNum + '. ';
+      p.querySelectorAll('.ogretmen-wizard__step-title-full, .ogretmen-wizard__step-title-short').forEach(function(el) {
+        el.textContent = el.textContent.replace(/^\d+\.\s*/, prefix);
+      });
+      var h2 = p.querySelector('h2');
+      if (h2 && h2.childElementCount === 0) {
+        h2.textContent = h2.textContent.replace(/^\d+\.\s*/, prefix);
+      }
+    });
+  }
+
+  function updateProgressChrome(n) {
+    var vs = visibleSteps();
+    var visIdx = vs.indexOf(n);
+    var visNow = visIdx < 0 ? 1 : visIdx + 1;
+    var visTotal = vs.length;
+    var label = STEP_LABELS[n - 1] || '';
+    updateVisibleStepNumbers();
+    document.querySelectorAll('.ogretmen-wizard__step-dot').forEach(function(d) {
+      var i = parseInt(d.dataset.progress, 10);
+      var available = isStepAvailable(i);
+      d.hidden = !available;
+      d.classList.toggle('is-active', available && i === n);
+      d.classList.toggle('is-done', available && i < n);
+    });
+    var progressEl = document.getElementById('ow-progress');
+    if (progressEl) {
+      progressEl.setAttribute('aria-valuemax', String(visTotal));
+      progressEl.setAttribute('aria-valuenow', String(visNow));
+      progressEl.setAttribute('aria-valuetext', 'Adım ' + visNow + ' / ' + visTotal + ': ' + label);
+    }
+    var progressLabel = document.getElementById('ow-progress-label');
+    if (progressLabel) {
+      progressLabel.textContent = 'Adım ' + visNow + ' / ' + visTotal + ' · ' + label;
+    }
+  }
+
   function showStep(n) {
     if (n === 2 || n === 3) {
       syncGradeFromDom();
       if (!hasGrade()) n = 1;
     }
+    n = resolveAvailableStep(n);
     state.step = n;
     saveState();
     document.querySelectorAll('.ogretmen-wizard__panel').forEach(function(p) {
       p.classList.toggle('is-active', parseInt(p.dataset.step, 10) === n);
     });
-    document.querySelectorAll('.ogretmen-wizard__step-dot').forEach(function(d) {
-      var i = parseInt(d.dataset.progress, 10);
-      d.classList.toggle('is-active', i === n);
-      d.classList.toggle('is-done', i < n);
-    });
-    var progressEl = document.getElementById('ow-progress');
-    if (progressEl) {
-      progressEl.setAttribute('aria-valuenow', String(n));
-      progressEl.setAttribute('aria-valuetext', 'Adım ' + n + ' / ' + TOTAL_STEPS + ': ' + STEP_LABELS[n - 1]);
-    }
-    var progressLabel = document.getElementById('ow-progress-label');
-    if (progressLabel) {
-      progressLabel.textContent = 'Adım ' + n + ' / ' + TOTAL_STEPS + ' · ' + STEP_LABELS[n - 1];
-    }
+    updateProgressChrome(n);
     document.getElementById('ow-btn-prev').disabled = n <= 1;
     document.getElementById('ow-btn-next').textContent = n >= TOTAL_STEPS ? 'Gönder' : 'İleri';
     if (n === 2) {
@@ -374,12 +451,30 @@ window.owOnRecaptchaReady = function() {
     }
 
     var listEmpty = document.getElementById('ow-list-empty');
-    if (listEmpty) listEmpty.style.display = state.list.length === 0 ? 'block' : 'none';
+    if (listEmpty) {
+      listEmpty.style.display = state.list.length === 0 ? 'block' : 'none';
+      if (state.list.length === 0) {
+        var sources = [];
+        if (catalogHasProducts('story')) sources.push('Okuma Atölyesi');
+        if (catalogHasProducts('education')) sources.push('Eğitim Destekleyici Kitap');
+        if (sources.length === 2) {
+          listEmpty.textContent = 'Henüz ürün eklemediniz. ' + sources[0] + ' ve ' + sources[1] + ' adımlarından «Listeye ekle» kullanın.';
+        } else if (sources.length === 1) {
+          listEmpty.textContent = 'Henüz ürün eklemediniz. ' + sources[0] + ' adımından «Listeye ekle» kullanın.';
+        } else {
+          listEmpty.textContent = 'Henüz ürün eklemediniz.';
+        }
+      }
+    }
 
     var storyGroup = document.getElementById('ow-list-story-group');
     var educationGroup = document.getElementById('ow-list-education-group');
-    if (storyGroup) storyGroup.hidden = state.list.length === 0;
-    if (educationGroup) educationGroup.hidden = state.list.length === 0;
+    if (storyGroup) {
+      storyGroup.hidden = state.list.length === 0 || (storyEntries.length === 0 && hasGrade() && !catalogHasProducts('story'));
+    }
+    if (educationGroup) {
+      educationGroup.hidden = state.list.length === 0 || (educationEntries.length === 0 && hasGrade() && !catalogHasProducts('education'));
+    }
 
     var storyEmpty = document.getElementById('ow-list-story-empty');
     var educationEmpty = document.getElementById('ow-list-education-empty');
@@ -915,6 +1010,10 @@ window.owOnRecaptchaReady = function() {
 
   function validateStep(n) {
     if (n === 1 && !hasGrade()) { alert('Lütfen sınıf seçin.'); return false; }
+    if (n === 1 && !hasCatalogSteps()) {
+      alert('Bu sınıf için henüz örnek talep edilebilecek ürün bulunmuyor. Lütfen başka bir sınıf seçin.');
+      return false;
+    }
     if (n === 4 && state.list.length === 0) { alert('Listeye en az bir ürün ekleyin.'); return false; }
     if (n === 5) {
       var form = document.getElementById('ow-contact-form');
@@ -974,13 +1073,23 @@ window.owOnRecaptchaReady = function() {
         if (storySearchEl) storySearchEl.value = state.filters.storyQ || '';
         var educationSearchEl = document.getElementById('ow-search-education');
         if (educationSearchEl) educationSearchEl.value = state.filters.educationQ || '';
-        if (state.step === 2) {
-          renderStoryFilterOptions();
-          renderCatalog('ow-catalog-story', 'story');
+        if (state.step !== 1) {
+          updateProgressChrome(state.step);
+          if (state.step === 2) {
+            renderStoryFilterOptions();
+            renderCatalog('ow-catalog-story', 'story');
+          }
+          if (state.step === 3) {
+            renderCatalog('ow-catalog-education', 'education');
+          }
+          return;
         }
-        if (state.step === 3) {
-          renderCatalog('ow-catalog-education', 'education');
+        if (!validateStep(1)) {
+          updateProgressChrome(1);
+          return;
         }
+        var next = nextVisibleStep(1);
+        if (next) showStep(next);
       });
     });
 
@@ -1086,13 +1195,15 @@ window.owOnRecaptchaReady = function() {
     }
 
     document.getElementById('ow-btn-prev').addEventListener('click', function() {
-      if (state.step > 1) showStep(state.step - 1);
+      var prev = prevVisibleStep(state.step);
+      if (prev) showStep(prev);
     });
 
     document.getElementById('ow-btn-next').addEventListener('click', function() {
       if (state.step < TOTAL_STEPS) {
         if (!validateStep(state.step)) return;
-        showStep(state.step + 1);
+        var next = nextVisibleStep(state.step);
+        if (next) showStep(next);
       } else {
         if (!validateStep(5)) { showStep(5); return; }
         submitToSheets();

@@ -1,0 +1,15 @@
+{% assign item = include.book %}
+<article class="bundle-item">
+  <a class="bundle-item__cover-link" href="{{ item.url }}">
+    <div class="bundle-item__media">
+      {% assign eanimage_class = "bundle-item__cover cover-images" %}
+      {% include eanimage.html book=item width="400" height="600" loading="lazy" fetchpriority="low" decoding="async" %}
+    </div>
+  </a>
+  <h3 class="bundle-item__title">
+    <a href="{{ item.url }}">{{ item.title }}</a>
+  </h3>
+  <div class="bundle-item__actions">
+    {% include book-detail-actions.html book=item only='preview' %}
+  </div>
+</article>

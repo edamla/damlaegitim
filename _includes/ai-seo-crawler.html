@@ -26,6 +26,14 @@
     {% include ai-seo-crawler-home.html %}
   {% elsif page.url == '/urunler' %}
     {% include ai-seo-crawler-catalog.html %}
+  {% elsif page.url contains '/paketler/' %}
+    {% if page.layout == 'bundle' %}
+      {% include ai-seo-crawler-bundle.html %}
+    {% else %}
+      {% include ai-seo-crawler-generic.html %}
+    {% endif %}
+  {% elsif page.url == '/paketler' %}
+    {% include ai-seo-crawler-bundles.html %}
   {% elsif page.url contains '/kataloglar' or page.layout == 'catalog' %}
     {% include ai-seo-crawler-katalog.html %}
   {% elsif page.url contains '/siniflar/' %}
