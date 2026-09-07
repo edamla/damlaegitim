@@ -42,14 +42,10 @@ layout: default
 {% assign book_slug = book.url | split: '/' | last | remove: '.html' %}
 {% assign book_cover = book.image %}
 {% if book.ean %}
-{% assign cover_jpg = 'assets/images/ean/' | append: book.ean | append: '.jpg' %}
-{% assign cover_webp = 'assets/images/ean/' | append: book.ean | append: '.webp' %}
-{% assign cover_jpg_rel = '/' | append: cover_jpg %}
-{% assign cover_webp_rel = '/' | append: cover_webp %}
-{% for static_file in site.static_files %}
-{% if static_file.path == cover_webp_rel %}{% assign book_cover = cover_webp %}{% endif %}
-{% if static_file.path == cover_jpg_rel and book_cover == book.image %}{% assign book_cover = cover_jpg %}{% endif %}
-{% endfor %}
+{% include ean-cover-resolve.html ean=book.ean %}
+{% if ean_cover_available %}
+{% assign book_cover = ean_cover_src %}
+{% endif %}
 {% endif %}
 {
   "slug": {{ book_slug | jsonify }},

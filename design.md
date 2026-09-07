@@ -41,6 +41,8 @@ Bu belge [damlaokul.com](https://damlaokul.com) sitesinin görsel kimliğini, CS
 │  tiny-slider.css          Anasayfa slider (yalnızca /)      │
 ├─────────────────────────────────────────────────────────────┤
 │  ogretmen-wizard.css      Öğretmen talep formu (/ogretmen)  │
+├─────────────────────────────────────────────────────────────┤
+│  oku360.css               Oku360 tanıtım sayfası (/oku360)  │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -554,6 +556,14 @@ Sayfa özel CSS yükler (`ogretmen-wizard.css`); Bootstrap grid + marka token’
 
 ---
 
+## 15. Oku360 Okuma Atölyesi
+
+**URL:** `/oku360` — [`_pages/oku360.html`](_pages/oku360.html), `layout: default` (tam genişlik; `page` container’ı kullanılmaz).
+
+Sayfa özel CSS/JS yükler (`oku360.css`, `oku360.js`). Token’lar `--color-primary`, `--font-display`, `--font-sans`. Mobilde sticky süreç kartları ve katmanlı hero; `prefers-reduced-motion` ile durağan yedek. Katalog bölümü `site.catalogs` içinden ortaokul kaydını iframe + poster olarak gömer.
+
+---
+
 ## Yeni Stil Ekleme Rehberi
 
 ### Kalıcı bileşen
@@ -604,6 +614,7 @@ Sayfa özel CSS yükler (`ogretmen-wizard.css`); Bootstrap grid + marka token’
 | Bootstrap override | `assets/css/app.css` |
 | Arama UI | `assets/css/spotlight.css` |
 | Öğretmen wizard | `assets/css/ogretmen-wizard.css` |
+| Oku360 tanıtım | `assets/css/oku360.css` |
 | Kök şablon | `_layouts/default.html` |
 | Navbar JS | `assets/js/nav.js` |
 | Font subset | `scripts/subset_font.sh` |

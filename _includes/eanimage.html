@@ -20,34 +20,14 @@
 {% assign book_cover_manifest_webp = false %}
 
 {% if ean_value and ean_value != '' %}
-  {% assign book_cover_jpg = 'assets/images/ean/' | append: ean_value | append: '.jpg' %}
-  {% assign book_cover_webp = 'assets/images/ean/' | append: ean_value | append: '.webp' %}
-
-  {% assign book_cover_rel = '/' | append: book_cover_jpg %}
-  {% assign book_cover_webp_rel = '/' | append: book_cover_webp %}
-
-  {% for static_file in site.static_files %}
-    {% if static_file.path == book_cover_rel %}
-      {% assign book_cover_has_jpg = true %}
-    {% endif %}
-    {% if static_file.path == book_cover_webp_rel %}
-      {% assign book_cover_has_webp = true %}
-    {% endif %}
-  {% endfor %}
-
-  {% if book_cover_has_jpg or book_cover_has_webp %}
-    {% assign book_cover_available = true %}
-  {% endif %}
-
-  {% if site.data.webp_manifest and site.data.webp_manifest.assets contains book_cover_webp %}
-    {% assign book_cover_manifest_webp = true %}
-  {% endif %}
-
-  {% if book_cover_has_jpg %}
-    {% assign book_cover_src = book_cover_jpg %}
-  {% elsif book_cover_has_webp %}
-    {% assign book_cover_src = book_cover_webp %}
-  {% endif %}
+  {% include ean-cover-resolve.html ean=ean_value %}
+  {% assign book_cover_jpg = ean_cover_jpg %}
+  {% assign book_cover_webp = ean_cover_webp %}
+  {% assign book_cover_src = ean_cover_src %}
+  {% assign book_cover_has_jpg = ean_cover_has_jpg %}
+  {% assign book_cover_has_webp = ean_cover_has_webp %}
+  {% assign book_cover_available = ean_cover_available %}
+  {% assign book_cover_manifest_webp = ean_cover_manifest_webp %}
 {% endif %}
 
 {% unless url_only == true or url_only == 'true' %}

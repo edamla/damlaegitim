@@ -1,0 +1,880 @@
+/* Oku360 Okuma Atölyesi tanıtım sayfası — yalnızca /oku360 */
+
+.oku360 {
+  --oku-accent: var(--color-primary, #03a87c);
+  --oku-accent-dark: var(--color-primary-dark, #028a66);
+  --oku-hero-bg: #0e1c18;
+  --oku-hero-text: #f4faf7;
+  --oku-muted: rgba(244, 250, 247, 0.72);
+  --oku-surface: #f4faf7;
+  --oku-card: #fff;
+  --oku-border: #e3efe9;
+  --oku-text: var(--color-text, #212529);
+  --oku-ink-muted: var(--color-muted, #6c757d);
+  --oku-radius: calc(var(--radius, 0.5rem) * 2);
+  --oku-inner: min(42rem, calc(100% - 2rem));
+  font-family: var(--font-sans);
+  color: var(--oku-text);
+  overflow-x: clip;
+}
+
+.oku360-inner {
+  width: var(--oku-inner);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.oku360-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.85rem;
+}
+
+.oku360-kicker--on-light {
+  color: var(--oku-accent-dark);
+}
+
+.oku360 h2 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(1.7rem, 6vw, 2.4rem);
+  line-height: 1.25;
+  margin: 0 0 1rem;
+}
+
+.oku360 p {
+  line-height: 1.75;
+}
+
+.oku360-lead {
+  font-size: 1.05rem;
+  color: var(--oku-ink-muted);
+  margin: 0 0 1.25rem;
+}
+
+.oku360-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.oku360-actions .btn {
+  min-height: 2.75rem;
+  padding-inline: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* —— Hero —— */
+.oku360-hero {
+  position: relative;
+  isolation: isolate;
+  --oku-hero-video-ratio: 1208 / 1714;
+  min-height: calc(100dvh - var(--nav-height, 4rem));
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  color: var(--oku-hero-text);
+  background: var(--oku-hero-bg);
+  padding: 0;
+  overflow: hidden;
+}
+
+.oku360-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background: var(--oku-hero-bg);
+}
+
+.oku360-hero__bg-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 72% 62% at 50% 42%, rgba(3, 168, 124, 0.1) 0%, transparent 68%),
+    linear-gradient(180deg, rgba(14, 28, 24, 0.55) 0%, rgba(14, 28, 24, 0.08) 42%, rgba(14, 28, 24, 0.62) 100%);
+  pointer-events: none;
+}
+
+.oku360-hero__glow,
+.oku360-hero__rings {
+  pointer-events: none;
+  will-change: transform;
+}
+
+.oku360-hero__glow {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  width: 24rem;
+  height: 24rem;
+  margin-left: -12rem;
+  background: radial-gradient(circle, rgba(3, 168, 124, 0.34) 0%, transparent 68%);
+  z-index: 1;
+}
+
+.oku360-hero__rings {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  width: min(28rem, 78vw);
+  height: min(28rem, 78vw);
+  margin-left: calc(min(28rem, 78vw) / -2);
+  z-index: 1;
+}
+
+.oku360-hero__rings span {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(3, 168, 124, 0.28);
+  border-radius: 50%;
+}
+
+.oku360-hero__rings span:nth-child(1) { inset: 8%; border-color: rgba(3, 168, 124, 0.18); }
+.oku360-hero__rings span:nth-child(2) { inset: 22%; border-color: rgba(244, 250, 247, 0.12); }
+.oku360-hero__rings span:nth-child(3) { inset: 38%; background: rgba(3, 168, 124, 0.12); border: 0; }
+
+.oku360-hero__layout {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 1.25rem 1rem calc(1.25rem + env(safe-area-inset-bottom, 0px));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+  min-height: inherit;
+}
+
+.oku360-hero__shell {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(0.85rem, 3vw, 1.35rem);
+  align-items: center;
+  width: min(100%, 24rem);
+  margin-inline: auto;
+}
+
+.oku360-hero__media {
+  width: min(34vw, 8.5rem);
+}
+
+.oku360-hero__video {
+  display: block;
+  width: 100%;
+  max-height: min(68vh, 18rem);
+  height: auto;
+  aspect-ratio: var(--oku-hero-video-ratio);
+  object-fit: cover;
+  object-position: center;
+  border-radius: calc(var(--oku-radius) * 0.75);
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.oku360-hero__copy {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  padding: 0;
+}
+
+.oku360-hero .oku360-kicker {
+  color: var(--oku-accent);
+}
+
+.oku360-hero h1 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(2.4rem, 12vw, 4.2rem);
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.35rem;
+}
+
+.oku360-hero h1 span {
+  display: block;
+  font-size: 0.38em;
+  letter-spacing: 0.04em;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  margin-top: 0.45rem;
+  color: var(--oku-muted);
+}
+
+.oku360-hero .oku360-lead {
+  color: var(--oku-muted);
+  max-width: 28rem;
+}
+
+.oku360-hero .btn-primary {
+  --bs-btn-bg: var(--oku-accent);
+  --bs-btn-border-color: var(--oku-accent);
+  --bs-btn-hover-bg: var(--oku-accent-dark);
+  --bs-btn-hover-border-color: var(--oku-accent-dark);
+}
+
+.oku360-hero .btn-outline-light {
+  --bs-btn-color: var(--oku-hero-text);
+  --bs-btn-border-color: rgba(244, 250, 247, 0.35);
+  --bs-btn-hover-bg: rgba(244, 250, 247, 0.12);
+  --bs-btn-hover-border-color: #fff;
+  --bs-btn-hover-color: #fff;
+}
+
+.oku360-scrollhint {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-top: 1.75rem;
+  color: var(--oku-muted);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+}
+
+.oku360-scrollhint i {
+  animation: oku360-bounce 1.8s ease-in-out infinite;
+}
+
+@keyframes oku360-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* —— Sections —— */
+.oku360-section {
+  padding: 3.25rem 0;
+}
+
+.oku360-section--surface {
+  background: var(--oku-surface);
+}
+
+.oku360-section--dark {
+  background: var(--oku-hero-bg);
+  color: var(--oku-hero-text);
+}
+
+.oku360-section--dark .oku360-lead,
+.oku360-section--dark p {
+  color: var(--oku-muted);
+}
+
+.oku360-section--dark a:not(.btn) {
+  color: #7ee0c2;
+}
+
+.oku360-points {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.oku360-points li {
+  background: var(--oku-card);
+  border: 1px solid var(--oku-border);
+  border-radius: var(--oku-radius);
+  padding: 1rem 1.1rem;
+  font-size: 0.98rem;
+}
+
+.oku360-points strong {
+  display: block;
+  color: var(--oku-accent-dark);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+/* —— Sticky process —— */
+.oku360-process {
+  padding: 2.5rem 0 1rem;
+  background: linear-gradient(180deg, #fff 0%, var(--oku-surface) 100%);
+}
+
+.oku360-steps {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0 1rem 3rem;
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
+.oku360-step {
+  position: sticky;
+  top: calc(var(--nav-height, 4rem) + 0.65rem);
+  min-height: min(68dvh, 28rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--oku-card);
+  border: 1px solid var(--oku-border);
+  border-radius: var(--oku-radius);
+  padding: 1.5rem 1.25rem 1.6rem;
+  margin-bottom: 1.15rem;
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.08));
+  overflow: hidden;
+}
+
+.oku360-step:nth-child(1) { z-index: 1; }
+.oku360-step:nth-child(2) { z-index: 2; background: #f7fffb; }
+.oku360-step:nth-child(3) { z-index: 3; }
+.oku360-step:nth-child(4) { z-index: 4; background: #f7fffb; }
+.oku360-step:nth-child(5) { z-index: 5; margin-bottom: 0; }
+
+.oku360-step__visual {
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(7rem, 28dvh, 12rem);
+  color: var(--oku-accent);
+  font-size: clamp(3.75rem, 16vw, 6.25rem);
+  line-height: 1;
+}
+
+.oku360-step__visual::before {
+  content: "";
+  position: absolute;
+  width: clamp(7.5rem, 30vw, 11.5rem);
+  height: clamp(7.5rem, 30vw, 11.5rem);
+  border-radius: 50%;
+  border: 1px solid rgba(3, 168, 124, 0.16);
+  background: radial-gradient(circle, rgba(3, 168, 124, 0.12) 0%, rgba(3, 168, 124, 0.04) 68%, transparent 100%);
+}
+
+.oku360-step__visual i {
+  position: relative;
+  z-index: 1;
+  opacity: 0.88;
+}
+
+.oku360-step__content {
+  flex-shrink: 0;
+}
+
+.oku360-step__head {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 0.75rem;
+}
+
+.oku360-step__num {
+  font-family: var(--font-display);
+  font-size: 2.75rem;
+  font-weight: 300;
+  color: var(--oku-accent);
+  line-height: 1;
+  margin: 0;
+  opacity: 0.45;
+}
+
+.oku360-step h3 {
+  font-size: 1.35rem;
+  margin: 0 0 0.5rem;
+}
+
+.oku360-step p {
+  margin: 0;
+  color: var(--oku-ink-muted);
+}
+
+/* —— TYMM chips —— */
+.oku360-chips {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1.5rem;
+}
+
+.oku360-chip {
+  background: var(--oku-card);
+  border: 1px solid var(--oku-border);
+  border-radius: var(--oku-radius);
+  padding: 1.15rem 1.1rem;
+}
+
+.oku360-chip h3 {
+  font-size: 1.05rem;
+  margin: 0 0 0.4rem;
+  color: var(--oku-accent-dark);
+}
+
+.oku360-chip p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--oku-ink-muted);
+}
+
+/* —— Catalog —— */
+.oku360-catalogs {
+  background: var(--oku-hero-bg);
+  color: var(--oku-hero-text);
+  padding: 2.5rem 0 calc(2rem + env(safe-area-inset-bottom, 0px));
+}
+
+.oku360-catalogs > .oku360-inner > .oku360-lead {
+  color: var(--oku-muted);
+}
+
+.oku360-catalog-cards {
+  display: grid;
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+.oku360-catalog-card {
+  display: grid;
+  gap: 1.25rem;
+  padding: 1.35rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--oku-radius);
+}
+
+.oku360-catalog-card__cover picture,
+.oku360-catalog-card__cover img {
+  display: block;
+  width: min(8.5rem, 38vw);
+  margin: 0 auto;
+  border-radius: 0.4rem;
+  box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.45);
+}
+
+.oku360-catalog-card__cover img {
+  width: 100%;
+  height: auto;
+}
+
+.oku360-catalog-card .oku360-kicker {
+  color: var(--oku-accent);
+  margin-bottom: 0.35rem;
+}
+
+.oku360-catalog-card__body h3 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: clamp(1.35rem, 4.5vw, 1.75rem);
+  margin: 0 0 0.65rem;
+}
+
+.oku360-catalog-card__text {
+  margin: 0;
+  color: var(--oku-muted);
+  font-size: 0.95rem;
+}
+
+.oku360-catalog__meta {
+  margin: 0.75rem 0 0;
+  font-size: 0.85rem;
+  color: var(--oku-muted);
+}
+
+.oku360-catalog__bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 1.15rem;
+}
+
+/* —— Pillars —— */
+.oku360-pillars {
+  display: grid;
+  gap: 1.15rem;
+  margin-top: 1.5rem;
+  align-items: start;
+}
+
+.oku360-pillar {
+  background: var(--oku-card);
+  border: 1px solid var(--oku-border);
+  border-radius: var(--oku-radius);
+  padding: 1rem 1rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.06));
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.oku360-pillar:hover,
+.oku360-pillar:focus-within {
+  border-color: rgba(3, 168, 124, 0.35);
+  box-shadow: 0 0.35rem 1.1rem rgba(3, 168, 124, 0.08);
+}
+
+.oku360-pillar__media {
+  aspect-ratio: 16 / 10;
+  border-radius: calc(var(--radius, 0.5rem));
+  overflow: hidden;
+  background: var(--oku-surface);
+  border: 1px solid rgba(227, 239, 233, 0.9);
+}
+
+.oku360-pillar__media picture,
+.oku360-pillar__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.oku360-pillar__media--covers {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(0.65rem, 3vw, 1rem);
+  padding: 1rem 0.85rem 0.75rem;
+  background: linear-gradient(180deg, #f4faf7 0%, #fff 100%);
+}
+
+.oku360-pillar__cover {
+  margin: 0;
+  width: min(5.75rem, 34%);
+  text-align: center;
+}
+
+.oku360-pillar__cover picture,
+.oku360-pillar__cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 0.35rem;
+  box-shadow: 0 0.45rem 1rem rgba(0, 0, 0, 0.14);
+}
+
+.oku360-pillar__cover figcaption {
+  margin-top: 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--oku-ink-muted);
+}
+
+.oku360-pillar h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.oku360-pillar p {
+  margin: 0;
+  color: var(--oku-ink-muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.oku360-pillar p a {
+  color: var(--oku-accent-dark);
+  font-weight: 600;
+}
+
+.oku360-pillar__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: fit-content;
+  margin-top: 0.1rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--oku-accent-dark);
+  text-decoration: none;
+}
+
+.oku360-pillar__link i {
+  font-size: 0.75rem;
+  transition: transform 0.15s ease;
+}
+
+.oku360-pillar__link:hover i,
+.oku360-pillar__link:focus-visible i {
+  transform: translateX(3px);
+}
+
+/* —— Grades + covers —— */
+.oku360-grades {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.35rem;
+}
+
+.oku360-grade {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 4.5rem;
+  padding: 0.9rem 1rem;
+  background: var(--oku-card);
+  border: 1px solid var(--oku-border);
+  border-radius: var(--oku-radius);
+  color: var(--oku-text);
+  text-decoration: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.oku360-grade:hover,
+.oku360-grade:focus-visible {
+  border-color: var(--oku-accent);
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.08));
+  color: var(--oku-accent-dark);
+}
+
+.oku360-grade strong {
+  font-size: 1.05rem;
+}
+
+.oku360-grade span {
+  font-size: 0.8rem;
+  color: var(--oku-ink-muted);
+}
+
+.oku360-kademe {
+  margin-top: 2rem;
+}
+
+.oku360-kademe:first-of-type {
+  margin-top: 1.35rem;
+}
+
+.oku360-kademe__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.85rem;
+}
+
+.oku360-kademe__head h3 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 1.35rem;
+  margin: 0;
+}
+
+.oku360-kademe__head a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--oku-accent-dark);
+}
+
+.oku360-covers-label {
+  margin: 1.15rem 0 0.35rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--oku-ink-muted);
+}
+
+.oku360-covers {
+  display: flex;
+  gap: 0.75rem;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
+  padding: 0.35rem 0 1rem;
+  margin-top: 1.25rem;
+  scrollbar-width: thin;
+}
+
+.oku360-cover {
+  flex: 0 0 7.25rem;
+  min-width: 0;
+  max-width: 7.25rem;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--oku-text);
+}
+
+.oku360-cover__img {
+  display: block;
+  width: 7.25rem;
+  height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 0.35rem;
+  box-shadow: var(--shadow-sm, 0 1px 3px rgba(0, 0, 0, 0.08));
+}
+
+.oku360-cover__title {
+  display: -webkit-box;
+  width: 100%;
+  margin-top: 0.45rem;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  text-align: center;
+  color: var(--oku-ink-muted);
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  word-break: break-word;
+}
+
+/* —— CTA —— */
+.oku360-cta {
+  padding: 3.25rem 0 calc(3.5rem + env(safe-area-inset-bottom, 0px));
+  background: linear-gradient(180deg, var(--oku-surface) 0%, #fff 55%);
+}
+
+.oku360-cta__inner {
+  text-align: center;
+}
+
+.oku360-cta__inner .oku360-lead {
+  max-width: 34rem;
+  margin-inline: auto;
+}
+
+.oku360-cta__action {
+  margin-top: 1.5rem;
+}
+
+.oku360-cta__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100%, 28rem);
+  min-height: 3.75rem;
+  padding: 1rem 1.75rem;
+  font-size: clamp(1.05rem, 3.8vw, 1.25rem);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  border-radius: calc(var(--oku-radius) * 0.85);
+  box-shadow: 0 0.75rem 1.75rem rgba(3, 168, 124, 0.28);
+}
+
+.oku360-cta__btn:hover,
+.oku360-cta__btn:focus-visible {
+  box-shadow: 0 1rem 2.25rem rgba(3, 168, 124, 0.34);
+}
+
+@media (min-width: 768px) {
+  .oku360 {
+    --oku-inner: min(68rem, calc(100% - 4rem));
+  }
+
+  .oku360-hero {
+    align-items: stretch;
+    padding-block: 3rem;
+  }
+
+  .oku360-hero__layout {
+    padding-inline: clamp(2rem, 5vw, 4rem);
+  }
+
+  .oku360-hero__shell {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: clamp(2rem, 4vw, 3.25rem);
+    width: min(100%, 64rem);
+  }
+
+  .oku360-hero__media {
+    width: min(34vw, 22rem);
+  }
+
+  .oku360-hero__video {
+    max-height: min(78vh, 32rem);
+  }
+
+  .oku360-hero__copy {
+    max-width: 30rem;
+  }
+
+  .oku360-hero__glow {
+    top: 14%;
+    width: 30rem;
+    height: 30rem;
+    margin-left: -15rem;
+  }
+
+  .oku360-hero__rings {
+    top: 8%;
+    width: min(36rem, 52vw);
+    height: min(36rem, 52vw);
+    margin-left: calc(min(36rem, 52vw) / -2);
+  }
+
+  .oku360-hero h1 {
+    font-size: clamp(3.2rem, 7vw, 5rem);
+  }
+
+  .oku360-section {
+    padding: 4.5rem 0;
+  }
+
+  .oku360-points,
+  .oku360-chips,
+  .oku360-pillars {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .oku360-grades {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .oku360-covers {
+    margin-top: 1.5rem;
+  }
+
+  .oku360-catalog-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+
+  .oku360-catalog-card {
+    grid-template-columns: auto 1fr;
+    align-items: start;
+    padding: 1.5rem;
+  }
+
+  .oku360-catalog-card__cover picture,
+  .oku360-catalog-card__cover img {
+    width: 7.5rem;
+    margin: 0;
+  }
+
+  .oku360-steps {
+    max-width: 36rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .oku360-hero__glow,
+  .oku360-hero__rings {
+    will-change: auto;
+    transform: none !important;
+  }
+
+  .oku360-scrollhint i {
+    animation: none;
+    transition: none;
+  }
+
+  .oku360-step {
+    position: relative;
+    top: auto;
+    min-height: 0;
+  }
+}

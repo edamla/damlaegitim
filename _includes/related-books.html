@@ -1,31 +1,31 @@
 {% comment %}
-  İlgili ürünler: aynı genre + grades kesişimi.
-  Liquid 4 uyumlu (continue/break kullanılmaz).
+  İlgili ürünler: aynı genre + grades kesişimi (en fazla 20).
 {% endcomment %}
 {% assign book = include.book | default: page %}
 {% assign related_count = 0 %}
+{% assign related_limit = 20 %}
 {% assign slider_slug = book.url | remove: '/urunler/' | remove: '/' | default: 'kitap' %}
 
 {% if book.genre and book.url %}
+{% assign related_pool = site.books | where: "genre", book.genre | where_exp: "b", "b.url != book.url" %}
 {% capture related_items %}
-{% for b in site.books %}
-  {% if b.url != book.url and b.genre == book.genre %}
-    {% assign grade_match = false %}
-    {% if book.grades.size == 0 %}
-      {% assign grade_match = true %}
-    {% else %}
-      {% for g in book.grades %}
-        {% if b.grades contains g %}
-          {% assign grade_match = true %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-    {% if grade_match %}
-      <div class="item">
-        {% include book-card.html book=b %}
-      </div>
-      {% assign related_count = related_count | plus: 1 %}
-    {% endif %}
+{% for b in related_pool %}
+  {% if related_count >= related_limit %}{% break %}{% endif %}
+  {% assign grade_match = false %}
+  {% if book.grades.size == 0 %}
+    {% assign grade_match = true %}
+  {% else %}
+    {% for g in book.grades %}
+      {% if b.grades contains g %}
+        {% assign grade_match = true %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  {% if grade_match %}
+    <div class="item">
+      {% include book-card.html book=b %}
+    </div>
+    {% assign related_count = related_count | plus: 1 %}
   {% endif %}
 {% endfor %}
 {% endcapture %}

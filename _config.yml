@@ -4,7 +4,7 @@ name: 'Damla Okul'
 language: "tr"
 lang: tr
 locale: tr_TR
-description: 'Damla Yayınevi okul yayınları ve eğitim materyalleri kataloğu. Yeni Maarif Modeli uyumlu eğitim setleri ve hikaye kitapları.'
+description: 'Damla Okul, Damla Yayınevi’nin okul öncesinden ortaokula kadar tüm seviyeler için hazırladığı eğitim ve hikaye kitaplarını, okuma listelerini, öğretmen kaynaklarını ve güncel Maarif Modeli’ne uygun materyalleri sunar.'
 url: 'https://damlaokul.com'
 logo: '/assets/images/logo.png'
 twitter:
@@ -17,9 +17,9 @@ baseurl: ''
 google_analytics: 'G-PR1C1WGQB6'
 x: 'https://x.com/damlayayinevi'
 facebook: 'https://www.facebook.com/damlayayinevi'
-instagram: 'https://instagram.com/damlayayinevi'
+instagram: 'https://instagram.com/okul.damla'
 youtube: 'https://www.youtube.com/@DamlaYay%C4%B1nGrubu'
-website: 'https://damlayayinevi.com'
+website: 'https://damlaokul.com'
 
 # Contact (site-wide)
 contact_phone: "+90 212 514 28 28"

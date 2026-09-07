@@ -81,6 +81,7 @@ damlaegitim/
 │   │   ├── theme.css
 │   │   ├── app.css
 │   │   ├── ogretmen-wizard.css   # Öğretmen talep formu (/ogretmen)
+│   │   ├── oku360.css            # Oku360 tanıtım (/oku360)
 │   │   ├── spotlight.css
 │   │   ├── tiny-slider.css
 │   │   └── buyout.css            # Kullanılmıyor (legacy; layout’ta yüklenmez)
@@ -94,6 +95,7 @@ damlaegitim/
 │   ├── js/
 │   │   ├── bootstrap.bundle.min.js
 │   │   ├── nav.js                # Navbar scroll (vanilla JS)
+│   │   ├── oku360.js             # Oku360 parallax + katalog iframe (/oku360)
 │   │   ├── book-filter.js        # Sınıf/tür filtreleme (/ , /urunler, /ogretmen wizard)
 │   │   ├── lunr.js               # Arama (lazy-load; açılınca yüklenir)
 │   │   ├── tiny-slider.js        # Anasayfa slider
@@ -175,6 +177,9 @@ damlaegitim/
 | `post.html` | Blog yazısı |
 | `person.html` / `illustrator.html` / `translator.html` | Kişi profilleri |
 | `ogretmen-wizard.html` | 6 adımlı öğretmen talep formu (`/ogretmen`) |
+| `default.html` (doğrudan) | Tam genişlik sayfalar: `/oku360`, `/kataloglar` |
+
+`_pages/oku360.html` — Oku360 Okuma Atölyesi tanıtımı (`layout: default`). Ortaokul kataloğunu `site.catalogs` üzerinden gömer; stiller `assets/css/oku360.css`, kaydırma `assets/js/oku360.js`. TYMM açıklaması `/okumaatolyesi` sayfasında kalır.
 
 Tüm layout’lar `layout: default` zinciri üzerinden `default.html`’i extend eder.
 

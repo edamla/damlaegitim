@@ -1,0 +1,28 @@
+{% comment %}
+  EAN kapak dosya yolları — site.static_files taraması yok; webp_manifest kullanılır.
+  Parametre: ean (zorunlu)
+  Atanan değişkenler: ean_cover_jpg, ean_cover_webp, ean_cover_src,
+    ean_cover_has_webp, ean_cover_has_jpg, ean_cover_available, ean_cover_manifest_webp
+{% endcomment %}
+{% assign ean_cover_jpg = '' %}
+{% assign ean_cover_webp = '' %}
+{% assign ean_cover_src = '' %}
+{% assign ean_cover_has_webp = false %}
+{% assign ean_cover_has_jpg = false %}
+{% assign ean_cover_available = false %}
+{% assign ean_cover_manifest_webp = false %}
+
+{% assign ean_input = include.ean %}
+{% if ean_input and ean_input != '' %}
+  {% assign ean_cover_jpg = 'assets/images/ean/' | append: ean_input | append: '.jpg' %}
+  {% assign ean_cover_webp = 'assets/images/ean/' | append: ean_input | append: '.webp' %}
+  {% assign ean_cover_has_jpg = true %}
+  {% assign ean_cover_available = true %}
+  {% if site.data.webp_manifest and site.data.webp_manifest.assets contains ean_cover_webp %}
+    {% assign ean_cover_has_webp = true %}
+    {% assign ean_cover_manifest_webp = true %}
+    {% assign ean_cover_src = ean_cover_webp %}
+  {% else %}
+    {% assign ean_cover_src = ean_cover_jpg %}
+  {% endif %}
+{% endif %}

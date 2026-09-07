@@ -7,6 +7,12 @@ footer_show: true
 footer_order: 14
 ---
 
+<p class="mt-0 mb-4">
+  <a href="{{ site.baseurl }}/oku360" class="btn btn-primary me-2 mb-2">Oku360 tanıtım sayfası</a>
+  <a href="{{ site.baseurl }}/kataloglar/ilkokul-katalogu" class="btn btn-outline-primary me-2 mb-2">İlkokul kataloğu</a>
+  <a href="{{ site.baseurl }}/kataloglar/ortaokul-katalogu" class="btn btn-outline-primary mb-2">Ortaokul kataloğu</a>
+</p>
+
 **Türkiye Yüzyılı Maarif Modeli (TYMM)** kapsamında Türkçe dersinde dört temel dil becerisini (dinleme/izleme, konuşma, okuma, yazma) desteklemek için **üretim**, **dinleme/izleme** ve **okuma atölyesi** etkinlikleri planlanır. Okuma Atölyesi, öğrencinin yalnızca kitap okuması değil; metinle etkileşim kurması, eleştirel düşünmesi ve okuduğunu anlama becerisini geliştirmesi için tasarlanmış **dönemlik** bir uygulamadır.
 
 ## Okuma Atölyesi nedir?

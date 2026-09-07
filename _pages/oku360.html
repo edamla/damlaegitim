@@ -1,0 +1,382 @@
+---
+title: "Oku360 Okuma Atölyesi"
+description: "Oku360 Okuma Atölyesi: TYMM uyumlu okuma programı. İlkokul Çocuk Edebiyatı Kataloğu (1–4. sınıf) ve Ortaokul Kataloğu; Hikâye Müfredatı ve Öykümatik."
+layout: default
+permalink: "/oku360"
+image: "/assets/images/ean/ortaokul-katalogu.jpg"
+comments: false
+footer_show: true
+footer_order: 13
+---
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/oku360.css?v={{ site.time | date: '%s' }}">
+
+{% assign oku_catalog_ilkokul = nil %}
+{% assign oku_catalog_ortaokul = nil %}
+{% for catalog in site.catalogs %}
+  {% assign catalog_slug = catalog.url | split: '/' | last | remove: '.html' %}
+  {% if catalog_slug == 'ilkokul-katalogu' %}
+    {% assign oku_catalog_ilkokul = catalog %}
+  {% elsif catalog_slug == 'ortaokul-katalogu' %}
+    {% assign oku_catalog_ortaokul = catalog %}
+  {% endif %}
+{% endfor %}
+{% unless oku_catalog_ilkokul %}
+  {% assign oku_catalog_ilkokul = site.catalogs | where_exp: "c", "c.title == 'İlkokul Çocuk Edebiyatı Kataloğu'" | first %}
+{% endunless %}
+{% unless oku_catalog_ortaokul %}
+  {% assign oku_catalog_ortaokul = site.catalogs | where_exp: "c", "c.title == 'Ortaokul Kataloğu'" | first %}
+{% endunless %}
+
+{% assign oku_ilkokul_url = site.baseurl | append: '/kataloglar/ilkokul-katalogu' %}
+{% if oku_catalog_ilkokul %}
+  {% assign oku_ilkokul_url = oku_catalog_ilkokul.url | prepend: site.baseurl %}
+{% endif %}
+{% assign oku_ilkokul_link = 'https://daml.co/ilkokul-katalog2027' %}
+{% if oku_catalog_ilkokul and oku_catalog_ilkokul.link %}
+  {% assign oku_ilkokul_link = oku_catalog_ilkokul.link %}
+{% endif %}
+{% assign oku_ilkokul_image = 'assets/images/ean/ilkokulkatalogu-2027.jpg' %}
+{% if oku_catalog_ilkokul and oku_catalog_ilkokul.image %}
+  {% assign oku_ilkokul_image = oku_catalog_ilkokul.image %}
+{% endif %}
+{% assign oku_ilkokul_webp = oku_ilkokul_image | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.png', '.webp' %}
+
+{% assign oku_ortaokul_url = site.baseurl | append: '/kataloglar/ortaokul-katalogu' %}
+{% if oku_catalog_ortaokul %}
+  {% assign oku_ortaokul_url = oku_catalog_ortaokul.url | prepend: site.baseurl %}
+{% endif %}
+{% assign oku_ortaokul_link = 'https://daml.co/ortaokul-katalog2027' %}
+{% if oku_catalog_ortaokul and oku_catalog_ortaokul.link %}
+  {% assign oku_ortaokul_link = oku_catalog_ortaokul.link %}
+{% endif %}
+{% assign oku_ortaokul_image = 'assets/images/ean/ortaokul-katalogu.jpg' %}
+{% if oku_catalog_ortaokul and oku_catalog_ortaokul.image %}
+  {% assign oku_ortaokul_image = oku_catalog_ortaokul.image %}
+{% endif %}
+{% assign oku_ortaokul_webp = oku_ortaokul_image | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.png', '.webp' %}
+
+<article class="oku360">
+  <section class="oku360-hero" aria-labelledby="oku360-hero-title">
+    <div class="oku360-hero__bg" aria-hidden="true">
+      <div class="oku360-hero__bg-shade"></div>
+    </div>
+    <div class="oku360-hero__glow" data-oku-layer="0.12" aria-hidden="true"></div>
+    <div class="oku360-hero__rings" data-oku-layer="0.22" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="oku360-hero__layout">
+      <div class="oku360-hero__shell">
+        <div class="oku360-hero__media">
+          <video
+            class="oku360-hero__video"
+            data-oku-hero-video
+            poster="{{ site.baseurl }}/{{ oku_ortaokul_image }}"
+            muted
+            playsinline
+            loop
+            autoplay
+            preload="metadata"
+            aria-label="Oku360 Okuma Atölyesi tanıtım videosu">
+            <source src="{{ site.baseurl }}/assets/video/oku360.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="oku360-hero__copy">
+          <p class="oku360-kicker">Damla Okul · Okuma Atölyesi</p>
+          <h1 id="oku360-hero-title">Oku360<span>Okuma Atölyesi</span></h1>
+          <p class="oku360-lead">İlkokul çocuk edebiyatından ortaokul Okuma Atölyesi kitaplarına: TYMM uyumlu kataloglar, müfredat ve süreç değerlendirme tek çatı altında.</p>
+          <div class="oku360-actions">
+            <a class="btn btn-primary" href="#oku360-kataloglar">Katalogları incele</a>
+            <a class="btn btn-outline-light" href="{{ site.baseurl }}/ogretmen">Okuma listesi oluştur</a>
+          </div>
+          <p class="oku360-scrollhint"><i class="fas fa-chevron-down" aria-hidden="true"></i> Aşağı kaydırın</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="oku360-section" id="oku360-nedir" aria-labelledby="oku360-nedir-title">
+    <div class="oku360-inner">
+      <p class="oku360-kicker oku360-kicker--on-light">TYMM</p>
+      <h2 id="oku360-nedir-title">Okuma Atölyesi nedir?</h2>
+      <p class="oku360-lead">Türkiye Yüzyılı Maarif Modeli kapsamında Türkçe dersinde dinleme/izleme, konuşma, okuma ve yazmayı desteklemek için üretim, dinleme/izleme ve okuma atölyesi etkinlikleri planlanır. Okuma atölyeleri tema sonu değil, <strong>dönemlik</strong> uygulanır.</p>
+      <ul class="oku360-points">
+        <li><strong>Aile katılımı</strong> — Okuma evde paylaşılır; okul–aile iş birliği güçlenir.</li>
+        <li><strong>Sınıfta paylaşım</strong> — Değerlendirme ve eleştirel okuma çalışmaları yürütülür.</li>
+      </ul>
+      <p class="mt-4 mb-0"><a href="{{ site.baseurl }}/okumaatolyesi">TYMM Okuma Atölyesi uygulama rehberi</a></p>
+    </div>
+  </section>
+
+  <section class="oku360-process" id="oku360-surec" aria-labelledby="oku360-surec-title">
+    <div class="oku360-inner">
+      <h2 id="oku360-surec-title">Sınıfta nasıl işler?</h2>
+      <p class="oku360-lead">Okuma Atölyesi bireysel okumadan ibaret değildir. Öğretmen ve öğrenci şu beş aşamayı birlikte yürütür.</p>
+    </div>
+    <ol class="oku360-steps">
+      <li class="oku360-step">
+        <div class="oku360-step__visual" aria-hidden="true"><i class="fas fa-book"></i></div>
+        <div class="oku360-step__content">
+          <div class="oku360-step__head">
+            <span class="oku360-step__num" aria-hidden="true">01</span>
+          </div>
+          <h3>Kitap seçimi</h3>
+          <p>Sınıf düzeyine ve programa uygun, güdümlü okuma kitapları belirlenir. Zümre, Türkçe ders kitaplarındaki metinlerin niteliğine uygun listelerden seçer.</p>
+        </div>
+      </li>
+      <li class="oku360-step">
+        <div class="oku360-step__visual" aria-hidden="true"><i class="fas fa-book-reader"></i></div>
+        <div class="oku360-step__content">
+          <div class="oku360-step__head">
+            <span class="oku360-step__num" aria-hidden="true">02</span>
+          </div>
+          <h3>Okuma</h3>
+          <p>Öğrenci kitabı okur; aile desteğiyle süreç paylaşılır. Okuma kültürü sınıfın ötesine taşınır.</p>
+        </div>
+      </li>
+      <li class="oku360-step">
+        <div class="oku360-step__visual" aria-hidden="true"><i class="fas fa-comments"></i></div>
+        <div class="oku360-step__content">
+          <div class="oku360-step__head">
+            <span class="oku360-step__num" aria-hidden="true">03</span>
+          </div>
+          <h3>Paylaşım</h3>
+          <p>En az bir ders saatinde kitapla ilgili görüşler, duygular ve düşünceler sınıfta tartışılır.</p>
+        </div>
+      </li>
+      <li class="oku360-step">
+        <div class="oku360-step__visual" aria-hidden="true"><i class="fas fa-lightbulb"></i></div>
+        <div class="oku360-step__content">
+          <div class="oku360-step__head">
+            <span class="oku360-step__num" aria-hidden="true">04</span>
+          </div>
+          <h3>Eleştirel okuma</h3>
+          <p>Metin sorgulanır; çelişkiler, benzerlikler, farklılıklar ve çıkarımlar ortaya konur.</p>
+        </div>
+      </li>
+      <li class="oku360-step">
+        <div class="oku360-step__visual" aria-hidden="true"><i class="fas fa-pen-alt"></i></div>
+        <div class="oku360-step__content">
+          <div class="oku360-step__head">
+            <span class="oku360-step__num" aria-hidden="true">05</span>
+          </div>
+          <h3>Yansıtma</h3>
+          <p>Öğrenci okuma sürecini değerlendirir; öz yansıtma formları kullanılabilir. Drama, yazar söyleşisi veya beyin fırtınası ile metne başka pencereler açılır.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="oku360-section oku360-section--surface" id="oku360-tymm" aria-labelledby="oku360-tymm-title">
+    <div class="oku360-inner">
+      <h2 id="oku360-tymm-title">Maarif Modeli ile uyum</h2>
+      <p class="oku360-lead">Oku360, beceri odaklı yapıyla okumayı pasif bir eylemden çıkarıp aktif, katılımcı ve üst düzey düşünme deneyimine dönüştürür.</p>
+      <div class="oku360-chips">
+        <article class="oku360-chip">
+          <h3>Okuryazarlık</h3>
+          <p>Bilgi, dijital, kültür ve görsel okuryazarlık okuma etkinliklerine nüfuz ettirilir.</p>
+        </article>
+        <article class="oku360-chip">
+          <h3>Eleştirel okuma</h3>
+          <p>Sorgulama, çelişki saptama, benzerlik ve farklılıkları ayırt etme metin incelemesinde kazandırılır.</p>
+        </article>
+        <article class="oku360-chip">
+          <h3>Erdem–Değer–Eylem</h3>
+          <p>Sosyal-duygusal öğrenme, seçilen kitapların temaları üzerinden desteklenir.</p>
+        </article>
+      </div>
+      <p class="mt-4 mb-0"><a href="{{ site.baseurl }}/maarif-modeli">Maarif Modeli sayfasına git</a></p>
+    </div>
+  </section>
+
+  <section class="oku360-catalogs" id="oku360-kataloglar" aria-labelledby="oku360-kataloglar-title">
+    <div class="oku360-inner">
+      <p class="oku360-kicker">Damla Okul katalogları</p>
+      <h2 id="oku360-kataloglar-title">Yayın katalogları</h2>
+      <p class="oku360-lead">İlkokul ve ortaokul kataloglarını butona tıklayarak açılan pencerede sayfalayarak inceleyin.</p>
+
+      <div class="oku360-catalog-cards">
+        <article class="oku360-catalog-card" aria-labelledby="oku360-katalog-ilkokul-title">
+          <div class="oku360-catalog-card__cover">
+            <picture>
+              {% if site.data.webp_manifest and site.data.webp_manifest.assets contains oku_ilkokul_webp %}
+              <source srcset="{{ site.baseurl }}/{{ oku_ilkokul_webp }}" type="image/webp">
+              {% endif %}
+              <img src="{{ site.baseurl }}/{{ oku_ilkokul_image }}" width="240" height="340" alt="{{ oku_catalog_ilkokul.title | default: 'İlkokul Çocuk Edebiyatı Kataloğu' }} kapağı" loading="lazy">
+            </picture>
+          </div>
+          <div class="oku360-catalog-card__body">
+            <p class="oku360-kicker">1–4. sınıf</p>
+            <h3 id="oku360-katalog-ilkokul-title">{{ oku_catalog_ilkokul.title | default: "İlkokul Çocuk Edebiyatı Kataloğu" }}</h3>
+            <p class="oku360-catalog-card__text">İlkokul çocuk edebiyatı kitaplarını sınıf düzeyine göre keşfedin.</p>
+            <div class="oku360-catalog__bar">
+              <button type="button" class="btn btn-primary" data-oku-catalog-open data-oku-catalog-title="{{ oku_catalog_ilkokul.title | default: 'İlkokul Çocuk Edebiyatı Kataloğu' | xml_escape }}" data-oku-catalog-url="{{ oku_ilkokul_link }}">
+                <i class="fas fa-book-open me-1" aria-hidden="true"></i> Kataloğu incele
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="oku360-catalog-card" aria-labelledby="oku360-katalog-ortaokul-title">
+          <div class="oku360-catalog-card__cover">
+            <picture>
+              {% if site.data.webp_manifest and site.data.webp_manifest.assets contains oku_ortaokul_webp %}
+              <source srcset="{{ site.baseurl }}/{{ oku_ortaokul_webp }}" type="image/webp">
+              {% endif %}
+              <img src="{{ site.baseurl }}/{{ oku_ortaokul_image }}" width="240" height="340" alt="{{ oku_catalog_ortaokul.title | default: 'Ortaokul Kataloğu' }} kapağı" loading="lazy">
+            </picture>
+          </div>
+          <div class="oku360-catalog-card__body">
+            <p class="oku360-kicker">5–8. sınıf</p>
+            <h3 id="oku360-katalog-ortaokul-title">{{ oku_catalog_ortaokul.title | default: "Ortaokul Kataloğu" }}</h3>
+            <p class="oku360-catalog-card__text">Ortaokul Okuma Atölyesi kapsamındaki hikaye ve okuma kitaplarını inceleyin.</p>
+            <div class="oku360-catalog__bar">
+              <button type="button" class="btn btn-primary" data-oku-catalog-open data-oku-catalog-title="{{ oku_catalog_ortaokul.title | default: 'Ortaokul Kataloğu' | xml_escape }}" data-oku-catalog-url="{{ oku_ortaokul_link }}">
+                <i class="fas fa-book-open me-1" aria-hidden="true"></i> Kataloğu incele
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="oku360-section" id="oku360-destek" aria-labelledby="oku360-destek-title">
+    <div class="oku360-inner">
+      <h2 id="oku360-destek-title">Damla Okul nasıl destekler?</h2>
+      <p class="oku360-lead">Yayın Kurulu, Okuma Atölyesi uygulamasını üç katmanda tamamlar: müfredat kodlaması, süreç değerlendirme ve sınıfa uygun seçim.</p>
+      <div class="oku360-pillars">
+        <article class="oku360-pillar">
+          <div class="oku360-pillar__media">
+            {% assign content_webp = "assets/images/hikaye-mufredati.webp" %}
+            <picture>
+              {% if site.data.webp_manifest and site.data.webp_manifest.assets contains content_webp %}
+              <source srcset="{{ site.baseurl }}/assets/images/hikaye-mufredati.webp" type="image/webp">
+              {% endif %}
+              <img src="{{ site.baseurl }}/assets/images/hikaye-mufredati.jpg" alt="Hikâye Müfredatı kazanım şeması" loading="lazy" width="640" height="360">
+            </picture>
+          </div>
+          <h3>Hikâye Müfredatı</h3>
+          <p>Okuduğunu anlama, kavramsal ve bilişsel süreçlere göre kodlanır. Atölyede okunan her hikaye bu yapıyla eşleştirilebilir.</p>
+          <a class="oku360-pillar__link" href="{{ site.baseurl }}/hikaye-mufredati">Müfredatı incele <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+        <article class="oku360-pillar">
+          <div class="oku360-pillar__media">
+            {% assign content_webp = "assets/images/oykumatik-surecleri.webp" %}
+            <picture>
+              {% if site.data.webp_manifest and site.data.webp_manifest.assets contains content_webp %}
+              <source srcset="{{ site.baseurl }}/assets/images/oykumatik-surecleri.webp" type="image/webp">
+              {% endif %}
+              <img src="{{ site.baseurl }}/assets/images/oykumatik-surecleri.jpg" alt="Öykümatik kavramsal ve bilişsel süreçler" loading="lazy" width="640" height="360">
+            </picture>
+          </div>
+          <h3>Öykümatik</h3>
+          <p>Okuma Atölyesi Süreç Değerlendirme Sistemi, kazanım bazında ölçer; öğretmene hangi alanda destek gerektiğini gösterir.</p>
+          <a class="oku360-pillar__link" href="{{ site.baseurl }}/oykumatikle-tanisin#oykumatik-demo">Demo ile tanışın <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+        <article class="oku360-pillar">
+          <div class="oku360-pillar__media oku360-pillar__media--covers">
+            <figure class="oku360-pillar__cover">
+              <picture>
+                {% if site.data.webp_manifest and site.data.webp_manifest.assets contains oku_ilkokul_webp %}
+                <source srcset="{{ site.baseurl }}/{{ oku_ilkokul_webp }}" type="image/webp">
+                {% endif %}
+                <img src="{{ site.baseurl }}/{{ oku_ilkokul_image }}" width="160" height="230" alt="{{ oku_catalog_ilkokul.title | default: 'İlkokul Çocuk Edebiyatı Kataloğu' }} kapağı" loading="lazy">
+              </picture>
+              <figcaption>İlkokul</figcaption>
+            </figure>
+            <figure class="oku360-pillar__cover">
+              <picture>
+                {% if site.data.webp_manifest and site.data.webp_manifest.assets contains oku_ortaokul_webp %}
+                <source srcset="{{ site.baseurl }}/{{ oku_ortaokul_webp }}" type="image/webp">
+                {% endif %}
+                <img src="{{ site.baseurl }}/{{ oku_ortaokul_image }}" width="160" height="230" alt="{{ oku_catalog_ortaokul.title | default: 'Ortaokul Kataloğu' }} kapağı" loading="lazy">
+              </picture>
+              <figcaption>Ortaokul</figcaption>
+            </figure>
+          </div>
+          <h3>Sınıfa uygun seçim</h3>
+          <p>İlkokulda <a href="{{ site.baseurl }}/okuma-listeleri">okuma listeleri</a> ve çocuk edebiyatı kataloğu; ortaokulda Okuma Atölyesi kataloğu ve <a href="{{ site.baseurl }}/ogretmen">Öğretmen Köşesi</a> ile liste oluşturma.</p>
+          <a class="oku360-pillar__link" href="{{ site.baseurl }}/ogretmen">Liste oluştur <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="oku360-section oku360-section--surface" id="oku360-kademeler" aria-labelledby="oku360-kademeler-title">
+    <div class="oku360-inner">
+      <h2 id="oku360-kademeler-title">Sınıf vitrinleri</h2>
+      <p class="oku360-lead">Katalogdaki kitapları sınıf ve kademe vitrinlerinden de keşfedebilirsiniz.</p>
+
+      <div class="oku360-kademe">
+        <div class="oku360-kademe__head">
+          <h3>{{ oku_catalog_ilkokul.title | default: "İlkokul Çocuk Edebiyatı Kataloğu" }}</h3>
+          <a href="{{ oku_ilkokul_link }}" class="oku360-kademe__catalog-link" target="_blank" rel="noopener" data-oku-catalog-open data-oku-catalog-title="{{ oku_catalog_ilkokul.title | default: 'İlkokul Çocuk Edebiyatı Kataloğu' | xml_escape }}" data-oku-catalog-url="{{ oku_ilkokul_link }}">Kataloğu incele</a>
+        </div>
+        <div class="oku360-grades">
+          <a class="oku360-grade" href="{{ site.baseurl }}/siniflar/1-sinif"><strong>1. sınıf</strong><span>Yayınlar</span></a>
+          <a class="oku360-grade" href="{{ site.baseurl }}/siniflar/2-sinif"><strong>2. sınıf</strong><span>Yayınlar</span></a>
+          <a class="oku360-grade" href="{{ site.baseurl }}/siniflar/3-sinif"><strong>3. sınıf</strong><span>Yayınlar</span></a>
+          <a class="oku360-grade" href="{{ site.baseurl }}/siniflar/4-sinif"><strong>4. sınıf</strong><span>Yayınlar</span></a>
+          <a class="oku360-grade" href="{{ site.baseurl }}/ilkokul"><strong>Tümü</strong><span>İlkokul</span></a>
+        </div>
+        <p class="oku360-covers-label">Örnek hikayeler</p>
+        {% assign oku_ilkokul_cover_count = 0 %}
+        <div class="oku360-covers" role="list">
+          {% for book in site.books %}
+            {% if oku_ilkokul_cover_count < 8 and book.genre == 'story' and book.grades contains 3 and book.ean %}
+              {% assign oku_ilkokul_cover_count = oku_ilkokul_cover_count | plus: 1 %}
+              <a class="oku360-cover" role="listitem" href="{{ site.baseurl }}{{ book.url }}">
+                {% assign eanimage_class = "oku360-cover__img" %}
+                {% include eanimage.html book=book width="160" height="240" loading="lazy" img_only=yes %}
+                <span class="oku360-cover__title">{{ book.title }}</span>
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="oku360-kademe">
+        <div class="oku360-kademe__head">
+          <h3>{{ oku_catalog_ortaokul.title | default: "Ortaokul Kataloğu" }}</h3>
+          <a href="{{ oku_ortaokul_link }}" class="oku360-kademe__catalog-link" target="_blank" rel="noopener" data-oku-catalog-open data-oku-catalog-title="{{ oku_catalog_ortaokul.title | default: 'Ortaokul Kataloğu' | xml_escape }}" data-oku-catalog-url="{{ oku_ortaokul_link }}">Kataloğu incele</a>
+        </div>
+        <div class="oku360-grades">
+          <a class="oku360-grade" href="{{ site.baseurl }}/siniflar/5-sinif"><strong>5. sınıf</strong><span>Yayınlar</span></a>
+          <a class="oku360-grade" href="{{ site.baseurl }}/siniflar/6-sinif"><strong>6. sınıf</strong><span>Yayınlar</span></a>
+          <a class="oku360-grade" href="{{ site.baseurl }}/siniflar/7-sinif"><strong>7. sınıf</strong><span>Yayınlar</span></a>
+          <a class="oku360-grade" href="{{ site.baseurl }}/siniflar/8-sinif"><strong>8. sınıf</strong><span>Yayınlar</span></a>
+          <a class="oku360-grade" href="{{ site.baseurl }}/ortaokul"><strong>Tümü</strong><span>Ortaokul</span></a>
+        </div>
+        <p class="oku360-covers-label">Örnek hikayeler</p>
+        {% assign oku_ortaokul_cover_count = 0 %}
+        <div class="oku360-covers" role="list">
+          {% for book in site.books %}
+            {% if oku_ortaokul_cover_count < 8 and book.genre == 'story' and book.grades contains 5 and book.ean %}
+              {% assign oku_ortaokul_cover_count = oku_ortaokul_cover_count | plus: 1 %}
+              <a class="oku360-cover" role="listitem" href="{{ site.baseurl }}{{ book.url }}">
+                {% assign eanimage_class = "oku360-cover__img" %}
+                {% include eanimage.html book=book width="160" height="240" loading="lazy" img_only=yes %}
+                <span class="oku360-cover__title">{{ book.title }}</span>
+              </a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="oku360-cta" aria-labelledby="oku360-cta-title">
+    <div class="oku360-inner oku360-cta__inner">
+      <h2 id="oku360-cta-title">Sınıfınız için başlayın</h2>
+      <p class="oku360-lead">Öğretmen Köşesi ile sınıfınıza uygun okuma listesini birkaç adımda hazırlayın.</p>
+      <div class="oku360-cta__action">
+        <a class="btn btn-primary oku360-cta__btn" href="{{ site.baseurl }}/ogretmen">Okuma Listesi Oluştur</a>
+      </div>
+    </div>
+  </section>
+</article>
+
+{% include popup.html %}
+
+<script defer src="{{ site.baseurl }}/assets/js/oku360.js?v={{ site.time | date: '%s' }}"></script>

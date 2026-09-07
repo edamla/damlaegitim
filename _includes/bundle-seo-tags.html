@@ -15,15 +15,9 @@
   {% endif %}
 {% endunless %}
 {% if bundle_cover_ean and bundle_cover_ean != '' %}
-  {% assign book_cover_jpg = 'assets/images/ean/' | append: bundle_cover_ean | append: '.jpg' %}
-  {% assign book_cover_has_jpg = false %}
-  {% for static_file in site.static_files %}
-    {% if static_file.path contains book_cover_jpg %}
-      {% assign book_cover_has_jpg = true %}
-    {% endif %}
-  {% endfor %}
-  {% if book_cover_has_jpg %}
-    {% assign book_og_image = site.url | append: site.baseurl | append: '/' | append: book_cover_jpg %}
+  {% include ean-cover-resolve.html ean=bundle_cover_ean %}
+  {% if ean_cover_available %}
+    {% assign book_og_image = site.url | append: site.baseurl | append: '/' | append: ean_cover_jpg %}
     {% assign book_og_image_type = 'image/jpeg' %}
   {% endif %}
 {% endif %}
