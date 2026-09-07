@@ -251,7 +251,8 @@ window.owOnRecaptchaReady = function() {
     }
   }
 
-  function showStep(n) {
+  function showStep(n, opts) {
+    opts = opts || {};
     if (n === 2 || n === 3) {
       syncGradeFromDom();
       if (!hasGrade()) n = 1;
@@ -280,9 +281,11 @@ window.owOnRecaptchaReady = function() {
       renderSummary();
       ensureRecaptcha();
     }
-    var wizardEl = document.querySelector('.ogretmen-wizard');
-    if (wizardEl) {
-      wizardEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (opts.scroll !== false) {
+      var wizardEl = document.querySelector('.ogretmen-wizard');
+      if (wizardEl) {
+        wizardEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
   }
 
@@ -1206,7 +1209,7 @@ window.owOnRecaptchaReady = function() {
       }
     });
 
-    showStep(state.step);
+    showStep(state.step, { scroll: false });
     renderList();
   }
 

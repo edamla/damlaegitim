@@ -6,6 +6,7 @@
   max-width: 960px;
   margin: 0 auto;
   padding: 1.5rem 0 3rem;
+  scroll-margin-top: var(--nav-height, 4rem);
 }
 
 .ogretmen-wizard__progress {
