@@ -14,7 +14,7 @@ eans:
   - 9786254116469
   - 9786254115103
   
-grades: [0]
+## grades: [0]
 oncelik: 0
 damlaurl: ""
 ---
