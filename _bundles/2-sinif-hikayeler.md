@@ -13,7 +13,7 @@ eans:
   - 8697911223950
   - 8697911223875
 
-grades: [2]
+## grades: [2]
 oncelik: 0
 damlaurl: ""
 ---

@@ -13,7 +13,7 @@ eans:
   - 9786254113345
   - 8697911223530
   
-grades: [3]
+## grades: [3]
 oncelik: 0
 damlaurl: ""
 ---
