@@ -104,12 +104,13 @@ damlaegitim/
 │   ├── dersler.json              # Editoryal müfredat listesi
 │   ├── anatemalar.json
 │   ├── webp_manifest.yml         # generate_webp.sh
-│   ├── turkiye_adres_il_ilce.json # import (gitignore)
-│   └── tymm.json                 # import (gitignore)
+│   ├── turkiye_adres_il_ilce.json # damla_site.zip import; repoda (Pages)
+│   └── tymm.json                 # damla_site.zip import; repoda (Pages)
 ├── assets/
-│   └── data/                     # import damla_site.zip (gitignore)
+│   └── data/                     # damla_site.zip import; repoda (Pages)
 ├── scripts/
 │   ├── import_site_data.sh       # Prebuilt zip → _data + assets/data
+│   ├── build_for_github_pages.sh # Push öncesi: import + jekyll build
 │   ├── install_image_tools.sh    # WebP/ImageMagick kurulumu (install.sh; winget/brew/apt)
 │   ├── generate_webp.sh          # jpg/png → .webp + manifest güncelleme (start.sh hook)
 │   ├── refresh_image_paths.sh    # Windows winget PATH düzeltmesi (dahili)
@@ -860,7 +861,7 @@ git commit -m "..."
 git push
 ```
 
-GitHub Pages, `.github/workflows/pages.yml` ile derlenir (`edamla/data` → `damla_site.zip` import). CSS değişiklikleri doğrudan `assets/css/` altında yapılır ve commit edilir.
+GitHub Pages **`main`** dalında **GitHub Jekyll build** kullanır (`github-pages` gem). Push öncesi yerelde `sh scripts/build_for_github_pages.sh` (import + doğrulama build); runtime verisi (`_data/tymm.json`, `turkiye_adres_il_ilce.json`, `assets/data/`) repoda commit edilir — GitHub import çalıştırmaz.
 
 ---
 

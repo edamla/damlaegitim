@@ -181,22 +181,28 @@ bundle exec jekyll serve
 
 ### Canlıya alma
 
-```bash
-git add .
-git commit -m "Değişiklik açıklaması"
-git push
-```
+**GitHub Pages**, `main` dalındaki kaynağı **kendi Jekyll süreciyle** derler (`Gemfile` → `github-pages` gem). Actions veya `gh-pages` statik dalı kullanılmaz. Kökte **`.nojekyll` olmamalı** (aksi halde GitHub Jekyll çalıştırmaz).
 
-GitHub Pages **GitHub Actions** ile derlenir (`.github/workflows/pages.yml`). `edamla/data` deposundan `damla_site.zip` import edilir; repo secret: `DATA_REPO_TOKEN`. Ayar: **Settings → Pages → GitHub Actions**.
+**Pages ayarı (bir kez):** Settings → Pages → **Deploy from a branch** → **`main`** → **`/ (root)`**.
 
-Yerel build, canlı ile aynı stack'i kullanır:
+Veri güncellemesi (edamla/data) GitHub’da otomatik import **yok**; push öncesi yerelde:
 
 ```bash
-bundle install
-bundle exec jekyll build
+sh scripts/build_for_github_pages.sh
 ```
 
-`bundle exec github-pages health-check` isteğe bağlıdır (Linux/WSL önerilir; Windows'ta libcurl eksikliği nedeniyle başarısız olabilir).
+Bu script: `import_site_data.sh` → `bundle exec jekyll build` (yerel doğrulama). Ardından import edilen dosyaları commit edin:
+
+```bash
+git add _data/tymm.json _data/turkiye_adres_il_ilce.json assets/data/
+git add -A
+git commit -m "feat: içerik ve site verisi"
+git push origin main
+```
+
+GitHub push sonrası Pages Jekyll build tetiklenir. Sadece içerik değiştiyse ve veri dosyaları zaten repoda güncelse doğrudan `git push` yeterli.
+
+`bundle exec github-pages health-check` isteğe bağlıdır (Linux/WSL önerilir).
 
 ## Kurulum ve geliştirme script'leri
 
@@ -205,7 +211,8 @@ bundle exec jekyll build
 | -------------------------------------------------------------------------------- | ----------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `[install.sh](install.sh)`                                                       | İlk kez (`git clone` sonrası) | Ruby gems, fonttools, WOFF2 subset, görsel araçları (winget), `jekyll build` doğrulama — **hook yok**                                              |
 | `[start.sh](start.sh)`                                                           | Her geliştirme oturumu        | `check_images` + `generate_webp` + koşullu `import_site_data` + `jekyll serve`                                                                                        |
-| `[scripts/import_site_data.sh](scripts/import_site_data.sh)`                     | `start.sh` / CI / manuel      | `damla_site.zip` → `_data/` + `assets/data/` (veri çekimi bu repoda yok)                                                                                              |
+| `[scripts/import_site_data.sh](scripts/import_site_data.sh)`                     | `start.sh` / manuel           | `damla_site.zip` → `_data/` + `assets/data/`                                                                                              |
+| `[scripts/build_for_github_pages.sh](scripts/build_for_github_pages.sh)`       | Push öncesi                   | Import + yerel `jekyll build` (GitHub ile aynı gem); sonra veri dosyalarını commit + `git push`                                                                         |
 | `[scripts/install_image_tools.sh](scripts/install_image_tools.sh)`               | `install.sh` içinden          | Windows: winget ImageMagick + libwebp; macOS: brew; Linux: apt                                                                                     |
 | `[scripts/generate_webp.sh](scripts/generate_webp.sh)`                           | `start.sh` içinden            | `ean/` ve `slides/` için eksik `.webp` üretir; `_data/webp_manifest.yml` günceller                                                                 |
 | `[scripts/refresh_image_paths.sh](scripts/refresh_image_paths.sh)`               | Dahili                        | Windows'ta winget kurulum yollarını PATH'e ekler                                                                                                   |
@@ -225,7 +232,7 @@ Windows Git Bash'te sıfırdan kurulum: `sh install.sh` → geliştirme: `sh sta
 _books/          Ürünler (kitap / eğitim seti)
 _catalogs/       Kataloglar
 _data/           Jekyll data (webp_manifest, dersler, anatemalar; tymm/adres import ile)
-assets/data/     Harita/wizard JSON (gitignore; damla_site.zip import)
+assets/data/     Harita/wizard JSON (damla_site.zip import; Pages için repoda commit)
 _pages/          Statik sayfalar + search-index.json
 _layouts/        HTML şablonları
 _includes/       Ortak bileşenler (menü, kart, filtre, arama, ai-seo-crawler)

@@ -152,12 +152,22 @@ collections:
     output: false
     sort_by: order
 
-# Exclude metadata, gitignored local data, and development dependencies
+# Jekyll build dışı (GitHub Pages aynı exclude listesini kullanır)
 exclude:
   - README.markdown
+  - README.md
+  - project.md
+  - design.md
   - package.json
   - grunt.js
   - Gruntfile.js
   - Gruntfile.coffee
   - node_modules
   - .cursor
+  - .vscode
+  - install.sh
+  - start.sh
+  - scripts
+  - reports
+  - Gemfile
+  - Gemfile.lock
