@@ -4,9 +4,8 @@
 > - [README.md](README.md) — Genel bakış, kurulum ve hızlı başlangıç
 > - [project.md](project.md) — Teknik mimari ve geliştirme kuralları
 > - [design.md](design.md) — Stil, tasarım sistemi ve UI bileşenleri *(bu dosya)*
-> - [getdata.md](getdata.md) — Dış veri çekimi (TurkiyeAPI, MEB okullar / okul detay)
 
-Bu belge [damlaokul.com](https://damlaokul.com) sitesinin görsel kimliğini, CSS mimarisini, bileşen kütüphanesini ve tasarım tercihlerini tanımlar. Teknik build/deploy için [project.md](project.md); kurulum için [README.md](README.md); dış veri JSON’ları için [getdata.md](getdata.md).
+Bu belge [damlaokul.com](https://damlaokul.com) sitesinin görsel kimliğini, CSS mimarisini, bileşen kütüphanesini ve tasarım tercihlerini tanımlar. Teknik build/deploy için [project.md](project.md); kurulum için [README.md](README.md).
 
 ---
 

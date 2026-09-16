@@ -161,4 +161,3 @@ exclude:
   - Gruntfile.coffee
   - node_modules
   - .cursor
-  - docs

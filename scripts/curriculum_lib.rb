@@ -302,7 +302,7 @@ module CurriculumLib
   def load_degerler_cercevesi
     data = load_tymm
     cerceve = data.dig('cerceveler', 'degerler')
-    raise 'cerceveler.degerler bulunamadı — python scripts/fetch_tymm.py --cerceveler && ruby scripts/build_tymm_reference.rb' unless cerceve
+    raise 'cerceveler.degerler bulunamadı — edamla/data export + sh scripts/import_site_data.sh (_data/tymm.json)' unless cerceve
 
     cerceve
   end

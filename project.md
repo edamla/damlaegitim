@@ -1,12 +1,8 @@
 # Damla Okul — Proje Mimarisi
 
-> **Dokümantasyon:** Bu projenin belgeleri dört dosyada toplanmıştır; ilgili değişiklikte o dosyayı güncelleyin:
-> - [README.md](README.md) — Genel bakış, kurulum ve hızlı başlangıç
-> - [project.md](project.md) — Teknik mimari ve geliştirme kuralları *(bu dosya)*
-> - [design.md](design.md) — Stil, tasarım sistemi ve UI bileşenleri
-> - [getdata.md](getdata.md) — Dış veri çekimi (TurkiyeAPI, MEB okullar / okul detay, nüfus)
+> **Dokümantasyon:** [README.md](README.md), [project.md](project.md) *(bu dosya)*, [design.md](design.md). Site runtime verisi: [edamla/data](https://github.com/edamla/data).
 
-Bu belge, [damlaokul.com](https://damlaokul.com) (Damla Okul) statik sitesinin teknik yapısını, dosya organizasyonunu ve geliştirme kurallarını açıklar. Stil için [design.md](design.md); TurkiyeAPI ve MEB JSON’ları için [getdata.md](getdata.md).
+Bu belge, [damlaokul.com](https://damlaokul.com) (Damla Okul) statik sitesinin teknik yapısını, dosya organizasyonunu ve geliştirme kurallarını açıklar. Stil için [design.md](design.md). Harita / wizard / TYMM runtime verisi [edamla/data](https://github.com/edamla/data) → `damla_site.zip` → `scripts/import_site_data.sh`.
 
 ## Genel Bakış
 
@@ -66,7 +62,6 @@ damlaegitim/
 ├── README.md             # Kurulum
 ├── project.md            # Mimari (bu belge)
 ├── design.md             # Tasarım sistemi
-├── getdata.md            # Dış veri çekimi (TurkiyeAPI, MEB)
 ├── _books/               # Ürünler (kitap / eğitim seti) — ~187 kayıt
 ├── _catalogs/            # PDF/flipbook kataloglar
 ├── _slides/              # Anasayfa slider verisi (output: false)
@@ -106,26 +101,17 @@ damlaegitim/
 │       └── favicon/
 ├── _data/
 │   ├── webp_manifest.yml         # Otomatik: mevcut .webp listesi (generate_webp.sh)
-│   ├── turkiye_adres_il_ilce.json # İl / ilçe (wizard; sync_site_data.py türetir)
-│   ├── tymm.json                 # TYMM müfredat + Erdem-Değer çerçevesi (build_tymm_reference.rb)
-│   ├── dersler.json              # …
-├── docs/                           # Yerel kaynak (gitignore + Jekyll exclude)
-│   └── data/                       # Kanonik fetch JSON (getdata.md)
-│       ├── turkiye_adres.json
-│       ├── turkiye_geodata.json
-│       ├── okullar.json
-│       ├── okullar_detay.json
-│       ├── tymm/                   # TYMM ham API, PDF, referans CSV
-│       └── reference/              # TurkiyeAPI / HDX vendor snapshot
+│   ├── dersler.json              # Editoryal müfredat listesi
+│   ├── anatemalar.json
+│   ├── webp_manifest.yml         # generate_webp.sh
+│   ├── turkiye_adres_il_ilce.json # import (gitignore)
+│   └── tymm.json                 # import (gitignore)
 ├── assets/
-│   └── data/
-│       ├── okullar.json            # Wizard fetch (sync; gitignore)
-│       ├── geodata/                # Harita sınır parçaları (sync; gitignore)
-│       └── okullar-harita/         # Okul listesi + detay il parçaları (sync; gitignore)
+│   └── data/                     # import damla_site.zip (gitignore)
 ├── scripts/
+│   ├── import_site_data.sh       # Prebuilt zip → _data + assets/data
 │   ├── install_image_tools.sh    # WebP/ImageMagick kurulumu (install.sh; winget/brew/apt)
 │   ├── generate_webp.sh          # jpg/png → .webp + manifest güncelleme (start.sh hook)
-│   ├── sync_site_data.py         # docs/data → site türetilmiş dosyalar (start.sh hook)
 │   ├── refresh_image_paths.sh    # Windows winget PATH düzeltmesi (dahili)
 │   ├── check_images.sh           # Büyük görsel uyarı raporu (start.sh hook)
 │   ├── check_fonts.sh            # Font / WOFF2 uyarı raporu (install.sh)
@@ -134,17 +120,11 @@ damlaegitim/
 │   ├── map_story_metadata.rb           # Story kitap: anatema, degerler, egilimler, beceriler, unite (orchestrator)
 │   ├── curriculum_lib.rb               # TYMM/anatema sözlük yardımcıları (map_story_*)
 │   ├── ogretmen-submit.gs              # Öğretmen wizard → Sheets + mail (Workspace’te dağıtılır; repo referans kopyası)
-│   ├── fetch_turkiyeadres.py           # → docs/data/turkiye_adres.json (getdata.md)
-│   ├── fetch_okullar.py                # → docs/data/okullar.json kamu (getdata.md)
-│   ├── fetch_ozel_okullar.py           # → okullar.json özel birleştirme (getdata.md)
-│   ├── fetch_okuldetay.py              # → docs/data/okullar_detay.json (getdata.md)
-│   ├── fetch_population.py             # → docs/data/population.json (getdata.md)
-│   └── sync_site_data.py               # → site türetilmiş dosyalar (getdata.md)
 ├── index.html            # Anasayfa
 ├── Gemfile               # github-pages + webrick (canlı GitHub Pages ile aynı stack)
 ├── CNAME                 # damlaokul.com
 ├── install.sh            # İlk kurulum: bundle, fonttools, WOFF2, görsel araçları, jekyll build
-├── start.sh              # Geliştirme: check_images + generate_webp + sync_site_data hook + jekyll serve
+├── start.sh              # Geliştirme: check_images + generate_webp + import (koşullu) + jekyll serve
 └── _site/                # Build çıktısı (gitignore)
 ```
 
@@ -160,7 +140,7 @@ damlaegitim/
 | Sayfalar | `_pages/` | `/:title/` | `page` | Evet |
 | Yazılar | `_posts/` | varsayılan | `post` | Evet |
 
-`_pages` klasörü `_config.yml` içinde `include: ["_pages"]` ile Jekyll kaynaklarına dahil edilir. `docs/` klasörü gitignore ve `_config.yml` `exclude` listesindedir; Jekyll build çıktısına girmez.
+`_pages` klasörü `_config.yml` içinde `include: ["_pages"]` ile Jekyll kaynaklarına dahil edilir.
 
 ---
 
@@ -226,13 +206,11 @@ flowchart LR
 | `_includes/ogretmen-wizard/step-*.html` | 6 adım UI |
 | `assets/css/ogretmen-wizard.css` | Wizard stilleri ([design.md](design.md#14-öğretmen-talep-formu-wizard)) |
 | `assets/js/book-filter.js` | TYMM filtreleri |
-| `_data/turkiye_adres_il_ilce.json` | İl / ilçe wizard embed; `sync_site_data.py` türetir — [getdata.md](getdata.md) |
-| `docs/data/okullar.json` | MEB kamu + OOKGM özel kurum listesi (kanonik) — [getdata.md](getdata.md) |
-| `assets/data/okullar.json` | Wizard `fetch`; sync ile üretilir, git’te yok — [getdata.md](getdata.md) |
-| `docs/data/okullar_detay.json` | Okul meta monolit (`kurum_kodu`); sync ile `assets/data/okullar-harita/` il parçalarına bölünür — [getdata.md](getdata.md) |
-| `docs/data/population.json` | İl/ilçe nüfus ve çocuk sayıları (TurkiyeAPI + TÜİK ADNKS vendor); site sync yok — [getdata.md](getdata.md) |
-| `assets/data/okullar-harita/` | Harita sayfası lazy fetch; sync türetilmiş — [getdata.md](getdata.md) |
-| `_data/tymm.json` | Hikâye filtre sıralaması; Erdem-Değer çerçevesi (D1–D20); öğretmen sihirbazı değer listesi |
+| `_data/turkiye_adres_il_ilce.json` | İl / ilçe wizard embed (`damla_site.zip` import) |
+| `assets/data/okullar.json` | Wizard okul datalist (`import`) |
+| `assets/data/okullar-harita/` | `/okullar` lazy fetch (`import`) |
+| `assets/data/geodata/` | Harita sınır overlay (`import`) |
+| `_data/tymm.json` | Hikâye filtre + öğretmen sihirbazı TYMM (`import`) |
 | `scripts/ogretmen-submit.gs` | Backend referansı (Workspace’te dağıtılır) |
 
 ### Yapılandırma (`_config.yml`)
@@ -401,7 +379,7 @@ sh scripts/subset_font.sh           # Tüm OTF/TTF → WOFF2 subset (fontawesome
 | Ruby / bundle | `bundle install` | `Gemfile.lock` kontrolü |
 | Fontlar | `subset_font.sh`, `check_fonts.sh` | — |
 | Görsel araçları | `install_image_tools.sh` (winget/brew/apt) | — |
-| Görsel hook'ları | — | `check_images.sh`, `generate_webp.sh`, `sync_site_data.py` |
+| Görsel hook'ları | — | `check_images.sh`, `generate_webp.sh`, `import_site_data.sh` (koşullu) |
 | Jekyll | `jekyll build` (doğrulama) | `jekyll serve` |
 | `_data/webp_manifest.yml` | Yoksa oluşturur | `generate_webp.sh` günceller |
 
@@ -867,11 +845,11 @@ Sıra: Ruby/Bundler kontrolü → `bundle install` → Python `fonttools` → `s
 
 ```bash
 # Geliştirme sunucusu (hook'lar: görsel kontrol + webp üretimi)
-sh start.sh            # check_images.sh + generate_webp.sh + sync_site_data.py + jekyll serve
+sh start.sh            # check_images + generate_webp + import (koşullu) + jekyll serve
 # → http://localhost:4000
 ```
 
-`start.sh` önce `refresh_image_paths.sh` ile Windows PATH'ini düzeltir; ardından `check_images.sh`, `generate_webp.sh` ve `sync_site_data.py` hook'larını çalıştırır.
+`start.sh` önce `refresh_image_paths.sh` ile Windows PATH'ini düzeltir; ardından görsel hook'ları ve koşullu `import_site_data.sh` çalıştırır.
 
 ### Canlıya alma
 
@@ -882,7 +860,7 @@ git commit -m "..."
 git push
 ```
 
-GitHub Pages, push sonrası kaynak branch’ten Jekyll build alır. **CI/CD veya npm build yoktur.** CSS değişiklikleri doğrudan `assets/css/` altında yapılır ve commit edilir.
+GitHub Pages, `.github/workflows/pages.yml` ile derlenir (`edamla/data` → `damla_site.zip` import). CSS değişiklikleri doğrudan `assets/css/` altında yapılır ve commit edilir.
 
 ---
 
@@ -919,7 +897,7 @@ GitHub Pages, push sonrası kaynak branch’ten Jekyll build alır. **CI/CD veya
 | `google.com/recaptcha` | Form gönderiminde bot koruması (v2) |
 | Google Analytics | `G-PR1C1WGQB6` (`site.google_analytics`; yalnızca production) |
 | Cloudflare | DNS (şu an proxy kapalı — gri bulut) |
-| TurkiyeAPI / MEB | Adres ve okul JSON üretimi — [getdata.md](getdata.md) |
+| edamla/data | Kanonik veri + `export_damla_site` → `damla_site.zip` |
 
 Font Awesome artık yerel olarak `assets/fonts/fontawesome/` altından servis edilir; harici CDN kullanılmaz.
 

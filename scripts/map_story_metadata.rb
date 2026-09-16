@@ -9,7 +9,7 @@ require_relative 'map_story_anatema'
 require_relative 'map_story_egilimler'
 require_relative 'map_story_beceriler'
 
-REPORT = CurriculumLib::ROOT.join('docs', 'story-metadata-report.csv')
+REPORT = CurriculumLib::ROOT.join('reports', 'story-metadata-report.csv')
 
 def main
   tymm = CurriculumLib.load_tymm

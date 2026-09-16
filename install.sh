@@ -1,7 +1,7 @@
 #!/bin/bash
 # Damla Okul — ilk kurulum (git clone sonrası, Windows Git Bash / macOS / Linux).
 # Bağımlılıkları kurar, font WOFF2 subset üretir, build doğrular.
-# Geliştirme hook'ları (görsel kontrol, webp) yalnızca start.sh içindedir.
+# Geliştirme: start.sh (görsel hook'lar + koşullu site veri import + jekyll serve).
 
 set -uo pipefail
 
@@ -82,6 +82,17 @@ if [ ! -f "_data/webp_manifest.yml" ]; then
 assets: []
 EOF
   echo ""
+fi
+
+# --- İsteğe bağlı site veri (prebuilt zip) ---
+DAMLA_DATA_IMPORT="${DAMLA_DATA_IMPORT:-auto}"
+if [ "$DAMLA_DATA_IMPORT" != "never" ] && [ -f "scripts/import_site_data.sh" ]; then
+  ZIP="${DAMLA_SITE_ZIP:-$ROOT/../data/data/zip/damla_site.zip}"
+  if [ "$DAMLA_DATA_IMPORT" = "always" ] || { [ "$DAMLA_DATA_IMPORT" = "auto" ] && [ -f "$ZIP" ]; }; then
+    echo ">>> Site veri import (damla_site.zip)"
+    DAMLA_SITE_ZIP="$ZIP" sh scripts/import_site_data.sh || echo "Uyarı: import atlandı."
+    echo ""
+  fi
 fi
 
 # --- Kurulum doğrulama ---

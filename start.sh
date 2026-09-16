@@ -1,6 +1,6 @@
 #!/bin/bash
 # Damla Okul — yerel geliştirme (kurulum sonrası).
-# Hook'lar yalnızca burada: görsel kontrol, WebP üretimi, Jekyll serve.
+# Hook'lar: görsel kontrol, WebP, koşullu site veri import, Jekyll serve.
 
 set -uo pipefail
 
@@ -18,30 +18,37 @@ if ! command -v bundle >/dev/null 2>&1 || [ ! -f "Gemfile.lock" ]; then
   exit 1
 fi
 
-# Görsel boyut kontrolü (uyarı raporu, dosyaya dokunmaz)
 if [ -f "scripts/check_images.sh" ]; then
   sh scripts/check_images.sh
   echo ""
 fi
 
-# Eksik WebP üretimi + manifest güncelleme
 if [ -f "scripts/generate_webp.sh" ]; then
   sh scripts/generate_webp.sh
   echo ""
 fi
 
-# Site veri senkronu (docs/data → _data / assets/data)
-if [ -f "scripts/sync_site_data.py" ]; then
-  echo ">>> Site veri senkronu (docs/data → _data / assets/data)"
-  python3 scripts/sync_site_data.py 2>/dev/null || python scripts/sync_site_data.py 2>/dev/null || \
-    echo "Uyarı: sync_site_data atlandı (Python veya docs/data eksik)."
-  echo ""
-fi
+DAMLA_DATA_IMPORT="${DAMLA_DATA_IMPORT:-auto}"
+run_import=false
+case "$DAMLA_DATA_IMPORT" in
+  always) run_import=true ;;
+  never) run_import=false ;;
+  auto)
+    if [ ! -f "assets/data/okullar.json" ] && [ -f "${DAMLA_SITE_ZIP:-$ROOT/../data/data/zip/damla_site.zip}" ]; then
+      run_import=true
+    fi
+    ;;
+  *)
+    echo "Uyarı: DAMLA_DATA_IMPORT geçersiz ($DAMLA_DATA_IMPORT); auto kullanılıyor." >&2
+    ;;
+esac
 
-# Jekyll öncesi: sync sırasında IDE/paralel işlem _data kalıntısını geri yazabilir
-if [ -f "scripts/sync_site_data.py" ]; then
-  python3 scripts/sync_site_data.py --cleanup-only 2>/dev/null || \
-    python scripts/sync_site_data.py --cleanup-only 2>/dev/null || true
+if [ "$run_import" = true ] && [ -f "scripts/import_site_data.sh" ]; then
+  sh scripts/import_site_data.sh
+  echo ""
+elif [ ! -f "assets/data/okullar.json" ] && [ "$DAMLA_DATA_IMPORT" != "never" ]; then
+  echo "Uyarı: /ogretmen ve /okullar için site verisi yok. DAMLA_SITE_ZIP=... sh scripts/import_site_data.sh" >&2
+  echo ""
 fi
 
 bundle exec jekyll serve

@@ -500,7 +500,7 @@ layout: default
       updateUrl();
     }).catch(function (err) {
       console.error(err);
-      el.hint.textContent = 'Veri yüklenemedi. sync_site_data.py çalıştırın.';
+      el.hint.textContent = 'Veri yüklenemedi. sh scripts/import_site_data.sh (damla_site.zip).';
     }).finally(function () { setBusy(false); });
   }
 
@@ -597,7 +597,7 @@ layout: default
       }
     }).catch(function (err) {
       console.error(err);
-      el.hint.textContent = 'Harita verisi yüklenemedi. docs/data + sync_site_data.py gerekli.';
+      el.hint.textContent = 'Harita verisi yüklenemedi. edamla/data damla_site.zip import gerekli.';
     }).finally(function () { setBusy(false); });
   }
 
