@@ -4,7 +4,7 @@ title:  "Hayat Bilgisi Öyküleri (10 Kitap)"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
-ean: 9786254112676
+ean: 8697911223004
 languages: [Türkçe]
 page: "Her Biri 48"
 size: "13,5x19,5 cm"

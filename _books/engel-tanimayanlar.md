@@ -4,7 +4,7 @@ title:  "Engel Tanımayanlar (10 Kitap)"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
-ean: 9786051745374
+ean: 8697911223974
 languages: [Türkçe]
 page: "Her Biri 80"
 size: "13,5x19,5 cm"

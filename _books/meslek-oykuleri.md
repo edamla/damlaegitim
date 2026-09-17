@@ -4,7 +4,7 @@ title:  "MESLEK ÖYKÜLERİ (10 KİTAP)"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
-ean: 9786254110139
+ean: 8697911222991
 languages: [Türkçe]
 page: "Her Biri 48"
 size: "13,5x19,5 cm"

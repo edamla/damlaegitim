@@ -4,7 +4,7 @@ title:  "Çılgın Dedemin Zaman Makinesi-İcatlar ve Keşifler (10 Kitap)"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
-ean: 9786053831952
+ean: 8697911223493
 languages: [Türkçe]
 page: "Her Biri 64"
 size: "13,5x19,5 cm"

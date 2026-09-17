@@ -4,7 +4,7 @@ title:  "Matematik Öyküleri (10 KİTAP)"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
-ean: 9786254112775
+ean: 8697911223066
 languages: [Türkçe]
 page: "Her Biri 64"
 size: "13,5x19,5 cm"

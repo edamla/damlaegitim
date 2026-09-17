@@ -4,7 +4,7 @@ title:  "ETİK DEĞERLER EĞİTİM SETİ-2. SINIF (10 KİTAP)"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
-ean: 9786053837480
+ean: 8697911223875
 languages: [Türkçe]
 page: "Her Biri 24"
 size: "16,5x23,5 cm"

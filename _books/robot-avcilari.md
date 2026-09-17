@@ -5,7 +5,7 @@ description: "Bilim kurgu ve macera temalı hikaye; genç okurlar için sürükl
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
-ean: 8697911223547
+ean: 8697911223530
 languages: [Türkçe]
 page: "Her Biri 64"
 size: "13,5x19,5 cm"

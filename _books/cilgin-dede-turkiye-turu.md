@@ -4,7 +4,7 @@ title:  "Çılgın Dedemin Türkiye Turu (10 Kitap)"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
-ean: 9786254114540
+ean: 8697911223943
 languages: [Türkçe]
 page: "Her Biri 64"
 size: "12,5x19,2 cm"

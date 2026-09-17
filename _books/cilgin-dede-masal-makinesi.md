@@ -4,7 +4,7 @@ title:  "Çılgın Dedemin Masal Makinesi (10 Kitap)"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
-ean: 9786053838340
+ean: 8697911223950
 languages: [Türkçe]
 page: "Her Biri 48"
 size: "13,5x19,5 cm"
