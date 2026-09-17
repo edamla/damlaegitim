@@ -1,4 +1,9 @@
 ---
+
+
+
+
+
 layout: previewbook
 title:  "Kral Eğitim Seti 4.Sınıf"
 description: "4. sınıf Kral eğitim seti; sınıf içi ve evde öğrenmeyi destekleyen kapsamlı kaynak."
@@ -29,8 +34,8 @@ beceriler: []
 unite: []
 akillitahta:
   exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-kralegitimseti4/win64/E-Damla%20Kral%20Egitim%20Seti%204.exe"
-  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-kralegitimseti4/linux64/E-Damla%20Kral%20Egitim%20Seti%204.AppImage"
-  appimage: ""
+  deb: ""
+  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-kralegitimseti4/linux64/E-Damla%20Kral%20Egitim%20Seti%204.AppImage"
   dmg: ""
 
 # Social Media Attributes

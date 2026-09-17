@@ -1,4 +1,9 @@
 ---
+
+
+
+
+
 layout: previewbook
 title:  "Akıllı Damla Paragraf-Dilbilgisi 3.Sınıf Soru Bankası"
 description: "3. sınıf paragraf ve dil bilgisi soru bankası; okuduğunu anlama ve dil kuralları becerilerini pekiştirir."
@@ -29,9 +34,9 @@ kazanim: []
 beceriler: []
 unite: []
 akillitahta:
-  exe: ""
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-paragraf3/win64/Ak%C4%B1ll%C4%B1%20Damla%20Paragraf%203.%20S%C4%B1n%C4%B1f.exe"
   deb: ""
-  appimage: ""
+  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-paragraf3/linux64/Ak%C4%B1ll%C4%B1%20Damla%20Paragraf%203.%20S%C4%B1n%C4%B1f.AppImage"
   dmg: ""
 
 # Social Media Attributes

@@ -1,4 +1,9 @@
 ---
+
+
+
+
+
 layout: previewbook
 title:  "Akıllı Damla Paragraf-Dilbilgisi 2.Sınıf Soru Bankası"
 description: "2. sınıf paragraf ve dil bilgisi soru bankası; temel okuma ve dil becerilerini kazanım odaklı alıştırmalarla destekler."
@@ -29,9 +34,9 @@ kazanim: []
 beceriler: []
 unite: []
 akillitahta:
-  exe: ""
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-paragraf2/win64/Ak%C4%B1ll%C4%B1%20Damla%20Paragraf%202.%20S%C4%B1n%C4%B1f.exe"
   deb: ""
-  appimage: ""
+  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-paragraf2/linux64/Ak%C4%B1ll%C4%B1%20Damla%20Paragraf%202.%20S%C4%B1n%C4%B1f.AppImage"
   dmg: ""
 
 # Social Media Attributes

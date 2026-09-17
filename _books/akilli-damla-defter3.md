@@ -1,4 +1,9 @@
 ---
+
+
+
+
+
 layout: previewbook
 title:  "Akıllı Damla Tüm Dersler | 3.Sınıf"
 description: "3. sınıf tüm dersleri kapsayan Akıllı Damla eğitim seti; Maarif Modeli kazanımlarına uygun etkinlik ve alıştırmalar içerir."
@@ -29,8 +34,8 @@ beceriler: []
 unite: []
 akillitahta:
   exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-tumdef3/win64/E-Damla%20T%C3%BCm%20Dersler%20Defterim%203.S%C4%B1n%C4%B1f.exe"
-  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-tumdef3/linux64/E-Damla%20T%C3%BCm%20Dersler%20Defterim%203.S%C4%B1n%C4%B1f.AppImage"
-  appimage: ""
+  deb: ""
+  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-tumdef3/linux64/E-Damla%20T%C3%BCm%20Dersler%20Defterim%203.S%C4%B1n%C4%B1f.AppImage"
   dmg: ""
 
 # Social Media Attributes

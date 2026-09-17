@@ -1,4 +1,8 @@
 ---
+
+
+
+
 layout: previewbook
 title:  "Çılgın Problemler 4. Sınıf"
 description: "4. sınıflar için eğlenceli matematik problem seti; problem çözme becerisini ve mantıksal düşünmeyi geliştirir."
@@ -29,9 +33,9 @@ kazanim: []
 beceriler: []
 unite: []
 akillitahta:
-  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-4/win/edamla-cilgin-problemler-4-Setup-Latest.exe"
-  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-4/linux/edamla-cilgin-problemler-4-Setup-Latest.deb"
-  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-4/linux/edamla-cilgin-problemler-4-Setup-Latest.AppImage"
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilginproblemler4/win64/%C3%87%C4%B1lg%C4%B1n%20Problemler%204.S%C4%B1n%C4%B1f.exe"
+  deb: ""
+  appimage: ""
   dmg: ""
 
 # Social Media Attributes

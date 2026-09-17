@@ -1,4 +1,9 @@
 ---
+
+
+
+
+
 layout: previewbook
 title:  "Tüm Dersler Soru Bankası 2. Sınıf"
 description: "2. sınıflar için tüm dersleri kapsayan tatil tekrar seti."
@@ -29,8 +34,8 @@ beceriler: []
 unite: []
 akillitahta:
   exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-adtumdersler2/win64/T%C3%BCm%20Dersler%20Soru%20Bankas%C4%B1%202.%20S%C4%B1n%C4%B1f.exe"
-  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-adtumdersler2/linux64/T%C3%BCm%20Dersler%20Soru%20Bankas%C4%B1%202.%20S%C4%B1n%C4%B1f.AppImage"
-  appimage: ""
+  deb: ""
+  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-adtumdersler2/linux64/T%C3%BCm%20Dersler%20Soru%20Bankas%C4%B1%202.%20S%C4%B1n%C4%B1f.AppImage"
   dmg: ""
 
 # Social Media Attributes

@@ -1,4 +1,9 @@
 ---
+
+
+
+
+
 layout: previewbook
 title:  "Akıllı Damla Tüm Dersler Soru Bankası | 4.Sınıf"
 description: "4. sınıf tüm dersler için soru bankası; yeni nesil soru tipleri ve kazanım odaklı pekiştirme alıştırmaları içerir."
@@ -29,8 +34,8 @@ beceriler: []
 unite: []
 akillitahta:
   exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-adtumdersler4/win64/T%C3%BCm%20Dersler%20Soru%20Bankas%C4%B1%204%20S%C4%B1n%C4%B1f.exe"
-  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-adtumdersler4/linux64/T%C3%BCm%20Dersler%20Soru%20Bankas%C4%B1%204%20S%C4%B1n%C4%B1f.AppImage"
-  appimage: ""
+  deb: ""
+  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-adtumdersler4/linux64/T%C3%BCm%20Dersler%20Soru%20Bankas%C4%B1%204%20S%C4%B1n%C4%B1f.AppImage"
   dmg: ""
 
 # Social Media Attributes

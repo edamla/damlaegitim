@@ -1,4 +1,7 @@
 ---
+
+
+
 layout: previewbook
 title:  "Kral Eğitim Seti 3.Sınıf"
 description: "3. sınıf için Kral eğitim seti; Yeni Maarif Modeli uyumlu içerik ve etkinlikler."
@@ -21,6 +24,12 @@ genre: education
 grades: [3]
 kavramlar: []
 anatemalar: []
+
+akillitahta:
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-kralegitimseti3/win64/E-Damla%20Kral%20Egitim%20Seti%203.exe"
+  deb: ""
+  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-kralegitimseti3/linux64/E-Damla%20Kral%20Egitim%20Seti%203.AppImage"
+  dmg: ""
 
 # Social Media Attributes
 youtube:
