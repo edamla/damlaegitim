@@ -33,9 +33,15 @@ kazanim: []
 beceriler: []
 unite: []
 akillitahta:
+<<<<<<< Updated upstream
   exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilginproblemler4/win64/%C3%87%C4%B1lg%C4%B1n%20Problemler%204.S%C4%B1n%C4%B1f.exe"
   deb: ""
   appimage: ""
+=======
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-4/win64/%C3%87%C4%B1lg%C4%B1n%20Problemler%204.S%C4%B1n%C4%B1f.exe"
+  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-4/linux/edamla-cilgin-problemler-4-Setup-Latest.deb"
+  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-4/linux/edamla-cilgin-problemler-4-Setup-Latest.AppImage"
+>>>>>>> Stashed changes
   dmg: ""
 
 # Social Media Attributes

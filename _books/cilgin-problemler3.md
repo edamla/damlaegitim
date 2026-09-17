@@ -29,7 +29,7 @@ kazanim: []
 beceriler: []
 unite: []
 akillitahta:
-  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-3/win/edamla-cilgin-problemler-3-Setup-Latest.exe"
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-3/win64/%C3%87%C4%B1lg%C4%B1n%20Problemler%203.S%C4%B1n%C4%B1f.exe"
   deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-3/linux/edamla-cilgin-problemler-3-Setup-Latest.deb"
   appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-3/linux/edamla-cilgin-problemler-3-Setup-Latest.AppImage"
   dmg: ""
