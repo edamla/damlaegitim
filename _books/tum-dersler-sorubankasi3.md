@@ -28,8 +28,8 @@ kazanim: []
 beceriler: []
 unite: []
 akillitahta:
-  exe: ""
-  deb: ""
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-adtumdersler3/win64/T%C3%BCm%20Dersler%20Soru%20Bankas%C4%B1%203.%20S%C4%B1n%C4%B1f.exe"
+  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-adtumdersler3/linux64/T%C3%BCm%20Dersler%20Soru%20Bankas%C4%B1%203.%20S%C4%B1n%C4%B1f.AppImage"
   appimage: ""
   dmg: ""
 

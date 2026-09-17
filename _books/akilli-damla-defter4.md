@@ -28,8 +28,8 @@ kazanim: []
 beceriler: []
 unite: []
 akillitahta:
-  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-tumdef4/win/edamla-tumdef4-Setup-Latest.exe"
-  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-tumdef4/linux/edamla-tumdef4-Setup-Latest.deb"
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-tumdef4/win64/E-Damla%20T%C3%BCm%20Dersler%20Defterim%204.S%C4%B1n%C4%B1f.exe"
+  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-tumdef4/linux64/E-Damla%20T%C3%BCm%20Dersler%20Defterim%204.S%C4%B1n%C4%B1f.AppImage"
   appimage: ""
   dmg: ""
 

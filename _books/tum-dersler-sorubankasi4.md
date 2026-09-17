@@ -28,8 +28,8 @@ kazanim: []
 beceriler: []
 unite: []
 akillitahta:
-  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-tumder-sorubankasi4/win/edamla-tumder-sorubankasi4-Setup-Latest.exe"
-  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-tumder-sorubankasi4/linux/edamla-tumder-sorubankasi4-Setup-Latest.deb"
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-adtumdersler4/win64/T%C3%BCm%20Dersler%20Soru%20Bankas%C4%B1%204%20S%C4%B1n%C4%B1f.exe"
+  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-adtumdersler4/linux64/T%C3%BCm%20Dersler%20Soru%20Bankas%C4%B1%204%20S%C4%B1n%C4%B1f.AppImage"
   appimage: ""
   dmg: ""
 

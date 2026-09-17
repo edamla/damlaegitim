@@ -28,8 +28,8 @@ kazanim: []
 beceriler: []
 unite: []
 akillitahta:
-  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-ades2/win/edamla-ades2-Setup-Latest.exe"
-  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-ades2/linux/edamla-ades2-Setup-Latest.deb"
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-ades2/win64/Ak%C4%B1ll%C4%B1%20Damla%20E%C4%9Fitim%20Seti%202.exe"
+  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-ades2/linux64/Ak%C4%B1ll%C4%B1%20Damla%20E%C4%9Fitim%20Seti%202.AppImage"
   appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-ades2/linux/edamla-ades2-Setup-Latest.AppImage"
   dmg: ""
 

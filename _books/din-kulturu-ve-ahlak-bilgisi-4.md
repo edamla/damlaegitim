@@ -29,8 +29,8 @@ kazanim: []
 beceriler: []
 unite: []
 akillitahta:
-  exe: ""
-  deb: ""
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-dindef4/win64/E-Damla%20Din%20k%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%204.S%C4%B1n%C4%B1f.exe"
+  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-dindef4/linux64/E-Damla%20Din%20k%C3%BClt%C3%BCr%C3%BC%20ve%20Ahlak%20Bilgisi%204.S%C4%B1n%C4%B1f.AppImage"
   appimage: ""
   dmg: ""
 

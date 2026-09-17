@@ -28,8 +28,8 @@ kazanim: []
 beceriler: []
 unite: []
 akillitahta:
-  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-kralegitimseti4/win/edamla-kralegitimseti4-Setup-Latest.exe"
-  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-kralegitimseti4/linux/edamla-kralegitimseti4-Setup-Latest.deb"
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-kralegitimseti4/win64/E-Damla%20Kral%20Egitim%20Seti%204.exe"
+  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-kralegitimseti4/linux64/E-Damla%20Kral%20Egitim%20Seti%204.AppImage"
   appimage: ""
   dmg: ""
 
