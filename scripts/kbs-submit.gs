@@ -78,14 +78,36 @@ function normalizeUserAgent_(raw) {
   return s;
 }
 
-function cellValueForHeader_(header, data) {
-  if (header === 'gonderim_zamani') return data.gonderim_zamani || new Date();
-  if (header === 'kvkk_onay') return data.kvkk_onay === true || data.kvkk_onay === 'Evet' ? 'Evet' : '';
-  if (header === 'user_agent') return normalizeUserAgent_(data.user_agent);
-  return data[header] !== undefined ? data[header] : '';
+function normalizeHeaderName_(h) {
+  return String(h || '')
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, '_');
 }
 
-/** İlk satırdaki sütun adlarına göre yaz (elle eklenen user_agent konumu farklı olabilir). */
+function indexOfHeader_(headers, canonicalName) {
+  var want = normalizeHeaderName_(canonicalName);
+  for (var i = 0; i < headers.length; i++) {
+    if (normalizeHeaderName_(headers[i]) === want) return i;
+  }
+  return -1;
+}
+
+function cellValueForHeader_(header, data) {
+  var key = normalizeHeaderName_(header);
+  if (!key) return '';
+  if (key === 'gonderim_zamani') return data.gonderim_zamani || new Date();
+  if (key === 'kvkk_onay') return data.kvkk_onay === true || data.kvkk_onay === 'Evet' ? 'Evet' : '';
+  if (key === 'user_agent') return normalizeUserAgent_(data.user_agent);
+  if (data[header] !== undefined && data[header] !== null) return data[header];
+  if (data[key] !== undefined && data[key] !== null) return data[key];
+  return '';
+}
+
+/**
+ * 1. satırı sütun indeksine göre oku (boş sütunları atlama — hizayı bozuyordu).
+ * user_agent yoksa sona ekler.
+ */
 function getBasvurularHeaderRow_(sheet) {
   if (sheet.getLastRow() === 0) {
     sheet.appendRow(BASVURULAR_HEADERS);
@@ -95,13 +117,15 @@ function getBasvurularHeaderRow_(sheet) {
   var row = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
   var headers = [];
   for (var i = 0; i < row.length; i++) {
-    var h = String(row[i] || '').trim();
-    if (h) headers.push(h);
+    headers.push(String(row[i] || '').trim());
   }
-  if (headers.length === 0 || headers[0] !== 'basvuru_id') {
+  while (headers.length > 0 && !headers[headers.length - 1]) {
+    headers.pop();
+  }
+  if (headers.length === 0 || normalizeHeaderName_(headers[0]) !== 'basvuru_id') {
     return BASVURULAR_HEADERS.slice();
   }
-  if (headers.indexOf('user_agent') < 0) {
+  if (indexOfHeader_(headers, 'user_agent') < 0) {
     headers.push('user_agent');
     sheet.getRange(1, headers.length).setValue('user_agent');
   }

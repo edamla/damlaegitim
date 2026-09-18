@@ -495,8 +495,14 @@
   justify-content: flex-start;
 }
 
-.ogretmen-wizard__panel[data-step="6"]:not(.is-active) .ogretmen-wizard__recaptcha {
+.ogretmen-wizard__panel[data-step="6"]:not(.is-active) .ogretmen-wizard__recaptcha,
+.ogretmen-wizard__panel[data-step="4"]:not(.is-active) .ogretmen-wizard__recaptcha {
   display: none;
+}
+
+.kbs-wizard .ogretmen-wizard__recaptcha-label {
+  font-weight: 600;
+  color: var(--color-text, #212529);
 }
 
 .ogretmen-wizard__kvkk {

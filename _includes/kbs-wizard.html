@@ -34,13 +34,13 @@
 }</script>
 
 {% if site.ogretmen_recaptcha_site_key != '' %}
-<script>
+<script data-cfasync="false">
 window.kbsOnRecaptchaReady = function() {
   window.kbsRecaptchaApiReady = true;
   document.dispatchEvent(new Event('kbs-recaptcha-ready'));
 };
 </script>
-<script src="https://www.google.com/recaptcha/api.js?onload=kbsOnRecaptchaReady&amp;render=explicit" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=kbsOnRecaptchaReady&amp;render=explicit" async defer data-cfasync="false"></script>
 {% endif %}
 
 <script defer src="{{ site.baseurl }}/assets/js/kbs-wizard.js?v={{ site.time | date: '%s' }}"></script>

@@ -92,7 +92,7 @@
     if (n === 3) initCityDistrictSelects();
     if (n === 4) {
       renderSummary();
-      ensureRecaptcha();
+      scheduleRecaptchaRender();
     }
     if (opts.scroll !== false) {
       var wizardEl = document.getElementById('kbs-wizard');
@@ -399,14 +399,30 @@
     el.className = 'ogretmen-wizard__status is-' + type;
   }
 
+  function setRecaptchaHint(msg, visible) {
+    var hint = document.getElementById('kbs-recaptcha-hint');
+    if (!hint) return;
+    hint.hidden = !visible;
+    if (visible && msg) hint.textContent = msg;
+  }
+
+  function scheduleRecaptchaRender() {
+    setRecaptchaHint('Yükleniyor…', true);
+    window.setTimeout(ensureRecaptcha, 50);
+  }
+
   function ensureRecaptcha() {
     if (!config.recaptchaSiteKey) return;
     var el = document.getElementById('kbs-recaptcha');
     if (!el) return;
+    var panel = document.getElementById('kbs-step-4');
+    if (panel && !panel.classList.contains('is-active')) return;
     if (typeof grecaptcha === 'undefined' || typeof grecaptcha.render !== 'function') {
-      if (recaptchaRetryCount < 25) {
+      if (recaptchaRetryCount < 40) {
         recaptchaRetryCount++;
         setTimeout(ensureRecaptcha, 300);
+      } else {
+        setRecaptchaHint('Doğrulama yüklenemedi. Sayfayı yenileyip tekrar deneyin.', true);
       }
       return;
     }
@@ -414,12 +430,16 @@
     if (recaptchaWidgetId === null) {
       try {
         recaptchaWidgetId = grecaptcha.render(el, { sitekey: config.recaptchaSiteKey });
+        setRecaptchaHint('', false);
       } catch (err) {
         recaptchaWidgetId = null;
+        setRecaptchaHint('Doğrulama başlatılamadı. Sayfayı yenileyin.', true);
+        console.log('reCAPTCHA render:', err);
       }
       return;
     }
     grecaptcha.reset(recaptchaWidgetId);
+    setRecaptchaHint('', false);
   }
 
   function getRecaptchaToken() {
@@ -662,8 +682,11 @@
     }
 
     document.addEventListener('kbs-recaptcha-ready', function() {
-      if (state.step === 4) ensureRecaptcha();
+      if (state.step === 4) scheduleRecaptchaRender();
     });
+    if (window.kbsRecaptchaApiReady && state.step === 4) {
+      scheduleRecaptchaRender();
+    }
 
     syncMultiSelectFromState('kbs-branch-grid', state.branches);
     syncMultiSelectFromState('kbs-grade-grid', state.grades);

@@ -5,17 +5,19 @@
     <div id="kbs-summary" class="ogretmen-wizard__summary">
       <div class="ogretmen-wizard__summary-meta" id="kbs-summary-meta"></div>
     </div>
-    {% if site.ogretmen_recaptcha_site_key != '' %}
-    <div class="ogretmen-wizard__recaptcha" id="kbs-recaptcha-wrap">
-      <div id="kbs-recaptcha" aria-label="Robot doğrulama"></div>
-    </div>
-    {% endif %}
     <div class="form-check ogretmen-wizard__kvkk-check mb-3">
       <input class="form-check-input" type="checkbox" id="kbs-kvkk" required>
       <label class="form-check-label" for="kbs-kvkk">
         Aydınlatma Metnini okudum ve anladım. Kişisel verilerimin bu kapsamda işlenmesini ve tarafıma iletilerin gönderilmesini kabul ediyorum.
       </label>
     </div>
+    {% if site.ogretmen_recaptcha_site_key != '' %}
+    <div class="ogretmen-wizard__recaptcha" id="kbs-recaptcha-wrap">
+      <p class="ogretmen-wizard__recaptcha-label small text-muted mb-2">Robot doğrulama</p>
+      <div id="kbs-recaptcha" aria-label="Robot doğrulama"></div>
+      <p class="ogretmen-wizard__recaptcha-hint small text-muted mb-0" id="kbs-recaptcha-hint" hidden>Yükleniyor…</p>
+    </div>
+    {% endif %}
     <details class="ogretmen-wizard__kvkk">
       <summary class="ogretmen-wizard__kvkk-summary">Kişisel Verilerin İşlenmesine İlişkin Aydınlatma Metni</summary>
       <div class="ogretmen-wizard__kvkk-body">

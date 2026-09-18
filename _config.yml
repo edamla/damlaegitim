@@ -30,7 +30,7 @@ contact_address: "Alemdar Mh. Prof. Kazım İsmail Gürkan Cad. No:8 Fatih, 3411
 # Form endpoints (Google Apps Script / Forms embed — Workspace'te oluşturulur)
 ogretmen_submit_url: "https://script.google.com/macros/s/AKfycbwvDFx-F4z2K8cKtX2oCVtbckdgjIh9LMMrDZbvWVNrgCV2CYdjqTiUpjXQoHMUAmjC/exec"
 # Kitapla Büyüyen Sınıflar başvuru wizard (Apps Script deploy sonrası /exec URL)
-kbs_submit_url: "https://script.google.com/macros/s/AKfycbwvFGFN_suwt9VvPBklft8HcYGi4Ev9eEQvFlZBG1ShXeGHDyxwiK7EijNRc8FuHfl3rg/exec"
+kbs_submit_url: "https://script.google.com/macros/s/AKfycbzCAEn6bqTb-lFAgKcWGciKUvzsatdSOehIeac_N6C-GFs9sMC3NzpFFHrX9J_C6DUijw/exec"
 
 # Google reCAPTCHA v2 — https://www.google.com/recaptcha/admin (damlaokul.com + localhost)
 ogretmen_recaptcha_site_key: "6LfsHJAtAAAAAG_j7xRL46_TXnDKfA4a7PARcltD"
