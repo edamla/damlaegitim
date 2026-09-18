@@ -490,9 +490,11 @@
 
 .ogretmen-wizard__recaptcha {
   margin: 1.25rem 0 0.75rem;
-  min-height: 78px;
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   justify-content: flex-start;
+  gap: 0.35rem;
 }
 
 .ogretmen-wizard__panel[data-step="6"]:not(.is-active) .ogretmen-wizard__recaptcha,
@@ -500,9 +502,33 @@
   display: none;
 }
 
-.kbs-wizard .ogretmen-wizard__recaptcha-label {
-  font-weight: 600;
-  color: var(--color-text, #212529);
+.kbs-wizard #kbs-summary-view .ogretmen-wizard__kvkk-check {
+  margin-bottom: 1rem;
+}
+
+.kbs-wizard #kbs-summary-view .ogretmen-wizard__recaptcha {
+  margin: 0 0 1rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+.kbs-wizard #kbs-recaptcha {
+  min-height: 78px;
+  width: 304px;
+  max-width: 100%;
+}
+
+.kbs-wizard #kbs-summary-view .ogretmen-wizard__kvkk {
+  margin: 0 0 0.75rem;
+}
+
+.kbs-wizard #kbs-summary-view .ogretmen-wizard__summary-note {
+  margin-top: 0.5rem;
+}
+
+.kbs-wizard .ogretmen-wizard__recaptcha-hint {
+  font-size: 0.8rem;
+  line-height: 1.4;
 }
 
 .ogretmen-wizard__kvkk {
