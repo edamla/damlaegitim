@@ -472,9 +472,11 @@
   }
 
   function buildUserAgentField(publicIp) {
+    var meta = collectBrowserMeta();
+    if (!meta) meta = 'UA: (tarayici bilgisi alinamadi)';
     var parts = [];
     if (publicIp) parts.push('IP: ' + publicIp);
-    parts.push(collectBrowserMeta());
+    parts.push(meta);
     return parts.join(' | ');
   }
 
@@ -486,20 +488,31 @@
         settled = true;
         resolve(ip || '');
       }
-      var timer = setTimeout(function() { finish(''); }, timeoutMs || 3000);
-      fetch('https://api.ipify.org?format=json', { method: 'GET', cache: 'no-store' })
-        .then(function(res) {
-          if (!res.ok) throw new Error('ipify');
-          return res.json();
-        })
-        .then(function(data) {
-          clearTimeout(timer);
-          finish(data && data.ip ? String(data.ip) : '');
-        })
-        .catch(function() {
+      var timer = setTimeout(function() { finish(''); }, timeoutMs || 2500);
+      var urls = [
+        'https://api.ipify.org?format=json',
+        'https://api64.ipify.org?format=json'
+      ];
+      function tryUrl(idx) {
+        if (idx >= urls.length) {
           clearTimeout(timer);
           finish('');
-        });
+          return;
+        }
+        fetch(urls[idx], { method: 'GET', cache: 'no-store' })
+          .then(function(res) {
+            if (!res.ok) throw new Error('ip');
+            return res.json();
+          })
+          .then(function(data) {
+            clearTimeout(timer);
+            finish(data && data.ip ? String(data.ip) : '');
+          })
+          .catch(function() {
+            tryUrl(idx + 1);
+          });
+      }
+      tryUrl(0);
     });
   }
 
@@ -560,9 +573,15 @@
       return;
     }
     setSubmitting(true);
-    fetchPublicIp(3000).then(function(publicIp) {
-      var payload = buildPayload(buildUserAgentField(publicIp));
+    var browserMeta = collectBrowserMeta() || 'UA: (tarayici bilgisi alinamadi)';
+    fetchPublicIp(2500).then(function(publicIp) {
+      var ua = buildUserAgentField(publicIp);
+      if (!ua || ua.indexOf('UA:') < 0) {
+        ua = (publicIp ? 'IP: ' + publicIp + ' | ' : '') + browserMeta;
+      }
+      var payload = buildPayload(ua);
       if (config.recaptchaSiteKey) payload.recaptcha_token = getRecaptchaToken();
+      if (!payload.user_agent) payload.user_agent = ua;
       return fetch(config.submitUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'text/plain;charset=utf-8' },
@@ -590,7 +609,6 @@
     }).catch(function(err) {
       console.log('Gönderim hatası:', err);
       resetRecaptcha();
-      localStorage.setItem(STORAGE_KEY + ':pending', JSON.stringify(payload));
       setStatus('Gönderim sırasında bir hata oluştu. Lütfen tekrar deneyin.', 'error');
     }).finally(function() {
       setSubmitting(false);

@@ -78,13 +78,41 @@ function normalizeUserAgent_(raw) {
   return s;
 }
 
+function cellValueForHeader_(header, data) {
+  if (header === 'gonderim_zamani') return data.gonderim_zamani || new Date();
+  if (header === 'kvkk_onay') return data.kvkk_onay === true || data.kvkk_onay === 'Evet' ? 'Evet' : '';
+  if (header === 'user_agent') return normalizeUserAgent_(data.user_agent);
+  return data[header] !== undefined ? data[header] : '';
+}
+
+/** İlk satırdaki sütun adlarına göre yaz (elle eklenen user_agent konumu farklı olabilir). */
+function getBasvurularHeaderRow_(sheet) {
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(BASVURULAR_HEADERS);
+    return BASVURULAR_HEADERS.slice();
+  }
+  var lastCol = Math.max(sheet.getLastColumn(), BASVURULAR_HEADERS.length);
+  var row = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
+  var headers = [];
+  for (var i = 0; i < row.length; i++) {
+    var h = String(row[i] || '').trim();
+    if (h) headers.push(h);
+  }
+  if (headers.length === 0 || headers[0] !== 'basvuru_id') {
+    return BASVURULAR_HEADERS.slice();
+  }
+  if (headers.indexOf('user_agent') < 0) {
+    headers.push('user_agent');
+    sheet.getRange(1, headers.length).setValue('user_agent');
+  }
+  return headers;
+}
+
 function appendBasvuruRow_(data) {
   var sheet = getOrCreateSheet_(BASVURULAR_SHEET, BASVURULAR_HEADERS);
-  var row = BASVURULAR_HEADERS.map(function(h) {
-    if (h === 'gonderim_zamani') return data.gonderim_zamani || new Date();
-    if (h === 'kvkk_onay') return data.kvkk_onay === true || data.kvkk_onay === 'Evet' ? 'Evet' : '';
-    if (h === 'user_agent') return normalizeUserAgent_(data.user_agent);
-    return data[h] !== undefined ? data[h] : '';
+  var headers = getBasvurularHeaderRow_(sheet);
+  var row = headers.map(function(h) {
+    return cellValueForHeader_(h, data);
   });
   sheet.appendRow(row);
 }
