@@ -220,22 +220,6 @@ footer_order: 15
     margin-bottom: 1.5rem;
   }
 
-  .kbs-form-wrap {
-    width: 100%;
-    max-width: 640px;
-    margin: 0 auto;
-    border-radius: var(--radius, 0.5rem);
-    overflow: hidden;
-    background: #fafafa;
-  }
-
-  .kbs-form-wrap iframe {
-    display: block;
-    width: 100%;
-    min-height: 4013px;
-    border: 0;
-  }
-
   @media (max-width: 767.98px) {
     .kbs-hero {
       padding: 1.75rem 1.25rem;
@@ -319,6 +303,8 @@ footer_order: 15
     <p class="kbs-form-desc">
       Aşağıdaki formu doldurarak «Kitapla Büyüyen Sınıflar» projesine başvurabilirsiniz. Tüm alanları eksiksiz doldurmanızı rica ederiz.
     </p>
+    {% include kbs-wizard.html %}
+    <!-- Yedek Google Form — gerekirse yorumu kaldır
     <div class="kbs-form-wrap">
       <iframe
         src="https://docs.google.com/forms/d/e/1FAIpQLSfXWfRyUF-I_dUElHJog6fi7SpNQHWBYS_G_rxKSMiA-tMYPg/viewform?embedded=true"
@@ -332,6 +318,7 @@ footer_order: 15
         Yükleniyor…
       </iframe>
     </div>
+    -->
   </section>
 
 </div>

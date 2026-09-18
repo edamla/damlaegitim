@@ -1,0 +1,10 @@
+<div class="ogretmen-wizard__panel" data-step="2" id="kbs-step-2">
+  <h2 class="h4 mb-3">2. Sınıf seviyesi</h2>
+  <p class="text-muted mb-3">Sınıf öğretmeni olduğunuz sınıfın seviyesi nedir? Birden fazla seçebilirsiniz.</p>
+  <div class="ogretmen-wizard__grade-grid" id="kbs-grade-grid" role="group" aria-label="Sınıf seviyesi seçimi">
+    {% for g in (1..8) %}
+    <button type="button" class="ogretmen-wizard__grade-btn ogretmen-wizard__choice-btn" data-value="{{ g }}. Sınıf">{{ g }}. Sınıf</button>
+    {% endfor %}
+    <button type="button" class="ogretmen-wizard__grade-btn ogretmen-wizard__choice-btn" data-value="Okul Öncesi">Okul Öncesi</button>
+  </div>
+</div>

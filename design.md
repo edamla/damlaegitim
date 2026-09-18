@@ -555,6 +555,14 @@ Sayfa özel CSS yükler (`ogretmen-wizard.css`); Bootstrap grid + marka token’
 
 ---
 
+## 14b. Kitapla Büyüyen Sınıflar başvuru wizard
+
+**URL:** `/kitapla-buyuyen-siniflar` — Teknik kurulum: [project.md — Kitapla Büyüyen Sınıflar](project.md#kitapla-büyüyen-sınıflar-başvuru-wizard)
+
+`ogretmen-wizard.css` ve BEM sınıfları yeniden kullanılır; kök `.kbs-wizard.ogretmen-wizard`. Çoklu seçim için `.ogretmen-wizard__choice-btn` / `.ogretmen-wizard__choice-grid`.
+
+---
+
 ## 15. Oku360 Okuma Atölyesi
 
 **URL:** `/oku360` — [`_pages/oku360.html`](_pages/oku360.html), `layout: default` (tam genişlik; `page` container’ı kullanılmaz).

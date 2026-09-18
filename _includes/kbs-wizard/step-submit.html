@@ -1,0 +1,56 @@
+<div class="ogretmen-wizard__panel" data-step="4" id="kbs-step-4">
+  <div id="kbs-summary-view">
+    <h2 class="h4 mb-3">4. Özet ve gönder</h2>
+    <div class="ogretmen-wizard__summary-intro" id="kbs-summary-greeting" aria-live="polite"></div>
+    <div id="kbs-summary" class="ogretmen-wizard__summary">
+      <div class="ogretmen-wizard__summary-meta" id="kbs-summary-meta"></div>
+    </div>
+    {% if site.ogretmen_recaptcha_site_key != '' %}
+    <div class="ogretmen-wizard__recaptcha" id="kbs-recaptcha-wrap">
+      <div id="kbs-recaptcha" aria-label="Robot doğrulama"></div>
+    </div>
+    {% endif %}
+    <div class="form-check ogretmen-wizard__kvkk-check mb-3">
+      <input class="form-check-input" type="checkbox" id="kbs-kvkk" required>
+      <label class="form-check-label" for="kbs-kvkk">
+        Aydınlatma Metnini okudum ve anladım. Kişisel verilerimin bu kapsamda işlenmesini ve tarafıma iletilerin gönderilmesini kabul ediyorum.
+      </label>
+    </div>
+    <details class="ogretmen-wizard__kvkk">
+      <summary class="ogretmen-wizard__kvkk-summary">Kişisel Verilerin İşlenmesine İlişkin Aydınlatma Metni</summary>
+      <div class="ogretmen-wizard__kvkk-body">
+        <p class="ogretmen-wizard__kvkk-title">Kişisel Verilerin İşlenmesine İlişkin Aydınlatma Metni</p>
+        <p>Bu Aydınlatma Metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) uyarınca Damla Yayınevi Basın Yayın ve Ticaret A.Ş («Veri Sorumlusu») tarafından, form aracılığıyla paylaştığınız kişisel verilerinizin işlenme amaçları, hukuki sebepleri ve haklarınız konusunda sizi bilgilendirmek amacıyla hazırlanmıştır.</p>
+        <p><strong>1. İşlenen Kişisel Verileriniz</strong><br>Formu doldurmanız halinde aşağıdaki verileriniz işlenecektir:</p>
+        <ul>
+          <li><strong>Kimlik Bilgileri:</strong> Adınız, soyadınız.</li>
+          <li><strong>İletişim Bilgileri:</strong> E-posta adresiniz, telefon numaranız.</li>
+          <li><strong>Diğer:</strong> Kurum, sınıf, sosyal medya hesapları</li>
+        </ul>
+        <p><strong>2. Verilerin İşlenme Amaçları</strong><br>Kişisel verileriniz aşağıdaki amaçlarla sınırlı olarak işlenmektedir:</p>
+        <ul>
+          <li>İlettiğiniz taleplerin/başvuruların değerlendirilmesi ve sizinle iletişime geçilmesi.</li>
+          <li>Hizmetlerimizin sunulabilmesi ve iyileştirilmesi.</li>
+          <li>Yasal yükümlülüklerin yerine getirilmesi.</li>
+        </ul>
+        <p>Bu amaçlar için ticari elektronik ileti (çağrı, SMS, e-posta) tarafınıza iletilecektir.</p>
+        <p><strong>3. Veri Toplamanın Yöntemi ve Hukuki Sebebi</strong><br>Kişisel verileriniz, bu form aracılığıyla tamamen veya kısmen otomatik yollarla toplanmaktadır. İşleme faaliyetimiz, KVKK Madde 5 uyarınca; «bir sözleşmenin kurulması veya ifasıyla doğrudan doğruya ilgili olması» veya «ilgili kişinin temel hak ve özgürlüklerine zarar vermemek kaydıyla veri sorumlusunun meşru menfaatleri» hukuki sebeplerine dayanmaktadır.</p>
+        <p><strong>4. Verilerin Aktarılması</strong><br>Kişisel verileriniz, yalnızca yukarıdaki amaçların gerçekleştirilmesi için gerekli olduğu ölçüde; yetkili kamu kurum ve kuruluşları ile iş ortaklarımız/hizmet sağlayıcılarımız ile paylaşılabilecektir. Verileriniz yurt dışından hizmet aldığımız 3. taraf hizmet sağlayıcılarda barındırılabilir.</p>
+        <p><strong>5. Haklarınız (KVKK Madde 11)</strong><br>Kanun uyarınca; verilerinizin işlenip işlenmediğini öğrenme, işlenmişse bilgi talep etme, verilerin düzeltilmesini veya silinmesini isteme gibi haklara sahipsiniz. Bu haklarınızı kullanmak için <a href="mailto:kvkk@damlayayinevi.com.tr">kvkk@damlayayinevi.com.tr</a> adresine yazılı olarak başvurabilirsiniz.</p>
+      </div>
+    </details>
+    <p class="ogretmen-wizard__summary-note text-muted small mb-0">Bilgilerinizi kontrol edin. «Gönder» ile başvurunuzu iletin.</p>
+  </div>
+
+  <div id="kbs-success-view" class="ogretmen-wizard__success" hidden>
+    <div class="ogretmen-wizard__success-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="40" height="40" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+        <path d="M20 6L9 17l-5-5"/>
+      </svg>
+    </div>
+    <h2 class="ogretmen-wizard__success-title">Başvurunuz alındı</h2>
+    <p class="ogretmen-wizard__success-text">«Kitapla Büyüyen Sınıflar» projesi başvurunuz alındı. En kısa sürede sizinle iletişime geçeceğiz.</p>
+  </div>
+
+  <div class="ogretmen-wizard__status" id="kbs-status" role="status"></div>
+</div>

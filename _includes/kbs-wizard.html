@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ogretmen-wizard.css?v={{ site.time | date: '%s' }}">
+
+<div class="ogretmen-wizard kbs-wizard" id="kbs-wizard">
+  <div class="ogretmen-wizard__progress" id="kbs-progress" role="progressbar" aria-valuemin="1" aria-valuemax="4" aria-valuenow="1" aria-label="Başvuru ilerlemesi">
+    {% for i in (1..4) %}
+    <div class="ogretmen-wizard__step-dot{% if i == 1 %} is-active{% endif %}" data-progress="{{ i }}"></div>
+    {% endfor %}
+  </div>
+  <p class="ogretmen-wizard__progress-label" id="kbs-progress-label" aria-live="polite"></p>
+
+  {% include kbs-wizard/step-branch.html %}
+  {% include kbs-wizard/step-grade.html %}
+  {% include kbs-wizard/step-contact.html %}
+  {% include kbs-wizard/step-submit.html %}
+
+  <div class="ogretmen-wizard__actions">
+    <button type="button" class="btn btn-outline-secondary" id="kbs-btn-prev" disabled>Geri</button>
+    <button type="button" class="btn btn-primary" id="kbs-btn-next">İleri</button>
+  </div>
+
+  <div class="ogretmen-wizard__loading" id="kbs-loading" hidden aria-live="polite" aria-busy="true">
+    <div class="ogretmen-wizard__loading-inner" role="status">
+      <div class="ogretmen-wizard__spinner" aria-hidden="true"></div>
+      <p class="ogretmen-wizard__loading-text">Başvurunuz gönderiliyor…</p>
+      <p class="ogretmen-wizard__loading-hint">Bu işlem birkaç saniye sürebilir. Lütfen sayfayı kapatmayın.</p>
+    </div>
+  </div>
+</div>
+
+<script type="application/json" id="kbs-wizard-config">{
+  "submitUrl": {{ site.kbs_submit_url | default: '' | jsonify }},
+  "recaptchaSiteKey": {{ site.ogretmen_recaptcha_site_key | default: '' | jsonify }},
+  "okullarUrl": {{ site.baseurl | append: '/assets/data/okullar.json' | jsonify }}
+}</script>
+
+{% if site.ogretmen_recaptcha_site_key != '' %}
+<script>
+window.kbsOnRecaptchaReady = function() {
+  window.kbsRecaptchaApiReady = true;
+  document.dispatchEvent(new Event('kbs-recaptcha-ready'));
+};
+</script>
+<script src="https://www.google.com/recaptcha/api.js?onload=kbsOnRecaptchaReady&amp;render=explicit" async defer></script>
+{% endif %}
+
+<script defer src="{{ site.baseurl }}/assets/js/kbs-wizard.js?v={{ site.time | date: '%s' }}"></script>

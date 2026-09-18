@@ -862,6 +862,46 @@
   }
 }
 
+/* Kitapla Büyüyen Sınıflar wizard — çoklu seçim */
+.ogretmen-wizard__choice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 0.5rem;
+}
+
+.ogretmen-wizard__choice-grid--branch {
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+}
+
+.ogretmen-wizard__choice-btn {
+  border: 2px solid var(--ow-border);
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 0.65rem 0.75rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.35;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.ogretmen-wizard__choice-btn.is-selected {
+  border-color: var(--ow-accent);
+  background: #f4faf7;
+  color: var(--ow-accent);
+}
+
+.kbs-wizard.ogretmen-wizard {
+  max-width: 100%;
+  padding: 0;
+}
+
+.ogretmen-wizard__kvkk-check .form-check-label {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .ogretmen-wizard__list-item.is-new {
     animation: none;

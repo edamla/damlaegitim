@@ -121,6 +121,7 @@ damlaegitim/
 │   ├── map_story_metadata.rb           # Story kitap: anatema, degerler, egilimler, beceriler, unite (orchestrator)
 │   ├── curriculum_lib.rb               # TYMM/anatema sözlük yardımcıları (map_story_*)
 │   ├── ogretmen-submit.gs              # Öğretmen wizard → Sheets + mail (Workspace’te dağıtılır; repo referans kopyası)
+│   ├── kbs-submit.gs                   # Kitapla Büyüyen Sınıflar wizard → Sheets + mail
 ├── index.html            # Anasayfa
 ├── Gemfile               # github-pages + webrick (canlı GitHub Pages ile aynı stack)
 ├── CNAME                 # damlaokul.com
@@ -256,6 +257,58 @@ Mail hatası Sheet kaydını iptal etmez.
 | Eski davranış | Deploy → New version |
 
 Yerel test: `sh start.sh` → `http://localhost:4000/ogretmen` (reCAPTCHA admin’de `localhost` tanımlı olmalı).
+
+---
+
+## Kitapla Büyüyen Sınıflar başvuru wizard
+
+**URL:** `/kitapla-buyuyen-siniflar#basvuru-formu` — **Durum:** Wizard canlı; Apps Script URL’si `kbs_submit_url` ile yapılandırılır.
+
+4 adımlı başvuru: branş (çoklu), sınıf seviyesi (çoklu), iletişim (il/ilçe/okul, telefon, e-posta, isteğe bağlı sosyal), özet + KVKK + reCAPTCHA. Eski Google Form iframe’i sayfa kaynağında HTML yorumu olarak yedeklenir.
+
+| Dosya | Görev |
+|-------|-------|
+| `_pages/kitapla-buyuten-siniflar.html` | Proje içeriği + `{% include kbs-wizard.html %}` |
+| `_includes/kbs-wizard.html` | Wizard iskeleti, config JSON, reCAPTCHA |
+| `_includes/kbs-wizard/step-*.html` | 4 adım UI |
+| `assets/js/kbs-wizard.js` | State, validasyon, gönderim |
+| `assets/css/ogretmen-wizard.css` | Paylaşılan wizard stilleri + çoklu seçim |
+| `scripts/kbs-submit.gs` | Backend referansı |
+
+```yaml
+kbs_submit_url: "https://script.google.com/macros/s/…/exec"
+ogretmen_recaptcha_site_key: "…"   # KBS wizard aynı site key’i kullanır
+```
+
+Workspace kurulumu öğretmen formu ile aynıdır; e-tablo + `scripts/kbs-submit.gs` deploy. Sheet: `Basvurular`.
+
+reCAPTCHA: KBS wizard zaten `ogretmen_recaptcha_site_key` kullanır; KBS Apps Script’teki `RECAPTCHA_SECRET` değeri öğretmen script’indekiyle **aynı gizli anahtar** olmalıdır (site key ile eşleşen çift). Script Properties proje bazlıdır — KBS deploy’unda özelliği yine tanımlayıp öğretmenle aynı secret’ı kopyalayın.
+
+### Eski Google Form verisini taşıma (`eskidata.xlsx`)
+
+**Yöntem A — E-tablo içinde (önerilen):**
+
+1. [KBS e-tablosunu](https://docs.google.com/spreadsheets/d/1MYKe5XmzSc547bzIfaRzowUeqE9P9wOtzz_zVlCw4sE/edit) açın.
+2. **Dosya → İçe aktar → Yükle** → repodaki `eskidata.xlsx` → **Verileri mevcut sayfaya ekle** veya yeni sayfa (genelde adı **Form Yanıtları 1** olur).
+3. Apps Script editöründe `kbs-submit.gs` güncel ise **Deploy → New version** (isteğe bağlı).
+4. Fonksiyon seçiciden **`eskidataTasi`** → **Çalıştır**. İlk çalıştırmada e-tablo erişim izni isteyebilir.
+5. **Basvurular** sayfasında satırlar görünür. `basvuru_id` `legacy-…` ile başlar; `kaynak_url` eski form importunu işaret eder. Aynı fonksiyon tekrar çalıştırıldığında mevcut `basvuru_id` atlanır.
+
+**Yöntem B — Kopyala-yapıştır (elle):**
+
+```bash
+python scripts/import_kbs_eskidata.py
+```
+
+| Dosya | Ne yapın |
+|-------|----------|
+| `scripts/output/kbs_basvurular_yapistir.xlsx` | Excel’de aç → Ctrl+A → Kopyala → **Basvurular** sayfası boşsa **A1**’e yapıştır (16 sütun, başlık dahil) |
+| `scripts/output/kbs_basvurular_sadece_veri.xlsx` | Başlık satırı zaten varsa yalnız veriyi **A2**’den yapıştır |
+| `scripts/output/kbs_basvurular_import.csv` | İsterseniz **Dosya → İçe aktar** |
+
+Sütun sırası Apps Script `Basvurular` ile birebir: `basvuru_id`, `gonderim_zamani`, `ad`, `soyad`, `okul_adi`, `il`, `ilce`, `branslar`, `siniflar`, `telefon`, `eposta`, `whatsapp`, `instagram`, `x_hesabi`, `kvkk_onay`, `kaynak_url`, `user_agent` (KVKK onayı verilen cihaz: genel IP + tarayıcı `User-Agent`, platform, dil, ekran, saat dilimi; IP için gönderimde ipify.org, en fazla 3 sn).
+
+E-tablo başlık sırası bu listeyle aynı olmalıdır (`user_agent` en sonda).
 
 ---
 

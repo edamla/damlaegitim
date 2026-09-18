@@ -1,0 +1,61 @@
+<div class="ogretmen-wizard__panel" data-step="3" id="kbs-step-3">
+  <h2 class="h4 mb-3">3. İletişim bilgileri</h2>
+  <form class="ogretmen-wizard__form" id="kbs-contact-form">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label class="form-label" for="kbs-first-name">Adınız *</label>
+        <input class="form-control" type="text" id="kbs-first-name" required autocomplete="given-name">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="kbs-last-name">Soyadınız *</label>
+        <input class="form-control" type="text" id="kbs-last-name" required autocomplete="family-name">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="kbs-city">İl *</label>
+        <select class="form-select" id="kbs-city" required autocomplete="address-level1">
+          <option value="">İl seçin</option>
+        </select>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="kbs-district">İlçe *</label>
+        <select class="form-select" id="kbs-district" required autocomplete="address-level2" disabled>
+          <option value="">Önce il seçin</option>
+        </select>
+      </div>
+      <div class="col-12">
+        <label class="form-label" for="kbs-school">Görev yaptığınız okul *</label>
+        <input class="form-control" type="text" id="kbs-school" list="kbs-school-list" required
+          autocomplete="organization" placeholder="İl ve ilçe seçtikten sonra listeden seçin veya yazın">
+        <datalist id="kbs-school-list"></datalist>
+        <div class="form-text" id="kbs-school-hint">İl ve ilçe seçildiğinde MEB kurum listesi yüklenir. Listede yoksa okul adını elle yazabilirsiniz.</div>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="kbs-phone">İletişim bilgileriniz (telefon) *</label>
+        <input class="form-control" type="tel" id="kbs-phone" required autocomplete="tel" inputmode="numeric"
+          pattern="0?5[0-9]{9}"
+          maxlength="11"
+          title="5xxXXXxxXX şeklinde giriniz!">
+        <div class="form-text">Bu bilgi size ulaşabilmemiz için gereklidir.</div>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" for="kbs-email">E-posta *</label>
+        <input class="form-control" type="email" id="kbs-email" required autocomplete="email"
+          pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+          title="Geçerli bir e-posta adresi giriniz (ör. ad@okul.edu.tr).">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="kbs-whatsapp">WhatsApp kanalınız</label>
+        <input class="form-control" type="text" id="kbs-whatsapp" autocomplete="off" placeholder="İsteğe bağlı">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="kbs-instagram">Instagram hesabınız</label>
+        <input class="form-control" type="text" id="kbs-instagram" autocomplete="off" placeholder="İsteğe bağlı">
+      </div>
+      <div class="col-md-4">
+        <label class="form-label" for="kbs-x">X (Twitter) hesabınız</label>
+        <input class="form-control" type="text" id="kbs-x" autocomplete="off" placeholder="İsteğe bağlı">
+      </div>
+    </div>
+  </form>
+  <script type="application/json" id="kbs-adres-il-ilce">{"iller":[{% for il in site.data.turkiye_adres_il_ilce.iller %}{"kod":{{ il.kod }},"ad":{{ il.ad | jsonify }},"ilceler":[{% for ilce in il.ilceler %}{"kod":{{ ilce.kod }},"ad":{{ ilce.ad | jsonify }}}{% unless forloop.last %},{% endunless %}{% endfor %}]}{% unless forloop.last %},{% endunless %}{% endfor %}]}</script>
+</div>
