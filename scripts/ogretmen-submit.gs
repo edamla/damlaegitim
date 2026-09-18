@@ -18,7 +18,7 @@ var TALEPLER_HEADERS = [
   'talep_id', 'gonderim_zamani', 'sinif', 'ad', 'soyad', 'il', 'ilce',
   'telefon', 'eposta', 'okul_adi', 'urun_sayisi', 'egitim_sayisi', 'hikaye_sayisi',
   'urun_basliklari', 'urun_eanleri', 'urun_sluglari', 'filtre_tur', 'filtre_kategori',
-  'filtre_tags', 'filtre_anatemalar', 'filtre_arama', 'kaynak_url'
+  'filtre_tags', 'filtre_anatemalar', 'filtre_arama', 'kaynak_url', 'user_agent'
 ];
 
 var URUNLER_HEADERS = ['talep_id', 'sira', 'slug', 'baslik', 'ean', 'tur'];
@@ -45,6 +45,7 @@ function doPost(e) {
       return jsonResponse_({ ok: false, error: 'recaptcha', detail: captcha.detail || '' });
     }
     data.gonderim_zamani = new Date();
+    data.user_agent = normalizeUserAgent_(data.user_agent);
     appendTalepRow_(data);
     appendUrunRows_(data);
     try {
@@ -81,11 +82,67 @@ function jsonResponse_(obj) {
     .setMimeType(ContentService.MimeType.JSON);
 }
 
+function normalizeUserAgent_(raw) {
+  var s = raw === null || raw === undefined ? '' : String(raw).trim();
+  if (s.length > 45000) return s.substring(0, 45000) + '…';
+  return s;
+}
+
+function normalizeHeaderName_(h) {
+  return String(h || '')
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, '_');
+}
+
+function indexOfHeader_(headers, canonicalName) {
+  var want = normalizeHeaderName_(canonicalName);
+  for (var i = 0; i < headers.length; i++) {
+    if (normalizeHeaderName_(headers[i]) === want) return i;
+  }
+  return -1;
+}
+
+function cellValueForHeader_(header, data) {
+  var key = normalizeHeaderName_(header);
+  if (!key) return '';
+  if (key === 'gonderim_zamani') return data.gonderim_zamani || new Date();
+  if (key === 'user_agent') return normalizeUserAgent_(data.user_agent);
+  if (data[header] !== undefined && data[header] !== null) return data[header];
+  if (data[key] !== undefined && data[key] !== null) return data[key];
+  return '';
+}
+
+/** 1. satır sütun hizasına göre yaz; user_agent yoksa sona ekler. */
+function getTaleplerHeaderRow_(sheet) {
+  if (sheet.getLastRow() === 0) {
+    sheet.appendRow(TALEPLER_HEADERS);
+    return TALEPLER_HEADERS.slice();
+  }
+  var lastCol = Math.max(sheet.getLastColumn(), TALEPLER_HEADERS.length);
+  var row = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
+  var headers = [];
+  for (var i = 0; i < row.length; i++) {
+    headers.push(String(row[i] || '').trim());
+  }
+  while (headers.length > 0 && !headers[headers.length - 1]) {
+    headers.pop();
+  }
+  if (headers.length === 0 || normalizeHeaderName_(headers[0]) !== 'talep_id') {
+    return TALEPLER_HEADERS.slice();
+  }
+  if (indexOfHeader_(headers, 'user_agent') < 0) {
+    headers.push('user_agent');
+    sheet.getRange(1, headers.length).setValue('user_agent');
+  }
+  return headers;
+}
+
 function appendTalepRow_(data) {
   var sheet = getOrCreateSheet_(TALEPLER_SHEET, TALEPLER_HEADERS);
-  var row = TALEPLER_HEADERS.map(function(h) {
-    if (h === 'gonderim_zamani') return data.gonderim_zamani || new Date();
-    return data[h] !== undefined ? data[h] : '';
+  var headers = getTaleplerHeaderRow_(sheet);
+  var row = headers.map(function(h) {
+    return cellValueForHeader_(h, data);
   });
   sheet.appendRow(row);
 }

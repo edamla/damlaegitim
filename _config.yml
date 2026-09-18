@@ -28,7 +28,7 @@ contact_email: "iletisim@damlayayinevi.com.tr"
 contact_address: "Alemdar Mh. Prof. Kazım İsmail Gürkan Cad. No:8 Fatih, 34110 İstanbul"
 
 # Form endpoints (Google Apps Script / Forms embed — Workspace'te oluşturulur)
-ogretmen_submit_url: "https://script.google.com/macros/s/AKfycbwvDFx-F4z2K8cKtX2oCVtbckdgjIh9LMMrDZbvWVNrgCV2CYdjqTiUpjXQoHMUAmjC/exec"
+ogretmen_submit_url: "https://script.google.com/macros/s/AKfycbwY4Zd7rxZakbmcvLFmzvcDU6t1lVffgab3Y2v267mWzOkTTckdQTYLEbh8Wo_iRtvT/exec"
 # Kitapla Büyüyen Sınıflar başvuru wizard (Apps Script deploy sonrası /exec URL)
 kbs_submit_url: "https://script.google.com/macros/s/AKfycbzCAEn6bqTb-lFAgKcWGciKUvzsatdSOehIeac_N6C-GFs9sMC3NzpFFHrX9J_C6DUijw/exec"
 

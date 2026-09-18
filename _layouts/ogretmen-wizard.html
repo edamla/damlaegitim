@@ -866,6 +866,75 @@ window.owOnRecaptchaReady = function() {
     initCityDistrictSelects();
   }
 
+  function collectBrowserMeta() {
+    var nav = navigator;
+    var parts = [];
+    if (nav.userAgent) parts.push('UA: ' + nav.userAgent);
+    if (nav.platform) parts.push('Platform: ' + nav.platform);
+    if (nav.language) parts.push('Language: ' + nav.language);
+    if (nav.languages && nav.languages.length) {
+      parts.push('Languages: ' + Array.prototype.slice.call(nav.languages).join(','));
+    }
+    if (typeof screen !== 'undefined' && screen.width && screen.height) {
+      parts.push('Screen: ' + screen.width + 'x' + screen.height);
+    }
+    if (window.devicePixelRatio) parts.push('DPR: ' + window.devicePixelRatio);
+    try {
+      var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (tz) parts.push('Timezone: ' + tz);
+    } catch (tzErr) { /* ignore */ }
+    if (nav.hardwareConcurrency) parts.push('CPU cores: ' + nav.hardwareConcurrency);
+    if (typeof nav.maxTouchPoints === 'number') parts.push('Touch points: ' + nav.maxTouchPoints);
+    if (nav.vendor) parts.push('Vendor: ' + nav.vendor);
+    parts.push('Cookies: ' + (nav.cookieEnabled ? 'yes' : 'no'));
+    return parts.join(' | ');
+  }
+
+  function buildUserAgentField(publicIp) {
+    var meta = collectBrowserMeta();
+    if (!meta) meta = 'UA: (tarayici bilgisi alinamadi)';
+    var parts = [];
+    if (publicIp) parts.push('IP: ' + publicIp);
+    parts.push(meta);
+    return parts.join(' | ');
+  }
+
+  function fetchPublicIp(timeoutMs) {
+    return new Promise(function(resolve) {
+      var settled = false;
+      function finish(ip) {
+        if (settled) return;
+        settled = true;
+        resolve(ip || '');
+      }
+      var timer = setTimeout(function() { finish(''); }, timeoutMs || 2500);
+      var urls = [
+        'https://api.ipify.org?format=json',
+        'https://api64.ipify.org?format=json'
+      ];
+      function tryUrl(idx) {
+        if (idx >= urls.length) {
+          clearTimeout(timer);
+          finish('');
+          return;
+        }
+        fetch(urls[idx], { method: 'GET', cache: 'no-store' })
+          .then(function(res) {
+            if (!res.ok) throw new Error('ip');
+            return res.json();
+          })
+          .then(function(data) {
+            clearTimeout(timer);
+            finish(data && data.ip ? String(data.ip) : '');
+          })
+          .catch(function() {
+            tryUrl(idx + 1);
+          });
+      }
+      tryUrl(0);
+    });
+  }
+
   function buildSheetRow() {
     var c = state.contact;
     var education = state.list.filter(function(i) { return i.genre === 'education'; }).length;
@@ -972,23 +1041,41 @@ window.owOnRecaptchaReady = function() {
       setStatus('Lütfen «Ben robot değilim» doğrulamasını tamamlayın.', 'error');
       return;
     }
-    var payload = buildSheetRow();
-    if (RECAPTCHA_SITE_KEY) payload.recaptcha_token = getRecaptchaToken();
     setSubmitting(true);
-    fetch(SUBMIT_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-      body: JSON.stringify(payload)
-    }).then(function(res) {
+    var browserMeta = collectBrowserMeta() || 'UA: (tarayici bilgisi alinamadi)';
+    fetchPublicIp(2500).then(function(publicIp) {
+      var ua = buildUserAgentField(publicIp);
+      if (!ua || ua.indexOf('UA:') < 0) {
+        ua = (publicIp ? 'IP: ' + publicIp + ' | ' : '') + browserMeta;
+      }
+      var payload = buildSheetRow();
+      payload.user_agent = ua;
+      if (RECAPTCHA_SITE_KEY) payload.recaptcha_token = getRecaptchaToken();
+      return fetch(SUBMIT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      }).then(function(res) {
+        return { res: res, payload: payload };
+      });
+    }).then(function(bundle) {
+      if (!bundle || !bundle.res) return { ok: false };
+      var res = bundle.res;
+      var payload = bundle.payload;
       return res.text().then(function(text) {
+        var data;
         try {
-          return JSON.parse(text);
+          data = JSON.parse(text);
         } catch (parseErr) {
           console.log('Apps Script yanıtı JSON değil:', text.slice(0, 500));
-          return { ok: false, error: 'invalid_response' };
+          data = { ok: false, error: 'invalid_response' };
         }
+        return { data: data, payload: payload };
       });
-    }).then(function(data) {
+    }).then(function(result) {
+      if (!result) return;
+      var data = result.data;
+      var payload = result.payload;
       if (!data || data.ok !== true) {
         console.log('Gönderim hatası:', data);
         resetRecaptcha();
@@ -1000,7 +1087,10 @@ window.owOnRecaptchaReady = function() {
     }).catch(function(err) {
       console.log('Gönderim hatası:', err);
       resetRecaptcha();
-      localStorage.setItem(STORAGE_KEY + ':pending', JSON.stringify(payload));
+      var pending = buildSheetRow();
+      pending.user_agent = buildUserAgentField('');
+      if (RECAPTCHA_SITE_KEY) pending.recaptcha_token = getRecaptchaToken();
+      localStorage.setItem(STORAGE_KEY + ':pending', JSON.stringify(pending));
       setStatus('Gönderim sırasında bir hata oluştu. Lütfen tekrar deneyin.', 'error');
     }).finally(function() {
       setSubmitting(false);

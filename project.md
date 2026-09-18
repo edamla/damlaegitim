@@ -226,7 +226,7 @@ Gizli anahtar config’e **yazılmaz** — Apps Script Script Properties → `RE
 
 ### Gönderim akışı
 
-1. `buildSheetRow()` → JSON (`talep_id`, iletişim, ürünler, `filtre_*`, `recaptcha_token`, `urunler[]`)
+1. `buildSheetRow()` → JSON (`talep_id`, iletişim, ürünler, `filtre_*`, `recaptcha_token`, `user_agent`, `urunler[]`); `user_agent` gönderimde ipify (~2.5 sn) + tarayıcı meta (KBS ile aynı format: `IP: … | UA: … | Platform: …`)
 2. `POST`, `Content-Type: text/plain;charset=utf-8`
 3. Yanıt `{ ok: true }` → başarı ekranı; `localStorage` temizlenir
 4. Hata → öğretmene genel mesaj; ayrıntı `console.log('Gönderim hatası:', …)`
@@ -241,6 +241,8 @@ Gizli anahtar config’e **yazılmaz** — Apps Script Script Properties → `RE
 6. `/exec` URL → `ogretmen_submit_url`; siteyi yeniden deploy et
 
 **Sheet sayfaları** (ilk POST’ta oluşur): `Talepler`, `Talep_Urunleri`. Form `filtre_anatema` / `filtre_degerler` / `filtre_egilimler` / `filtre_beceriler` de gönderir; Sheet başlıklarına isteğe bağlı eklenir.
+
+`Talepler` script varsayılan başlıkları (`scripts/ogretmen-submit.gs` içindeki `TALEPLER_HEADERS`): `talep_id`, `gonderim_zamani`, `sinif`, `ad`, `soyad`, `il`, `ilce`, `telefon`, `eposta`, `okul_adi`, `urun_sayisi`, `egitim_sayisi`, `hikaye_sayisi`, `urun_basliklari`, `urun_eanleri`, `urun_sluglari`, `filtre_tur`, `filtre_kategori`, `filtre_tags`, `filtre_anatemalar`, `filtre_arama`, `kaynak_url`, **`user_agent`** (en sonda). Canlı tabloda başlık sırası farklıysa script 1. satıra göre yazır; `user_agent` yoksa otomatik eklenir. `user_agent` için hem site hem `ogretmen-submit.gs` **New version** deploy gerekir.
 
 Tarayıcıda `/exec` URL’sini GET ile açmak `doGet not found` döner — normal (`doPost` only).
 
