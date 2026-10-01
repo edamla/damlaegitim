@@ -28,9 +28,9 @@ kazanim: []
 beceriler: []
 unite: []
 akillitahta:
-  exe: ""
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-dikkatzekahafizagelistirme/win64/Dikkat%20Zeka%20ve%20Haf%C4%B1za%20Geli%C5%9Ftirme%20Seti.exe"
   deb: ""
-  appimage: ""
+  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-dikkatzekahafizagelistirme/linux64/Dikkat%20Zeka%20ve%20Haf%C4%B1za%20Geli%C5%9Ftirme%20Seti.AppImage"
   dmg: ""
 
 # Social Media Attributes

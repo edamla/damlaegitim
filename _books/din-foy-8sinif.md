@@ -29,9 +29,9 @@ kazanim: []
 beceriler: []
 unite: []
 akillitahta:
-  exe: ""
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-yndin8foy/win64/%C5%9Fef%20yeni%20nesil%20din%20k%C3%BClt%C3%BCr%C3%BC%20ve%20ahlak%20bilgisi%20f%C3%B6y%208.s%C4%B1n%C4%B1f.exe"
   deb: ""
-  appimage: ""
+  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-yndin8foy/linux64/%C5%9Fef%20yeni%20nesil%20din%20k%C3%BClt%C3%BCr%C3%BC%20ve%20ahlak%20bilgisi%20f%C3%B6y%208.s%C4%B1n%C4%B1f.AppImage"
   dmg: ""
 
 # Social Media Attributes

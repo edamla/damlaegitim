@@ -30,8 +30,8 @@ beceriler: []
 unite: []
 akillitahta:
   exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-4/win64/%C3%87%C4%B1lg%C4%B1n%20Problemler%204.S%C4%B1n%C4%B1f.exe"
-  deb: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-4/linux/edamla-cilgin-problemler-4-Setup-Latest.deb"
-  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-4/linux/edamla-cilgin-problemler-4-Setup-Latest.AppImage"
+  deb: ""
+  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-cilgin-problemler-4/linux64/%C3%87%C4%B1lg%C4%B1n%20Problemler%204.S%C4%B1n%C4%B1f.AppImage"
   dmg: ""
 
 # Social Media Attributes

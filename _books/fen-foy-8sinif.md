@@ -29,9 +29,9 @@ kazanim: []
 beceriler: []
 unite: []
 akillitahta:
-  exe: ""
+  exe: "https://cdn.e-damla.com.tr/autoupdate/edamla-fenfoy8/win64/%C5%9Eef%20yeni%20nesil%20fen%20bilimleri%208.s%C4%B1n%C4%B1f.exe"
   deb: ""
-  appimage: ""
+  appimage: "https://cdn.e-damla.com.tr/autoupdate/edamla-fenfoy8/linux64/%C5%9Eef%20yeni%20nesil%20fen%20bilimleri%208.s%C4%B1n%C4%B1f.AppImage"
   dmg: ""
 
 # Social Media Attributes
