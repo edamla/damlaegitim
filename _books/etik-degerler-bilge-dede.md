@@ -1,17 +1,17 @@
 ---
 layout: book
-title:  "ETİK DEĞERLER EĞİTİM SETİ-2. SINIF (10 KİTAP)"
+title:  "Etik Değerler Eğitim Seti (Bilge Dede'nin Yolu)"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
-ean: 8697911223875
+ean: 8697911224391
 languages: [Türkçe]
 page: "Her Biri 24"
 size: "16,5x23,5 cm"
 publish-number: 1817
 cover: "Karton Kapak"
-examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/etik-degerler2-y.pdf"
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223875/index.html"
+#examlink: ""
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911224391/index.html"
 damlaurl: ""
 paper: "1. Hamur"
 authors: ["Tuba Bozcan"]

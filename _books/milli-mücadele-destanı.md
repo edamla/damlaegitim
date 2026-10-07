@@ -1,16 +1,16 @@
 ---
 layout: book
-title:  "İstiklal Marşı Yazdıran Kahramanlar (10 Kitap)"
+title:  "Milli Mücadele Destanı"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
-ean: 9786254112560
+ean: 8697911224339
 languages: [Türkçe]
 page: "Her Biri 64"
 size: "13,5x19,5 cm"
 publish-number: 2972
 cover: "Karton Kapak"
-examlink: "https://cdn.e-damla.com.tr/PUBLIC/hds_pdf/y/istiklal-marsi-yazdiran-y.pdf"
+#examlink: ""
 preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/9786254112560/index.html"
 damlaurl: ""
 paper: "Kitap Kağıdı"
