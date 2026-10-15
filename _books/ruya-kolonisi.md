@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Rüya Kolonisi"
-description: "Geceleri gözlerimizi kapattığımızda girdiğimiz o gizemli dünyanın, rüyalar âleminin sızarak karanlığı yaymaya çalışan acımasız Kâbus Çetesi ile onlara…"
+description: "Rüyalarınızı kâbusa dönüşmemesi için karanlıkta savaşan gizli kahramanlarla tanışmaya hazır mısınız?"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [İyilik ve Kötülük, Ön Yargılar, Geçmişin İzleri, Ekip Ruhu, Görev Bilinci, İntikamın Yıkıcılığı]
 degerler: [Sorumluluk, Özgürlük, Vatanseverlik, Yardımseverlik, Saygı, Sabır]
 anatema: [Fantastik, Dayanışma, "Okuma ve Öğrenme"]
 egilimler: [Sorumluluk, Muhakeme, Bağımsızlık, Merak, "Kendine Güvenme (Öz Güven)", Odaklanma]

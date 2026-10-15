@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Orinoko Nehri"
-description: "Güney Amerika’nın kalbinde, bilinmezliklerle dolu devasa Orinoko Nehri’nin vahşi Çavuş Martial ile birlikte, yıllar önce bu ıssız topraklarda kaybolan…"
+description: "Orinko Nehri'nin gizemli sularında bilimsel merak ile evlat sevgisinin kesiştiği, tehlike ve dostluk dolu unutulmaz bir serüven."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Aile Sevgisi, Gizem ve Sırlar, Dostluk, Keşif Tutkusu, Doğa ile Mücadele, Fedakârlık]
 degerler: [Sorumluluk, Özgürlük, Sevgi, Saygı, Vatanseverlik, "Aile Bütünlüğü"]
 anatema: ["Kültür ve Tarih", "Merak ve Keşif", "Okuma ve Öğrenme"]
 egilimler: [Merak, Bağımsızlık, Odaklanma, Muhakeme, Sorumluluk, "Kendine Güvenme (Öz Güven)"]

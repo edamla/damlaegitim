@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Türkiye Şehir Öyküleri"
-description: "Anadolu insanı, tarih boyunca yurt edindiği topraklara sadece yerleşmekle isimler vermiştir. Türkiye’nin dört bir yanındaki şehirlerin ardında yatan…"
+description: "Anadolu insanı, yerleştiği topraklara gönlünce isimler koymuş; kimi bir olaydan kimi ise bir güzelden yadigâr kalmıştır."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Kahramanlık, Vatan Sevgisi, Doğa ve İnsan, İyilik ve Yardımlaşma, Direniş ve Özgürlük, Kara Sevda]
 degerler: [Vatanseverlik, Saygı, Özgürlük, Sorumluluk, Yardımseverlik, "Sağlıklı Yaşam"]
 anatema: ["Merak ve Keşif", "Okuma ve Öğrenme", "Kültür ve Tarih"]
 egilimler: [Sorumluluk, Odaklanma, Bağımsızlık, Merak, "Kendine Güvenme (Öz Güven)", Girişkenlik]

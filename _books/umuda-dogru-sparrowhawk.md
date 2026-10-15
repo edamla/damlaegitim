@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Umuda Doğru Sparrowhawk"
-description: "Büyük Savaş’ın ardından yaralarını sarmaya çalışan bir dünyada, yapayalnız yetkililerden kaçan Lotti ile sadık köpeğiyle birlikte hayatta kalma…"
+description: "Savaşın yıkımına karşı umudun, dostluğun ve sadakatin yeşerdiği nefes kesici bir macera."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Dostluk, Umut ve İnanç, Aile Kavramı, Savaşın Etkileri, Hayvan Sevgisi, Cesaret ve Macera]
 degerler: [Sorumluluk, Sevgi, Özgürlük, Saygı, Vatanseverlik, Duyarlılık]
 anatema: ["Okuma ve Öğrenme", "Kültür ve Tarih", "Merak ve Keşif"]
 egilimler: [Merak, Bağımsızlık, Sorumluluk, Odaklanma, "Kendine Güvenme (Öz Güven)", "Azim ve Kararlılık"]

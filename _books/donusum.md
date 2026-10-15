@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  Dönüşüm
-description: "Kumaş pazarlamacısı Gregor Samsa, sıradan ve kasvetli bir sabaha uyanırken sanlığını kaybetmenin verdiği dehşetle başa çıkmaya çalışırken, bir yandan da…"
+description: "Gregor Samsa, kasvetli düşlerden uyandığı bir sabah, kendini yatağının üzerinde devasa bir böceğe dönüşmüş olarak buldu."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Yabancılaşma ve Yalnızlık, Çıkar İlişkileri, Suçluluk ve Utanç, Toplumsal Baskı, Beden ve Zihin Çatışması, Bağımsızlaşma]
 degerler: [Özgürlük, Saygı, Sorumluluk, Vatanseverlik, Sevgi, Çalışkanlık]
 anatema: ["Kültür ve Tarih", "Okuma ve Öğrenme", "Merak ve Keşif"]
 egilimler: [Merak, Bağımsızlık, Muhakeme, Sorumluluk, Odaklanma, "Kendine Güvenme (Öz Güven)"]

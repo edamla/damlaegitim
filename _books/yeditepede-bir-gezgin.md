@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Yeditepede Bir Gezgin"
-description: "Almanya’da doğup büyümüş, üçüncü kuşak bir Türk genci... Kendi kültürüne masasında gördüğü büyüleyici bir fotoğraf tüm dünyasını değiştirir. Emma’nın…"
+description: "Almanya’da doğup büyümüş bir gencin, köklerine ve İstanbul'un gizemli tarihine doğru çıktığı büyüleyici bir yolculuk."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Aidiyet ve Kökler, Kültürel Uyanış, Mimari Estetik, Tarihî İhtişam, Gurbet ve Özlem, Efsaneler]
 degerler: [Vatanseverlik, Sorumluluk, Saygı, Özgürlük, Dostluk, Mütevazılık]
 anatema: ["Okuma ve Öğrenme", "Merak ve Keşif", "Kültür ve Tarih"]
 egilimler: [Merak, Bağımsızlık, Sorumluluk, Odaklanma, "Kendine Güvenme (Öz Güven)", Muhakeme]

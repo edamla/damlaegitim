@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Vatanın Kilidi Çanakkale"
-description: "Birinci Dünya Savaşı’nın en çetin cephesi olan Çanakkale’de, “Çanakkale Geçil- nın en güçlü donanmalarına karşı etten ve kemikten bir duvar ören…"
+description: "Oğlumun başındaki kınaları sormuştunuz. Biz vatana kurban ettiğimiz evladımızın başına kına yakarız kumandan. Bunu böyle bilesiniz."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Vatan Sevgisi, Maneviyat, Fedakârlık, Kahramanlık, Direniş, Birlik ve Kardeşlik]
 degerler: [Sorumluluk, Vatanseverlik, Özgürlük, Saygı, Sabır, Duyarlılık]
 anatema: [Empati, "Okuma ve Öğrenme", "Merak ve Keşif"]
 egilimler: [Merak, Bağımsızlık, Sorumluluk, Odaklanma, "Kendine Güvenme (Öz Güven)", "Azim ve Kararlılık"]

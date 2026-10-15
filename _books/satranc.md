@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  Satranç
-description: "New York’tan Buenos Aires’e giden lüks bir yolcu gemisinde, dünya satranç gelir. Naziler tarafından aylarca hücre hapsinde tutulan ve aklını yitirmemek…"
+description: "Satranç, hiçbir şey hesaplamayan bir matematikçi, sanat eseri olmayan bir sanatçı ve cisimsiz bir bina gibidir."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Psikolojik İşkence, Zihnin Sınırları, Kibir ve Hırs, Zekâ ve Yetenek, Özgürlük ve Tutsaklık, Satrancın Gizemi]
 degerler: [Sorumluluk, Vatanseverlik, Saygı, Özgürlük, Dürüstlük, Adalet]
 anatema: ["Okuma ve Öğrenme", "Kültür ve Tarih", "Merak ve Keşif"]
 egilimler: [Merak, Bağımsızlık, Odaklanma, Muhakeme, Sorumluluk, "Kendine Güvenme (Öz Güven)"]

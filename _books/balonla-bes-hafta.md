@@ -22,9 +22,9 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: ["Keşif Tutkusu", Fedakârlık, Sadakat, "Doğayla Mücadele", "Umut ve Çaresizlik", "Kültürel Çatışma"]
+tags: [Keşif Tutkusu, Fedakârlık, Sadakat, Doğayla Mücadele, Umut ve Çaresizlik, Kültürel Çatışma]
 degerler: [Saygı, Sorumluluk, Dostluk, Dürüstlük, Vatanseverlik, Estetik]
-anatema: [Doğa, Dayanışma, "Merak ve Keşif"]
+anatema: [Doğa, Dayanışma, Merak ve Keşif]
 egilimler: [Merak, Sorumluluk, Muhakeme, Bağımsızlık, "Soru Sorma", "Gerçeği Arama"]
 kazanim: [H.1.2.1, H.1.2.2, H.1.2.4, H.2.2.1, H.2.2.2, H.3.2.1, H.4.2.1, H.4.2.2, H.4.2.3, H.4.2.4]
 beceriler: ["Kendini Tanıma (Öz Farkındalık Becerisi)", "İletişim Becerisi", "Kendine Uyarlama (Öz Yansıtma Becerisi)", "Kendini Düzenleme (Öz Düzenleme Becerisi)", "Bilgi İşlemsel Düşünme Becerisi", "Yansıtma Becerisi"]

@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Jules Verne Esrarlı Ada"
-description: "Amerikan İç Savaşı’nın karanlık günlerinden kaçmak için bir balona binip fırtı- ortasında, haritalarda dahi bulunmayan ıssız bir adada bulurlar!…"
+description: "Fırtınanın ortasından hiçliğe düşen beş kazazede için hayatta kalmak, doğaya meydan okuyarak sıfırdan bir medeniyet kurmak demekti."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [İnsan Zekâsı, Dayanışma Mücadele, Medeniyet İnşası, Dayanışma ve Birlik, Gizemli Güç, Asla Pes Etmemek]
 degerler: [Vatanseverlik, Yardımseverlik, Sorumluluk, Özgürlük, Merhamet, Saygı]
 anatema: ["Merak ve Keşif", "Okuma ve Öğrenme", "Kültür ve Tarih"]
 egilimler: [Merak, Sorumluluk, Odaklanma, Bağımsızlık, Muhakeme, "Kendine Güvenme (Öz Güven)"]

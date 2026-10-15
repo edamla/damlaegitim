@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "İnsan Neyle Yaşar"
-description: "Cezalandırılarak yeryüzüne, fakir bir ayakkabıcının yanına sürgüne gönderilen bir cevabını bulmak zorundadır: İnsanın içinde ne vardır? İnsana ne…"
+description: "İnsanı ayakta tutan, hayata bağlayan ve var eden o büyük sırrı keşfetmeye hazır mısınız?"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Sevgi ve Merhamet, Vicdan ve Af, Empati, Açgözlülük, Öfke ve Kibir, İlahi Adalet]
 degerler: [Merhamet, Vatanseverlik, Dostluk, Saygı, Sorumluluk, Özgürlük]
 anatema: ["Okuma ve Öğrenme", "Merak ve Keşif", "Kültür ve Tarih"]
 egilimler: [Sorumluluk, Bağımsızlık, Odaklanma, Merak, Muhakeme, Girişkenlik]

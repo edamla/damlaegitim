@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Donmuş Umutlar Sarıkamış"
-description: "1914 yılının o dondurucu kışında, Allahuekber Dağları’nın zirvesinde yazılan acı rest planları arasına sıkışan, düşmandan ziyade amansız dondurucu…"
+description: "Allahuekber dağlarında, zemherinin ayazında donarak can veren şehitlerimizin, buz tutan umutlarının hüzünlü hikayesi."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Zorlu Doğa Koşulları, Vatan Sevgisi, Hatalı Kararlar, İhtiras, Çaresizlik, Savaşın Gerçek Yüzü]
 degerler: [Özgürlük, Saygı, Sorumluluk, Vatanseverlik, Sabır, "Sağlıklı Yaşam"]
 anatema: ["Okuma ve Öğrenme", "Merak ve Keşif", "Kültür ve Tarih"]
 egilimler: [Merak, Bağımsızlık, Sorumluluk, Odaklanma, "Kendine Güvenme (Öz Güven)", "Azim ve Kararlılık"]

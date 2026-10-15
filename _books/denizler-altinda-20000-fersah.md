@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Denizler Altında 20.000 Fersah"
-description: "1866 yılında dünya denizlerine korku salan gizemli bir deniz canavarının peşine kendilerini akılalmaz bir maceranın tam ortasında bulurlar!…"
+description: "Geçmişinden ve insanlıktan kaçarak kendi adaletini okyanusun ulaşılamaz derinliklerinde arayan gizemli Kaptan Nemo'nun sırlarla dolu dünyasına hoş geldiniz."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Özgürlük ve Esaret, Adalet, Bilimsel Keşif, Teknolojinin Gücü, Doğayla Mücadele, Doğanın İhtişamı]
 degerler: [Sorumluluk, Özgürlük, Saygı, Vatanseverlik, Sevgi, Adalet]
 anatema: ["Merak ve Keşif", "Okuma ve Öğrenme", "Bilim ve Teknoloji"]
 egilimler: [Merak, Bağımsızlık, Odaklanma, Muhakeme, Sorumluluk, "Kendine Güvenme (Öz Güven)"]

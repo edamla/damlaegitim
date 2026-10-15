@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Yalnız Efe"
-description: "Tefeci Eseoğlu’nun bitmek bilmeyen zulmüne başkaldıran, haksız yere öldürü- Kezban’ın destansı hikâyesi! Osmanlı’nın son dönemlerinde, Anadolu’nun ücra…"
+description: "Haksızlığa boyun eğmeyip tek başına dağa çıkan ve zalimlerin korkulu rüyası olan genç bir kızın efsanevi direnişi"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Adalate Arayışı, Vefa, Millî Şuur, Vatanseverlik, Cesaret, Zulûm ve Sömürü]
 degerler: [Saygı, Vatanseverlik, Sevgi, Sorumluluk, Özgürlük, Adalet]
 anatema: ["Okuma ve Öğrenme", "Merak ve Keşif", "Kültür ve Tarih"]
 egilimler: [Merak, Bağımsızlık, Sorumluluk, Odaklanma, "Kendine Güvenme (Öz Güven)", Muhakeme]

@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Yunus Emre Divanı"
-description: "Anadolu’nun Moğol istilaları ve iç karışıklıklarla sarsıldığı o karanlık çağda, in- “Yetmiş iki millete bir göz ile bakma” felsefesiyle dil, din ve ırk…"
+description: "Yaratılanı Yaradan'dan ötürü sevmeyi öğreten, ❛sevelim sevilelim❜ diyerek insanın çağları aydınlatan eseri."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Hoşgörü ve Sevgi, Ölüm, Gönül Yapmak, Tasavvuf, Doğruluk, İlâhî Aşk]
 degerler: [Vatanseverlik, Saygı, Sevgi, Sorumluluk, Özgürlük, Mahremiyet]
 anatema: ["Farklılıklar ve Hoşgörü", "Merak ve Keşif", "Kültür ve Tarih"]
 egilimler: [Merak, Bağımsızlık, Muhakeme, Sorumluluk, Odaklanma, "Kendine Güvenme (Öz Güven)"]

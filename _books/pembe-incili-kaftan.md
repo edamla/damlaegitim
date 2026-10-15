@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Pembe İncili Kaftan"
-description: "Osmanlı Devleti’nin kudretli günlerinde, Şah İsmail’e elçi olarak gönderilecek korkudan titrediği bu görev için, makam ve mevki peşinde koşmayan, mağrur…"
+description: "Vatan, al bayrağın dalgalandığı yer değil midir?\" diyen kahramanların, esarete boyun eğmeyenlerin ve aklıyla destan yazanların ölümsüz öyküleri!"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Vatan Sevgisi, Strateji ve Zekâ, Sabır ve Umut, Millî Kimlik, Bilgelik, Gelenekler]
 degerler: [Vatanseverlik, Saygı, Özgürlük, Sorumluluk, Dürüstlük, Duyarlılık]
 anatema: ["Kültür ve Tarih", "Merak ve Keşif", "Okuma ve Öğrenme"]
 egilimler: [Merak, Bağımsızlık, Sorumluluk, Odaklanma, "Kendine Güvenme (Öz Güven)", Muhakeme]

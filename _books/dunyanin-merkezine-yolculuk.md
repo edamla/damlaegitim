@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Dünya’nın Merkezine Yolculuk"
-description: "Eksantrik ve inatçı bilim insanı Profesör Lidenbrock, eski bir parşömen kâğıdının Şifre, İzlanda’daki sönmüş bir yanardağın kraterinden Dünya’nın…"
+description: "Yeraltı Okyanuslarından devasa mantar ormanlarına, tarih öncesi canavarlardan dev insanlara... Bilimin, cesaretin ve sınırların zorlandığı bir Jules Verne klasiği!"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Bilimsel İnatçılık, Doğanın Gizemi, Keşif Ruhu, Korku ve Cesaret, Sadakat, Tarih Öncesi Yaşam]
 degerler: [Vatanseverlik, Özgürlük, Sorumluluk, Saygı, Duyarlılık, Temizlik]
 anatema: [Doğa, "Merak ve Keşif", "Kültür ve Tarih"]
 egilimler: [Merak, Bağımsızlık, Odaklanma, Muhakeme, Sorumluluk, "Kendine Güvenme (Öz Güven)"]

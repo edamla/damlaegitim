@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "İstanbul Semt Öyküleri"
-description: "Yedi tepeli efsanevi şehir İstanbul’un her bir semti, taşı toprağı tarih kokan mahal- Kulesi’nin hüzünlü dalgalarından Galata’nın rüzgârlı sokaklarına…"
+description: "Dünyanın incisi ve şairlerin ilham kaynağı olan İstanbul'u bir de dilden dile söylenen kadim efsanelerden dinleyin."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [İsim Kökenleri, Fetih ve Kültür, Gelenekler ve Eğlence, Efsaneler ve Mitoloji, Tarihi Yapılar, Kültürel Çeşitlilik]
 degerler: [Sorumluluk, Özgürlük, Saygı, Vatanseverlik, Sevgi, Dürüstlük]
 anatema: ["Okuma ve Öğrenme", "Kültür ve Tarih", "Merak ve Keşif"]
 egilimler: [Merak, Bağımsızlık, Muhakeme, Sorumluluk, Odaklanma, "Kendine Güvenme (Öz Güven)"]

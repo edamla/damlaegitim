@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Özgürlüğün Bedeli"
-description: "Üniversiteyi kazanıp taşradan İstanbul’a gelen Erdem için bu devasa şehir, maya başlayan genç adam, yeni arkadaşlıkların ve modern hayatın cazibesine…"
+description: "İyi bir adam olmak için çok çalış ama geçmişini, nereden geldiğini unutma."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Özgürlük Arayışı, Sahte Dostluklar, Pişmanlık, Kuşak Çatışması, Aile Bağları, Dostluk Sınavı]
 degerler: [Saygı, Sorumluluk, Sevgi, Vatanseverlik, "Aile Bütünlüğü", Özgürlük]
 anatema: [Empati, Arkadaşlık, "Okuma ve Öğrenme"]
 egilimler: [Merak, Bağımsızlık, Sorumluluk, Odaklanma, Empati, Muhakeme]

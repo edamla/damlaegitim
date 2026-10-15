@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Fatih’in İstanbul Rüyası"
-description: "O, sadece ordulara hükmeden yenilmez bir komutan değil; aynı zamanda çağı- Mehmet, asırlardır aşılamayan o efsanevi surları yıkmak ve Peygamber’in müj-…"
+description: "Dünya kuruldu kuralalı böyle bir şey ne duyurulmuş ne de görülmüştü; gemiler karadan yürütülüyor, Haliç'e iniyordu."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Kutsal Hedef, Strateji ve Askeri Dehâ, Adalet ve Hoşgörü, Kahramanlık, Manevi Güç, Şehrin Yeniden İnşası]
 degerler: [Vatanseverlik, Sorumluluk, Saygı, Özgürlük, Adalet, Sevgi]
 anatema: ["Kültür ve Tarih", "Merak ve Keşif", "Okuma ve Öğrenme"]
 egilimler: [Merak, Bağımsızlık, Odaklanma, Muhakeme, Sorumluluk, "Kendine Güvenme (Öz Güven)"]

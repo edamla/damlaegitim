@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Lavanta Kokusu"
-description: "Gülbeyaz, yılın altı ayı karla kaplı, zorlu şartların hüküm sürdüğü bir köyde ya- hayallerin karların altına gömüldüğü bu köyde, onun kaderi de diğer…"
+description: "İnsan, köklerinden kopabilir mi?\" sorusuna verilmiş en güçlü cevap: Engellere ve yoksulluğa rağmen doğduğu topraklara sırtını dönmeyen bir genç kızın hikâyesi."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Kız Çocuklarının Eğitimi, İdealizm, Ön Yargılar, Azim, Memleket Sevgisi, Eğitim Gücü]
 degerler: [Sorumluluk, Vatanseverlik, Özgürlük, Saygı, Merhamet, Yardımseverlik]
 anatema: ["Merak ve Keşif", "Okuma ve Öğrenme", "Kültür ve Tarih"]
 egilimler: [Sorumluluk, Bağımsızlık, Merak, Odaklanma, "Kendine Güvenme (Öz Güven)", Muhakeme]

@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Ozanların Dilinden Anadolu"
-description: "Sazın teline her vurduklarında Anadolu’nun kalbini titreten, dağları, ovaları ve eşsiz bir yolculuk... Sınır boylarındaki kahramanlık destanları, sel ve…"
+description: "Rüyalarında Kırklar meclisinden aşk badesi içip yâr uğruna yollara düşen Sümmanî ve Nihanî'nin mahşere kalan destansı sevdaları."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [İlahi Aşk, Gurbet ve Hasret, Kader ve Tevekkül, Kültürel Aktarım, Vatan Sevgisi, Tasavvuf ve Maneviyat]
 degerler: [Sorumluluk, Özgürlük, Vatanseverlik, Saygı, Çalışkanlık, Sabır]
 anatema: ["Yolculuk ve Gezi", "Merak ve Keşif", "Okuma ve Öğrenme"]
 egilimler: [Merak, Bağımsızlık, Muhakeme, Sorumluluk, "Kendine Güvenme (Öz Güven)", Odaklanma]

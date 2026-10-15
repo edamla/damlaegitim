@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  Kaşağı
-description: "Atlara ve ahıra büyük bir ilgi duyan genç bir çocuğun, çok sevdiği o yepyeni bir sırra dönüşür. Kırılan kaşağının suçunu masum küçük kardeşi Hasan’ın…"
+description: "Bir çocuğun söylediği küçük bir yalanın, masum bir kardeşin ölümüne ve ömür boyu sürecek derin bir vicdan azabına dönüşmesinin yürek burkan hikâyesi."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Vicdan Azabı, Toplumsal Çöküş, İstismar, Zekâ ve Liderlik, Ahlaki Düşüş, Millî Uyanış]
 degerler: [Sorumluluk, Saygı, Özgürlük, Vatanseverlik, Sevgi, Çalışkanlık]
 anatema: ["Okuma ve Öğrenme", "Merak ve Keşif", "Kültür ve Tarih"]
 egilimler: [Merak, Bağımsızlık, Sorumluluk, Muhakeme, "Kendine Güvenme (Öz Güven)", Odaklanma]

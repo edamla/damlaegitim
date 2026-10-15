@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Tablodaki Sır"
-description: "Ünlü iş adamı Cemil Rıza Bey’in kızı Cansu’nun gizemli bir şekilde kaçırılması, dağ evinde rehin tutulan Cansu ve tesadüfen kendini bu karmaşanın…"
+description: "Geçmişin karanlık sırları, hiç beklenmedik ıssız bir dağ evinde gün yüzüne çıkıyor."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [İntikam ve Pişmanlık, Kader, Affetmek, Kardeşlik Bağı, İletişimsizlik, Güçlü Kadınlar]
 degerler: ["Aile Bütünlüğü", Sorumluluk, Saygı, Sevgi, Vatanseverlik, Özgürlük]
 anatema: ["Kültür ve Tarih", "Okuma ve Öğrenme", "Merak ve Keşif"]
 egilimler: [Merak, Bağımsızlık, Odaklanma, Muhakeme, Sorumluluk, "Kendine Güvenme (Öz Güven)"]

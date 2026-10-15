@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Savaş Ve Barış"
-description: "Napolyon’un yenilmez orduları Rusya sınırlarına dayanırken, koca bir impara- yüzleşiyor! Aristokrasinin parıltılı dünyasından köylülerin zorlu…"
+description: "Tarihin akışını değiştiren hırslar ve bu büyük fırtınanın ortasında kendi doğrularını arayan küçük hayatlar."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Savaşın Yıkıcılığı, İçsel Arayış, Halkın Direnişi, Aşk ve Affetme, Liderlik, Aile Bağları]
 degerler: [Vatanseverlik, Özgürlük, Sorumluluk, Saygı, "Sağlıklı Yaşam", Sevgi]
 anatema: ["Okuma ve Öğrenme", "Kültür ve Tarih", "Merak ve Keşif"]
 egilimler: [Merak, Bağımsızlık, Muhakeme, Sorumluluk, Odaklanma, "Kendine Güvenme (Öz Güven)"]

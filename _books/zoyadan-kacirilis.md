@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Zoya’dan Kaçırılış"
-description: "Çılgın Dedemin Zaman Makinesi” serisinden tanıdığımız Profesör Akif Yurttan- uçuklatan bir yolculuk yapıyor! Çocukluk günlerini geride bırakan Yavuz,…"
+description: "Çılgın bir profesör, cesur bir torun ve gizemlerle dolu Zoya gezegeni... Galaksiler arası bilgi savaşı başlıyor."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Bilimsel Keşif, Aile Bağları, Sorumluluk Alma, Açgözlülük ve İhtiras, Ekolojik Bilinç, İyilik ve Kötülük]
 degerler: [Sorumluluk, Özgürlük, Saygı, Vatanseverlik, Adalet, Dürüstlük]
 anatema: ["Kültür ve Tarih", "Yolculuk ve Gezi", "Merak ve Keşif"]
 egilimler: [Merak, Bağımsızlık, Odaklanma, Muhakeme, Sorumluluk, "Kendine Güvenme (Öz Güven)"]

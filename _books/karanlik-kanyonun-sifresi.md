@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Karanlık Kanyon’un Şifresi"
-description: "Sibirya’nın uçsuz bucaksız steplerinde at çobanlığı yapan genç bir adam, kay- karşısında sırlarla dolu ıssız bir ada belirir! Çok sevdiği atıyla bu adada…"
+description: "Biliriz ki bir gün, bir at bizi alıp da uzaklarai Allahuekber Dağları'nın doruğuna götürecek ve orada şahlanıp kişnediği zaman dedemin bütün silah arkadaşları huzura kavuşacak."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Vatan Hasreti, Savaşın Etkileri, Gizem ve Keşif, Özgürlük, Cesaret ve Azim, Ön Yargı ve Güven]
 degerler: [Sorumluluk, Vatanseverlik, Saygı, Özgürlük, Merhamet, Duyarlılık]
 anatema: ["Okuma ve Öğrenme", "Kültür ve Tarih", "Merak ve Keşif"]
 egilimler: [Merak, Bağımsızlık, Muhakeme, Sorumluluk, Odaklanma, "Kendine Güvenme (Öz Güven)"]

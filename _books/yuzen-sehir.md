@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Yüzen Şehir"
-description: "On dokuzuncu yüzyıl mühendisliğinin en büyük mucizesi olan Great Eastern boyutlarıyla adeta okyanusun üzerinde yüzen çelikten bir şehri andıran bu gemide…"
+description: "Okyanusun ortasında devasa bir çelik ada, fırtınalı sularda birbirine doğru sürüklenen eski düşmanlar ve kaderin kaçınılmaz oyunu..."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Mühendislik, İhtiras ve Kumar, İlahi Adalet, Dostluk ve Sadakat, Yeniden Doğuş, Yaşamın Kırılganlığı]
 degerler: [Sorumluluk, Özgürlük, Saygı, Vatanseverlik, Sabır, Sevgi]
 anatema: ["Kültür ve Tarih", "Yolculuk ve Gezi", Gizem]
 egilimler: [Merak, Bağımsızlık, Muhakeme, Sorumluluk, Odaklanma, "Kendine Güvenme (Öz Güven)"]

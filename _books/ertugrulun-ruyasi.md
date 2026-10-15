@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Ertuğrul’un Rüyası"
-description: "Kayı Boyu’nun yiğit lideri Ertuğrul Gazi, Moğolların acımasız baskısına ve Bizans’ın girişir. Sadece birkaç yüz çadırla yurt edindiği Söğüt’te, adaleti…"
+description: "Orta Asya'dan Söğüt'e uzanan, aşiretten cihan devletine giden kutlu bir göçün ve dirilişin hikâyesi."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Yurt Arayışı, Tasavvuf ve Rehberlik, Töreye Bağlılık, Liderlik ve Adalet, Birlik ve Dayanışma, Fedakârlık]
 degerler: [Özgürlük, Sorumluluk, Vatanseverlik, Saygı, Sabır, Sevgi]
 anatema: ["Okuma ve Öğrenme", "Merak ve Keşif", "Kültür ve Tarih"]
 egilimler: [Merak, Bağımsızlık, Sorumluluk, Odaklanma, "Kendine Güvenme (Öz Güven)", "Azim ve Kararlılık"]

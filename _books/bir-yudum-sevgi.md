@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Bir Yudum Sevgi"
-description: "Aynur ve Seher, büyük bir depremle hayatları altüst olan ve evleri başlarına birbirinden koparır ve iki kardeşi farklı çocuk yuvalarına savurur. Ancak…"
+description: "Depremin bir gecede yerle bir ettiği hayatların ve enkaz altından çocuk yuvasına uzanan küçük bir kız çocuğunun yürek burkan sessiz çığlığı."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Deprem ve Travma, Kardeşlik Bağı, Umut, Sevgi İhtiyacı, Çocuk Psikolojisi, Çaresizlik]
 degerler: [Sevgi, Saygı, "Aile Bütünlüğü", Sorumluluk, Özgürlük, Vatanseverlik]
 anatema: ["Okuma ve Öğrenme", "Merak ve Keşif", "Kültür ve Tarih"]
 egilimler: [Merak, Bağımsızlık, Sorumluluk, Odaklanma, "Kendine Güvenme (Öz Güven)", Muhakeme]

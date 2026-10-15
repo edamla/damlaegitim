@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "İki Yıl Okul Tatili"
-description: "Büyük bir tatil macerası hayaliyle gemiye binen yaşları 8 ile 14 arasında değişen okyanusun acımasız dalgalarında sürüklenirken bulurlar! Issız ve…"
+description: "On beş genç öğrencinin fırtınalı bir gecede başlayan okyanus yolculuğu, onları ıssız bir adada beklenmedik bir cesaret sınavına sokuyor."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Hayatta Kalma, Dayanışma, Eğitim ve Disiplin, Liderlik, Cesaret, Umut ve Karanlık]
 degerler: [Sorumluluk, Özgürlük, Saygı, Vatanseverlik, Çalışkanlık, Dostluk]
 anatema: [Dayanışma, "Merak ve Keşif", "Kültür ve Tarih"]
 egilimler: [Merak, Bağımsızlık, Sorumluluk, Odaklanma, "Kendine Güvenme (Öz Güven)", "Azim ve Kararlılık"]

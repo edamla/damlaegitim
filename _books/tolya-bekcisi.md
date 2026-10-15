@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Tolya Bekçisi"
-description: "Birbirinden tamamen habersiz seçilmiş üç cesur genç ve iki fantastik dünya ara- aniden çıkan korkunç bir yangının ortasında kendini “nefislerin” karanlık…"
+description: "İki dünya arasındaki kapının mührü çatladığında, karanlığı durduracak tek şey Tolya Bekçisi'nin cesaretidir."
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: []
+tags: [Sorumluluk, İnsanın Gücü, Cesaret, Nefis Mücadelesi, Doğa Sevgisi, Kendini Keşfetme]
 degerler: [Sorumluluk, Özgürlük, Dostluk, Vatanseverlik, Saygı, Sevgi]
 anatema: [Fantastik, "Okuma ve Öğrenme", "Merak ve Keşif"]
 egilimler: [Merak, Bağımsızlık, Odaklanma, Muhakeme, Sorumluluk, "Kendine Güvenme (Öz Güven)"]
