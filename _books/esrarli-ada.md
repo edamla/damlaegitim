@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Jules Verne Esrarlı Ada"
+title:  "Esrarlı Ada"
 description: "Fırtınanın ortasından hiçliğe düşen beş kazazede için hayatta kalmak, doğaya meydan okuyarak sıfırdan bir medeniyet kurmak demekti."
 categories: [Hikaye, Ortaokul]
 
