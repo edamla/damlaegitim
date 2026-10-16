@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Gizli Dedektiflik Bürosu (10 Kitap)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Gizli Dedektiflik Bürosu"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -21,8 +22,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [4]
-tags: [Arkadaşlık, Cesaret, "Vurdumduymaz Olmamak", "Takım Ruhu", "Planlı Çalışma"]
+grades: [3, 4]
+tags: [Toplumsal Duyarlılık, Kişisel Gelişim, Birey ve Toplum, Sosyal Kontrol, Macera, Sorumlu Davranma, Analitik Düşünme Becerisi Geliştirmek, Sebep-Sonuç İlişkisi Kurarak Araştırma Ruhu Kazanmak, Ekip Çalışması ve Yardımlaşma Bilincini İçselleştirmek, Parçadan Bütüne Gitme ve Problem Çözme Yetisi Kazanmak, Arkadaşlık, Yardımseverlik, Cesaret, Vurdumduymaz Olmamak, Takım Ruhu, Planlı Çalışma]
 degerler: [Yardımseverlik, Sorumluluk, Saygı, Çalışkanlık, Dostluk, Vatanseverlik]
 anatema: [Arkadaşlık, "Cesaret ve Korkular", Empati]
 egilimler: [Empati, "Kendine Güvenme (Öz Güven)", Merak, Girişkenlik, Bağımsızlık, "Kendine İnanma (Öz Yeterlilik)"]

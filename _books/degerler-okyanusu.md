@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Değerler Okyanusu (10 Kitap)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Değerler Okyanusu"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -22,7 +23,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1]
-tags: ["Değerler Eğitimi", "Klasik Masallar", "Uykudan Önce", "Değerlerimizi Masallarla Öğrenmek", "Erdemli Bireyler Olmak", Dünya, Doğruluk, Tevazu, Arkadaşlık, "Sözünde Durmak", Hayvan]
+tags: [ Değerler Eğitimi, Klasik Masallar, Uykudan Önce, Değerlerimizi Masallarla Öğrenmek, Erdemli Bireyler Olmak, Dünya Masal Edebiyatını Tanımak, Hayal Dünyasını Geliştirmek, Deniz, Yaşamını Keşfetmek, Hayvan Sevgisi Kazanmak, Doğruluk, Tevazu, Arkadaşlık, Sevgi, Saygı, Sözünde Durmak, Hayvan, Sevgisi, İyiliksever Olmak, Anne Sözü Dinlemek, Yalan Söylememek, Değerler Eğitimi, Etik Kavramlar, Uykudan Önce, Masal]
 degerler: [Saygı, Sevgi, Dürüstlük, Dostluk, Merhamet, Sorumluluk]
 anatema: [Değerler, Arkadaşlık, Hayvanlar]
 egilimler: [Merak, Empati, Odaklanma, Bağımsızlık, Sistematiklik, Muhakeme]

@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Hayat Bilgisi Öyküleri (10 Kitap)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Hayat Bilgisi Öyküleri"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -21,8 +22,9 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [2]
-tags: [Araştırma, Kariyer, Gözlem, İletişim, Sağlık, Beslenme, "Zaman Yönetimi"]
+grades: [2, 3]
+tags: [ Okulumuzda Hayat , Evimizde Hayat, Sağlıklı Hayat, Güvenli Hayat,Ülkemizde Hayat, Doğada Hayat
+ Araştırma, Gözlem ve İletişim Becerisi Kazanmak, Bilgi ve İletişim, Teknolojilerini Kullanmak, Değişim ve Sürekliliği Algılamak, Doğayı Sağlığı ve Kendini Korumak, Sorun Çözme ve Karar Verme Yeteneği Geliştirmek, Millî ve Kültürel Değerleri Tanımak, Araştırma, Kariyer, Gözlem, İletişim, Sağlık, Beslenme, Zaman Yönetimi]
 degerler: ["Sağlıklı Yaşam", Sorumluluk, Saygı, Estetik, Dostluk, Özgürlük]
 anatema: [İletişim, "Okuma ve Öğrenme", "Güvenli Yaşam"]
 egilimler: [Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", "Gerçeği Arama", Odaklanma, Sorumluluk]

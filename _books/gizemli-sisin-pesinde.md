@@ -1,8 +1,8 @@
 ---
 layout: book
 title:  "Gizemli Sisin Peşinde"
-description: "Doğanın gizemlerini çözmek, çocukların analitik düşünme becerilerini geliştirmenin en eğlenceli yoludur! “Gizemli Sisin Peşinde”, kasabaya yayılan…"
-categories: [Hikaye, İlkokul]
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Gizemli Sisin Peşinde"
+Categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
 ean: 9786254115806
@@ -23,7 +23,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3, 4]
-tags: []
+tags: [ Gizem ve Macera, Doğa Sevgisi, Problem Çözme, Merak Duygusu, Hayvan Dostları, Keşif, Yardımlaşma, Karşılaşılan Problemleri Analitik Bir Yaklaşımla Çözümlemek, Doğaya ve Hayvanlara Karşı Duyarlılık Geliştirmek, Merak Duygusunu Araştırma ve Keşfetme Güdüsüne Dönüştürmek, Zorluklar Karşısında Cesaret ve Dayanışma Göstermek]
 degerler: [Sorumluluk, Saygı, Merhamet, Vatanseverlik, Çalışkanlık, Sevgi]
 anatema: [Gizem, Empati, "Merak ve Keşif"]
 egilimler: [Empati, Merak, "Gerçeği Arama", Bağımsızlık, Sorumluluk, Sistematiklik]

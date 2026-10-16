@@ -1,6 +1,7 @@
 ---
 layout: book
-title:  "Çılgın Dedemin Türkiye Turu (10 Kitap)"
+title:  "Çılgın Dedemin Işın Makinesi Türkiye Turunda (10 Kitap)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Çılgın Dedemin Işın Makinesi Türkiye Turunda"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -21,8 +22,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [3]
-tags: []
+grades: [3, 4]
+tags: [Türkiye’nin Şehirleri, Tarihî ve Doğal Güzellikler, Kültürel Miras Alanları, Millî Mücadele Kahramanları, Zaman ve mekân yolculuğu kurgusuyla hayal gücünü geliştirmek, Ülkemizin farklı şehirlerini, tarihî ve doğal güzelliklerini tanımak, Geçmiş, bugün ve gelecek arasında tarihsel bağlantı kurmak, Kültürel mirası ve doğal varlıkları korumanın değerini kavramak, Bilim ve teknolojinin sınır tanımayan gücünü fark etmek, Millî bilinci geliştirerek ülkesini ve tarihini sahiplenmek]
 degerler: [Vatanseverlik, Saygı, Sorumluluk, Estetik, Duyarlılık, "Aile Bütünlüğü"]
 anatema: ["Kültürel Miras", "Okuma ve Öğrenme", "Kültür ve Tarih"]
 egilimler: [Merak, Bağımsızlık, Girişkenlik, "Kendine Güvenme (Öz Güven)", "Soru Sorma", "Açık Fikirlilik"]

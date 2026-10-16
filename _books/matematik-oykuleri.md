@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Matematik Öyküleri (10 KİTAP)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Matematik Öyküleri"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -21,8 +22,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [3]
-tags: []
+grades: [3, 4]
+tags: [ Doğal Sayılar ve Dört İşlem (Toplama, Çıkarma, Çarpma, Bölme), Kesirler, Örüntüler ve Uzunluk Ölçme, Para, Zaman ve Ağırlık Ölçüleri, Geometrik Şekiller, Açı, Simetri, Çevre ve Alan Ölçme, Matematiksel Kavramları Günlük Hayat Problemlerinde Kullanmak,Analitik ve Soyut Düşünme Becerisi Geliştirmek, Matematiğe Karşı Olumlu Tutum ve Sevgi Kazanmak, Okuduğunu Anlama ve Şifre Çözme Yeteneğini Geliştirmek]
 degerler: [Sorumluluk, Saygı, Vatanseverlik, Estetik, Dostluk, Duyarlılık]
 anatema: [Dayanışma, Macera, "Problem Çözme"]
 egilimler: [Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Soru Sorma", Sorumluluk]

@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Penceredeki Mutluluk"
-description: "Mavi tüylü bir güvercin, pes etmeyi reddeden bir çocuk ve imkânsız gibi görünen sıcacık bir dostluk! Mavili; boya kazasıyla maviye bürünmüş, konuşkan ve…"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Penceredeki Mutluluk"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -22,8 +22,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [3, 4]
-tags: [Korku, Cesaret, Arkadaşlık, Dayanışma]
+grades: [2, 3]
+tags: [ Empati, Engellilik Farkındalığı, Hayvan Sevgisi, Azim ve Kararlılık, Dostluk, Dayanışma, Ön Yargılar, İletişim, Engelli Bireylere Yönelik Empati ve Anlayış Geliştirmek, Zorluklar Karşısında Pes Etmemeyi ve Azimli Olmayı Öğrenmek, Ön Yargıları (Akran Zorbalığını) Aşarak Güçlü Dostluklar Kurmak, Farklılıklara Saygı Duyma ve Kendini İfade Etme Becerisi Kazanmak, Korku, Cesaret, Özgüven, Arkadaşlık, Dayanışma]
 degerler: [Saygı, Sorumluluk, Vatanseverlik, Dostluk, Çalışkanlık, Sevgi]
 anatema: [Dayanışma, Arkadaşlık, "Cesaret ve Korkular"]
 egilimler: [Merak, "Kendine Güvenme (Öz Güven)", Girişkenlik, Empati, Bağımsızlık, "Kendine İnanma (Öz Yeterlilik)"]

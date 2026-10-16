@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Cicim Masallarım (10 Kitap)"
-description: "Nesilden nesile aktarılan ve dünyanın dört bir yanında çocukların kalbinde taht kuran klasik masallar, “Cicim Masallarım” setini 1. sınıf öğrencileriyle…"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Cicim Masallarım"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -23,7 +23,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1]
-tags: [Doğruluk, Tevazu, Arkadaşlık, "Sözünde Durmak", Hayvan]
+tags: [Değerler Eğitimi, Klasik Masallar, Uykudan Önce, Değerlerimizi Masallarla Öğrenmek, Erdemli Bireyler Olmak, Dünya, Masal Edebiyatını Tanımak, Hayal Dünyasını Geliştirmek, Doğruluk, Tevazu, Arkadaşlık, Sevgi, Saygı, Sözünde Durmak, Hayvan, Sevgisi, İyiliksever Olmak, Anne Sözü Dinlemek, Yalan Söylememek, Değerler Eğitimi, Etik Kavramlar, Uykudan Önce, Masal]
 degerler: [Saygı, Sevgi, Dostluk, Estetik, Sorumluluk, Merhamet]
 anatema: [Arkadaşlık, Hayvanlar, Empati]
 egilimler: [Merak, Empati, Bağımsızlık, Odaklanma, Sistematiklik, "Kendine Güvenme (Öz Güven)"]

@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Evliya Çelebi’nin Maceraları (10 Kitap)"
-description: "Dünya tarihinin en büyük seyyahlarından Evliya Çelebi’nin rehberliğinde Asya, Avrupa ve Afrika kıtalarına uzanan benzersiz bir tarih ve coğrafya…"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Evliya Çelebi’nin Maceraları"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -23,7 +23,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3, 4]
-tags: [Ferman, Korsan, "Azak Kalesi", Keşif, Fetih, Kırım, "Buz Denizi", Dicle, Bağdat]
+tags: [Gezi, Yeni Keşifler, Coğrafya, Tarih, Gizem, Heyecan, Serüven, Macera, Dünya Turu, Asya, Avrupa ve Afrika Kıtalarındaki Farklı Mekân ve Kültürleri Tanımak, Geçmişteki Tarihî Olayları ve Şahsiyetleri İncelemek, Tarihî Olaylar Arasında Sebep-Sonuç İlişkisi Kurmak, Osmanlı Coğrafyasını ve Kültürel Mirasını Kavramak, Ferman, Korsan, Azak Kalesi, Keşif, Fetih, Kırım, Buz Denizi, Dicle, Bağdat, Kıtlık, Çöl, Piramit, Merak]
 degerler: [Sorumluluk, Saygı, Vatanseverlik, Çalışkanlık, "Sağlıklı Yaşam", Özgürlük]
 anatema: ["Merak ve Keşif", Macera, Gizem]
 egilimler: [Merak, Empati, Bağımsızlık, "Gerçeği Arama", "Kendine İnanma (Öz Yeterlilik)", Sistematiklik]

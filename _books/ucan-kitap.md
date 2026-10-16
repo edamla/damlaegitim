@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Uçan Kitap"
-description: "Günümüzün en büyük pedagojik sorunlarından biri olan “ekran bağımlılığına” karşı çocuklarımıza kitap okuma sevgisini aşılamaya ne dersiniz? “Uçan Kitap”,…"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Uçan Kitap"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -22,8 +22,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [3, 4]
-tags: [ekran-bagimliligi, dijital-detoks, kitap-okuma]
+grades: [2, 3]
+tags: [ Ekran Bağımlılığı, Kitap Okuma Sevgisi, İletişim ve Dostluk, Kütüphane Ziyareti, Para Biriktirme, Hayal Gücü, Ekran Süresini Doğru Belirleme ve Dijital Detoks Becerisi Kazanmak,Kitap Okuma Alışkanlığı ve Kütüphane Sevgisi Geliştirmek, Akran İlişkilerini, Paylaşmayı ve Birlikte İş Yapma Becerisini Güçlendirmek, Bilinçli Tüketim ile Para Biriktirerek Doğru Alışkanlıklar Edinmek]
 degerler: [Dostluk, Sorumluluk, Vatanseverlik, Saygı, Merhamet, Çalışkanlık]
 anatema: [Empati, "Merak ve Keşif", "Hayal Gücü"]
 egilimler: [Empati, Merak, "Gerçeği Arama", Bağımsızlık, Girişkenlik, "Kendine İnanma (Öz Yeterlilik)"]

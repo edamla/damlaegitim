@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "İlham Piresi"
-description: "Bir pire, pire gibi yaşamalıdır... Ama ya bir pire kuralları bozarsa? Ya kaşındırmak yerine ilham verirse? Ya minicik bir zıplayış, koca bir hikâyeyi…"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun İlham Piresi"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -21,8 +21,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [1, 2]
-tags: ["Çocuk Edebiyatı", "Kendini Keşfetme", İlham, Farklılıklar, "Hayvanlar Âlemi", Yazarlık, Mizah]
+grades: [1, 2, 3]
+tags: [ Kendini Keşfetme, Özgünlük, Yaratıcılık, Beklentilere Karşı Çıkma, Özgüven, Mizah, Küçük Boyut-Büyük Etki, Kendine Has İlgi Alanları ve Yetenekleri Olduğunu Fark Etmek, Başkalarına Zarar Vermeden de Faydalı Olunabileceğini Kavramak, Kendi Doğrusunu Bulma ve Karar Verme Becerisini Geliştirmek, Küçük Adımların Dünyada Büyük Etkiler Yaratabileceğini Anlamak, Çocuk Edebiyatı, Kendini Keşfetme, İlham, Yaratıcılık, Farklılıklar, Özgüven, Hayvanlar Âlemi, Yazarlık, Mizah ]
 degerler: [Sorumluluk, Dürüstlük, Saygı, Özgürlük, Estetik, Dostluk]
 anatema: [Özgüven, Hayvanlar, "Farklılıklar ve Hoşgörü"]
 egilimler: [Merak, Yaratıcılık, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, Empati]

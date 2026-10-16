@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Derslerle Aram Çok İyi"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Derslerle Aram Çok İyi"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -22,7 +23,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [2]
-tags: ["Yalan Söylememek", "Adil Olmak", "Cömert Olmak", "Merhametli Olmak"]
+tags: [ Birey ve Toplum, Mizah, Bilgi, Millî Kültür, Dil Bilimi, Fen Bilimleri, Türkçe, Matematik, Spor, Sosyal Bilgiler, Eğitim, Yeni Deyimler ve Atasözleri Öğrenmek, Okuma, Anlama ve Yorumlama Becerisi Geliştirmek, Farklı Branşlardaki Temel Kazanımları Pekiştirmek, Bilgiyi Eğlenceli Yollarla Edinmek, Analitik Düşünme, Arkadaşlık, Takım Çalışması, Dayanışma, Eğitsel Düşünce, Çoklu Zekâ]
 degerler: [Merhamet, Saygı, Sorumluluk, Estetik, Yardımseverlik, Duyarlılık]
 anatema: [Değerler, Duygular, Doğa]
 egilimler: [Merak, Bağımsızlık, Sorumluluk, "Kendine Güvenme (Öz Güven)", Odaklanma, Muhakeme]

@@ -21,8 +21,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [4]
-tags: []
+grades: [3, 4]
+tags: [ Merak, Hayal Gücü, Keşif, Yenilik, Teknoloji, Mühendislik, Cesaret, Bilimsel Yöntem, Doğa Sevgisi, Gözlem, Farklı Kültürlerden Gelen Bilim İnsanlarını ve İnsanlığa Katkılarını Tanımak, Bilime Merak Duyma ve Araştırma Tutkusu Geliştirmek, Azim ve Çalışkanlığın Başarıya Götürdüğünü Kavramak, Problem Çözme, Yaratıcı Düşünme ve Sorgulama Becerisi Kazanmak, Kendi Potansiyelini Keşfederek Evrensel Bir Bakış Açısı Geliştirmek]
 degerler: [Sorumluluk, Saygı, Vatanseverlik, Özgürlük, Çalışkanlık, Dürüstlük]
 anatema: ["Bilim ve Teknoloji", "Merak ve Keşif", Empati]
 egilimler: [Merak, Bağımsızlık, "Gerçeği Arama", Empati, "Kendine Güvenme (Öz Güven)", "Kendine İnanma (Öz Yeterlilik)"]

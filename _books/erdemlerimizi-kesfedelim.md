@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Erdemlerimizi Keşfedelim (10 Kitap)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Erdemlerimizi Keşfedelim"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -21,8 +22,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [2]
-tags: ["Doğru Karar Vermek", "Haksızlık Yapmamak", "Yalan Söylememek", "Yeteneklerini Keşfetmek", "Fedakâr Olmak", "Vefalı Olmak", "Söz Dinlemek", Paylaşmak, "Hasta Ziyareti", Cesaret, Fedakârlık, Kanaatkârlık, "Doğayı Korumak"]
+grades: [2, 3]
+tags: [ Hikâyelerle Değerler Eğitimi, Erdemler ile Karakter Gelişimi, Özveri, Olumlu Davranış Geliştirmek, Erdemleri Öğrenmek, Yeni Kelimeler Öğrenmek, Yeni Deyim ve Atasözü Öğrenmek, Doğru Karar Vermek, Haksızlık Yapmamak, Yalan Söylememek, Yeteneklerini Keşfetmek, Fedakâr Olmak, Vefalı Olmak, Sorumluluk, Söz Dinlemek, Paylaşmak, Hasta Ziyareti, Cesaret, Yardımseverlik, Fedakârlık, Dürüstlük, Kanaatkârlık, Doğayı Korumak, Affetmek, Saygı, Empati Yapmak, İyilik, Özür Dilemek, Vatanseverlik]
 degerler: [Saygı, Sorumluluk, Yardımseverlik, Dürüstlük, Duyarlılık, Estetik]
 anatema: [Doğa, "Karar Verme", "Cesaret ve Korkular"]
 egilimler: [Sorumluluk, Merak, "Kendine Güvenme (Öz Güven)", Bağımsızlık, Oyunseverlik, Empati]

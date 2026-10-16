@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "MESLEK ÖYKÜLERİ (10 KİTAP)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun MESLEK ÖYKÜLERİ"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -21,8 +22,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [2]
-tags: [Doktor, pilot, aşçı, stilist, terzi, "ziraat mühendisi", yazar, mimar, asker, avukat, "bilim insanı", hemşire, hostes]
+grades: [2, 3]
+tags: [ Toplumsal İş Bölümü ve Meslekler, Mesleklerin Günlük Yaşamdaki Yeri ve Önemi, Emeğe Saygı ve Sorumluluk Bilinci, Çevresindeki Meslekleri ve Özelliklerini Tanımak, Toplumsal Yaşamda, Her Mesleğin Saygın Olduğunu Kavramak, Kendi İlgi ve Yeteneklerini Fark Etmek, Doktor, pilot, aşçı, stilist, terzi, ziraat mühendisi, yazar, mimar, asker, avukat, bilim insanı, hemşire, hostes]
 degerler: [Sorumluluk, Saygı, Dostluk, Yardımseverlik, Vatanseverlik, Özgürlük]
 anatema: [Dayanışma, "Merak ve Keşif", Değerler]
 egilimler: [Merak, Bağımsızlık, Sorumluluk, "Kendine Güvenme (Öz Güven)", Odaklanma, "Gerçeği Arama"]

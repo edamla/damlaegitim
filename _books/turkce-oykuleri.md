@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Türkçe Öyküleri (10 Kitap)"
-description: "Dil bilgisi kurallarını öğrenmek hiç bu kadar eğlenceli ve macera dolu olmamıştı! Domatça Mahallesi’nin sevimli karakterleriyle hazırlanan Türkçe Öyküleri…"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Türkçe Öyküleri"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -23,7 +23,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3, 4]
-tags: [Ahlak, "Alçak Gönüllülük", Azim, Cömertlik, Dayanışma, İyilikseverlik, Kardeşlik, Paylaşma, Sadakat]
+tags: [Zıt-Eş Anlamlı Kelimeler, Sesteş Kelimeler, Soru, Ünlem, Neden-Sonuç Cümleleri, Hikâye Unsurları, Metnin Bölümleri, Noktalama İşaretleri, Atasözleri ve Deyimler, Harf Bilgisi, -de, -ki Bağlaçları, Büyük Harflerin Kullanımı, Kelimelerin Doğru Yazımı, Şiir-Terim Anlam, Benzetme Cümleleri, Zıt, Eş Anlamlı ve Sesteş Kelimeleri Kavramak, Soru, Ünlem ve Neden-Sonuç Cümleleri Kurmak, Hikâye Unsurlarını ve Metnin Bölümlerini Ayırt Etmek, Noktalama İşaretlerini ve Büyük Harfleri Doğru Kullanmak, -de, -ki Bağlaçlarının Doğru Yazımını Öğrenmek, Şiir, Terim Anlam ve Benzetme Cümlelerini Pekiştirmek, Ahlak, Alçak Gönüllülük, Azim, Cömertlik, Dayanışma, Dostluk, Dürüstlük, Güven, İyilikseverlik, Kardeşlik,]
 degerler: [Saygı, Dostluk, Merhamet, Sevgi, Sorumluluk, Dürüstlük]
 anatema: [Dayanışma, "Paylaşma ve Yardımlaşma", "Azim ve Başarı"]
 egilimler: [Empati, Merak, "Kendine Güvenme (Öz Güven)", Bağımsızlık, "Azim ve Kararlılık", Sorumluluk]

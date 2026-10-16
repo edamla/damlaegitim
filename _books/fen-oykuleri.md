@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Fen Öyküleri (10 KİTAP)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Fen Öyküleri"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -21,8 +22,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [3]
-tags: []
+grades: [3, 4]
+tags: [ Gezegenimiz, Yer Kabuğu ve Dünya’mızın Hareketleri, Beş Duyumuz, Besinlerimiz ve Canlılar Dünyası, Kuvvetin Etkileri ve Maddenin Özellikleri, Çevremizdeki Işık ve Ses Teknolojileri, Elektrikli Araçlar ve Basit Elektrik Devreleri, Bilimsel Süreçleri ve Yaşam Becerilerini Geliştirmek, Analitik ve Yenilikçi Düşünme Yeteneği Kazanmak, Karar Verme ve Problem Çözme Becerisini Kavramak, İletişim Kurma, Girişimcilik ve Takım Çalışması Yapmak]
 degerler: [Saygı, Sorumluluk, Vatanseverlik, Temizlik, Sevgi, Merhamet]
 anatema: ["Merak ve Keşif", Macera, Doğa]
 egilimler: [Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Soru Sorma", "Açık Fikirlilik"]

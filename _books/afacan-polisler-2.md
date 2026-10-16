@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  "Afacan Polisler-2"
+title:  "Afacan Polisler Temiz Çevre Savaşları"
 description: "En güzel temizlik, kirletmemektir!' ilkesiyle yola çıkan Afacanlar, bu  kez hem çevreyi hem de sanal dünyayı temizlemek İçin işbaşında!"
 categories: [Hikaye, Ortaokul]
 
@@ -21,8 +21,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [5, 6, 7, 8]
-tags: ["Çevre Bilinci", "Aile İletişimi", Dayanışma, "Siber Güvenlik", "Analitik Düşünme", "Hukuka Saygı"]
+grades: [4, 5, 6, 7, 8]
+tags: [Dijital Güvenlik ve Siber Suçlar, Aile İçi İletişim ve Çocuk İhmali, Bilim, Adli İnceleme ve Teknoloji, Takım Çalışması ve Dayanışma, Çevre ve Doğa Bilinci Kazanmak, Dijital Okur-Yazar ve Güvenli İnternet Kullanıcısı Olmak, Soruşturma ve Analitik Düşünme Becerisi Edinmek, Empati ve Duygusal Farkındalık Geliştirmek, Toplumsal Sorumluluk ve Etik Kurallara Uymak]
 degerler: [Saygı, Sorumluluk, Temizlik, Özgürlük, Sevgi, Dürüstlük]
 anatema: [Dayanışma, İletişim, "Çevre Bilinci"]
 egilimler: [Merak, Sorumluluk, Odaklanma, Muhakeme, Bağımsızlık, "Gerçeği Arama"]

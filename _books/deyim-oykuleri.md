@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Deyim Öyküleri (5 Kitap)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Deyim Öyküleri"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -22,7 +23,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3]
-tags: [Deyim, Öykü, Macera]
+tags: [ Millî Kültür, Dilbilim, Birey ve Toplum, Yeni Deyimler ve Anlamlarını Öğrenmek, Kelime Hazinesini Zenginleştirmek, Dil Bilgisi Kurallarını Kavramak, Okuma ve Anlama Becerisi Kazanmak, Deyimler Sözlüğünü Etkin Kullanmak, Deyimlerle Etkili Konuşma Yeteneği Geliştirmek, Deyim, Öykü, Macera, Sevgi, Saygı, Dayanışma, Tarih, Toplum, Birey, Dilbilim]
 degerler: [Saygı, Sevgi, Vatanseverlik, Sorumluluk, Özgürlük, Dostluk]
 anatema: [Macera, Gizem, "Okuma ve Öğrenme"]
 egilimler: [Merak, Bağımsızlık, Girişkenlik, "Kendine Güvenme (Öz Güven)", "Soru Sorma", Sorumluluk]

@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "O Canavarı Yakala"
-description: "Trafik canavarının gölgesindeki bir şehirde, kuralları hiçe sayanlara karşı akıl ve cesaretle verilen amansız bir mücadele."
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun O Canavarı Yakala"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -21,8 +21,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [5, 6, 7, 8]
-tags: ["Trafik Bilinci", "Ekip Ruhu", "Görev Bilinci", "Toplumsal Duyarlılık", "Akran Zorbalığı"]
+grades: [3, 4, 5, 6, 7, 8]
+tags: [Trafik Kazaları, İlk Yardım, Görev Aşkı, Kahramanlık, Polis Teşkilatı, Trafik Güvenliği, Trafik Kurallarına Uymanın Hayati Önemini Kavramak, Sürücü ve Yaya Olarak Sorumluluk Bilincini Geliştirmek, Toplumsal Güvenlik ve Görev Bilincini İçselleştirmek, Trafik Kazalarının İnsan Kaynaklı Nedenlerini Analiz Etmek, Trafik, Kaza, Polis, Trafik Kuralları, İlk Yardım, Trafik Güvenliği]
 degerler: [Sorumluluk, Mahremiyet, Saygı, Duyarlılık, Dostluk, Sevgi]
 anatema: [Empati, "Okuma ve Öğrenme", Arkadaşlık]
 egilimler: [Sorumluluk, Empati, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Merak, Girişkenlik]

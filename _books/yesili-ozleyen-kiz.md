@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Yeşili Özleyen Kız"
-description: "Yeşilin binbir tonundan beton yığınlarının arasına sıkışan bir çocuğun, doğaya ve özgürlüğe duyduğu yürek burkan özlem!"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Yeşili Özleyen Kız"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -21,8 +21,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [5, 6, 7, 8]
-tags: ["Doğa Özlemi", "Toprak Sevgisi", "İnsan ve Tabiat Uyumu", "Ön Yargılar", Ekoloji, "Köyden Kente Göç"]
+grades: [3, 4, 5, 6, 7, 8]
+tags: [ Çevre Kirliliği, Ekoloji, Mevsimsel Değişim, Köyden Kente Göç, Çernobil ve Nükleer Kirlilik, Orman Varlığı, Ekolojik Dengenin Nasıl Korunabileceğini Kavramak, Doğa Sevgisi ve Çevre Bilincini İçselleştirmek, Çevre Kirliliğinin ve Felaketlerin Sonuçlarını Analiz Etmek, Kırsal ve Kentsel Yaşam Arasındaki Farkları Gözlemlemek, Çernobil, Radyasyon, Nükleer Kirlilik, Mevsimler, Ekoloji, Göç, Kırsal ve Kensel Yaşam]
 degerler: [Sevgi, Sorumluluk, Saygı, Temizlik, Özgürlük, Duyarlılık]
 anatema: [Doğa, "Merak ve Keşif", "Azim ve Başarı"]
 egilimler: [Merak, Sorumluluk, Bağımsızlık, Girişkenlik, Odaklanma, Sistematiklik]

@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "ROBOT AVCILARI (10 KİTAP)"
-description: "Bilim kurgu ve macera temalı hikaye; genç okurlar için sürükleyici anlatım."
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun ROBOT AVCILARI"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -22,8 +22,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [3]
-tags: [Teknoloji, Bilim, Eğitim, İcad, "İyi ve Kötü", "Bilimsel Düşünce", Gelecek, Geçmiş, Macera, "Dünya Kültürü", "Bilim Kurgu", "Takım Çalışması"]
+grades: [3, 4]
+tags: [Teknoloji, Birey ve Toplum, Zaman ve Mekân, Bilim, Macera, Robot, Yapay Zekâ, Dünya Kültürü, Bilimsel Düşünme Becerisi Kazanmak, İcat Yapma ve Tasarım Yeteneğini Geliştirmek, Yapay Zekâ ve Gelecek Teknolojilerini Kavramak, Analitik Düşünme ve Problem Çözme Yetisi Kazanmak, Teknoloji, Bilim, Eğitim, İcad, İyi ve Kötü, Bilimsel Düşünce, Gelecek, Geçmiş, Macera, Dünya Kültürü]
 degerler: [Sorumluluk, Saygı, Vatanseverlik, Dürüstlük, Dostluk, Çalışkanlık]
 anatema: ["Bilim Kurgu", "Bilim ve Teknoloji", Macera]
 egilimler: [Merak, Girişkenlik, "Kendine Güvenme (Öz Güven)", "Soru Sorma", Bağımsızlık, "Açık Fikirlilik"]

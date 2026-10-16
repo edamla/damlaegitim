@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Dinozor Çağı (10 Kitap)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Dinozor Çağı"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -22,7 +23,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1]
-tags: [Tarih, Doğa, "Dinozor Çağı", Hikâye, Yardımlaşma, "Arkadaş Canlısı Olma", Kibarlık, Kabalık, "Cana yakınlık", "Değerler Eğitimi"]
+tags: [ Dinozor Hikâyeleri, Zamanda Yolculuk, Macera, Tarih, Dinozor Çağı Hakkında Bilgi Edinmek, Dinozor Çeşitlerini Öğrenmek,Arkadaşlık, Yardımseverlik ve Cesaret Bilinci Kazanmak, Tarih Sevgisi ve Temel Değerleri Özümsemek, Tarih, Doğa, Dinozor Çağı, Hikâye, Dostluk, Yardımlaşma, Arkadaş, Canlısı Olma, Kibarlık, Kabalık, Cana yakınlık, Değerler Eğitimi]
 degerler: [Dostluk, Saygı, Duyarlılık, Sevgi, Dürüstlük, Sorumluluk]
 anatema: [Değerler, Doğa, "Paylaşma ve Yardımlaşma"]
 egilimler: [Merak, Empati, Bağımsızlık, Odaklanma, Sorumluluk, Sistematiklik]

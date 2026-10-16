@@ -1,7 +1,7 @@
 ---
 layout: book
-title:  "Afacan Polisler-1"
-description: "Dört afacan gencin, sokaktaki masum bir Olaya müdahale etmesiyle başlayan ve polis akademisine uzanan nefes kesici serüveni başlıyor!"
+title:  "Afacan Polisler İş Başında"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Afacan Polisler İş Başında"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -21,8 +21,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [5, 6, 7, 8]
-tags: ["Adalet Arayışı", "Gençlerin Gücü", "Disiplin ve Kurallar", "Ekip Ruhu", "Meslek Bilinci"]
+grades: [4, 5, 6, 7, 8]
+tags: [ Ahlaki Değerler ve Empati, Birlik ve Takım Çalışması, Bilim, Mantık ve İstihbarat, Sorumluluk ve Disiplin, Adalet ve Hak Kavramlarını Özümsemek, Takım Çalışması ve İş Bölümünün Gücünü Anlamak, Bütüncül ve Analitik Düşünme Becerisi Geliştirmek, Empati ve Merhamet Bilinci Kazanmak, Öz Kritik ve Sorumluluk Bilinci Geliştirmek]
 degerler: [Sorumluluk, Saygı, Sevgi, Adalet, Dostluk, "Aile Bütünlüğü"]
 anatema: [Empati, Arkadaşlık, "Problem Çözme"]
 egilimler: [Empati, Sorumluluk, Bağımsızlık, Muhakeme, Merak, "Gerçeği Arama"]

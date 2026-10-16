@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  Kitabüs
-description: "Eski ve paslı bir otobüsün, çocukların dünyasını aydınlatan sihirli bir kütüphaneye dönüşüm hikâyesi! “Kitabüs”, teknolojinin esiri olmuş, tablet ve…"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Kitabüs"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -23,7 +23,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3, 4]
-tags: [iletişim, "teknoloji bağımlılığı", "birlikte hareket etme ve iş birliği", "hayvan sevgisi", "toplumsal paylaşım", farkındalık, mücadele]
+tags: [ Geri Dönüşüm, Kitap Okuma Sevgisi, Teknoloji Bağımlılığı, Dostluk ve İş Birliği, Çevreye Duyarlılık, Toplumsal Paylaşım, Eski Eşyaların Geri Dönüştürülerek Değerlendirilebileceğini Kavramak, Ekran Bağımlılığından Uzaklaşarak Kitap Okuma Sevgisi Kazanmak, Ortak Bir Amaç Uğruna Ekip Ruhu ve İş Birliği Geliştirmek, Çevreye ve Hayvanlara Karşı Duyarlılık İçselleştirmek, Kitap okuma sevgisi, dostluk, iletişim, teknoloji bağımlılığı, birlikte hareket etme ve iş birliği, hayvan sevgisi,toplumsal paylaşım, farkındalık, mücadele]
 degerler: [Dostluk, Sorumluluk, Saygı, Dürüstlük, Özgürlük, Sevgi]
 anatema: [Empati, Macera, İletişim]
 egilimler: [Merak, Empati, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Gerçeği Arama"]

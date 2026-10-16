@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "DUYGULARIMI KEŞFEDİYORUM (10 KİTAP)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun DUYGULARIMI KEŞFEDİYORUM"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -22,7 +23,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1, 2]
-tags: ["Sosyal ve Duygusal Gelişim", "Arkadaşlık ve İletişim Becerisi", "Yardımlaşma ve Duyarlı Olma", "Akran Zorbalığı", "Saygı ve İç Farkındalık", "Korkuyu Yenme", Cesaret, "Öz Güven ve Farklılıkları Anlamak", Korku, kıskançlık, öfke, paylaşma]
+tags: [Empati ve Dostluk, Zorluklarla Yüzleşme ve Değişim, Kişisel Farkındalık ve Değerler, Korkuları Yenme ve Destek, Kendi Duygularını Tanımak ve İfade Etmek, Duygusal Okuryazarlık Becerisi Kazanmak, Empati Kurmak ve Sosyal İletişimi Güçlendirmek, Olumsuz Duygularla Başa Çıkmayı Öğrenmek, Sosyal ve Duygusal Gelişim, Empati, Arkadaşlık ve İletişim Becerisi, Yardımlaşma ve Duyarlı Olma, Akran Zorbalığı, Saygı ve İç Farkındalık, Korkuyu Yenme, Cesaret, Öz Güven ve Farklılıkları Anlamak]
 degerler: [Saygı, Dostluk, Sorumluluk, Estetik, "Sağlıklı Yaşam", Sabır]
 anatema: [Duygular, Empati, "Cesaret ve Korkular"]
 egilimler: [Empati, Merak, "Kendine Güvenme (Öz Güven)", Bağımsızlık, Odaklanma, "Soru Sorma"]

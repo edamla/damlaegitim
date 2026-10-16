@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Çılgın Dedemin Zaman Makinesi-Geçmişten Geleceğe Uygarlıklar (10 Kitap)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Çılgın Dedemin Zaman Makinesi"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -21,8 +22,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [4]
-tags: ["Zaman Makinesi", Uygarlıklar, Geçmiş, Gelecek, Mayalar, "Mısır Uygarlığı", "Çin Seddi", "Atlantis Medeniyeti", Fetih, Keşif, Mitoloji, Efsane, Bilim, Tarih]
+grades: [3, 4]
+tags: [ Geçmişten Geleceğe Uygarlıklar, Zaman Yolculuğu, Birey ve Toplum, Tarih, Mitoloji, Efsane, Bilim Tarihi, Geçmiş ve Gelecek Medeniyetler, Dünya Medeniyetlerini ve Kültürel Mirası Tanımak, Uygarlıklar Tarihinin Önemli Olaylarını Kavramak, Türk Tarihini ve Kurtuluş Savaşı’nı Öğrenmek, Tarihsel Empati ve Bilimsel Düşünme Becerisi Geliştirmek, Geçmiş ile Gelecek Arasında Sebep-Sonuç İlişkisi Kurmak, Zaman Makinesi, Uygarlıklar, Geçmiş, Gelecek, Mayalar, Mısır Uygarlığı, Çin Seddi, Atlantis Medeniyeti, Fetih, Keşif, Mitoloji, Efsane, Bilim, Tarih]
 degerler: [Sorumluluk, Saygı, Dostluk, Vatanseverlik, Özgürlük, Çalışkanlık]
 anatema: ["Merak ve Keşif", "Bilim ve Teknoloji", "Gelecek ve Yenilik"]
 egilimler: [Merak, "Gerçeği Arama", Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Kendine İnanma (Öz Yeterlilik)"]

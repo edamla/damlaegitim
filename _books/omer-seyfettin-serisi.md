@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Ömer Seyfettin Serisi (10 Kitap)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Ömer Seyfettin Serisi"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -20,7 +21,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3, 4]
-tags: []
+tags: [Millî Kültür Hikâyeleri, Tarih, Vatan Sevgisi, Kahramanlık, Dürüstlük, Dostluk, Cesaret, Vatan Savunması, Gelenek, Türk Tarihini ve Millî Kültürümüzü Tanımak, Yeni Kelime, Deyim ve Atasözleri ile Sözcük Dağarcığını Geliştirmek, Vatan Sevgisi, Kahramanlık ve Cesaret Duygularını İçselleştirmek, Dürüstlük ve Üstün Ahlak Gibi Evrensel Değerleri Kavramak, Tarih, Vatan, Millî Kültür, Kahramanlık, Dostluk, Cesaret, Çanakkale, Vatan Savunması, türklük Şuuru, Vatan Sevgisi, Şehadet, Ahlak, Gelenek, Atasözü, Deyim, Karakter]
 degerler: [Sorumluluk, Saygı, Estetik, Vatanseverlik, Özgürlük, Duyarlılık]
 anatema: ["Merak ve Keşif", "Okul ve Eğitim", "Kültürel Miras"]
 egilimler: [Bağımsızlık, "Kendine Güvenme (Öz Güven)", Merak, Muhakeme, Yaratıcılık, "Gerçeği Arama"]

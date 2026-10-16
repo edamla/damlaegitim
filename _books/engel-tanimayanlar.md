@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Engel Tanımayanlar (10 Kitap)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Engel Tanımayanlar"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -21,8 +22,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [4]
-tags: ["Başarının Anahtarı", "Hayal Kurma", Engelli, Yaşam, İnanç]
+grades: [3, 4]
+tags: [ Engellilere Empati, Başarı Ruhu, Psikolojik Motivasyon, Gezi, Macera, Keşif, Engelli Bireylere Yönelik Empati Geliştirmek, Diğergamlık (Özgecilik) ve Dayanışma Değerlerini İçselleştirmek, Zorluklar Karşısında Pes Etmemeyi ve Başarı Ruhunu Kavramak, Sözcük Dağarcığını Yeni Kelimelerle Zenginleştirmek, Başarının Anahtarı, Hayal Kurma, Engelli, Yaşam, Empati, İnanç]
 degerler: [Sorumluluk, "Sağlıklı Yaşam", Saygı, Çalışkanlık, Estetik, Dostluk]
 anatema: [Empati, "Sürdürülebilir Yaşam", "Güvenli Yaşam"]
 egilimler: [Empati, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Girişkenlik, "Kendine İnanma (Öz Yeterlilik)"]

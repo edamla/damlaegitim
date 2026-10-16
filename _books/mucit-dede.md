@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Mucit Dede"
-description: "Sıradışı icatların çılgın deneylerin ve sınır tanımayan bir hayal gücünün kapıları Mucit Dede'nin atolyesinde açılıyor!"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Mucit Dede"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -21,8 +21,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [5, 6, 7, 8]
-tags: ["Bilimsel Merak", Kardeşlik, "Aile Sevgisi", "Hayal Gücü"]
+grades: [3, 4, 5, 6, 7, 8]
+tags: [ Kardeşlik ve Dostluk, Sorumluluk ve Sabır, Hijyen ve Öz Bakım, Sabırlı Olmanın Önemini Kavramak, Hile ve Kolaycılığın Yanlışlığını Anlamak, Dostluk ve Kardeşlik Bağlarını Güçlendirmek, Temizlik ve Hijyen Bilinci Geliştirmek, Yardımlaşma ve İş Bölümü Becerisi Kazanmak, Merak ve Bilimsel Düşünceyi Benimsemek]
 degerler: [Sorumluluk, Sabır, Sevgi, Saygı, "Aile Bütünlüğü", Merhamet]
 anatema: ["Hayal Gücü", "Kültür ve Tarih", "Merak ve Keşif"]
 egilimler: [Merak, Sorumluluk, Odaklanma, Muhakeme, Bağımsızlık, "Kendine Güvenme (Öz Güven)"]

@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Hacker Nine - 2"
-description: "Geçmişte yazılan ufak bir kod, geleceğin kaderini tamamen değiştirebilir."
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Hacker Nine - 2"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: ["Yapay Zekâ", "Takım Çalışması", Distopya, "Sevgi ve Zekâ", Şifreleme, "Cesaret ve Sorumluluk"]
+tags: [ Yapay Zekâ, Sevgi ve Zekâ, Takım Çalışması, Şifreleme, Distopya, Cesaret ve Sorumluluk, Teknoloji ve İnsan Dengesi (Dijital Etik) Bilinci Kazanmak, Problem Çözme ve Analitik Düşünme Becerisi Geliştirmek, Geçmiş, Bugün ve Gelecek İrtibatını Kavramak, Takım Çalışması ve İletişim Becerisi Edinmek, Empati ve Öz Eleştiri Yapma Becerisi Kazanmak]
 degerler: [Sorumluluk, Sevgi, Özgürlük, Saygı, Vatanseverlik, Estetik]
 anatema: ["Cesaret ve Korkular", "Okuma ve Öğrenme", "Kültür ve Tarih"]
 egilimler: [Sorumluluk, Bağımsızlık, Merak, Odaklanma, "Kendine Güvenme (Öz Güven)", Muhakeme]

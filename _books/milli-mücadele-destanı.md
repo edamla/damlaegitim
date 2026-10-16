@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Milli Mücadele Destanı"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Milli Mücadele Destanı"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -22,7 +23,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3, 4]
-tags: [Gazilik, Şehitlik, Tarih, Kültür, Medeniyet, Bayrak, "Kültür Birliği", Mücadele, "Cihad Şuuru", Kahramanlık, Gençlik, Asker, Ordu, Cesaret, Millet]
+tags: [ Vatanseverlik, Tarih, Kültür, Kurtuluş Mücadelesi, Millî Mücadele Dönemini ve Kahramanlarını Tanımak, Vatan Sevgisi ve Bağımsızlık Bilincini İçselleştirmek, İstiklâl Marşı’nın Yazılış Sürecini ve Anlamını Kavramak, Cesaret, Fedakârlık ve Dayanışma Gibi Millî Değerleri Özümsemek, Gazilik, Şehitlik, Vatanseverlik, Tarih, Kültür, Medeniyet, Bayrak, Kültür Birliği, Mücadele, Cihad Şuuru, Kahramanlık, Gençlik, Asker, Ordu, Cesaret, Millet, Vatan]
 degerler: [Vatanseverlik, Saygı, Sorumluluk, Sevgi, Çalışkanlık, Dostluk]
 anatema: ["Kültür ve Tarih", "Cesaret ve Korkular", "Kültürel Miras"]
 egilimler: [Merak, "Kendine Güvenme (Öz Güven)", Girişkenlik, Empati, "Kendine İnanma (Öz Yeterlilik)", Bağımsızlık]

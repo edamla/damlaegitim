@@ -1,8 +1,9 @@
 ---
 layout: book
 title:  "Geri Dönüşüm Holdingi"
-description: "Çöpe atılan sadece bir kağıt değil, geleceğimizdi; ta ki altı cesur yürek dünyayı dönüştürmeye karar verene dek."
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Geri Dönüşüm Holdingi"
 categories: [Hikaye, Ortaokul]
+
 
 # Standart Book Attributes
 ean: 9786254113826
@@ -21,8 +22,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [5, 6, 7, 8]
-tags: [İnovasyon, Kararlılık, "Sabır ve Mücadele", "Kültürel Miras", "Çevre Bilinci", Sürdürülebilirlik]
+grades: [3, 4, 5, 6, 7, 8]
+tags: [ Geri Dönüşüm, Çevre Bilinci, Girişimcilik, Takım Çalışması, Atık Yönetimi, Kararlılık, İnovasyon, Doğa Sevgisi, Atıkların Geri Dönüşüm Süreçlerini ve Doğaya Faydalarını Kavramak, Girişimcilik Ruhunu ve Proje Üretme Becerisini Geliştirmek, Karşılaşılan Ön Yargıları Azim ve Kararlılıkla Aşmayı Öğrenmek, Ekip Çalışmasının ve Dayanışmanın Önemini İçselleştirmek]
 degerler: [Sorumluluk, Saygı, Sabır, Özgürlük, Temizlik, Duyarlılık]
 anatema: ["Kültürel Miras", "Çevre Bilinci", "Okul ve Eğitim"]
 egilimler: [Merak, Bağımsızlık, Sorumluluk, Muhakeme, "Kendine Güvenme (Öz Güven)", Odaklanma]

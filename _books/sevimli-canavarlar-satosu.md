@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Sevimli Canavarlar Şatosu"
-description: "Çocukların korkularıyla yüzleşmesi hiç bu kadar eğlenceli olmamıştı! Mert’in hayatı, okuduğu gizemli bir kitapla altüst olur ve kendini “Sevimli…"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Sevimli Canavarlar Şatosu"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -23,7 +23,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3, 4]
-tags: []
+tags: [Duygusal Zekâ, Korkularla Yüzleşme, Cesaret, Arkadaşlık, Özgüven, Kitap Sevgisi, Korkularla Yüzleşme ve Duygu Yönetimi Becerisi Geliştirmek, Empati, Özgüven ve Cesaret Duygularını İçselleştirmek, Karşılaşılan Sorunlarda Problem Çözme ve Hayal Gücünü Etkili Kullanmak, Kitapların İyileştirici Etkisiyle Okuma Sevgisi Kazanmak]
 degerler: [Sorumluluk, Vatanseverlik, Çalışkanlık, Saygı, Dostluk, Merhamet]
 anatema: [Arkadaşlık, Fantastik, Empati]
 egilimler: [Empati, "Kendine Güvenme (Öz Güven)", Bağımsızlık, Merak, Sorumluluk, "Kendine İnanma (Öz Yeterlilik)"]

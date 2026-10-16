@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Küçük Cesur Miço-1"
-description: "Pusulası merak, yelkeni cesaret olan genç bir miçonun okyanusları aşan büyük keşif yolculuğu..."
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Küçük Cesur Miço-1"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -21,8 +21,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [5, 6, 7, 8]
-tags: ["Coğrafi Keşifler", "Tarih Bilinci", Cesaret, "Doğa Olayları", Coğrafya, "Bilimsel Merak"]
+grades: [3, 4, 5, 6, 7, 8]
+tags: [ Macera, Tutku, Keşif, Cesaret, Gizem, Heyecan, Coğrafya, Gezi, Serüven, Dünya Turu, Kıtalar ve Okyanuslar, Amerika, Okyanusya, Harita Bilgisi, Asya, Avrupa, Afrika, Okyanusya ve Amerika Kıtalarındaki Farklı Kültürleri Tanımak, Pasifik, Atlas ve Hint Okyanuslarının Coğrafi Konumlarını Öğrenmek, Tarihte Yaşamış Farklı Medeniyetler Hakkında Bilgi Edinmek, Sözcük Dağarcığını Yeni Coğrafi Terimlerle Zenginleştirmek, Harita Okuma Becerisi ve Yön Bulma Duygusunu Geliştirmek, Farklı Kültürleri Keşfederken Vatan Sevgisini İçselleştirmek, Zorluklar Karşısında Cesaret ve Dayanıklılık Göstermek, Tayfa, Miço, Cesaret, İklim, Ekvator, Coğrafya, Dünya Turu, Kıta Okyanus, Körfezler]
 degerler: [Sorumluluk, Saygı, Özgürlük, Çalışkanlık, Vatanseverlik, Temizlik]
 anatema: [Doğa, "Cesaret ve Korkular", "Merak ve Keşif"]
 egilimler: [Merak, Sorumluluk, Bağımsızlık, Girişkenlik, "Gerçeği Arama", Odaklanma]

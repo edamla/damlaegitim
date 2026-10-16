@@ -1,8 +1,8 @@
 ---
 layout: book
 title:  "ETİK DEĞERLER EĞİTİM SETİ-1. SINIF (10 KİTAP)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun ETİK DEĞERLER EĞİTİM SETİ-1"
 categories: [Hikaye, İlkokul]
-
 # Standart Book Attributes
 ean: 9786053836483
 languages: [Türkçe]
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1]
-tags: [Değerler, Masal, Eğitim, Alçakgönüllülük]
+tags: [ Değerler Eğitimi, Masal, Karakter Gelişimi, Kıssadan Hisse Almak, Etik Değerleri Öğrenmek, Değerler, Masal, Eğitim. Alçakgönüllülük, Adalet, Çalışkanlık, Fedakârlık, Paylaşma, Böbürlenmemek, Tevazu, Empati, Alay Etmemek, Merhamet, Sabır, Yalan Söylememek]
 degerler: [Çalışkanlık, Adalet, Sorumluluk, Sevgi, Mütevazılık, Saygı]
 anatema: [Değerler, "Okul ve Eğitim", Empati]
 egilimler: [Merak, Empati, Bağımsızlık, Odaklanma, Sistematiklik, Sorumluluk]

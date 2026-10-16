@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Güçlü Karakter Serisi (10 Kitap)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Güçlü Karakter Serisi"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -22,7 +23,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1]
-tags: [Doğruluk, Tevazu, Arkadaşlık, "Sözünde Durmak", "Hayvan Sevgisi", "İyiliksever Olmak", "Anne Sözü Dinlemek", "Yalan Söylememek", "Değerler Eğitimi", "Etik Kavramlar"]
+tags: [ Hikâyelerle Değerler Eğitimi, Temel Erdemleri ve Değerleri Öğrenmek, Güçlü ve Olumlu Bir Karakter İnşa Etmek, Hayvan Sevgisi ve Empati Yeteneği Kazanmak, Hayal Dünyasını Geliştirmek, Doğruluk, Tevazu, Arkadaşlık, Sevgi, Saygı, Sözünde Durmak, Hayvan, Sevgisi, İyiliksever Olmak, Anne Sözü Dinlemek, Yalan Söylememek, Değerler Eğitimi, Etik Kavramlar]
 degerler: [Saygı, Sevgi, Sorumluluk, Merhamet, Estetik, Vatanseverlik]
 anatema: [Arkadaşlık, Değerler, Empati]
 egilimler: [Merak, Odaklanma, Bağımsızlık, Sistematiklik, Empati, Muhakeme]

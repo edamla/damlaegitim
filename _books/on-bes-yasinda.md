@@ -21,7 +21,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [5, 6, 7, 8]
+grades: [4, 5, 6, 7, 8]
 tags: [Sorumluluk Bilinci, İnsan Hakları, Doğayla Mücadele, İhanet ve Kötülük, Kahramanlık, Dayanışma]
 degerler: [Özgürlük, Vatanseverlik, Saygı, Sorumluluk, Estetik, Mütevazılık]
 anatema: ["Okuma ve Öğrenme", "Cesaret ve Korkular", "Merak ve Keşif"]

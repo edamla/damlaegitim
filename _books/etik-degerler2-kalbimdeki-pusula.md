@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Etik Değerler Eğitim Seti (Kalbimdeki Pusula)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Etik Değerler Eğitim Seti"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -22,7 +23,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [2]
-tags: ["Yalan Söylememek", "Adil Olmak", "Cömert Olmak", "Merhametli Olmak"]
+tags: [ Değerler Eğitimi, Erdemler, Duygular, Doğa ve Evren, Oyun, Sözcük Dağarcığını Geliştirmek, Temel Erdemleri Özümsemek, Dil Bilgisi Kurallarını Kavramak, Yalan Söylememek, Adil Olmak, Cömert Olmak, Merhametli Olmak, Temiz Olmak, Cesur Olmak, Nazik Olmak, Sözünde Durmak, Affetmek, İyilik Bilmek]
 degerler: [Merhamet, Saygı, Sorumluluk, Estetik, Yardımseverlik, Duyarlılık]
 anatema: [Değerler, Duygular, Doğa]
 egilimler: [Merak, Bağımsızlık, Sorumluluk, "Kendine Güvenme (Öz Güven)", Odaklanma, Muhakeme]

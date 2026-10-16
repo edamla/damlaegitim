@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Sosyal Becerilerim Serisi (10 Kitap)"
-description: "Okul sıralarıyla yeni tanışan çocuklarımızın, toplum içinde kendilerini doğru ifade edebilen ve mutlu bireyler olarak yetişmesi her şeyden önemlidir!…"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Sosyal Becerilerim Serisi"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -23,7 +23,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1]
-tags: [Sosyal, Beceri, Değerler, Birey, Toplum, İletişim, "Olumlu Kişilik", Karakter, Kıskanmamak, Paylaşmak, "Gruba Katılım", Arkadaşlık, "Büyüklerin Sözünü Dinleme"]
+tags: [ Sosyal Beceri Eğitimi, Değerler Eğitimi ve Toplum, Sosyal Beceri Kazanmak, Değerlerimizi Öğrenmek, Toplumsal Sorumluluklar Kazanmak, İletişim Becerisi Elde Etmek, Olumlu Kişilik Özellikleri Kazanmak, Sosyal, Beceri, Değerler, Birey, Toplum, Sorumluluk, İletişim, Olumlu, Kişilik, Karakter, Kıskanmamak, Paylaşmak, Özgüven, Dürüstlük, Gruba Katılım, Arkadaşlık, Büyüklerin Sözünü Dinleme, Empati, Kendini Özel Hissetme, Kendini İfade Etme]
 degerler: [Sorumluluk, Estetik, Dürüstlük, Saygı, Mütevazılık, Merhamet]
 anatema: [Değerler, İletişim, Özgüven]
 egilimler: [Sorumluluk, Merak, Empati, Bağımsızlık, Odaklanma, "Kendine Güvenme (Öz Güven)"]

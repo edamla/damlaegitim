@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Uzaydaki Muz Ağacı"
-description: "Ormanın yaramazı, kurallara uymayan ve muz kabuklarını oraya buraya fırlatarak herkesi kızdıran küçük maymun HAM ile tanışın! Ormandan kovulan HAM’ın…"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Uzaydaki Muz Ağacı"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -23,7 +23,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3, 4]
-tags: []
+tags: [Farklı Olanı Kabul Etme, Akran Zorbalığı, Empati, Sevgi, Dostluk, Toplumsal Kurallar, İletişim, Uzay Macerası, Toplumsal Kuralları ve Birlikte Yaşama Kültürünü Öğrenmek, Farklılıklara Saygı Duyarak Empati ve İletişim Becerisi Geliştirmek, Dostluğun, Sevginin ve Kabul Görmenin Değerini İçselleştirmek, Kendini Doğru İfade Edebilme Becerisi Kazanmak]
 degerler: [Dostluk, Sorumluluk, Saygı, Sevgi, Vatanseverlik, Çalışkanlık]
 anatema: [Empati, İletişim, "Merak ve Keşif"]
 egilimler: [Empati, Merak, "Gerçeği Arama", Bağımsızlık, Sistematiklik, "Kendine Güvenme (Öz Güven)"]

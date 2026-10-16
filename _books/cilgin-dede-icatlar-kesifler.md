@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Çılgın Dedemin Zaman Makinesi-İcatlar ve Keşifler (10 Kitap)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Çılgın Dedemin Zaman Makinesi-İcatlar ve Keşifler"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -21,8 +22,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [3]
-tags: [Tarih, Macera, İcat, Keşif, Bilim, Zaman, Mekân, Gelecek, Geçmiş, Mucitler, Kâşifler, Biyografi]
+grades: [3, 4]
+tags: [ İcat ve Keşifler, Macera, Doğa ve Evren, Zaman ve Mekân, Dördüncü Boyut, Bilim Kurgu, Sözcük Dağarcığını Geliştirmek, Bilimsel Düşünme Becerisi Kazanmak, Bilim Tarihindeki Önemli İcat ve Keşifleri Öğrenmek, Kendi, İlgi, Zekâ ve Yeteneklerini Fark Etmek, Tarih, Macera, İcat, Keşif, Bilim, Zaman, Mekân, Gelecek, Geçmiş, Mucitler, Kâşifler, Biyografi]
 degerler: [Sorumluluk, Saygı, Dürüstlük, Dostluk, Özgürlük, Estetik]
 anatema: [Macera, "Merak ve Keşif", "Bilim Kurgu"]
 egilimler: [Merak, Bağımsızlık, "Soru Sorma", "Kendine Güvenme (Öz Güven)", Girişkenlik, "Gerçeği Arama"]

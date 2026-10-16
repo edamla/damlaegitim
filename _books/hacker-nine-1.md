@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Hacker Nine - 1"
-description: "Oyun oynamayı bırak kendi oyununu yaz! Pofuduk terlikli Hacker Nine ile dijital dünyanın sırlarını çözmeye hazır mısın?"
+description: "description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Hacker Nine - 1"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
@@ -22,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [5, 6, 7, 8]
-tags: ["Bilinçli Teknoloji", Dayanışma, Cesaret, "Yapay Zekâ", "Empati ve İyilik", "Sanal Gerçeklik"]
+tags: [ Bilinçli Teknoloji, Yapay Zekâ, Dayanışma, Empati ve İyilik, Cesaret, Sanal Gerçeklik, Güvenli İnternet ve Siber Güvenlik Bilinci Kazanmak, Bilimsel ve Analitik Düşünme Becerisi Geliştirmek, Teknoloji ve İnsan Duyguları Arasındaki Dengeyi Anlamak, Kuşaklararası İletişim ve Ön Yargıları Aşma Becerisi Edinmek, Ekip Çalışması ve Birlik Duygusu Geliştirmek]
 degerler: [Sorumluluk, Saygı, Sevgi, Dostluk, Duyarlılık, Merhamet]
 anatema: [Empati, Dayanışma, "Cesaret ve Korkular"]
 egilimler: [Empati, Merak, Muhakeme, Sorumluluk, Odaklanma, Bağımsızlık]

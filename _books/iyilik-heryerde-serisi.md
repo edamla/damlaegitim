@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "İyilik Heryerde Serisi (10 Kitap)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun İyilik Heryerde Serisi"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -21,7 +22,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [1, 2]
-tags: [İyilik, Mutluluk, "Doğa Sevgisi", "Aile Bağları", Şefkat, Fedakârlık, Arkadaşlık, Yardımlaşma, "Anne Sevgisi", "Duyguları İfade Etmek", Komşuluk, Cesaret, Paylaşmak]
+tags: [Doğa Sevgisi, Aile Bağları, Şefkat ve Korkularla Yüzleşme, Anlaşmazlıkların Çözümü ve Yardımlaşma, Sevginin İyileştirici Gücü ve Yardımseverlik, Kendi İç Dünyasını Keşfetmek, Doğa Sevgisi ve Doğayla Bağ Kurmak,, Aile Bağlarının ve Şefkatin Gücünü Anlamak, Komşuluk ve Paylaşma, Duygusunu Kazanmak, Empati, İyilik, Mutluluk, Doğa Sevgisi, Aile Bağları, Şefkat, Fedakârlık, Arkadaşlık, Yardımlaşma, Anne Sevgisi, Duyguları İfade Etmek, Komşuluk, Cesaret, Paylaşmak]
 degerler: [Sevgi, Saygı, Sorumluluk, Duyarlılık, Estetik, Yardımseverlik]
 anatema: [Empati, Arkadaşlık, Doğa]
 egilimler: [Empati, Merak, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Sistematiklik, "Gerçeği Arama"]

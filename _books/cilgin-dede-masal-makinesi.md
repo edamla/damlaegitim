@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Çılgın Dedemin Masal Makinesi (10 Kitap)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Çılgın Dedemin Masal Makinesi"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -21,8 +22,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [2]
-tags: [Masal, "Zaman Makinesi", "Masal Makinesi", "Değerler Eğitimi", "Yeni Kelime", "Yeni Deyim", Macera, Keşif, Gizem, Efsane]
+grades: [2, 3]
+tags: [Masallarla Değerler Eğitimi, Zaman Makinesi, Macera, Gizem, Keşif, Efsane, Zaman Boyutunu Kavramak, Masallarla Değerlerimizi Öğrenmek, Olumlu Davranışlar Geliştirmek, Yeni Kelimeler Öğrenmek, Yeni, Deyimler Öğrenmek, Masal, Zaman Makinesi, Masal Makinesi, Değerler Eğitimi, Yeni Kelime, Yeni Deyim, Macera, Keşif, Gizem, Efsane]
 degerler: [Sorumluluk, Saygı, Sevgi, Özgürlük, Dürüstlük, Estetik]
 anatema: [Gizem, Macera, Değerler]
 egilimler: [Merak, Muhakeme, Bağımsızlık, "Kendine Güvenme (Öz Güven)", Yaratıcılık, Odaklanma]

@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Alican'ın Günlüğü (10 Kitap)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Alican'ın Günlüğü"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -21,8 +22,8 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # Spesific Filterable Attributes
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
-grades: [2]
-tags: [Macera, "Aile Büyüklerine Saygı", Günlük]
+grades: [2, 3]
+tags: [ Hikâyelerle Değerler Eğitimi, Macera, Dostluk, Kardeşlik, Cesaret,Yardımlaşma, Hayvan Sevgisi, Dedektiflik, Dayanışma, Affetmek, Doğa Sevgisi, Topluma ve Büyüklere Saygılı Bireyler Kazandırmak, Sözünde Durmanın Önemini Kavratmak, Yalan Söylemenin Sakıncalarını Öğretmek, Alay Etmenin Kötü Bir Davranış Olduğunu Göstermek, Olumlu Davranışlar Geliştirmek, Macera, Yardımseverlik, Aile Büyüklerine Saygı, Günlük]
 degerler: [Saygı, Estetik, Yardımseverlik, "Aile Bütünlüğü", Dostluk, Sorumluluk]
 anatema: [Macera, Empati, Dayanışma]
 egilimler: [Merak, Empati, "Kendine Güvenme (Öz Güven)", Bağımsızlık, Muhakeme, Odaklanma]

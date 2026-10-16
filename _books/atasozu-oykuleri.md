@@ -1,6 +1,7 @@
 ---
 layout: book
 title:  "Atasözü Öyküleri (5 Kitap)"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Atasözü Öyküleri"
 categories: [Hikaye, İlkokul]
 
 # Standart Book Attributes
@@ -22,7 +23,7 @@ oncelik: 9  # 0: En Öncelikli 9: En az öncelikli
 # anatema: anatemalar.json (max 3) | degerler: TYMM Erdem-Değer (max 6) | egilimler: TYMM Eğilimler (max 6) | beceriler: TYMM Beceriler (max 6) | kazanim: Öykümatik | unite: TYMM üniteleri (UI dışı)
 genre: story
 grades: [3]
-tags: [Atasözü, Öykü, Macera, Dayanışma, Birey, Dilbilim, Tarih, Toplum]
+tags: [Millî Kültür, Dilbilim, Birey ve Toplum, Yeni Atasözleri Öğrenmek, Kelime Hazinesini Geliştirmek, Dil Bilgisi Kurallarını Kavramak, Atasözlerini Konuşma Dilinde Kullanabilmek, Okuma ve Anlama Becerisi Kazanmak, Atasözleri Sözlüğü Kullanmak, Atasözü, Öykü, Merak, Macera, Sevgi, Saygı, Dayanışma, Birey, Dilbilim, Tarih, Toplum]
 degerler: [Saygı, Sevgi, Dostluk, Vatanseverlik, Sorumluluk, Özgürlük]
 anatema: [Dayanışma, Macera, "Kültür ve Tarih"]
 egilimler: [Merak, Bağımsızlık, "Soru Sorma", Girişkenlik, "Kendine Güvenme (Öz Güven)", Sorumluluk]
