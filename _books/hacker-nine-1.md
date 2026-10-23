@@ -1,7 +1,7 @@
 ---
 layout: book
 title:  "Hacker Nine - 1"
-description: "description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Hacker Nine - 1"
+description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun Hacker Nine - 1"
 categories: [Hikaye, Ortaokul]
 
 # Standart Book Attributes
