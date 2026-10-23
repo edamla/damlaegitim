@@ -36,34 +36,7 @@ youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
-Çocuklar...
-
-Üzerlerine titrediğimiz, en değerli varlıklarımız...
-
-Onları erdemli, yüksek ahlaklı, değerlerimizi bilen ve değerlerimize sahip çıkan bireyler olarak yetiştirmek hepimizin ortak amacı. Bunun da en önemli aracı hikayeler. İşte "Etik Değerler Eğitim Seti" buradan yola çıkılarak hazırlandı.
-
-"Değerler Eğitimi" temel alınarak her hikayede bir değer işlenmiş, her hikayenin sonundaki "Etkinlikler"le verilmek istenen değerin pekiştirilmesi sağlanmıştır.
-
-KİTAPLAR;
-
-1- Çalışan Başarır
-
-2- Farklı Olmak Kötü Mü?
-
-3- Kekito
-
-4- Köstebeğin Planı
-
-5- Karakulak
-
-6- Lider Kim?
-
-7- Pugi
-
-8- İyimserlik Oyunu
-
-9- Sultan Kız
-
-10- Temiz Çevre Savaşçıları
-
+Çocuklar... Üzerlerine titrediğimiz, en değerli varl›klar›m›z...
+Onlar› erdemli, yüksek ahlakl›, değerlerimizi bilen ve sahip ç›kan bireyler olarak yetiştirmek herkesin ortak amac›. Bunun da en önemli arac› hikâyeler.  ‹şte “Etik Değerler Eğitim Seti” buradan yola ç›karak haz›rland›. “Değerler Eğitimi” temel al›narak her hikâyede bir değer işlendi.
+Her hikâyenin sonundaki “Etkinlikler”le verilmek istenilen değerin pekiştirilmesi sağlanmıştır.
 <!--more-->

@@ -12,7 +12,7 @@ size: "16,5x23,5 cm"
 publish-number: 1817
 cover: "Karton Kapak"
 #examlink: ""
-preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911223875/index.html"
+preview_link: "https://cdn.e-damla.com.tr/PUBLIC/ornek-sayfalar/8697911224353/index.html"
 damlaurl: ""
 paper: "1. Hamur"
 authors: ["Tuba Bozcan"]

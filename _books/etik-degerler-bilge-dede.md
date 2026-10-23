@@ -35,34 +35,6 @@ youtube:
 
 # For adding excerpt add <!--more--> and break the line
 ---
-Çocuklar...
-
-Üzerlerine titrediğimiz, en değerli varlıklarımız...
-
-Onları erdemli, yüksek ahlaklı, değerlerimizi bilen ve değerlerimize sahip çıkan bireyler olarak yetiştirmek hepimizin ortak amacı. Bunun da en önemli aracı hikayeler. İşte "Etik Değerler Eğitim Seti" buradan yola çıkılarak hazırlandı.
-
-"Değerler Eğitimi" temel alınarak her hikayede bir değer işlenmiş, her hikayenin sonundaki "Etkinlikler"le verilmek istenen değerin pekiştirilmesi sağlanmıştır.
-
-KİTAPLAR;
-
-1- Çalışan Başarır
-
-2- Farklı Olmak Kötü Mü?
-
-3- Kekito
-
-4- Köstebeğin Planı
-
-5- Karakulak
-
-6- Lider Kim?
-
-7- Pugi
-
-8- İyimserlik Oyunu
-
-9- Sultan Kız
-
-10- Temiz Çevre Savaşçıları
-
+Şıngırdaklar dağların ardında bir kasabada mutlu mesut yaşarlardı. Ta ki söyledikleri yalanlar her şeyi değiştirene kadar. Günün birinde renkleri mora döndü, boyları kısaldı ve artık herkes onları Mormorikler diye anmaya başladı. Eski hâllerine dönebilmenin ise yalnızca bir yolu vardı: Kaybettikleri güzel değerleri yeniden hatırlamak.
+Bilge Dede’nin yol gösterdiği Mormorikleri kimi zaman bir sel, kimi zaman zorlu bir yarış, kimi zaman da hiç beklemedikleri bir macera bekliyor. Her yeni serüven onları hem kendilerini hem de birbirlerini biraz daha iyi tanımaya götürüyor. Çünkü bazen doğruyu bulmak için önce yanlış yapmak, cesareti öğrenmek için korkmak, iyiliğin değerini anlamak için de ona gerçekten ihtiyaç duymak gerekir
 <!--more-->
