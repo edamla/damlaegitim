@@ -1,6 +1,6 @@
 ---
 layout: book
-title:  İyilik Heryerde Serisi (10 Kitap)
+title:  İyilik Her yerde Serisi (10 Kitap)
 description: "Maarif Modeli Türkçe ve Hayat Bilgisi Kazanımlarına Uygun İyilik Heryerde Serisi"
 categories: [Hikaye, İlkokul]
 
