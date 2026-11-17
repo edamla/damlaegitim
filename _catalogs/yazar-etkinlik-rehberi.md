@@ -6,7 +6,7 @@ title:  "Yazar Etkinlik Rehberi"
 publisher: damlapublishing
 
 
-image: assets/images/ean/
+image: assets/images/ean/yazar-etkinlik-rehberi.jpg
 
 
 
